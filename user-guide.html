@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Token King User Guide — Platform Manual</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: #F5F2FF;
+      color: #1C1C1C;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body::before {
+      content: '';
+      position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+      pointer-events: none; z-index: 9999; opacity: 0.4;
+    }
+
+    .nav-link {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.875rem; font-weight: 500; color: #3C315B;
+      text-decoration: none; padding: 0.375rem 0.75rem; border-radius: 8px;
+      transition: background-color 0.2s ease, color 0.2s ease;
+    }
+    .nav-link:hover { background-color: #E2DFFE; color: #6155F1; }
+    .nav-link.active { background-color: #E2DFFE; color: #6155F1; font-weight: 600; }
+    .nav-link:focus-visible { outline: 2px solid #6155F1; outline-offset: 2px; }
+
+    .dropdown-item {
+      display: flex; align-items: center; gap: 0.625rem;
+      padding: 0.6rem 0.875rem; border-radius: 9px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.855rem; font-weight: 500; color: #3C315B;
+      text-decoration: none;
+      transition: background-color 0.15s ease, color 0.15s ease;
+      white-space: nowrap;
+    }
+    .dropdown-item:hover { background-color: #F5F2FF; color: #6155F1; }
+    .dropdown-item.active-item { background-color: #F5F2FF; color: #6155F1; font-weight: 600; }
+    .dropdown-item:focus-visible { outline: 2px solid #6155F1; border-radius: 9px; }
+
+    .btn-primary {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      background-color: #6155F1; color: #fff;
+      font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.9rem; font-weight: 600;
+      padding: 0.625rem 1.375rem; border-radius: 12px; border: none; cursor: pointer;
+      text-decoration: none;
+      box-shadow: 0 4px 14px rgba(97,85,241,0.35), 0 1px 3px rgba(97,85,241,0.2);
+      transition: transform 0.18s cubic-bezier(.22,1,.36,1), box-shadow 0.18s cubic-bezier(.22,1,.36,1), background-color 0.18s ease;
+    }
+    .btn-primary:hover { background-color: #5448e0; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(97,85,241,0.45); }
+    .btn-primary:active { transform: translateY(0); }
+    .btn-primary:focus-visible { outline: 2px solid #6155F1; outline-offset: 3px; }
+
+    .btn-secondary {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      background-color: transparent; color: #6155F1;
+      font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.875rem; font-weight: 600;
+      padding: 0.5rem 1.125rem; border-radius: 10px; border: 1.5px solid #6155F1;
+      cursor: pointer; text-decoration: none;
+      transition: background-color 0.18s ease, transform 0.18s cubic-bezier(.22,1,.36,1);
+    }
+    .btn-secondary:hover { background-color: #F5F2FF; transform: translateY(-1px); }
+    .btn-secondary:active { transform: translateY(0); background-color: #E2DFFE; }
+    .btn-secondary:focus-visible { outline: 2px solid #6155F1; outline-offset: 3px; }
+
+    .section-label {
+      display: inline-flex; align-items: center; gap: 0.375rem;
+      background: #E2DFFE; color: #6155F1;
+      font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.72rem; font-weight: 700;
+      letter-spacing: 0.06em; text-transform: uppercase;
+      padding: 0.3rem 0.875rem; border-radius: 100px;
+    }
+
+    .card {
+      background: #FFFFFF; border-radius: 16px;
+      box-shadow: 0 2px 8px rgba(97,85,241,0.07), 0 1px 2px rgba(0,0,0,0.04);
+      transition: transform 0.22s cubic-bezier(.22,1,.36,1), box-shadow 0.22s cubic-bezier(.22,1,.36,1);
+    }
+    .card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(97,85,241,0.14), 0 2px 8px rgba(0,0,0,0.06); }
+
+    .icon-box {
+      width: 44px; height: 44px; border-radius: 12px;
+      background: #F5F2FF;
+      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+    }
+
+    /* Sidebar nav */
+    .sidebar-link {
+      display: block; padding: 0.5rem 0.875rem; border-radius: 8px;
+      font-size: 0.855rem; font-weight: 500; color: #555;
+      text-decoration: none;
+      transition: background-color 0.15s ease, color 0.15s ease;
+    }
+    .sidebar-link:hover { background: #F5F2FF; color: #6155F1; }
+    .sidebar-link.active { background: #E2DFFE; color: #6155F1; font-weight: 600; }
+    .sidebar-link:focus-visible { outline: 2px solid #6155F1; outline-offset: 2px; }
+
+    /* FAQ accordion */
+    .faq-item { border-bottom: 1px solid rgba(97,85,241,0.1); }
+    .faq-btn {
+      width: 100%; display: flex; justify-content: space-between; align-items: center;
+      padding: 1.25rem 0; background: none; border: none; cursor: pointer; text-align: left;
+      font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.95rem; font-weight: 600; color: #1C1C1C;
+      transition: color 0.15s ease;
+    }
+    .faq-btn:hover { color: #6155F1; }
+    .faq-btn:focus-visible { outline: 2px solid #6155F1; outline-offset: 2px; border-radius: 4px; }
+    .faq-chevron { transition: transform 0.25s cubic-bezier(.22,1,.36,1); flex-shrink: 0; }
+    .faq-body { display: none; padding-bottom: 1.25rem; font-size: 0.9rem; line-height: 1.75; color: #555; }
+
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: #F5F2FF; }
+    ::-webkit-scrollbar-thumb { background: #C4BFF8; border-radius: 3px; }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(18px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .fade-up { animation: fadeUp 0.6s cubic-bezier(.22,1,.36,1) both; }
+    .delay-1 { animation-delay: 0.07s; }
+    .delay-2 { animation-delay: 0.14s; }
+    .delay-3 { animation-delay: 0.21s; }
+    .delay-4 { animation-delay: 0.28s; }
+
+    .reveal {
+      opacity: 0; transform: translateY(20px);
+      transition: opacity 0.6s cubic-bezier(.22,1,.36,1), transform 0.6s cubic-bezier(.22,1,.36,1);
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    @media (max-width: 1023px) { .desktop-nav { display: none !important; } }
+    @media (max-width: 1024px) { .guide-layout { grid-template-columns: 1fr !important; } .guide-sidebar { display: none !important; } }
+    @media (max-width: 768px) { .problem-grid { grid-template-columns: 1fr !important; } .audience-grid { grid-template-columns: 1fr !important; } }
+    /* ── Animated gradient hero ── */
+    .page-hero-bg { position: relative; overflow: hidden; background: linear-gradient(40deg, #2A1F5C, #0D1547); }
+    .page-hero-canvas { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
+    .page-hero-canvas .grad-blobs { width: 100%; height: 100%; filter: url(#page-goo) blur(40px); }
+    .page-hero-canvas .blob { position: absolute; border-radius: 50%; mix-blend-mode: hard-light; background: radial-gradient(circle at center, var(--blob-color) 0%, transparent 50%) no-repeat; width: 80%; height: 80%; top: calc(50% - 40%); left: calc(50% - 40%); }
+    .page-hero-canvas .blob-1 { --blob-color: rgba(97,85,241,1); animation: moveVertical 30s ease infinite; }
+    .page-hero-canvas .blob-2 { --blob-color: rgba(62,129,229,0.8); transform-origin: calc(50% - 400px); animation: moveInCircle 20s reverse infinite; }
+    .page-hero-canvas .blob-3 { --blob-color: rgba(86,247,253,0.8); transform-origin: calc(50% + 400px); animation: moveInCircle 40s linear infinite; }
+    .page-hero-canvas .blob-4 { --blob-color: rgba(180,100,241,0.8); transform-origin: calc(50% - 200px); animation: moveHorizontal 40s ease infinite; opacity: 0.7; }
+    .page-hero-canvas .blob-5 { --blob-color: rgba(30,80,200,0.8); transform-origin: calc(50% - 800px) calc(50% + 800px); animation: moveInCircle 20s ease infinite; }
+    .page-hero-canvas .blob-pointer { position: absolute; border-radius: 50%; mix-blend-mode: hard-light; background: radial-gradient(circle at center, rgba(140,100,255,0.8) 0%, transparent 50%) no-repeat; width: 100%; height: 100%; top: -50%; left: -50%; opacity: 0.7; }
+    @keyframes moveVertical { 0% { transform: translateY(-50%); } 50% { transform: translateY(50%); } 100% { transform: translateY(-50%); } }
+    @keyframes moveInCircle { 0% { transform: rotate(0deg); } 50% { transform: rotate(180deg); } 100% { transform: rotate(360deg); } }
+    @keyframes moveHorizontal { 0% { transform: translateX(-50%) translateY(-10%); } 50% { transform: translateX(50%) translateY(10%); } 100% { transform: translateX(-50%) translateY(-10%); } }
+    .page-hero-content { position: relative; z-index: 10; }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<header style="background: rgba(245,242,255,0.88); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border-bottom: 1px solid rgba(97,85,241,0.1); position: sticky; top: 0; z-index: 100;">
+  <div style="max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; height: 64px; display: flex; align-items: center; justify-content: space-between; gap: 2rem;">
+
+    <a href="index.html" style="display: flex; align-items: center; gap: 0.625rem; text-decoration: none; flex-shrink: 0;">
+      <img src="AI_Token_logoPNG.avif" alt="AI Token King" style="width: 36px; height: 36px; object-fit: contain;" />
+      <span style="font-family: 'Kanit', sans-serif; font-size: 1.1rem; font-weight: 700; color: #3C315B; letter-spacing: -0.02em;">AI Token King</span>
+    </a>
+
+    <nav class="desktop-nav" style="display: flex; align-items: center; gap: 0.125rem; flex: 1; justify-content: center;">
+      <div class="nav-dropdown" style="position: relative;">
+        <button class="nav-link active nav-dropdown-btn" style="background: #E2DFFE; border: none; cursor: pointer; display: flex; align-items: center; gap: 0.3rem;" aria-expanded="false">
+          AI Resources
+          <svg width="12" height="12" viewBox="0 0 16 16" fill="none" style="transition: transform 0.2s ease;" class="dropdown-chevron"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="nav-dropdown-menu" style="display: none; position: absolute; top: calc(100% + 8px); left: 50%; transform: translateX(-50%); background: #fff; border-radius: 14px; box-shadow: 0 8px 32px rgba(97,85,241,0.14), 0 2px 8px rgba(0,0,0,0.07); padding: 0.5rem; min-width: 230px; z-index: 200; border: 1px solid rgba(97,85,241,0.1);">
+          <a href="ai-trends.html" class="dropdown-item">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M3 12h18M3 6h18M3 18h12" stroke="#6155F1" stroke-width="1.75" stroke-linecap="round"/></svg>
+            AI Trends
+          </a>
+          <a href="user-guide.html" class="dropdown-item active-item">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z" fill="#6155F1"/></svg>
+            AI Token King User Guide
+          </a>
+          <a href="compliance.html" class="dropdown-item">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M19 21H5a2 2 0 01-2-2V7l4-4h10a2 2 0 012 2v14a2 2 0 01-2 2z" stroke="#6155F1" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 3v4H5M9 12h6M9 16h4" stroke="#6155F1" stroke-width="1.5" stroke-linecap="round"/></svg>
+            Business AI Compliance
+          </a>
+        </div>
+      </div>
+
+      <a href="api-compare.html" class="nav-link">Compare Models</a>
+      <a href="use-cases.html" class="nav-link">Use Cases</a>
+      <a href="beginners-guide.html" class="nav-link">Beginners Guide</a>
+      <a href="blog.html" class="nav-link">Blog</a>
+      <a href="https://www.aitokenking.com.tw/docs" class="nav-link" target="_blank" rel="noopener noreferrer">Documentation</a>
+    </nav>
+
+    <div style="flex-shrink: 0;">
+      <a href="https://www.aitokenking.com.tw/home" class="btn-primary" style="font-size: 0.85rem; padding: 0.5rem 1.125rem;" target="_blank" rel="noopener noreferrer">
+        Get Started
+        <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+  </div>
+</header>
+
+
+<!-- HERO -->
+<section class="page-hero-bg" style="padding: 3.5rem 1.5rem 3rem;">
+  <div class="page-hero-canvas" aria-hidden="true">
+    <svg style="display:none"><defs><filter id="page-goo"><feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur"/><feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8" result="goo"/><feBlend in="SourceGraphic" in2="goo"/></filter></defs></svg>
+    <div class="grad-blobs"><div class="blob blob-1"></div><div class="blob blob-2"></div><div class="blob blob-3"></div><div class="blob blob-4"></div><div class="blob blob-5"></div><div class="blob-pointer" id="page-pointer"></div></div>
+  </div>
+  <div class="page-hero-content" style="max-width: 1200px; margin: 0 auto;">
+    <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1.75rem; font-size: 0.8rem; color: rgba(255,255,255,0.5);">
+      <a href="index.html" style="color: rgba(255,255,255,0.5); text-decoration: none; transition: color 0.15s;" onmouseover="this.style.color='rgba(255,255,255,0.9)'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">Home</a>
+      <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="rgba(255,255,255,0.3)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <a href="#" style="color: rgba(255,255,255,0.5); text-decoration: none; transition: color 0.15s;" onmouseover="this.style.color='rgba(255,255,255,0.9)'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">AI Resources</a>
+      <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="rgba(255,255,255,0.3)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span style="color: rgba(255,255,255,0.9); font-weight: 600;">User Guide</span>
+    </div>
+
+    <div style="max-width: 760px;">
+      <div class="section-label fade-up" style="margin-bottom: 1.125rem; background: rgba(226,223,254,0.15); color: rgba(255,255,255,0.9); border: 1px solid rgba(255,255,255,0.15);">
+        <svg width="10" height="10" viewBox="0 0 16 16" fill="currentColor"><circle cx="8" cy="8" r="8"/></svg>
+        Platform Manual
+      </div>
+      <h1 class="fade-up delay-1" style="font-family: 'Kanit', sans-serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 800; color: #ffffff; letter-spacing: -0.04em; line-height: 1.1; margin-bottom: 1.125rem;">
+        AI Token King Platform Guide
+      </h1>
+      <p class="fade-up delay-2" style="font-size: 1.05rem; line-height: 1.75; color: rgba(255,255,255,0.7); max-width: 640px; margin-bottom: 0.625rem;">
+        One platform, unified access to the world's leading AI models. Manage tokens, switch models, and control costs — all from a single dashboard.
+      </p>
+      <p class="fade-up delay-3" style="font-size: 0.925rem; line-height: 1.7; color: rgba(255,255,255,0.5); max-width: 600px; margin-bottom: 1.75rem;">
+        Built for individuals, teams, and enterprises who want to use AI more efficiently — without juggling separate subscriptions, platforms, or billing accounts.
+      </p>
+      <div class="fade-up delay-4" style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+        <a href="#what-is" class="btn-primary">Read the Guide</a>
+        <a href="#getting-started" class="btn-secondary" style="color: rgba(255,255,255,0.85); border-color: rgba(255,255,255,0.3); background: rgba(255,255,255,0.08);">Quick Start</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- MAIN LAYOUT: content + sidebar -->
+<section style="padding: 3rem 1.5rem 5rem;">
+  <div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 280px; gap: 3rem; align-items: start;" class="guide-layout">
+
+    <!-- MAIN CONTENT -->
+    <div>
+
+      <!-- 1. What is AI Token King? -->
+      <div id="what-is" style="margin-bottom: 3.5rem;">
+        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.25rem;">
+          <div class="icon-box" style="background: linear-gradient(135deg, #6155F1, #3E81E5); width: 48px; height: 48px; border-radius: 14px;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="#fff" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h2 style="font-family: 'Kanit', sans-serif; font-size: 1.7rem; font-weight: 800; color: #1C1C1C; letter-spacing: -0.03em;">What is AI Token King?</h2>
+        </div>
+
+        <p style="font-size: 0.95rem; line-height: 1.8; color: #555; margin-bottom: 1rem;">
+          AI Token King is a <strong style="color: #3C315B;">multi-model AI aggregation platform</strong>. You can use multiple mainstream AI models on a single platform — without subscribing separately to each one, switching between tools, or managing multiple billing accounts.
+        </p>
+        <p style="font-size: 0.95rem; line-height: 1.8; color: #555; margin-bottom: 1.5rem;">
+          It's built for individuals, teams, and enterprises who want to compare models, control AI costs, and centralize their AI usage in one place.
+        </p>
+
+        <!-- Problem cards grid -->
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;" class="problem-grid">
+          <div class="card" style="padding: 1.25rem 1.375rem;">
+            <div style="display: flex; align-items: center; gap: 0.625rem; margin-bottom: 0.625rem;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#6155F1" stroke-width="1.75"/><path d="M12 8v4M12 16h.01" stroke="#6155F1" stroke-width="1.75" stroke-linecap="round"/></svg>
+              <span style="font-size: 0.8rem; font-weight: 700; color: #6155F1; text-transform: uppercase; letter-spacing: 0.04em;">The Problem</span>
+            </div>
+            <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.5rem;">
+              <li style="font-size: 0.875rem; color: #555; display: flex; align-items: flex-start; gap: 0.5rem; line-height: 1.5;">
+                <span style="color: #F43F5E; font-weight: 700; flex-shrink: 0;">✕</span> No separate subscriptions per tool
+              </li>
+              <li style="font-size: 0.875rem; color: #555; display: flex; align-items: flex-start; gap: 0.5rem; line-height: 1.5;">
+                <span style="color: #F43F5E; font-weight: 700; flex-shrink: 0;">✕</span> No constant platform-switching
+              </li>
+              <li style="font-size: 0.875rem; color: #555; display: flex; align-items: flex-start; gap: 0.5rem; line-height: 1.5;">
+                <span style="color: #F43F5E; font-weight: 700; flex-shrink: 0;">✕</span> No locking into a single model
+              </li>
+            </ul>
+          </div>
+          <div class="card" style="padding: 1.25rem 1.375rem;">
+            <div style="display: flex; align-items: center; gap: 0.625rem; margin-bottom: 0.625rem;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="#22C55E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span style="font-size: 0.8rem; font-weight: 700; color: #22C55E; text-transform: uppercase; letter-spacing: 0.04em;">The Solution</span>
+            </div>
+            <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.5rem;">
+              <li style="font-size: 0.875rem; color: #555; display: flex; align-items: flex-start; gap: 0.5rem; line-height: 1.5;">
+                <span style="color: #22C55E; font-weight: 700; flex-shrink: 0;">✓</span> View AI Token usage &amp; balance
+              </li>
+              <li style="font-size: 0.875rem; color: #555; display: flex; align-items: flex-start; gap: 0.5rem; line-height: 1.5;">
+                <span style="color: #22C55E; font-weight: 700; flex-shrink: 0;">✓</span> Switch models based on task
+              </li>
+              <li style="font-size: 0.875rem; color: #555; display: flex; align-items: flex-start; gap: 0.5rem; line-height: 1.5;">
+                <span style="color: #22C55E; font-weight: 700; flex-shrink: 0;">✓</span> Use OpenClaw for automation
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. What Problems Does It Solve? -->
+      <div id="problems" style="margin-bottom: 3.5rem;">
+        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.25rem;">
+          <div class="icon-box" style="background: linear-gradient(135deg, #3E81E5, #0ABFBC); width: 48px; height: 48px; border-radius: 14px;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" stroke="#fff" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h2 style="font-family: 'Kanit', sans-serif; font-size: 1.7rem; font-weight: 800; color: #1C1C1C; letter-spacing: -0.03em;">What Problems Does It Solve?</h2>
+        </div>
+
+        <div style="background: linear-gradient(135deg, #F5F2FF, #EBF4FF); border-radius: 16px; padding: 1.75rem; margin-bottom: 1.5rem;">
+          <p style="font-size: 0.875rem; font-weight: 600; color: #3C315B; margin-bottom: 1rem;">For users who want to compare models, control AI costs, and centralize usage — AI Token King removes the friction:</p>
+          <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+            <div style="display: flex; align-items: flex-start; gap: 0.75rem;">
+              <div style="width: 8px; height: 8px; border-radius: 50%; background: #6155F1; flex-shrink: 0; margin-top: 0.4rem;"></div>
+              <span style="font-size: 0.9rem; color: #3C315B; line-height: 1.6;">No separate subscriptions for every AI tool</span>
+            </div>
+            <div style="display: flex; align-items: flex-start; gap: 0.75rem;">
+              <div style="width: 8px; height: 8px; border-radius: 50%; background: #3E81E5; flex-shrink: 0; margin-top: 0.4rem;"></div>
+              <span style="font-size: 0.9rem; color: #3C315B; line-height: 1.6;">No constant switching between platforms</span>
+            </div>
+            <div style="display: flex; align-items: flex-start; gap: 0.75rem;">
+              <div style="width: 8px; height: 8px; border-radius: 50%; background: #0ABFBC; flex-shrink: 0; margin-top: 0.4rem;"></div>
+              <span style="font-size: 0.9rem; color: #3C315B; line-height: 1.6;">No being locked into a single model</span>
+            </div>
+            <div style="display: flex; align-items: flex-start; gap: 0.75rem;">
+              <div style="width: 8px; height: 8px; border-radius: 50%; background: #F59E0B; flex-shrink: 0; margin-top: 0.4rem;"></div>
+              <span style="font-size: 0.9rem; color: #3C315B; line-height: 1.6;">View AI Token usage and balance at a glance</span>
+            </div>
+            <div style="display: flex; align-items: flex-start; gap: 0.75rem;">
+              <div style="width: 8px; height: 8px; border-radius: 50%; background: #6155F1; flex-shrink: 0; margin-top: 0.4rem;"></div>
+              <span style="font-size: 0.9rem; color: #3C315B; line-height: 1.6;">Switch models based on the task at hand</span>
+            </div>
+            <div style="display: flex; align-items: flex-start; gap: 0.75rem;">
+              <div style="width: 8px; height: 8px; border-radius: 50%; background: #3E81E5; flex-shrink: 0; margin-top: 0.4rem;"></div>
+              <span style="font-size: 0.9rem; color: #3C315B; line-height: 1.6;">Use OpenClaw AI Agent to automate fixed workflows</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. Core Features -->
+      <div id="features" style="margin-bottom: 3.5rem;">
+        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.75rem;">
+          <div class="icon-box" style="background: linear-gradient(135deg, #6155F1, #F59E0B); width: 48px; height: 48px; border-radius: 14px;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" stroke="#fff" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h2 style="font-family: 'Kanit', sans-serif; font-size: 1.7rem; font-weight: 800; color: #1C1C1C; letter-spacing: -0.03em;">Core Features</h2>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 1.25rem;" class="reveal">
+
+          <div class="card" style="padding: 1.5rem 1.75rem; border-left: 4px solid #6155F1;">
+            <h3 style="font-family: 'Kanit', sans-serif; font-size: 1.1rem; font-weight: 700; color: #1C1C1C; margin-bottom: 0.5rem; letter-spacing: -0.02em;">Unified Token Top-Up</h3>
+            <p style="font-size: 0.9rem; line-height: 1.75; color: #555; margin: 0;">Top up your AI Token balance once — use it across all supported models. No need to pay each platform separately.</p>
+          </div>
+
+          <div class="card" style="padding: 1.5rem 1.75rem; border-left: 4px solid #3E81E5;">
+            <h3 style="font-family: 'Kanit', sans-serif; font-size: 1.1rem; font-weight: 700; color: #1C1C1C; margin-bottom: 0.5rem; letter-spacing: -0.02em;">Multi-Model Switching</h3>
+            <p style="font-size: 0.9rem; line-height: 1.75; color: #555; margin: 0;">Switch between GPT, Claude, Gemini, DeepSeek, Qwen, and more based on the task — no re-logging, no separate accounts.</p>
+          </div>
+
+          <div class="card" style="padding: 1.5rem 1.75rem; border-left: 4px solid #0ABFBC;">
+            <h3 style="font-family: 'Kanit', sans-serif; font-size: 1.1rem; font-weight: 700; color: #1C1C1C; margin-bottom: 0.5rem; letter-spacing: -0.02em;">Usage Management</h3>
+            <p style="font-size: 0.9rem; line-height: 1.75; color: #555; margin: 0;">Track your token balance and usage history across all models. Understand exactly what you're spending on AI — and where.</p>
+          </div>
+
+          <div class="card" style="padding: 1.5rem 1.75rem; border-left: 4px solid #F59E0B;">
+            <h3 style="font-family: 'Kanit', sans-serif; font-size: 1.1rem; font-weight: 700; color: #1C1C1C; margin-bottom: 0.5rem; letter-spacing: -0.02em;">OpenClaw AI Agent</h3>
+            <p style="font-size: 0.9rem; line-height: 1.75; color: #555; margin: 0;">Not just answering questions — OpenClaw helps AI handle fixed tasks and automated workflows. Ideal for customer service, scheduling, content pipelines, and cross-team collaboration.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4. Supported AI Models -->
+      <div id="models" style="margin-bottom: 3.5rem;">
+        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+          <div class="icon-box" style="background: linear-gradient(135deg, #3E81E5, #6155F1); width: 48px; height: 48px; border-radius: 14px;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="2" y="3" width="20" height="14" rx="2" stroke="#fff" stroke-width="1.75"/><path d="M8 21h8M12 17v4" stroke="#fff" stroke-width="1.75" stroke-linecap="round"/></svg>
+          </div>
+          <h2 style="font-family: 'Kanit', sans-serif; font-size: 1.7rem; font-weight: 800; color: #1C1C1C; letter-spacing: -0.03em;">Supported AI Models</h2>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;" class="problem-grid reveal">
+          <div class="card" style="padding: 1.25rem 1.375rem;">
+            <div style="font-family: 'Kanit', sans-serif; font-size: 1rem; font-weight: 700; color: #6155F1; margin-bottom: 0.375rem;">GPT Series</div>
+            <p style="font-size: 0.875rem; color: #555; line-height: 1.6; margin: 0;">Best for conversation, analysis, creative writing, and general tasks.</p>
+          </div>
+          <div class="card" style="padding: 1.25rem 1.375rem;">
+            <div style="font-family: 'Kanit', sans-serif; font-size: 1rem; font-weight: 700; color: #3E81E5; margin-bottom: 0.375rem;">Claude Series</div>
+            <p style="font-size: 0.875rem; color: #555; line-height: 1.6; margin: 0;">Best for long documents, deep reasoning, and complex file analysis.</p>
+          </div>
+          <div class="card" style="padding: 1.25rem 1.375rem;">
+            <div style="font-family: 'Kanit', sans-serif; font-size: 1rem; font-weight: 700; color: #0ABFBC; margin-bottom: 0.375rem;">Gemini Series</div>
+            <p style="font-size: 0.875rem; color: #555; line-height: 1.6; margin: 0;">Best for multilingual tasks, multimodal inputs, and knowledge retrieval.</p>
+          </div>
+          <div class="card" style="padding: 1.25rem 1.375rem;">
+            <div style="font-family: 'Kanit', sans-serif; font-size: 1rem; font-weight: 700; color: #F59E0B; margin-bottom: 0.375rem;">DeepSeek Series</div>
+            <p style="font-size: 0.875rem; color: #555; line-height: 1.6; margin: 0;">Best for high-complexity tasks and cost-sensitive workloads.</p>
+          </div>
+          <div class="card" style="padding: 1.25rem 1.375rem; grid-column: span 2;">
+            <div style="font-family: 'Kanit', sans-serif; font-size: 1rem; font-weight: 700; color: #6155F1; margin-bottom: 0.375rem;">Qwen Series</div>
+            <p style="font-size: 0.875rem; color: #555; line-height: 1.6; margin: 0;">Best for Chinese language understanding, writing, and content with Chinese context.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5. What Can You Use It For? -->
+      <div id="use-cases" style="margin-bottom: 3.5rem;">
+        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.25rem;">
+          <div class="icon-box" style="background: linear-gradient(135deg, #F59E0B, #F43F5E); width: 48px; height: 48px; border-radius: 14px;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" stroke="#fff" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h2 style="font-family: 'Kanit', sans-serif; font-size: 1.7rem; font-weight: 800; color: #1C1C1C; letter-spacing: -0.03em;">What Can You Use It For?</h2>
+        </div>
+
+        <p style="font-size: 0.95rem; line-height: 1.8; color: #555; margin-bottom: 1.25rem;">
+          Writing, copywriting, organizing materials, translating documents, summarizing reports, comparing options, learning research, coding, and automating workflows.
+        </p>
+        <div style="background: #F5F2FF; border-radius: 14px; padding: 1.25rem 1.5rem; border: 1px solid rgba(97,85,241,0.12);">
+          <p style="font-size: 0.875rem; color: #3C315B; line-height: 1.7; margin: 0;">
+            <strong>Simply put:</strong> if you regularly use AI for content, research, customer service, development, or workflow organization — AI Token King centralizes it all.
+          </p>
+        </div>
+      </div>
+
+      <!-- 6. Who Is It For? -->
+      <div id="audience" style="margin-bottom: 3.5rem;">
+        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+          <div class="icon-box" style="background: linear-gradient(135deg, #6155F1, #0ABFBC); width: 48px; height: 48px; border-radius: 14px;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" stroke="#fff" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9" cy="7" r="4" stroke="#fff" stroke-width="1.75"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" stroke="#fff" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h2 style="font-family: 'Kanit', sans-serif; font-size: 1.7rem; font-weight: 800; color: #1C1C1C; letter-spacing: -0.03em;">Who Is It For?</h2>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;" class="audience-grid reveal">
+          <div class="card" style="padding: 1.375rem 1.5rem;">
+            <div style="font-size: 0.75rem; font-weight: 700; color: #6155F1; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5rem;">Content Creators</div>
+            <p style="font-size: 0.875rem; color: #555; line-height: 1.65; margin: 0;">Need to produce large volumes of articles, social posts, and scripts efficiently.</p>
+          </div>
+          <div class="card" style="padding: 1.375rem 1.5rem;">
+            <div style="font-size: 0.75rem; font-weight: 700; color: #3E81E5; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5rem;">Students &amp; Researchers</div>
+            <p style="font-size: 0.875rem; color: #555; line-height: 1.65; margin: 0;">Need to organize materials, translate documents, or assist with academic learning.</p>
+          </div>
+          <div class="card" style="padding: 1.375rem 1.5rem;">
+            <div style="font-size: 0.75rem; font-weight: 700; color: #0ABFBC; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5rem;">Individual Users</div>
+            <p style="font-size: 0.875rem; color: #555; line-height: 1.65; margin: 0;">Don't want to subscribe to every AI tool separately — just want one place to use AI.</p>
+          </div>
+          <div class="card" style="padding: 1.375rem 1.5rem;">
+            <div style="font-size: 0.75rem; font-weight: 700; color: #F59E0B; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5rem;">Developers &amp; Startups</div>
+            <p style="font-size: 0.875rem; color: #555; line-height: 1.65; margin: 0;">Need to test models, integrate APIs, or control costs across multiple AI services.</p>
+          </div>
+          <div class="card" style="padding: 1.375rem 1.5rem; grid-column: span 2;">
+            <div style="font-size: 0.75rem; font-weight: 700; color: #F43F5E; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5rem;">Enterprise Buyers</div>
+            <p style="font-size: 0.875rem; color: #555; line-height: 1.65; margin: 0;">Need unified AI usage management, model-level controls, flexible deployment, and team-wide token visibility.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 7. What is OpenClaw? -->
+      <div id="openclaw" style="margin-bottom: 3.5rem;">
+        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.25rem;">
+          <div class="icon-box" style="background: linear-gradient(135deg, #3C315B, #6155F1); width: 48px; height: 48px; border-radius: 14px;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm0 18a8 8 0 110-16 8 8 0 010 16zm-1-5h2v2h-2zm0-8h2v6h-2z" fill="#fff"/></svg>
+          </div>
+          <h2 style="font-family: 'Kanit', sans-serif; font-size: 1.7rem; font-weight: 800; color: #1C1C1C; letter-spacing: -0.03em;">What is OpenClaw?</h2>
+        </div>
+
+        <p style="font-size: 0.95rem; line-height: 1.8; color: #555; margin-bottom: 1rem;">
+          OpenClaw is AI Token King's <strong style="color: #3C315B;">AI Agent solution</strong>. Standard AI tools answer questions — OpenClaw goes further, letting AI handle fixed tasks and automated workflows.
+        </p>
+        <p style="font-size: 0.95rem; line-height: 1.8; color: #555; margin-bottom: 1.25rem;">
+          It's designed for automated customer service, scheduled tasks, content pipelines, knowledge base management, and cross-team collaboration over long time horizons.
+        </p>
+        <div style="background: linear-gradient(135deg, rgba(97,85,241,0.06), rgba(62,129,229,0.06)); border-radius: 14px; padding: 1.25rem 1.5rem; border: 1px solid rgba(97,85,241,0.12);">
+          <p style="font-size: 0.875rem; color: #3C315B; line-height: 1.7; margin: 0;">
+            <strong>Think of it as:</strong> AI that doesn't just respond — it acts. OpenClaw can follow a predefined workflow, execute steps autonomously, and report back — without requiring you to manually prompt every action.
+          </p>
+        </div>
+      </div>
+
+      <!-- 8. Getting Started -->
+      <div id="getting-started" style="margin-bottom: 3.5rem;">
+        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+          <div class="icon-box" style="background: linear-gradient(135deg, #22C55E, #0ABFBC); width: 48px; height: 48px; border-radius: 14px;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M5 3l14 9-14 9V3z" stroke="#fff" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h2 style="font-family: 'Kanit', sans-serif; font-size: 1.7rem; font-weight: 800; color: #1C1C1C; letter-spacing: -0.03em;">How to Get Started</h2>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 0.875rem;" class="reveal">
+          <div style="display: flex; align-items: flex-start; gap: 1.125rem; background: #fff; border-radius: 14px; padding: 1.25rem 1.375rem; box-shadow: 0 2px 8px rgba(97,85,241,0.07);">
+            <div style="width: 32px; height: 32px; border-radius: 50%; background: #6155F1; color: #fff; font-family: 'Kanit', sans-serif; font-size: 0.9rem; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div>
+              <div style="font-weight: 700; color: #1C1C1C; margin-bottom: 0.25rem; font-size: 0.95rem;">Create an account</div>
+              <div style="font-size: 0.875rem; color: #666; line-height: 1.6;">Sign up at AI Token King — takes under a minute.</div>
+            </div>
+          </div>
+          <div style="display: flex; align-items: flex-start; gap: 1.125rem; background: #fff; border-radius: 14px; padding: 1.25rem 1.375rem; box-shadow: 0 2px 8px rgba(97,85,241,0.07);">
+            <div style="width: 32px; height: 32px; border-radius: 50%; background: #3E81E5; color: #fff; font-family: 'Kanit', sans-serif; font-size: 0.9rem; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div>
+              <div style="font-weight: 700; color: #1C1C1C; margin-bottom: 0.25rem; font-size: 0.95rem;">Claim your free tokens</div>
+              <div style="font-size: 0.875rem; color: #666; line-height: 1.6;">New users receive a free token allocation to try all supported models.</div>
+            </div>
+          </div>
+          <div style="display: flex; align-items: flex-start; gap: 1.125rem; background: #fff; border-radius: 14px; padding: 1.25rem 1.375rem; box-shadow: 0 2px 8px rgba(97,85,241,0.07);">
+            <div style="width: 32px; height: 32px; border-radius: 50%; background: #0ABFBC; color: #fff; font-family: 'Kanit', sans-serif; font-size: 0.9rem; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div>
+              <div style="font-weight: 700; color: #1C1C1C; margin-bottom: 0.25rem; font-size: 0.95rem;">Browse available models</div>
+              <div style="font-size: 0.875rem; color: #666; line-height: 1.6;">Explore GPT, Claude, Gemini, DeepSeek, and Qwen — compare capabilities and costs.</div>
+            </div>
+          </div>
+          <div style="display: flex; align-items: flex-start; gap: 1.125rem; background: #fff; border-radius: 14px; padding: 1.25rem 1.375rem; box-shadow: 0 2px 8px rgba(97,85,241,0.07);">
+            <div style="width: 32px; height: 32px; border-radius: 50%; background: #F59E0B; color: #fff; font-family: 'Kanit', sans-serif; font-size: 0.9rem; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">4</div>
+            <div>
+              <div style="font-weight: 700; color: #1C1C1C; margin-bottom: 0.25rem; font-size: 0.95rem;">Submit your first task</div>
+              <div style="font-size: 0.875rem; color: #666; line-height: 1.6;">Start with writing, research, translation, or summarization — no setup required.</div>
+            </div>
+          </div>
+          <div style="display: flex; align-items: flex-start; gap: 1.125rem; background: #fff; border-radius: 14px; padding: 1.25rem 1.375rem; box-shadow: 0 2px 8px rgba(97,85,241,0.07);">
+            <div style="width: 32px; height: 32px; border-radius: 50%; background: #F43F5E; color: #fff; font-family: 'Kanit', sans-serif; font-size: 0.9rem; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">5</div>
+            <div>
+              <div style="font-weight: 700; color: #1C1C1C; margin-bottom: 0.25rem; font-size: 0.95rem;">Explore or set up OpenClaw</div>
+              <div style="font-size: 0.875rem; color: #666; line-height: 1.6;">When ready, configure OpenClaw for automated workflows and recurring tasks.</div>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top: 1.5rem; background: linear-gradient(135deg, #F5F2FF, #EBF4FF); border-radius: 14px; padding: 1.25rem 1.5rem;">
+          <p style="font-size: 0.875rem; color: #3C315B; line-height: 1.7; margin: 0;">
+            <strong>New users don't need to research model specs first.</strong> Start with summarization, translation, or writing — you'll naturally learn which models suit which tasks through use.
+          </p>
+        </div>
+      </div>
+
+      <!-- FAQ -->
+      <div id="faq" style="margin-bottom: 3.5rem;">
+        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+          <div class="icon-box" style="background: linear-gradient(135deg, #6155F1, #3E81E5); width: 48px; height: 48px; border-radius: 14px;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke="#fff" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h2 style="font-family: 'Kanit', sans-serif; font-size: 1.7rem; font-weight: 800; color: #1C1C1C; letter-spacing: -0.03em;">Common Questions</h2>
+        </div>
+
+        <div style="background: #fff; border-radius: 16px; padding: 0.5rem 1.75rem; box-shadow: 0 2px 8px rgba(97,85,241,0.07);">
+
+          <div class="faq-item">
+            <button class="faq-btn" aria-expanded="false">
+              Is AI Token King a cryptocurrency token?
+              <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="#6155F1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="faq-body">No. The "Token" in AI Token King refers to AI model usage units — the measurement AI APIs use to charge for text processing. It has nothing to do with cryptocurrency or virtual currency.</div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-btn" aria-expanded="false">
+              Can non-technical users use it?
+              <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="#6155F1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="faq-body">Yes. Regular users can use it for writing, organizing, translation, and Q&A without any technical knowledge. The platform is designed to be accessible to anyone who can use a chat interface.</div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-btn" aria-expanded="false">
+              How does AI Token King charge for usage?
+              <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="#6155F1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="faq-body">You top up your AI Token balance and consume tokens as you use AI models. More input content, longer tasks, and more capable models consume more tokens. You can view your balance and usage history at any time.</div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-btn" aria-expanded="false">
+              How is AI Token King different from a standard AI subscription?
+              <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="#6155F1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="faq-body">Standard AI subscriptions typically give you access to one platform or one model. AI Token King gives you access to multiple models with a single balance — you switch models based on task, not based on which subscription you have. If you only ever use one model, a single subscription might be fine. If you want flexibility, multi-model access, and cost control, AI Token King is the better fit.</div>
+          </div>
+
+          <div class="faq-item" style="border-bottom: none;">
+            <button class="faq-btn" aria-expanded="false">
+              What if I only want to use one AI model?
+              <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="#6155F1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="faq-body">That's fine — you can absolutely use AI Token King with just one model. But most users find that different tasks benefit from different models, and having the flexibility to switch without re-subscribing is one of the main reasons they stay.</div>
+          </div>
+
+        </div>
+      </div>
+
+    </div><!-- /main content -->
+
+    <!-- SIDEBAR -->
+    <aside class="guide-sidebar" style="position: sticky; top: 88px;">
+      <div style="background: #fff; border-radius: 16px; padding: 1.5rem; box-shadow: 0 2px 10px rgba(97,85,241,0.08); margin-bottom: 1.25rem;">
+        <div style="font-family: 'Kanit', sans-serif; font-size: 0.75rem; font-weight: 700; color: #6155F1; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 1rem;">On This Page</div>
+        <nav style="display: flex; flex-direction: column; gap: 0.125rem;">
+          <a href="#what-is" class="sidebar-link active">What is AI Token King?</a>
+          <a href="#problems" class="sidebar-link">What Problems Does It Solve?</a>
+          <a href="#features" class="sidebar-link">Core Features</a>
+          <a href="#models" class="sidebar-link">Supported AI Models</a>
+          <a href="#use-cases" class="sidebar-link">What Can You Use It For?</a>
+          <a href="#audience" class="sidebar-link">Who Is It For?</a>
+          <a href="#openclaw" class="sidebar-link">What is OpenClaw?</a>
+          <a href="#getting-started" class="sidebar-link">How to Get Started</a>
+          <a href="#faq" class="sidebar-link">Common Questions</a>
+        </nav>
+      </div>
+
+      <div style="background: linear-gradient(135deg, #6155F1, #3E81E5); border-radius: 16px; padding: 1.5rem; color: #fff;">
+        <div style="font-family: 'Kanit', sans-serif; font-size: 1rem; font-weight: 700; margin-bottom: 0.5rem;">Ready to try it?</div>
+        <p style="font-size: 0.825rem; opacity: 0.88; line-height: 1.6; margin-bottom: 1.125rem;">New users get free tokens to explore all supported models.</p>
+        <a href="#" class="btn-primary" style="background: rgba(255,255,255,0.2); box-shadow: none; border: 1px solid rgba(255,255,255,0.35); font-size: 0.825rem; padding: 0.5rem 1rem; width: 100%; justify-content: center;">
+          Get Started Free
+          <svg width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+    </aside>
+
+  </div>
+</section>
+
+
+<!-- FOOTER -->
+<footer style="background: #1C1C1C; color: #fff; padding: 3.5rem 1.5rem 2rem;">
+  <div style="max-width: 1200px; margin: 0 auto;">
+    <div style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem;">
+      <div>
+        <a href="index.html" style="display: flex; align-items: center; gap: 0.625rem; text-decoration: none; margin-bottom: 1rem;">
+          <img src="AI_Token_logoPNG.avif" alt="AI Token King" style="width: 32px; height: 32px; object-fit: contain;" />
+          <span style="font-family: 'Kanit', sans-serif; font-size: 1rem; font-weight: 700; color: #fff;">AI Token King</span>
+        </a>
+        <p style="font-size: 0.85rem; color: #888; line-height: 1.7; max-width: 260px;">Your hub for understanding AI tokens, models, and APIs — built for a Western audience.</p>
+      </div>
+      <div>
+        <div style="font-family: 'Kanit', sans-serif; font-size: 0.8rem; font-weight: 700; color: #666; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 1rem;">Learn</div>
+        <div style="display: flex; flex-direction: column; gap: 0.625rem;">
+          <a href="user-guide.html" style="font-size: 0.875rem; color: #aaa; text-decoration: none; transition: color 0.15s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#aaa'">User Guide</a>
+          <a href="ai-trends.html" style="font-size: 0.875rem; color: #aaa; text-decoration: none; transition: color 0.15s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#aaa'">AI Trends</a>
+          <a href="beginners-guide.html" style="font-size: 0.875rem; color: #aaa; text-decoration: none; transition: color 0.15s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#aaa'">Beginners Guide</a>
+        </div>
+      </div>
+      <div>
+        <div style="font-family: 'Kanit', sans-serif; font-size: 0.8rem; font-weight: 700; color: #666; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 1rem;">Compare</div>
+        <div style="display: flex; flex-direction: column; gap: 0.625rem;">
+          <a href="api-compare.html" style="font-size: 0.875rem; color: #aaa; text-decoration: none; transition: color 0.15s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#aaa'">Compare Models</a>
+          <a href="use-cases.html" style="font-size: 0.875rem; color: #aaa; text-decoration: none; transition: color 0.15s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#aaa'">Use Cases</a>
+        </div>
+      </div>
+      <div>
+        <div style="font-family: 'Kanit', sans-serif; font-size: 0.8rem; font-weight: 700; color: #666; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 1rem;">More</div>
+        <div style="display: flex; flex-direction: column; gap: 0.625rem;">
+          <a href="compliance.html" style="font-size: 0.875rem; color: #aaa; text-decoration: none; transition: color 0.15s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#aaa'">Business Compliance</a>
+          <a href="documentation.html" style="font-size: 0.875rem; color: #aaa; text-decoration: none; transition: color 0.15s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#aaa'">Documentation</a>
+          <a href="#" style="font-size: 0.875rem; color: #aaa; text-decoration: none; transition: color 0.15s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#aaa'">Blog</a>
+        </div>
+      </div>
+    </div>
+    <div style="border-top: 1px solid #333; padding-top: 1.5rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap;">
+      <p style="font-size: 0.8rem; color: #555; margin: 0;">© 2025 AI Token King. All rights reserved.</p>
+      <p style="font-size: 0.8rem; color: #555; margin: 0;">Helping the world understand AI — one token at a time.</p>
+    </div>
+  </div>
+</footer>
+
+
+<script>
+  // Dropdown
+  document.querySelectorAll('.nav-dropdown').forEach(dropdown => {
+    const btn = dropdown.querySelector('.nav-dropdown-btn');
+    const menu = dropdown.querySelector('.nav-dropdown-menu');
+    const chevron = dropdown.querySelector('.dropdown-chevron');
+    btn.addEventListener('click', e => {
+      e.stopPropagation();
+      const open = menu.style.display === 'block';
+      document.querySelectorAll('.nav-dropdown-menu').forEach(m => m.style.display = 'none');
+      document.querySelectorAll('.dropdown-chevron').forEach(c => c.style.transform = '');
+      document.querySelectorAll('.nav-dropdown-btn').forEach(b => b.setAttribute('aria-expanded', 'false'));
+      if (!open) { menu.style.display = 'block'; chevron.style.transform = 'rotate(180deg)'; btn.setAttribute('aria-expanded', 'true'); }
+    });
+  });
+  document.addEventListener('click', () => {
+    document.querySelectorAll('.nav-dropdown-menu').forEach(m => m.style.display = 'none');
+    document.querySelectorAll('.dropdown-chevron').forEach(c => c.style.transform = '');
+    document.querySelectorAll('.nav-dropdown-btn').forEach(b => b.setAttribute('aria-expanded', 'false'));
+  });
+
+  // FAQ
+  document.querySelectorAll('.faq-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const body = btn.nextElementSibling;
+      const chevron = btn.querySelector('.faq-chevron');
+      const open = body.style.display === 'block';
+      document.querySelectorAll('.faq-body').forEach(b => b.style.display = 'none');
+      document.querySelectorAll('.faq-chevron').forEach(c => c.style.transform = '');
+      document.querySelectorAll('.faq-btn').forEach(b => b.setAttribute('aria-expanded', 'false'));
+      if (!open) { body.style.display = 'block'; chevron.style.transform = 'rotate(180deg)'; btn.setAttribute('aria-expanded', 'true'); }
+    });
+  });
+
+  // Scroll reveal
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  // Sidebar active link on scroll
+  const sections = document.querySelectorAll('[id]');
+  const sidebarLinks = document.querySelectorAll('.sidebar-link');
+  const scrollSpy = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        sidebarLinks.forEach(l => l.classList.remove('active'));
+        const active = document.querySelector(`.sidebar-link[href="#${entry.target.id}"]`);
+        if (active) active.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-20% 0px -70% 0px' });
+  sections.forEach(s => scrollSpy.observe(s));
+  // Hero pointer blob
+  (function(){var h=document.querySelector('.page-hero-bg'),p=document.getElementById('page-pointer');if(!h||!p)return;var cx=0,cy=0,tx=0,ty=0;function m(){cx+=(tx-cx)/20;cy+=(ty-cy)/20;p.style.transform='translate('+Math.round(cx)+'px,'+Math.round(cy)+'px)';requestAnimationFrame(m);}h.addEventListener('mousemove',function(e){var r=h.getBoundingClientRect();tx=e.clientX-r.left;ty=e.clientY-r.top;});m();})();
+</script>
+
+</body>
+</html>

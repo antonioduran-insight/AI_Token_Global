@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Documentation — AI Token King</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    * { box-sizing: border-box; }
+    body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #F5F2FF; color: #1C1C1C; -webkit-font-smoothing: antialiased; }
+    body::before { content: ''; position: fixed; inset: 0; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E"); pointer-events: none; z-index: 9999; opacity: 0.4; }
+
+    .nav-link { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.875rem; font-weight: 500; color: #3C315B; text-decoration: none; padding: 0.375rem 0.75rem; border-radius: 8px; transition: background-color 0.2s ease, color 0.2s ease; }
+    .nav-link:hover { background-color: #E2DFFE; color: #6155F1; }
+    .nav-link.active { background-color: #E2DFFE; color: #6155F1; font-weight: 600; }
+    .nav-link:focus-visible { outline: 2px solid #6155F1; outline-offset: 2px; }
+
+    .dropdown-item { display: flex; align-items: center; gap: 0.625rem; padding: 0.6rem 0.875rem; border-radius: 9px; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.855rem; font-weight: 500; color: #3C315B; text-decoration: none; transition: background-color 0.15s ease, color 0.15s ease; white-space: nowrap; }
+    .dropdown-item:hover { background-color: #F5F2FF; color: #6155F1; }
+    .dropdown-item.active-item { background-color: #F5F2FF; color: #6155F1; font-weight: 600; }
+    .dropdown-item:focus-visible { outline: 2px solid #6155F1; border-radius: 9px; }
+
+    .btn-primary { display: inline-flex; align-items: center; gap: 0.5rem; background-color: #6155F1; color: #fff; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.9rem; font-weight: 600; padding: 0.625rem 1.375rem; border-radius: 12px; border: none; cursor: pointer; text-decoration: none; box-shadow: 0 4px 14px rgba(97,85,241,0.35), 0 1px 3px rgba(97,85,241,0.2); transition: transform 0.18s cubic-bezier(.22,1,.36,1), box-shadow 0.18s cubic-bezier(.22,1,.36,1), background-color 0.18s ease; }
+    .btn-primary:hover { background-color: #5448e0; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(97,85,241,0.45); }
+    .btn-primary:active { transform: translateY(0); }
+    .btn-primary:focus-visible { outline: 2px solid #6155F1; outline-offset: 3px; }
+
+    .section-label { display: inline-flex; align-items: center; gap: 0.375rem; background: #E2DFFE; color: #6155F1; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; padding: 0.3rem 0.875rem; border-radius: 100px; }
+
+    /* Sidebar */
+    .doc-sidebar-link { display: block; padding: 0.45rem 0.875rem; border-radius: 7px; font-size: 0.845rem; font-weight: 500; color: #666; text-decoration: none; transition: background-color 0.15s ease, color 0.15s ease; }
+    .doc-sidebar-link:hover { background: #F5F2FF; color: #6155F1; }
+    .doc-sidebar-link.active { background: #E2DFFE; color: #6155F1; font-weight: 600; }
+    .doc-sidebar-link:focus-visible { outline: 2px solid #6155F1; outline-offset: 2px; }
+    .doc-sidebar-section { font-family: 'Kanit', sans-serif; font-size: 0.7rem; font-weight: 700; color: #999; letter-spacing: 0.07em; text-transform: uppercase; padding: 0.5rem 0.875rem 0.25rem; margin-top: 0.75rem; }
+
+    /* Code blocks */
+    .code-block { background: #1C1C2E; border-radius: 12px; padding: 1.25rem 1.5rem; overflow-x: auto; margin: 1rem 0; }
+    .code-block code { font-family: 'JetBrains Mono', monospace; font-size: 0.82rem; color: #C4BFF8; line-height: 1.7; white-space: pre; }
+    .code-inline { font-family: 'JetBrains Mono', monospace; font-size: 0.82rem; background: #E2DFFE; color: #3C315B; padding: 0.15rem 0.45rem; border-radius: 5px; }
+
+    /* Doc cards */
+    .doc-card { background: #FFFFFF; border-radius: 16px; box-shadow: 0 2px 8px rgba(97,85,241,0.07), 0 1px 2px rgba(0,0,0,0.04); transition: transform 0.22s cubic-bezier(.22,1,.36,1), box-shadow 0.22s cubic-bezier(.22,1,.36,1); }
+    .doc-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(97,85,241,0.14), 0 2px 8px rgba(0,0,0,0.06); }
+
+    /* Section divider */
+    .doc-section { margin-bottom: 3.5rem; }
+    .doc-section h2 { font-family: 'Kanit', sans-serif; font-size: 1.6rem; font-weight: 800; color: #1C1C1C; letter-spacing: -0.03em; margin-bottom: 1rem; padding-bottom: 0.75rem; border-bottom: 2px solid rgba(97,85,241,0.1); }
+    .doc-section h3 { font-family: 'Kanit', sans-serif; font-size: 1.1rem; font-weight: 700; color: #1C1C1C; letter-spacing: -0.02em; margin-bottom: 0.625rem; margin-top: 1.75rem; }
+    .doc-section p { font-size: 0.925rem; line-height: 1.8; color: #555; margin-bottom: 0.875rem; }
+    .doc-section ul { padding-left: 1.25rem; margin-bottom: 0.875rem; }
+    .doc-section li { font-size: 0.9rem; line-height: 1.75; color: #555; margin-bottom: 0.375rem; }
+
+    /* Parameter table */
+    .param-table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+    .param-table th { background: #F5F2FF; padding: 0.625rem 1rem; text-align: left; font-size: 0.78rem; font-weight: 700; color: #3C315B; letter-spacing: 0.04em; text-transform: uppercase; border-bottom: 1px solid rgba(97,85,241,0.12); }
+    .param-table td { padding: 0.75rem 1rem; font-size: 0.875rem; color: #555; border-bottom: 1px solid rgba(97,85,241,0.07); vertical-align: top; }
+    .param-table tr:last-child td { border-bottom: none; }
+    .param-table tr:hover td { background: rgba(97,85,241,0.02); }
+
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: #F5F2FF; }
+    ::-webkit-scrollbar-thumb { background: #C4BFF8; border-radius: 3px; }
+
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
+    .fade-up { animation: fadeUp 0.6s cubic-bezier(.22,1,.36,1) both; }
+    .delay-1 { animation-delay: 0.07s; } .delay-2 { animation-delay: 0.14s; } .delay-3 { animation-delay: 0.21s; }
+
+    .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.6s cubic-bezier(.22,1,.36,1), transform 0.6s cubic-bezier(.22,1,.36,1); }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    @media (max-width: 1023px) { .desktop-nav { display: none !important; } }
+    @media (max-width: 1100px) { .doc-layout { grid-template-columns: 1fr !important; } .doc-sidebar-col { display: none !important; } }
+    @media (max-width: 768px) { .quick-links-grid { grid-template-columns: 1fr 1fr !important; } }
+    @media (max-width: 480px) { .quick-links-grid { grid-template-columns: 1fr !important; } }
+    /* ── Animated gradient hero ── */
+    .page-hero-bg { position: relative; overflow: hidden; background: linear-gradient(40deg, #2A1F5C, #0D1547); }
+    .page-hero-canvas { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
+    .page-hero-canvas .grad-blobs { width: 100%; height: 100%; filter: url(#page-goo) blur(40px); }
+    .page-hero-canvas .blob { position: absolute; border-radius: 50%; mix-blend-mode: hard-light; background: radial-gradient(circle at center, var(--blob-color) 0%, transparent 50%) no-repeat; width: 80%; height: 80%; top: calc(50% - 40%); left: calc(50% - 40%); }
+    .page-hero-canvas .blob-1 { --blob-color: rgba(97,85,241,1); animation: moveVertical 30s ease infinite; }
+    .page-hero-canvas .blob-2 { --blob-color: rgba(62,129,229,0.8); transform-origin: calc(50% - 400px); animation: moveInCircle 20s reverse infinite; }
+    .page-hero-canvas .blob-3 { --blob-color: rgba(86,247,253,0.8); transform-origin: calc(50% + 400px); animation: moveInCircle 40s linear infinite; }
+    .page-hero-canvas .blob-4 { --blob-color: rgba(180,100,241,0.8); transform-origin: calc(50% - 200px); animation: moveHorizontal 40s ease infinite; opacity: 0.7; }
+    .page-hero-canvas .blob-5 { --blob-color: rgba(30,80,200,0.8); transform-origin: calc(50% - 800px) calc(50% + 800px); animation: moveInCircle 20s ease infinite; }
+    .page-hero-canvas .blob-pointer { position: absolute; border-radius: 50%; mix-blend-mode: hard-light; background: radial-gradient(circle at center, rgba(140,100,255,0.8) 0%, transparent 50%) no-repeat; width: 100%; height: 100%; top: -50%; left: -50%; opacity: 0.7; }
+    @keyframes moveVertical { 0% { transform: translateY(-50%); } 50% { transform: translateY(50%); } 100% { transform: translateY(-50%); } }
+    @keyframes moveInCircle { 0% { transform: rotate(0deg); } 50% { transform: rotate(180deg); } 100% { transform: rotate(360deg); } }
+    @keyframes moveHorizontal { 0% { transform: translateX(-50%) translateY(-10%); } 50% { transform: translateX(50%) translateY(10%); } 100% { transform: translateX(-50%) translateY(-10%); } }
+    .page-hero-content { position: relative; z-index: 10; }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<header style="background: rgba(245,242,255,0.88); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border-bottom: 1px solid rgba(97,85,241,0.1); position: sticky; top: 0; z-index: 100;">
+  <div style="max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; height: 64px; display: flex; align-items: center; justify-content: space-between; gap: 2rem;">
+    <a href="index.html" style="display: flex; align-items: center; gap: 0.625rem; text-decoration: none; flex-shrink: 0;">
+      <img src="AI_Token_logoPNG.avif" alt="AI Token King" style="width: 36px; height: 36px; object-fit: contain;" />
+      <span style="font-family: 'Kanit', sans-serif; font-size: 1.1rem; font-weight: 700; color: #3C315B; letter-spacing: -0.02em;">AI Token King</span>
+    </a>
+    <nav class="desktop-nav" style="display: flex; align-items: center; gap: 0.125rem; flex: 1; justify-content: center;">
+      <div class="nav-dropdown" style="position: relative;">
+        <button class="nav-link nav-dropdown-btn" style="border: none; cursor: pointer; display: flex; align-items: center; gap: 0.3rem;" aria-expanded="false">
+          AI Resources
+          <svg width="12" height="12" viewBox="0 0 16 16" fill="none" style="transition: transform 0.2s ease;" class="dropdown-chevron"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="nav-dropdown-menu" style="display: none; position: absolute; top: calc(100% + 8px); left: 50%; transform: translateX(-50%); background: #fff; border-radius: 14px; box-shadow: 0 8px 32px rgba(97,85,241,0.14), 0 2px 8px rgba(0,0,0,0.07); padding: 0.5rem; min-width: 230px; z-index: 200; border: 1px solid rgba(97,85,241,0.1);">
+          <a href="ai-trends.html" class="dropdown-item">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M3 12h18M3 6h18M3 18h12" stroke="#6155F1" stroke-width="1.75" stroke-linecap="round"/></svg>
+            AI Trends
+          </a>
+          <a href="user-guide.html" class="dropdown-item">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z" fill="#6155F1"/></svg>
+            AI Token King User Guide
+          </a>
+          <a href="compliance.html" class="dropdown-item">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M19 21H5a2 2 0 01-2-2V7l4-4h10a2 2 0 012 2v14a2 2 0 01-2 2z" stroke="#6155F1" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 3v4H5M9 12h6M9 16h4" stroke="#6155F1" stroke-width="1.5" stroke-linecap="round"/></svg>
+            Business AI Compliance
+          </a>
+        </div>
+      </div>
+      <a href="api-compare.html" class="nav-link">Compare Models</a>
+      <a href="use-cases.html" class="nav-link">Use Cases</a>
+      <a href="beginners-guide.html" class="nav-link">Beginners Guide</a>
+      <a href="blog.html" class="nav-link">Blog</a>
+      <a href="https://www.aitokenking.com.tw/docs" class="nav-link active" target="_blank" rel="noopener noreferrer">Documentation</a>
+    </nav>
+    <div style="flex-shrink: 0;">
+      <a href="https://www.aitokenking.com.tw/home" class="btn-primary" style="font-size: 0.85rem; padding: 0.5rem 1.125rem;" target="_blank" rel="noopener noreferrer">
+        Get Started
+        <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+  </div>
+</header>
+
+
+<!-- HERO -->
+<section class="page-hero-bg" style="padding: 3rem 1.5rem 2.5rem;">
+  <div class="page-hero-canvas" aria-hidden="true">
+    <svg style="display:none"><defs><filter id="page-goo"><feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur"/><feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8" result="goo"/><feBlend in="SourceGraphic" in2="goo"/></filter></defs></svg>
+    <div class="grad-blobs"><div class="blob blob-1"></div><div class="blob blob-2"></div><div class="blob blob-3"></div><div class="blob blob-4"></div><div class="blob blob-5"></div><div class="blob-pointer" id="page-pointer"></div></div>
+  </div>
+  <div class="page-hero-content" style="max-width: 1200px; margin: 0 auto;">
+    <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1.5rem; font-size: 0.8rem; color: rgba(255,255,255,0.5);">
+      <a href="index.html" style="color: rgba(255,255,255,0.5); text-decoration: none; transition: color 0.15s;" onmouseover="this.style.color='rgba(255,255,255,0.9)'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">Home</a>
+      <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="rgba(255,255,255,0.3)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span style="color: rgba(255,255,255,0.9); font-weight: 600;">Documentation</span>
+    </div>
+    <div style="max-width: 720px;">
+      <div class="section-label fade-up" style="margin-bottom: 1rem; background: rgba(226,223,254,0.15); color: rgba(255,255,255,0.9); border: 1px solid rgba(255,255,255,0.15);">
+        <svg width="10" height="10" viewBox="0 0 16 16" fill="currentColor"><rect x="2" y="2" width="12" height="12" rx="2"/></svg>
+        Developer Docs
+      </div>
+      <h1 class="fade-up delay-1" style="font-family: 'Kanit', sans-serif; font-size: clamp(1.8rem, 4vw, 2.75rem); font-weight: 800; color: #ffffff; letter-spacing: -0.04em; line-height: 1.1; margin-bottom: 1rem;">
+        AI Token King Documentation
+      </h1>
+      <p class="fade-up delay-2" style="font-size: 1rem; line-height: 1.75; color: rgba(255,255,255,0.7); max-width: 600px;">
+        API references, integration guides, token calculation, model specs, and platform documentation for developers and technical teams.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+<!-- QUICK LINKS -->
+<section style="padding: 1.75rem 1.5rem; background: #fff; border-bottom: 1px solid rgba(97,85,241,0.08);">
+  <div style="max-width: 1200px; margin: 0 auto;">
+    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem;" class="quick-links-grid">
+      <a href="#getting-started" class="doc-card" style="padding: 1.125rem 1.25rem; text-decoration: none; display: flex; align-items: center; gap: 0.75rem;">
+        <div style="width: 36px; height: 36px; border-radius: 10px; background: linear-gradient(135deg, #6155F1, #3E81E5); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 3l14 9-14 9V3z" stroke="#fff" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div><div style="font-weight: 700; font-size: 0.875rem; color: #1C1C1C; margin-bottom: 0.1rem;">Getting Started</div><div style="font-size: 0.78rem; color: #888;">Quick setup guide</div></div>
+      </a>
+      <a href="#api-reference" class="doc-card" style="padding: 1.125rem 1.25rem; text-decoration: none; display: flex; align-items: center; gap: 0.75rem;">
+        <div style="width: 36px; height: 36px; border-radius: 10px; background: linear-gradient(135deg, #3E81E5, #0ABFBC); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M8 9l3 3-3 3M13 15h3" stroke="#fff" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/><rect x="3" y="3" width="18" height="18" rx="2" stroke="#fff" stroke-width="1.75"/></svg>
+        </div>
+        <div><div style="font-weight: 700; font-size: 0.875rem; color: #1C1C1C; margin-bottom: 0.1rem;">API Reference</div><div style="font-size: 0.78rem; color: #888;">Endpoints & parameters</div></div>
+      </a>
+      <a href="#token-calculation" class="doc-card" style="padding: 1.125rem 1.25rem; text-decoration: none; display: flex; align-items: center; gap: 0.75rem;">
+        <div style="width: 36px; height: 36px; border-radius: 10px; background: linear-gradient(135deg, #F59E0B, #F43F5E); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="#fff" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div><div style="font-weight: 700; font-size: 0.875rem; color: #1C1C1C; margin-bottom: 0.1rem;">Token Calculation</div><div style="font-size: 0.78rem; color: #888;">Pricing & usage</div></div>
+      </a>
+      <a href="#openclaw-api" class="doc-card" style="padding: 1.125rem 1.25rem; text-decoration: none; display: flex; align-items: center; gap: 0.75rem;">
+        <div style="width: 36px; height: 36px; border-radius: 10px; background: linear-gradient(135deg, #3C315B, #6155F1); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" stroke="#fff" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div><div style="font-weight: 700; font-size: 0.875rem; color: #1C1C1C; margin-bottom: 0.1rem;">OpenClaw API</div><div style="font-size: 0.78rem; color: #888;">Agent automation</div></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<!-- MAIN DOC LAYOUT -->
+<section style="padding: 2.5rem 1.5rem 5rem;">
+  <div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 220px 1fr; gap: 3rem; align-items: start;" class="doc-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="doc-sidebar-col" style="position: sticky; top: 88px;">
+      <div style="background: #fff; border-radius: 14px; padding: 1.25rem; box-shadow: 0 2px 10px rgba(97,85,241,0.08);">
+        <div class="doc-sidebar-section" style="margin-top: 0;">Getting Started</div>
+        <a href="#getting-started" class="doc-sidebar-link active">Overview</a>
+        <a href="#authentication" class="doc-sidebar-link">Authentication</a>
+        <a href="#first-request" class="doc-sidebar-link">Your First Request</a>
+
+        <div class="doc-sidebar-section">API Reference</div>
+        <a href="#api-reference" class="doc-sidebar-link">Base URL & Headers</a>
+        <a href="#chat-completions" class="doc-sidebar-link">Chat Completions</a>
+        <a href="#models-endpoint" class="doc-sidebar-link">Models Endpoint</a>
+        <a href="#error-codes" class="doc-sidebar-link">Error Codes</a>
+
+        <div class="doc-sidebar-section">Tokens & Billing</div>
+        <a href="#token-calculation" class="doc-sidebar-link">Token Calculation</a>
+        <a href="#pricing" class="doc-sidebar-link">Pricing by Model</a>
+
+        <div class="doc-sidebar-section">OpenClaw</div>
+        <a href="#openclaw-api" class="doc-sidebar-link">OpenClaw Overview</a>
+        <a href="#openclaw-agents" class="doc-sidebar-link">Creating Agents</a>
+
+        <div class="doc-sidebar-section">Resources</div>
+        <a href="#sdks" class="doc-sidebar-link">SDKs & Libraries</a>
+        <a href="#rate-limits" class="doc-sidebar-link">Rate Limits</a>
+      </div>
+    </aside>
+
+    <!-- MAIN DOC CONTENT -->
+    <div>
+
+      <!-- Getting Started -->
+      <div class="doc-section" id="getting-started">
+        <h2>Getting Started</h2>
+        <p>AI Token King provides a unified API gateway to multiple AI models — GPT, Claude, Gemini, DeepSeek, and Qwen — through a single endpoint and token balance. This documentation covers everything you need to integrate AI Token King into your applications.</p>
+
+        <h3 id="authentication">Authentication</h3>
+        <p>All API requests require an API key passed as a Bearer token in the Authorization header. You can generate API keys from your dashboard under <span class="code-inline">Settings → API Keys</span>.</p>
+
+        <div class="code-block">
+          <code>Authorization: Bearer atk_your_api_key_here</code>
+        </div>
+
+        <div style="background: rgba(245,158,11,0.08); border: 1px solid rgba(245,158,11,0.2); border-radius: 10px; padding: 1rem 1.25rem; margin: 1rem 0;">
+          <div style="display: flex; gap: 0.625rem; align-items: flex-start;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" style="flex-shrink: 0; margin-top: 0.15rem;"><path d="M12 9v4M12 17h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z" stroke="#F59E0B" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <p style="font-size: 0.85rem; color: #92400E; line-height: 1.65; margin: 0;">Never expose your API key in client-side code or public repositories. Use environment variables and server-side requests.</p>
+          </div>
+        </div>
+
+        <h3 id="first-request">Your First Request</h3>
+        <p>Here's a minimal example to get a completion from GPT-4o using the AI Token King API:</p>
+
+        <div class="code-block">
+          <code>curl https://api.aitokenking.com/v1/chat/completions \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer atk_your_key" \
+  -d '{
+    "model": "gpt-4o",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Explain AI tokens in one sentence."
+      }
+    ]
+  }'</code>
+        </div>
+
+        <p>The response follows the OpenAI-compatible format, making it easy to migrate existing integrations:</p>
+
+        <div class="code-block">
+          <code>{
+  "id": "chatcmpl-abc123",
+  "object": "chat.completion",
+  "model": "gpt-4o",
+  "choices": [{
+    "message": {
+      "role": "assistant",
+      "content": "AI tokens are the small text units that language models use to process and generate text, with usage charged per token consumed."
+    },
+    "finish_reason": "stop"
+  }],
+  "usage": {
+    "prompt_tokens": 12,
+    "completion_tokens": 28,
+    "total_tokens": 40
+  }
+}</code>
+        </div>
+      </div>
+
+      <!-- API Reference -->
+      <div class="doc-section" id="api-reference">
+        <h2>API Reference</h2>
+        <p>The AI Token King API is OpenAI-compatible. If you're already using the OpenAI SDK, you can switch to AI Token King by updating the base URL and API key.</p>
+
+        <h3>Base URL &amp; Headers</h3>
+        <div class="code-block">
+          <code>Base URL:  https://api.aitokenking.com/v1
+
+Required headers:
+  Content-Type:  application/json
+  Authorization: Bearer &lt;your_api_key&gt;</code>
+        </div>
+
+        <h3 id="chat-completions">Chat Completions</h3>
+        <p><span class="code-inline">POST /v1/chat/completions</span></p>
+        <p>Creates a completion for the provided messages. Supports all models available on the platform.</p>
+
+        <div style="background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(97,85,241,0.07); margin: 1rem 0;">
+          <table class="param-table">
+            <thead>
+              <tr>
+                <th>Parameter</th>
+                <th>Type</th>
+                <th>Required</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="code-inline">model</span></td>
+                <td style="color: #3E81E5; font-size: 0.82rem; font-family: 'JetBrains Mono', monospace;">string</td>
+                <td><span style="background: #FEE2E2; color: #DC2626; font-size: 0.72rem; font-weight: 700; padding: 0.15rem 0.45rem; border-radius: 4px;">required</span></td>
+                <td>Model ID (e.g. <span class="code-inline">gpt-4o</span>, <span class="code-inline">claude-3-5-sonnet</span>)</td>
+              </tr>
+              <tr>
+                <td><span class="code-inline">messages</span></td>
+                <td style="color: #3E81E5; font-size: 0.82rem; font-family: 'JetBrains Mono', monospace;">array</td>
+                <td><span style="background: #FEE2E2; color: #DC2626; font-size: 0.72rem; font-weight: 700; padding: 0.15rem 0.45rem; border-radius: 4px;">required</span></td>
+                <td>Array of message objects with <span class="code-inline">role</span> and <span class="code-inline">content</span></td>
+              </tr>
+              <tr>
+                <td><span class="code-inline">max_tokens</span></td>
+                <td style="color: #3E81E5; font-size: 0.82rem; font-family: 'JetBrains Mono', monospace;">integer</td>
+                <td><span style="background: #F0FDF4; color: #16A34A; font-size: 0.72rem; font-weight: 700; padding: 0.15rem 0.45rem; border-radius: 4px;">optional</span></td>
+                <td>Maximum tokens to generate in the response</td>
+              </tr>
+              <tr>
+                <td><span class="code-inline">temperature</span></td>
+                <td style="color: #3E81E5; font-size: 0.82rem; font-family: 'JetBrains Mono', monospace;">float</td>
+                <td><span style="background: #F0FDF4; color: #16A34A; font-size: 0.72rem; font-weight: 700; padding: 0.15rem 0.45rem; border-radius: 4px;">optional</span></td>
+                <td>Sampling temperature 0–2. Higher = more creative, lower = more deterministic. Default: 1</td>
+              </tr>
+              <tr>
+                <td><span class="code-inline">stream</span></td>
+                <td style="color: #3E81E5; font-size: 0.82rem; font-family: 'JetBrains Mono', monospace;">boolean</td>
+                <td><span style="background: #F0FDF4; color: #16A34A; font-size: 0.72rem; font-weight: 700; padding: 0.15rem 0.45rem; border-radius: 4px;">optional</span></td>
+                <td>Stream partial responses via SSE. Default: false</td>
+              </tr>
+              <tr>
+                <td><span class="code-inline">system</span></td>
+                <td style="color: #3E81E5; font-size: 0.82rem; font-family: 'JetBrains Mono', monospace;">string</td>
+                <td><span style="background: #F0FDF4; color: #16A34A; font-size: 0.72rem; font-weight: 700; padding: 0.15rem 0.45rem; border-radius: 4px;">optional</span></td>
+                <td>System prompt to set model behavior and context</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 id="models-endpoint">Models Endpoint</h3>
+        <p><span class="code-inline">GET /v1/models</span> — Returns a list of all available models and their current status.</p>
+        <div class="code-block">
+          <code>curl https://api.aitokenking.com/v1/models \
+  -H "Authorization: Bearer atk_your_key"</code>
+        </div>
+
+        <h3 id="error-codes">Error Codes</h3>
+        <div style="background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(97,85,241,0.07); margin: 1rem 0;">
+          <table class="param-table">
+            <thead><tr><th>Code</th><th>Meaning</th><th>Action</th></tr></thead>
+            <tbody>
+              <tr><td><span class="code-inline">400</span></td><td>Bad Request</td><td>Check request body — missing or invalid parameters</td></tr>
+              <tr><td><span class="code-inline">401</span></td><td>Unauthorized</td><td>Invalid or missing API key</td></tr>
+              <tr><td><span class="code-inline">402</span></td><td>Insufficient Tokens</td><td>Top up your AI Token balance</td></tr>
+              <tr><td><span class="code-inline">429</span></td><td>Rate Limited</td><td>Slow down requests or upgrade your plan</td></tr>
+              <tr><td><span class="code-inline">500</span></td><td>Server Error</td><td>Retry with exponential backoff</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Token Calculation -->
+      <div class="doc-section" id="token-calculation">
+        <h2>Token Calculation &amp; Pricing</h2>
+        <p>AI Token King charges per token consumed across input and output. Tokens are deducted from your balance in real time. You can monitor usage from your dashboard.</p>
+
+        <h3>How Tokens Are Counted</h3>
+        <ul>
+          <li><strong>Input tokens:</strong> Every character you send — your messages, system prompt, and conversation history</li>
+          <li><strong>Output tokens:</strong> Every character the model generates in response</li>
+          <li>Both directions count toward your usage</li>
+          <li>Longer conversations accumulate context tokens — older messages still count as input</li>
+        </ul>
+
+        <div style="background: linear-gradient(135deg, #F5F2FF, #EBF4FF); border-radius: 14px; padding: 1.25rem 1.5rem; margin: 1rem 0;">
+          <div style="font-family: 'Kanit', sans-serif; font-size: 0.75rem; font-weight: 700; color: #6155F1; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 0.75rem;">Quick Reference</div>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem;">
+            <div><span style="font-size: 0.85rem; color: #3C315B; font-weight: 600;">1,000 tokens</span> <span style="font-size: 0.85rem; color: #666;">≈ 750 words</span></div>
+            <div><span style="font-size: 0.85rem; color: #3C315B; font-weight: 600;">1 page (A4)</span> <span style="font-size: 0.85rem; color: #666;">≈ 500–600 tokens</span></div>
+            <div><span style="font-size: 0.85rem; color: #3C315B; font-weight: 600;">Short prompt</span> <span style="font-size: 0.85rem; color: #666;">≈ 10–50 tokens</span></div>
+            <div><span style="font-size: 0.85rem; color: #3C315B; font-weight: 600;">Full report</span> <span style="font-size: 0.85rem; color: #666;">≈ 5,000–30,000 tokens</span></div>
+          </div>
+        </div>
+
+        <h3 id="pricing">Pricing by Model</h3>
+        <div style="background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(97,85,241,0.07); margin: 1rem 0;">
+          <table class="param-table">
+            <thead><tr><th>Model</th><th>Input (per 1M tokens)</th><th>Output (per 1M tokens)</th><th>Context</th></tr></thead>
+            <tbody>
+              <tr><td><span class="code-inline">gpt-4o</span></td><td>$5.00</td><td>$15.00</td><td>128K</td></tr>
+              <tr><td><span class="code-inline">gpt-4o-mini</span></td><td>$0.15</td><td>$0.60</td><td>128K</td></tr>
+              <tr><td><span class="code-inline">claude-3-5-sonnet</span></td><td>$3.00</td><td>$15.00</td><td>200K</td></tr>
+              <tr><td><span class="code-inline">claude-3-haiku</span></td><td>$0.25</td><td>$1.25</td><td>200K</td></tr>
+              <tr><td><span class="code-inline">gemini-1.5-pro</span></td><td>$3.50</td><td>$10.50</td><td>1M</td></tr>
+              <tr><td><span class="code-inline">deepseek-v3</span></td><td>$0.14</td><td>$0.28</td><td>64K</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p style="font-size: 0.82rem; color: #999;">Prices shown in USD. AI Token King converts these to platform tokens at the time of top-up. Check your dashboard for current conversion rates.</p>
+      </div>
+
+      <!-- OpenClaw API -->
+      <div class="doc-section" id="openclaw-api">
+        <h2>OpenClaw API</h2>
+        <p>OpenClaw is AI Token King's AI Agent layer. Unlike single-turn completions, OpenClaw agents can execute multi-step workflows, maintain state across sessions, and trigger actions based on conditions.</p>
+
+        <h3>OpenClaw Overview</h3>
+        <ul>
+          <li>Agents are defined by a <strong>workflow configuration</strong> — a JSON object describing steps, conditions, and actions</li>
+          <li>Each agent has a persistent session and can be triggered via webhook, schedule, or API call</li>
+          <li>Agents use your token balance — each step consumes tokens based on the model assigned to it</li>
+        </ul>
+
+        <h3 id="openclaw-agents">Creating an Agent</h3>
+        <p><span class="code-inline">POST /v1/agents</span></p>
+
+        <div class="code-block">
+          <code>{
+  "name": "Customer Support Bot",
+  "model": "gpt-4o-mini",
+  "system_prompt": "You are a helpful customer support agent for...",
+  "steps": [
+    {
+      "id": "intake",
+      "type": "message",
+      "trigger": "on_start"
+    },
+    {
+      "id": "escalate",
+      "type": "webhook",
+      "condition": "sentiment == 'negative'",
+      "url": "https://your-app.com/escalate"
+    }
+  ],
+  "schedule": null
+}</code>
+        </div>
+
+        <p>Once created, the agent returns an <span class="code-inline">agent_id</span> you can use to trigger runs, check status, and retrieve logs via the Agents API.</p>
+      </div>
+
+      <!-- SDKs & Rate Limits -->
+      <div class="doc-section" id="sdks">
+        <h2>SDKs &amp; Rate Limits</h2>
+
+        <h3>SDKs &amp; Libraries</h3>
+        <p>Because AI Token King uses an OpenAI-compatible API, you can use the official OpenAI SDKs by pointing them to our base URL:</p>
+
+        <div class="code-block">
+          <code># Python (OpenAI SDK)
+from openai import OpenAI
+
+client = OpenAI(
+    api_key="atk_your_key",
+    base_url="https://api.aitokenking.com/v1"
+)
+
+response = client.chat.completions.create(
+    model="gpt-4o",
+    messages=[{"role": "user", "content": "Hello!"}]
+)</code>
+        </div>
+
+        <div class="code-block">
+          <code>// Node.js (OpenAI SDK)
+import OpenAI from 'openai';
+
+const client = new OpenAI({
+  apiKey: 'atk_your_key',
+  baseURL: 'https://api.aitokenking.com/v1',
+});
+
+const response = await client.chat.completions.create({
+  model: 'claude-3-5-sonnet',
+  messages: [{ role: 'user', content: 'Hello!' }],
+});</code>
+        </div>
+
+        <h3 id="rate-limits">Rate Limits</h3>
+        <div style="background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(97,85,241,0.07); margin: 1rem 0;">
+          <table class="param-table">
+            <thead><tr><th>Plan</th><th>Requests/min</th><th>Tokens/min</th><th>Concurrent</th></tr></thead>
+            <tbody>
+              <tr><td>Free</td><td>10 RPM</td><td>40,000 TPM</td><td>2</td></tr>
+              <tr><td>Pro</td><td>100 RPM</td><td>400,000 TPM</td><td>10</td></tr>
+              <tr><td>Enterprise</td><td>Custom</td><td>Custom</td><td>Custom</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Rate limit headers are included in every response: <span class="code-inline">x-ratelimit-remaining-requests</span> and <span class="code-inline">x-ratelimit-remaining-tokens</span>. Implement exponential backoff when you receive a <span class="code-inline">429</span> response.</p>
+      </div>
+
+    </div><!-- /main doc content -->
+
+  </div>
+</section>
+
+
+<!-- FOOTER -->
+<footer style="background: #1C1C1C; color: #fff; padding: 3.5rem 1.5rem 2rem;">
+  <div style="max-width: 1200px; margin: 0 auto;">
+    <div style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem;">
+      <div>
+        <a href="index.html" style="display: flex; align-items: center; gap: 0.625rem; text-decoration: none; margin-bottom: 1rem;">
+          <img src="AI_Token_logoPNG.avif" alt="AI Token King" style="width: 32px; height: 32px; object-fit: contain;" />
+          <span style="font-family: 'Kanit', sans-serif; font-size: 1rem; font-weight: 700; color: #fff;">AI Token King</span>
+        </a>
+        <p style="font-size: 0.85rem; color: #888; line-height: 1.7; max-width: 260px;">Your hub for understanding AI tokens, models, and APIs — built for a Western audience.</p>
+      </div>
+      <div>
+        <div style="font-family: 'Kanit', sans-serif; font-size: 0.8rem; font-weight: 700; color: #666; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 1rem;">Learn</div>
+        <div style="display: flex; flex-direction: column; gap: 0.625rem;">
+          <a href="user-guide.html" style="font-size: 0.875rem; color: #aaa; text-decoration: none; transition: color 0.15s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#aaa'">User Guide</a>
+          <a href="ai-trends.html" style="font-size: 0.875rem; color: #aaa; text-decoration: none; transition: color 0.15s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#aaa'">AI Trends</a>
+          <a href="beginners-guide.html" style="font-size: 0.875rem; color: #aaa; text-decoration: none; transition: color 0.15s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#aaa'">Beginners Guide</a>
+        </div>
+      </div>
+      <div>
+        <div style="font-family: 'Kanit', sans-serif; font-size: 0.8rem; font-weight: 700; color: #666; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 1rem;">Compare</div>
+        <div style="display: flex; flex-direction: column; gap: 0.625rem;">
+          <a href="api-compare.html" style="font-size: 0.875rem; color: #aaa; text-decoration: none; transition: color 0.15s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#aaa'">Compare Models</a>
+          <a href="use-cases.html" style="font-size: 0.875rem; color: #aaa; text-decoration: none; transition: color 0.15s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#aaa'">Use Cases</a>
+        </div>
+      </div>
+      <div>
+        <div style="font-family: 'Kanit', sans-serif; font-size: 0.8rem; font-weight: 700; color: #666; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 1rem;">More</div>
+        <div style="display: flex; flex-direction: column; gap: 0.625rem;">
+          <a href="compliance.html" style="font-size: 0.875rem; color: #aaa; text-decoration: none; transition: color 0.15s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#aaa'">Business Compliance</a>
+          <a href="documentation.html" style="font-size: 0.875rem; color: #aaa; text-decoration: none; transition: color 0.15s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#aaa'">Documentation</a>
+          <a href="#" style="font-size: 0.875rem; color: #aaa; text-decoration: none; transition: color 0.15s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#aaa'">Blog</a>
+        </div>
+      </div>
+    </div>
+    <div style="border-top: 1px solid #333; padding-top: 1.5rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap;">
+      <p style="font-size: 0.8rem; color: #555; margin: 0;">© 2025 AI Token King. All rights reserved.</p>
+      <p style="font-size: 0.8rem; color: #555; margin: 0;">Helping the world understand AI — one token at a time.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.querySelectorAll('.nav-dropdown').forEach(dropdown => {
+    const btn = dropdown.querySelector('.nav-dropdown-btn');
+    const menu = dropdown.querySelector('.nav-dropdown-menu');
+    const chevron = dropdown.querySelector('.dropdown-chevron');
+    btn.addEventListener('click', e => {
+      e.stopPropagation();
+      const open = menu.style.display === 'block';
+      document.querySelectorAll('.nav-dropdown-menu').forEach(m => m.style.display = 'none');
+      document.querySelectorAll('.dropdown-chevron').forEach(c => c.style.transform = '');
+      document.querySelectorAll('.nav-dropdown-btn').forEach(b => b.setAttribute('aria-expanded', 'false'));
+      if (!open) { menu.style.display = 'block'; chevron.style.transform = 'rotate(180deg)'; btn.setAttribute('aria-expanded', 'true'); }
+    });
+  });
+  document.addEventListener('click', () => {
+    document.querySelectorAll('.nav-dropdown-menu').forEach(m => m.style.display = 'none');
+    document.querySelectorAll('.dropdown-chevron').forEach(c => c.style.transform = '');
+    document.querySelectorAll('.nav-dropdown-btn').forEach(b => b.setAttribute('aria-expanded', 'false'));
+  });
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  const sections = document.querySelectorAll('[id]');
+  const sidebarLinks = document.querySelectorAll('.doc-sidebar-link');
+  const scrollSpy = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        sidebarLinks.forEach(l => l.classList.remove('active'));
+        const active = document.querySelector(`.doc-sidebar-link[href="#${entry.target.id}"]`);
+        if (active) active.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-15% 0px -75% 0px' });
+  sections.forEach(s => scrollSpy.observe(s));
+  // Hero pointer blob
+  (function(){var h=document.querySelector('.page-hero-bg'),p=document.getElementById('page-pointer');if(!h||!p)return;var cx=0,cy=0,tx=0,ty=0;function m(){cx+=(tx-cx)/20;cy+=(ty-cy)/20;p.style.transform='translate('+Math.round(cx)+'px,'+Math.round(cy)+'px)';requestAnimationFrame(m);}h.addEventListener('mousemove',function(e){var r=h.getBoundingClientRect();tx=e.clientX-r.left;ty=e.clientY-r.top;});m();})();
+</script>
+</body>
+</html>

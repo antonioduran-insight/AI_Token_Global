@@ -1,0 +1,1013 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Token Calculator — Estimate Costs Instantly | AI Token King</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              purple: '#6155F1',
+              blue: '#3E81E5',
+              black: '#000000',
+              gray: '#666666',
+              lightgray: '#999999',
+              pale: '#EBF4FF',
+              white: '#FFFFFF',
+              lavender: '#F5F2FF',
+              softpurple: '#E2DFFE',
+              darkpurple: '#3C315B',
+            }
+          },
+          fontFamily: {
+            heading: ['Kanit', 'sans-serif'],
+            body: ['Plus Jakarta Sans', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: #F5F2FF;
+      color: #1C1C1C;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Grain overlay */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 9999;
+      opacity: 0.4;
+    }
+
+    /* Nav */
+    .nav-link {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: #3C315B;
+      text-decoration: none;
+      padding: 0.375rem 0.75rem;
+      border-radius: 8px;
+      transition: background-color 0.2s ease, color 0.2s ease;
+    }
+    .nav-link:hover { background-color: #E2DFFE; color: #6155F1; }
+    .nav-link:focus-visible { outline: 2px solid #6155F1; outline-offset: 2px; }
+    .nav-link:active { background-color: #d0cbfd; }
+    .nav-link.active { color: #6155F1; background-color: #EDE9FF; font-weight: 600; }
+
+    /* Dropdown */
+    .dropdown-item {
+      display: flex;
+      align-items: center;
+      gap: 0.625rem;
+      padding: 0.6rem 0.875rem;
+      border-radius: 9px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.855rem;
+      font-weight: 500;
+      color: #3C315B;
+      text-decoration: none;
+      transition: background-color 0.15s ease, color 0.15s ease;
+      white-space: nowrap;
+    }
+    .dropdown-item:hover { background-color: #F5F2FF; color: #6155F1; }
+    .dropdown-item.active { background-color: #E2DFFE; color: #6155F1; font-weight: 600; }
+    .dropdown-item:focus-visible { outline: 2px solid #6155F1; border-radius: 9px; }
+
+    /* Buttons */
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background-color: #6155F1;
+      color: #fff;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 600;
+      padding: 0.625rem 1.375rem;
+      border-radius: 12px;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      box-shadow: 0 4px 14px rgba(97,85,241,0.35), 0 1px 3px rgba(97,85,241,0.2);
+      transition: transform 0.18s cubic-bezier(.22,1,.36,1), box-shadow 0.18s cubic-bezier(.22,1,.36,1), background-color 0.18s ease;
+    }
+    .btn-primary:hover { background-color: #5448e0; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(97,85,241,0.45), 0 2px 6px rgba(97,85,241,0.25); }
+    .btn-primary:focus-visible { outline: 2px solid #6155F1; outline-offset: 3px; }
+    .btn-primary:active { transform: translateY(0); }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background-color: transparent;
+      color: #6155F1;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 600;
+      padding: 0.625rem 1.375rem;
+      border-radius: 12px;
+      border: 1.5px solid #6155F1;
+      cursor: pointer;
+      text-decoration: none;
+      transition: transform 0.18s cubic-bezier(.22,1,.36,1), background-color 0.18s ease, box-shadow 0.18s ease;
+    }
+    .btn-secondary:hover { background-color: #F5F2FF; transform: translateY(-2px); box-shadow: 0 4px 12px rgba(97,85,241,0.15); }
+    .btn-secondary:focus-visible { outline: 2px solid #6155F1; outline-offset: 3px; }
+    .btn-secondary:active { transform: translateY(0); background-color: #E2DFFE; }
+
+    /* Cards */
+    .card {
+      background: #FFFFFF;
+      border-radius: 16px;
+      box-shadow: 0 2px 8px rgba(97,85,241,0.07), 0 1px 2px rgba(0,0,0,0.04);
+      transition: transform 0.22s cubic-bezier(.22,1,.36,1), box-shadow 0.22s cubic-bezier(.22,1,.36,1);
+    }
+    .card-elevated {
+      background: #FFFFFF;
+      border-radius: 20px;
+      box-shadow: 0 4px 20px rgba(97,85,241,0.1), 0 1px 4px rgba(0,0,0,0.05);
+    }
+
+    /* Section label pill */
+    .section-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.375rem;
+      background: #E2DFFE;
+      color: #6155F1;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 0.3rem 0.875rem;
+      border-radius: 100px;
+    }
+
+    /* Scrollbar */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: #F5F2FF; }
+    ::-webkit-scrollbar-thumb { background: #C4BFF8; border-radius: 3px; }
+
+    /* Responsive nav */
+    @media (max-width: 1023px) { .desktop-nav { display: none !important; } }
+
+    /* Animations */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(18px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .fade-up   { animation: fadeUp 0.55s cubic-bezier(.22,1,.36,1) both; }
+    .fade-up-1 { animation-delay: 0.05s; }
+    .fade-up-2 { animation-delay: 0.12s; }
+    .fade-up-3 { animation-delay: 0.19s; }
+
+    /* ── Calculator-specific ── */
+
+    /* Textarea */
+    .calc-textarea {
+      width: 100%;
+      min-height: 220px;
+      border: 1.5px solid #E2DFFE;
+      border-radius: 14px;
+      padding: 1rem 1.125rem;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.95rem;
+      line-height: 1.75;
+      resize: vertical;
+      outline: none;
+      background: #FDFCFF;
+      color: #1C1C1C;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+    .calc-textarea:focus {
+      border-color: #6155F1;
+      box-shadow: 0 0 0 4px rgba(97,85,241,0.1);
+    }
+    .calc-textarea::placeholder { color: #B0AAD8; }
+
+    /* Stat boxes */
+    .stat-box {
+      background: #FAFAFE;
+      border: 1.5px solid #EDEDEF;
+      border-radius: 14px;
+      padding: 1.125rem 1.25rem;
+      transition: border-color 0.2s ease;
+    }
+    .stat-box.highlight {
+      background: linear-gradient(135deg, rgba(97,85,241,0.06) 0%, rgba(62,129,229,0.06) 100%);
+      border-color: rgba(97,85,241,0.25);
+    }
+
+    /* Platform cards */
+    .platform-card {
+      border-radius: 16px;
+      padding: 1.25rem 1.375rem;
+      border: 1.5px solid #EDEDEF;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s cubic-bezier(.22,1,.36,1);
+    }
+    .platform-card:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(97,85,241,0.1); }
+    .platform-card.openai  { background: #F8FAFC; }
+    .platform-card.claude  { background: #FFF8F4; border-color: rgba(232,130,77,0.2); }
+    .platform-card.gemini  { background: #F6F4FF; border-color: rgba(97,85,241,0.15); }
+
+    /* Cost number */
+    .cost-value {
+      font-family: 'Kanit', sans-serif;
+      font-size: 1.75rem;
+      font-weight: 700;
+      line-height: 1;
+      letter-spacing: -0.03em;
+      transition: color 0.3s ease;
+    }
+    .cost-value.cheapest { color: #16A34A; }
+    .cost-value.priciest  { color: #DC2626; }
+    .cost-value.neutral   { color: #1C1C1C; }
+
+    /* Summary banner */
+    .summary-banner {
+      border-radius: 12px;
+      padding: 0.875rem 1.125rem;
+      font-size: 0.875rem;
+      line-height: 1.75;
+      background: #F0EEFF;
+      border: 1px solid rgba(97,85,241,0.18);
+      color: #3C315B;
+    }
+
+    /* Calc button */
+    .btn-calc {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      background: linear-gradient(135deg, #6155F1 0%, #3E81E5 100%);
+      color: #fff;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 700;
+      padding: 0.75rem 1.5rem;
+      border-radius: 12px;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 4px 18px rgba(97,85,241,0.4);
+      transition: transform 0.18s cubic-bezier(.22,1,.36,1), box-shadow 0.18s ease, filter 0.18s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    .btn-calc::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(255,255,255,0.16) 0%, transparent 55%);
+      pointer-events: none;
+    }
+    .btn-calc:hover { transform: translateY(-2px); box-shadow: 0 10px 28px rgba(97,85,241,0.5); filter: brightness(1.06); }
+    .btn-calc:focus-visible { outline: 2px solid #6155F1; outline-offset: 3px; }
+    .btn-calc:active { transform: translateY(0); }
+
+    .btn-clear {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      background: #F0EEFF;
+      color: #6155F1;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 600;
+      padding: 0.75rem 1.25rem;
+      border-radius: 12px;
+      border: 1.5px solid #E2DFFE;
+      cursor: pointer;
+      transition: background-color 0.18s ease, transform 0.18s cubic-bezier(.22,1,.36,1);
+    }
+    .btn-clear:hover { background: #E2DFFE; transform: translateY(-1px); }
+    .btn-clear:focus-visible { outline: 2px solid #6155F1; outline-offset: 3px; }
+    .btn-clear:active { transform: translateY(0); }
+
+    /* Rule list */
+    .rule-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.625rem;
+      font-size: 0.875rem;
+      line-height: 1.7;
+      color: #555;
+      padding: 0.5rem 0;
+      border-bottom: 1px solid #F0EEFF;
+    }
+    .rule-list li:last-child { border-bottom: none; }
+    .rule-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #6155F1;
+      margin-top: 0.45rem;
+      flex-shrink: 0;
+    }
+
+    /* FAQ */
+    .faq-item { border-bottom: 1px solid #EDEDEF; }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-question {
+      width: 100%;
+      text-align: left;
+      background: none;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.125rem 0;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #1C1C1C;
+      transition: color 0.18s ease;
+    }
+    .faq-question:hover { color: #6155F1; }
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s cubic-bezier(.22,1,.36,1);
+    }
+    .faq-answer.open { max-height: 300px; padding-bottom: 1.125rem; }
+    .faq-chevron { transition: transform 0.3s cubic-bezier(.22,1,.36,1); flex-shrink: 0; }
+    .faq-chevron.open { transform: rotate(180deg); }
+
+    /* Mini badge */
+    .mini-badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.2rem 0.6rem;
+      border-radius: 100px;
+      background: rgba(97,85,241,0.12);
+      color: #6155F1;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    /* Char counter */
+    .char-counter {
+      font-size: 0.75rem;
+      color: #B0AAD8;
+      text-align: right;
+      margin-top: 0.375rem;
+    }
+
+    /* Platform accent bar */
+    .platform-accent {
+      width: 3px;
+      border-radius: 2px;
+      flex-shrink: 0;
+    }
+    /* ── Animated gradient hero ── */
+    .page-hero-bg { position: relative; overflow: hidden; background: linear-gradient(40deg, #2A1F5C, #0D1547); }
+    .page-hero-canvas { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
+    .page-hero-canvas .grad-blobs { width: 100%; height: 100%; filter: url(#page-goo) blur(40px); }
+    .page-hero-canvas .blob { position: absolute; border-radius: 50%; mix-blend-mode: hard-light; background: radial-gradient(circle at center, var(--blob-color) 0%, transparent 50%) no-repeat; width: 80%; height: 80%; top: calc(50% - 40%); left: calc(50% - 40%); }
+    .page-hero-canvas .blob-1 { --blob-color: rgba(97,85,241,1); animation: moveVertical 30s ease infinite; }
+    .page-hero-canvas .blob-2 { --blob-color: rgba(62,129,229,0.8); transform-origin: calc(50% - 400px); animation: moveInCircle 20s reverse infinite; }
+    .page-hero-canvas .blob-3 { --blob-color: rgba(86,247,253,0.8); transform-origin: calc(50% + 400px); animation: moveInCircle 40s linear infinite; }
+    .page-hero-canvas .blob-4 { --blob-color: rgba(180,100,241,0.8); transform-origin: calc(50% - 200px); animation: moveHorizontal 40s ease infinite; opacity: 0.7; }
+    .page-hero-canvas .blob-5 { --blob-color: rgba(30,80,200,0.8); transform-origin: calc(50% - 800px) calc(50% + 800px); animation: moveInCircle 20s ease infinite; }
+    .page-hero-canvas .blob-pointer { position: absolute; border-radius: 50%; mix-blend-mode: hard-light; background: radial-gradient(circle at center, rgba(140,100,255,0.8) 0%, transparent 50%) no-repeat; width: 100%; height: 100%; top: -50%; left: -50%; opacity: 0.7; }
+    @keyframes moveVertical { 0% { transform: translateY(-50%); } 50% { transform: translateY(50%); } 100% { transform: translateY(-50%); } }
+    @keyframes moveInCircle { 0% { transform: rotate(0deg); } 50% { transform: rotate(180deg); } 100% { transform: rotate(360deg); } }
+    @keyframes moveHorizontal { 0% { transform: translateX(-50%) translateY(-10%); } 50% { transform: translateX(50%) translateY(10%); } 100% { transform: translateX(-50%) translateY(-10%); } }
+    .page-hero-content { position: relative; z-index: 10; }
+  </style>
+</head>
+<body>
+
+<!-- ════════════════════════════════════════════
+     NAVIGATION
+════════════════════════════════════════════ -->
+<header style="background: rgba(245,242,255,0.85); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border-bottom: 1px solid rgba(97,85,241,0.1); position: sticky; top: 0; z-index: 100;">
+  <div style="max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; height: 64px; display: flex; align-items: center; justify-content: space-between; gap: 2rem;">
+
+    <!-- Logo -->
+    <a href="index.html" style="display: flex; align-items: center; gap: 0.625rem; text-decoration: none; flex-shrink: 0;">
+      <img src="AI_Token_logoPNG.avif" alt="AI Token King Logo" style="width: 36px; height: 36px; object-fit: contain;" />
+      <span style="font-family: 'Kanit', sans-serif; font-size: 1.1rem; font-weight: 700; color: #3C315B; letter-spacing: -0.02em;">AI Token King</span>
+    </a>
+
+    <!-- Desktop Nav -->
+    <nav class="desktop-nav" style="display: flex; align-items: center; gap: 0.125rem; flex: 1; justify-content: center;">
+
+      <!-- Dropdown: AI Resources (active — Token Calculator lives here) -->
+      <div class="nav-dropdown" style="position: relative;">
+        <button class="nav-link nav-dropdown-btn active" style="background: #EDE9FF; border: none; cursor: pointer; display: flex; align-items: center; gap: 0.3rem;" aria-expanded="false">
+          AI Resources
+          <svg width="12" height="12" viewBox="0 0 16 16" fill="none" style="transition: transform 0.2s ease;" class="dropdown-chevron"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="nav-dropdown-menu" style="display: none; position: absolute; top: calc(100% + 8px); left: 50%; transform: translateX(-50%); background: #fff; border-radius: 14px; box-shadow: 0 8px 32px rgba(97,85,241,0.14), 0 2px 8px rgba(0,0,0,0.07); padding: 0.5rem; min-width: 240px; z-index: 200; border: 1px solid rgba(97,85,241,0.1);">
+          <a href="ai-trends.html" class="dropdown-item">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M3 12h18M3 6h18M3 18h12" stroke="#6155F1" stroke-width="1.75" stroke-linecap="round"/></svg>
+            AI Trends
+          </a>
+          <a href="user-guide.html" class="dropdown-item">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z" fill="#6155F1"/></svg>
+            AI Token King User Guide
+          </a>
+          <a href="compliance.html" class="dropdown-item">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M19 21H5a2 2 0 01-2-2V7l4-4h10a2 2 0 012 2v14a2 2 0 01-2 2z" stroke="#6155F1" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 3v4H5M9 12h6M9 16h4" stroke="#6155F1" stroke-width="1.5" stroke-linecap="round"/></svg>
+            Business AI Compliance
+          </a>
+          <a href="token-calculator.html" class="dropdown-item active">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><rect x="4" y="3" width="16" height="18" rx="2" stroke="#6155F1" stroke-width="1.75"/><line x1="8" y1="8" x2="16" y2="8" stroke="#6155F1" stroke-width="1.5" stroke-linecap="round"/><line x1="8" y1="12" x2="16" y2="12" stroke="#6155F1" stroke-width="1.5" stroke-linecap="round"/><line x1="8" y1="16" x2="12" y2="16" stroke="#6155F1" stroke-width="1.5" stroke-linecap="round"/></svg>
+            Token Calculator
+          </a>
+        </div>
+      </div>
+
+      <a href="api-compare.html" class="nav-link">Compare Models</a>
+      <a href="use-cases.html" class="nav-link">Use Cases</a>
+      <a href="beginners-guide.html" class="nav-link">Beginners Guide</a>
+      <a href="blog.html" class="nav-link">Blog</a>
+      <a href="https://www.aitokenking.com.tw/docs" class="nav-link" target="_blank" rel="noopener noreferrer">Documentation</a>
+    </nav>
+
+    <!-- CTA -->
+    <div style="display: flex; align-items: center; gap: 0.75rem; flex-shrink: 0;">
+      <a href="https://www.aitokenking.com.tw/home" class="btn-primary" style="font-size: 0.85rem; padding: 0.5rem 1.125rem;" target="_blank" rel="noopener noreferrer">
+        Get Started
+        <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+
+    <!-- Mobile hamburger -->
+    <button style="display: none; background: none; border: none; cursor: pointer; padding: 0.5rem;" aria-label="Menu">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M3 6h18M3 12h18M3 18h18" stroke="#3C315B" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+</header>
+
+
+<!-- ════════════════════════════════════════════
+     HERO
+════════════════════════════════════════════ -->
+<section class="page-hero-bg" style="padding: 3.5rem 1.5rem 2.5rem;">
+  <div class="page-hero-canvas" aria-hidden="true">
+    <svg style="display:none"><defs><filter id="page-goo"><feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur"/><feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8" result="goo"/><feBlend in="SourceGraphic" in2="goo"/></filter></defs></svg>
+    <div class="grad-blobs"><div class="blob blob-1"></div><div class="blob blob-2"></div><div class="blob blob-3"></div><div class="blob blob-4"></div><div class="blob blob-5"></div><div class="blob-pointer" id="page-pointer"></div></div>
+  </div>
+  <div class="page-hero-content" style="max-width: 1200px; margin: 0 auto;">
+
+    <!-- Breadcrumb -->
+    <nav style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1.75rem; font-size: 0.8rem; color: rgba(255,255,255,0.5);" aria-label="Breadcrumb">
+      <a href="index.html" style="color: rgba(255,255,255,0.5); text-decoration: none; transition: color 0.15s ease;" onmouseover="this.style.color='rgba(255,255,255,0.9)'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">Home</a>
+      <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="rgba(255,255,255,0.3)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <a href="#" style="color: rgba(255,255,255,0.5); text-decoration: none;">AI Resources</a>
+      <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="rgba(255,255,255,0.3)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span style="color: rgba(255,255,255,0.9); font-weight: 600;">Token Calculator</span>
+    </nav>
+
+    <div style="max-width: 680px;">
+      <div class="section-label fade-up" style="margin-bottom: 1rem; background: rgba(226,223,254,0.15); color: rgba(255,255,255,0.9); border: 1px solid rgba(255,255,255,0.15);">
+        <svg width="10" height="10" viewBox="0 0 16 16" fill="currentColor"><circle cx="8" cy="8" r="8"/></svg>
+        Free Tool
+      </div>
+      <h1 class="fade-up fade-up-1" style="font-family: 'Kanit', sans-serif; font-size: clamp(2rem, 4vw, 2.875rem); font-weight: 800; color: #ffffff; letter-spacing: -0.04em; line-height: 1.1; margin-bottom: 1rem;">
+        AI Token Calculator
+      </h1>
+      <p class="fade-up fade-up-2" style="font-size: 1rem; line-height: 1.75; color: rgba(255,255,255,0.7); max-width: 560px;">
+        Paste any text to instantly estimate token count and input costs across OpenAI, Anthropic, and Google — no sign-up required.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════
+     CALCULATOR
+════════════════════════════════════════════ -->
+<section style="padding: 2rem 1.5rem 5rem;">
+  <div style="max-width: 1200px; margin: 0 auto;">
+
+    <div style="display: grid; grid-template-columns: minmax(340px, 420px) 1fr; gap: 1.5rem; align-items: start;">
+
+      <!-- ── LEFT COLUMN: Input + Rules ── -->
+      <div style="display: flex; flex-direction: column; gap: 1.25rem;">
+
+        <!-- Input panel -->
+        <div class="card-elevated" style="padding: 1.75rem;">
+          <label for="textInput" style="display: block; font-family: 'Kanit', sans-serif; font-size: 1rem; font-weight: 700; color: #1C1C1C; letter-spacing: -0.02em; margin-bottom: 0.75rem;">
+            Input Text
+          </label>
+          <textarea
+            id="textInput"
+            class="calc-textarea"
+            placeholder="Paste any text — an article, a prompt, a customer service message, or API content — to estimate its token count and cost."
+          ></textarea>
+          <div class="char-counter"><span id="charCount">0</span> characters</div>
+
+          <div style="display: flex; gap: 0.75rem; margin-top: 1.125rem;">
+            <button id="calculateBtn" class="btn-calc" style="flex: 1;" type="button">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><rect x="4" y="3" width="16" height="18" rx="2" stroke="#fff" stroke-width="1.75"/><line x1="8" y1="8" x2="16" y2="8" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/><line x1="8" y1="12" x2="16" y2="12" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/><line x1="8" y1="16" x2="12" y2="16" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/></svg>
+              Calculate
+            </button>
+            <button id="clearBtn" class="btn-clear" type="button" aria-label="Clear text">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+              Clear
+            </button>
+          </div>
+        </div>
+
+        <!-- Rules panel -->
+        <div class="card-elevated" style="padding: 1.5rem;">
+          <div style="display: flex; align-items: center; gap: 0.625rem; margin-bottom: 1.125rem;">
+            <div style="width: 32px; height: 32px; border-radius: 9px; background: #F0EEFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#6155F1" stroke-width="1.75"/><path d="M12 8v4M12 16h.01" stroke="#6155F1" stroke-width="1.75" stroke-linecap="round"/></svg>
+            </div>
+            <span style="font-family: 'Kanit', sans-serif; font-size: 1rem; font-weight: 700; color: #1C1C1C; letter-spacing: -0.02em;">Estimation Rules</span>
+          </div>
+          <ul class="rule-list" style="list-style: none; margin: 0; padding: 0;">
+            <li><div class="rule-dot"></div><span>General-purpose estimation — great for quickly gauging text size at scale.</span></li>
+            <li><div class="rule-dot"></div><span>Chinese: <strong style="color: #3C315B;">1.5 tokens</strong> per character &nbsp;·&nbsp; English: <strong style="color: #3C315B;">1.1 tokens</strong> per word &nbsp;·&nbsp; Numbers &amp; symbols: <strong style="color: #3C315B;">0.3 tokens</strong> each.</span></li>
+            <li><div class="rule-dot"></div><span>This tool estimates <strong style="color: #3C315B;">input cost only</strong> — output (response) tokens are not included.</span></li>
+            <li><div class="rule-dot"></div><span>Different models use different tokenizers; actual token counts may vary slightly.</span></li>
+            <li><div class="rule-dot"></div><span>Prices shown are AI Token King reference prices. Always verify with the official platform for billing.</span></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- ── RIGHT COLUMN: Results ── -->
+      <div class="card-elevated" style="padding: 1.75rem;">
+
+        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.25rem; flex-wrap: wrap; gap: 0.75rem;">
+          <h2 style="font-family: 'Kanit', sans-serif; font-size: 1.4rem; font-weight: 800; color: #1C1C1C; letter-spacing: -0.03em; margin: 0;">Estimation Results</h2>
+          <span class="mini-badge">Input cost only</span>
+        </div>
+
+        <!-- Summary banner -->
+        <div class="summary-banner" id="resultSummary" style="margin-bottom: 1.375rem;">
+          Enter text above to begin calculating. Only input costs are estimated.
+        </div>
+
+        <!-- Stat grid -->
+        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.875rem; margin-bottom: 1.375rem;">
+
+          <div class="stat-box">
+            <div style="font-size: 0.75rem; font-weight: 600; color: #999; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5rem;">Chinese Characters</div>
+            <div id="chineseCount" style="font-family: 'Kanit', sans-serif; font-size: 2.25rem; font-weight: 700; color: #1C1C1C; letter-spacing: -0.03em; line-height: 1;">0</div>
+          </div>
+
+          <div class="stat-box">
+            <div style="font-size: 0.75rem; font-weight: 600; color: #999; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5rem;">English Words</div>
+            <div id="englishCount" style="font-family: 'Kanit', sans-serif; font-size: 2.25rem; font-weight: 700; color: #1C1C1C; letter-spacing: -0.03em; line-height: 1;">0</div>
+          </div>
+
+          <div class="stat-box">
+            <div style="font-size: 0.75rem; font-weight: 600; color: #999; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5rem;">Numbers &amp; Symbols</div>
+            <div id="symbolCount" style="font-family: 'Kanit', sans-serif; font-size: 2.25rem; font-weight: 700; color: #1C1C1C; letter-spacing: -0.03em; line-height: 1;">0</div>
+          </div>
+
+          <div class="stat-box highlight">
+            <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem; flex-wrap: wrap;">
+              <span style="font-size: 0.75rem; font-weight: 600; color: #6155F1; text-transform: uppercase; letter-spacing: 0.05em;">Est. Input Tokens</span>
+              <span class="mini-badge">Input only</span>
+            </div>
+            <div id="inputToken" style="font-family: 'Kanit', sans-serif; font-size: 2.25rem; font-weight: 700; color: #6155F1; letter-spacing: -0.03em; line-height: 1;">0</div>
+          </div>
+
+        </div>
+
+        <!-- Platform cards -->
+        <div style="display: flex; flex-direction: column; gap: 0.875rem;">
+
+          <!-- OpenAI -->
+          <div class="platform-card openai">
+            <div style="display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap;">
+              <div style="display: flex; align-items: center; gap: 0.875rem; flex: 1; min-width: 0;">
+                <div class="platform-accent" style="height: 48px; background: #1C1C1C;"></div>
+                <div>
+                  <div style="display: flex; align-items: center; gap: 0.625rem; margin-bottom: 0.2rem;">
+                    <span style="font-family: 'Kanit', sans-serif; font-size: 1.05rem; font-weight: 700; color: #1C1C1C;">OpenAI</span>
+                    <span style="font-size: 0.72rem; font-weight: 600; color: #999; background: #F0F0F0; padding: 0.15rem 0.5rem; border-radius: 5px;">GPT-4o</span>
+                  </div>
+                  <div style="font-size: 0.8rem; color: #888;">AI Token King ref. price: <strong style="color: #555;">$2.50 / 1M tokens</strong> · USD</div>
+                </div>
+              </div>
+              <div style="text-align: right; flex-shrink: 0;">
+                <div style="font-size: 0.72rem; font-weight: 600; color: #999; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.25rem;">Est. Input Cost</div>
+                <div class="cost-value neutral" id="openaiCost">$0.000000</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Anthropic -->
+          <div class="platform-card claude">
+            <div style="display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap;">
+              <div style="display: flex; align-items: center; gap: 0.875rem; flex: 1; min-width: 0;">
+                <div class="platform-accent" style="height: 48px; background: linear-gradient(180deg, #E8834D, #C9622A);"></div>
+                <div>
+                  <div style="display: flex; align-items: center; gap: 0.625rem; margin-bottom: 0.2rem;">
+                    <span style="font-family: 'Kanit', sans-serif; font-size: 1.05rem; font-weight: 700; color: #1C1C1C;">Anthropic</span>
+                    <span style="font-size: 0.72rem; font-weight: 600; color: #C9622A; background: #FFF0E8; padding: 0.15rem 0.5rem; border-radius: 5px;">Claude Opus</span>
+                  </div>
+                  <div style="font-size: 0.8rem; color: #888;">AI Token King ref. price: <strong style="color: #555;">$5.00 / 1M tokens</strong> · USD</div>
+                </div>
+              </div>
+              <div style="text-align: right; flex-shrink: 0;">
+                <div style="font-size: 0.72rem; font-weight: 600; color: #999; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.25rem;">Est. Input Cost</div>
+                <div class="cost-value neutral" id="claudeCost">$0.000000</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Google -->
+          <div class="platform-card gemini">
+            <div style="display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap;">
+              <div style="display: flex; align-items: center; gap: 0.875rem; flex: 1; min-width: 0;">
+                <div class="platform-accent" style="height: 48px; background: linear-gradient(180deg, #6155F1, #3E81E5);"></div>
+                <div>
+                  <div style="display: flex; align-items: center; gap: 0.625rem; margin-bottom: 0.2rem;">
+                    <span style="font-family: 'Kanit', sans-serif; font-size: 1.05rem; font-weight: 700; color: #1C1C1C;">Google</span>
+                    <span style="font-size: 0.72rem; font-weight: 600; color: #6155F1; background: #EEEAFF; padding: 0.15rem 0.5rem; border-radius: 5px;">Gemini 1.5 Pro</span>
+                  </div>
+                  <div style="font-size: 0.8rem; color: #888;">AI Token King ref. price: <strong style="color: #555;">$2.00 / 1M tokens</strong> · USD</div>
+                </div>
+              </div>
+              <div style="text-align: right; flex-shrink: 0;">
+                <div style="font-size: 0.72rem; font-weight: 600; color: #999; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.25rem;">Est. Input Cost</div>
+                <div class="cost-value neutral" id="geminiCost">$0.000000</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Footer note -->
+        <p style="font-size: 0.78rem; color: #B0AAD8; margin-top: 1.125rem; line-height: 1.6;">
+          Reference prices sourced from AI Token King. Actual billing depends on the model, version, and platform pricing at time of use. Always confirm with the official provider.
+        </p>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════
+     FAQ
+════════════════════════════════════════════ -->
+<section style="padding: 0 1.5rem 5rem;">
+  <div style="max-width: 1200px; margin: 0 auto;">
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start;">
+
+      <!-- Left: heading -->
+      <div>
+        <div class="section-label" style="margin-bottom: 1rem;">
+          <svg width="10" height="10" viewBox="0 0 16 16" fill="currentColor"><circle cx="8" cy="8" r="8"/></svg>
+          Common Questions
+        </div>
+        <h2 style="font-family: 'Kanit', sans-serif; font-size: 2rem; font-weight: 800; color: #1C1C1C; letter-spacing: -0.04em; line-height: 1.15; margin-bottom: 1rem;">
+          About the Token Calculator
+        </h2>
+        <p style="font-size: 0.95rem; line-height: 1.75; color: #666; margin-bottom: 1.5rem;">
+          Quick answers to the most common questions about how this tool works and what the results mean.
+        </p>
+        <a href="beginners-guide.html" class="btn-secondary" style="font-size: 0.875rem;">
+          Read the Beginners Guide →
+        </a>
+      </div>
+
+      <!-- Right: FAQ accordion -->
+      <div class="card-elevated" style="padding: 1.5rem 1.75rem;">
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            What exactly is a token?
+            <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="#6155F1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p style="font-size: 0.9rem; line-height: 1.75; color: #555;">A token is the smallest unit of text an AI model reads and generates. In English, one token is roughly 4 characters or ¾ of a word. Punctuation and spaces also count as tokens. AI APIs bill you per token — both for what you send (input) and what the model replies (output).</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Why do the numbers differ from the actual API?
+            <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="#6155F1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p style="font-size: 0.9rem; line-height: 1.75; color: #555;">Each AI provider uses its own tokenizer (e.g. GPT uses tiktoken, Claude uses its own BPE tokenizer). This tool uses a universal approximation formula that works well for quick estimates, but the exact count may differ by 5–15% depending on the text and model.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Does this include output (response) tokens?
+            <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="#6155F1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p style="font-size: 0.9rem; line-height: 1.75; color: #555;">No — this calculator only estimates input tokens (what you send to the model). Output tokens depend on the model's response length, which varies. To estimate total cost, you'd need to add an output estimate based on your expected response length.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Are the prices shown up to date?
+            <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="#6155F1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p style="font-size: 0.9rem; line-height: 1.75; color: #555;">The prices are AI Token King reference prices and are updated periodically. AI pricing changes frequently — always verify the current rate on the official OpenAI, Anthropic, or Google AI platform before making billing decisions.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════
+     RELATED LINKS CTA
+════════════════════════════════════════════ -->
+<section style="padding: 0 1.5rem 5rem;">
+  <div style="max-width: 1200px; margin: 0 auto;">
+    <div style="background: linear-gradient(135deg, #6155F1 0%, #3E81E5 60%, #56c7fd 100%); border-radius: 24px; padding: 3rem 3.5rem; display: flex; align-items: center; justify-content: space-between; gap: 2rem; flex-wrap: wrap; position: relative; overflow: hidden;">
+      <div style="position: absolute; top: -40px; right: -40px; width: 220px; height: 220px; border-radius: 50%; background: rgba(255,255,255,0.06); pointer-events: none;"></div>
+      <div style="position: absolute; bottom: -50px; left: -30px; width: 200px; height: 200px; border-radius: 50%; background: rgba(255,255,255,0.04); pointer-events: none;"></div>
+      <div style="position: relative; z-index: 1;">
+        <div style="font-family: 'Kanit', sans-serif; font-size: 1.75rem; font-weight: 800; color: #fff; letter-spacing: -0.04em; line-height: 1.2; margin-bottom: 0.625rem;">
+          Want to compare model prices?
+        </div>
+        <p style="font-size: 0.95rem; color: rgba(255,255,255,0.8); line-height: 1.7; max-width: 480px;">
+          See a full breakdown of 25+ models across OpenAI, Anthropic, Google, and open-source — with input/output pricing, context windows, and use case guidance.
+        </p>
+      </div>
+      <div style="display: flex; gap: 0.875rem; flex-wrap: wrap; position: relative; z-index: 1;">
+        <a href="api-compare.html" style="display: inline-flex; align-items: center; gap: 0.5rem; background: #fff; color: #6155F1; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.9rem; font-weight: 700; padding: 0.75rem 1.5rem; border-radius: 12px; text-decoration: none; box-shadow: 0 4px 14px rgba(0,0,0,0.15); transition: transform 0.18s cubic-bezier(.22,1,.36,1), box-shadow 0.18s ease;" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 8px 24px rgba(0,0,0,0.2)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 4px 14px rgba(0,0,0,0.15)'">
+          Compare Models →
+        </a>
+        <a href="beginners-guide.html" style="display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(255,255,255,0.15); color: #fff; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.9rem; font-weight: 600; padding: 0.75rem 1.5rem; border-radius: 12px; text-decoration: none; border: 1.5px solid rgba(255,255,255,0.35); transition: background-color 0.18s ease, transform 0.18s cubic-bezier(.22,1,.36,1);" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.25)';this.style.transform='translateY(-2px)'" onmouseout="this.style.backgroundColor='rgba(255,255,255,0.15)';this.style.transform='translateY(0)'">
+          Beginners Guide
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════════ -->
+<footer style="background: #1C1C1C; color: #999; padding: 3.5rem 1.5rem 2rem;">
+  <div style="max-width: 1200px; margin: 0 auto;">
+    <div style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem;">
+
+      <div>
+        <div style="display: flex; align-items: center; gap: 0.625rem; margin-bottom: 1rem;">
+          <img src="AI_Token_logoPNG.avif" alt="AI Token King" style="width: 32px; height: 32px; object-fit: contain;" />
+          <span style="font-family: 'Kanit', sans-serif; font-size: 1rem; font-weight: 700; color: #FFFFFF; letter-spacing: -0.02em;">AI Token King</span>
+        </div>
+        <p style="font-size: 0.875rem; line-height: 1.75; color: #666; max-width: 260px;">
+          The definitive English-language hub for understanding AI tokens, models, and APIs. Free, always.
+        </p>
+        <div style="display: flex; gap: 0.75rem; margin-top: 1.25rem;">
+          <a href="#" style="width: 36px; height: 36px; background: #2A2A2A; border-radius: 8px; display: flex; align-items: center; justify-content: center; text-decoration: none; transition: background-color 0.18s ease;" onmouseover="this.style.background='#6155F1'" onmouseout="this.style.background='#2A2A2A'">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z" stroke="#999" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="#" style="width: 36px; height: 36px; background: #2A2A2A; border-radius: 8px; display: flex; align-items: center; justify-content: center; text-decoration: none; transition: background-color 0.18s ease;" onmouseover="this.style.background='#6155F1'" onmouseout="this.style.background='#2A2A2A'">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z" stroke="#999" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/><circle cx="4" cy="4" r="2" stroke="#999" stroke-width="1.75"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <div style="font-family: 'Kanit', sans-serif; font-size: 0.875rem; font-weight: 700; color: #FFFFFF; margin-bottom: 1.125rem; letter-spacing: 0.02em; text-transform: uppercase;">Learn</div>
+        <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.625rem; padding: 0; margin: 0;">
+          <li><a href="#" style="font-size: 0.875rem; color: #666; text-decoration: none; transition: color 0.15s ease;" onmouseover="this.style.color='#E2DFFE'" onmouseout="this.style.color='#666'">What is a Token?</a></li>
+          <li><a href="token-calculator.html" style="font-size: 0.875rem; color: #E2DFFE; text-decoration: none; font-weight: 600;">Token Calculator</a></li>
+          <li><a href="beginners-guide.html" style="font-size: 0.875rem; color: #666; text-decoration: none; transition: color 0.15s ease;" onmouseover="this.style.color='#E2DFFE'" onmouseout="this.style.color='#666'">Beginner's Guide</a></li>
+          <li><a href="use-cases.html" style="font-size: 0.875rem; color: #666; text-decoration: none; transition: color 0.15s ease;" onmouseover="this.style.color='#E2DFFE'" onmouseout="this.style.color='#666'">Use Cases</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div style="font-family: 'Kanit', sans-serif; font-size: 0.875rem; font-weight: 700; color: #FFFFFF; margin-bottom: 1.125rem; letter-spacing: 0.02em; text-transform: uppercase;">Compare</div>
+        <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.625rem; padding: 0; margin: 0;">
+          <li><a href="api-compare.html" style="font-size: 0.875rem; color: #666; text-decoration: none; transition: color 0.15s ease;" onmouseover="this.style.color='#E2DFFE'" onmouseout="this.style.color='#666'">API Comparison</a></li>
+          <li><a href="api-compare.html" style="font-size: 0.875rem; color: #666; text-decoration: none; transition: color 0.15s ease;" onmouseover="this.style.color='#E2DFFE'" onmouseout="this.style.color='#666'">Model Types</a></li>
+          <li><a href="#" style="font-size: 0.875rem; color: #666; text-decoration: none; transition: color 0.15s ease;" onmouseover="this.style.color='#E2DFFE'" onmouseout="this.style.color='#666'">Pricing Tables</a></li>
+          <li><a href="#" style="font-size: 0.875rem; color: #666; text-decoration: none; transition: color 0.15s ease;" onmouseover="this.style.color='#E2DFFE'" onmouseout="this.style.color='#666'">Aggregators</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div style="font-family: 'Kanit', sans-serif; font-size: 0.875rem; font-weight: 700; color: #FFFFFF; margin-bottom: 1.125rem; letter-spacing: 0.02em; text-transform: uppercase;">More</div>
+        <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.625rem; padding: 0; margin: 0;">
+          <li><a href="blog.html" style="font-size: 0.875rem; color: #666; text-decoration: none; transition: color 0.15s ease;" onmouseover="this.style.color='#E2DFFE'" onmouseout="this.style.color='#666'">Blog</a></li>
+          <li><a href="#" style="font-size: 0.875rem; color: #666; text-decoration: none; transition: color 0.15s ease;" onmouseover="this.style.color='#E2DFFE'" onmouseout="this.style.color='#666'">FAQ</a></li>
+          <li><a href="#" style="font-size: 0.875rem; color: #666; text-decoration: none; transition: color 0.15s ease;" onmouseover="this.style.color='#E2DFFE'" onmouseout="this.style.color='#666'">About</a></li>
+          <li><a href="#" style="font-size: 0.875rem; color: #666; text-decoration: none; transition: color 0.15s ease;" onmouseover="this.style.color='#E2DFFE'" onmouseout="this.style.color='#666'">Contact</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div style="border-top: 1px solid #2A2A2A; padding-top: 1.75rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
+      <p style="font-size: 0.8rem; color: #555;">© 2025 AI Token King. All rights reserved.</p>
+      <div style="display: flex; gap: 1.5rem;">
+        <a href="#" style="font-size: 0.8rem; color: #555; text-decoration: none; transition: color 0.15s ease;" onmouseover="this.style.color='#E2DFFE'" onmouseout="this.style.color='#555'">Privacy Policy</a>
+        <a href="#" style="font-size: 0.8rem; color: #555; text-decoration: none; transition: color 0.15s ease;" onmouseover="this.style.color='#E2DFFE'" onmouseout="this.style.color='#555'">Terms of Service</a>
+        <a href="#" style="font-size: 0.8rem; color: #555; text-decoration: none; transition: color 0.15s ease;" onmouseover="this.style.color='#E2DFFE'" onmouseout="this.style.color='#555'">Cookie Policy</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<!-- ════════════════════════════════════════════
+     JAVASCRIPT
+════════════════════════════════════════════ -->
+<script>
+  // ── DOM refs ──
+  const textInput      = document.getElementById('textInput');
+  const chineseCountEl = document.getElementById('chineseCount');
+  const englishCountEl = document.getElementById('englishCount');
+  const symbolCountEl  = document.getElementById('symbolCount');
+  const inputTokenEl   = document.getElementById('inputToken');
+  const openaiCostEl   = document.getElementById('openaiCost');
+  const claudeCostEl   = document.getElementById('claudeCost');
+  const geminiCostEl   = document.getElementById('geminiCost');
+  const resultSummaryEl = document.getElementById('resultSummary');
+  const charCountEl    = document.getElementById('charCount');
+
+  const pricing = { openai: 2.5, claude: 5, gemini: 2 };
+  const platformNames = { openai: 'OpenAI', claude: 'Anthropic', gemini: 'Google' };
+
+  function formatCost(val) {
+    return `$${val.toFixed(6)}`;
+  }
+
+  function getExtremes(costMap) {
+    const vals = Object.values(costMap);
+    const min = Math.min(...vals);
+    const max = Math.max(...vals);
+    const minPlatforms = Object.keys(costMap).filter(k => costMap[k] === min).map(k => platformNames[k]);
+    const maxPlatforms = Object.keys(costMap).filter(k => costMap[k] === max).map(k => platformNames[k]);
+    return { min, max, minPlatforms, maxPlatforms };
+  }
+
+  function updateSummary(text, costMap) {
+    if (!text.trim()) {
+      resultSummaryEl.innerHTML = 'Enter text above to begin calculating. Only input costs are estimated.';
+      resultSummaryEl.style.background = '#F0EEFF';
+      return;
+    }
+    const { min, max, minPlatforms, maxPlatforms } = getExtremes(costMap);
+    const minText = minPlatforms.length > 1
+      ? `Lowest cost: ${minPlatforms.join(' & ')}`
+      : `Lowest cost: <strong>${minPlatforms[0]}</strong>`;
+    const maxText = maxPlatforms.length > 1
+      ? `Highest cost: ${maxPlatforms.join(' & ')}`
+      : `Highest cost: <strong>${maxPlatforms[0]}</strong>`;
+    resultSummaryEl.innerHTML = `${minText} &nbsp;·&nbsp; ${maxText} &nbsp;·&nbsp; Input cost only`;
+    resultSummaryEl.style.background = '#EDF7ED';
+    resultSummaryEl.style.borderColor = 'rgba(22,163,74,0.2)';
+    resultSummaryEl.style.color = '#166534';
+  }
+
+  function updateCostColor(el, cost, min, max) {
+    el.classList.remove('cheapest', 'priciest', 'neutral');
+    if (cost === min && min !== max) el.classList.add('cheapest');
+    else if (cost === max && min !== max) el.classList.add('priciest');
+    else el.classList.add('neutral');
+  }
+
+  function calculateTokens() {
+    const text = textInput.value || '';
+    charCountEl.textContent = text.length.toLocaleString();
+
+    const chineseMatches = text.match(/[一-鿿]/g) || [];
+    const englishWordMatches = text.match(/[A-Za-z]+(?:'[A-Za-z]+)*/g) || [];
+    const numberMatches = text.match(/[0-9]/g) || [];
+
+    const chineseCount = chineseMatches.length;
+    const englishCount = englishWordMatches.length;
+    const numberCount  = numberMatches.length;
+
+    const stripped = text
+      .replace(/[一-鿿]/g, '')
+      .replace(/[A-Za-z]+(?:'[A-Za-z]+)*/g, '')
+      .replace(/[0-9]/g, '');
+    const symbolCount = (stripped.match(/[^\s]/g) || []).length + numberCount;
+
+    const inputTokens = Math.round(
+      chineseCount * 1.5 +
+      englishCount * 1.1 +
+      symbolCount  * 0.3
+    );
+
+    const openaiCost = (inputTokens * pricing.openai) / 1_000_000;
+    const claudeCost = (inputTokens * pricing.claude) / 1_000_000;
+    const geminiCost = (inputTokens * pricing.gemini) / 1_000_000;
+
+    chineseCountEl.textContent = chineseCount.toLocaleString();
+    englishCountEl.textContent = englishCount.toLocaleString();
+    symbolCountEl.textContent  = symbolCount.toLocaleString();
+    inputTokenEl.textContent   = inputTokens.toLocaleString();
+
+    openaiCostEl.textContent = formatCost(openaiCost);
+    claudeCostEl.textContent = formatCost(claudeCost);
+    geminiCostEl.textContent = formatCost(geminiCost);
+
+    const costMap = { openai: openaiCost, claude: claudeCost, gemini: geminiCost };
+    const { min, max } = getExtremes(costMap);
+    updateCostColor(openaiCostEl, openaiCost, min, max);
+    updateCostColor(claudeCostEl, claudeCost, min, max);
+    updateCostColor(geminiCostEl, geminiCost, min, max);
+
+    updateSummary(text, costMap);
+  }
+
+  function clearAll() {
+    textInput.value = '';
+    charCountEl.textContent = '0';
+    chineseCountEl.textContent = '0';
+    englishCountEl.textContent = '0';
+    symbolCountEl.textContent  = '0';
+    inputTokenEl.textContent   = '0';
+    openaiCostEl.textContent = '$0.000000';
+    claudeCostEl.textContent = '$0.000000';
+    geminiCostEl.textContent = '$0.000000';
+    [openaiCostEl, claudeCostEl, geminiCostEl].forEach(el => {
+      el.classList.remove('cheapest', 'priciest');
+      el.classList.add('neutral');
+    });
+    resultSummaryEl.innerHTML = 'Enter text above to begin calculating. Only input costs are estimated.';
+    resultSummaryEl.style.background = '#F0EEFF';
+    resultSummaryEl.style.borderColor = 'rgba(97,85,241,0.18)';
+    resultSummaryEl.style.color = '#3C315B';
+    textInput.focus();
+  }
+
+  document.getElementById('calculateBtn').addEventListener('click', calculateTokens);
+  document.getElementById('clearBtn').addEventListener('click', clearAll);
+  textInput.addEventListener('input', calculateTokens);
+  textInput.addEventListener('paste', () => setTimeout(calculateTokens, 0));
+
+  // ── FAQ accordion ──
+  function toggleFaq(btn) {
+    const answer  = btn.nextElementSibling;
+    const chevron = btn.querySelector('.faq-chevron');
+    const isOpen  = answer.classList.contains('open');
+    document.querySelectorAll('.faq-answer').forEach(a => a.classList.remove('open'));
+    document.querySelectorAll('.faq-chevron').forEach(c => c.classList.remove('open'));
+    if (!isOpen) {
+      answer.classList.add('open');
+      chevron.classList.add('open');
+    }
+  }
+
+  // ── Dropdown menus ──
+  document.querySelectorAll('.nav-dropdown').forEach(dropdown => {
+    const btn     = dropdown.querySelector('.nav-dropdown-btn');
+    const menu    = dropdown.querySelector('.nav-dropdown-menu');
+    const chevron = dropdown.querySelector('.dropdown-chevron');
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const isOpen = menu.style.display === 'block';
+      document.querySelectorAll('.nav-dropdown-menu').forEach(m => m.style.display = 'none');
+      document.querySelectorAll('.dropdown-chevron').forEach(c => c.style.transform = 'rotate(0deg)');
+      document.querySelectorAll('.nav-dropdown-btn').forEach(b => b.setAttribute('aria-expanded', 'false'));
+      if (!isOpen) {
+        menu.style.display = 'block';
+        chevron.style.transform = 'rotate(180deg)';
+        btn.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+  document.addEventListener('click', () => {
+    document.querySelectorAll('.nav-dropdown-menu').forEach(m => m.style.display = 'none');
+    document.querySelectorAll('.dropdown-chevron').forEach(c => c.style.transform = 'rotate(0deg)');
+    document.querySelectorAll('.nav-dropdown-btn').forEach(b => b.setAttribute('aria-expanded', 'false'));
+  });
+  // Hero pointer blob
+  (function(){var h=document.querySelector('.page-hero-bg'),p=document.getElementById('page-pointer');if(!h||!p)return;var cx=0,cy=0,tx=0,ty=0;function m(){cx+=(tx-cx)/20;cy+=(ty-cy)/20;p.style.transform='translate('+Math.round(cx)+'px,'+Math.round(cy)+'px)';requestAnimationFrame(m);}h.addEventListener('mousemove',function(e){var r=h.getBoundingClientRect();tx=e.clientX-r.left;ty=e.clientY-r.top;});m();})();
+</script>
+</body>
+</html>

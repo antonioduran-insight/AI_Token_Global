@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog — AI Token King</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              purple: '#6155F1',
+              blue: '#3E81E5',
+              black: '#000000',
+              gray: '#666666',
+              lightgray: '#999999',
+              pale: '#EBF4FF',
+              white: '#FFFFFF',
+              lavender: '#F5F2FF',
+              softpurple: '#E2DFFE',
+              darkpurple: '#3C315B',
+            }
+          },
+          fontFamily: {
+            heading: ['Kanit', 'sans-serif'],
+            body: ['Plus Jakarta Sans', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: #F5F2FF;
+      color: #1C1C1C;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Grain overlay */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 9999;
+      opacity: 0.4;
+    }
+
+    /* Nav */
+    .nav-link {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: #3C315B;
+      text-decoration: none;
+      padding: 0.375rem 0.75rem;
+      border-radius: 8px;
+      transition: background-color 0.2s ease, color 0.2s ease;
+    }
+    .nav-link:hover { background-color: #E2DFFE; color: #6155F1; }
+    .nav-link:focus-visible { outline: 2px solid #6155F1; outline-offset: 2px; }
+    .nav-link:active { background-color: #d0cbfd; }
+    .nav-link.active { color: #6155F1; background-color: #EDE9FF; font-weight: 600; }
+
+    /* Buttons */
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: #6155F1;
+      color: #fff;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 600;
+      padding: 0.625rem 1.375rem;
+      border-radius: 12px;
+      text-decoration: none;
+      box-shadow: 0 2px 12px rgba(97,85,241,0.25), 0 1px 3px rgba(97,85,241,0.15);
+      transition: transform 0.18s cubic-bezier(.22,1,.36,1), box-shadow 0.18s ease;
+    }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(97,85,241,0.35), 0 2px 6px rgba(97,85,241,0.2); }
+    .btn-primary:active { transform: translateY(0); }
+    .btn-primary:focus-visible { outline: 2px solid #6155F1; outline-offset: 3px; }
+
+    .btn-ghost {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.375rem;
+      color: #6155F1;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.875rem;
+      font-weight: 600;
+      padding: 0.375rem 0;
+      text-decoration: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      transition: gap 0.18s ease, opacity 0.15s ease;
+    }
+    .btn-ghost:hover { gap: 0.625rem; opacity: 0.8; }
+    .btn-ghost:focus-visible { outline: 2px solid #6155F1; outline-offset: 2px; border-radius: 4px; }
+
+    /* Dropdown */
+    .dropdown-item {
+      display: flex;
+      align-items: center;
+      gap: 0.625rem;
+      padding: 0.6rem 0.875rem;
+      border-radius: 9px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.855rem;
+      font-weight: 500;
+      color: #3C315B;
+      text-decoration: none;
+      transition: background-color 0.15s ease, color 0.15s ease;
+      white-space: nowrap;
+    }
+    .dropdown-item:hover { background-color: #F5F2FF; color: #6155F1; }
+    .dropdown-item:focus-visible { outline: 2px solid #6155F1; border-radius: 9px; }
+
+    /* Section label pill */
+    .section-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: #E2DFFE;
+      color: #6155F1;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 0.375rem 0.875rem;
+      border-radius: 100px;
+    }
+
+    /* Cards */
+    .card {
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 2px 16px rgba(97,85,241,0.07), 0 1px 4px rgba(0,0,0,0.04);
+    }
+    .card:hover {
+      box-shadow: 0 8px 32px rgba(97,85,241,0.13), 0 2px 8px rgba(0,0,0,0.06);
+    }
+
+    /* Featured post card */
+    .featured-card {
+      background: #fff;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 4px 24px rgba(97,85,241,0.1), 0 1px 6px rgba(0,0,0,0.05);
+      transition: transform 0.22s cubic-bezier(.22,1,.36,1), box-shadow 0.22s ease;
+      text-decoration: none;
+      display: block;
+    }
+    .featured-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(97,85,241,0.18), 0 3px 10px rgba(0,0,0,0.08);
+    }
+    .featured-card:focus-visible { outline: 2px solid #6155F1; outline-offset: 3px; border-radius: 20px; }
+
+    /* Post list card */
+    .post-card {
+      background: #fff;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 2px 12px rgba(97,85,241,0.07), 0 1px 3px rgba(0,0,0,0.04);
+      transition: transform 0.2s cubic-bezier(.22,1,.36,1), box-shadow 0.2s ease;
+      text-decoration: none;
+      display: block;
+    }
+    .post-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 28px rgba(97,85,241,0.14), 0 2px 8px rgba(0,0,0,0.06);
+    }
+    .post-card:focus-visible { outline: 2px solid #6155F1; outline-offset: 3px; border-radius: 16px; }
+
+    /* Category filter tabs */
+    .cat-tab {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.5rem 1.125rem;
+      border-radius: 100px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.825rem;
+      font-weight: 600;
+      color: #3C315B;
+      background: #fff;
+      border: 1.5px solid rgba(97,85,241,0.15);
+      cursor: pointer;
+      transition: background-color 0.18s ease, color 0.18s ease, border-color 0.18s ease, transform 0.15s ease;
+      white-space: nowrap;
+      text-decoration: none;
+    }
+    .cat-tab:hover { background: #EDE9FF; color: #6155F1; border-color: rgba(97,85,241,0.3); }
+    .cat-tab:active { transform: scale(0.97); }
+    .cat-tab:focus-visible { outline: 2px solid #6155F1; outline-offset: 2px; }
+    .cat-tab.active { background: #6155F1; color: #fff; border-color: #6155F1; box-shadow: 0 2px 10px rgba(97,85,241,0.3); }
+
+    /* Tag pill */
+    .tag-pill {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.2rem 0.625rem;
+      border-radius: 100px;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      background: #E2DFFE;
+      color: #6155F1;
+    }
+
+    /* Pagination */
+    .page-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      border-radius: 9px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.825rem;
+      font-weight: 600;
+      color: #3C315B;
+      background: #fff;
+      border: 1.5px solid rgba(97,85,241,0.15);
+      cursor: pointer;
+      transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+      text-decoration: none;
+    }
+    .page-btn:hover { background: #EDE9FF; color: #6155F1; border-color: rgba(97,85,241,0.3); }
+    .page-btn:focus-visible { outline: 2px solid #6155F1; outline-offset: 2px; }
+    .page-btn.active { background: #6155F1; color: #fff; border-color: #6155F1; }
+    .page-btn:disabled, .page-btn[aria-disabled="true"] { opacity: 0.35; cursor: not-allowed; }
+
+    /* Animations */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .fade-up { animation: fadeUp 0.6s cubic-bezier(.22,1,.36,1) both; }
+    .fade-up-1 { animation-delay: 0.05s; }
+    .fade-up-2 { animation-delay: 0.12s; }
+    .fade-up-3 { animation-delay: 0.19s; }
+
+    /* Reveal on scroll */
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.55s cubic-bezier(.22,1,.36,1), transform 0.55s cubic-bezier(.22,1,.36,1); }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* Desktop nav responsive */
+    @media (max-width: 1023px) { .desktop-nav { display: none !important; } #mobile-menu-btn { display: flex !important; } }
+    @media (max-width: 860px) {
+      .blog-grid { grid-template-columns: 1fr !important; }
+      .featured-inner { flex-direction: column !important; }
+      .featured-img { width: 100% !important; height: 220px !important; }
+    }
+    @media (max-width: 640px) {
+      .post-grid { grid-template-columns: 1fr !important; }
+    }
+    /* ── Animated gradient hero ── */
+    .page-hero-bg { position: relative; overflow: hidden; background: linear-gradient(40deg, #2A1F5C, #0D1547); }
+    .page-hero-canvas { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
+    .page-hero-canvas .grad-blobs { width: 100%; height: 100%; filter: url(#page-goo) blur(40px); }
+    .page-hero-canvas .blob { position: absolute; border-radius: 50%; mix-blend-mode: hard-light; background: radial-gradient(circle at center, var(--blob-color) 0%, transparent 50%) no-repeat; width: 80%; height: 80%; top: calc(50% - 40%); left: calc(50% - 40%); }
+    .page-hero-canvas .blob-1 { --blob-color: rgba(97,85,241,1); animation: moveVertical 30s ease infinite; }
+    .page-hero-canvas .blob-2 { --blob-color: rgba(62,129,229,0.8); transform-origin: calc(50% - 400px); animation: moveInCircle 20s reverse infinite; }
+    .page-hero-canvas .blob-3 { --blob-color: rgba(86,247,253,0.8); transform-origin: calc(50% + 400px); animation: moveInCircle 40s linear infinite; }
+    .page-hero-canvas .blob-4 { --blob-color: rgba(180,100,241,0.8); transform-origin: calc(50% - 200px); animation: moveHorizontal 40s ease infinite; opacity: 0.7; }
+    .page-hero-canvas .blob-5 { --blob-color: rgba(30,80,200,0.8); transform-origin: calc(50% - 800px) calc(50% + 800px); animation: moveInCircle 20s ease infinite; }
+    .page-hero-canvas .blob-pointer { position: absolute; border-radius: 50%; mix-blend-mode: hard-light; background: radial-gradient(circle at center, rgba(140,100,255,0.8) 0%, transparent 50%) no-repeat; width: 100%; height: 100%; top: -50%; left: -50%; opacity: 0.7; }
+    @keyframes moveVertical { 0% { transform: translateY(-50%); } 50% { transform: translateY(50%); } 100% { transform: translateY(-50%); } }
+    @keyframes moveInCircle { 0% { transform: rotate(0deg); } 50% { transform: rotate(180deg); } 100% { transform: rotate(360deg); } }
+    @keyframes moveHorizontal { 0% { transform: translateX(-50%) translateY(-10%); } 50% { transform: translateX(50%) translateY(10%); } 100% { transform: translateX(-50%) translateY(-10%); } }
+    .page-hero-content { position: relative; z-index: 10; }
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════
+     NAVIGATION
+═══════════════════════════════ -->
+<header style="background: rgba(245,242,255,0.85); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border-bottom: 1px solid rgba(97,85,241,0.1); position: sticky; top: 0; z-index: 100;">
+  <div style="max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; height: 64px; display: flex; align-items: center; justify-content: space-between; gap: 2rem;">
+
+    <a href="index.html" style="display: flex; align-items: center; gap: 0.625rem; text-decoration: none; flex-shrink: 0;">
+      <img src="AI_Token_logoPNG.avif" alt="AI Token King Logo" style="width: 36px; height: 36px; object-fit: contain;" />
+      <span style="font-family: 'Kanit', sans-serif; font-size: 1.1rem; font-weight: 700; color: #3C315B; letter-spacing: -0.02em;">AI Token King</span>
+    </a>
+
+    <nav class="desktop-nav" style="display: flex; align-items: center; gap: 0.125rem; flex: 1; justify-content: center;">
+      <div class="nav-dropdown" style="position: relative;">
+        <button class="nav-link nav-dropdown-btn" style="background: none; border: none; cursor: pointer; display: flex; align-items: center; gap: 0.3rem;" aria-expanded="false">
+          AI Resources
+          <svg width="12" height="12" viewBox="0 0 16 16" fill="none" style="transition: transform 0.2s ease;" class="dropdown-chevron"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="nav-dropdown-menu" style="display: none; position: absolute; top: calc(100% + 8px); left: 50%; transform: translateX(-50%); background: #fff; border-radius: 14px; box-shadow: 0 8px 32px rgba(97,85,241,0.14), 0 2px 8px rgba(0,0,0,0.07); padding: 0.5rem; min-width: 230px; z-index: 200; border: 1px solid rgba(97,85,241,0.1);">
+          <a href="ai-trends.html" class="dropdown-item">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M3 12h18M3 6h18M3 18h12" stroke="#6155F1" stroke-width="1.75" stroke-linecap="round"/></svg>
+            AI Trends
+          </a>
+          <a href="user-guide.html" class="dropdown-item">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z" fill="#6155F1"/></svg>
+            AI Token King User Guide
+          </a>
+          <a href="compliance.html" class="dropdown-item">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M19 21H5a2 2 0 01-2-2V7l4-4h10a2 2 0 012 2v14a2 2 0 01-2 2z" stroke="#6155F1" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 3v4H5M9 12h6M9 16h4" stroke="#6155F1" stroke-width="1.5" stroke-linecap="round"/></svg>
+            Business AI Compliance
+          </a>
+        </div>
+      </div>
+      <a href="api-compare.html" class="nav-link">Compare Models</a>
+      <a href="use-cases.html" class="nav-link">Use Cases</a>
+      <a href="beginners-guide.html" class="nav-link">Beginners Guide</a>
+      <a href="blog.html" class="nav-link active">Blog</a>
+      <a href="https://www.aitokenking.com.tw/docs" class="nav-link" target="_blank" rel="noopener noreferrer">Documentation</a>
+    </nav>
+
+    <div style="display: flex; align-items: center; gap: 0.75rem; flex-shrink: 0;">
+      <a href="https://www.aitokenking.com.tw/home" class="btn-primary" style="font-size: 0.85rem; padding: 0.5rem 1.125rem;" target="_blank" rel="noopener noreferrer">
+        Get Started
+        <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+
+    <button style="display: none; background: none; border: none; cursor: pointer; padding: 0.5rem;" aria-label="Menu" id="mobile-menu-btn">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M3 6h18M3 12h18M3 18h18" stroke="#3C315B" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+</header>
+
+
+<!-- ═══════════════════════════════
+     HERO
+═══════════════════════════════ -->
+<section class="page-hero-bg" style="padding: 4rem 1.5rem 3rem;">
+  <div class="page-hero-canvas" aria-hidden="true">
+    <svg style="display:none"><defs><filter id="page-goo"><feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur"/><feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8" result="goo"/><feBlend in="SourceGraphic" in2="goo"/></filter></defs></svg>
+    <div class="grad-blobs"><div class="blob blob-1"></div><div class="blob blob-2"></div><div class="blob blob-3"></div><div class="blob blob-4"></div><div class="blob blob-5"></div><div class="blob-pointer" id="page-pointer"></div></div>
+  </div>
+  <div class="page-hero-content" style="max-width: 1200px; margin: 0 auto; text-align: center; position: relative;">
+    <div class="section-label fade-up" style="margin-bottom: 1.25rem; justify-content: center; background: rgba(226,223,254,0.15); color: rgba(255,255,255,0.9); border: 1px solid rgba(255,255,255,0.15);">
+      <svg width="12" height="12" viewBox="0 0 16 16" fill="currentColor"><circle cx="8" cy="8" r="8"/></svg>
+      AI Token King Articles
+    </div>
+    <h1 class="fade-up fade-up-1" style="font-family: 'Kanit', sans-serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 800; color: #ffffff; letter-spacing: -0.04em; line-height: 1.1; margin-bottom: 1rem;">
+      AI Token Article Hub
+    </h1>
+    <p class="fade-up fade-up-2" style="font-size: 1rem; line-height: 1.75; color: rgba(255,255,255,0.7); max-width: 560px; margin: 0 auto 2.5rem;">
+      Explore guides on AI token basics, cost calculation, model comparisons, platform purchasing, and more — helping you find the right learning path faster.
+    </p>
+
+    <!-- Search bar -->
+    <div class="fade-up fade-up-3" style="max-width: 480px; margin: 0 auto; position: relative;">
+      <input
+        type="text"
+        placeholder="Search articles..."
+        style="width: 100%; padding: 0.875rem 1.25rem 0.875rem 3rem; border-radius: 14px; border: 1.5px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.1); backdrop-filter: blur(8px); font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.9rem; color: #fff; box-shadow: 0 2px 12px rgba(0,0,0,0.2); outline: none; transition: border-color 0.2s ease, box-shadow 0.2s ease;"
+        onfocus="this.style.borderColor='rgba(255,255,255,0.5)'; this.style.boxShadow='0 0 0 3px rgba(255,255,255,0.1), 0 2px 12px rgba(0,0,0,0.2)';"
+        onblur="this.style.borderColor='rgba(255,255,255,0.2)'; this.style.boxShadow='0 2px 12px rgba(0,0,0,0.2)';"
+      />
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" style="position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); pointer-events: none;"><circle cx="11" cy="11" r="8" stroke="rgba(255,255,255,0.5)" stroke-width="1.75"/><path d="M21 21l-4.35-4.35" stroke="rgba(255,255,255,0.5)" stroke-width="1.75" stroke-linecap="round"/></svg>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════
+     FEATURED POST
+═══════════════════════════════ -->
+<section style="padding: 3rem 1.5rem 3.5rem;">
+  <div style="max-width: 1200px; margin: 0 auto;">
+
+    <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.5rem;">
+      <div style="font-family: 'Kanit', sans-serif; font-size: 1.25rem; font-weight: 700; color: #1C1C1C; letter-spacing: -0.02em;">Featured Article</div>
+    </div>
+
+    <a href="blog-post.html" class="featured-card reveal">
+      <div class="featured-inner" style="display: flex; align-items: stretch;">
+        <!-- Image -->
+        <div class="featured-img" style="width: 480px; flex-shrink: 0; position: relative; overflow: hidden; min-height: 300px;">
+          <img src="https://placehold.co/960x600/6155F1/FFFFFF?text=Featured+Article" alt="Featured post" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
+          <div style="position: absolute; inset: 0; background: linear-gradient(135deg, rgba(97,85,241,0.5) 0%, rgba(62,129,229,0.35) 100%); mix-blend-mode: multiply;"></div>
+          <div style="position: absolute; inset: 0; background: linear-gradient(to right, transparent 60%, rgba(255,255,255,0.06) 100%);"></div>
+        </div>
+        <!-- Content -->
+        <div style="padding: 2.5rem; display: flex; flex-direction: column; justify-content: center; flex: 1;">
+          <div style="display: flex; align-items: center; gap: 0.625rem; margin-bottom: 1.25rem;">
+            <span class="tag-pill">AI Token Basics</span>
+            <span class="tag-pill" style="background: #EBF4FF; color: #3E81E5;">Beginner</span>
+          </div>
+          <h2 style="font-family: 'Kanit', sans-serif; font-size: clamp(1.35rem, 2.5vw, 1.75rem); font-weight: 800; color: #1C1C1C; letter-spacing: -0.03em; line-height: 1.2; margin-bottom: 1rem;">
+            What Is an AI Token? The Complete Beginner's Guide to Understanding AI Language Models
+          </h2>
+          <p style="font-size: 0.9rem; line-height: 1.75; color: #666; margin-bottom: 1.5rem; max-width: 520px;">
+            Tokens are the building blocks of every AI conversation — but most users have no idea what they are or how they affect cost and performance. This guide breaks it all down from scratch.
+          </p>
+          <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
+            <div style="display: flex; align-items: center; gap: 1.25rem;">
+              <span style="font-size: 0.8rem; color: #999; font-weight: 500;">April 15, 2026</span>
+              <span style="font-size: 0.8rem; color: #999;">·</span>
+              <span style="font-size: 0.8rem; color: #999; font-weight: 500;">8 min read</span>
+            </div>
+            <span class="btn-ghost" style="font-size: 0.85rem;">
+              Read Article
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </div>
+        </div>
+      </div>
+    </a>
+
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════
+     CATEGORY FILTERS + POST GRID
+═══════════════════════════════ -->
+<section style="padding: 0 1.5rem 5rem;">
+  <div style="max-width: 1200px; margin: 0 auto;">
+
+    <!-- Category tabs -->
+    <div style="margin-bottom: 2.5rem;">
+      <div class="cat-scroll" style="display: flex; flex-wrap: wrap; gap: 0.625rem; padding-bottom: 0.25rem;">
+        <button class="cat-tab active" onclick="filterCategory(this, 'all')">All Posts</button>
+        <button class="cat-tab" onclick="filterCategory(this, 'fundamentals')">AI Fundamentals</button>
+        <button class="cat-tab" onclick="filterCategory(this, 'compliance')">Trust &amp; Compliance</button>
+        <button class="cat-tab" onclick="filterCategory(this, 'calculation')">Token Calculation</button>
+        <button class="cat-tab" onclick="filterCategory(this, 'pricing')">Token Pricing</button>
+        <button class="cat-tab" onclick="filterCategory(this, 'models')">Model Comparisons</button>
+        <button class="cat-tab" onclick="filterCategory(this, 'platform')">AI Platforms, Tools &amp; Purchasing</button>
+        <button class="cat-tab" onclick="filterCategory(this, 'tutorials')">Tutorials</button>
+      </div>
+    </div>
+
+    <!-- Results count + sort -->
+    <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.75rem; flex-wrap: wrap; gap: 1rem;">
+      <div style="font-size: 0.875rem; color: #666; font-weight: 500;">
+        Showing <span id="post-count" style="color: #6155F1; font-weight: 700;">12</span> of <span style="color: #1C1C1C; font-weight: 700;">200+</span> articles
+      </div>
+      <div style="display: flex; align-items: center; gap: 0.625rem;">
+        <span style="font-size: 0.8rem; color: #999; font-weight: 500;">Sort by:</span>
+        <select style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.825rem; font-weight: 600; color: #3C315B; background: #fff; border: 1.5px solid rgba(97,85,241,0.2); border-radius: 8px; padding: 0.375rem 0.75rem; cursor: pointer; outline: none;">
+          <option>Latest</option>
+          <option>Most Popular</option>
+          <option>Beginner First</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Post grid -->
+    <div class="post-grid" id="post-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-bottom: 3rem;">
+
+      <!-- Post 1 -->
+      <a href="#" class="post-card reveal" data-category="fundamentals">
+        <div style="position: relative; overflow: hidden; height: 200px;">
+          <img src="https://placehold.co/600x400/6155F1/FFFFFF?text=AI+Tokens" alt="" style="width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s cubic-bezier(.22,1,.36,1);" class="post-img" />
+          <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(97,85,241,0.45) 0%, transparent 60%);"></div>
+        </div>
+        <div style="padding: 1.375rem;">
+          <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.875rem; flex-wrap: wrap;">
+            <span class="tag-pill">AI Token Basics</span>
+            <span class="tag-pill" style="background: #EBF4FF; color: #3E81E5;">Beginner</span>
+          </div>
+          <h3 style="font-family: 'Kanit', sans-serif; font-size: 1.05rem; font-weight: 700; color: #1C1C1C; letter-spacing: -0.02em; line-height: 1.3; margin-bottom: 0.625rem;">How AI Tokens Are Counted: Input vs. Output Explained</h3>
+          <p style="font-size: 0.825rem; line-height: 1.7; color: #666; margin-bottom: 1rem;">Understanding how models count tokens differently for prompts vs. responses — and why it matters for your API bill.</p>
+          <div style="display: flex; align-items: center; justify-content: space-between;">
+            <span style="font-size: 0.775rem; color: #999; font-weight: 500;">Apr 22, 2026 · 5 min</span>
+            <span style="font-size: 0.775rem; color: #6155F1; font-weight: 600; display: flex; align-items: center; gap: 0.3rem;">
+              Read
+              <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Post 2 -->
+      <a href="#" class="post-card reveal" data-category="pricing" style="transition-delay: 0.05s;">
+        <div style="position: relative; overflow: hidden; height: 200px;">
+          <img src="https://placehold.co/600x400/3E81E5/FFFFFF?text=API+Pricing" alt="" style="width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s cubic-bezier(.22,1,.36,1);" class="post-img" />
+          <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(62,129,229,0.45) 0%, transparent 60%);"></div>
+        </div>
+        <div style="padding: 1.375rem;">
+          <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.875rem; flex-wrap: wrap;">
+            <span class="tag-pill" style="background: #EBF4FF; color: #3E81E5;">AI Token Pricing</span>
+          </div>
+          <h3 style="font-family: 'Kanit', sans-serif; font-size: 1.05rem; font-weight: 700; color: #1C1C1C; letter-spacing: -0.02em; line-height: 1.3; margin-bottom: 0.625rem;">GPT-4o vs Claude 3.5 vs Gemini 1.5: Full Cost Breakdown 2026</h3>
+          <p style="font-size: 0.825rem; line-height: 1.7; color: #666; margin-bottom: 1rem;">Side-by-side pricing comparison across the top models — with real-world cost estimates for common workloads.</p>
+          <div style="display: flex; align-items: center; justify-content: space-between;">
+            <span style="font-size: 0.775rem; color: #999; font-weight: 500;">Apr 18, 2026 · 7 min</span>
+            <span style="font-size: 0.775rem; color: #6155F1; font-weight: 600; display: flex; align-items: center; gap: 0.3rem;">
+              Read
+              <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Post 3 -->
+      <a href="#" class="post-card reveal" data-category="compliance" style="transition-delay: 0.1s;">
+        <div style="position: relative; overflow: hidden; height: 200px;">
+          <img src="https://placehold.co/600x400/3C315B/FFFFFF?text=Enterprise+AI" alt="" style="width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s cubic-bezier(.22,1,.36,1);" class="post-img" />
+          <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(60,49,91,0.55) 0%, transparent 60%);"></div>
+        </div>
+        <div style="padding: 1.375rem;">
+          <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.875rem; flex-wrap: wrap;">
+            <span class="tag-pill" style="background: #F4F2F4; color: #3C315B;">Enterprise AI</span>
+          </div>
+          <h3 style="font-family: 'Kanit', sans-serif; font-size: 1.05rem; font-weight: 700; color: #1C1C1C; letter-spacing: -0.02em; line-height: 1.3; margin-bottom: 0.625rem;">Enterprise AI Adoption: Data Security & Compliance Checklist</h3>
+          <p style="font-size: 0.825rem; line-height: 1.7; color: #666; margin-bottom: 1rem;">What every enterprise team needs to verify before deploying AI tools — from data masking to audit trails.</p>
+          <div style="display: flex; align-items: center; justify-content: space-between;">
+            <span style="font-size: 0.775rem; color: #999; font-weight: 500;">Apr 14, 2026 · 10 min</span>
+            <span style="font-size: 0.775rem; color: #6155F1; font-weight: 600; display: flex; align-items: center; gap: 0.3rem;">
+              Read
+              <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Post 4 -->
+      <a href="#" class="post-card reveal" data-category="calculation">
+        <div style="position: relative; overflow: hidden; height: 200px;">
+          <img src="https://placehold.co/600x400/56F7FD/1C1C1C?text=Token+Calc" alt="" style="width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s cubic-bezier(.22,1,.36,1);" class="post-img" />
+          <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(97,85,241,0.4) 0%, transparent 60%);"></div>
+        </div>
+        <div style="padding: 1.375rem;">
+          <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.875rem; flex-wrap: wrap;">
+            <span class="tag-pill">Token Calculation</span>
+          </div>
+          <h3 style="font-family: 'Kanit', sans-serif; font-size: 1.05rem; font-weight: 700; color: #1C1C1C; letter-spacing: -0.02em; line-height: 1.3; margin-bottom: 0.625rem;">How to Calculate Your Monthly AI API Costs Before You Commit</h3>
+          <p style="font-size: 0.825rem; line-height: 1.7; color: #666; margin-bottom: 1rem;">A practical formula for estimating token usage across different task types — before you get an unexpected bill.</p>
+          <div style="display: flex; align-items: center; justify-content: space-between;">
+            <span style="font-size: 0.775rem; color: #999; font-weight: 500;">Apr 10, 2026 · 6 min</span>
+            <span style="font-size: 0.775rem; color: #6155F1; font-weight: 600; display: flex; align-items: center; gap: 0.3rem;">
+              Read
+              <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Post 5 -->
+      <a href="#" class="post-card reveal" data-category="models" style="transition-delay: 0.05s;">
+        <div style="position: relative; overflow: hidden; height: 200px;">
+          <img src="https://placehold.co/600x400/6155F1/FFFFFF?text=Model+Types" alt="" style="width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s cubic-bezier(.22,1,.36,1);" class="post-img" />
+          <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(97,85,241,0.45) 0%, transparent 60%);"></div>
+        </div>
+        <div style="padding: 1.375rem;">
+          <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.875rem; flex-wrap: wrap;">
+            <span class="tag-pill" style="background: #EBF4FF; color: #3E81E5;">Model Comparisons</span>
+          </div>
+          <h3 style="font-family: 'Kanit', sans-serif; font-size: 1.05rem; font-weight: 700; color: #1C1C1C; letter-spacing: -0.02em; line-height: 1.3; margin-bottom: 0.625rem;">Text vs. Image vs. Video AI Models: Which Do You Actually Need?</h3>
+          <p style="font-size: 0.825rem; line-height: 1.7; color: #666; margin-bottom: 1rem;">A clear breakdown of AI model types and the tasks each one is actually built for — no jargon required.</p>
+          <div style="display: flex; align-items: center; justify-content: space-between;">
+            <span style="font-size: 0.775rem; color: #999; font-weight: 500;">Apr 7, 2026 · 8 min</span>
+            <span style="font-size: 0.775rem; color: #6155F1; font-weight: 600; display: flex; align-items: center; gap: 0.3rem;">
+              Read
+              <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Post 6 -->
+      <a href="#" class="post-card reveal" data-category="tutorials" style="transition-delay: 0.1s;">
+        <div style="position: relative; overflow: hidden; height: 200px;">
+          <img src="https://placehold.co/600x400/3E81E5/FFFFFF?text=Use+Cases" alt="" style="width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s cubic-bezier(.22,1,.36,1);" class="post-img" />
+          <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(62,129,229,0.45) 0%, transparent 60%);"></div>
+        </div>
+        <div style="padding: 1.375rem;">
+          <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.875rem; flex-wrap: wrap;">
+            <span class="tag-pill" style="background: #F0FFF4; color: #2D8653;">Use Cases</span>
+          </div>
+          <h3 style="font-family: 'Kanit', sans-serif; font-size: 1.05rem; font-weight: 700; color: #1C1C1C; letter-spacing: -0.02em; line-height: 1.3; margin-bottom: 0.625rem;">5 Real-World Ways Businesses Are Using AI APIs Right Now</h3>
+          <p style="font-size: 0.825rem; line-height: 1.7; color: #666; margin-bottom: 1rem;">From customer service automation to internal knowledge bases — concrete examples with token cost estimates included.</p>
+          <div style="display: flex; align-items: center; justify-content: space-between;">
+            <span style="font-size: 0.775rem; color: #999; font-weight: 500;">Apr 3, 2026 · 9 min</span>
+            <span style="font-size: 0.775rem; color: #6155F1; font-weight: 600; display: flex; align-items: center; gap: 0.3rem;">
+              Read
+              <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Post 7 -->
+      <a href="#" class="post-card reveal" data-category="platform">
+        <div style="position: relative; overflow: hidden; height: 200px;">
+          <img src="https://placehold.co/600x400/3C315B/E2DFFE?text=Platform+Guide" alt="" style="width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s cubic-bezier(.22,1,.36,1);" class="post-img" />
+          <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(60,49,91,0.55) 0%, transparent 60%);"></div>
+        </div>
+        <div style="padding: 1.375rem;">
+          <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.875rem; flex-wrap: wrap;">
+            <span class="tag-pill" style="background: #FFF4E2; color: #B07D2E;">Platform Guides</span>
+          </div>
+          <h3 style="font-family: 'Kanit', sans-serif; font-size: 1.05rem; font-weight: 700; color: #1C1C1C; letter-spacing: -0.02em; line-height: 1.3; margin-bottom: 0.625rem;">How to Buy AI API Credits: A Step-by-Step Platform Guide</h3>
+          <p style="font-size: 0.825rem; line-height: 1.7; color: #666; margin-bottom: 1rem;">Navigating OpenAI, Anthropic, and Google AI Studio billing — what to watch out for and how to avoid overpaying.</p>
+          <div style="display: flex; align-items: center; justify-content: space-between;">
+            <span style="font-size: 0.775rem; color: #999; font-weight: 500;">Mar 28, 2026 · 7 min</span>
+            <span style="font-size: 0.775rem; color: #6155F1; font-weight: 600; display: flex; align-items: center; gap: 0.3rem;">
+              Read
+              <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Post 8 -->
+      <a href="#" class="post-card reveal" data-category="fundamentals" style="transition-delay: 0.05s;">
+        <div style="position: relative; overflow: hidden; height: 200px;">
+          <img src="https://placehold.co/600x400/6155F1/FFFFFF?text=Context+Window" alt="" style="width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s cubic-bezier(.22,1,.36,1);" class="post-img" />
+          <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(97,85,241,0.45) 0%, transparent 60%);"></div>
+        </div>
+        <div style="padding: 1.375rem;">
+          <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.875rem; flex-wrap: wrap;">
+            <span class="tag-pill">AI Token Basics</span>
+          </div>
+          <h3 style="font-family: 'Kanit', sans-serif; font-size: 1.05rem; font-weight: 700; color: #1C1C1C; letter-spacing: -0.02em; line-height: 1.3; margin-bottom: 0.625rem;">Context Windows Explained: Why 128K Tokens Changes Everything</h3>
+          <p style="font-size: 0.825rem; line-height: 1.7; color: #666; margin-bottom: 1rem;">What a context window actually is, why it matters for long documents, and how different models compare.</p>
+          <div style="display: flex; align-items: center; justify-content: space-between;">
+            <span style="font-size: 0.775rem; color: #999; font-weight: 500;">Mar 24, 2026 · 6 min</span>
+            <span style="font-size: 0.775rem; color: #6155F1; font-weight: 600; display: flex; align-items: center; gap: 0.3rem;">
+              Read
+              <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Post 9 -->
+      <a href="#" class="post-card reveal" data-category="compliance" style="transition-delay: 0.1s;">
+        <div style="position: relative; overflow: hidden; height: 200px;">
+          <img src="https://placehold.co/600x400/1C1C1C/6155F1?text=Multi-Model" alt="" style="width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s cubic-bezier(.22,1,.36,1);" class="post-img" />
+          <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(60,49,91,0.55) 0%, transparent 60%);"></div>
+        </div>
+        <div style="padding: 1.375rem;">
+          <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.875rem; flex-wrap: wrap;">
+            <span class="tag-pill" style="background: #F4F2F4; color: #3C315B;">Enterprise AI</span>
+            <span class="tag-pill" style="background: #EBF4FF; color: #3E81E5;">Advanced</span>
+          </div>
+          <h3 style="font-family: 'Kanit', sans-serif; font-size: 1.05rem; font-weight: 700; color: #1C1C1C; letter-spacing: -0.02em; line-height: 1.3; margin-bottom: 0.625rem;">Multi-Model Routing: How to Automatically Pick the Cheapest AI for Each Task</h3>
+          <p style="font-size: 0.825rem; line-height: 1.7; color: #666; margin-bottom: 1rem;">A practical guide to intelligent model routing — routing simple tasks to cheap models, complex ones to powerful ones.</p>
+          <div style="display: flex; align-items: center; justify-content: space-between;">
+            <span style="font-size: 0.775rem; color: #999; font-weight: 500;">Mar 19, 2026 · 11 min</span>
+            <span style="font-size: 0.775rem; color: #6155F1; font-weight: 600; display: flex; align-items: center; gap: 0.3rem;">
+              Read
+              <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Post 10 -->
+      <a href="#" class="post-card reveal" data-category="calculation">
+        <div style="position: relative; overflow: hidden; height: 200px;">
+          <img src="https://placehold.co/600x400/6155F1/FFFFFF?text=Tokenizer" alt="" style="width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s cubic-bezier(.22,1,.36,1);" class="post-img" />
+          <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(97,85,241,0.45) 0%, transparent 60%);"></div>
+        </div>
+        <div style="padding: 1.375rem;">
+          <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.875rem; flex-wrap: wrap;">
+            <span class="tag-pill">Token Calculation</span>
+          </div>
+          <h3 style="font-family: 'Kanit', sans-serif; font-size: 1.05rem; font-weight: 700; color: #1C1C1C; letter-spacing: -0.02em; line-height: 1.3; margin-bottom: 0.625rem;">BPE vs. SentencePiece: How Different Tokenizers Count Your Words</h3>
+          <p style="font-size: 0.825rem; line-height: 1.7; color: #666; margin-bottom: 1rem;">Not all tokenizers are equal — and the differences can significantly affect your token count for the same text.</p>
+          <div style="display: flex; align-items: center; justify-content: space-between;">
+            <span style="font-size: 0.775rem; color: #999; font-weight: 500;">Mar 15, 2026 · 7 min</span>
+            <span style="font-size: 0.775rem; color: #6155F1; font-weight: 600; display: flex; align-items: center; gap: 0.3rem;">
+              Read
+              <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Post 11 -->
+      <a href="#" class="post-card reveal" data-category="tutorials" style="transition-delay: 0.05s;">
+        <div style="position: relative; overflow: hidden; height: 200px;">
+          <img src="https://placehold.co/600x400/3E81E5/FFFFFF?text=Summarization" alt="" style="width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s cubic-bezier(.22,1,.36,1);" class="post-img" />
+          <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(62,129,229,0.45) 0%, transparent 60%);"></div>
+        </div>
+        <div style="padding: 1.375rem;">
+          <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.875rem; flex-wrap: wrap;">
+            <span class="tag-pill" style="background: #F0FFF4; color: #2D8653;">Use Cases</span>
+          </div>
+          <h3 style="font-family: 'Kanit', sans-serif; font-size: 1.05rem; font-weight: 700; color: #1C1C1C; letter-spacing: -0.02em; line-height: 1.3; margin-bottom: 0.625rem;">Document Summarization at Scale: Token Strategy for Long-Form Content</h3>
+          <p style="font-size: 0.825rem; line-height: 1.7; color: #666; margin-bottom: 1rem;">How to summarize large documents efficiently without blowing your token budget — chunking strategies included.</p>
+          <div style="display: flex; align-items: center; justify-content: space-between;">
+            <span style="font-size: 0.775rem; color: #999; font-weight: 500;">Mar 10, 2026 · 8 min</span>
+            <span style="font-size: 0.775rem; color: #6155F1; font-weight: 600; display: flex; align-items: center; gap: 0.3rem;">
+              Read
+              <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Post 12 -->
+      <a href="#" class="post-card reveal" data-category="models" style="transition-delay: 0.1s;">
+        <div style="position: relative; overflow: hidden; height: 200px;">
+          <img src="https://placehold.co/600x400/6155F1/FFFFFF?text=DeepSeek+vs+GPT" alt="" style="width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s cubic-bezier(.22,1,.36,1);" class="post-img" />
+          <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(97,85,241,0.45) 0%, transparent 60%);"></div>
+        </div>
+        <div style="padding: 1.375rem;">
+          <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.875rem; flex-wrap: wrap;">
+            <span class="tag-pill" style="background: #EBF4FF; color: #3E81E5;">Model Comparisons</span>
+          </div>
+          <h3 style="font-family: 'Kanit', sans-serif; font-size: 1.05rem; font-weight: 700; color: #1C1C1C; letter-spacing: -0.02em; line-height: 1.3; margin-bottom: 0.625rem;">DeepSeek vs. GPT-4o: Performance, Cost & When to Use Each</h3>
+          <p style="font-size: 0.825rem; line-height: 1.7; color: #666; margin-bottom: 1rem;">An honest comparison of DeepSeek's value proposition against GPT-4o — benchmarks, pricing, and practical use cases.</p>
+          <div style="display: flex; align-items: center; justify-content: space-between;">
+            <span style="font-size: 0.775rem; color: #999; font-weight: 500;">Mar 5, 2026 · 9 min</span>
+            <span style="font-size: 0.775rem; color: #6155F1; font-weight: 600; display: flex; align-items: center; gap: 0.3rem;">
+              Read
+              <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </div>
+        </div>
+      </a>
+
+    </div>
+
+    <!-- Pagination -->
+    <div style="display: flex; align-items: center; justify-content: center; gap: 0.5rem; flex-wrap: wrap;">
+      <a href="#" class="page-btn" aria-disabled="true" style="opacity: 0.35; pointer-events: none;">
+        <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M11 4L5 8l6 4" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <a href="#" class="page-btn active">1</a>
+      <a href="#" class="page-btn">2</a>
+      <a href="#" class="page-btn">3</a>
+      <span style="font-size: 0.825rem; color: #999; padding: 0 0.25rem;">···</span>
+      <a href="#" class="page-btn">17</a>
+      <a href="#" class="page-btn">
+        <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M5 4l6 4-6 4" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <span style="font-size: 0.8rem; color: #999; margin-left: 0.5rem; font-weight: 500;">Page 1 of 17</span>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════
+     NEWSLETTER CTA BANNER
+═══════════════════════════════ -->
+<section style="padding: 0 1.5rem 5rem;">
+  <div style="max-width: 1200px; margin: 0 auto;">
+    <div class="reveal" style="background: linear-gradient(135deg, #6155F1 0%, #3E81E5 100%); border-radius: 20px; padding: 3rem 2.5rem; display: flex; align-items: center; justify-content: space-between; gap: 2rem; flex-wrap: wrap; position: relative; overflow: hidden;">
+      <div style="position: absolute; top: -40px; right: -40px; width: 200px; height: 200px; background: rgba(255,255,255,0.06); border-radius: 50%;"></div>
+      <div style="position: absolute; bottom: -60px; left: 30%; width: 160px; height: 160px; background: rgba(255,255,255,0.04); border-radius: 50%;"></div>
+      <div style="position: relative;">
+        <div style="font-family: 'Kanit', sans-serif; font-size: clamp(1.25rem, 2.5vw, 1.625rem); font-weight: 800; color: #fff; letter-spacing: -0.03em; margin-bottom: 0.5rem;">Stay ahead of AI pricing changes</div>
+        <p style="font-size: 0.9rem; color: rgba(255,255,255,0.8); line-height: 1.6; max-width: 420px;">New articles every week on tokens, models, and API costs. No noise — just what matters.</p>
+      </div>
+      <div style="display: flex; gap: 0.75rem; flex-wrap: wrap; position: relative;">
+        <input type="email" placeholder="your@email.com" style="padding: 0.75rem 1.125rem; border-radius: 10px; border: none; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.875rem; min-width: 220px; outline: none; box-shadow: 0 2px 8px rgba(0,0,0,0.15);" />
+        <button style="padding: 0.75rem 1.5rem; background: #fff; color: #6155F1; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.875rem; font-weight: 700; border: none; border-radius: 10px; cursor: pointer; white-space: nowrap; transition: transform 0.18s ease, box-shadow 0.18s ease; box-shadow: 0 2px 8px rgba(0,0,0,0.15);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 16px rgba(0,0,0,0.2)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.15)';">Subscribe</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════
+     FOOTER
+═══════════════════════════════ -->
+<footer style="background: #1C1C1C; color: #999; padding: 3.5rem 1.5rem 2rem;">
+  <div style="max-width: 1200px; margin: 0 auto;">
+    <div class="footer-grid" style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem;">
+
+      <div>
+        <div style="display: flex; align-items: center; gap: 0.625rem; margin-bottom: 1rem;">
+          <img src="AI_Token_logoPNG.avif" alt="AI Token King" style="width: 32px; height: 32px; object-fit: contain;" />
+          <span style="font-family: 'Kanit', sans-serif; font-size: 1rem; font-weight: 700; color: #FFFFFF; letter-spacing: -0.02em;">AI Token King</span>
+        </div>
+        <p style="font-size: 0.875rem; line-height: 1.75; color: #666; max-width: 260px;">The definitive English-language hub for understanding AI tokens, models, and APIs. Free, always.</p>
+        <div style="display: flex; gap: 0.75rem; margin-top: 1.25rem;">
+          <a href="#" style="width: 36px; height: 36px; background: #2A2A2A; border-radius: 8px; display: flex; align-items: center; justify-content: center; text-decoration: none; transition: background-color 0.18s ease;" onmouseover="this.style.background='#6155F1'" onmouseout="this.style.background='#2A2A2A'">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z" stroke="#999" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="#" style="width: 36px; height: 36px; background: #2A2A2A; border-radius: 8px; display: flex; align-items: center; justify-content: center; text-decoration: none; transition: background-color 0.18s ease;" onmouseover="this.style.background='#6155F1'" onmouseout="this.style.background='#2A2A2A'">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z" stroke="#999" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/><circle cx="4" cy="4" r="2" stroke="#999" stroke-width="1.75"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <div style="font-family: 'Kanit', sans-serif; font-size: 0.875rem; font-weight: 700; color: #FFFFFF; margin-bottom: 1.125rem; letter-spacing: 0.02em; text-transform: uppercase;">Learn</div>
+        <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.625rem;">
+          <li><a href="beginners-guide.html" style="font-size: 0.875rem; color: #666; text-decoration: none; transition: color 0.15s ease;" onmouseover="this.style.color='#E2DFFE'" onmouseout="this.style.color='#666'">Beginner's Guide</a></li>
+          <li><a href="use-cases.html" style="font-size: 0.875rem; color: #666; text-decoration: none; transition: color 0.15s ease;" onmouseover="this.style.color='#E2DFFE'" onmouseout="this.style.color='#666'">Use Cases</a></li>
+          <li><a href="blog.html" style="font-size: 0.875rem; color: #E2DFFE; text-decoration: none; font-weight: 600;">Blog Articles</a></li>
+          <li><a href="user-guide.html" style="font-size: 0.875rem; color: #666; text-decoration: none; transition: color 0.15s ease;" onmouseover="this.style.color='#E2DFFE'" onmouseout="this.style.color='#666'">User Guide</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div style="font-family: 'Kanit', sans-serif; font-size: 0.875rem; font-weight: 700; color: #FFFFFF; margin-bottom: 1.125rem; letter-spacing: 0.02em; text-transform: uppercase;">Compare</div>
+        <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.625rem;">
+          <li><a href="api-compare.html" style="font-size: 0.875rem; color: #666; text-decoration: none; transition: color 0.15s ease;" onmouseover="this.style.color='#E2DFFE'" onmouseout="this.style.color='#666'">API Comparison</a></li>
+          <li><a href="api-compare.html" style="font-size: 0.875rem; color: #666; text-decoration: none; transition: color 0.15s ease;" onmouseover="this.style.color='#E2DFFE'" onmouseout="this.style.color='#666'">Model Types</a></li>
+          <li><a href="#" style="font-size: 0.875rem; color: #666; text-decoration: none; transition: color 0.15s ease;" onmouseover="this.style.color='#E2DFFE'" onmouseout="this.style.color='#666'">Pricing Tables</a></li>
+          <li><a href="#" style="font-size: 0.875rem; color: #666; text-decoration: none; transition: color 0.15s ease;" onmouseover="this.style.color='#E2DFFE'" onmouseout="this.style.color='#666'">Aggregators</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div style="font-family: 'Kanit', sans-serif; font-size: 0.875rem; font-weight: 700; color: #FFFFFF; margin-bottom: 1.125rem; letter-spacing: 0.02em; text-transform: uppercase;">More</div>
+        <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.625rem;">
+          <li><a href="ai-trends.html" style="font-size: 0.875rem; color: #666; text-decoration: none; transition: color 0.15s ease;" onmouseover="this.style.color='#E2DFFE'" onmouseout="this.style.color='#666'">AI Trends</a></li>
+          <li><a href="compliance.html" style="font-size: 0.875rem; color: #666; text-decoration: none; transition: color 0.15s ease;" onmouseover="this.style.color='#E2DFFE'" onmouseout="this.style.color='#666'">Compliance</a></li>
+          <li><a href="https://www.aitokenking.com.tw/docs" target="_blank" rel="noopener noreferrer" style="font-size: 0.875rem; color: #666; text-decoration: none; transition: color 0.15s ease;" onmouseover="this.style.color='#E2DFFE'" onmouseout="this.style.color='#666'">Documentation</a></li>
+          <li><a href="#" style="font-size: 0.875rem; color: #666; text-decoration: none; transition: color 0.15s ease;" onmouseover="this.style.color='#E2DFFE'" onmouseout="this.style.color='#666'">Contact</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div style="border-top: 1px solid #2A2A2A; padding-top: 1.75rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
+      <p style="font-size: 0.8rem; color: #555;">© 2026 AI Token King. All rights reserved.</p>
+      <div style="display: flex; gap: 1.5rem;">
+        <a href="#" style="font-size: 0.8rem; color: #555; text-decoration: none; transition: color 0.15s ease;" onmouseover="this.style.color='#E2DFFE'" onmouseout="this.style.color='#555'">Privacy Policy</a>
+        <a href="#" style="font-size: 0.8rem; color: #555; text-decoration: none; transition: color 0.15s ease;" onmouseover="this.style.color='#E2DFFE'" onmouseout="this.style.color='#555'">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<!-- ═══════════════════════════════
+     JAVASCRIPT
+═══════════════════════════════ -->
+<script>
+  // Category filter
+  function filterCategory(btn, category) {
+    document.querySelectorAll('.cat-tab').forEach(t => t.classList.remove('active'));
+    btn.classList.add('active');
+
+    const posts = document.querySelectorAll('#post-grid .post-card');
+    let visible = 0;
+    posts.forEach(post => {
+      const match = category === 'all' || post.dataset.category === category;
+      post.style.display = match ? 'block' : 'none';
+      if (match) visible++;
+    });
+    document.getElementById('post-count').textContent = visible;
+  }
+
+  // Scroll reveal
+  const revealEls = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
+    });
+  }, { threshold: 0.1 });
+  revealEls.forEach(el => observer.observe(el));
+
+  // Post image hover zoom
+  document.querySelectorAll('.post-card').forEach(card => {
+    const img = card.querySelector('.post-img');
+    if (!img) return;
+    card.addEventListener('mouseenter', () => { img.style.transform = 'scale(1.05)'; });
+    card.addEventListener('mouseleave', () => { img.style.transform = 'scale(1)'; });
+  });
+
+  // Dropdown menus
+  document.querySelectorAll('.nav-dropdown').forEach(dropdown => {
+    const btn = dropdown.querySelector('.nav-dropdown-btn');
+    const menu = dropdown.querySelector('.nav-dropdown-menu');
+    const chevron = dropdown.querySelector('.dropdown-chevron');
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const isOpen = menu.style.display === 'block';
+      document.querySelectorAll('.nav-dropdown-menu').forEach(m => m.style.display = 'none');
+      document.querySelectorAll('.dropdown-chevron').forEach(c => c.style.transform = 'rotate(0deg)');
+      document.querySelectorAll('.nav-dropdown-btn').forEach(b => b.setAttribute('aria-expanded', 'false'));
+      if (!isOpen) {
+        menu.style.display = 'block';
+        chevron.style.transform = 'rotate(180deg)';
+        btn.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+  document.addEventListener('click', () => {
+    document.querySelectorAll('.nav-dropdown-menu').forEach(m => m.style.display = 'none');
+    document.querySelectorAll('.dropdown-chevron').forEach(c => c.style.transform = 'rotate(0deg)');
+    document.querySelectorAll('.nav-dropdown-btn').forEach(b => b.setAttribute('aria-expanded', 'false'));
+  });
+
+  // Mobile nav
+  const menuBtn = document.getElementById('mobile-menu-btn');
+  if (menuBtn) {
+    menuBtn.addEventListener('click', () => {
+      const nav = document.querySelector('.desktop-nav');
+      if (nav) nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+    });
+  }
+
+  // Responsive footer grid
+  const style = document.createElement('style');
+  style.textContent = `
+    @media (max-width: 860px) { .footer-grid { grid-template-columns: 1fr 1fr !important; } }
+    @media (max-width: 540px) { .footer-grid { grid-template-columns: 1fr !important; } }
+    @media (max-width: 640px) { .post-grid { grid-template-columns: 1fr !important; } }
+    @media (max-width: 860px) { .post-grid { grid-template-columns: repeat(2, 1fr) !important; } }
+  `;
+  document.head.appendChild(style);
+  // Hero pointer blob
+  (function(){var h=document.querySelector('.page-hero-bg'),p=document.getElementById('page-pointer');if(!h||!p)return;var cx=0,cy=0,tx=0,ty=0;function m(){cx+=(tx-cx)/20;cy+=(ty-cy)/20;p.style.transform='translate('+Math.round(cx)+'px,'+Math.round(cy)+'px)';requestAnimationFrame(m);}h.addEventListener('mousemove',function(e){var r=h.getBoundingClientRect();tx=e.clientX-r.left;ty=e.clientY-r.top;});m();})();
+</script>
+
+</body>
+</html>
