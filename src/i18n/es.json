@@ -50,5 +50,18 @@
     "selectLanguage": "Seleccionar idioma",
     "english": "English",
     "spanish": "Español"
+  },
+  "aiTrends": {
+    "sourcesDownloadLabel": "Descarga de Fuente Original",
+    "relatedLabel": "Relacionado en AI Token King",
+    "related1Tag": "Tokens",
+    "related1Title": "¿Qué es un Token de IA? Una Explicación en Palabras Simples",
+    "related1Meta": "5 min de lectura",
+    "related2Tag": "Modelos",
+    "related2Title": "Descripción General de Tipos de Modelos de IA: Texto, Imagen y Video",
+    "related2Meta": "Comparar Modelos →",
+    "related3Tag": "Costos",
+    "related3Title": "¿Cuánto Cuestan Realmente 1,000 Llamadas a la API de IA?",
+    "related3Meta": "6 min de lectura"
   }
 }

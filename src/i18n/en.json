@@ -50,5 +50,18 @@
     "selectLanguage": "Select language",
     "english": "English",
     "spanish": "Español"
+  },
+  "aiTrends": {
+    "sourcesDownloadLabel": "Original Source Download",
+    "relatedLabel": "Related on AI Token King",
+    "related1Tag": "Tokens",
+    "related1Title": "What Is an AI Token? A Plain-English Explanation",
+    "related1Meta": "5 min read",
+    "related2Tag": "Models",
+    "related2Title": "AI Model Type Overview: Text, Image & Video",
+    "related2Meta": "Compare Models →",
+    "related3Tag": "Costs",
+    "related3Title": "How Much Does 1,000 AI API Calls Actually Cost?",
+    "related3Meta": "6 min read"
   }
 }
