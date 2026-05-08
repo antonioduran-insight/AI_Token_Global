@@ -49,6 +49,15 @@ export const postSchema = defineType({
         hotspot: true,
         sources: [mediaAssetSource],
       },
+      fields: [
+        defineField({
+          name: 'alt',
+          title: 'Alt Text',
+          type: 'string',
+          description: 'Describe the image for screen readers and SEO',
+          validation: Rule => Rule.required(),
+        }),
+      ],
     }),
     defineField({
       name: 'language',
@@ -119,7 +128,19 @@ export const postSchema = defineType({
         },
       ],
     }),
+    defineField({
+      name: 'seo',
+      title: 'SEO',
+      type: 'object',
+      fields: [
+        defineField({ name: 'seoTitle', title: 'SEO Title', type: 'string', description: 'Overrides post title. Max 60 chars.', validation: Rule => Rule.max(60) }),
+        defineField({ name: 'seoDescription', title: 'Meta Description', type: 'text', rows: 2, description: 'Overrides excerpt. Max 160 chars.', validation: Rule => Rule.max(160) }),
+        defineField({ name: 'ogImage', title: 'Open Graph Image', type: 'image', description: '1200×630px recommended. Defaults to cover image.' }),
+        defineField({ name: 'noindex', title: 'Hide from search engines', type: 'boolean', initialValue: false }),
+      ],
+    }),
   ],
+
   preview: {
     select: { title: 'title', subtitle: 'articleNumber', media: 'coverImage' },
     prepare({ title, subtitle, media }) {

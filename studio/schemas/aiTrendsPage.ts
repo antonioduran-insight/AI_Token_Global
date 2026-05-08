@@ -102,6 +102,19 @@ export const aiTrendsPageSchema = defineType({
       type: 'array',
       of: [{ type: 'faqItem' }],
     }),
+
+    // ── SEO ───────────────────────────────────────────
+    defineField({
+      name: 'seo',
+      title: 'SEO',
+      type: 'object',
+      fields: [
+        defineField({ name: 'seoTitle', title: 'SEO Title', type: 'string', description: 'Overrides hero headline. Max 60 chars.', validation: (Rule: any) => Rule.max(60) }),
+        defineField({ name: 'seoDescription', title: 'Meta Description', type: 'text', rows: 2, description: 'Max 160 chars.', validation: (Rule: any) => Rule.max(160) }),
+        defineField({ name: 'ogImage', title: 'Open Graph Image', type: 'image', description: '1200×630px recommended.' }),
+        defineField({ name: 'noindex', title: 'Hide from search engines', type: 'boolean', initialValue: false }),
+      ],
+    }),
   ],
 
   preview: {
