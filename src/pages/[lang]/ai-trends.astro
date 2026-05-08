@@ -290,11 +290,11 @@ const AUDIENCE_ICONS = [
         <h2 style="font-family:'Kanit',sans-serif;font-size:1.75rem;font-weight:800;color:#1C1C1C;letter-spacing:-0.03em;margin-bottom:2rem;">FAQ</h2>
         {page.faq.map(item => (
           <div style="border-bottom:1px solid #E2DFFE;">
-            <button class="faq-btn" onclick="toggleFaq(this)" style="width:100%;text-align:left;padding:1.25rem 0;background:none;border:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:1rem;">
+            <button class="faq-btn" onclick="window.toggleFaq(this)" style="width:100%;text-align:left;padding:1.25rem 0;background:none;border:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:1rem;">
               <span style="font-family:'Kanit',sans-serif;font-size:1rem;font-weight:700;color:#1C1C1C;">{item.question}</span>
               <svg class="faq-chevron" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="#6155F1" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </button>
-            <div class="faq-answer" style="overflow:hidden;max-height:0;transition:max-height 0.3s ease;">
+            <div class="faq-answer">
               <div class="prose-small" style="padding-bottom:1.25rem;" set:html={pt(item.answer)} />
             </div>
           </div>
@@ -359,4 +359,24 @@ const AUDIENCE_ICONS = [
     .trends-grid-2   { grid-template-columns: 1fr !important; }
     .relevance-grid  { grid-template-columns: 1fr !important; }
   }
+
+  .faq-btn:hover span { color: #6155F1; }
+  .faq-btn:focus-visible { outline: 2px solid #6155F1; outline-offset: 2px; border-radius: 4px; }
+  .faq-btn:active { background: rgba(97,85,241,0.05); border-radius: 6px; }
 </style>
+
+<script is:inline>
+  window.toggleFaq = function(btn) {
+    var answer = btn.nextElementSibling;
+    var chevron = btn.querySelector('.faq-chevron');
+    var isOpen = answer.classList.contains('open');
+
+    document.querySelectorAll('.faq-answer').forEach(function(a) { a.classList.remove('open'); });
+    document.querySelectorAll('.faq-chevron').forEach(function(c) { c.classList.remove('open'); });
+
+    if (!isOpen) {
+      answer.classList.add('open');
+      if (chevron) chevron.classList.add('open');
+    }
+  };
+</script>

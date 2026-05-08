@@ -56,21 +56,19 @@ const otherLangs = SUPPORTED_LANGS.filter(l => l !== lang);
     </nav>
 
     <div style="display: flex; align-items: center; gap: 0.625rem; flex-shrink: 0;">
-      <!-- Language switcher -->
-      <div class="nav-dropdown lang-switcher" style="position: relative;">
+      <!-- Language switcher (desktop only) -->
+      <div class="nav-dropdown lang-switcher desktop-nav" style="position: relative; display: flex;">
         <button class="nav-dropdown-btn lang-btn" aria-expanded="false" aria-label={t('lang.selectLanguage')} style="display: flex; align-items: center; gap: 0.375rem; background: rgba(97,85,241,0.08); border: 1.5px solid rgba(97,85,241,0.18); border-radius: 10px; padding: 0.375rem 0.625rem; cursor: pointer; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.8rem; font-weight: 700; color: #3C315B; letter-spacing: 0.02em; transition: background-color 0.18s ease, border-color 0.18s ease;">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" style="flex-shrink:0;"><circle cx="12" cy="12" r="9" stroke="#6155F1" stroke-width="1.75"/><path d="M12 3c-2.5 2.5-4 5.5-4 9s1.5 6.5 4 9M12 3c2.5 2.5 4 5.5 4 9s-1.5 6.5-4 9M3 12h18" stroke="#6155F1" stroke-width="1.5" stroke-linecap="round"/></svg>
           <span style="color:#6155F1;">{lang.toUpperCase()}</span>
           <svg width="10" height="10" viewBox="0 0 16 16" fill="none" class="dropdown-chevron" style="transition: transform 0.2s ease;"><path d="M4 6l4 4 4-4" stroke="#6155F1" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </button>
         <div class="nav-dropdown-menu" style="display: none; position: absolute; top: calc(100% + 8px); right: 0; left: auto; transform: none; background: #fff; border-radius: 12px; box-shadow: 0 8px 28px rgba(97,85,241,0.16), 0 2px 8px rgba(0,0,0,0.07); padding: 0.375rem; min-width: 140px; z-index: 300; border: 1px solid rgba(97,85,241,0.12);">
-          <!-- Current language (active) -->
           <a href={`/${lang}/`} style="display: flex; align-items: center; gap: 0.625rem; padding: 0.55rem 0.75rem; border-radius: 8px; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.84rem; font-weight: 700; color: #6155F1; text-decoration: none; background: #F0EEFF;">
             <span style="font-size: 1rem; line-height:1;">{currentMeta.flag}</span>
             {currentMeta.label}
             <svg width="12" height="12" viewBox="0 0 16 16" fill="none" style="margin-left:auto;"><path d="M3 8h10M9 4l4 4-4 4" stroke="#6155F1" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
-          <!-- Other languages -->
           {otherLangs.map(l => (
             <a href={`/${l}/`} style="display: flex; align-items: center; gap: 0.625rem; padding: 0.55rem 0.75rem; border-radius: 8px; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.84rem; font-weight: 500; color: #3C315B; text-decoration: none; transition: background-color 0.15s ease, color 0.15s ease;" onmouseover="this.style.background='#F5F2FF';this.style.color='#6155F1'" onmouseout="this.style.background='transparent';this.style.color='#3C315B'">
               <span style="font-size: 1rem; line-height:1;">{LANG_META[l].flag}</span>
@@ -80,46 +78,124 @@ const otherLangs = SUPPORTED_LANGS.filter(l => l !== lang);
         </div>
       </div>
 
-      <a href="https://www.aitokenking.com.tw/home" class="btn-primary" style="font-size: 0.85rem; padding: 0.5rem 1.125rem;" target="_blank" rel="noopener noreferrer">
+      <a href="https://www.aitokenking.com.tw/home" class="btn-primary desktop-nav" style="font-size: 0.85rem; padding: 0.5rem 1.125rem; display: inline-flex;" target="_blank" rel="noopener noreferrer">
         {t('nav.getStarted')}
         <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </a>
     </div>
 
-    <button style="display: none; background: none; border: none; cursor: pointer; padding: 0.5rem;" aria-label="Menu" id="mobile-menu-btn">
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M3 6h18M3 12h18M3 18h18" stroke="#3C315B" stroke-width="2" stroke-linecap="round"/></svg>
+    <button
+      style="display: none; background: none; border: none; cursor: pointer; padding: 0.5rem; min-width: 44px; min-height: 44px; align-items: center; justify-content: center; border-radius: 8px; transition: background-color 0.18s ease;"
+      aria-label="Toggle mobile menu"
+      aria-expanded="false"
+      id="mobile-menu-btn">
+      <svg id="icon-menu" width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M3 6h18M3 12h18M3 18h18" stroke="#3C315B" stroke-width="2" stroke-linecap="round"/></svg>
+      <svg id="icon-close" width="22" height="22" viewBox="0 0 24 24" fill="none" hidden><path d="M6 6l12 12M6 18L18 6" stroke="#3C315B" stroke-width="2" stroke-linecap="round"/></svg>
     </button>
   </div>
 </header>
 
+<!-- Mobile navigation panel (visible only at < 1024px via CSS) -->
+<div class="mobile-nav-panel" id="mobile-nav-panel" aria-hidden="true">
+
+  <div class="mobile-nav-section">{t('nav.resources')}</div>
+  <a href={`/${lang}/ai-trends`} class={`mobile-nav-link${activePage === 'ai-trends' ? ' active' : ''}`}>{t('nav.aiTrends')}</a>
+  <a href={`/${lang}/user-guide`} class={`mobile-nav-link${activePage === 'user-guide' ? ' active' : ''}`}>{t('nav.userGuide')}</a>
+  <a href={`/${lang}/compliance`} class={`mobile-nav-link${activePage === 'compliance' ? ' active' : ''}`}>{t('nav.compliance')}</a>
+  <a href={`/${lang}/token-calculator`} class={`mobile-nav-link${activePage === 'token-calculator' ? ' active' : ''}`}>{t('nav.tokenCalculator')}</a>
+
+  <div style="height: 1px; background: rgba(97,85,241,0.12); margin: 0.75rem 1rem;"></div>
+
+  <a href={`/${lang}/api-compare`} class={`mobile-nav-link${activePage === 'api-compare' ? ' active' : ''}`}>{t('nav.compareModels')}</a>
+  <a href={`/${lang}/use-cases`} class={`mobile-nav-link${activePage === 'use-cases' ? ' active' : ''}`}>{t('nav.useCases')}</a>
+  <a href={`/${lang}/beginners-guide`} class={`mobile-nav-link${activePage === 'beginners-guide' ? ' active' : ''}`}>{t('nav.beginnersGuide')}</a>
+  <a href={`/${lang}/blog`} class={`mobile-nav-link${activePage === 'blog' ? ' active' : ''}`}>{t('nav.blog')}</a>
+  <a href="https://www.aitokenking.com.tw/docs" class="mobile-nav-link" target="_blank" rel="noopener noreferrer">{t('nav.documentation')}</a>
+
+  <div style="height: 1px; background: rgba(97,85,241,0.12); margin: 1rem 1rem 0.75rem;"></div>
+
+  <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; padding: 0 1rem 1rem;">
+    {SUPPORTED_LANGS.map(l => (
+      <a
+        href={`/${l}/`}
+        style={`display: flex; align-items: center; gap: 0.375rem; padding: 0.5rem 0.875rem; border-radius: 10px; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.85rem; font-weight: ${l === lang ? '700' : '500'}; color: ${l === lang ? '#6155F1' : '#3C315B'}; background: ${l === lang ? '#F0EEFF' : 'rgba(97,85,241,0.05)'}; border: 1.5px solid ${l === lang ? 'rgba(97,85,241,0.25)' : 'transparent'}; text-decoration: none;`}>
+        <span style="font-size: 1rem;">{LANG_META[l].flag}</span>
+        {LANG_META[l].label}
+      </a>
+    ))}
+  </div>
+
+  <div style="padding: 0 1rem;">
+    <a href="https://www.aitokenking.com.tw/home" class="btn-primary" style="width: 100%; justify-content: center;" target="_blank" rel="noopener noreferrer">
+      {t('nav.getStarted')}
+      <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+  </div>
+</div>
+
 <script>
-  document.querySelectorAll('.nav-dropdown').forEach(dropdown => {
-    const btn = dropdown.querySelector('.nav-dropdown-btn');
-    const menu = dropdown.querySelector('.nav-dropdown-menu');
-    const chevron = dropdown.querySelector('.dropdown-chevron');
+  // Desktop dropdowns
+  document.querySelectorAll<HTMLElement>('.nav-dropdown').forEach(dropdown => {
+    const btn = dropdown.querySelector<HTMLElement>('.nav-dropdown-btn');
+    const menu = dropdown.querySelector<HTMLElement>('.nav-dropdown-menu');
+    const chevron = dropdown.querySelector<HTMLElement>('.dropdown-chevron');
+    if (!btn || !menu) return;
     btn.addEventListener('click', (e) => {
       e.stopPropagation();
       const isOpen = menu.style.display === 'block';
-      document.querySelectorAll('.nav-dropdown-menu').forEach(m => m.style.display = 'none');
-      document.querySelectorAll('.dropdown-chevron').forEach(c => c.style.transform = 'rotate(0deg)');
+      document.querySelectorAll<HTMLElement>('.nav-dropdown-menu').forEach(m => m.style.display = 'none');
+      document.querySelectorAll<HTMLElement>('.dropdown-chevron').forEach(c => c.style.transform = 'rotate(0deg)');
       document.querySelectorAll('.nav-dropdown-btn').forEach(b => b.setAttribute('aria-expanded', 'false'));
       if (!isOpen) {
         menu.style.display = 'block';
-        chevron.style.transform = 'rotate(180deg)';
+        if (chevron) chevron.style.transform = 'rotate(180deg)';
         btn.setAttribute('aria-expanded', 'true');
       }
     });
   });
   document.addEventListener('click', () => {
-    document.querySelectorAll('.nav-dropdown-menu').forEach(m => m.style.display = 'none');
-    document.querySelectorAll('.dropdown-chevron').forEach(c => c.style.transform = 'rotate(0deg)');
+    document.querySelectorAll<HTMLElement>('.nav-dropdown-menu').forEach(m => m.style.display = 'none');
+    document.querySelectorAll<HTMLElement>('.dropdown-chevron').forEach(c => c.style.transform = 'rotate(0deg)');
     document.querySelectorAll('.nav-dropdown-btn').forEach(b => b.setAttribute('aria-expanded', 'false'));
   });
+
+  // Mobile nav drawer
   const menuBtn = document.getElementById('mobile-menu-btn');
-  if (menuBtn) {
-    menuBtn.addEventListener('click', () => {
-      const nav = document.querySelector('.desktop-nav');
-      if (nav) nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+  const mobilePanel = document.getElementById('mobile-nav-panel');
+  const iconMenu = document.getElementById('icon-menu');
+  const iconClose = document.getElementById('icon-close');
+
+  function closeMobileNav() {
+    mobilePanel?.classList.remove('is-open');
+    mobilePanel?.setAttribute('aria-hidden', 'true');
+    menuBtn?.setAttribute('aria-expanded', 'false');
+    iconMenu?.removeAttribute('hidden');
+    iconClose?.setAttribute('hidden', '');
+    document.body.style.overflow = '';
+  }
+
+  if (menuBtn && mobilePanel) {
+    menuBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const isOpen = mobilePanel.classList.contains('is-open');
+      if (isOpen) {
+        closeMobileNav();
+      } else {
+        mobilePanel.classList.add('is-open');
+        mobilePanel.setAttribute('aria-hidden', 'false');
+        menuBtn.setAttribute('aria-expanded', 'true');
+        iconMenu?.setAttribute('hidden', '');
+        iconClose?.removeAttribute('hidden');
+        document.body.style.overflow = 'hidden';
+      }
+    });
+
+    mobilePanel.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', closeMobileNav);
     });
   }
+
+  window.addEventListener('resize', () => {
+    if (window.innerWidth >= 1024) closeMobileNav();
+  });
 </script>

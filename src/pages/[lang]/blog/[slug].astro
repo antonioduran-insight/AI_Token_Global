@@ -59,7 +59,7 @@ const postUrl = `${siteOrigin}/${lang}/blog/${post.slug.current}`;
 >
 
   <!-- Reading progress bar -->
-  <div id="progress-bar" style="position: fixed; top: 64px; left: 0; height: 3px; width: 0%; background: linear-gradient(90deg, #6155F1, #3E81E5); z-index: 99; transition: width 0.1s linear;"></div>
+  <div id="progress-bar" style="position: fixed; top: 64px; left: 0; height: 3px; width: 100%; background: linear-gradient(90deg, #6155F1, #3E81E5); z-index: 99; transform: scaleX(0); transform-origin: left; transition: transform 0.1s linear;"></div>
 
   <!-- Hero -->
   <section class="hero-bg" style="padding: 3.5rem 1.5rem 3rem;">
@@ -177,7 +177,7 @@ const postUrl = `${siteOrigin}/${lang}/blog/${post.slug.current}`;
     window.addEventListener('scroll', () => {
       const doc = document.documentElement;
       const scrolled = doc.scrollTop / (doc.scrollHeight - doc.clientHeight);
-      bar.style.width = (scrolled * 100) + '%';
+      bar.style.transform = 'scaleX(' + scrolled + ')';
     });
   }
 

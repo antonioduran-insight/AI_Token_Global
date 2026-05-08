@@ -46,6 +46,21 @@
 - **Spacing:** Use intentional, consistent spacing tokens — not random Tailwind steps.
 - **Depth:** Surfaces should have a layering system (base → elevated → floating), not all sit at the same z-plane.
 
+## Responsive System (Astro project)
+- **Dev server for Astro:** `npm run dev` → `http://localhost:4321` (or next available port)
+- **Screenshots:** `node screenshot.mjs http://localhost:4321/en/page label`
+- **Breakpoints** (defined in `src/styles/global.css`):
+  - `1024px` — mobile nav switches to desktop nav
+  - `900px` — grid layouts collapse
+  - `640px` — single-column, footer stacks
+- **Mobile nav:** use `.mobile-nav-panel` + `.is-open` class toggle (JS in `Nav.astro`). Never toggle `.desktop-nav` visibility via JS.
+- **Only animate `transform` and `opacity`.** Never `transition: width`, `transition: max-height`, or `transition-all`.
+- **FAQ accordion:** use `.faq-answer` / `.faq-answer.open` classes + `window.toggleFaq()`. No `max-height` transitions.
+- **Progress bar:** use `transform: scaleX()` + `transform-origin: left`, not `width`.
+- **Footer breakpoints** are in `global.css` only (900px → 1fr 1fr, 640px → 1fr). Do not add scoped `<style>` to Footer.astro.
+- **`prefers-reduced-motion`** block is in `global.css`. All new animations must be covered there.
+- **Font loading:** Google Fonts loaded via `<link>` in `BaseLayout.astro` only. No `@import` in CSS files.
+
 ## Hard Rules
 - Do not add sections, features, or content not in the reference
 - Do not "improve" a reference design — match it

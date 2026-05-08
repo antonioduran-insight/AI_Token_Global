@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+/* Google Fonts loaded via <link> preconnect in BaseLayout.astro */
 
 * { box-sizing: border-box; }
 
@@ -51,6 +51,7 @@ body::before {
 }
 .dropdown-item:hover { background-color: #F5F2FF; color: #6155F1; }
 .dropdown-item:focus-visible { outline: 2px solid #6155F1; outline-offset: 2px; }
+.dropdown-item:active { background-color: #E2DFFE; color: #6155F1; }
 
 /* ── Buttons ── */
 .btn-primary {
@@ -252,10 +253,12 @@ body::before {
 }
 .faq-question:hover { color: #6155F1; }
 .faq-question:focus-visible { outline: 2px solid #6155F1; outline-offset: 2px; }
+.faq-question:active { background: rgba(97,85,241,0.05); border-radius: 8px; }
 .faq-chevron { transition: transform 0.25s cubic-bezier(.22,1,.36,1); flex-shrink: 0; }
 .faq-chevron.open { transform: rotate(180deg); }
 .faq-answer { display: none; padding-bottom: 1.25rem; font-size: 0.9rem; line-height: 1.75; color: #555; }
-.faq-answer.open { display: block; }
+.faq-answer.open { display: block; animation: faqReveal 0.22s cubic-bezier(.22,1,.36,1) both; }
+@keyframes faqReveal { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: translateY(0); } }
 
 /* ── Stat number ── */
 .stat-number { font-family: 'Kanit', sans-serif; font-size: 1.75rem; font-weight: 800; letter-spacing: -0.03em; }
@@ -272,10 +275,54 @@ body::before {
 .fade-up-3 { animation-delay: 0.24s; }
 .fade-up-4 { animation-delay: 0.32s; }
 
+/* ── Mobile nav panel ── */
+.mobile-nav-panel {
+  display: none; /* block only on mobile via media query below */
+  position: fixed;
+  inset: 0;
+  top: 64px;
+  background: rgba(245,242,255,0.97);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  z-index: 99;
+  padding: 1.25rem 1rem 2rem;
+  overflow-y: auto;
+  opacity: 0;
+  transform: translateY(-12px);
+  pointer-events: none;
+  transition: opacity 0.22s ease, transform 0.22s cubic-bezier(.22,1,.36,1);
+}
+.mobile-nav-section {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #999;
+  padding: 0.75rem 1rem 0.25rem;
+}
+.mobile-nav-link {
+  display: block;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #3C315B;
+  text-decoration: none;
+  padding: 0.875rem 1rem;
+  border-radius: 12px;
+  transition: background-color 0.18s ease, color 0.18s ease;
+}
+.mobile-nav-link:hover { background-color: #E2DFFE; color: #6155F1; }
+.mobile-nav-link:focus-visible { outline: 2px solid #6155F1; outline-offset: 2px; }
+.mobile-nav-link:active { background-color: #d0cbfd; color: #6155F1; }
+.mobile-nav-link.active { color: #6155F1; background-color: #F0EEFF; }
+
 /* ── Responsive ── */
 @media (max-width: 1023px) {
   .desktop-nav { display: none !important; }
   #mobile-menu-btn { display: flex !important; }
+  .mobile-nav-panel { display: block; }
+  .mobile-nav-panel.is-open { opacity: 1; transform: translateY(0); pointer-events: auto; }
 }
 @media (max-width: 900px) {
   .hero-grid { grid-template-columns: 1fr !important; }
@@ -302,3 +349,20 @@ body::before {
 .prose code { background: #F5F2FF; color: #6155F1; padding: 0.15em 0.4em; border-radius: 5px; font-size: 0.875em; }
 .prose pre { background: #1C1C1C; color: #e2e8f0; padding: 1.25rem; border-radius: 12px; overflow-x: auto; margin-bottom: 1.25rem; }
 .prose blockquote { border-left: 3px solid #6155F1; padding-left: 1.25rem; margin: 1.5rem 0; color: #555; font-style: italic; }
+
+/* ── Reduced motion ── */
+@media (prefers-reduced-motion: reduce) {
+  .fade-up, .fade-up-1, .fade-up-2, .fade-up-3, .fade-up-4 {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .faq-answer.open { animation: none; }
+  .mobile-nav-panel { transition: none; }
+  .blob-1, .blob-2, .blob-3, .blob-4, .blob-5 { animation: none; }
+}
