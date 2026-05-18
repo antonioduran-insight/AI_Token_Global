@@ -68,7 +68,7 @@ const seoDesc  = page.seo?.seoDescription ?? page.heroSubtitle ?? '';
 
       <div class="section-label fade-up" style="margin: 0 auto 1.25rem; background: rgba(255,255,255,0.12); color: rgba(255,255,255,0.9); border: 1px solid rgba(255,255,255,0.2);">
         <svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M3 12h18M3 6h18M3 18h12" stroke="rgba(255,255,255,0.8)" stroke-width="1.75" stroke-linecap="round"/></svg>
-        Model Reference
+        {t('apiCompare.sectionLabel')}
       </div>
 
       <h1 class="fade-up fade-up-1" style="font-family: 'Kanit', sans-serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 800; color: #fff; letter-spacing: -0.04em; line-height: 1.1; margin-bottom: 1rem;">
@@ -131,7 +131,7 @@ const seoDesc  = page.seo?.seoDescription ?? page.heroSubtitle ?? '';
           {page.pricingCalloutBody && <p style="font-size: 0.9rem; color: #555; line-height: 1.6; margin: 0; max-width: 520px;">{page.pricingCalloutBody}</p>}
         </div>
         <a href="https://www.aitokenking.com.tw/home" class="btn-primary" target="_blank" rel="noopener noreferrer">
-          {page.pricingCalloutCta ?? 'View Live Pricing'}
+          {page.pricingCalloutCta ?? t('apiCompare.viewLivePricingFallback')}
           <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
       </div>
@@ -144,14 +144,14 @@ const seoDesc  = page.seo?.seoDescription ?? page.heroSubtitle ?? '';
     <!-- Text Models -->
     {page.textModels && page.textModels.length > 0 && (
       <section id="text-models" class="reveal">
-        <h2 class="compare-section-title">{page.textModelsTitle ?? 'Text Models'}</h2>
+        <h2 class="compare-section-title">{page.textModelsTitle ?? t('apiCompare.textModelsFallback')}</h2>
         {page.textModelsSubtitle && <p style="font-size: 0.925rem; color: #666; margin-bottom: 1.5rem; line-height: 1.6;">{page.textModelsSubtitle}</p>}
         <div class="card-elevated" style="overflow: hidden; padding: 0;">
           <table class="compare-table" style="width: 100%; border-collapse: collapse;">
             <thead>
               <tr>
-                <th style="width: 30%;">Model Name</th>
-                <th>Best For / Use Case</th>
+                <th style="width: 30%;">{t('apiCompare.tableColModelName')}</th>
+                <th>{t('apiCompare.tableColBestFor')}</th>
               </tr>
             </thead>
             <tbody>
@@ -170,14 +170,14 @@ const seoDesc  = page.seo?.seoDescription ?? page.heroSubtitle ?? '';
     <!-- Image Models -->
     {page.imageModels && page.imageModels.length > 0 && (
       <section id="image-models" class="reveal">
-        <h2 class="compare-section-title">{page.imageModelsTitle ?? 'Image Models'}</h2>
+        <h2 class="compare-section-title">{page.imageModelsTitle ?? t('apiCompare.imageModelsFallback')}</h2>
         {page.imageModelsSubtitle && <p style="font-size: 0.925rem; color: #666; margin-bottom: 1.5rem; line-height: 1.6;">{page.imageModelsSubtitle}</p>}
         <div class="card-elevated" style="overflow: hidden; padding: 0;">
           <table class="compare-table" style="width: 100%; border-collapse: collapse;">
             <thead>
               <tr>
-                <th style="width: 30%;">Model Name</th>
-                <th>Best For / Use Case</th>
+                <th style="width: 30%;">{t('apiCompare.tableColModelName')}</th>
+                <th>{t('apiCompare.tableColBestFor')}</th>
               </tr>
             </thead>
             <tbody>
@@ -196,14 +196,14 @@ const seoDesc  = page.seo?.seoDescription ?? page.heroSubtitle ?? '';
     <!-- Video Models -->
     {page.videoModels && page.videoModels.length > 0 && (
       <section id="video-models" class="reveal">
-        <h2 class="compare-section-title">{page.videoModelsTitle ?? 'Video Models'}</h2>
+        <h2 class="compare-section-title">{page.videoModelsTitle ?? t('apiCompare.videoModelsFallback')}</h2>
         {page.videoModelsSubtitle && <p style="font-size: 0.925rem; color: #666; margin-bottom: 1.5rem; line-height: 1.6;">{page.videoModelsSubtitle}</p>}
         <div class="card-elevated" style="overflow: hidden; padding: 0;">
           <table class="compare-table" style="width: 100%; border-collapse: collapse;">
             <thead>
               <tr>
-                <th style="width: 30%;">Model Name</th>
-                <th>Best For / Use Case</th>
+                <th style="width: 30%;">{t('apiCompare.tableColModelName')}</th>
+                <th>{t('apiCompare.tableColBestFor')}</th>
               </tr>
             </thead>
             <tbody>
@@ -225,7 +225,7 @@ const seoDesc  = page.seo?.seoDescription ?? page.heroSubtitle ?? '';
   {page.faq && page.faq.length > 0 && (
     <section style="padding: 3.5rem 1.5rem; background: #fff;">
       <div style="max-width: 800px; margin: 0 auto;">
-        <h2 class="compare-section-title reveal" style="text-align: center; margin-bottom: 2rem;">{page.faqTitle ?? 'Common Questions About Model Types'}</h2>
+        <h2 class="compare-section-title reveal" style="text-align: center; margin-bottom: 2rem;">{page.faqTitle ?? t('apiCompare.faqFallback')}</h2>
         {page.faq.map(item => (
           <div class="faq-item">
             <button class="faq-question" onclick="window.toggleFaq(this)">
@@ -254,8 +254,8 @@ const seoDesc  = page.seo?.seoDescription ?? page.heroSubtitle ?? '';
         <h3 style="font-family: 'Kanit', sans-serif; font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 800; color: #fff; letter-spacing: -0.03em; margin-bottom: 0.875rem;">{page.ctaHeadline}</h3>
         {page.ctaBody && <p style="font-size: 0.975rem; color: rgba(255,255,255,0.75); line-height: 1.65; margin-bottom: 1.75rem;">{page.ctaBody}</p>}
         <div style="display: flex; gap: 0.875rem; justify-content: center; flex-wrap: wrap;">
-          <a href="https://www.aitokenking.com.tw/home" class="btn-primary" target="_blank" rel="noopener noreferrer">View Pricing Table</a>
-          <a href={`/${lang}/`} class="btn-secondary" style="color: #fff; border-color: rgba(255,255,255,0.4);">Back to Home</a>
+          <a href="https://www.aitokenking.com.tw/home" class="btn-primary" target="_blank" rel="noopener noreferrer">{t('apiCompare.viewPricingTableBtn')}</a>
+          <a href={`/${lang}/`} class="btn-secondary" style="color: #fff; border-color: rgba(255,255,255,0.4);">{t('apiCompare.backToHomeBtn')}</a>
         </div>
       </div>
     </section>

@@ -41,7 +41,7 @@ const faqs: FaqItem[] = page?.faq ?? [];
 const faqTitle  = page?.faqTitle    ?? t('home.faqCommonLabel');
 const faqSubtitle = page?.faqSubtitle ?? '';
 
-const seoTitle = page?.seo?.seoTitle ?? 'AI Token King — Your AI Knowledge Hub';
+const seoTitle = page?.seo?.seoTitle ?? t('home.seoTitleFallback');
 const seoDesc  = page?.seo?.seoDescription ?? t('meta.defaultDescription');
 const noindex  = page?.seo?.noindex ?? false;
 ---
@@ -117,9 +117,9 @@ const noindex  = page?.seo?.noindex ?? false;
             <table style="width: 100%; border-collapse: collapse; font-size: 0.8rem;">
               <thead>
                 <tr style="background: #FAFAFE;">
-                  <th style="padding: 0.6rem 0.875rem; text-align: left; font-weight: 700; color: #999; font-size: 0.7rem; letter-spacing: 0.04em; text-transform: uppercase; border-bottom: 1px solid #EDEDEF;">Model</th>
-                  <th style="padding: 0.6rem 0.875rem; text-align: right; font-weight: 700; color: #999; font-size: 0.7rem; letter-spacing: 0.04em; text-transform: uppercase; border-bottom: 1px solid #EDEDEF;">Input</th>
-                  <th style="padding: 0.6rem 0.875rem; text-align: right; font-weight: 700; color: #999; font-size: 0.7rem; letter-spacing: 0.04em; text-transform: uppercase; border-bottom: 1px solid #EDEDEF;">Output</th>
+                  <th style="padding: 0.6rem 0.875rem; text-align: left; font-weight: 700; color: #999; font-size: 0.7rem; letter-spacing: 0.04em; text-transform: uppercase; border-bottom: 1px solid #EDEDEF;">{t('home.tableCellModel')}</th>
+                  <th style="padding: 0.6rem 0.875rem; text-align: right; font-weight: 700; color: #999; font-size: 0.7rem; letter-spacing: 0.04em; text-transform: uppercase; border-bottom: 1px solid #EDEDEF;">{t('home.tableCellInput')}</th>
+                  <th style="padding: 0.6rem 0.875rem; text-align: right; font-weight: 700; color: #999; font-size: 0.7rem; letter-spacing: 0.04em; text-transform: uppercase; border-bottom: 1px solid #EDEDEF;">{t('home.tableCellOutput')}</th>
                 </tr>
               </thead>
               <tbody>
@@ -205,11 +205,11 @@ const noindex  = page?.seo?.noindex ?? false;
           <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem;">
             <div style="background: #F5F2FF; border-radius: 10px; padding: 0.875rem; text-align: center;">
               <div style="font-family: 'Kanit', sans-serif; font-size: 1.5rem; font-weight: 700; color: #6155F1;">12</div>
-              <div style="font-size: 0.75rem; color: #999; margin-top: 0.2rem; font-weight: 500;">Tokens</div>
+              <div style="font-size: 0.75rem; color: #999; margin-top: 0.2rem; font-weight: 500;">{t('home.tokenBreakdownTokensLabel')}</div>
             </div>
             <div style="background: #F5F2FF; border-radius: 10px; padding: 0.875rem; text-align: center;">
               <div style="font-family: 'Kanit', sans-serif; font-size: 1.5rem; font-weight: 700; color: #3E81E5;">~48</div>
-              <div style="font-size: 0.75rem; color: #999; margin-top: 0.2rem; font-weight: 500;">Characters</div>
+              <div style="font-size: 0.75rem; color: #999; margin-top: 0.2rem; font-weight: 500;">{t('home.tokenBreakdownCharsLabel')}</div>
             </div>
           </div>
         </div>
@@ -393,7 +393,7 @@ const noindex  = page?.seo?.noindex ?? false;
       <table class="compare-table" style="width: 100%; border-collapse: collapse;">
         <thead>
           <tr style="background: #FAFAFE;">
-            <th>Model</th><th>Provider</th><th>Context Window</th><th>Input (per 1M tokens)</th><th>Output (per 1M tokens)</th><th>Modality</th>
+            <th>{t('home.compareColModel')}</th><th>{t('home.compareColProvider')}</th><th>{t('home.compareColContext')}</th><th>{t('home.compareColInput')}</th><th>{t('home.compareColOutput')}</th><th>{t('home.compareColModality')}</th>
           </tr>
         </thead>
         <tbody>
@@ -401,37 +401,37 @@ const noindex  = page?.seo?.noindex ?? false;
             <td><strong style="color:#1C1C1C;">GPT-4o</strong></td>
             <td><span style="background:#E8F5E9;color:#2E7D32;font-size:0.75rem;font-weight:600;padding:0.2rem 0.6rem;border-radius:6px;">OpenAI</span></td>
             <td>128K</td><td style="color:#6155F1;font-weight:600;">$2.50</td><td style="color:#3E81E5;font-weight:600;">$10.00</td>
-            <td><span class="tag">Text</span> <span class="tag" style="background:#EBF4FF;color:#3E81E5;">Vision</span></td>
+            <td><span class="tag">{t('home.modalityText')}</span> <span class="tag" style="background:#EBF4FF;color:#3E81E5;">{t('home.modalityVision')}</span></td>
           </tr>
           <tr>
             <td><strong style="color:#1C1C1C;">GPT-4o mini</strong></td>
             <td><span style="background:#E8F5E9;color:#2E7D32;font-size:0.75rem;font-weight:600;padding:0.2rem 0.6rem;border-radius:6px;">OpenAI</span></td>
             <td>128K</td><td style="color:#6155F1;font-weight:600;">$0.15</td><td style="color:#3E81E5;font-weight:600;">$0.60</td>
-            <td><span class="tag">Text</span> <span class="tag" style="background:#EBF4FF;color:#3E81E5;">Vision</span></td>
+            <td><span class="tag">{t('home.modalityText')}</span> <span class="tag" style="background:#EBF4FF;color:#3E81E5;">{t('home.modalityVision')}</span></td>
           </tr>
           <tr>
             <td><strong style="color:#1C1C1C;">Claude 3.5 Sonnet</strong></td>
             <td><span style="background:#F3E5F5;color:#6A1B9A;font-size:0.75rem;font-weight:600;padding:0.2rem 0.6rem;border-radius:6px;">Anthropic</span></td>
             <td>200K</td><td style="color:#6155F1;font-weight:600;">$3.00</td><td style="color:#3E81E5;font-weight:600;">$15.00</td>
-            <td><span class="tag">Text</span> <span class="tag" style="background:#EBF4FF;color:#3E81E5;">Vision</span></td>
+            <td><span class="tag">{t('home.modalityText')}</span> <span class="tag" style="background:#EBF4FF;color:#3E81E5;">{t('home.modalityVision')}</span></td>
           </tr>
           <tr>
             <td><strong style="color:#1C1C1C;">Claude 3 Haiku</strong></td>
             <td><span style="background:#F3E5F5;color:#6A1B9A;font-size:0.75rem;font-weight:600;padding:0.2rem 0.6rem;border-radius:6px;">Anthropic</span></td>
             <td>200K</td><td style="color:#6155F1;font-weight:600;">$0.25</td><td style="color:#3E81E5;font-weight:600;">$1.25</td>
-            <td><span class="tag">Text</span> <span class="tag" style="background:#EBF4FF;color:#3E81E5;">Vision</span></td>
+            <td><span class="tag">{t('home.modalityText')}</span> <span class="tag" style="background:#EBF4FF;color:#3E81E5;">{t('home.modalityVision')}</span></td>
           </tr>
           <tr>
             <td><strong style="color:#1C1C1C;">Gemini 1.5 Pro</strong></td>
             <td><span style="background:#E3F2FD;color:#1565C0;font-size:0.75rem;font-weight:600;padding:0.2rem 0.6rem;border-radius:6px;">Google</span></td>
             <td>1M</td><td style="color:#6155F1;font-weight:600;">$1.25</td><td style="color:#3E81E5;font-weight:600;">$5.00</td>
-            <td><span class="tag">Text</span> <span class="tag" style="background:#EBF4FF;color:#3E81E5;">Vision</span> <span class="tag" style="background:#FFF3E0;color:#E65100;">Audio</span></td>
+            <td><span class="tag">{t('home.modalityText')}</span> <span class="tag" style="background:#EBF4FF;color:#3E81E5;">{t('home.modalityVision')}</span> <span class="tag" style="background:#FFF3E0;color:#E65100;">{t('home.modalityAudio')}</span></td>
           </tr>
           <tr>
             <td><strong style="color:#1C1C1C;">Llama 3.1 405B</strong></td>
             <td><span style="background:#FFF8E1;color:#F57F17;font-size:0.75rem;font-weight:600;padding:0.2rem 0.6rem;border-radius:6px;">Meta</span></td>
             <td>128K</td><td style="color:#6155F1;font-weight:600;">$5.00</td><td style="color:#3E81E5;font-weight:600;">$15.00</td>
-            <td><span class="tag">Text</span></td>
+            <td><span class="tag">{t('home.modalityText')}</span></td>
           </tr>
         </tbody>
       </table>
@@ -536,7 +536,7 @@ const noindex  = page?.seo?.noindex ?? false;
           </p>
           <div style="display: flex; align-items: center; justify-content: space-between;">
             <span style="font-size: 0.78rem; color: #999; font-weight: 500;">8 min read · AI Token King</span>
-            <span style="color: #6155F1; font-size: 0.85rem; font-weight: 600; display: flex; align-items: center; gap: 0.3rem;">Read More <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <span style="color: #6155F1; font-size: 0.85rem; font-weight: 600; display: flex; align-items: center; gap: 0.3rem;">{t('blog.readArticle')} <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
           </div>
         </div>
       </a>

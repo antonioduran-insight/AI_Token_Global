@@ -87,7 +87,7 @@ const CALLOUT_BORDERS = ['rgba(97,85,241,0.2)', 'rgba(62,129,229,0.2)', 'rgba(10
       <!-- Reading Order -->
       {page.readingSteps && page.readingSteps.length > 0 && (
         <section id="reading-order" style="margin-bottom:3.5rem;">
-          <h2 class="section-h2">{page.stepsTitle ?? 'If You\'re New, Read in This Order'}</h2>
+          <h2 class="section-h2">{page.stepsTitle ?? t('beginners.readingOrderFallback')}</h2>
           {page.stepsIntroBody && <div class="prose-article reveal" set:html={pt(page.stepsIntroBody)} />}
           <div style="display:flex;flex-direction:column;gap:1.125rem;margin-top:1.25rem;">
             {page.readingSteps.map((step, i) => (
@@ -111,7 +111,7 @@ const CALLOUT_BORDERS = ['rgba(97,85,241,0.2)', 'rgba(62,129,229,0.2)', 'rgba(10
 
       <!-- Where Beginners Get Stuck -->
       <section id="why-stuck" style="margin-bottom:3.5rem;">
-        <h2 class="section-h2">{page.stuckTitle ?? 'Where Most Beginners Get Stuck'}</h2>
+        <h2 class="section-h2">{page.stuckTitle ?? t('beginners.stuckFallback')}</h2>
         {page.stuckBody && <div class="prose-article reveal" set:html={pt(page.stuckBody)} />}
         {page.stuckCallouts && page.stuckCallouts.length > 0 && (
           <div style="display:grid;grid-template-columns:1fr;gap:1rem;margin-top:1.25rem;">
@@ -128,7 +128,7 @@ const CALLOUT_BORDERS = ['rgba(97,85,241,0.2)', 'rgba(62,129,229,0.2)', 'rgba(10
       <!-- FAQ -->
       {page.faq && page.faq.length > 0 && (
         <section id="faq" style="margin-bottom:3.5rem;">
-          <h2 class="section-h2">{page.faqTitle ?? 'Common Questions'}</h2>
+          <h2 class="section-h2">{page.faqTitle ?? t('beginners.faqFallback')}</h2>
           <div style="background:#fff;border-radius:16px;padding:0.5rem 1.75rem;box-shadow:0 2px 8px rgba(97,85,241,0.07);margin-top:1.25rem;">
             {page.faq.map(item => (
               <div class="faq-item">
@@ -148,7 +148,7 @@ const CALLOUT_BORDERS = ['rgba(97,85,241,0.2)', 'rgba(62,129,229,0.2)', 'rgba(10
       <!-- Recommended Next Reads -->
       {page.nextReads && page.nextReads.length > 0 && (
         <section id="next-reads" style="margin-bottom:3.5rem;">
-          <h2 class="section-h2">{page.nextReadsTitle ?? 'Recommended Next Reads'}</h2>
+          <h2 class="section-h2">{page.nextReadsTitle ?? t('beginners.nextReadsFallback')}</h2>
           {page.nextReadsIntroBody && <div class="prose-article reveal" set:html={pt(page.nextReadsIntroBody)} />}
           <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem;margin-top:1.25rem;" class="reads-grid">
             {page.nextReads.map(read => (
@@ -169,7 +169,7 @@ const CALLOUT_BORDERS = ['rgba(97,85,241,0.2)', 'rgba(62,129,229,0.2)', 'rgba(10
             <h3 style="font-family:'Kanit',sans-serif;font-size:1.4rem;font-weight:800;color:#fff;letter-spacing:-0.03em;margin-bottom:0.75rem;">{page.ctaTitle}</h3>
             {page.ctaBody && <p style="font-size:0.9rem;color:rgba(255,255,255,0.8);line-height:1.7;margin-bottom:1.5rem;max-width:520px;">{page.ctaBody}</p>}
             <a href={`/${lang}/api-compare`} class="btn-primary" style="background:rgba(255,255,255,0.18);box-shadow:none;border:1px solid rgba(255,255,255,0.3);color:#fff;">
-              Compare Models
+              {t('nav.compareModels')}
               <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </a>
           </div>
@@ -183,17 +183,17 @@ const CALLOUT_BORDERS = ['rgba(97,85,241,0.2)', 'rgba(62,129,229,0.2)', 'rgba(10
       <div class="card-elevated" style="padding:1.5rem;margin-bottom:1.25rem;">
         <div style="font-family:'Kanit',sans-serif;font-size:0.75rem;font-weight:700;color:#6155F1;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:1rem;">{t('common.onThisPage')}</div>
         <nav style="display:flex;flex-direction:column;gap:0.125rem;">
-          {page.readingSteps && page.readingSteps.length > 0 && <a href="#reading-order" class="toc-link">{page.stepsTitle ?? 'Reading Order'}</a>}
-          <a href="#why-stuck" class="toc-link">{page.stuckTitle ?? 'Where Beginners Get Stuck'}</a>
-          {page.faq && page.faq.length > 0 && <a href="#faq" class="toc-link">{page.faqTitle ?? 'Common Questions'}</a>}
-          {page.nextReads && page.nextReads.length > 0 && <a href="#next-reads" class="toc-link">{page.nextReadsTitle ?? 'Recommended Next Reads'}</a>}
+          {page.readingSteps && page.readingSteps.length > 0 && <a href="#reading-order" class="toc-link">{page.stepsTitle ?? t('beginners.readingOrderFallback')}</a>}
+          <a href="#why-stuck" class="toc-link">{page.stuckTitle ?? t('beginners.stuckFallback')}</a>
+          {page.faq && page.faq.length > 0 && <a href="#faq" class="toc-link">{page.faqTitle ?? t('beginners.faqFallback')}</a>}
+          {page.nextReads && page.nextReads.length > 0 && <a href="#next-reads" class="toc-link">{page.nextReadsTitle ?? t('beginners.nextReadsFallback')}</a>}
         </nav>
       </div>
       <div style="padding:1.375rem 1.5rem;border-radius:20px;background:linear-gradient(40deg,#2A1F5C,#0D1547);">
-        <div style="font-family:'Kanit',sans-serif;font-size:0.95rem;font-weight:700;color:#fff;margin-bottom:0.625rem;">Compare AI Models</div>
-        <p style="font-size:0.8rem;color:rgba(255,255,255,0.75);line-height:1.6;margin-bottom:1.125rem;">Full live pricing for 60+ text, image, and video models.</p>
+        <div style="font-family:'Kanit',sans-serif;font-size:0.95rem;font-weight:700;color:#fff;margin-bottom:0.625rem;">{t('beginners.sidebarCtaTitle')}</div>
+        <p style="font-size:0.8rem;color:rgba(255,255,255,0.75);line-height:1.6;margin-bottom:1.125rem;">{t('beginners.sidebarCtaBody')}</p>
         <a href={`/${lang}/api-compare`} class="btn-primary" style="font-size:0.8rem;padding:0.5rem 1rem;width:100%;justify-content:center;">
-          Compare Models
+          {t('nav.compareModels')}
           <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
       </div>

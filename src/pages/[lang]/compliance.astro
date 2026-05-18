@@ -88,7 +88,7 @@ const BLOCKER_COLORS  = ['#F43F5E', '#F59E0B', '#6155F1', '#3E81E5', '#0ABFBC', 
 
       <!-- Blockers -->
       <section id="blockers" style="margin-bottom:3.5rem;">
-        <h2 class="section-h2">{page.blockersTitle ?? 'Where Enterprises Get Stuck with AI'}</h2>
+        <h2 class="section-h2">{page.blockersTitle ?? t('compliance.blockersFallback')}</h2>
         {page.blockersIntroBody && <div class="prose-article reveal" set:html={pt(page.blockersIntroBody)} />}
         {page.blockerItems && page.blockerItems.length > 0 && (
           <div style="background:#fff;border-radius:16px;padding:1.75rem;box-shadow:0 2px 10px rgba(97,85,241,0.08);margin-top:1.25rem;">
@@ -111,11 +111,11 @@ const BLOCKER_COLORS  = ['#F43F5E', '#F59E0B', '#6155F1', '#3E81E5', '#0ABFBC', 
             <div style="position:absolute;top:-30px;right:-30px;width:160px;height:160px;border-radius:50%;background:rgba(255,255,255,0.05);"></div>
             <div style="position:absolute;bottom:-50px;left:-10px;width:200px;height:200px;border-radius:50%;background:rgba(255,255,255,0.04);"></div>
             <div style="position:relative;">
-              <div style="font-size:0.72rem;font-weight:700;color:rgba(255,255,255,0.6);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:0.75rem;">Enterprise Proposal</div>
+              <div style="font-size:0.72rem;font-weight:700;color:rgba(255,255,255,0.6);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:0.75rem;">{t('compliance.enterpriseProposalLabel')}</div>
               <h3 style="font-family:'Kanit',sans-serif;font-size:1.4rem;font-weight:800;color:#fff;letter-spacing:-0.03em;margin-bottom:0.75rem;">{page.proposalTitle}</h3>
               {page.proposalBody && <p style="font-size:0.9rem;color:rgba(255,255,255,0.8);line-height:1.7;margin-bottom:1.5rem;max-width:520px;">{page.proposalBody}</p>}
               <a href={page.proposalCtaUrl ?? '#'} class="btn-primary" style="background:rgba(255,255,255,0.18);box-shadow:none;border:1px solid rgba(255,255,255,0.3);color:#fff;">
-                {page.proposalCtaLabel ?? 'View Enterprise Proposal'}
+                {page.proposalCtaLabel ?? t('compliance.proposalCtaFallback')}
                 <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
               </a>
             </div>
@@ -126,7 +126,7 @@ const BLOCKER_COLORS  = ['#F43F5E', '#F59E0B', '#6155F1', '#3E81E5', '#0ABFBC', 
       <!-- Solution Coverage -->
       {page.solutions && page.solutions.length > 0 && (
         <section id="solution" style="margin-bottom:3.5rem;">
-          <h2 class="section-h2">{page.solutionTitle ?? 'What the Solution Covers'}</h2>
+          <h2 class="section-h2">{page.solutionTitle ?? t('compliance.solutionTitleFallback')}</h2>
           <div style="display:flex;flex-direction:column;gap:1.125rem;margin-top:1.125rem;">
             {page.solutions.map((sol, i) => (
               <div class="card-elevated reveal" style={`padding:1.5rem 1.75rem;border-left:4px solid ${SOLUTION_COLORS[i % 5]};`}>
@@ -141,7 +141,7 @@ const BLOCKER_COLORS  = ['#F43F5E', '#F59E0B', '#6155F1', '#3E81E5', '#0ABFBC', 
       <!-- Audience -->
       {page.audienceItems && page.audienceItems.length > 0 && (
         <section id="who" style="margin-bottom:3.5rem;">
-          <h2 class="section-h2">{page.audienceTitle ?? 'Who Is This For?'}</h2>
+          <h2 class="section-h2">{page.audienceTitle ?? t('compliance.audienceFallback')}</h2>
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1.25rem;margin-top:1.125rem;" class="two-col-grid reveal">
             {page.audienceItems.map((a, i) => (
               <div class="card-elevated" style="padding:1.25rem 1.375rem;">
@@ -161,7 +161,7 @@ const BLOCKER_COLORS  = ['#F43F5E', '#F59E0B', '#6155F1', '#3E81E5', '#0ABFBC', 
       <!-- Role -->
       {page.roles && page.roles.length > 0 && (
         <section id="role" style="margin-bottom:3.5rem;">
-          <h2 class="section-h2">{page.roleTitle ?? 'AI Token King\'s Role'}</h2>
+          <h2 class="section-h2">{page.roleTitle ?? t('compliance.roleFallback')}</h2>
           <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem;margin-top:1.125rem;" class="three-col-grid reveal">
             {page.roles.map((role, i) => (
               <div style={`background:linear-gradient(135deg,${ROLE_COLORS[i % 3]}10,${ROLE_COLORS[i % 3]}05);border-radius:14px;padding:1.375rem;border:1px solid ${ROLE_COLORS[i % 3]}20;`}>
@@ -176,7 +176,7 @@ const BLOCKER_COLORS  = ['#F43F5E', '#F59E0B', '#6155F1', '#3E81E5', '#0ABFBC', 
       <!-- FAQ -->
       {page.faq && page.faq.length > 0 && (
         <section id="faq" style="margin-bottom:3.5rem;">
-          <h2 class="section-h2">{page.faqTitle ?? 'Common Questions'}</h2>
+          <h2 class="section-h2">{page.faqTitle ?? t('compliance.faqFallback')}</h2>
           <div style="background:#fff;border-radius:16px;padding:0.5rem 1.75rem;box-shadow:0 2px 8px rgba(97,85,241,0.07);margin-top:1.125rem;">
             {page.faq.map(item => (
               <div class="faq-item">
@@ -200,19 +200,19 @@ const BLOCKER_COLORS  = ['#F43F5E', '#F59E0B', '#6155F1', '#3E81E5', '#0ABFBC', 
       <div class="card-elevated" style="padding:1.5rem;margin-bottom:1.25rem;">
         <div style="font-family:'Kanit',sans-serif;font-size:0.75rem;font-weight:700;color:#6155F1;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:1rem;">{t('common.onThisPage')}</div>
         <nav style="display:flex;flex-direction:column;gap:0.125rem;">
-          <a href="#blockers" class="toc-link">{page.blockersTitle ?? 'Where Enterprises Get Stuck'}</a>
-          {page.proposalTitle && <a href="#proposal" class="toc-link">Enterprise Proposal</a>}
-          {page.solutions && page.solutions.length > 0 && <a href="#solution" class="toc-link">{page.solutionTitle ?? 'What the Solution Covers'}</a>}
-          {page.audienceItems && page.audienceItems.length > 0 && <a href="#who" class="toc-link">{page.audienceTitle ?? 'Who Is This For?'}</a>}
-          {page.roles && page.roles.length > 0 && <a href="#role" class="toc-link">{page.roleTitle ?? 'AI Token King\'s Role'}</a>}
-          {page.faq && page.faq.length > 0 && <a href="#faq" class="toc-link">{page.faqTitle ?? 'Common Questions'}</a>}
+          <a href="#blockers" class="toc-link">{page.blockersTitle ?? t('compliance.blockersFallback')}</a>
+          {page.proposalTitle && <a href="#proposal" class="toc-link">{t('compliance.enterpriseProposalLabel')}</a>}
+          {page.solutions && page.solutions.length > 0 && <a href="#solution" class="toc-link">{page.solutionTitle ?? t('compliance.solutionTitleFallback')}</a>}
+          {page.audienceItems && page.audienceItems.length > 0 && <a href="#who" class="toc-link">{page.audienceTitle ?? t('compliance.audienceFallback')}</a>}
+          {page.roles && page.roles.length > 0 && <a href="#role" class="toc-link">{page.roleTitle ?? t('compliance.roleFallback')}</a>}
+          {page.faq && page.faq.length > 0 && <a href="#faq" class="toc-link">{page.faqTitle ?? t('compliance.faqFallback')}</a>}
         </nav>
       </div>
       <div style="padding:1.375rem 1.5rem;border-radius:20px;background:linear-gradient(135deg,#3E81E5,#6155F1);">
-        <div style="font-family:'Kanit',sans-serif;font-size:1rem;font-weight:700;color:#fff;margin-bottom:0.5rem;">{page.sidebarCtaTitle ?? 'Enterprise Inquiry'}</div>
+        <div style="font-family:'Kanit',sans-serif;font-size:1rem;font-weight:700;color:#fff;margin-bottom:0.5rem;">{page.sidebarCtaTitle ?? t('compliance.sidebarCtaTitleFallback')}</div>
         {page.sidebarCtaBody && <p style="font-size:0.825rem;color:rgba(255,255,255,0.88);line-height:1.6;margin-bottom:1.125rem;">{page.sidebarCtaBody}</p>}
         <a href={page.sidebarCtaUrl ?? '#'} class="btn-primary" style="background:rgba(255,255,255,0.2);box-shadow:none;border:1px solid rgba(255,255,255,0.35);font-size:0.825rem;padding:0.5rem 1rem;width:100%;justify-content:center;">
-          {page.sidebarCtaLabel ?? 'Contact Enterprise Sales'}
+          {page.sidebarCtaLabel ?? t('compliance.sidebarCtaLabelFallback')}
           <svg width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
       </div>

@@ -76,49 +76,52 @@ function pt(blocks: any[] | undefined): string {
         <!-- Input area -->
         <div style="margin-bottom:1.5rem;">
           <label for="textInput" style="display:block;font-family:'Kanit',sans-serif;font-size:1rem;font-weight:700;color:#1C1C1C;margin-bottom:0.75rem;">
-            Paste or type your text below
+            {t('calculator.inputLabel')}
           </label>
           <div style="position:relative;">
             <textarea
               id="textInput"
-              placeholder="Enter your text here..."
+              placeholder={t('calculator.inputPlaceholder')}
               style="width:100%;min-height:160px;padding:1rem 1.125rem;border:1.5px solid rgba(97,85,241,0.2);border-radius:12px;font-family:'Plus Jakarta Sans',sans-serif;font-size:0.95rem;color:#1C1C1C;background:#FAFAFA;resize:vertical;outline:none;transition:border-color 0.18s ease;line-height:1.65;"
               onfocus="this.style.borderColor='#6155F1'" onblur="this.style.borderColor='rgba(97,85,241,0.2)'"
             ></textarea>
-            <div id="charCount" style="position:absolute;bottom:0.625rem;right:0.875rem;font-size:0.75rem;color:#999;">0 characters</div>
+            <div id="charCount"
+              data-initial={t('calculator.charCountInitial')}
+              data-suffix={t('calculator.charCountSuffix')}
+              style="position:absolute;bottom:0.625rem;right:0.875rem;font-size:0.75rem;color:#999;">{t('calculator.charCountInitial')}</div>
           </div>
         </div>
 
         <div style="display:flex;gap:0.75rem;flex-wrap:wrap;margin-bottom:2rem;">
           <button id="calculateBtn" type="button" class="btn-primary" style="flex:1;min-width:140px;justify-content:center;">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M9 7H7a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-2M17 3h4m0 0v4m0-4l-6 6M11 4H4a1 1 0 00-1 1v14a1 1 0 001 1h14a1 1 0 001-1v-7" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            Calculate Tokens
+            {t('calculator.calculateBtn')}
           </button>
           <button id="clearBtn" type="button" style="padding:0.625rem 1.25rem;border-radius:12px;border:1.5px solid rgba(97,85,241,0.2);background:transparent;font-family:'Plus Jakarta Sans',sans-serif;font-size:0.875rem;font-weight:600;color:#666;cursor:pointer;transition:background-color 0.18s ease,color 0.18s ease;" onmouseover="this.style.background='#F5F2FF';this.style.color='#6155F1'" onmouseout="this.style.background='transparent';this.style.color='#666'">
-            Clear
+            {t('calculator.clearBtn')}
           </button>
         </div>
 
         <!-- Results -->
         <div id="results" style="display:none;">
-          <h2 style="font-family:'Kanit',sans-serif;font-size:1.4rem;font-weight:800;color:#1C1C1C;letter-spacing:-0.03em;margin-bottom:1.25rem;">Estimation Results</h2>
+          <h2 style="font-family:'Kanit',sans-serif;font-size:1.4rem;font-weight:800;color:#1C1C1C;letter-spacing:-0.03em;margin-bottom:1.25rem;">{t('calculator.resultsHeading')}</h2>
 
           <!-- Summary banner -->
           <div id="resultSummary" style="background:linear-gradient(135deg,rgba(97,85,241,0.08),rgba(62,129,229,0.06));border:1px solid rgba(97,85,241,0.15);border-radius:14px;padding:1.25rem 1.5rem;margin-bottom:1.5rem;display:flex;flex-wrap:wrap;gap:1.25rem 2rem;">
             <div>
-              <div style="font-size:0.72rem;font-weight:700;color:#6155F1;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.25rem;">Chinese Chars</div>
+              <div style="font-size:0.72rem;font-weight:700;color:#6155F1;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.25rem;">{t('calculator.chineseCharsLabel')}</div>
               <div id="chineseCount" style="font-family:'Kanit',sans-serif;font-size:2rem;font-weight:700;color:#1C1C1C;letter-spacing:-0.03em;">0</div>
             </div>
             <div>
-              <div style="font-size:0.72rem;font-weight:700;color:#3E81E5;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.25rem;">English Words</div>
+              <div style="font-size:0.72rem;font-weight:700;color:#3E81E5;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.25rem;">{t('calculator.englishWordsLabel')}</div>
               <div id="englishCount" style="font-family:'Kanit',sans-serif;font-size:2rem;font-weight:700;color:#1C1C1C;letter-spacing:-0.03em;">0</div>
             </div>
             <div>
-              <div style="font-size:0.72rem;font-weight:700;color:#0ABFBC;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.25rem;">Symbols</div>
+              <div style="font-size:0.72rem;font-weight:700;color:#0ABFBC;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.25rem;">{t('calculator.symbolsLabel')}</div>
               <div id="symbolCount" style="font-family:'Kanit',sans-serif;font-size:2rem;font-weight:700;color:#1C1C1C;letter-spacing:-0.03em;">0</div>
             </div>
             <div style="border-left:2px solid rgba(97,85,241,0.15);padding-left:2rem;">
-              <div style="font-size:0.72rem;font-weight:700;color:#6155F1;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.25rem;">Est. Input Tokens</div>
+              <div style="font-size:0.72rem;font-weight:700;color:#6155F1;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.25rem;">{t('calculator.estInputTokensLabel')}</div>
               <div id="inputToken" style="font-family:'Kanit',sans-serif;font-size:2rem;font-weight:700;color:#6155F1;letter-spacing:-0.03em;">0</div>
             </div>
           </div>
@@ -133,7 +136,7 @@ function pt(blocks: any[] | undefined): string {
                 </div>
                 <span style="font-family:'Kanit',sans-serif;font-size:0.875rem;font-weight:700;color:#1C1C1C;">OpenAI GPT-4o</span>
               </div>
-              <div style="font-size:0.72rem;color:#999;margin-bottom:0.25rem;">$2.50 / 1M tokens (input)</div>
+              <div style="font-size:0.72rem;color:#999;margin-bottom:0.25rem;">{t('calculator.priceNoteOpenai')}</div>
               <div id="openaiCost" style="font-family:'Kanit',sans-serif;font-size:1.5rem;font-weight:700;color:#1C1C1C;letter-spacing:-0.02em;">$0.000000</div>
             </div>
 
@@ -144,7 +147,7 @@ function pt(blocks: any[] | undefined): string {
                 </div>
                 <span style="font-family:'Kanit',sans-serif;font-size:0.875rem;font-weight:700;color:#1C1C1C;">Claude 3.5 Sonnet</span>
               </div>
-              <div style="font-size:0.72rem;color:#999;margin-bottom:0.25rem;">$3.00 / 1M tokens (input)</div>
+              <div style="font-size:0.72rem;color:#999;margin-bottom:0.25rem;">{t('calculator.priceNoteClaude')}</div>
               <div id="claudeCost" style="font-family:'Kanit',sans-serif;font-size:1.5rem;font-weight:700;color:#1C1C1C;letter-spacing:-0.02em;">$0.000000</div>
             </div>
 
@@ -155,14 +158,14 @@ function pt(blocks: any[] | undefined): string {
                 </div>
                 <span style="font-family:'Kanit',sans-serif;font-size:0.875rem;font-weight:700;color:#1C1C1C;">Gemini 1.5 Pro</span>
               </div>
-              <div style="font-size:0.72rem;color:#999;margin-bottom:0.25rem;">$1.25 / 1M tokens (input)</div>
+              <div style="font-size:0.72rem;color:#999;margin-bottom:0.25rem;">{t('calculator.priceNoteGemini')}</div>
               <div id="geminiCost" style="font-family:'Kanit',sans-serif;font-size:1.5rem;font-weight:700;color:#1C1C1C;letter-spacing:-0.02em;">$0.000000</div>
             </div>
 
           </div>
 
           <p style="font-size:0.78rem;color:#999;margin-top:1rem;line-height:1.6;">
-            * Estimates only. Actual token counts may vary by model tokenizer. Prices are approximate and subject to change — verify at each provider's pricing page.
+            {t('calculator.disclaimer')}
           </p>
         </div>
 
@@ -178,7 +181,7 @@ function pt(blocks: any[] | undefined): string {
           <div class="section-label reveal" style="margin-bottom:1rem;">{page.faqSectionLabel}</div>
         )}
         <h2 class="reveal" style="font-family:'Kanit',sans-serif;font-size:2rem;font-weight:800;color:#1C1C1C;letter-spacing:-0.04em;line-height:1.15;margin-bottom:1rem;">
-          {page.faqTitle ?? 'About the Token Calculator'}
+          {page.faqTitle ?? t('calculator.faqFallback')}
         </h2>
         {page.faqIntro && <p class="reveal" style="font-size:0.95rem;color:#555;line-height:1.75;margin-bottom:1.5rem;">{page.faqIntro}</p>}
         <div style="background:#fff;border-radius:16px;padding:0.5rem 1.75rem;box-shadow:0 2px 8px rgba(97,85,241,0.07);">
@@ -208,7 +211,7 @@ function pt(blocks: any[] | undefined): string {
             <h3 style="font-family:'Kanit',sans-serif;font-size:1.4rem;font-weight:800;color:#fff;letter-spacing:-0.03em;margin-bottom:0.75rem;">{page.ctaTitle}</h3>
             {page.ctaBody && <p style="font-size:0.9rem;color:rgba(255,255,255,0.8);line-height:1.7;margin-bottom:1.5rem;max-width:520px;">{page.ctaBody}</p>}
             <a href={`/${lang}/api-compare`} class="btn-primary" style="background:rgba(255,255,255,0.18);box-shadow:none;border:1px solid rgba(255,255,255,0.3);color:#fff;">
-              Compare Models
+              {t('nav.compareModels')}
               <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </a>
           </div>
@@ -235,14 +238,16 @@ function pt(blocks: any[] | undefined): string {
   /* Character counter */
   const textarea = document.getElementById('textInput');
   const charCountEl = document.getElementById('charCount');
+  var charSuffix = charCountEl.dataset.suffix || ' characters';
+  var charInitial = charCountEl.dataset.initial || '0 characters';
   textarea.addEventListener('input', function() {
-    charCountEl.textContent = this.value.length + ' characters';
+    charCountEl.textContent = this.value.length + charSuffix;
   });
 
   /* Clear */
   document.getElementById('clearBtn').addEventListener('click', function() {
     textarea.value = '';
-    charCountEl.textContent = '0 characters';
+    charCountEl.textContent = charInitial;
     document.getElementById('results').style.display = 'none';
   });
 

@@ -72,14 +72,14 @@ const seoDesc  = page.seo?.seoDescription ?? page.heroSubtitle ?? '';
       <nav style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1.5rem; font-size: 0.8rem; color: rgba(255,255,255,0.5);" aria-label="Breadcrumb">
         <a href={`/${lang}/`} style="color: rgba(255,255,255,0.5); text-decoration: none; transition: color 0.15s ease;" onmouseover="this.style.color='rgba(255,255,255,0.9)'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">{t('common.home')}</a>
         <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        <a href={`/${lang}/api-compare`} style="color: rgba(255,255,255,0.5); text-decoration: none; transition: color 0.15s ease;" onmouseover="this.style.color='rgba(255,255,255,0.9)'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">Compare Models</a>
+        <a href={`/${lang}/api-compare`} style="color: rgba(255,255,255,0.5); text-decoration: none; transition: color 0.15s ease;" onmouseover="this.style.color='rgba(255,255,255,0.9)'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">{t('nav.compareModels')}</a>
         <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         <span style="color: rgba(255,255,255,0.8);">{page.heroHeadline}</span>
       </nav>
 
       <div class="section-label fade-up" style="margin-bottom: 1.25rem; background: rgba(255,255,255,0.12); color: rgba(255,255,255,0.9); border: 1px solid rgba(255,255,255,0.2);">
         <svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="rgba(255,255,255,0.8)"/></svg>
-        API Guide
+        {t('apiModel.sectionLabel')}
       </div>
 
       <h1 class="fade-up fade-up-1" style="font-family: 'Kanit', sans-serif; font-size: clamp(1.875rem, 4vw, 2.75rem); font-weight: 800; color: #fff; letter-spacing: -0.04em; line-height: 1.1; margin-bottom: 1rem;">
@@ -131,12 +131,12 @@ const seoDesc  = page.seo?.seoDescription ?? page.heroSubtitle ?? '';
             <div class="pricing-ref card-elevated reveal" style="margin-top: 1.5rem; padding: 1.5rem 1.75rem;">
               <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem;">
                 <div style="width: 8px; height: 8px; border-radius: 50%; background: #6155F1; flex-shrink: 0;"></div>
-                <span style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: #6155F1;">Pricing Reference</span>
+                <span style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: #6155F1;">{t('apiModel.pricingReferenceLabel')}</span>
               </div>
               <div class="prose-article" set:html={pt(page.pricingReference)} />
               <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid #EDEDEF;">
                 <a href={`/${lang}/api-compare`} style="font-size: 0.85rem; color: #6155F1; text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 0.3rem; transition: gap 0.18s ease;">
-                  View full model comparison
+                  {t('apiModel.viewFullComparison')}
                   <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </a>
               </div>
@@ -164,7 +164,7 @@ const seoDesc  = page.seo?.seoDescription ?? page.heroSubtitle ?? '';
       <!-- Further Reading -->
       {page.furtherReading && page.furtherReading.length > 0 && (
         <section id="further-reading" class="reveal" style="margin-top: 2.5rem;">
-          <h2 class="article-h2">{page.furtherReadingTitle ?? 'Further Reading'}</h2>
+          <h2 class="article-h2">{page.furtherReadingTitle ?? t('apiModel.furtherReadingFallback')}</h2>
           <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 0.5rem; margin-top: 1rem;">
             {page.furtherReading.map(link => (
               <li>
@@ -186,7 +186,7 @@ const seoDesc  = page.seo?.seoDescription ?? page.heroSubtitle ?? '';
       <!-- FAQ -->
       {page.faq && page.faq.length > 0 && (
         <section id="faq" class="reveal" style="margin-top: 2.5rem;">
-          <h2 class="article-h2">{page.faqTitle ?? 'Common Questions'}</h2>
+          <h2 class="article-h2">{page.faqTitle ?? t('apiModel.faqFallback')}</h2>
           <div style="margin-top: 1.25rem;">
             {page.faq.map(item => (
               <div class="faq-item">
@@ -210,31 +210,31 @@ const seoDesc  = page.seo?.seoDescription ?? page.heroSubtitle ?? '';
 
       <!-- On This Page TOC -->
       <div class="card-elevated" style="padding: 1.375rem 1.5rem;">
-        <div style="font-family: 'Kanit', sans-serif; font-size: 0.875rem; font-weight: 700; color: #1C1C1C; letter-spacing: 0.01em; margin-bottom: 1rem;">On This Page</div>
+        <div style="font-family: 'Kanit', sans-serif; font-size: 0.875rem; font-weight: 700; color: #1C1C1C; letter-spacing: 0.01em; margin-bottom: 1rem;">{t('common.onThisPage')}</div>
         <nav style="display: flex; flex-direction: column; gap: 0.125rem;">
           {page.whatIsTitle && <a href="#what-is" class="toc-link">{page.whatIsTitle}</a>}
           {page.useCasesTitle && <a href="#use-cases" class="toc-link">{page.useCasesTitle}</a>}
           {page.pricingTitle && <a href="#pricing" class="toc-link">{page.pricingTitle}</a>}
           {page.uniqueSectionTitle && <a href="#unique-section" class="toc-link">{page.uniqueSectionTitle}</a>}
           {page.comparingTitle && <a href="#comparing" class="toc-link">{page.comparingTitle}</a>}
-          {(page.furtherReading?.length ?? 0) > 0 && <a href="#further-reading" class="toc-link">{page.furtherReadingTitle ?? 'Further Reading'}</a>}
-          {(page.faq?.length ?? 0) > 0 && <a href="#faq" class="toc-link">{page.faqTitle ?? 'Common Questions'}</a>}
+          {(page.furtherReading?.length ?? 0) > 0 && <a href="#further-reading" class="toc-link">{page.furtherReadingTitle ?? t('apiModel.furtherReadingFallback')}</a>}
+          {(page.faq?.length ?? 0) > 0 && <a href="#faq" class="toc-link">{page.faqTitle ?? t('apiModel.faqFallback')}</a>}
         </nav>
       </div>
 
       <!-- Compare All Models CTA -->
       <div style={`padding: 1.375rem 1.5rem; border-radius: 20px; background: ${hero.bg};`}>
-        <div style="font-family: 'Kanit', sans-serif; font-size: 0.95rem; font-weight: 700; color: #fff; margin-bottom: 0.625rem;">Compare All Models</div>
-        <p style="font-size: 0.8rem; color: rgba(255,255,255,0.75); line-height: 1.6; margin-bottom: 1.125rem;">Full live pricing for 60+ text, image, and video models.</p>
+        <div style="font-family: 'Kanit', sans-serif; font-size: 0.95rem; font-weight: 700; color: #fff; margin-bottom: 0.625rem;">{t('apiModel.compareAllModelsTitle')}</div>
+        <p style="font-size: 0.8rem; color: rgba(255,255,255,0.75); line-height: 1.6; margin-bottom: 1.125rem;">{t('apiModel.compareAllModelsBody')}</p>
         <a href={`/${lang}/api-compare`} class="btn-primary" style="font-size: 0.8rem; padding: 0.5rem 1rem; width: 100%; justify-content: center;">
-          View All Models
+          {t('apiModel.viewAllModelsBtn')}
           <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
       </div>
 
       <!-- Also Compare -->
       <div class="card-elevated" style="padding: 1.375rem 1.5rem;">
-        <div style="font-family: 'Kanit', sans-serif; font-size: 0.875rem; font-weight: 700; color: #1C1C1C; margin-bottom: 0.875rem;">Also Compare</div>
+        <div style="font-family: 'Kanit', sans-serif; font-size: 0.875rem; font-weight: 700; color: #1C1C1C; margin-bottom: 0.875rem;">{t('apiModel.alsoCompareTitle')}</div>
         <div style="display: flex; flex-direction: column; gap: 0.5rem;">
           {alsoCompare.map(m => (
             <a href={m.path} style="display: flex; align-items: center; justify-content: space-between; padding: 0.625rem 0.875rem; border-radius: 10px; background: #F5F2FF; font-size: 0.875rem; font-weight: 600; color: #3C315B; text-decoration: none; transition: background-color 0.18s ease, color 0.18s ease;" onmouseover="this.style.background='#E2DFFE';this.style.color='#6155F1'" onmouseout="this.style.background='#F5F2FF';this.style.color='#3C315B'">
