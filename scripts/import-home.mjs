@@ -35,6 +35,15 @@ const doc = {
     { _key: key(), _type: 'heroStat', statNumber: 'Free', statLabel: 'Always & Forever' },
   ],
 
+  // ── Token explainer ──────────────────────────────────────────────────
+  tokenBody2: [block([
+    span('Every API call you make is billed in tokens: '),
+    span('input tokens', ['strong']),
+    span(' (what you send) and '),
+    span('output tokens', ['strong']),
+    span(' (what the model generates). Mastering token math is essential for anyone building with AI.'),
+  ])],
+
   // ── FAQ ─────────────────────────────────────────────────────────────
   faqTitle:    'Frequently Asked Questions',
   faqSubtitle: "Everything you've been wondering about AI tokens, APIs, and costs — answered.",
@@ -88,5 +97,5 @@ const doc = {
 mkdirSync(dirname(OUTPUT_PATH), { recursive: true });
 writeFileSync(OUTPUT_PATH, JSON.stringify(doc) + '\n');
 console.log(`✓ Wrote ${OUTPUT_PATH}`);
-console.log(`  hero stats: ${doc.heroStats.length} | FAQ items: ${doc.faq.length}`);
+console.log(`  hero stats: ${doc.heroStats.length} | FAQ items: ${doc.faq.length} | tokenBody2: ✓`);
 console.log(`\nImport: cd studio && npx sanity dataset import ../${OUTPUT_PATH} production --replace`);
