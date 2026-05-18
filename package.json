@@ -10,7 +10,8 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "studio": "cd studio && npx sanity dev"
+    "studio": "cd studio && npx sanity dev",
+    "setup": "npm install && cd studio && npm install"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.2",
