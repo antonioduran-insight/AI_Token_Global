@@ -15,6 +15,7 @@ After any code change, before the change is reported as complete to the user.
 - [ ] No edits inside `dist/`, `node_modules/`, or other generated/vendored folders.
 - [ ] If the change touched a file mentioned in `CLAUDE.md`, that rule is still being followed.
 - [ ] `npm run check` (or the project's equivalent) passes.
+- [ ] If the change adds a new entry point (page, route, endpoint, or feature module), verify it is reachable from the project's navigation, routing registry, or index. An entry point with no path to reach it is a defect, not a draft.
 
 ## Output format
 Reply with either:
