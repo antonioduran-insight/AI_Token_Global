@@ -170,16 +170,16 @@ If this command fails (non-zero exit code), note the error. Continue to the repo
 ## Step 9 — Write the report
 
 ```bash
-mkdir -p translation/reports/<docType>
+mkdir -p translation/reports/<docType>/<targetLang>
 ```
 
 Then write a Markdown report to:
 
 ```
-translation/reports/<docType>/<TIMESTAMP>.md
+translation/reports/<docType>/<targetLang>/<TIMESTAMP>.md
 ```
 
-Note: use `<docType>` (the bare _type) as the folder name, not `<base>`. Reports for `apiModelPage-chatgpt`, `apiModelPage-claude`, etc. all live under `translation/reports/apiModelPage/`.
+Note: `<docType>` is the bare _type (no variant suffix). Reports for `apiModelPage-chatgpt`, `apiModelPage-claude`, etc. for the same target language all live under the same folder (e.g. `translation/reports/apiModelPage/id/`). Different target languages get their own subfolders side by side.
 
 Use this format. **CRITICAL** about the `Target language` line:
 
@@ -217,7 +217,17 @@ Use this format. **CRITICAL** about the `Target language` line:
 <Any patterns you noticed, recurring decisions, or things the proofreader should pay attention to. Brief.>
 ```
 
-## Step 10 — Return a chat summary
+## Step 10 — Clean up intermediate files
+
+After a successful Sanity import, remove the two intermediate JSON files used during the rebuild step — their data is now persisted in the final `-<targetLang>.ndjson` file. The source `-en.ndjson` and final `-<targetLang>.ndjson` stay (they're useful for proofreading later).
+
+```bash
+rm translation/results/<base>-strings-en.json translation/results/<base>-strings-<targetLang>.json
+```
+
+If the import step failed, **skip this cleanup** — keep the intermediate files for debugging.
+
+## Step 11 — Return a chat summary
 
 End by returning a concise message. Include:
 
@@ -225,7 +235,21 @@ End by returning a concise message. Include:
 - Number of strings translated
 - Number of judgment calls and flagged items
 - Full path to the report file
-- Reminder to proofread in Sanity Studio after reviewing the report
+- **Next-step prompt for `@proofreader`** — copy-paste ready
+
+The next-step prompt should be a single code block the user can grab and run in a fresh chat. Match the variant filter and language code from this run. Examples:
+
+For a no-variant doc:
+```
+Spawn the @proofreader agent on <docType> with target language <targetLang>.
+```
+
+For a variant doc:
+```
+Spawn the @proofreader agent on <docType> with target language <targetLang>. Variant: <field>=<value>.
+```
+
+After the proofreader runs, the user will then open Sanity Studio for the final human review. Mention this briefly so they know the chain: translate → proofread → human review.
 
 ## Hard constraints
 
