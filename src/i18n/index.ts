@@ -1,15 +1,17 @@
 import en from './en.json';
 import es from './es.json';
+import id from './id.json';
 
-export const SUPPORTED_LANGS = ['en', 'es'] as const;
+export const SUPPORTED_LANGS = ['en', 'es', 'id'] as const;
 export type Lang = typeof SUPPORTED_LANGS[number];
 
 export const LANG_META: Record<Lang, { flag: string; label: string; locale: string }> = {
   en: { flag: '🇺🇸', label: 'English', locale: 'en-US' },
   es: { flag: '🇪🇸', label: 'Español', locale: 'es-ES' },
+  id: { flag: '🇮🇩', label: 'Bahasa Indonesia', locale: 'id-ID' },
 };
 
-const translations = { en, es };
+const translations = { en, es, id };
 
 export function useTranslations(lang: Lang) {
   const dict = translations[lang];

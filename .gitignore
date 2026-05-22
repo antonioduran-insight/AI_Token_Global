@@ -33,6 +33,9 @@ scripts/data/articles-batch-*.json
 # defensive: prevent stray bare git clones from being committed if they ever land in the working tree
 *.git/
 
+# translation pipeline (intern: fetched English + translated output + reports)
+translation/
+
 # personal notes (intern) — keep most of Levinson/ private
 Levinson/*
 !Levinson/proposals/
