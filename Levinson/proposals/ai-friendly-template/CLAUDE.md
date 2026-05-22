@@ -29,7 +29,7 @@
 ## When You Make Changes
 <!-- One bullet per update rule. Each rule tells an agent what to update besides the code they just touched. The point is to keep the docs in this file (and SUMMARY/ADRs) from drifting out of sync with reality. -->
 - **Update `SUMMARY.md`** when [what kind of state change triggers an update — e.g., completing a milestone, fixing a known issue, adopting or changing an architectural decision (new dependency, switched tooling, deploy host changed), shipping a new feature].
-- **Update `CLAUDE.md` itself** when [what kind of change triggers a self-update — e.g., paths, commands, or conventions referenced in this file have moved or been renamed, or when any Hard Rule or Gotcha in this file becomes false, or when a new project-wide convention is introduced].
+- **Update `CLAUDE.md` itself** when [what kind of change triggers a self-update — e.g., something in this file no longer matches reality: paths, commands, or named files move; a Hard Rule or Gotcha listed here becomes false; or a new project-wide convention is introduced that future agents need to follow].
 - **Update `README.md`** when [what kind of change triggers a README update — e.g., the dev/build/verify commands change, the dev-server port changes, ownership changes, or the one-sentence project description changes].
 - **Write an ADR in `docs/decisions/`** when [what kind of decision deserves an ADR — e.g., adopting a new dependency, switching a tool, locking in an architectural pattern].
 - **Run `[verify command, e.g. npm run check && npm run build]`** before reporting any change as complete.
