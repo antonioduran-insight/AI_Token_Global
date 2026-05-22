@@ -1,0 +1,22 @@
+# [TEMPLATE] Drop this file at the repo root. Add or remove patterns as your stack requires.
+
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+build/
+
+# Environment variables — never commit real secrets
+.env
+.env.local
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Personal notes
+# Replace "Levinson/" with whatever folder name you use for working
+# notes inside this repo. Anything personal/local should be ignored
+# so it doesn't end up in the shared git history.
+Levinson/

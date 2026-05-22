@@ -33,5 +33,9 @@ scripts/data/articles-batch-*.json
 # defensive: prevent stray bare git clones from being committed if they ever land in the working tree
 *.git/
 
-# personal notes (intern)
-Levinson/
+# personal notes (intern) — keep most of Levinson/ private
+Levinson/*
+!Levinson/proposals/
+Levinson/proposals/*
+!Levinson/proposals/ai-friendly-template/
+!Levinson/proposals/ai-friendly-template/**

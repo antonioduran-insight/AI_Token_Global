@@ -1,0 +1,17 @@
+# [TEMPLATE] Drop this file at the repo root. Most editors pick it up automatically
+# and apply these settings without any plugin install. Keeps line endings,
+# indentation, and whitespace consistent across contributors and AI agents.
+
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+indent_style = space
+indent_size = 2
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+[*.md]
+# Markdown sometimes uses trailing spaces for hard line breaks — don't strip them.
+trim_trailing_whitespace = false
