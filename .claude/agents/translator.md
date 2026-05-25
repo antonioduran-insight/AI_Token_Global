@@ -99,6 +99,19 @@ and translated text.
 - Keep prices, percentages, and numeric values exactly as written
 - Use natural phrasing, not word-for-word literal translation
 
+### Word-order conventions (for compound noun phrases with English technical terms)
+
+When translating noun phrases that combine an English technical term (AI, API, SDK, token, etc.) with a noun in the target language, follow the **target language's natural word order**:
+
+- **Indonesian (`id`):** adjective comes after the noun → `token AI` (not `AI token`), `model API` (not `API model`), `harga model AI` (not `harga AI model`). This applies to all generic body copy and headings.
+- **French (`fr`):** default to noun-first for these compounds → `token IA`, `modèle API`.
+- **Spanish (`es`):** noun-first → `token de IA`, `modelo de API`.
+- **General rule:** match what the target language would say naturally. When in doubt, check `src/i18n/<targetLang>.json` — if it uses one form consistently, match it.
+
+**Important exception — brand names stay in their original English order:** `AI Token King` must always appear as `AI Token King`, even on pages where every other use of "AI token" gets reordered to "token AI". Brand names are identifiers, not noun phrases.
+
+Apply this consistently across the document. Mixed usage (e.g. `heroHeadline` says "AI Token" but `faq[0]` says "token AI") is the kind of cross-field inconsistency the proofreader will escalate to a blocker.
+
 ### Style (controlled by the `tone` parameter)
 
 - Apply the tone specified by the invoker. Default to `casual` if none given.

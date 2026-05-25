@@ -24,7 +24,9 @@ const SKIP_KEYS = new Set([
   'language',
   // identifiers / enums / colors / numbers stored as strings
   'modelSlug', 'heroAccent', 'icon', 'anchorId', 'accentColor',
-  'statNumber', 'stepNumber',
+  // Note: statNumber and stepNumber are NOT skipped here — values like "60+",
+  // "1M", "200K" are filtered by isNonText() (the number regex), while word
+  // values like "Free" / "Gratis" remain eligible for translation.
   // URLs
   'url', 'linkUrl', 'proposalCtaUrl', 'sidebarCtaUrl', 'ctaUrl',
   // Portable Text structural fields
