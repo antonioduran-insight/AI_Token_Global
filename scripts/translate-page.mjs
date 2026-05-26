@@ -56,6 +56,13 @@ function collectStrings(obj, path = []) {
 
   if (Array.isArray(obj)) {
     obj.forEach((item, i) => {
+      // Plain string element (e.g. summaryPoints: ['...', '...']) —
+      // recurse won't pick it up because neither branch of the next
+      // call handles primitives, so handle it here.
+      if (typeof item === 'string' && !isNonText(item)) {
+        strings.push(item); paths.push([...path, i]);
+        return;
+      }
       const { strings: s, paths: p } = collectStrings(item, [...path, i]);
       strings.push(...s); paths.push(...p);
     });

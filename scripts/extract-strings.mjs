@@ -48,7 +48,16 @@ function isNonText(val) {
 
 function collectStrings(obj, path = [], out = []) {
   if (Array.isArray(obj)) {
-    obj.forEach((item, i) => collectStrings(item, [...path, i], out));
+    obj.forEach((item, i) => {
+      // Plain string element (e.g. summaryPoints: ['...', '...']) —
+      // recurse won't pick it up because the next call hits the
+      // `typeof !== 'object'` early-return, so handle it here.
+      if (typeof item === 'string') {
+        if (!isNonText(item)) out.push({ path: [...path, i], text: item });
+        return;
+      }
+      collectStrings(item, [...path, i], out);
+    });
     return out;
   }
   if (obj === null || typeof obj !== 'object') return out;
