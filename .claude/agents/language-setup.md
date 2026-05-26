@@ -1,6 +1,6 @@
 ---
 name: language-setup
-description: Bootstraps a new language for the AI Token Global multilingual site. Updates Sanity Studio's language schema, updates the Astro i18n config, creates the UI translation JSON file (src/i18n/<lang>.json) by translating from en.json, verifies the build still works, and outputs ready-to-paste prompts for the @translator agent (one per content schema). Invoke once per new language with the language metadata.
+description: Bootstraps a new language for the AI Token Global multilingual site, OR catches up an existing language with keys added to en.json after the initial setup. Updates Sanity Studio's language schema, updates the Astro i18n config, creates or updates the UI translation JSON file (src/i18n/<lang>.json) by translating from en.json, verifies the build still works, and outputs ready-to-paste prompts for the @translator agent (one per content schema). Invoke per new language to bootstrap; re-invoke on an existing language to fill in missing keys without touching existing translations.
 tools: Read, Write, Edit, Bash
 model: sonnet
 color: green
@@ -40,14 +40,37 @@ For each piece of work in steps 2–4, determine whether it's already done.
 "Already done" is a valid outcome — record it in the report and skip the
 work. Never duplicate entries.
 
-## Step 2 — Create src/i18n/<langCode>.json
+## Step 2 — Create or update src/i18n/<langCode>.json
 
-If the file already exists, skip this step (note "already exists" in the
-report) and do not overwrite.
+This step has two modes:
 
-Otherwise, read `src/i18n/en.json`. Build a parallel JSON object with the
-identical structure (same keys, same nesting), translating every string
-value to the target language.
+### Mode A — BOOTSTRAP (file does NOT exist)
+
+Read `src/i18n/en.json`. Build a parallel JSON object with the identical
+structure (same keys, same nesting), translating every string value to the
+target language.
+
+### Mode B — UPDATE (file ALREADY exists)
+
+The language was set up previously but `en.json` has gained new keys since.
+Catch up those missing keys WITHOUT touching existing translations.
+
+1. Read both `src/i18n/en.json` and `src/i18n/<langCode>.json`.
+2. Flatten both to dotted-key form (e.g. `home.readMore`) so nested objects
+   are compared correctly.
+3. Find keys present in `en.json` but missing in `<langCode>.json`.
+4. If zero keys are missing, note "already in sync" in the report and skip
+   to step 3.
+5. Otherwise, translate ONLY the missing English values using the
+   Translation rules below.
+6. Merge the new translations into the existing `<langCode>.json`,
+   preserving nesting and key order from `en.json` (so the structure
+   mirrors English). Do NOT modify or re-translate any key that already
+   existed in the target file.
+7. Write the updated file back with 2-space indentation.
+
+Record in the report: number of missing keys translated, plus the list of
+key paths that were added.
 
 ### Translation rules
 
@@ -174,7 +197,7 @@ Use this format:
 ## Steps performed
 
 - `studio/config/languages.ts`: added / already done, skipped
-- `src/i18n/<langCode>.json`: created (<N> strings translated) / already exists, skipped
+- `src/i18n/<langCode>.json`: created (<N> strings translated) / updated (<N> missing keys filled in) / already in sync, skipped
 - `src/i18n/index.ts`:
     - import added / already done
     - SUPPORTED_LANGS updated / already done
