@@ -23,7 +23,7 @@ const ANTHROPIC_KEY  = process.env.ANTHROPIC_API_KEY ?? process.env.AI_TOKEN_KIN
 const API_BASE_URL   = process.env.AI_TOKEN_KING_KEY
   ? 'https://api.aitokenking.com.tw/api'
   : 'https://api.anthropic.com';
-const LANG_NAMES     = { es: 'Spanish (Latin American)', fr: 'French', de: 'German', ja: 'Japanese', zh: 'Traditional Chinese (Taiwan)' };
+const LANG_NAMES     = { es: 'Spanish (Latin American)', id: 'Indonesian', fr: 'French', de: 'German', ja: 'Japanese', zh: 'Traditional Chinese (Taiwan)' };
 
 // ── Keys that are NEVER translated ─────────────────────────────────────
 // Sanity internal fields, slugs, identifiers, URLs, colors, enums

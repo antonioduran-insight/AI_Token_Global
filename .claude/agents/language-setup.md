@@ -29,14 +29,15 @@ destructive. Don't guess flags or locales.
 
 ## Step 1 — Detect existing state (read before write)
 
-Read all three files that will be touched:
+Read all files that will be touched:
 
 - `studio/config/languages.ts`
 - `src/i18n/index.ts`
 - `src/i18n/<langCode>.json` (check existence — it may not exist)
 - `src/i18n/en.json` (the source for translation)
+- `scripts/translate-page.mjs` (for the LANG_NAMES map)
 
-For each piece of work in steps 2–4, determine whether it's already done.
+For each piece of work in steps 2–4.5, determine whether it's already done.
 "Already done" is a valid outcome — record it in the report and skip the
 work. Never duplicate entries.
 
@@ -113,9 +114,14 @@ Preserve existing entries and surrounding formatting exactly.
 
 ## Step 4 — Update src/i18n/index.ts
 
-Four sub-edits within one file. For each, check if already done before
-applying. Use the Edit tool with precise `old_string` matches so that
-already-applied edits fail safely.
+Four sub-edits within one file. **Read the file first** to see the current
+state — this file grows with each language you add, so the existing
+patterns will not match a hardcoded "2-language" template. Always anchor
+edits to stable structural markers (closing brackets, last existing line)
+rather than to a specific list of language codes.
+
+For each sub-edit: if a quick scan of the file shows `<langCode>` is
+already present in that location, skip — already done.
 
 **(a) Add import at the top**
 
@@ -123,28 +129,60 @@ already-applied edits fail safely.
 import <langCode> from './<langCode>.json';
 ```
 
-(Insert after the existing `import es from './es.json';` line.)
+Insert it as a new line directly **before the line** `export const SUPPORTED_LANGS`.
+This keeps it grouped with the other imports and works regardless of how
+many languages are already imported.
 
 **(b) Add to `SUPPORTED_LANGS`**
 
-Change `['en', 'es'] as const` to `['en', 'es', '<langCode>'] as const`.
+The current array looks like `['en', 'es', ...] as const` with a variable
+number of codes. Use the Edit tool with `old_string` = `] as const;` (this
+is unique to the SUPPORTED_LANGS line — it's the export of that array) and
+`new_string` = `, '<langCode>'] as const;`. This appends the new code
+before the closing bracket, regardless of how many languages already exist.
 
 **(c) Add a `LANG_META` entry**
 
-Inside the `LANG_META` object literal, add (before the closing `}`):
+Inside the `LANG_META` object literal, add (before the closing `};`):
 
 ```typescript
   <langCode>: { flag: '<flag>', label: '<label>', locale: '<locale>' },
 ```
 
+Use the Edit tool with `old_string` anchored to the last existing entry
+plus the `};` line, and `new_string` that re-includes that last entry and
+appends the new one. This handles any number of existing entries.
+
 **(d) Add to the `translations` object**
 
-Change `const translations = { en, es };` to
-`const translations = { en, es, <langCode> };`.
+The current line looks like `const translations = { en, es, ... };` with a
+variable number of codes. Use the Edit tool with `old_string` = ` };`
+chosen from the translations line specifically (you may need to include
+more context to make it unique — e.g. `const translations = {` plus the
+existing tail) and append `, <langCode>` before the closing `}`.
 
 If any sub-edit's `old_string` doesn't match because the change is already
 present, that's "already done" — skip and move on. Do not silently insert
 a duplicate.
+
+## Step 4.5 — Update scripts/translate-page.mjs LANG_NAMES
+
+This script translates Sanity documents to a target language and passes
+the language's English name to Claude in the prompt. If the new language
+code isn't in the `LANG_NAMES` map, the script falls back to using the
+code itself (e.g. "id" instead of "Indonesian"), which hurts translation
+quality.
+
+Locate the line:
+
+```javascript
+const LANG_NAMES     = { es: 'Spanish (Latin American)', id: 'Indonesian', ... };
+```
+
+If `<langCode>` is already in the object, skip. Otherwise, use the Edit
+tool to add `<langCode>: '<English name of the language>'` to the object,
+preferably with a region qualifier where it matters (e.g. `pt: 'Portuguese
+(Brazilian)'`, `zh: 'Traditional Chinese (Taiwan)'`).
 
 ## Step 5 — Verify the build
 
@@ -203,6 +241,7 @@ Use this format:
     - SUPPORTED_LANGS updated / already done
     - LANG_META entry added / already done
     - translations object updated / already done
+- `scripts/translate-page.mjs`: LANG_NAMES updated / already done
 
 ## Translation notes
 
@@ -292,7 +331,9 @@ Send a concise message to the invoker covering:
 - **Order matters.** Create `src/i18n/<langCode>.json` BEFORE modifying
   `src/i18n/index.ts`. Otherwise the new import in index.ts will fail
   because the JSON file doesn't exist, and the build will break.
-- **Don't touch files outside the four listed.** No edits to Astro pages,
+- **Don't touch files outside the five listed** (`studio/config/languages.ts`,
+  `src/i18n/index.ts`, `src/i18n/<langCode>.json`, `src/i18n/en.json` for
+  reading, `scripts/translate-page.mjs`). No edits to Astro pages,
   components, layouts, or anything else.
 - **Stop on build failure.** If `npm run build` fails, stop and report.
   Do not write a success report. Do not proceed.
