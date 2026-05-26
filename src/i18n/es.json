@@ -60,7 +60,8 @@
   "lang": {
     "selectLanguage": "Seleccionar idioma",
     "english": "English",
-    "spanish": "Español"
+    "spanish": "Español",
+    "indonesian": "Bahasa Indonesia"
   },
   "meta": {
     "defaultDescription": "La guía definitiva en español sobre tokens de IA, modelos y APIs. Gratis, siempre."

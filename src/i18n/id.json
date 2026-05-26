@@ -10,7 +10,8 @@
     "beginnersGuide": "Panduan Pemula",
     "blog": "Blog",
     "documentation": "Dokumentasi",
-    "getStarted": "Mulai Sekarang"
+    "getStarted": "Mulai Sekarang",
+    "toggleMobileMenu": "Buka/tutup menu"
   },
   "footer": {
     "tagline": "Pusat referensi terlengkap untuk memahami token AI, model, dan API. Gratis, selamanya.",
@@ -46,7 +47,15 @@
     "tryCopy": "Bandingkan model, hitung biaya, dan kelola penggunaan AI kamu — gratis.",
     "tryButton": "Mulai Sekarang",
     "copyLink": "Salin tautan",
-    "copied": "Tersalin!"
+    "copied": "Tersalin!",
+    "allPosts": "Semua Postingan",
+    "cat.fundamentals": "Dasar-Dasar AI",
+    "cat.compliance": "Kepercayaan & Kepatuhan",
+    "cat.calculation": "Kalkulasi Token",
+    "cat.pricing": "Harga Token",
+    "cat.models": "Perbandingan Model",
+    "cat.platform": "Platform & Alat AI",
+    "cat.tutorials": "Tutorial"
   },
   "lang": {
     "selectLanguage": "Pilih bahasa",
@@ -138,7 +147,23 @@
     "blogLabel": "Artikel Terbaru",
     "blogHeading": "Belajar dari Blog Kami",
     "blogCtaBtn": "Jelajahi Semua Artikel",
-    "faqCommonLabel": "Pertanyaan Umum"
+    "faqCommonLabel": "Pertanyaan Umum",
+    "seoTitleFallback": "AI Token King — Pusat Pengetahuan AI Kamu",
+    "tokenBreakdownTokensLabel": "Token",
+    "tokenBreakdownCharsLabel": "Karakter",
+    "tableCellModel": "Model",
+    "tableCellInput": "Input",
+    "tableCellOutput": "Output",
+    "compareColModel": "Model",
+    "compareColProvider": "Penyedia",
+    "compareColContext": "Context Window",
+    "compareColInput": "Input (per 1M token)",
+    "compareColOutput": "Output (per 1M token)",
+    "compareColModality": "Modalitas",
+    "modalityText": "Teks",
+    "modalityVision": "Visi",
+    "modalityAudio": "Audio",
+    "readMore": "Baca Selengkapnya"
   },
   "aiTrends": {
     "heroLabel": "Pantauan Tren",
@@ -152,6 +177,76 @@
     "related2Meta": "Bandingkan Model →",
     "related3Tag": "Biaya",
     "related3Title": "Berapa Sebenarnya Biaya 1.000 Panggilan API AI?",
-    "related3Meta": "6 menit baca"
+    "related3Meta": "6 menit baca",
+    "faqHeading": "FAQ"
+  },
+  "apiModel": {
+    "sectionLabel": "Panduan API",
+    "pricingReferenceLabel": "Referensi Harga",
+    "viewFullComparison": "Lihat perbandingan model lengkap",
+    "furtherReadingFallback": "Bacaan Lanjutan",
+    "faqFallback": "Pertanyaan Umum",
+    "compareAllModelsTitle": "Bandingkan Semua Model",
+    "compareAllModelsBody": "Harga live lengkap untuk 60+ model teks, gambar, dan video.",
+    "viewAllModelsBtn": "Lihat Semua Model",
+    "alsoCompareTitle": "Bandingkan Juga"
+  },
+  "apiCompare": {
+    "sectionLabel": "Referensi Model",
+    "viewLivePricingFallback": "Lihat Harga Live",
+    "textModelsFallback": "Model Teks",
+    "imageModelsFallback": "Model Gambar",
+    "videoModelsFallback": "Model Video",
+    "tableColModelName": "Nama Model",
+    "tableColBestFor": "Terbaik Untuk / Kasus Penggunaan",
+    "faqFallback": "Pertanyaan Umum tentang Tipe Model",
+    "viewPricingTableBtn": "Lihat Tabel Harga",
+    "backToHomeBtn": "Kembali ke Beranda"
+  },
+  "beginners": {
+    "readingOrderFallback": "Kalau Kamu Baru, Baca Sesuai Urutan Ini",
+    "stuckFallback": "Di Mana Pemula Biasanya Mentok",
+    "faqFallback": "Pertanyaan Umum",
+    "nextReadsFallback": "Bacaan Selanjutnya yang Disarankan",
+    "sidebarCtaTitle": "Bandingkan Model AI",
+    "sidebarCtaBody": "Harga live lengkap untuk 60+ model teks, gambar, dan video."
+  },
+  "calculator": {
+    "inputLabel": "Tempel atau ketik teksmu di bawah ini",
+    "inputPlaceholder": "Masukkan teksmu di sini...",
+    "charCountInitial": "0 karakter",
+    "charCountSuffix": " karakter",
+    "calculateBtn": "Hitung Token",
+    "clearBtn": "Hapus",
+    "resultsHeading": "Hasil Estimasi",
+    "chineseCharsLabel": "Karakter Mandarin",
+    "englishWordsLabel": "Kata Bahasa Inggris",
+    "symbolsLabel": "Simbol",
+    "estInputTokensLabel": "Estimasi Token Input",
+    "priceNoteOpenai": "$2.50 / 1M tokens (input)",
+    "priceNoteClaude": "$3.00 / 1M tokens (input)",
+    "priceNoteGemini": "$1.25 / 1M tokens (input)",
+    "disclaimer": "* Hanya estimasi. Jumlah token aktual bisa berbeda tergantung tokenizer model. Harga bersifat perkiraan dan dapat berubah — selalu cek di halaman harga masing-masing penyedia.",
+    "faqFallback": "Tentang Kalkulator Token"
+  },
+  "compliance": {
+    "blockersFallback": "Di Mana Enterprise Biasanya Tersandung dengan AI",
+    "enterpriseProposalLabel": "Proposal Enterprise",
+    "proposalCtaFallback": "Lihat Proposal Enterprise",
+    "solutionTitleFallback": "Apa yang Dicakup Solusi Ini",
+    "audienceFallback": "Ini untuk Siapa?",
+    "roleFallback": "Peran AI Token King",
+    "faqFallback": "Pertanyaan Umum",
+    "sidebarCtaTitleFallback": "Pertanyaan Enterprise",
+    "sidebarCtaLabelFallback": "Hubungi Tim Penjualan Enterprise"
+  },
+  "userGuide": {
+    "featuresFallback": "Fitur Utama",
+    "modelsFallback": "Model AI yang Didukung",
+    "audienceFallback": "Untuk Siapa Ini?",
+    "gettingStartedFallback": "Cara Mulai",
+    "faqFallback": "Pertanyaan Umum",
+    "sidebarCtaTitle": "Mulai Gratis",
+    "sidebarCtaBody": "Mulai pakai AI Token King untuk mengelola dan mengoptimalkan penggunaan AI kamu."
   }
 }

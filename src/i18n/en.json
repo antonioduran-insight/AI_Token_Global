@@ -60,7 +60,8 @@
   "lang": {
     "selectLanguage": "Select language",
     "english": "English",
-    "spanish": "Español"
+    "spanish": "Español",
+    "indonesian": "Bahasa Indonesia"
   },
   "meta": {
     "defaultDescription": "The definitive English-language guide to AI tokens, models, APIs, and costs."
