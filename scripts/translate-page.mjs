@@ -23,7 +23,7 @@ const ANTHROPIC_KEY  = process.env.ANTHROPIC_API_KEY ?? process.env.AI_TOKEN_KIN
 const API_BASE_URL   = process.env.AI_TOKEN_KING_KEY
   ? 'https://api.aitokenking.com.tw/api'
   : 'https://api.anthropic.com';
-const LANG_NAMES     = { es: 'Spanish (Latin American)', fr: 'French', de: 'German', ja: 'Japanese', zh: 'Traditional Chinese (Taiwan)' };
+const LANG_NAMES     = { es: 'Spanish (Latin American)', id: 'Indonesian', fr: 'French', de: 'German', ja: 'Japanese', zh: 'Traditional Chinese (Taiwan)' };
 
 // ── Keys that are NEVER translated ─────────────────────────────────────
 // Sanity internal fields, slugs, identifiers, URLs, colors, enums
@@ -56,6 +56,13 @@ function collectStrings(obj, path = []) {
 
   if (Array.isArray(obj)) {
     obj.forEach((item, i) => {
+      // Plain string element (e.g. summaryPoints: ['...', '...']) —
+      // recurse won't pick it up because neither branch of the next
+      // call handles primitives, so handle it here.
+      if (typeof item === 'string' && !isNonText(item)) {
+        strings.push(item); paths.push([...path, i]);
+        return;
+      }
       const { strings: s, paths: p } = collectStrings(item, [...path, i]);
       strings.push(...s); paths.push(...p);
     });

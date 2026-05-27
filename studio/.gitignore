@@ -1,0 +1,9 @@
+# dependencies
+node_modules/
+
+# sanity build / runtime output
+.sanity/
+dist/
+
+# logs
+npm-debug.log*

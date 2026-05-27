@@ -10,15 +10,17 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "studio": "cd studio && npx sanity dev"
+    "studio": "cd studio && npx sanity dev",
+    "setup": "npm install && cd studio && npm install"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.2",
     "@portabletext/to-html": "^5.0.2",
     "@sanity/client": "^7.22.0",
-    "astro": "^6.1.10"
+    "astro": "^6.3.3"
   },
   "devDependencies": {
-    "cheerio": "^1.2.0"
+    "cheerio": "^1.2.0",
+    "puppeteer": "^25.0.4"
   }
 }
