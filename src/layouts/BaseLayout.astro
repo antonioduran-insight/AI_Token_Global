@@ -83,6 +83,9 @@ const hreflangs = SUPPORTED_LANGS.map(l => ({
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" />
 
   <!-- Tailwind CDN (defer — full build-step migration is Task #9) -->
+  <!-- Pre-seed window.tailwind so the config assignment below doesn't throw
+       before the deferred CDN script runs. Tailwind CDN reads .config on init. -->
+  <script is:inline>window.tailwind = window.tailwind || {};</script>
   <script defer src="https://cdn.tailwindcss.com" is:inline></script>
   <script is:inline>
     tailwind.config = {
