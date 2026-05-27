@@ -49,13 +49,15 @@
     "copyLink": "Copy link",
     "copied": "Copied!",
     "allPosts": "All Posts",
-    "cat.fundamentals": "AI Fundamentals",
-    "cat.compliance": "Trust & Compliance",
-    "cat.calculation": "Token Calculation",
-    "cat.pricing": "Token Pricing",
-    "cat.models": "Model Comparisons",
-    "cat.platform": "AI Platforms & Tools",
-    "cat.tutorials": "Tutorials"
+    "cat": {
+      "fundamentals": "AI Fundamentals",
+      "compliance": "Trust & Compliance",
+      "calculation": "Token Calculation",
+      "pricing": "Token Pricing",
+      "models": "Model Comparisons",
+      "platform": "AI Platforms & Tools",
+      "tutorials": "Tutorials"
+    }
   },
   "lang": {
     "selectLanguage": "Select language",

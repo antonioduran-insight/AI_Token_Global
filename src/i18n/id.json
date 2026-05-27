@@ -49,13 +49,15 @@
     "copyLink": "Salin tautan",
     "copied": "Tersalin!",
     "allPosts": "Semua Postingan",
-    "cat.fundamentals": "Dasar-Dasar AI",
-    "cat.compliance": "Kepercayaan & Kepatuhan",
-    "cat.calculation": "Kalkulasi Token",
-    "cat.pricing": "Harga Token",
-    "cat.models": "Perbandingan Model",
-    "cat.platform": "Platform & Alat AI",
-    "cat.tutorials": "Tutorial"
+    "cat": {
+      "fundamentals": "Dasar-Dasar AI",
+      "compliance": "Kepercayaan & Kepatuhan",
+      "calculation": "Kalkulasi Token",
+      "pricing": "Harga Token",
+      "models": "Perbandingan Model",
+      "platform": "Platform & Alat AI",
+      "tutorials": "Tutorial"
+    }
   },
   "lang": {
     "selectLanguage": "Pilih bahasa",

@@ -49,13 +49,15 @@
     "copyLink": "Copiar enlace",
     "copied": "¡Copiado!",
     "allPosts": "Todos los artículos",
-    "cat.fundamentals": "Fundamentos de IA",
-    "cat.compliance": "Confianza y Cumplimiento",
-    "cat.calculation": "Cálculo de Tokens",
-    "cat.pricing": "Precios de Tokens",
-    "cat.models": "Comparación de Modelos",
-    "cat.platform": "Plataformas y Herramientas de IA",
-    "cat.tutorials": "Tutoriales"
+    "cat": {
+      "fundamentals": "Fundamentos de IA",
+      "compliance": "Confianza y Cumplimiento",
+      "calculation": "Cálculo de Tokens",
+      "pricing": "Precios de Tokens",
+      "models": "Comparación de Modelos",
+      "platform": "Plataformas y Herramientas de IA",
+      "tutorials": "Tutoriales"
+    }
   },
   "lang": {
     "selectLanguage": "Seleccionar idioma",
