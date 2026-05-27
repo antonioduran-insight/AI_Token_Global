@@ -3,6 +3,13 @@
 ## Always Do First
 - **Invoke the `frontend-design` skill** before writing any frontend code, every session, no exceptions.
 
+## Workflow — Commits, Branches, PRs
+- **One logical change per commit.** Don't bundle multiple unrelated fixes into a single commit. If the message has "and" or two scopes, split it.
+- **Branch per topic, off latest main.** Start every new piece of work with `git checkout main && git pull && git checkout -b <your-handle>/<short-topic>`. Avoid accumulating mixed work on a single long-lived branch.
+- **Use `gh` CLI for PRs.** `gh pr create --title "..." --body "..."`. Don't create `PR_DRAFT.md` files or other markdown helpers as workarounds when `gh` isn't installed — install it (`winget install GitHub.cli` on Windows) and authenticate (`gh auth login`) once, then it works forever.
+- **PR description format:** Summary (one sentence) → What's in this PR (grouped by purpose, not commit order) → Why (motivation, not just the change) → How to test (explicit commands) → Risks / notes (proactive flagging).
+- **Updating an existing PR:** push more commits to the same branch — the PR auto-updates. Never close and re-open a PR for the same work.
+
 ## Reference Images
 - If a reference image is provided: match layout, spacing, typography, and color exactly. Swap in placeholder content (images via `https://placehold.co/`, generic copy). Do not improve or add to the design.
 - If no reference image: design from scratch with high craft (see guardrails below).
