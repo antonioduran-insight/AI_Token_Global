@@ -96,7 +96,7 @@ const AUDIENCE_ICONS = [
           {page?.heroHeadline}
         </h1>
         {page?.heroSubtitle && (
-          <p class="fade-up fade-up-2" style="font-size:1.05rem;line-height:1.75;color:rgba(255,255,255,0.85);font-weight:500;max-width:640px;margin-bottom:0.625rem;">
+          <p class="fade-up fade-up-2" style="font-size:1.05rem;line-height:1.75;color:rgba(255,255,255,0.7);max-width:640px;margin-bottom:0.625rem;">
             {page.heroSubtitle}
           </p>
         )}
@@ -246,17 +246,9 @@ const AUDIENCE_ICONS = [
       <div style="margin-bottom:2rem;">
         <div style="font-size:0.85rem;font-weight:700;color:#3C315B;margin-bottom:0.875rem;letter-spacing:0.02em;text-transform:uppercase;font-family:'Kanit',sans-serif;">{t('aiTrends.sourcesDownloadLabel')}</div>
         {page?.downloadTitle && (
-          <a href={page.downloadUrl ?? '#'} class="cta-download">
-            <div class="cta-download-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3" stroke="#6155F1" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </div>
-            <div class="cta-download-text">
-              <div class="cta-download-title">{page.downloadTitle}</div>
-              {page.downloadMeta && <div class="cta-download-meta">{page.downloadMeta}</div>}
-            </div>
-            <div class="cta-download-arrow">
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="#6155F1" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </div>
+          <a href={page.downloadUrl ?? '#'} class="btn-download">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            {page.downloadTitle}{page.downloadMeta ? ` (${page.downloadMeta})` : ''}
           </a>
         )}
       </div>
@@ -310,7 +302,7 @@ const AUDIENCE_ICONS = [
 <style>
   .breadcrumb-link:hover { color: rgba(255,255,255,0.9) !important; }
 
-  :global(.hero-subtitle2 p) { font-size: 0.925rem; line-height: 1.7; color: rgba(255,255,255,0.7); font-weight: 500; max-width: 600px; margin: 0; }
+  :global(.hero-subtitle2 p) { font-size: 0.925rem; line-height: 1.7; color: rgba(255,255,255,0.5); max-width: 600px; margin: 0; }
 
   :global(.prose-intro p)  { font-size: 0.95rem; line-height: 1.8; color: #555; margin-bottom: 1.25rem; }
   :global(.prose-intro p:last-child) { margin-bottom: 0; }
@@ -334,26 +326,25 @@ const AUDIENCE_ICONS = [
   .icon-box { width: 44px; height: 44px; border-radius: 12px; background: #F5F2FF; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
   .tag { display: inline-block; background: #F5F2FF; color: #6155F1; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.04em; padding: 0.2rem 0.55rem; border-radius: 6px; text-transform: uppercase; }
 
-  .cta-download {
-    display: flex;
+  .btn-download {
+    display: inline-flex;
     align-items: center;
-    gap: 1rem;
-    background: #fff;
-    border: 1.5px solid #D4CFFE;
-    border-radius: 14px;
-    padding: 1.125rem 1.25rem;
+    gap: 0.625rem;
+    background: #F5F2FF;
+    color: #3C315B;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.875rem;
+    font-weight: 600;
+    padding: 0.75rem 1.25rem;
+    border-radius: 12px;
+    border: 1.5px solid #E2DFFE;
+    cursor: pointer;
     text-decoration: none;
-    max-width: 480px;
-    box-shadow: 0 2px 8px rgba(97,85,241,0.08);
-    transition: border-color 0.18s ease, box-shadow 0.18s ease, transform 0.18s ease;
+    transition: background-color 0.18s ease, border-color 0.18s ease, transform 0.18s cubic-bezier(.22,1,.36,1);
   }
-  .cta-download:hover { border-color: #6155F1; box-shadow: 0 6px 20px rgba(97,85,241,0.15); transform: translateY(-2px); }
-  .cta-download-icon { width: 44px; height: 44px; border-radius: 10px; background: #F5F2FF; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-  .cta-download-text { flex: 1; }
-  .cta-download-title { font-family: 'Kanit', sans-serif; font-size: 0.95rem; font-weight: 700; color: #1C1C1C; line-height: 1.3; }
-  .cta-download-meta { font-size: 0.75rem; color: #999; font-weight: 500; margin-top: 0.2rem; }
-  .cta-download-arrow { flex-shrink: 0; opacity: 0.5; transition: opacity 0.18s ease, transform 0.18s ease; }
-  .cta-download:hover .cta-download-arrow { opacity: 1; transform: translateX(3px); }
+  .btn-download:hover { background: #E2DFFE; border-color: #6155F1; color: #6155F1; transform: translateY(-1px); }
+  .btn-download:active { transform: translateY(0); }
+  .btn-download:focus-visible { outline: 2px solid #6155F1; outline-offset: 3px; }
 
   @media (max-width: 768px) {
     .intro-grid      { grid-template-columns: 1fr !important; }
