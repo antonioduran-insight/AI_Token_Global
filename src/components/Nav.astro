@@ -11,6 +11,17 @@ const { activePage = '', activeDropdown = '', lang = 'en' } = Astro.props;
 const t = useTranslations(lang);
 const currentMeta = LANG_META[lang as Lang];
 const otherLangs = SUPPORTED_LANGS.filter(l => l !== lang);
+
+// Language switcher preserves the current path. Blog posts use per-language slugs
+// that don't map 1:1, so fall back to the blog index for those.
+const currentPath = Astro.url.pathname;
+const LANG_PREFIX_RE = new RegExp(`^/(${SUPPORTED_LANGS.join('|')})(/.*)?$`);
+function localizedPath(targetLang: Lang): string {
+  const match = currentPath.match(LANG_PREFIX_RE);
+  const rest = match?.[2] ?? '/';
+  if (/^\/blog\/[^/]+/.test(rest)) return `/${targetLang}/blog/`;
+  return `/${targetLang}${rest.startsWith('/') ? rest : '/' + rest}`;
+}
 ---
 
 <header style="background: rgba(245,242,255,0.85); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border-bottom: 1px solid rgba(97,85,241,0.1); position: sticky; top: 0; z-index: 100;">
@@ -67,13 +78,13 @@ const otherLangs = SUPPORTED_LANGS.filter(l => l !== lang);
           <svg width="10" height="10" viewBox="0 0 16 16" fill="none" class="dropdown-chevron" style="transition: transform 0.2s ease;"><path d="M4 6l4 4 4-4" stroke="#6155F1" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </button>
         <div class="nav-dropdown-menu" style="display: none; position: absolute; top: calc(100% + 8px); right: 0; left: auto; transform: none; background: #fff; border-radius: 12px; box-shadow: 0 8px 28px rgba(97,85,241,0.16), 0 2px 8px rgba(0,0,0,0.07); padding: 0.375rem; min-width: 140px; z-index: 300; border: 1px solid rgba(97,85,241,0.12);">
-          <a href={`/${lang}/`} style="display: flex; align-items: center; gap: 0.625rem; padding: 0.55rem 0.75rem; border-radius: 8px; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.84rem; font-weight: 700; color: #6155F1; text-decoration: none; background: #F0EEFF;">
+          <a href={localizedPath(lang as Lang)} style="display: flex; align-items: center; gap: 0.625rem; padding: 0.55rem 0.75rem; border-radius: 8px; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.84rem; font-weight: 700; color: #6155F1; text-decoration: none; background: #F0EEFF;">
             <span style="font-size: 1rem; line-height:1;">{currentMeta.flag}</span>
             {currentMeta.label}
             <svg width="12" height="12" viewBox="0 0 16 16" fill="none" style="margin-left:auto;"><path d="M3 8h10M9 4l4 4-4 4" stroke="#6155F1" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
           {otherLangs.map(l => (
-            <a href={`/${l}/`} style="display: flex; align-items: center; gap: 0.625rem; padding: 0.55rem 0.75rem; border-radius: 8px; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.84rem; font-weight: 500; color: #3C315B; text-decoration: none; transition: background-color 0.15s ease, color 0.15s ease;" onmouseover="this.style.background='#F5F2FF';this.style.color='#6155F1'" onmouseout="this.style.background='transparent';this.style.color='#3C315B'">
+            <a href={localizedPath(l)} style="display: flex; align-items: center; gap: 0.625rem; padding: 0.55rem 0.75rem; border-radius: 8px; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.84rem; font-weight: 500; color: #3C315B; text-decoration: none; transition: background-color 0.15s ease, color 0.15s ease;" onmouseover="this.style.background='#F5F2FF';this.style.color='#6155F1'" onmouseout="this.style.background='transparent';this.style.color='#3C315B'">
               <span style="font-size: 1rem; line-height:1;">{LANG_META[l].flag}</span>
               {LANG_META[l].label}
             </a>
@@ -120,7 +131,7 @@ const otherLangs = SUPPORTED_LANGS.filter(l => l !== lang);
   <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; padding: 0 1rem 1rem;">
     {SUPPORTED_LANGS.map(l => (
       <a
-        href={`/${l}/`}
+        href={localizedPath(l)}
         style={`display: flex; align-items: center; gap: 0.375rem; padding: 0.5rem 0.875rem; border-radius: 10px; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.85rem; font-weight: ${l === lang ? '700' : '500'}; color: ${l === lang ? '#6155F1' : '#3C315B'}; background: ${l === lang ? '#F0EEFF' : 'rgba(97,85,241,0.05)'}; border: 1.5px solid ${l === lang ? 'rgba(97,85,241,0.25)' : 'transparent'}; text-decoration: none;`}>
         <span style="font-size: 1rem;">{LANG_META[l].flag}</span>
         {LANG_META[l].label}
