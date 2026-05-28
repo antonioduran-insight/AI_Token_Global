@@ -571,12 +571,19 @@ export interface HeroStat {
   statLabel: string;
 }
 
+export interface TokenBreakdown {
+  tokens?: string[];
+  tokenCount?: string;
+  charCount?: string;
+}
+
 export interface HomePageData {
   heroHeadline?: string;
   heroAccentText?: string;
   heroSubtitle?: string;
   heroStats?: HeroStat[];
   tokenBody2?: PortableTextBlock;
+  tokenBreakdown?: TokenBreakdown;
   faqTitle?: string;
   faqSubtitle?: string;
   faq?: FaqItem[];
@@ -591,6 +598,7 @@ export async function getHomePage(lang: string): Promise<HomePageData | null> {
       heroHeadline, heroAccentText, heroSubtitle,
       heroStats[] { statNumber, statLabel },
       tokenBody2,
+      tokenBreakdown { tokens, tokenCount, charCount },
       faqTitle, faqSubtitle,
       faq[] { _key, question, answer },
       seo { seoTitle, seoDescription, ogImage { asset -> { url } }, noindex }

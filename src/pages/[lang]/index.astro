@@ -37,6 +37,12 @@ const heroStats = page?.heroStats?.length
       { statNumber: t('home.heroStat3Number'), statLabel: t('home.heroStat3Label') },
     ];
 
+// Token-breakdown demo is editor-authored per locale via Sanity (homePage.tokenBreakdown).
+// The card hides entirely when Sanity has no chunks for this language.
+const tokenChunks = page?.tokenBreakdown?.tokens?.filter((t): t is string => typeof t === 'string' && t.length > 0) ?? [];
+const tokenCountDisplay = page?.tokenBreakdown?.tokenCount?.trim() || String(tokenChunks.length);
+const charCountDisplay  = page?.tokenBreakdown?.charCount?.trim() || '';
+
 const faqs: FaqItem[] = page?.faq ?? [];
 const faqTitle  = page?.faqTitle    ?? t('home.faqCommonLabel');
 const faqSubtitle = page?.faqSubtitle ?? '';
@@ -208,36 +214,31 @@ const noindex  = page?.seo?.noindex ?? false;
         </div>
       </div>
 
-      <!-- Token breakdown visual -->
-      <div class="reveal">
-        <div class="card-elevated" style="padding: 1.5rem;">
-          <div style="font-family: 'Kanit', sans-serif; font-size: 0.85rem; font-weight: 700; color: #3C315B; margin-bottom: 1rem; letter-spacing: 0.02em; text-transform: uppercase;">{t('home.tokenBreakdownTitle')}</div>
-          <div style="background: #F5F2FF; border-radius: 12px; padding: 1rem; margin-bottom: 1.25rem; font-size: 0.9rem; line-height: 1.8; color: #3C315B;">
-            <span style="background: rgba(97,85,241,0.18); border-radius: 4px; padding: 0.1rem 0.35rem; margin: 0 0.1rem;">Hello</span>
-            <span style="background: rgba(62,129,229,0.18); border-radius: 4px; padding: 0.1rem 0.35rem; margin: 0 0.1rem;">,</span>
-            <span style="background: rgba(97,85,241,0.18); border-radius: 4px; padding: 0.1rem 0.35rem; margin: 0 0.1rem;">how</span>
-            <span style="background: rgba(62,129,229,0.18); border-radius: 4px; padding: 0.1rem 0.35rem; margin: 0 0.1rem;">are</span>
-            <span style="background: rgba(97,85,241,0.18); border-radius: 4px; padding: 0.1rem 0.35rem; margin: 0 0.1rem;">you</span>
-            <span style="background: rgba(62,129,229,0.18); border-radius: 4px; padding: 0.1rem 0.35rem; margin: 0 0.1rem;">?</span>
-            <span style="background: rgba(97,85,241,0.18); border-radius: 4px; padding: 0.1rem 0.35rem; margin: 0 0.1rem;">I</span>
-            <span style="background: rgba(62,129,229,0.18); border-radius: 4px; padding: 0.1rem 0.35rem; margin: 0 0.1rem;">'m</span>
-            <span style="background: rgba(97,85,241,0.18); border-radius: 4px; padding: 0.1rem 0.35rem; margin: 0 0.1rem;">learning</span>
-            <span style="background: rgba(62,129,229,0.18); border-radius: 4px; padding: 0.1rem 0.35rem; margin: 0 0.1rem;">about</span>
-            <span style="background: rgba(97,85,241,0.18); border-radius: 4px; padding: 0.1rem 0.35rem; margin: 0 0.1rem;">AI</span>
-            <span style="background: rgba(62,129,229,0.18); border-radius: 4px; padding: 0.1rem 0.35rem; margin: 0 0.1rem;">tokens</span>
-          </div>
-          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem;">
-            <div style="background: #F5F2FF; border-radius: 10px; padding: 0.875rem; text-align: center;">
-              <div style="font-family: 'Kanit', sans-serif; font-size: 1.5rem; font-weight: 700; color: #6155F1;">12</div>
-              <div style="font-size: 0.75rem; color: #999; margin-top: 0.2rem; font-weight: 500;">{t('home.tokenBreakdownTokensLabel')}</div>
+      {tokenChunks.length > 0 && (
+        <!-- Token breakdown visual — populated from Sanity homePage.tokenBreakdown -->
+        <div class="reveal">
+          <div class="card-elevated" style="padding: 1.5rem;">
+            <div style="font-family: 'Kanit', sans-serif; font-size: 0.85rem; font-weight: 700; color: #3C315B; margin-bottom: 1rem; letter-spacing: 0.02em; text-transform: uppercase;">{t('home.tokenBreakdownTitle')}</div>
+            <div style="background: #F5F2FF; border-radius: 12px; padding: 1rem; margin-bottom: 1.25rem; font-size: 0.9rem; line-height: 1.8; color: #3C315B;">
+              {tokenChunks.map((chunk, idx) => (
+                <span style={`background: ${idx % 2 === 0 ? 'rgba(97,85,241,0.18)' : 'rgba(62,129,229,0.18)'}; border-radius: 4px; padding: 0.1rem 0.35rem; margin: 0 0.1rem;`}>{chunk}</span>
+              ))}
             </div>
-            <div style="background: #F5F2FF; border-radius: 10px; padding: 0.875rem; text-align: center;">
-              <div style="font-family: 'Kanit', sans-serif; font-size: 1.5rem; font-weight: 700; color: #3E81E5;">~48</div>
-              <div style="font-size: 0.75rem; color: #999; margin-top: 0.2rem; font-weight: 500;">{t('home.tokenBreakdownCharsLabel')}</div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem;">
+              <div style="background: #F5F2FF; border-radius: 10px; padding: 0.875rem; text-align: center;">
+                <div style="font-family: 'Kanit', sans-serif; font-size: 1.5rem; font-weight: 700; color: #6155F1;">{tokenCountDisplay}</div>
+                <div style="font-size: 0.75rem; color: #999; margin-top: 0.2rem; font-weight: 500;">{t('home.tokenBreakdownTokensLabel')}</div>
+              </div>
+              {charCountDisplay && (
+                <div style="background: #F5F2FF; border-radius: 10px; padding: 0.875rem; text-align: center;">
+                  <div style="font-family: 'Kanit', sans-serif; font-size: 1.5rem; font-weight: 700; color: #3E81E5;">{charCountDisplay}</div>
+                  <div style="font-size: 0.75rem; color: #999; margin-top: 0.2rem; font-weight: 500;">{t('home.tokenBreakdownCharsLabel')}</div>
+                </div>
+              )}
             </div>
           </div>
         </div>
-      </div>
+      )}
 
     </div>
   </div>

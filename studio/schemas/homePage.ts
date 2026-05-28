@@ -45,6 +45,36 @@ export const homePageSchema = defineType({
       description: 'Second paragraph in the "What is a Token?" section. Supports bold/italic.',
     }),
 
+    defineField({
+      name: 'tokenBreakdown',
+      title: 'Token Breakdown Example',
+      type: 'object',
+      description: 'Visual demo of how a sentence is split into tokens. Edit per language.',
+      fields: [
+        defineField({
+          name: 'tokens',
+          title: 'Token chunks',
+          description: 'Each chunk renders as a colored chip (alternating purple / blue) in order. Use one chunk per token — including punctuation as its own chunk if it would tokenize separately.',
+          type: 'array',
+          of: [{ type: 'string' }],
+          initialValue: ['Hello', ',', 'how', 'are', 'you', '?', 'I', "'m", 'learning', 'about', 'AI', 'tokens'],
+        }),
+        defineField({
+          name: 'tokenCount',
+          title: 'Displayed token count (optional)',
+          description: 'Defaults to the number of chunks above. Override only if you want a different number shown (e.g. "60+").',
+          type: 'string',
+        }),
+        defineField({
+          name: 'charCount',
+          title: 'Displayed character count',
+          description: 'E.g. "~48". Supports a leading "~" for an approximation.',
+          type: 'string',
+          initialValue: '~48',
+        }),
+      ],
+    }),
+
     // ── FAQ ─────────────────────────────────────────────
     defineField({ name: 'faqTitle',    title: 'FAQ Section Title',    type: 'string', initialValue: 'Frequently Asked Questions' }),
     defineField({ name: 'faqSubtitle', title: 'FAQ Section Subtitle', type: 'string', initialValue: "Everything you've been wondering about AI tokens, APIs, and costs — answered." }),
