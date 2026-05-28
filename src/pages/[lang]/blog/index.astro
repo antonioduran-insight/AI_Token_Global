@@ -638,7 +638,9 @@ const pageOfTemplate  = t('blog.pageOf');
     flex-wrap: wrap;
   }
   .page-numbers { display: inline-flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; }
-  .page-btn {
+  /* page-btn / page-ellipsis are :global because the page-numbers are injected by JS
+     after build, so Astro's scoped attribute isn't on them. */
+  :global(.page-btn) {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -655,11 +657,11 @@ const pageOfTemplate  = t('blog.pageOf');
     transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
     text-decoration: none;
   }
-  .page-btn:hover { background: #EDE9FF; color: #6155F1; border-color: rgba(97, 85, 241, 0.3); }
-  .page-btn:focus-visible { outline: 2px solid #6155F1; outline-offset: 2px; }
-  .page-btn.active { background: #6155F1; color: #fff; border-color: #6155F1; }
-  .page-btn[aria-disabled="true"] { opacity: 0.35; pointer-events: none; cursor: not-allowed; }
-  .page-ellipsis {
+  :global(.page-btn:hover) { background: #EDE9FF; color: #6155F1; border-color: rgba(97, 85, 241, 0.3); }
+  :global(.page-btn:focus-visible) { outline: 2px solid #6155F1; outline-offset: 2px; }
+  :global(.page-btn.active) { background: #6155F1; color: #fff; border-color: #6155F1; }
+  :global(.page-btn[aria-disabled="true"]) { opacity: 0.35; pointer-events: none; cursor: not-allowed; }
+  :global(.page-ellipsis) {
     font-size: 0.825rem;
     color: #999;
     padding: 0 0.25rem;
