@@ -262,7 +262,10 @@
     "roleFallback": "AI Token King's Role",
     "faqFallback": "Common Questions",
     "sidebarCtaTitleFallback": "Enterprise Inquiry",
-    "sidebarCtaLabelFallback": "Contact Enterprise Sales"
+    "sidebarCtaLabelFallback": "Contact Enterprise Sales",
+    "breadcrumbParent": "AI Resources",
+    "heroCtaPrimary": "See the Solution",
+    "heroCtaSecondary": "View Enterprise Proposal"
   },
   "userGuide": {
     "featuresFallback": "Core Features",

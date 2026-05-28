@@ -168,7 +168,42 @@ Compare every Astro page against its archive HTML reference (`archive/`) and fix
 - Top-nav `.nav-link.active` background is `#E2DFFE` in `global.css` (matches every other Astro page and the api-compare archive), whereas chatgpt-api archive uses a slightly lighter `#EDE9FF` — the archive is internally inconsistent; we keep the project-wide global value
 - Specific Sanity content text differs from archive (e.g., archive links "AI Token Basics" vs Astro's "What is an AI Token?") — content delta, not a styling issue
 - Reveal animation classes (`.reveal`) — Astro improvement over archive's `.fade-up`-only scheme
-### 8. Compliance (`compliance.astro`) — NOT STARTED
+### 8. Compliance (`compliance.astro`) — DONE
+
+**Issues found and fixed:**
+- Breadcrumb was 2-level (Home → heroHeadline) → expanded to 3-level (Home → AI Resources → Business AI Compliance) matching archive
+- Hero was missing CTA buttons row → added "See the Solution" (btn-primary) + "View Enterprise Proposal" (btn-secondary, translucent white border/bg) with delay-3 fade-up
+- Hero subtitle missing `margin-bottom: 0.625rem` → added so the CTA row sits at the archive's spacing
+- BaseLayout was not receiving `activePage`/`activeDropdown` → set `activePage="compliance"` and `activeDropdown="resources"` so the top-nav dropdown highlights
+- All 5 section H2s (blockers, solution, who, role, faq) were plain text → wrapped each in a `.section-head` flex row (gap 1rem) with a 48×48 `.cp-icon-box` (14px radius) carrying section-specific gradient + SVG:
+  - blockers = `#F43F5E → #F59E0B` + warning triangle
+  - solution = `#6155F1 → #3E81E5` + verified-badge check
+  - who = `#3E81E5 → #0ABFBC` + users
+  - role = `#3C315B → #6155F1` + stacked-layers
+  - faq = `#6155F1 → #3E81E5` + question circle
+- Section heads also moved margin-bottom from `.section-h2` onto the wrapper (1.25rem for blockers, 1.5rem for the rest) so the icon-box+h2 row spaces correctly
+- Solution + Audience cards were using `.card-elevated` (20px radius, no hover) → switched to `.card` (16px radius + translateY(-4px) hover lift) matching archive
+- Solution card body text was inheriting `.prose-article p` (0.95rem/1.8/#555) → scoped `.solution-card .prose-article p` to `0.9rem/1.75/#555 margin:0` to match archive
+- Role card body text was inheriting same prose default → scoped `.role-card .prose-article p` to `0.85rem/1.65/#555 margin:0` to match archive's smaller copy
+- Audience footnote body was inheriting prose default (#555) → scoped `.audience-footnote .prose-article p` to `0.9rem/1.75/#3C315B margin:0` to match archive's darker text inside the gradient callout
+- Blockers intro card had `margin-top:1.25rem` → bumped to `1.5rem` to match archive's `margin-bottom:1.5rem` on the intro `<p>`
+- Blockers intro PortableText had default 1rem trailing margin (extra gap before the white card) → scoped `.blockers-intro p { margin-bottom: 0 }`
+- Sidebar CTA card was `border-radius:20px; padding:1.375rem 1.5rem` → changed to `16px; padding:1.5rem` matching archive's `.sidebar-link`-aligned CTA card
+- `.toc-link` was sized `0.825rem padding 0.3rem 0.5rem radius 6px` → upsized to `0.855rem padding 0.5rem 0.875rem radius 8px color #555` to match archive `.sidebar-link`
+- `.toc-link.active` selector did not exist in CSS → added `background:#E2DFFE; color:#6155F1; font-weight:600` (script was adding the class but with no rule to apply)
+- First TOC link wasn't auto-active → added `active` class to the Blockers anchor so the active state shows on page load before scroll-spy fires
+- Responsive breakpoint for sidebar collapse was 900px → moved to 1024px (matches archive `.page-layout` collapse and other Astro pages' sidebar pattern)
+- Two-col / three-col grid collapse stayed at 768px (audience 2-col, role 3-col), unchanged from archive
+- FAQ chevron was `width 16 stroke-width 1.75` → upsized to `width 18 stroke-width 2` matching archive `.faq-chevron`
+- `pt()` strong marker was hardcoding `font-weight:700;color:#1C1C1C` inline on every `<strong>` → removed inline styles; the global `.prose-article strong` rule already covers this and scoped overrides can now win without specificity collisions
+- Added 3 new i18n keys across en/es/id: `breadcrumbParent`, `heroCtaPrimary`, `heroCtaSecondary`
+
+**Not changed (intentional):**
+- `.faq-item` border color is `#EDEDEF` from `global.css` (archive uses `rgba(97,85,241,0.1)`) — shared global is consistent across all Astro pages; keeping the project value rather than diverging this one page
+- `.faq-answer` accessibility classes (display:none/block + .open) from global.css vs archive's max-height transitions — Astro's shared accessible system per CLAUDE.md responsive rules
+- `.reveal` scroll-animation classes — Astro improvement over archive
+- Portable Text rendering for Sanity content vs archive's hardcoded text
+- `.section-head` + `.cp-icon-box` defined as page-local classes (vs global `.icon-box` which is 52×52 with `#F5F2FF` bg) — keeps the compliance icon-box at the archive's 48×48 size without affecting other pages that use the global 52×52 icon-box
 ### 9. Token Calculator (`token-calculator.astro`) — NOT STARTED
 ### 10. Use Cases (`use-cases.astro`) — NOT STARTED
 ### 11. User Guide (`user-guide.astro`) — NOT STARTED

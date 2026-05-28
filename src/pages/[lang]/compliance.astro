@@ -22,7 +22,7 @@ function pt(blocks: any[] | undefined): string {
   return toHTML(blocks, {
     components: {
       marks: {
-        strong: ({ children }) => `<strong style="font-weight:700;color:#1C1C1C;">${children}</strong>`,
+        strong: ({ children }) => `<strong>${children}</strong>`,
         em:     ({ children }) => `<em>${children}</em>`,
         link:   ({ value, children }) => `<a href="${value?.href ?? '#'}" style="color:#6155F1;text-decoration:underline;text-underline-offset:3px;" target="${value?.href?.startsWith('http') ? '_blank' : '_self'}" rel="noopener noreferrer">${children}</a>`,
       },
@@ -42,6 +42,8 @@ const BLOCKER_COLORS  = ['#F43F5E', '#F59E0B', '#6155F1', '#3E81E5', '#0ABFBC', 
   noindex={page.seo?.noindex ?? false}
   lang={lang as Lang}
   seo={page.seo}
+  activePage="compliance"
+  activeDropdown="resources"
 >
 
   <!-- Hero -->
@@ -60,7 +62,9 @@ const BLOCKER_COLORS  = ['#F43F5E', '#F59E0B', '#6155F1', '#3E81E5', '#0ABFBC', 
       <nav style="display:flex;align-items:center;gap:0.5rem;margin-bottom:1.75rem;font-size:0.8rem;color:rgba(255,255,255,0.5);" aria-label="Breadcrumb">
         <a href={`/${lang}/`} style="color:rgba(255,255,255,0.5);text-decoration:none;transition:color 0.15s;" onmouseover="this.style.color='rgba(255,255,255,0.9)'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">{t('common.home')}</a>
         <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="rgba(255,255,255,0.3)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        <span style="color:rgba(255,255,255,0.9);font-weight:600;">{page.heroHeadline}</span>
+        <span style="color:rgba(255,255,255,0.5);">{t('compliance.breadcrumbParent')}</span>
+        <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="rgba(255,255,255,0.3)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span style="color:rgba(255,255,255,0.9);font-weight:600;">{t('nav.compliance')}</span>
       </nav>
       <div style="max-width:760px;">
         {page.heroLabel && (
@@ -73,10 +77,14 @@ const BLOCKER_COLORS  = ['#F43F5E', '#F59E0B', '#6155F1', '#3E81E5', '#0ABFBC', 
           {page.heroHeadline}
         </h1>
         {page.heroSubtitle && (
-          <p class="fade-up" style="font-size:1.05rem;line-height:1.75;color:rgba(255,255,255,0.7);max-width:640px;animation-delay:0.14s;">
+          <p class="fade-up" style="font-size:1.05rem;line-height:1.75;color:rgba(255,255,255,0.7);max-width:640px;margin-bottom:0.625rem;animation-delay:0.14s;">
             {page.heroSubtitle}
           </p>
         )}
+        <div class="fade-up" style="display:flex;gap:0.75rem;flex-wrap:wrap;margin-top:1.75rem;animation-delay:0.21s;">
+          <a href="#blockers" class="btn-primary">{t('compliance.heroCtaPrimary')}</a>
+          <a href="#proposal" class="btn-secondary" style="color:rgba(255,255,255,0.85);border-color:rgba(255,255,255,0.3);background:rgba(255,255,255,0.08);">{t('compliance.heroCtaSecondary')}</a>
+        </div>
       </div>
     </div>
   </section>
@@ -88,10 +96,15 @@ const BLOCKER_COLORS  = ['#F43F5E', '#F59E0B', '#6155F1', '#3E81E5', '#0ABFBC', 
 
       <!-- Blockers -->
       <section id="blockers" style="margin-bottom:3.5rem;">
-        <h2 class="section-h2">{page.blockersTitle ?? t('compliance.blockersFallback')}</h2>
-        {page.blockersIntroBody && <div class="prose-article reveal" set:html={pt(page.blockersIntroBody)} />}
+        <div class="section-head" style="margin-bottom:1.25rem;">
+          <div class="cp-icon-box" style="background:linear-gradient(135deg,#F43F5E,#F59E0B);">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 9v4M12 17h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z" stroke="#fff" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h2 class="section-h2">{page.blockersTitle ?? t('compliance.blockersFallback')}</h2>
+        </div>
+        {page.blockersIntroBody && <div class="prose-article reveal blockers-intro" set:html={pt(page.blockersIntroBody)} />}
         {page.blockerItems && page.blockerItems.length > 0 && (
-          <div style="background:#fff;border-radius:16px;padding:1.75rem;box-shadow:0 2px 10px rgba(97,85,241,0.08);margin-top:1.25rem;">
+          <div style="background:#fff;border-radius:16px;padding:1.75rem;box-shadow:0 2px 10px rgba(97,85,241,0.08);margin-top:1.5rem;">
             <div style="display:flex;flex-direction:column;gap:0.875rem;">
               {page.blockerItems.map((item, i) => (
                 <div style="display:flex;align-items:flex-start;gap:0.875rem;" class="reveal">
@@ -126,10 +139,15 @@ const BLOCKER_COLORS  = ['#F43F5E', '#F59E0B', '#6155F1', '#3E81E5', '#0ABFBC', 
       <!-- Solution Coverage -->
       {page.solutions && page.solutions.length > 0 && (
         <section id="solution" style="margin-bottom:3.5rem;">
-          <h2 class="section-h2">{page.solutionTitle ?? t('compliance.solutionTitleFallback')}</h2>
-          <div style="display:flex;flex-direction:column;gap:1.125rem;margin-top:1.125rem;">
+          <div class="section-head" style="margin-bottom:1.5rem;">
+            <div class="cp-icon-box" style="background:linear-gradient(135deg,#6155F1,#3E81E5);">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" stroke="#fff" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h2 class="section-h2">{page.solutionTitle ?? t('compliance.solutionTitleFallback')}</h2>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:1.125rem;">
             {page.solutions.map((sol, i) => (
-              <div class="card-elevated reveal" style={`padding:1.5rem 1.75rem;border-left:4px solid ${SOLUTION_COLORS[i % 5]};`}>
+              <div class="card solution-card reveal" style={`padding:1.5rem 1.75rem;border-left:4px solid ${SOLUTION_COLORS[i % 5]};`}>
                 <h3 style="font-family:'Kanit',sans-serif;font-size:1.05rem;font-weight:700;color:#1C1C1C;margin-bottom:0.5rem;">{sol.title}</h3>
                 {sol.body && <div class="prose-article" set:html={pt(sol.body)} />}
               </div>
@@ -141,17 +159,22 @@ const BLOCKER_COLORS  = ['#F43F5E', '#F59E0B', '#6155F1', '#3E81E5', '#0ABFBC', 
       <!-- Audience -->
       {page.audienceItems && page.audienceItems.length > 0 && (
         <section id="who" style="margin-bottom:3.5rem;">
-          <h2 class="section-h2">{page.audienceTitle ?? t('compliance.audienceFallback')}</h2>
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1.25rem;margin-top:1.125rem;" class="two-col-grid reveal">
+          <div class="section-head" style="margin-bottom:1.5rem;">
+            <div class="cp-icon-box" style="background:linear-gradient(135deg,#3E81E5,#0ABFBC);">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" stroke="#fff" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9" cy="7" r="4" stroke="#fff" stroke-width="1.75"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" stroke="#fff" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h2 class="section-h2">{page.audienceTitle ?? t('compliance.audienceFallback')}</h2>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1.5rem;" class="two-col-grid reveal">
             {page.audienceItems.map((a, i) => (
-              <div class="card-elevated" style="padding:1.25rem 1.375rem;">
+              <div class="card" style="padding:1.25rem 1.375rem;">
                 <div style={`font-size:0.8rem;font-weight:700;color:${AUDIENCE_COLORS[i % 4]};text-transform:uppercase;letter-spacing:0.05em;margin-bottom:0.375rem;`}>{a.role}</div>
                 {a.description && <p style="font-size:0.875rem;color:#555;line-height:1.65;margin:0;">{a.description}</p>}
               </div>
             ))}
           </div>
           {page.audienceFootnote && (
-            <div class="reveal" style="background:linear-gradient(135deg,rgba(97,85,241,0.06),rgba(62,129,229,0.04));border-radius:14px;padding:1.375rem 1.5rem;border:1px solid rgba(97,85,241,0.1);">
+            <div class="reveal audience-footnote" style="background:linear-gradient(135deg,rgba(97,85,241,0.06),rgba(62,129,229,0.04));border-radius:14px;padding:1.375rem 1.5rem;border:1px solid rgba(97,85,241,0.1);">
               <div class="prose-article" set:html={pt(page.audienceFootnote)} />
             </div>
           )}
@@ -161,10 +184,15 @@ const BLOCKER_COLORS  = ['#F43F5E', '#F59E0B', '#6155F1', '#3E81E5', '#0ABFBC', 
       <!-- Role -->
       {page.roles && page.roles.length > 0 && (
         <section id="role" style="margin-bottom:3.5rem;">
-          <h2 class="section-h2">{page.roleTitle ?? t('compliance.roleFallback')}</h2>
-          <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem;margin-top:1.125rem;" class="three-col-grid reveal">
+          <div class="section-head" style="margin-bottom:1.5rem;">
+            <div class="cp-icon-box" style="background:linear-gradient(135deg,#3C315B,#6155F1);">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="#fff" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h2 class="section-h2">{page.roleTitle ?? t('compliance.roleFallback')}</h2>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem;" class="three-col-grid reveal">
             {page.roles.map((role, i) => (
-              <div style={`background:linear-gradient(135deg,${ROLE_COLORS[i % 3]}10,${ROLE_COLORS[i % 3]}05);border-radius:14px;padding:1.375rem;border:1px solid ${ROLE_COLORS[i % 3]}20;`}>
+              <div class="role-card" style={`background:linear-gradient(135deg,${ROLE_COLORS[i % 3]}10,${ROLE_COLORS[i % 3]}05);border-radius:14px;padding:1.375rem;border:1px solid ${ROLE_COLORS[i % 3]}20;`}>
                 <div style={`font-family:'Kanit',sans-serif;font-size:0.9rem;font-weight:700;color:${ROLE_COLORS[i % 3]};margin-bottom:0.625rem;`}>{role.title}</div>
                 {role.body && <div class="prose-article" set:html={pt(role.body)} />}
               </div>
@@ -176,13 +204,18 @@ const BLOCKER_COLORS  = ['#F43F5E', '#F59E0B', '#6155F1', '#3E81E5', '#0ABFBC', 
       <!-- FAQ -->
       {page.faq && page.faq.length > 0 && (
         <section id="faq" style="margin-bottom:3.5rem;">
-          <h2 class="section-h2">{page.faqTitle ?? t('compliance.faqFallback')}</h2>
-          <div style="background:#fff;border-radius:16px;padding:0.5rem 1.75rem;box-shadow:0 2px 8px rgba(97,85,241,0.07);margin-top:1.125rem;">
+          <div class="section-head" style="margin-bottom:1.5rem;">
+            <div class="cp-icon-box" style="background:linear-gradient(135deg,#6155F1,#3E81E5);">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke="#fff" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h2 class="section-h2">{page.faqTitle ?? t('compliance.faqFallback')}</h2>
+          </div>
+          <div style="background:#fff;border-radius:16px;padding:0.5rem 1.75rem;box-shadow:0 2px 8px rgba(97,85,241,0.07);">
             {page.faq.map(item => (
               <div class="faq-item">
                 <button class="faq-question" onclick="window.toggleFaq(this)">
                   <span>{item.question}</span>
-                  <svg class="faq-chevron" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="#6155F1" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="#6155F1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </button>
                 <div class="faq-answer">
                   <div class="prose-article" style="padding-bottom:1.25rem;" set:html={pt(item.answer)} />
@@ -197,10 +230,10 @@ const BLOCKER_COLORS  = ['#F43F5E', '#F59E0B', '#6155F1', '#3E81E5', '#0ABFBC', 
 
     <!-- Sidebar -->
     <aside class="cp-sidebar" style="position:sticky;top:88px;">
-      <div class="card-elevated" style="padding:1.5rem;margin-bottom:1.25rem;">
+      <div style="background:#fff;border-radius:16px;padding:1.5rem;box-shadow:0 2px 10px rgba(97,85,241,0.08);margin-bottom:1.25rem;">
         <div style="font-family:'Kanit',sans-serif;font-size:0.75rem;font-weight:700;color:#6155F1;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:1rem;">{t('common.onThisPage')}</div>
         <nav style="display:flex;flex-direction:column;gap:0.125rem;">
-          <a href="#blockers" class="toc-link">{page.blockersTitle ?? t('compliance.blockersFallback')}</a>
+          <a href="#blockers" class="toc-link active">{page.blockersTitle ?? t('compliance.blockersFallback')}</a>
           {page.proposalTitle && <a href="#proposal" class="toc-link">{t('compliance.enterpriseProposalLabel')}</a>}
           {page.solutions && page.solutions.length > 0 && <a href="#solution" class="toc-link">{page.solutionTitle ?? t('compliance.solutionTitleFallback')}</a>}
           {page.audienceItems && page.audienceItems.length > 0 && <a href="#who" class="toc-link">{page.audienceTitle ?? t('compliance.audienceFallback')}</a>}
@@ -208,9 +241,9 @@ const BLOCKER_COLORS  = ['#F43F5E', '#F59E0B', '#6155F1', '#3E81E5', '#0ABFBC', 
           {page.faq && page.faq.length > 0 && <a href="#faq" class="toc-link">{page.faqTitle ?? t('compliance.faqFallback')}</a>}
         </nav>
       </div>
-      <div style="padding:1.375rem 1.5rem;border-radius:20px;background:linear-gradient(135deg,#3E81E5,#6155F1);">
-        <div style="font-family:'Kanit',sans-serif;font-size:1rem;font-weight:700;color:#fff;margin-bottom:0.5rem;">{page.sidebarCtaTitle ?? t('compliance.sidebarCtaTitleFallback')}</div>
-        {page.sidebarCtaBody && <p style="font-size:0.825rem;color:rgba(255,255,255,0.88);line-height:1.6;margin-bottom:1.125rem;">{page.sidebarCtaBody}</p>}
+      <div style="padding:1.5rem;border-radius:16px;background:linear-gradient(135deg,#3E81E5,#6155F1);color:#fff;">
+        <div style="font-family:'Kanit',sans-serif;font-size:1rem;font-weight:700;margin-bottom:0.5rem;">{page.sidebarCtaTitle ?? t('compliance.sidebarCtaTitleFallback')}</div>
+        {page.sidebarCtaBody && <p style="font-size:0.825rem;opacity:0.88;line-height:1.6;margin-bottom:1.125rem;">{page.sidebarCtaBody}</p>}
         <a href={page.sidebarCtaUrl ?? '#'} class="btn-primary" style="background:rgba(255,255,255,0.2);box-shadow:none;border:1px solid rgba(255,255,255,0.35);font-size:0.825rem;padding:0.5rem 1rem;width:100%;justify-content:center;">
           {page.sidebarCtaLabel ?? t('compliance.sidebarCtaLabelFallback')}
           <svg width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -223,35 +256,43 @@ const BLOCKER_COLORS  = ['#F43F5E', '#F59E0B', '#6155F1', '#3E81E5', '#0ABFBC', 
 </BaseLayout>
 
 <style is:global>
+  .section-head { display: flex; align-items: center; gap: 1rem; }
+  .cp-icon-box { width: 48px; height: 48px; border-radius: 14px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
   .section-h2 {
     font-family: 'Kanit', sans-serif;
     font-size: 1.7rem;
     font-weight: 800;
     color: #1C1C1C;
     letter-spacing: -0.03em;
-    margin-bottom: 1.125rem;
   }
   .prose-article p { font-size: 0.95rem; line-height: 1.8; color: #555; margin-bottom: 1rem; }
   .prose-article p:last-child { margin-bottom: 0; }
   .prose-article ul { padding-left: 1.25rem; margin-bottom: 1rem; display: flex; flex-direction: column; gap: 0.375rem; }
   .prose-article li { font-size: 0.95rem; line-height: 1.75; color: #3C315B; }
   .prose-article strong { font-weight: 700; color: #1C1C1C; }
+  .blockers-intro p { margin-bottom: 0; }
+  .solution-card .prose-article p { font-size: 0.9rem; line-height: 1.75; color: #555; margin: 0; }
+  .role-card .prose-article p { font-size: 0.85rem; line-height: 1.65; color: #555; margin: 0; }
+  .audience-footnote .prose-article p { font-size: 0.9rem; line-height: 1.75; color: #3C315B; margin: 0; }
   .toc-link {
-    font-size: 0.825rem;
-    font-weight: 500;
-    color: #666;
-    text-decoration: none;
-    padding: 0.3rem 0.5rem;
-    border-radius: 6px;
-    transition: background-color 0.15s ease, color 0.15s ease;
     display: block;
+    padding: 0.5rem 0.875rem;
+    border-radius: 8px;
+    font-size: 0.855rem;
+    font-weight: 500;
+    color: #555;
+    text-decoration: none;
+    transition: background-color 0.15s ease, color 0.15s ease;
     line-height: 1.4;
   }
   .toc-link:hover { background-color: #F5F2FF; color: #6155F1; }
+  .toc-link.active { background: #E2DFFE; color: #6155F1; font-weight: 600; }
   .toc-link:focus-visible { outline: 2px solid #6155F1; outline-offset: 2px; }
-  @media (max-width: 900px) {
+  @media (max-width: 1024px) {
     .cp-layout { grid-template-columns: 1fr !important; }
     .cp-sidebar { display: none !important; }
+  }
+  @media (max-width: 768px) {
     .two-col-grid { grid-template-columns: 1fr !important; }
     .three-col-grid { grid-template-columns: 1fr !important; }
   }

@@ -262,7 +262,10 @@
     "roleFallback": "El Rol de AI Token King",
     "faqFallback": "Preguntas Frecuentes",
     "sidebarCtaTitleFallback": "Consulta Empresarial",
-    "sidebarCtaLabelFallback": "Contactar Ventas Empresariales"
+    "sidebarCtaLabelFallback": "Contactar Ventas Empresariales",
+    "breadcrumbParent": "Recursos de IA",
+    "heroCtaPrimary": "Ver la Solución",
+    "heroCtaSecondary": "Ver Propuesta Empresarial"
   },
   "userGuide": {
     "featuresFallback": "Características Principales",

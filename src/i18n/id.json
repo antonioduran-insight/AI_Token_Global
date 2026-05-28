@@ -262,7 +262,10 @@
     "roleFallback": "Peran AI Token King",
     "faqFallback": "Pertanyaan Umum",
     "sidebarCtaTitleFallback": "Pertanyaan Enterprise",
-    "sidebarCtaLabelFallback": "Hubungi Tim Penjualan Enterprise"
+    "sidebarCtaLabelFallback": "Hubungi Tim Penjualan Enterprise",
+    "breadcrumbParent": "Sumber Daya AI",
+    "heroCtaPrimary": "Lihat Solusinya",
+    "heroCtaSecondary": "Lihat Proposal Enterprise"
   },
   "userGuide": {
     "featuresFallback": "Fitur Utama",
