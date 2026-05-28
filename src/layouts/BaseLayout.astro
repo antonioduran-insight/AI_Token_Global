@@ -149,6 +149,33 @@ const hreflangs = SUPPORTED_LANGS.map(l => ({
         chevron.classList.add('open');
       }
     };
+
+    // Hero pointer blob — follows cursor with smooth lerp inside .hero-bg sections
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      document.querySelectorAll('.hero-bg').forEach(hero => {
+        const canvas = hero.querySelector('.hero-bg-canvas');
+        if (!canvas) return;
+        let pointer = canvas.querySelector('.blob-pointer');
+        if (!pointer) {
+          pointer = document.createElement('div');
+          pointer.className = 'blob-pointer';
+          (canvas.querySelector('.grad-blobs') || canvas).appendChild(pointer);
+        }
+        let cx = 0, cy = 0, tx = 0, ty = 0;
+        function tick() {
+          cx += (tx - cx) / 20;
+          cy += (ty - cy) / 20;
+          pointer.style.transform = 'translate(' + Math.round(cx) + 'px,' + Math.round(cy) + 'px)';
+          requestAnimationFrame(tick);
+        }
+        hero.addEventListener('mousemove', e => {
+          const r = hero.getBoundingClientRect();
+          tx = e.clientX - r.left;
+          ty = e.clientY - r.top;
+        });
+        tick();
+      });
+    }
   </script>
 </body>
 </html>
