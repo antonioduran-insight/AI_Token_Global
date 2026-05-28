@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
-import { getAllPostSlugs, getPostBySlug } from '../../../lib/sanity';
+import { getAllPostSlugs, getPostBySlug, getRelatedPosts } from '../../../lib/sanity';
 import { useTranslations, LANG_META, isValidLang } from '../../../i18n/index';
 import type { Lang } from '../../../i18n/index';
 import type { SanityPost } from '../../../lib/sanity';
@@ -18,30 +18,125 @@ if (!isValidLang(lang)) return Astro.redirect('/en/blog');
 
 const t = useTranslations(lang as Lang);
 const post: SanityPost | null = await getPostBySlug(slug as string, lang);
-
 if (!post) return Astro.redirect(`/${lang}/blog`);
 
+const related: SanityPost[] = await getRelatedPosts(post.slug.current, lang, post.category, 3);
+
+const CATEGORIES = [
+  { value: 'fundamentals', label: t('blog.cat.fundamentals') },
+  { value: 'compliance',   label: t('blog.cat.compliance') },
+  { value: 'calculation',  label: t('blog.cat.calculation') },
+  { value: 'pricing',      label: t('blog.cat.pricing') },
+  { value: 'models',       label: t('blog.cat.models') },
+  { value: 'platform',     label: t('blog.cat.platform') },
+  { value: 'tutorials',    label: t('blog.cat.tutorials') },
+];
+const CAT_PILL: Record<string, string> = {
+  fundamentals: 'purple',
+  compliance:   'dark',
+  calculation:  'purple',
+  pricing:      'blue',
+  models:       'blue',
+  platform:     'amber',
+  tutorials:    'green',
+};
+const CAT_GRADIENT: Record<string, string> = {
+  fundamentals: 'linear-gradient(135deg, #6155F1, #2A1F5C)',
+  compliance:   'linear-gradient(135deg, #3C315B, #0D1547)',
+  calculation:  'linear-gradient(135deg, #6155F1, #2A1F5C)',
+  pricing:      'linear-gradient(135deg, #3E81E5, #0D1547)',
+  models:       'linear-gradient(135deg, #3E81E5, #0D1547)',
+  platform:     'linear-gradient(135deg, #B07D2E, #4A2B0F)',
+  tutorials:    'linear-gradient(135deg, #2D8653, #0F4030)',
+};
+const CAT_TINT: Record<string, string> = {
+  fundamentals: 'rgba(97,85,241,0.4)',
+  compliance:   'rgba(60,49,91,0.45)',
+  calculation:  'rgba(97,85,241,0.4)',
+  pricing:      'rgba(62,129,229,0.4)',
+  models:       'rgba(62,129,229,0.4)',
+  platform:     'rgba(176,125,46,0.45)',
+  tutorials:    'rgba(45,134,83,0.4)',
+};
+
+function catLabel(value?: string) {
+  if (!value) return '';
+  return CATEGORIES.find(c => c.value === value)?.label ?? value;
+}
+function catPill(value?: string) {
+  if (!value) return 'purple';
+  return CAT_PILL[value] ?? 'purple';
+}
 function formatDate(iso: string) {
   return new Date(iso).toLocaleDateString(LANG_META[lang as Lang].locale, { year: 'numeric', month: 'long', day: 'numeric' });
 }
 
+// ── Word count + reading time ──────────────────────────────────────────────
+function blockText(block: any): string {
+  if (!block || !Array.isArray(block.children)) return '';
+  return block.children.map((c: any) => c?.text ?? '').join('');
+}
+function countWords(blocks: any[]): number {
+  let total = 0;
+  for (const block of blocks ?? []) {
+    if (block?._type !== 'block') continue;
+    const text = blockText(block);
+    if (!text) continue;
+    total += text.trim().split(/\s+/).filter(Boolean).length;
+  }
+  return total;
+}
+const wordCount = countWords(post.body || []);
+const readingMinutes = Math.max(1, Math.round(wordCount / 225));
+const readingLabel = t('blog.minRead').replace('{n}', String(readingMinutes));
+
+// ── Collect h2 headings for TOC ────────────────────────────────────────────
+const usedSlugs = new Set<string>();
+function slugify(text: string) {
+  const base = text.toLowerCase().replace(/[^\p{L}\p{N}]+/gu, '-').replace(/^-+|-+$/g, '');
+  let s = base || 'section';
+  let i = 2;
+  while (usedSlugs.has(s)) s = `${base}-${i++}`;
+  usedSlugs.add(s);
+  return s;
+}
+const headings: { id: string; text: string }[] = [];
+for (const block of post.body || []) {
+  if (block?._type === 'block' && block?.style === 'h2') {
+    const text = blockText(block).trim();
+    if (!text) continue;
+    headings.push({ id: slugify(text), text });
+  }
+}
+// Reset for the render pass below so we generate matching IDs.
+usedSlugs.clear();
+
 const bodyHtml = post.body ? toHTML(post.body, {
   components: {
+    block: {
+      h2: ({ value, children }) => {
+        const text = blockText(value).trim();
+        const id = slugify(text);
+        return `<h2 id="${id}">${children}</h2>`;
+      },
+      h3: ({ value, children }) => {
+        const text = blockText(value).trim();
+        const id = slugify(text);
+        return `<h3 id="${id}">${children}</h3>`;
+      },
+    },
     types: {
       image: ({ value }) => {
         const url = value?.asset?.url ?? value?.url ?? '';
         const alt = value?.alt ?? '';
         const caption = value?.caption ?? '';
         if (!url) return '';
-        return `<figure style="margin: 2rem 0; border-radius: 12px; overflow: hidden;">
-          <img src="${url}" alt="${alt}" style="width: 100%; height: auto; display: block;" />
-          ${caption ? `<figcaption style="font-size: 0.8rem; color: #999; padding: 0.5rem 0; text-align: center;">${caption}</figcaption>` : ''}
-        </figure>`;
+        return `<figure class="article-figure"><img src="${url}" alt="${alt}" />${caption ? `<figcaption>${caption}</figcaption>` : ''}</figure>`;
       },
       codeBlock: ({ value }) => {
         const codeLang = value?.language ?? '';
         const code = (value?.code ?? '').replace(/</g, '&lt;').replace(/>/g, '&gt;');
-        return `<pre style="background: #1C1C1C; color: #e2e8f0; padding: 1.25rem; border-radius: 12px; overflow-x: auto; margin-bottom: 1.25rem;"><code class="language-${codeLang}">${code}</code></pre>`;
+        return `<pre><code class="language-${codeLang}">${code}</code></pre>`;
       },
     },
   },
@@ -49,6 +144,11 @@ const bodyHtml = post.body ? toHTML(post.body, {
 
 const siteOrigin = (Astro.site ?? new URL('https://aitokenglobal.com')).origin;
 const postUrl = `${siteOrigin}/${lang}/blog/${post.slug.current}`;
+
+const heroPill = catPill(post.category);
+const heroCategoryLabel = catLabel(post.category);
+const coverGradient = post.category ? CAT_GRADIENT[post.category] ?? CAT_GRADIENT.fundamentals : CAT_GRADIENT.fundamentals;
+const coverTint = post.category ? CAT_TINT[post.category] ?? CAT_TINT.fundamentals : CAT_TINT.fundamentals;
 ---
 
 <BaseLayout
@@ -59,135 +159,783 @@ const postUrl = `${siteOrigin}/${lang}/blog/${post.slug.current}`;
 >
 
   <!-- Reading progress bar -->
-  <div id="progress-bar" style="position: fixed; top: 64px; left: 0; height: 3px; width: 100%; background: linear-gradient(90deg, #6155F1, #3E81E5); z-index: 99; transform: scaleX(0); transform-origin: left; transition: transform 0.1s linear;"></div>
+  <div id="read-progress" aria-hidden="true"></div>
 
-  <!-- Hero -->
-  <section class="hero-bg" style="padding: 3.5rem 1.5rem 3rem;">
-    <div class="hero-bg-canvas" aria-hidden="true">
-      <svg style="display:none"><defs><filter id="hero-goo"><feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur"/><feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8" result="goo"/><feBlend in="SourceGraphic" in2="goo"/></filter></defs></svg>
-      <div class="grad-blobs">
-        <div class="blob blob-1"></div><div class="blob blob-2"></div><div class="blob blob-3"></div>
-      </div>
-    </div>
-    <div class="hero-bg-content" style="max-width: 800px; margin: 0 auto;">
-      <nav style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1.5rem; font-size: 0.8rem; color: rgba(255,255,255,0.5);">
-        <a href={`/${lang}/`} style="color: rgba(255,255,255,0.5); text-decoration: none; transition: color 0.15s ease;" onmouseover="this.style.color='rgba(255,255,255,0.9)'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">{t('common.home')}</a>
-        <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        <a href={`/${lang}/blog`} style="color: rgba(255,255,255,0.5); text-decoration: none; transition: color 0.15s ease;" onmouseover="this.style.color='rgba(255,255,255,0.9)'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">{t('nav.blog')}</a>
-        <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        <span style="color: rgba(255,255,255,0.7);">{post.title}</span>
+  <!-- ═══════════════════════════════ HERO / POST HEADER ═══════════════════════════════ -->
+  <section class="post-hero">
+    <div class="post-hero-inner">
+
+      <!-- Breadcrumb -->
+      <nav class="post-breadcrumb" aria-label="Breadcrumb">
+        <a href={`/${lang}/`}>{t('common.home')}</a>
+        <svg width="12" height="12" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M6 4l4 4-4 4" stroke="#CCC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <a href={`/${lang}/blog`}>{t('nav.blog')}</a>
+        {heroCategoryLabel && (
+          <>
+            <svg width="12" height="12" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M6 4l4 4-4 4" stroke="#CCC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span class="post-breadcrumb-current">{heroCategoryLabel}</span>
+          </>
+        )}
       </nav>
 
-      {post.tags && post.tags.length > 0 && (
-        <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1rem;">
-          {post.tags.map(tag => (
-            <span style="background: rgba(226,223,254,0.18); color: rgba(255,255,255,0.85); font-size: 0.7rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; padding: 0.2rem 0.625rem; border-radius: 100px; border: 1px solid rgba(255,255,255,0.15);">{tag}</span>
+      <div class="post-hero-col">
+
+        <!-- Tags -->
+        <div class="fade-up post-hero-tags">
+          {post.category && (
+            <a href={`/${lang}/blog`} class={`tag-pill tag-${heroPill}`}>{heroCategoryLabel}</a>
+          )}
+          {post.tags && post.tags.slice(0, 1).map(tag => (
+            <a href={`/${lang}/blog`} class="tag-pill tag-blue">{tag}</a>
           ))}
         </div>
-      )}
 
-      <h1 style="font-family: 'Kanit', sans-serif; font-size: clamp(1.75rem, 3.5vw, 2.75rem); font-weight: 800; color: #fff; letter-spacing: -0.04em; line-height: 1.15; margin-bottom: 1rem;">
-        {post.title}
-      </h1>
-      <p style="font-size: 1rem; line-height: 1.75; color: rgba(255,255,255,0.7); margin-bottom: 1.5rem;">{post.excerpt}</p>
-      <div style="display: flex; align-items: center; gap: 1.5rem; font-size: 0.85rem; color: rgba(255,255,255,0.5);">
-        <span>{formatDate(post.publishedAt)}</span>
+        <!-- Title -->
+        <h1 class="fade-up fade-up-1 post-title">{post.title}</h1>
+
+        <!-- Meta row -->
+        <div class="fade-up fade-up-2 post-meta">
+          <div class="post-author">
+            <div class="post-avatar" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2" stroke="#fff" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="7" r="4" stroke="#fff" stroke-width="1.75"/></svg>
+            </div>
+            <span class="post-author-name">{t('blog.author')}</span>
+          </div>
+          <span class="post-meta-dim">{formatDate(post.publishedAt)}</span>
+          <span class="post-meta-dim" aria-hidden="true">·</span>
+          <span class="post-meta-dim">{readingLabel}</span>
+          {heroCategoryLabel && (
+            <>
+              <span class="post-meta-dim" aria-hidden="true">·</span>
+              <span class="post-meta-dim">{heroCategoryLabel}</span>
+            </>
+          )}
+        </div>
+
       </div>
     </div>
   </section>
 
-  <!-- Article body -->
-  <section style="padding: 4rem 1.5rem; max-width: 1200px; margin: 0 auto;">
-    <div style="display: grid; grid-template-columns: 1fr 280px; gap: 3.5rem; align-items: start;" class="article-grid">
 
+  <!-- ═══════════════════════════════ MAIN POST LAYOUT ═══════════════════════════════ -->
+  <section class="post-section">
+    <div class="post-layout">
+
+      <!-- ── MAIN ARTICLE ── -->
       <article>
-        {post.coverImage?.asset?.url && (
-          <div style="margin-bottom: 2.5rem; border-radius: 16px; overflow: hidden;">
-            <img src={post.coverImage.asset.url} alt={post.title} style="width: 100%; height: auto; display: block;" />
-          </div>
-        )}
-        <div class="prose" set:html={bodyHtml} />
+
+        <!-- Hero image -->
+        <div class="hero-img reveal" style={`background: ${coverGradient};`}>
+          {post.coverImage?.asset?.url && (
+            <img src={post.coverImage.asset.url} alt={post.title} />
+          )}
+          <div class="hero-img-overlay" style={`background: linear-gradient(to top, ${coverTint} 0%, transparent 50%);`}></div>
+          <div class="hero-img-tint"></div>
+        </div>
+
+        <!-- Article body -->
+        <div class="article-body" set:html={bodyHtml} />
 
         <!-- Share row -->
-        <div style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #EDEDEF; display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;">
-          <span style="font-size: 0.875rem; font-weight: 600; color: #3C315B;">{t('blog.share')}</span>
-          <a href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(post.title)}&url=${encodeURIComponent(postUrl)}`} target="_blank" rel="noopener noreferrer" class="btn-ghost" style="font-size: 0.8rem; padding: 0.375rem 0.875rem;">
+        <div class="reveal share-row">
+          <span class="share-row-label">{t('blog.share')}</span>
+          <a class="share-btn" href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(post.title)}&url=${encodeURIComponent(postUrl)}`} target="_blank" rel="noopener noreferrer">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
             X / Twitter
           </a>
-          <a href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(postUrl)}`} target="_blank" rel="noopener noreferrer" class="btn-ghost" style="font-size: 0.8rem; padding: 0.375rem 0.875rem;">
+          <a class="share-btn" href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(postUrl)}`} target="_blank" rel="noopener noreferrer">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/><circle cx="4" cy="4" r="2" stroke="currentColor" stroke-width="1.75"/></svg>
             LinkedIn
           </a>
-          <button id="copy-link-btn" data-copy={t('blog.copyLink')} data-copied={t('blog.copied')} class="btn-ghost" style="font-size: 0.8rem; padding: 0.375rem 0.875rem;">
-            {t('blog.copyLink')}
+          <button id="copy-link-btn" class="share-btn" data-copy={t('blog.copyLink')} data-copied={t('blog.copied')} type="button">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span class="copy-label">{t('blog.copyLink')}</span>
           </button>
         </div>
 
-        <div style="margin-top: 2rem;">
-          <a href={`/${lang}/blog`} class="btn-secondary" style="font-size: 0.875rem;">
-            <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M13 8H3M7 4l-4 4 4 4" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            {t('blog.backToBlog')}
-          </a>
-        </div>
       </article>
 
-      <!-- Sidebar -->
-      <aside style="position: sticky; top: 84px;">
-        <div class="card-elevated" style="padding: 1.5rem; margin-bottom: 1.5rem;">
-          <div style="font-family: 'Kanit', sans-serif; font-size: 0.875rem; font-weight: 700; color: #1C1C1C; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 1rem;">{t('blog.published')}</div>
-          <p style="font-size: 0.9rem; color: #555; margin: 0;">{formatDate(post.publishedAt)}</p>
-        </div>
 
-        {post.tags && post.tags.length > 0 && (
-          <div class="card-elevated" style="padding: 1.5rem; margin-bottom: 1.5rem;">
-            <div style="font-family: 'Kanit', sans-serif; font-size: 0.875rem; font-weight: 700; color: #1C1C1C; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 1rem;">{t('blog.tags')}</div>
-            <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
-              {post.tags.map(tag => (
-                <span style="background: #E2DFFE; color: #6155F1; font-size: 0.75rem; font-weight: 600; padding: 0.25rem 0.625rem; border-radius: 100px;">{tag}</span>
+      <!-- ── SIDEBAR ── -->
+      <aside class="post-sidebar">
+
+        <!-- Table of contents -->
+        {headings.length > 0 && (
+          <div class="sidebar-card">
+            <div class="sidebar-eyebrow">{t('common.onThisPage')}</div>
+            <nav class="toc-nav" id="toc-nav" aria-label="Table of contents">
+              {headings.map((h, idx) => (
+                <a href={`#${h.id}`} class={`sidebar-link${idx === 0 ? ' active' : ''}`}>{h.text}</a>
               ))}
-            </div>
+            </nav>
           </div>
         )}
 
-        <div class="card-elevated" style="padding: 1.5rem; background: linear-gradient(135deg, #6155F1 0%, #3E81E5 100%);">
-          <div style="font-family: 'Kanit', sans-serif; font-size: 1rem; font-weight: 700; color: #fff; margin-bottom: 0.625rem;">{t('blog.tryTitle')}</div>
-          <p style="font-size: 0.85rem; color: rgba(255,255,255,0.8); line-height: 1.6; margin-bottom: 1rem;">{t('blog.tryCopy')}</p>
-          <a href="https://www.aitokenking.com.tw/home" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 0.375rem; background: #fff; color: #6155F1; font-size: 0.85rem; font-weight: 700; padding: 0.5rem 1rem; border-radius: 10px; text-decoration: none; transition: opacity 0.18s ease;" onmouseover="this.style.opacity='0.9'" onmouseout="this.style.opacity='1'">
+        <!-- CTA card -->
+        <div class="sidebar-cta">
+          <div class="sidebar-cta-blob" aria-hidden="true"></div>
+          <div class="sidebar-cta-title">{t('blog.tryTitle')}</div>
+          <p class="sidebar-cta-body">{t('blog.tryCopy')}</p>
+          <a class="sidebar-cta-btn" href={`/${lang}/api-compare`}>
             {t('blog.tryButton')}
-            <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <svg width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
         </div>
+
+        <!-- Article info -->
+        <div class="sidebar-card sidebar-info">
+          <div class="sidebar-info-eyebrow">{t('blog.articleInfo')}</div>
+          <div class="sidebar-info-rows">
+            <div class="sidebar-info-row">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#999" stroke-width="1.75"/><path d="M12 6v6l4 2" stroke="#999" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span>{readingLabel}</span>
+            </div>
+            <div class="sidebar-info-row">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="18" rx="2" stroke="#999" stroke-width="1.75"/><path d="M16 2v4M8 2v4M3 10h18" stroke="#999" stroke-width="1.75" stroke-linecap="round"/></svg>
+              <span>{formatDate(post.publishedAt)}</span>
+            </div>
+            {heroCategoryLabel && (
+              <div class="sidebar-info-row">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z" stroke="#999" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/><circle cx="7" cy="7" r="1" fill="#999"/></svg>
+                <span>{heroCategoryLabel}</span>
+              </div>
+            )}
+          </div>
+        </div>
+
       </aside>
 
     </div>
   </section>
 
+
+  <!-- ═══════════════════════════════ RELATED ARTICLES ═══════════════════════════════ -->
+  {related.length > 0 && (
+    <section class="related-section">
+      <div class="related-wrap">
+        <div class="related-head">
+          <div class="related-heading">{t('blog.relatedArticles')}</div>
+          <a class="related-viewall" href={`/${lang}/blog`}>
+            {t('blog.viewAllArticles')}
+            <svg width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+
+        <div class="related-grid reveal">
+          {related.map(r => {
+            const pill = catPill(r.category);
+            const gradient = r.category ? CAT_GRADIENT[r.category] ?? CAT_GRADIENT.fundamentals : CAT_GRADIENT.fundamentals;
+            const tint = r.category ? CAT_TINT[r.category] ?? CAT_TINT.fundamentals : CAT_TINT.fundamentals;
+            return (
+              <a class="related-card" href={`/${lang}/blog/${r.slug.current}`}>
+                <div class="related-img-wrap" style={`background: ${gradient};`}>
+                  {r.coverImage?.asset?.url && (
+                    <img class="related-img" src={r.coverImage.asset.url} alt="" loading="lazy" />
+                  )}
+                  <div class="related-img-overlay" style={`background: linear-gradient(to top, ${tint} 0%, transparent 60%);`}></div>
+                </div>
+                <div class="related-body">
+                  {r.category && (
+                    <span class={`tag-pill tag-${pill}`} style="margin-bottom: 0.75rem;">{catLabel(r.category)}</span>
+                  )}
+                  <h3 class="related-title">{r.title}</h3>
+                  <span class="related-date">{formatDate(r.publishedAt)}</span>
+                </div>
+              </a>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  )}
+
 </BaseLayout>
 
 <style>
+  /* ── Reading progress bar ──────────────────────────────────────────── */
+  #read-progress {
+    position: fixed;
+    top: 0; left: 0;
+    height: 3px;
+    width: 100%;
+    background: linear-gradient(90deg, #6155F1, #3E81E5);
+    transform: scaleX(0);
+    transform-origin: left;
+    z-index: 200;
+    transition: transform 0.1s linear;
+    pointer-events: none;
+  }
+
+  /* ── Hero ──────────────────────────────────────────────────────────── */
+  .post-hero {
+    background:
+      radial-gradient(ellipse 80% 60% at 70% 0%, rgba(97, 85, 241, 0.1) 0%, transparent 55%),
+      radial-gradient(ellipse 40% 50% at 5% 100%, rgba(62, 129, 229, 0.08) 0%, transparent 50%),
+      #F5F2FF;
+    padding: 3rem 1.5rem 2.5rem;
+  }
+  .post-hero-inner { max-width: 1200px; margin: 0 auto; }
+
+  .post-breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1.75rem;
+    font-size: 0.8rem;
+    color: #999;
+    flex-wrap: wrap;
+  }
+  .post-breadcrumb a {
+    color: #999;
+    text-decoration: none;
+    transition: color 0.15s ease;
+  }
+  .post-breadcrumb a:hover { color: #6155F1; }
+  .post-breadcrumb a:focus-visible { outline: 2px solid #6155F1; outline-offset: 2px; border-radius: 4px; }
+  .post-breadcrumb-current { color: #6155F1; font-weight: 600; }
+
+  .post-hero-col { max-width: 800px; }
+
+  .post-hero-tags {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1.25rem;
+    flex-wrap: wrap;
+  }
+
+  .post-title {
+    font-family: 'Kanit', sans-serif;
+    font-size: clamp(1.75rem, 4vw, 2.75rem);
+    font-weight: 800;
+    color: #1C1C1C;
+    letter-spacing: -0.04em;
+    line-height: 1.15;
+    margin: 0 0 1.125rem 0;
+  }
+
+  .post-meta {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    flex-wrap: wrap;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(97, 85, 241, 0.12);
+  }
+  .post-author {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .post-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #6155F1, #3E81E5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .post-author-name {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #3C315B;
+  }
+  .post-meta-dim {
+    font-size: 0.8rem;
+    color: #999;
+  }
+
+  /* ── Tag pills (per-category color) ────────────────────────────────── */
+  .tag-pill {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.25rem 0.75rem;
+    border-radius: 100px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    background: #E2DFFE;
+    color: #6155F1;
+    text-decoration: none;
+    transition: background-color 0.15s ease;
+    white-space: nowrap;
+  }
+  .tag-purple { background: #E2DFFE; color: #6155F1; }
+  .tag-purple:hover { background: #d0cbfd; }
+  .tag-blue   { background: #EBF4FF; color: #3E81E5; }
+  .tag-blue:hover   { background: #d5e7ff; }
+  .tag-dark   { background: #F4F2F4; color: #3C315B; }
+  .tag-dark:hover   { background: #e9e6e9; }
+  .tag-green  { background: #F0FFF4; color: #2D8653; }
+  .tag-green:hover  { background: #d8f5e1; }
+  .tag-amber  { background: #FFF4E2; color: #B07D2E; }
+  .tag-amber:hover  { background: #ffe7c2; }
+
+  /* ── Layout ────────────────────────────────────────────────────────── */
+  .post-section { padding: 3rem 1.5rem 5rem; }
+  .post-layout {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 280px;
+    gap: 3.5rem;
+    align-items: start;
+  }
+  .post-sidebar {
+    position: sticky;
+    top: 88px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  /* ── Hero image ────────────────────────────────────────────────────── */
+  .hero-img {
+    border-radius: 18px;
+    overflow: hidden;
+    height: 420px;
+    margin-bottom: 2.5rem;
+    position: relative;
+  }
+  .hero-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .hero-img-overlay { position: absolute; inset: 0; }
+  .hero-img-tint {
+    position: absolute;
+    inset: 0;
+    background: rgba(97, 85, 241, 0.15);
+    mix-blend-mode: multiply;
+  }
+
+  /* ── Article body typography ───────────────────────────────────────── */
+  .article-body :global(h2) {
+    font-family: 'Kanit', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #1C1C1C;
+    letter-spacing: -0.03em;
+    line-height: 1.2;
+    margin-top: 2.5rem;
+    margin-bottom: 0.875rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(97, 85, 241, 0.1);
+  }
+  .article-body :global(h2:first-child) {
+    margin-top: 0;
+    padding-top: 0;
+    border-top: none;
+  }
+  .article-body :global(h3) {
+    font-family: 'Kanit', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #1C1C1C;
+    letter-spacing: -0.02em;
+    margin-top: 1.75rem;
+    margin-bottom: 0.625rem;
+  }
+  .article-body :global(p) {
+    font-size: 0.975rem;
+    line-height: 1.85;
+    color: #444;
+    margin-bottom: 1.125rem;
+  }
+  .article-body :global(ul),
+  .article-body :global(ol) {
+    padding-left: 1.375rem;
+    margin-bottom: 1.125rem;
+  }
+  .article-body :global(li) {
+    font-size: 0.975rem;
+    line-height: 1.8;
+    color: #444;
+    margin-bottom: 0.375rem;
+  }
+  .article-body :global(strong) { color: #1C1C1C; font-weight: 700; }
+  .article-body :global(a) {
+    color: #6155F1;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: color 0.15s ease;
+  }
+  .article-body :global(a:hover) { color: #4e44d4; }
+  .article-body :global(code) {
+    font-family: 'JetBrains Mono', 'Fira Code', monospace;
+    font-size: 0.85em;
+    background: #E2DFFE;
+    color: #3C315B;
+    padding: 0.15rem 0.45rem;
+    border-radius: 5px;
+  }
+  .article-body :global(blockquote) {
+    border-left: 3px solid #6155F1;
+    background: #F5F2FF;
+    border-radius: 0 12px 12px 0;
+    padding: 1.125rem 1.375rem;
+    margin: 1.5rem 0;
+    font-style: italic;
+    color: #3C315B;
+    font-size: 0.975rem;
+    line-height: 1.8;
+  }
+  .article-body :global(pre) {
+    background: #1C1C1C;
+    color: #e2e8f0;
+    padding: 1.25rem;
+    border-radius: 12px;
+    overflow-x: auto;
+    margin-bottom: 1.25rem;
+  }
+  .article-body :global(.article-figure) {
+    margin: 2rem 0;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .article-body :global(.article-figure img) {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  .article-body :global(.article-figure figcaption) {
+    font-size: 0.8rem;
+    color: #999;
+    padding: 0.5rem 0;
+    text-align: center;
+  }
+
+  /* ── Share row ─────────────────────────────────────────────────────── */
+  .share-row {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-top: 2.5rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(97, 85, 241, 0.1);
+    flex-wrap: wrap;
+  }
+  .share-row-label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #3C315B;
+  }
+  .share-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #3C315B;
+    background: #fff;
+    border: 1.5px solid rgba(97, 85, 241, 0.15);
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+  }
+  .share-btn:hover {
+    background: #EDE9FF;
+    border-color: rgba(97, 85, 241, 0.3);
+    color: #6155F1;
+  }
+  .share-btn:focus-visible { outline: 2px solid #6155F1; outline-offset: 2px; }
+  .share-btn:active { background: #d0cbfd; }
+
+  /* ── Sidebar cards ─────────────────────────────────────────────────── */
+  .sidebar-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 10px rgba(97, 85, 241, 0.08);
+  }
+  .sidebar-eyebrow {
+    font-family: 'Kanit', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #6155F1;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+  .toc-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.125rem;
+  }
+  .sidebar-link {
+    display: block;
+    padding: 0.45rem 0.875rem;
+    border-radius: 7px;
+    font-size: 0.845rem;
+    font-weight: 500;
+    color: #666;
+    text-decoration: none;
+    transition: background-color 0.15s ease, color 0.15s ease;
+  }
+  .sidebar-link:hover { background: #F5F2FF; color: #6155F1; }
+  .sidebar-link:focus-visible { outline: 2px solid #6155F1; outline-offset: 2px; }
+  .sidebar-link.active {
+    background: #E2DFFE;
+    color: #6155F1;
+    font-weight: 600;
+  }
+
+  /* ── Sidebar CTA card ──────────────────────────────────────────────── */
+  .sidebar-cta {
+    background: linear-gradient(135deg, #6155F1 0%, #3E81E5 100%);
+    border-radius: 16px;
+    padding: 1.5rem;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+  }
+  .sidebar-cta-blob {
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    width: 80px;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.07);
+    border-radius: 50%;
+    pointer-events: none;
+  }
+  .sidebar-cta-title {
+    font-family: 'Kanit', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    position: relative;
+  }
+  .sidebar-cta-body {
+    font-size: 0.825rem;
+    opacity: 0.88;
+    line-height: 1.6;
+    margin: 0 0 1.125rem 0;
+    position: relative;
+  }
+  .sidebar-cta-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.375rem;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    color: #fff;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.825rem;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-radius: 12px;
+    text-decoration: none;
+    position: relative;
+    transition: background-color 0.18s ease;
+  }
+  .sidebar-cta-btn:hover { background: rgba(255, 255, 255, 0.3); }
+  .sidebar-cta-btn:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
+  .sidebar-cta-btn:active { background: rgba(255, 255, 255, 0.4); }
+
+  /* ── Sidebar info card ─────────────────────────────────────────────── */
+  .sidebar-info { padding: 1.375rem; }
+  .sidebar-info-eyebrow {
+    font-family: 'Kanit', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #3C315B;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    margin-bottom: 0.875rem;
+  }
+  .sidebar-info-rows {
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+  }
+  .sidebar-info-row {
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+    font-size: 0.825rem;
+    color: #666;
+  }
+
+  /* ── Related articles ──────────────────────────────────────────────── */
+  .related-section { padding: 0 1.5rem 5rem; }
+  .related-wrap { max-width: 1200px; margin: 0 auto; }
+  .related-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.75rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .related-heading {
+    font-family: 'Kanit', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #1C1C1C;
+    letter-spacing: -0.02em;
+  }
+  .related-viewall {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #6155F1;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    transition: gap 0.18s ease;
+  }
+  .related-viewall:hover { gap: 0.625rem; }
+  .related-viewall:focus-visible { outline: 2px solid #6155F1; outline-offset: 3px; border-radius: 4px; }
+
+  .related-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+  .related-card {
+    background: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(97, 85, 241, 0.07);
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: transform 0.2s cubic-bezier(.22, 1, .36, 1), box-shadow 0.2s ease;
+  }
+  .related-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 28px rgba(97, 85, 241, 0.14);
+  }
+  .related-card:focus-visible { outline: 2px solid #6155F1; outline-offset: 3px; border-radius: 16px; }
+  .related-img-wrap {
+    height: 160px;
+    overflow: hidden;
+    position: relative;
+  }
+  .related-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s cubic-bezier(.22, 1, .36, 1);
+  }
+  .related-card:hover .related-img { transform: scale(1.06); }
+  .related-img-overlay {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+  }
+  .related-body { padding: 1.25rem; }
+  .related-title {
+    font-family: 'Kanit', sans-serif;
+    font-size: 0.975rem;
+    font-weight: 700;
+    color: #1C1C1C;
+    letter-spacing: -0.02em;
+    line-height: 1.3;
+    margin: 0 0 0.5rem 0;
+  }
+  .related-date {
+    font-size: 0.775rem;
+    color: #999;
+  }
+
+  /* ── Responsive ────────────────────────────────────────────────────── */
+  @media (max-width: 1024px) {
+    .post-layout { grid-template-columns: 1fr; gap: 2.5rem; }
+    .post-sidebar { display: none; }
+  }
   @media (max-width: 900px) {
-    .article-grid { grid-template-columns: 1fr !important; }
+    .related-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 640px) {
+    .related-grid { grid-template-columns: 1fr; }
+    .hero-img { height: 220px; }
+    .post-section { padding: 2.5rem 1.5rem 3.5rem; }
+    .post-meta { gap: 0.875rem; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    #read-progress { transition: none; }
+    .related-card:hover { transform: none; }
+    .related-card:hover .related-img { transform: none; }
   }
 </style>
 
 <script>
-  const bar = document.getElementById('progress-bar');
+  // ── Reading progress bar (scaleX, not width) ───────────────────────
+  const bar = document.getElementById('read-progress');
   if (bar) {
-    window.addEventListener('scroll', () => {
+    const onScroll = () => {
       const doc = document.documentElement;
-      const scrolled = doc.scrollTop / (doc.scrollHeight - doc.clientHeight);
-      bar.style.transform = 'scaleX(' + scrolled + ')';
-    });
+      const max = doc.scrollHeight - doc.clientHeight;
+      const pct = max > 0 ? doc.scrollTop / max : 0;
+      bar.style.transform = `scaleX(${pct})`;
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
   }
 
+  // ── Copy link button ──────────────────────────────────────────────
   const copyBtn = document.getElementById('copy-link-btn');
   if (copyBtn) {
     copyBtn.addEventListener('click', () => {
-      navigator.clipboard.writeText(window.location.href);
-      const orig = (copyBtn as HTMLElement).dataset.copy ?? 'Copy link';
-      (copyBtn as HTMLElement).textContent = (copyBtn as HTMLElement).dataset.copied ?? 'Copied!';
-      setTimeout(() => { (copyBtn as HTMLElement).textContent = orig; }, 2000);
+      const label = copyBtn.querySelector('.copy-label') as HTMLElement | null;
+      navigator.clipboard.writeText(window.location.href).then(() => {
+        if (!label) return;
+        const orig = (copyBtn as HTMLElement).dataset.copy ?? label.textContent ?? 'Copy link';
+        label.textContent = (copyBtn as HTMLElement).dataset.copied ?? 'Copied!';
+        setTimeout(() => { label.textContent = orig; }, 2000);
+      });
     });
+  }
+
+  // ── Scroll-spy TOC ─────────────────────────────────────────────────
+  const tocLinks = document.querySelectorAll<HTMLAnchorElement>('#toc-nav .sidebar-link');
+  const headingEls: HTMLElement[] = [];
+  tocLinks.forEach(link => {
+    const href = link.getAttribute('href') || '';
+    if (!href.startsWith('#')) return;
+    const target = document.getElementById(href.slice(1));
+    if (target instanceof HTMLElement) headingEls.push(target);
+  });
+  if (headingEls.length > 0) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          tocLinks.forEach(l => l.classList.remove('active'));
+          const active = document.querySelector(`#toc-nav .sidebar-link[href="#${entry.target.id}"]`);
+          if (active) active.classList.add('active');
+        }
+      });
+    }, { rootMargin: '-20% 0px -70% 0px' });
+    headingEls.forEach(h => observer.observe(h));
+  }
+
+  // ── Reveal animation ───────────────────────────────────────────────
+  const revealEls = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          revealObserver.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    revealEls.forEach(el => revealObserver.observe(el));
+  } else {
+    revealEls.forEach(el => el.classList.add('visible'));
   }
 </script>

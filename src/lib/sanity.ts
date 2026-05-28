@@ -91,11 +91,37 @@ export async function getPostBySlug(slug: string, lang: string): Promise<SanityP
   if (!client) return null;
   return client.fetch(
     `*[_type == "post" && slug.current == $slug && language == $lang][0] {
-      _id, title, slug, publishedAt, excerpt, tags, articleNumber, language, body,
+      _id, title, slug, publishedAt, excerpt, tags, category, articleNumber, language, body,
       coverImage { asset -> { url } }
     }`,
     { slug, lang }
   );
+}
+
+export async function getRelatedPosts(currentSlug: string, lang: string, category: string | undefined, limit = 3): Promise<SanityPost[]> {
+  const client = getClient();
+  if (!client) return [];
+  // Prefer same-category posts; fall back to other recent posts in the same language.
+  const sameCat = category
+    ? await client.fetch(
+        `*[_type == "post" && language == $lang && category == $category && slug.current != $currentSlug] | order(publishedAt desc, articleNumber asc) [0...$limit] {
+          _id, title, slug, publishedAt, excerpt, tags, category, articleNumber, language,
+          coverImage { asset -> { url } }
+        }`,
+        { lang, category, currentSlug, limit }
+      )
+    : [];
+  if (sameCat.length >= limit) return sameCat;
+  const remaining = limit - sameCat.length;
+  const fillerSlugs = [currentSlug, ...sameCat.map((p: SanityPost) => p.slug.current)];
+  const fillers = await client.fetch(
+    `*[_type == "post" && language == $lang && !(slug.current in $excluded)] | order(publishedAt desc, articleNumber asc) [0...$limit] {
+      _id, title, slug, publishedAt, excerpt, tags, category, articleNumber, language,
+      coverImage { asset -> { url } }
+    }`,
+    { lang, excluded: fillerSlugs, limit: remaining }
+  );
+  return [...sameCat, ...fillers];
 }
 
 export async function getAllPostSlugs(): Promise<{ slug: string; lang: string }[]> {

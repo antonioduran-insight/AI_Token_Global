@@ -399,7 +399,71 @@ Compare every Astro page against its archive HTML reference (`archive/`) and fix
 - Category pill colour map (`CAT_PILL`) covers all 7 schema categories; archive has hardcoded HTML per post — same visual output, data-driven
 - Filter tab list only shows categories that have at least one post (existing behaviour preserved) — archive's static list shows all categories regardless
 
-### 13. Blog Post (`blog/[slug].astro`) — NOT STARTED
+### 13. Blog Post (`blog/[slug].astro`) — DONE
+
+**Issues found and fixed:**
+- Hero was a dark gradient `linear-gradient(40deg, #2A1F5C, #0D1547)` with `.hero-bg` goo blobs + white text → rewrote as a LIGHT hero `.post-hero` with archive's radial gradients (`radial-gradient(80% 60% at 70% 0%, rgba(97,85,241,0.1) 0%, transparent 55%), radial-gradient(40% 50% at 5% 100%, rgba(62,129,229,0.08) 0%, transparent 50%), #F5F2FF`); padding `3rem 1.5rem 2.5rem`
+- Hero used a single 800px column → switched to `1200px` outer wrapper with an inner `.post-hero-col` 800px column matching archive
+- Breadcrumb was 2-level (Home → post.title in long form, white-text on dark hero) → 3-level Home → Blog → CATEGORY using the post's `category` field; colors `#999` with `#6155F1` 600 final span and `#CCC` chevrons matching archive
+- Hero had no tag pill row → added `.post-hero-tags` row above title with category pill (per-category color from `CAT_PILL`) + first user tag (`tag-blue` variant), each clickable to `/blog`
+- Tag pill styles inlined as page-local `.tag-pill` + 5 colour variants (`tag-purple`/`tag-blue`/`tag-dark`/`tag-green`/`tag-amber`) matching archive: padding `0.25rem 0.75rem`, radius `100px`, font-size `0.72rem` 700 letter-spacing `0.04em` uppercase, with hover bg darken
+- Title color was `#fff` → `#1C1C1C` matching the light hero
+- Title margin-bottom was `1rem` → `1.125rem` matching archive
+- Hero showed `post.excerpt` paragraph between title and meta → removed (archive has no excerpt in hero; title goes straight to meta row)
+- Meta row was a single date span (`{formatDate(post.publishedAt)}`) → rebuilt with archive's full meta: 32×32 gradient avatar (purple→blue) + user-icon SVG, "AI Token King Editorial" 0.85rem 600 #3C315B, date #999, dot separator, `{n} min read`, dot separator, category — with `padding-bottom: 1.5rem; border-bottom: 1px solid rgba(97,85,241,0.12)` to match archive's underline separator
+- Reading time was not computed → added `countWords()` helper that walks Portable Text blocks (`block.children[].text`) and divides by 225 wpm; minimum 1 minute. Surfaced via new `blog.minRead` i18n key (`{n} min read` / `{n} min de lectura` / `{n} menit baca`)
+- Author label hardcoded → moved to new i18n key `blog.author` ("AI Token King Editorial" / "Equipo Editorial de AI Token King" / "Tim Editorial AI Token King")
+- Hero/cover image was an auto-height `<img>` inside a `border-radius: 16px` wrapper → rewrote as `.hero-img` (420px fixed height, 18px radius, overflow hidden, 2.5rem mb), with category-tinted gradient bg fallback, an `img` cover layer (object-fit: cover), a `linear-gradient(to top, <catTint> 0%, transparent 50%)` overlay, and an additional `rgba(97,85,241,0.15)` mix-blend-multiply tint matching archive's 3-layer treatment
+- Article body used `.prose` (h2 `2rem 0 0.75rem`, p `1rem`/`1.8`/`#3C315B mb 1.25rem`) → rewrote as `.article-body` with archive-exact typography: h2 `1.5rem` 800 Kanit `-0.03em` lh 1.2 mt `2.5rem` mb `0.875rem` pt `2rem` with `border-top: 1px solid rgba(97,85,241,0.1)` (and `:global(h2:first-child)` resets these three for the leading section); h3 `1.1rem` 700 `-0.02em` mt `1.75rem` mb `0.625rem`; p `0.975rem` lh `1.85` #444 mb `1.125rem`; li `0.975rem` lh `1.8` #444 mb `0.375rem`; strong #1C1C1C 700; a #6155F1 underline `text-underline-offset: 3px` with hover #4e44d4
+- Inline code used `#F5F2FF`/`#6155F1` background → swapped to archive's `#E2DFFE`/`#3C315B` with JetBrains Mono/Fira Code font-family fallback, padding `0.15rem 0.45rem` radius `5px`
+- Blockquote was just a `border-left: 3px solid #6155F1` with `padding-left: 1.25rem` → full archive treatment: `border-left: 3px solid #6155F1`, `background: #F5F2FF`, `border-radius: 0 12px 12px 0`, padding `1.125rem 1.375rem`, italic `#3C315B`, font-size `0.975rem`, line-height `1.8`
+- Code block (`pre`) styling kept dark `#1C1C1C` bg matching archive (was already correct, just scoped under `.article-body :global(pre)`)
+- Sanity image rendering produced an inline-styled `<figure>` with hardcoded margin/radius → switched to `.article-figure` class (margin `2rem 0`, radius `12px`, overflow hidden); figcaption `0.8rem #999` center-aligned matching archive
+- Article body h2/h3 had no anchor IDs → added a custom `block` renderer in `@portabletext/to-html` (`h2: ({ value, children }) => '<h2 id="..." >...'`) that walks `value.children[].text` to build a deduplicated slug. Same logic runs twice: once to collect headings for the TOC list (passed to the sidebar), and once during PortableText render — `usedSlugs` is reset between passes so both produce matching IDs
+- Slugifier supports Unicode (`/[^\p{L}\p{N}]+/gu`) so non-Latin titles still produce stable anchors; duplicates get `-2`, `-3` suffixes
+- Share row used `btn-ghost` (transparent, no border) and only Twitter + LinkedIn → swapped to custom `.share-btn` class (white bg, `1.5px solid rgba(97,85,241,0.15)` border, padding `0.5rem 1rem`, radius `8px`, font-size `0.8rem` 600 #3C315B), 3 buttons: X/Twitter, LinkedIn, Copy Link (with link-2 SVG). Hover bg `#EDE9FF` border `rgba(97,85,241,0.3)` color `#6155F1`
+- Share row had `gap: 1rem` and `margin-top: 3rem` → `gap: 0.75rem` and `margin-top: 2.5rem` `padding-top: 2rem` `border-top: 1px solid rgba(97,85,241,0.1)` matching archive
+- Share row label "Share:" (`blog.share`) → updated to "Share this article:" / "Comparte este artículo:" / "Bagikan artikel ini:" matching archive
+- Copy-link button stored its labels in `dataset.copy`/`dataset.copied` but replaced the full `textContent` (clobbering the icon SVG) → split into `<svg> + <span class="copy-label">` so the JS toggles only the span, preserving the icon
+- Back-to-Blog button removed: not present in archive (the share row + sidebar replace its function)
+- Sidebar was 3 cards: Published date, Tags, CTA → rebuilt as 3 archive cards: TOC ("On This Page"), CTA ("Try AI Token King"), Article Info ("Article Info")
+- Sidebar position was `top: 84px` → `top: 88px` matching archive
+- Sidebar cards used `.card-elevated` (20px radius, dual shadow) → switched to local `.sidebar-card` (white, 16px radius, padding `1.5rem` for TOC, `1.375rem` for Info, single shadow `0 2px 10px rgba(97,85,241,0.08)`)
+- Sidebar eyebrow labels — old card titles were Kanit `0.875rem` 700 `#1C1C1C` normal-case → archive's mix:
+  - TOC: `.sidebar-eyebrow` 0.72rem 700 #6155F1 uppercase letter-spacing `0.07em`
+  - Article Info: `.sidebar-info-eyebrow` 0.75rem 700 #3C315B uppercase letter-spacing `0.04em`
+- TOC `.sidebar-link` styles: padding `0.45rem 0.875rem`, radius 7px, font-size `0.845rem` 500 #666, with hover bg `#F5F2FF`/color `#6155F1` and active state bg `#E2DFFE`/color `#6155F1`/weight 600 — matching archive
+- First TOC link wasn't auto-active → added `active` class to first heading on render so the highlight shows before scroll-spy kicks in
+- Scroll-spy uses `IntersectionObserver` with `rootMargin: '-20% 0px -70% 0px'` to swap active class as user scrolls — no max-height/width transitions per CLAUDE.md rules
+- Sidebar CTA gradient and decoration: kept `linear-gradient(135deg, #6155F1, #3E81E5)`, added `.sidebar-cta-blob` decorative 80×80 white circle at top-right `-20px -20px` matching archive
+- CTA title was `1rem` 700 white, body `0.85rem` opacity 0.8 → kept title at 1rem; body resized to `0.825rem` opacity `0.88` line-height `1.6` matching archive
+- CTA copy "Compare models, calculate costs, and manage your AI usage — free." → updated `blog.tryCopy` to archive's "Compare live pricing across 60+ models and calculate your exact token costs before committing." across en/es/id
+- CTA button was an `inline-flex` `.btn-primary` override with white bg + #6155F1 text → replaced with `.sidebar-cta-btn` (`width: 100%`, `justify-content: center`, bg `rgba(255,255,255,0.2)`, border `1px solid rgba(255,255,255,0.35)`, color #fff, no shadow, hover bg `rgba(255,255,255,0.3)`) matching archive
+- CTA button text "Get Started" (`blog.tryButton`) → updated to "Compare Models" / "Comparar Modelos" / "Bandingkan Model" across en/es/id, with the link pointing to `/${lang}/api-compare` (was external `aitokenking.com.tw/home`)
+- Article Info card was missing → added new `.sidebar-info` card with 3 rows: clock SVG + reading time, calendar SVG + date, tag SVG + category. Rows are `0.825rem #666` with `0.625rem` gap, icons `#999` 1.75 stroke
+- Related Articles section was completely missing → built from new `getRelatedPosts(currentSlug, lang, category, 3)` Sanity helper that prefers same-category posts and falls back to most recent
+- Related grid uses `repeat(3, 1fr)` `gap: 1.5rem`, each `.related-card` is white 16px radius `box-shadow: 0 2px 12px rgba(97,85,241,0.07)`, hover `translateY(-3px)` deeper shadow, with category-tinted `.related-img-wrap` (160px height), category pill, Kanit `0.975rem` 700 title, `0.775rem #999` date — matching archive's hardcoded structure
+- Related card image hover-zoom (`transform: scale(1.06)` on `:hover`) added matching archive
+- Reading progress bar was `top: 64px z-index: 99` (would slide under the sticky nav) → moved to `top: 0 z-index: 200` matching archive; kept `transform: scaleX()` + `transform-origin: left` per CLAUDE.md rules (archive uses `width %` but the project standard is `scaleX`)
+- Post layout was `grid-template-columns: 1fr 280px gap: 3.5rem` → matches archive (verified via Puppeteer: `864px 280px` `gap: 56px`)
+- Responsive breakpoint moved from 900px to 1024px to match the rest of the Astro site's sidebar-collapse breakpoint (project standard); also collapses `.related-grid` to 2 cols at 900px and 1 col at 640px (with `hero-img` height reducing to 220px at 640px) matching archive
+- Sanity `getPostBySlug` query didn't include `category` → added `category` to the GROQ projection so it's available for the breadcrumb, hero pill, sidebar info row, and `getRelatedPosts`
+- Added `getRelatedPosts` Sanity helper: 1st query fetches same-category posts ordered by `publishedAt desc, articleNumber asc` excluding the current slug; if fewer than `limit` found, a 2nd query fills with other recent posts in the same language, excluding the current slug and the already-picked posts
+- Added 6 new i18n keys across en/es/id: `blog.author`, `blog.minRead`, `blog.articleInfo`, `blog.relatedArticles`, `blog.viewAllArticles`
+- Updated 3 existing i18n keys across en/es/id: `blog.share` ("Share:" → "Share this article:"), `blog.tryCopy` (rewritten to archive's "Compare live pricing..."), `blog.tryButton` ("Get Started" → "Compare Models")
+
+**Not changed (intentional):**
+- Reading progress bar uses `transform: scaleX()` (archive uses `width %`) — required by CLAUDE.md responsive rules ("transform: scaleX() + transform-origin: left, not width")
+- `.reveal` scroll-animation classes — Astro improvement over archive's `.fade-up`-only scheme
+- 1024px sidebar-collapse breakpoint (archive uses 1060px) — matches project responsive system used by every other Astro page
+- "Back to Blog" / generic share row label dropped — archive doesn't show a back button in the article body (uses breadcrumb + share); keeping `blog.backToBlog` key in case it's reused elsewhere
+- Author hardcoded as "AI Token King Editorial" (matches archive's hardcoded byline) — Sanity `post` schema has no `author` field; adding one would be schema work out of scope here
+- Reading time computed client-side from `body` word count at build time (225 wpm) rather than via a stored Sanity field — archive hardcodes "8 min read" with no schema field either
+- Headings list for TOC built at build time from `body` blocks with `style === 'h2'` — h3s are skipped to avoid noisy nested entries in the sidebar (archive shows only h2s)
+- Code-block renderer kept dark `#1C1C1C` bg (matches archive) — Sanity rarely supplies these but the styling is preserved for when content authors do
+- Related cards use category gradient fallback bg + `mix-blend-multiply` cover image overlay — uses same `CAT_PILL`/`CAT_GRADIENT`/`CAT_TINT` lookups as the blog index page for consistency
+- Sanity Portable Text image renderer outputs `<figure class="article-figure">` rather than inline styles — keeps the page-local `.article-body :global(.article-figure)` CSS in charge of layout (margin/radius/figcaption)
+- Slugifier output may differ from archive's hand-authored anchors (e.g. archive uses `#what-is-a-token`, ours generates `#what-is-an-ai-token`) — anchors aren't a visible delta; what matters is that the TOC links resolve to the rendered headings, which they do
 
 ---
 
