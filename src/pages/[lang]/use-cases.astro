@@ -38,7 +38,8 @@ function boldLeadingQuestion(blocks: any[] | undefined): any[] | undefined {
     if (bIdx !== 0 || block._type !== 'block' || !block.children?.length) return block;
     const first = block.children[0];
     if (first._type !== 'span' || first.marks?.length) return block;
-    const m = (first.text ?? '').match(/^(.+?\?)(\s+)(.*)$/s);
+    // Match the leading question across writing systems: ASCII `?`, CJK fullwidth `？`, Arabic `؟`, Greek `;`.
+    const m = (first.text ?? '').match(/^(.+?[?？؟;])(\s+)(.*)$/s);
     if (!m) return block;
     const [, head, gap, tail] = m;
     return {
