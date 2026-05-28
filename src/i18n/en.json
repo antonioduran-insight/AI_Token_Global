@@ -278,6 +278,11 @@
     "heroCtaPrimary": "See the Solution",
     "heroCtaSecondary": "View Enterprise Proposal"
   },
+  "useCasesPage": {
+    "commonDirectionsLabel": "Common directions:",
+    "footerCtaPrimary": "Compare Models",
+    "footerCtaSecondary": "Beginners Guide"
+  },
   "userGuide": {
     "featuresFallback": "Core Features",
     "modelsFallback": "Supported AI Models",

@@ -278,6 +278,11 @@
     "heroCtaPrimary": "Ver la Solución",
     "heroCtaSecondary": "Ver Propuesta Empresarial"
   },
+  "useCasesPage": {
+    "commonDirectionsLabel": "Direcciones comunes:",
+    "footerCtaPrimary": "Comparar Modelos",
+    "footerCtaSecondary": "Guía para Principiantes"
+  },
   "userGuide": {
     "featuresFallback": "Características Principales",
     "modelsFallback": "Modelos de IA Compatibles",

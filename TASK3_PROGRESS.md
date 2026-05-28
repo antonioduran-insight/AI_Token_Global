@@ -251,7 +251,36 @@ Compare every Astro page against its archive HTML reference (`archive/`) and fix
 - Hero pointer blob (archive's `.blob-pointer` mousemove follower) not added — Astro's `.hero-bg-canvas` already has 5 animated blobs, and the project-wide hero pattern has no mouse follower
 - PortableText rendering for Sanity content (FAQ answers) vs archive's hardcoded text
 - Calc i18n init script uses `define:vars` for compile-time injection of summary strings, vs archive's hardcoded English literals — needed for the calculator to update its summary in es/id correctly
-### 10. Use Cases (`use-cases.astro`) — NOT STARTED
+### 10. Use Cases (`use-cases.astro`) — DONE
+
+**Issues found and fixed:**
+- Hero was centered (`text-align:center; margin:0 auto`) → changed to left-aligned with 1200px outer wrapper and inner `max-width:760px` text column matching archive
+- Hero was missing breadcrumb → added "Home → AI Token Use Cases" row (rgba(255,255,255,0.5) text, 0.8rem) before section-label, with `margin-bottom:1.75rem`
+- Hero subtitle had `margin:0 auto` (centered) → changed to `margin-bottom:0.625rem` (10px) matching archive's left-aligned layout
+- Hero filter id was `hero-goo` → changed to `uc-page-goo` so it doesn't collide with other pages
+- BaseLayout was missing `activePage` → set `activePage="use-cases"` so the top-nav "Use Cases" link highlights
+- Cards grid: was `1fr 1fr 1fr` with `gap:1.25rem` and no `margin-bottom` → switched to `repeat(3,1fr)` with `gap:1.5rem` and `margin-bottom:3rem` matching archive
+- Card class: was `card-elevated` (project default, no hover lift) → switched to page-local `.use-case-card` (white bg, 20px radius, archive-exact box-shadow `0 4px 20px rgba(97,85,241,0.09), 0 1px 4px rgba(0,0,0,0.05)`, hover `translateY(-5px)` with deeper shadow)
+- Card padding: was `1.5rem 1.625rem` directly on outer → moved to inner div with archive's exact `1.625rem 1.75rem 1.375rem` padding
+- Card header: was h2 stacked below a 40×40 box with just a colored dot → restructured as flex row (gap 0.75rem, mb 1.125rem) containing 44×44 gradient icon-box with white SVG + h3 title; h3 is now `<h3>` (was `<h2>`), with `line-height:1.25` and `margin:0` (in-row alignment)
+- Icon box was `40×40` `rgba(color,0.094)` flat bg with a small colored circle dot, no SVG → upsized to `44×44` `border-radius:12px` with 9 unique gradient pairs and 9 unique white-stroke SVGs (clipboard, question circle, edit-pencil, social-f, chat-bubble, code-brackets, translate, image, video) matching archive cards
+- Card description: `line-height:1.7`/`mb:0.625rem` → `line-height:1.75`/`mb:1.125rem` matching archive
+- Common directions row: was a top-border thin line (1px solid rgba(accent,0.125)) under the description → replaced with full colored callout band `border-radius:10px` `padding:0.75rem 1rem` with per-card bg (F5F2FF / EBF4FF / E0FAF9 / FEF3C7 / EBF4FF / F5F2FF / E0FAF9 / FFF1F2 / F5F2FF) + uppercase label (0.72rem 700 letter-spacing 0.05em in accent color) followed by body text (0.82rem #3C315B) matching archive's 9 distinct callout color schemes
+- Per-card accent color used by callout label: hardcoded `CARD_VISUALS` array (purple/blue/teal/amber/blue/purple/teal/rose/purple) matching archive — card #4 uses `#D97706` for the label color on the amber `#FEF3C7` bg (vs the gradient's `#F59E0B → #F43F5E`) per archive
+- Section padding: `3rem 1.5rem 4rem` + separate footer section `0 1.5rem 4rem` → unified into single `3rem 1.5rem 5rem` section wrapping both cards + footer note, matching archive
+- Footer note: was `padding:1.5rem 1.75rem` `max-width:800px` no CTA buttons no text-align → changed to `padding:1.625rem 2rem` `max-width:820px` `text-align:center` `margin:0 auto 3.5rem` with a 2-button CTA row below the prose (`btn-primary` "Compare Models" + `btn-secondary` "Beginners Guide" 0.875rem with `gap:0.875rem` `margin-top:1.25rem` `justify-content:center`)
+- Footer note prose: `0.925rem #3C315B lh 1.8 margin-bottom 0.875rem` (with `:last-child` reset) → scoped `.footer-note .prose-article p` to `0.925rem #3C315B lh 1.8 margin:0` (single paragraph, no trailing margin) matching archive's `<p style="margin:0;">`
+- Footer note strong: `color:#1C1C1C` matches archive — kept (removed redundant inline `style="font-weight:700;color:#1C1C1C;"` from `pt()` helper since the scoped CSS already covers it)
+- `.uc-grid` class → renamed `.cases-grid` matching archive
+- Added 3 new i18n keys across en/es/id under new `useCasesPage` section: `commonDirectionsLabel`, `footerCtaPrimary`, `footerCtaSecondary`
+
+**Not changed (intentional):**
+- `.reveal` scroll-animation classes — Astro improvement over archive's `.fade-up`-only scheme
+- Per-card animation delays (`animation-delay: 0.06s` on cards 2/5/8 etc.) — these were noops in archive (`.reveal` uses `transition`, not `animation`), so omitted in Astro
+- 900px / 640px breakpoints for cases-grid collapse — matches project responsive system (archive uses 768px → 1fr; project uses two-step 900px → 1fr 1fr → 640px → 1fr for tablets)
+- Hero pointer blob (archive's `.blob-pointer` mousemove follower) not added — Astro's `.hero-bg-canvas` already has 5 animated blobs, and the project-wide hero pattern has no mouse follower
+- PortableText rendering for Sanity `footerNoteBody` vs archive's hardcoded text — dynamic content
+- Inline `style="font-weight:700;color:#1C1C1C;"` removed from `pt()` strong markdef — scoped `.footer-note .prose-article strong` rule now handles it without specificity collisions
 ### 11. User Guide (`user-guide.astro`) — NOT STARTED
 ### 12. Blog Index (`blog/index.astro`) — NOT STARTED
 ### 13. Blog Post (`blog/[slug].astro`) — NOT STARTED

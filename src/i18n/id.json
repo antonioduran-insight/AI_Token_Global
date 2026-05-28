@@ -278,6 +278,11 @@
     "heroCtaPrimary": "Lihat Solusinya",
     "heroCtaSecondary": "Lihat Proposal Enterprise"
   },
+  "useCasesPage": {
+    "commonDirectionsLabel": "Arah umum:",
+    "footerCtaPrimary": "Bandingkan Model",
+    "footerCtaSecondary": "Panduan Pemula"
+  },
   "userGuide": {
     "featuresFallback": "Fitur Utama",
     "modelsFallback": "Model AI yang Didukung",
