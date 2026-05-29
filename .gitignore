@@ -35,3 +35,6 @@ scripts/data/articles-batch-*.json
 
 # translation pipeline (intern: fetched English + translated output + reports)
 translation/
+
+# per-task progress docs (kept local — not part of the deliverable)
+TASK*_PROGRESS.md
