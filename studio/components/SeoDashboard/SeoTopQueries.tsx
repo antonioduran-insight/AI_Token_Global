@@ -8,6 +8,7 @@ import { LocaleFilter, type LocaleFilterValue, filterByLocale, countByLocale } f
 import { SortableTable, type ColumnDef } from './SortableTable';
 import { useSortableData } from './lib/useSortableData';
 import { SectionHeader } from './SectionHeader';
+import { TopQueriesBar } from './charts/TopQueriesBar';
 
 const data: QueriesSnapshot = loadQueries();
 const LOCALE_COUNTS = countByLocale(data.rows);
@@ -89,6 +90,8 @@ export function SeoTopQueries() {
         totalCount={data.rows.length}
         countNoun="queries"
       />
+      <TopQueriesBar rows={data.rows} topN={10} />
+
       <Flex align="center" gap={3} wrap="wrap">
         <LocaleFilter value={locale} onChange={setLocale} counts={LOCALE_COUNTS} />
       </Flex>

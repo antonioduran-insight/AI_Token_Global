@@ -14,6 +14,7 @@ import {
 import { SortableTable, type ColumnDef } from './SortableTable';
 import { useSortableData } from './lib/useSortableData';
 import { SectionHeader } from './SectionHeader';
+import { CtrVsPositionScatter } from './charts/CtrVsPositionScatter';
 
 const data: CtrOutliersSnapshot = loadCtrOutliers();
 const LOCALE_COUNTS = countByLocale(data.rows);
@@ -180,6 +181,8 @@ export function SeoCtrOutliers() {
           per {data.meta.rangeDays}-day window if CTR matches the curve.
         </Text>
       </Card>
+
+      <CtrVsPositionScatter rows={data.rows} />
 
       <Flex align="center" gap={3} wrap="wrap">
         <LocaleFilter value={locale} onChange={setLocale} counts={LOCALE_COUNTS} />

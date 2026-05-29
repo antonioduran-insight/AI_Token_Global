@@ -1,6 +1,6 @@
 import { Card, Stack, Heading, Text, Box, Flex } from '@sanity/ui';
 import type { OverviewSnapshot } from './lib/types';
-import { loadOverview } from './lib/loadSnapshot';
+import { loadOverview, loadQueries } from './lib/loadSnapshot';
 import {
   formatNumber,
   formatCompact,
@@ -9,8 +9,10 @@ import {
   computeDelta,
   type DeltaSummary,
 } from './lib/formatters';
+import { PositionDistribution } from './charts/PositionDistribution';
 
 const data: OverviewSnapshot = loadOverview();
+const queriesData = loadQueries();
 
 interface ScorecardSpec {
   label: string;
@@ -135,6 +137,8 @@ export function SeoOverview() {
           </Card>
         ))}
       </Box>
+
+      <PositionDistribution rows={queriesData.rows} />
     </Stack>
   );
 }

@@ -13,6 +13,7 @@ import {
   type DesirableDirection,
 } from './lib/formatters';
 import { SectionHeader } from './SectionHeader';
+import { LocaleDonut } from './charts/LocaleDonut';
 
 const data: LocaleSnapshot = loadLocaleAggregate();
 
@@ -210,6 +211,8 @@ export function SeoByLocale() {
   return (
     <Stack space={4}>
       <SectionHeader title="By Locale" rangeDays={data.meta.rangeDays} />
+
+      <LocaleDonut locales={data.locales} />
 
       <Grid>
         {/* Header row */}
