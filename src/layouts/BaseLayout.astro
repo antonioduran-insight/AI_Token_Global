@@ -1,6 +1,7 @@
 ---
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
+import CookieConsent from '../components/CookieConsent.astro';
 import '../styles/global.css';
 import { useTranslations, SUPPORTED_LANGS, LANG_META } from '../i18n/index';
 import type { Lang } from '../i18n/index';
@@ -46,6 +47,25 @@ const hreflangs = SUPPORTED_LANGS.map(l => ({
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Google tag (gtag.js) — GA4 measurement ID G-2KG5EVJQ22 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2KG5EVJQ22" is:inline></script>
+  <script is:inline>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    // Consent Mode v2 — default everything to 'denied' until the visitor chooses.
+    // GDPR-safe: no analytics/ad storage fires before consent. The cookie consent
+    // banner flips these to 'granted' via gtag('consent', 'update', …) on Accept.
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: 'denied',
+      wait_for_update: 500
+    });
+    gtag('js', new Date());
+    gtag('config', 'G-2KG5EVJQ22');
+  </script>
 
   <!-- Primary meta -->
   <title>{seoTitle}</title>
@@ -124,6 +144,7 @@ const hreflangs = SUPPORTED_LANGS.map(l => ({
     <slot />
   </main>
   <Footer lang={lang as Lang} />
+  <CookieConsent lang={lang as Lang} />
 
   <script is:inline>
     // Scroll reveal
@@ -176,6 +197,40 @@ const hreflangs = SUPPORTED_LANGS.map(l => ({
         tick();
       });
     }
+  </script>
+
+  <!-- GA4 custom events. gtag is consent-gated, so these only reach GA4 after the
+       visitor accepts in the cookie banner. One delegated listener covers the whole site. -->
+  <script is:inline>
+    (function () {
+      function track(name, params) {
+        if (typeof window.gtag === 'function') window.gtag('event', name, params || {});
+      }
+      document.addEventListener('click', function (e) {
+        // Declarative: any element with data-ga-event fires it on click.
+        // Other data-ga-* attributes become event params (data-ga-location -> location).
+        var el = e.target.closest('[data-ga-event]');
+        if (el) {
+          var params = {};
+          for (var i = 0; i < el.attributes.length; i++) {
+            var a = el.attributes[i];
+            if (a.name.indexOf('data-ga-') === 0 && a.name !== 'data-ga-event') {
+              params[a.name.slice(8).replace(/-/g, '_')] = a.value;
+            }
+          }
+          track(el.getAttribute('data-ga-event'), params);
+        }
+        // FAQ open — fire only when the clicked question just expanded. Runs after the
+        // page's own toggleFaq (which sets .open), so reading state here is reliable.
+        var q = e.target.closest('.faq-question');
+        if (q) {
+          var answer = q.nextElementSibling;
+          if (answer && answer.classList.contains('open')) {
+            track('faq_open', { question: (q.textContent || '').trim().slice(0, 100) });
+          }
+        }
+      });
+    })();
   </script>
 </body>
 </html>

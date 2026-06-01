@@ -15,6 +15,7 @@ import { tokenCalculatorPageSchema } from './schemas/tokenCalculatorPage';
 import { compliancePageSchema } from './schemas/compliancePage';
 import { homePageSchema } from './schemas/homePage';
 import { ArticleNumberFilter } from './components/ArticleNumberFilter';
+import { SeoDashboard } from './components/SeoDashboard';
 
 export default defineConfig({
   name: 'ai-token-global',
@@ -33,6 +34,17 @@ export default defineConfig({
           title: 'Find by #',
           icon: () => '🔢',
           component: ArticleNumberFilter,
+        },
+      ],
+    },
+    {
+      name: 'seo-insights',
+      tools: [
+        {
+          name: 'seo-insights',
+          title: 'SEO',
+          icon: () => '📊',
+          component: SeoDashboard,
         },
       ],
     },

@@ -13,6 +13,13 @@
     "getStarted": "Comenzar",
     "toggleMobileMenu": "Abrir menú móvil"
   },
+  "consent": {
+    "title": "Valoramos tu privacidad",
+    "body": "Usamos cookies para entender cómo se utiliza el sitio y poder mejorarlo. La analítica permanece desactivada hasta que aceptes.",
+    "privacyLink": "Política de Privacidad",
+    "accept": "Aceptar todo",
+    "reject": "Rechazar no esenciales"
+  },
   "footer": {
     "tagline": "La guía definitiva en español sobre tokens de IA, modelos y APIs. Gratis, siempre.",
     "learn": "Aprender",

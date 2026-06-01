@@ -38,3 +38,7 @@ translation/
 
 # per-task progress docs (kept local — not part of the deliverable)
 TASK*_PROGRESS.md
+
+# persisted puppeteer profile used for screenshotting authenticated Sanity Studio
+# (created locally by archive/sanity-auth-setup.mjs — never commit)
+archive/.puppeteer-profile/

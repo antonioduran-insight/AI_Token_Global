@@ -1,0 +1,21 @@
+{
+  "meta": {
+    "siteUrl": "aitoken.global",
+    "snapshotDate": "2026-05-29",
+    "rangeDays": 30,
+    "dataSource": "mock",
+    "mockNote": "Hand-crafted placeholder numbers in the realistic range for a ~4-month-old AI/content site. Automatically superseded by any file in studio/seo-data/gsc/overview-*.json. See studio/seo-data/README.md."
+  },
+  "current": {
+    "clicks": 8432,
+    "impressions": 287654,
+    "ctr": 0.02931,
+    "avgPosition": 18.4
+  },
+  "previous": {
+    "clicks": 7891,
+    "impressions": 271200,
+    "ctr": 0.02910,
+    "avgPosition": 19.1
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "meta": {
+    "siteUrl": "aitoken.global",
+    "snapshotDate": "2026-05-29",
+    "rangeDays": 30,
+    "dataSource": "mock",
+    "mockNote": "Per-locale aggregates designed to roughly sum to the Overview totals (~8,432 clicks, 287,654 impressions). EN dominates volume because it's the oldest content; ES and ID are growing faster as recent translations land."
+  },
+  "locales": [
+    {
+      "locale": "en",
+      "label": "English",
+      "current": { "clicks": 6800, "impressions": 228000, "ctr": 0.0298, "avgPosition": 17.9 },
+      "previous": { "clicks": 6342, "impressions": 215100, "ctr": 0.0295, "avgPosition": 18.6 },
+      "topQuery": "chatgpt api pricing",
+      "topPage": "/en/api/compare"
+    },
+    {
+      "locale": "es",
+      "label": "Español",
+      "current": { "clicks": 960, "impressions": 36000, "ctr": 0.0267, "avgPosition": 19.4 },
+      "previous": { "clicks": 861, "impressions": 32960, "ctr": 0.0261, "avgPosition": 19.8 },
+      "topQuery": "calculadora de tokens ia",
+      "topPage": "/es/calculadora-de-tokens"
+    },
+    {
+      "locale": "id",
+      "label": "Indonesia",
+      "current": { "clicks": 672, "impressions": 23654, "ctr": 0.0284, "avgPosition": 20.1 },
+      "previous": { "clicks": 583, "impressions": 21086, "ctr": 0.0276, "avgPosition": 20.6 },
+      "topQuery": "kalkulator token ai",
+      "topPage": "/id/kalkulator-token"
+    }
+  ]
+}

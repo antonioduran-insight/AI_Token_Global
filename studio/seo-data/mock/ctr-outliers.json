@@ -1,0 +1,29 @@
+{
+  "meta": {
+    "siteUrl": "aitoken.global",
+    "snapshotDate": "2026-05-29",
+    "rangeDays": 30,
+    "dataSource": "mock",
+    "mockNote": "Pages with actual CTR meaningfully below the typical CTR for their position. The component computes 'expected CTR' from an industry-standard position→CTR curve and surfaces pages with the biggest shortfall. Action: rewrite page title + meta description."
+  },
+  "criteria": "position <= 12 AND impressions >= 1500 AND (expected_ctr_at_position - actual_ctr) / expected_ctr_at_position >= 0.30",
+  "rows": [
+    { "page": "/en/api/compare", "locale": "en", "clicks": 144, "impressions": 8000, "ctr": 0.0180, "position": 5.2 },
+    { "page": "/en/blog/optimizing-ai-prompts", "locale": "en", "clicks": 119, "impressions": 5170, "ctr": 0.0230, "position": 5.8 },
+    { "page": "/en/blog/best-ai-for-creative-writing", "locale": "en", "clicks": 109, "impressions": 5190, "ctr": 0.0210, "position": 6.4 },
+    { "page": "/en/blog/openai-rate-limits-explained", "locale": "en", "clicks": 96, "impressions": 4800, "ctr": 0.0200, "position": 6.1 },
+    { "page": "/en/api/chatgpt-api", "locale": "en", "clicks": 91, "impressions": 4790, "ctr": 0.0190, "position": 7.2 },
+    { "page": "/en/blog/ai-token-optimization-tips", "locale": "en", "clicks": 78, "impressions": 4590, "ctr": 0.0170, "position": 7.0 },
+    { "page": "/es/precios-api-chatgpt", "locale": "es", "clicks": 71, "impressions": 4180, "ctr": 0.0170, "position": 6.8 },
+    { "page": "/en/blog/anthropic-ai-vs-openai", "locale": "en", "clicks": 57, "impressions": 3800, "ctr": 0.0150, "position": 8.1 },
+    { "page": "/id/perbandingan-model-ai", "locale": "id", "clicks": 60, "impressions": 3750, "ctr": 0.0160, "position": 7.5 },
+    { "page": "/en/blog/how-to-use-gemini-api", "locale": "en", "clicks": 53, "impressions": 3530, "ctr": 0.0150, "position": 8.7 },
+    { "page": "/en/blog/which-ai-for-code-review", "locale": "en", "clicks": 50, "impressions": 3333, "ctr": 0.0150, "position": 9.0 },
+    { "page": "/en/blog/claude-3-vs-gpt-4-developer-review", "locale": "en", "clicks": 42, "impressions": 3000, "ctr": 0.0140, "position": 9.5 },
+    { "page": "/en/ai-trends", "locale": "en", "clicks": 45, "impressions": 2813, "ctr": 0.0160, "position": 9.2 },
+    { "page": "/es/api/comparar", "locale": "es", "clicks": 35, "impressions": 2500, "ctr": 0.0140, "position": 8.4 },
+    { "page": "/en/blog/ai-api-for-customer-support", "locale": "en", "clicks": 28, "impressions": 2545, "ctr": 0.0110, "position": 10.2 },
+    { "page": "/en/use-cases", "locale": "en", "clicks": 28, "impressions": 2154, "ctr": 0.0130, "position": 10.2 },
+    { "page": "/en/compliance", "locale": "en", "clicks": 18, "impressions": 2000, "ctr": 0.0090, "position": 11.4 }
+  ]
+}

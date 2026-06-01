@@ -1,0 +1,255 @@
+---
+import { useTranslations } from '../i18n/index';
+import type { Lang } from '../i18n/index';
+
+export interface Props {
+  lang?: Lang;
+}
+const { lang = 'en' } = Astro.props;
+const t = useTranslations(lang);
+---
+
+<!--
+  Cookie consent banner — drives GA4 Consent Mode v2.
+  Consent defaults to 'denied' in BaseLayout's gtag init; this banner is the only
+  thing that flips it to 'granted'. Choice is remembered in localStorage so the
+  banner shows once. Starts hidden; the inline script reveals it only when no
+  prior choice exists, so there's no flash for returning visitors.
+-->
+<div
+  id="cookie-consent"
+  class="cookie-consent"
+  role="dialog"
+  aria-live="polite"
+  aria-label={t('consent.title')}
+>
+  <div class="cookie-consent__icon" aria-hidden="true">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+      <path d="M12 2a10 10 0 1 0 10 10 4 4 0 0 1-4-4 4 4 0 0 1-4-4 2 2 0 0 1-2-2Z" stroke="#6155F1" stroke-width="1.6" stroke-linejoin="round"/>
+      <circle cx="9" cy="11" r="1.1" fill="#6155F1"/>
+      <circle cx="14" cy="15" r="1.1" fill="#6155F1"/>
+      <circle cx="15" cy="9.5" r="0.9" fill="#3E81E5"/>
+    </svg>
+  </div>
+
+  <div class="cookie-consent__body">
+    <p class="cookie-consent__title">{t('consent.title')}</p>
+    <p class="cookie-consent__text">
+      {t('consent.body')}
+      <a href="#" class="cookie-consent__link">{t('consent.privacyLink')}</a>
+    </p>
+  </div>
+
+  <div class="cookie-consent__actions">
+    <button type="button" class="cookie-consent__btn cookie-consent__btn--ghost" data-consent="reject">
+      {t('consent.reject')}
+    </button>
+    <button type="button" class="cookie-consent__btn cookie-consent__btn--primary" data-consent="accept">
+      {t('consent.accept')}
+    </button>
+  </div>
+</div>
+
+<style>
+  .cookie-consent {
+    position: fixed;
+    left: 50%;
+    bottom: 1.5rem;
+    z-index: 300;
+    width: min(560px, calc(100vw - 2rem));
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.25rem 1.35rem;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border: 1px solid rgba(97, 85, 241, 0.14);
+    /* Layered, brand-tinted shadow — not a flat drop shadow. */
+    box-shadow:
+      0 18px 48px rgba(97, 85, 241, 0.18),
+      0 4px 14px rgba(60, 49, 91, 0.10),
+      0 1px 0 rgba(255, 255, 255, 0.6) inset;
+    /* Hidden by default; the inline script adds .is-visible when needed. */
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translate(-50%, 16px);
+    transition: opacity 0.32s cubic-bezier(0.22, 1, 0.36, 1),
+                transform 0.32s cubic-bezier(0.22, 1, 0.36, 1),
+                visibility 0s linear 0.32s;
+  }
+
+  .cookie-consent.is-visible {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translate(-50%, 0);
+    transition: opacity 0.32s cubic-bezier(0.22, 1, 0.36, 1),
+                transform 0.32s cubic-bezier(0.22, 1, 0.36, 1),
+                visibility 0s linear 0s;
+  }
+
+  .cookie-consent__icon {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    display: grid;
+    place-items: center;
+    border-radius: 12px;
+    background: #F5F2FF;
+    border: 1px solid rgba(97, 85, 241, 0.12);
+  }
+
+  .cookie-consent__body {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .cookie-consent__title {
+    margin: 0 0 0.25rem;
+    font-family: 'Kanit', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    color: #3C315B;
+  }
+
+  .cookie-consent__text {
+    margin: 0;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.82rem;
+    line-height: 1.6;
+    color: #555;
+  }
+
+  .cookie-consent__link {
+    color: #6155F1;
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(97, 85, 241, 0.3);
+    transition: border-color 0.18s ease, color 0.18s ease;
+  }
+  .cookie-consent__link:hover { color: #3E81E5; border-color: #3E81E5; }
+  .cookie-consent__link:focus-visible {
+    outline: 2px solid #6155F1;
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+
+  .cookie-consent__actions {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-self: center;
+  }
+
+  .cookie-consent__btn {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 600;
+    padding: 0.55rem 1.1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: transform 0.16s cubic-bezier(0.22, 1, 0.36, 1),
+                box-shadow 0.16s ease, background 0.16s ease, color 0.16s ease;
+  }
+
+  .cookie-consent__btn--primary {
+    background: #6155F1;
+    color: #fff;
+    border: 1px solid #6155F1;
+    box-shadow: 0 4px 12px rgba(97, 85, 241, 0.28);
+  }
+  .cookie-consent__btn--primary:hover {
+    background: #5247e0;
+    transform: translateY(-1px);
+    box-shadow: 0 7px 18px rgba(97, 85, 241, 0.34);
+  }
+  .cookie-consent__btn--primary:active { transform: translateY(0); }
+
+  .cookie-consent__btn--ghost {
+    background: transparent;
+    color: #6155F1;
+    border: 1px solid rgba(97, 85, 241, 0.28);
+  }
+  .cookie-consent__btn--ghost:hover {
+    background: #F5F2FF;
+    transform: translateY(-1px);
+  }
+  .cookie-consent__btn--ghost:active { transform: translateY(0); }
+
+  .cookie-consent__btn:focus-visible {
+    outline: 2px solid #3E81E5;
+    outline-offset: 2px;
+  }
+
+  /* Stack into a compact card on narrow viewports. */
+  @media (max-width: 560px) {
+    .cookie-consent {
+      flex-direction: column;
+      gap: 0.85rem;
+      bottom: 0.75rem;
+      padding: 1.1rem 1.15rem;
+    }
+    .cookie-consent__actions {
+      flex-direction: row;
+      align-self: stretch;
+    }
+    .cookie-consent__btn { flex: 1; text-align: center; }
+  }
+
+  /* Reduced-motion: appear instantly, no slide. */
+  @media (prefers-reduced-motion: reduce) {
+    .cookie-consent,
+    .cookie-consent.is-visible {
+      transition: opacity 0.001s linear, visibility 0s linear;
+      transform: translate(-50%, 0);
+    }
+    .cookie-consent__btn:hover,
+    .cookie-consent__btn:active { transform: none; }
+  }
+</style>
+
+<script is:inline>
+  (function () {
+    var KEY = 'atk-cookie-consent';
+    var banner = document.getElementById('cookie-consent');
+    if (!banner) return;
+
+    function apply(granted) {
+      if (typeof window.gtag !== 'function') return;
+      var state = granted ? 'granted' : 'denied';
+      window.gtag('consent', 'update', {
+        analytics_storage: state,
+        ad_storage: state,
+        ad_user_data: state,
+        ad_personalization: state
+      });
+    }
+
+    var stored = null;
+    try { stored = localStorage.getItem(KEY); } catch (e) {}
+
+    if (stored === 'granted') {
+      apply(true);
+    } else if (stored === 'denied') {
+      apply(false);
+    } else {
+      // No prior choice — show the banner. rAF lets the transition play.
+      requestAnimationFrame(function () { banner.classList.add('is-visible'); });
+    }
+
+    function choose(granted) {
+      try { localStorage.setItem(KEY, granted ? 'granted' : 'denied'); } catch (e) {}
+      apply(granted);
+      banner.classList.remove('is-visible');
+    }
+
+    banner.querySelector('[data-consent="accept"]').addEventListener('click', function () { choose(true); });
+    banner.querySelector('[data-consent="reject"]').addEventListener('click', function () { choose(false); });
+  })();
+</script>

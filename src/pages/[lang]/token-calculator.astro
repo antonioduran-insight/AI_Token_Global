@@ -732,6 +732,13 @@ function pt(blocks: any[] | undefined): string {
 
   function calculateTokens() {
     const text = textInput.value || '';
+
+    // GA4: fire calculator_used once, the first time the user actually enters text.
+    if (!window.__gaCalcUsed && text.trim().length > 0) {
+      window.__gaCalcUsed = true;
+      if (typeof window.gtag === 'function') window.gtag('event', 'calculator_used', {});
+    }
+
     charCountEl.textContent = text.length.toLocaleString();
 
     const chineseMatches = text.match(/[一-鿿]/g) || [];

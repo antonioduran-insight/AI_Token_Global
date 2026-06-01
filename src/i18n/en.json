@@ -13,6 +13,13 @@
     "getStarted": "Get Started",
     "toggleMobileMenu": "Toggle mobile menu"
   },
+  "consent": {
+    "title": "We value your privacy",
+    "body": "We use cookies to understand how visitors use the site so we can improve it. Analytics stays off until you accept.",
+    "privacyLink": "Privacy Policy",
+    "accept": "Accept all",
+    "reject": "Reject non-essential"
+  },
   "footer": {
     "tagline": "The definitive English-language hub for understanding AI tokens, models, and APIs. Free, always.",
     "learn": "Learn",
