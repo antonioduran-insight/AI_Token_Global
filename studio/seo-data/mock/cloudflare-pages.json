@@ -1,0 +1,23 @@
+{
+  "meta": {
+    "siteUrl": "aitoken.global",
+    "snapshotDate": "2026-06-01",
+    "rangeDays": 30,
+    "dataSource": "mock",
+    "mockNote": "Hand-crafted Cloudflare page placeholders until the Cloudflare API fetch is wired."
+  },
+  "rows": [
+    { "page": "/en/", "locale": "en", "visits": 10800, "pageViews": 15100 },
+    { "page": "/en/token-calculator", "locale": "en", "visits": 5100, "pageViews": 7200 },
+    { "page": "/en/api-compare", "locale": "en", "visits": 3900, "pageViews": 5500 },
+    { "page": "/en/chatgpt-api", "locale": "en", "visits": 2400, "pageViews": 3300 },
+    { "page": "/en/claude-api", "locale": "en", "visits": 1900, "pageViews": 2600 },
+    { "page": "/en/beginners-guide", "locale": "en", "visits": 1100, "pageViews": 1450 },
+    { "page": "/es/", "locale": "es", "visits": 2050, "pageViews": 2800 },
+    { "page": "/es/token-calculator", "locale": "es", "visits": 980, "pageViews": 1300 },
+    { "page": "/es/api-compare", "locale": "es", "visits": 720, "pageViews": 990 },
+    { "page": "/id/", "locale": "id", "visits": 1450, "pageViews": 1950 },
+    { "page": "/id/token-calculator", "locale": "id", "visits": 690, "pageViews": 910 },
+    { "page": "/id/api-compare", "locale": "id", "visits": 510, "pageViews": 670 }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "meta": {
+    "siteUrl": "aitoken.global",
+    "snapshotDate": "2026-06-01",
+    "rangeDays": 30,
+    "dataSource": "mock",
+    "mockNote": "Hand-crafted Cloudflare referrer placeholders until the Cloudflare API fetch is wired."
+  },
+  "rows": [
+    { "referrer": "Direct / none", "visits": 8100 },
+    { "referrer": "google.com", "visits": 8200 },
+    { "referrer": "bing.com", "visits": 1400 },
+    { "referrer": "github.com", "visits": 980 },
+    { "referrer": "t.co", "visits": 760 },
+    { "referrer": "reddit.com", "visits": 540 },
+    { "referrer": "duckduckgo.com", "visits": 420 },
+    { "referrer": "linkedin.com", "visits": 310 },
+    { "referrer": "news.ycombinator.com", "visits": 260 }
+  ]
+}

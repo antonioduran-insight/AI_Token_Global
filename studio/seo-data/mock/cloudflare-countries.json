@@ -1,0 +1,21 @@
+{
+  "meta": {
+    "siteUrl": "aitoken.global",
+    "snapshotDate": "2026-06-01",
+    "rangeDays": 30,
+    "dataSource": "mock",
+    "mockNote": "Hand-crafted Cloudflare country placeholders until the Cloudflare API fetch is wired."
+  },
+  "rows": [
+    { "country": "United States", "visits": 7800 },
+    { "country": "India", "visits": 2600 },
+    { "country": "United Kingdom", "visits": 1900 },
+    { "country": "Indonesia", "visits": 1700 },
+    { "country": "Spain", "visits": 1300 },
+    { "country": "Germany", "visits": 1100 },
+    { "country": "Canada", "visits": 950 },
+    { "country": "Mexico", "visits": 880 },
+    { "country": "Philippines", "visits": 720 },
+    { "country": "Australia", "visits": 610 }
+  ]
+}

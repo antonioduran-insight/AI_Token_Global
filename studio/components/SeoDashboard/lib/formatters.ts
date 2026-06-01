@@ -33,6 +33,12 @@ export function formatDuration(seconds: number): string {
   return rem === 0 ? `${minutes}m` : `${minutes}m ${rem}s`;
 }
 
+/** "850 ms" / "1.18 s" — a load time given in milliseconds. Lower is better. */
+export function formatLoadMs(ms: number): string {
+  if (ms < 1000) return `${Math.round(ms)} ms`;
+  return `${(ms / 1000).toFixed(2)} s`;
+}
+
 /** Direction the metric should move for the result to be "good." */
 export type DesirableDirection = 'up' | 'down';
 

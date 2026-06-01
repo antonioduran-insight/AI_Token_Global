@@ -29,6 +29,10 @@ import type {
   Ga4PagesSnapshot,
   Ga4EventsSnapshot,
   Ga4LocaleSnapshot,
+  CloudflareOverviewSnapshot,
+  CloudflarePagesSnapshot,
+  CloudflareReferrersSnapshot,
+  CloudflareCountriesSnapshot,
 } from './types';
 
 type Loaded<T> = { default: T };
@@ -339,6 +343,102 @@ export function loadGa4Locale(): Ga4LocaleSnapshot {
       'No GA4 locale snapshot found. Expected either ' +
         'studio/seo-data/ga4/ga4-locale-YYYY-MM-DD.json or ' +
         'studio/seo-data/mock/ga4-locale.json. See studio/seo-data/README.md.',
+    );
+  }
+  return mock[0].default;
+}
+
+// ---- Cloudflare Overview ---------------------------------------------------
+
+const realCfOverviewModules = import.meta.glob<Loaded<CloudflareOverviewSnapshot>>(
+  '../../../seo-data/cloudflare/cloudflare-overview-*.json',
+  { eager: true },
+);
+const mockCfOverviewModules = import.meta.glob<Loaded<CloudflareOverviewSnapshot>>(
+  '../../../seo-data/mock/cloudflare-overview.json',
+  { eager: true },
+);
+
+export function loadCloudflareOverview(): CloudflareOverviewSnapshot {
+  const real = Object.entries(realCfOverviewModules).sort(([a], [b]) => b.localeCompare(a));
+  if (real.length > 0) return real[0][1].default;
+  const mock = Object.values(mockCfOverviewModules);
+  if (mock.length === 0) {
+    throw new Error(
+      'No Cloudflare overview snapshot found. Expected studio/seo-data/cloudflare/' +
+        'cloudflare-overview-YYYY-MM-DD.json or studio/seo-data/mock/cloudflare-overview.json.',
+    );
+  }
+  return mock[0].default;
+}
+
+// ---- Cloudflare Top Pages --------------------------------------------------
+
+const realCfPagesModules = import.meta.glob<Loaded<CloudflarePagesSnapshot>>(
+  '../../../seo-data/cloudflare/cloudflare-pages-*.json',
+  { eager: true },
+);
+const mockCfPagesModules = import.meta.glob<Loaded<CloudflarePagesSnapshot>>(
+  '../../../seo-data/mock/cloudflare-pages.json',
+  { eager: true },
+);
+
+export function loadCloudflarePages(): CloudflarePagesSnapshot {
+  const real = Object.entries(realCfPagesModules).sort(([a], [b]) => b.localeCompare(a));
+  if (real.length > 0) return real[0][1].default;
+  const mock = Object.values(mockCfPagesModules);
+  if (mock.length === 0) {
+    throw new Error(
+      'No Cloudflare pages snapshot found. Expected studio/seo-data/cloudflare/' +
+        'cloudflare-pages-YYYY-MM-DD.json or studio/seo-data/mock/cloudflare-pages.json.',
+    );
+  }
+  return mock[0].default;
+}
+
+// ---- Cloudflare Referrers --------------------------------------------------
+
+const realCfReferrersModules = import.meta.glob<Loaded<CloudflareReferrersSnapshot>>(
+  '../../../seo-data/cloudflare/cloudflare-referrers-*.json',
+  { eager: true },
+);
+const mockCfReferrersModules = import.meta.glob<Loaded<CloudflareReferrersSnapshot>>(
+  '../../../seo-data/mock/cloudflare-referrers.json',
+  { eager: true },
+);
+
+export function loadCloudflareReferrers(): CloudflareReferrersSnapshot {
+  const real = Object.entries(realCfReferrersModules).sort(([a], [b]) => b.localeCompare(a));
+  if (real.length > 0) return real[0][1].default;
+  const mock = Object.values(mockCfReferrersModules);
+  if (mock.length === 0) {
+    throw new Error(
+      'No Cloudflare referrers snapshot found. Expected studio/seo-data/cloudflare/' +
+        'cloudflare-referrers-YYYY-MM-DD.json or studio/seo-data/mock/cloudflare-referrers.json.',
+    );
+  }
+  return mock[0].default;
+}
+
+// ---- Cloudflare Countries --------------------------------------------------
+
+const realCfCountriesModules = import.meta.glob<Loaded<CloudflareCountriesSnapshot>>(
+  '../../../seo-data/cloudflare/cloudflare-countries-*.json',
+  { eager: true },
+);
+const mockCfCountriesModules = import.meta.glob<Loaded<CloudflareCountriesSnapshot>>(
+  '../../../seo-data/mock/cloudflare-countries.json',
+  { eager: true },
+);
+
+export function loadCloudflareCountries(): CloudflareCountriesSnapshot {
+  const real = Object.entries(realCfCountriesModules).sort(([a], [b]) => b.localeCompare(a));
+  if (real.length > 0) return real[0][1].default;
+  const mock = Object.values(mockCfCountriesModules);
+  if (mock.length === 0) {
+    throw new Error(
+      'No Cloudflare countries snapshot found. Expected studio/seo-data/cloudflare/' +
+        'cloudflare-countries-YYYY-MM-DD.json or studio/seo-data/mock/cloudflare-countries.json.',
     );
   }
   return mock[0].default;

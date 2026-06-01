@@ -1,0 +1,11 @@
+{
+  "meta": {
+    "siteUrl": "aitoken.global",
+    "snapshotDate": "2026-06-01",
+    "rangeDays": 30,
+    "dataSource": "mock",
+    "mockNote": "Hand-crafted Cloudflare Web Analytics placeholders until the Cloudflare API fetch is wired. Counts run slightly above GA4 (cookieless, not ad-blocked)."
+  },
+  "current": { "visits": 22400, "pageViews": 61200, "medianLoadMs": 1180 },
+  "previous": { "visits": 19800, "pageViews": 54100, "medianLoadMs": 1320 }
+}

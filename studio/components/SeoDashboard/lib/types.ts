@@ -12,7 +12,7 @@
 import type { Locale } from './locales';
 export type { Locale };
 
-export type DataSourceKind = 'mock' | 'gsc' | 'ga4';
+export type DataSourceKind = 'mock' | 'gsc' | 'ga4' | 'cloudflare';
 
 export interface SnapshotMeta {
   /** Domain or property the data is for (e.g. "aitoken.global"). */
@@ -262,4 +262,57 @@ export interface Ga4LocaleAggregate {
 export interface Ga4LocaleSnapshot {
   meta: SnapshotMeta;
   locales: Ga4LocaleAggregate[];
+}
+
+// ---- Cloudflare Web Analytics -----------------------------------------
+//
+// Cookieless headcount + real page-speed from Cloudflare Web Analytics. Counts
+// every visitor (no consent gate, not blocked by ad-blockers), so its numbers
+// run a bit higher than GA4 — an honest-traffic reality check, plus load time.
+
+export interface CloudflareOverviewBucket {
+  visits: number;
+  pageViews: number;
+  /** Median page load time in milliseconds. Lower is better. */
+  medianLoadMs: number;
+}
+
+export interface CloudflareOverviewSnapshot {
+  meta: SnapshotMeta;
+  current: CloudflareOverviewBucket;
+  previous: CloudflareOverviewBucket;
+}
+
+export interface CloudflarePageRow {
+  /** Site-relative path incl. locale segment, e.g. "/en/token-calculator". */
+  page: string;
+  locale: Locale;
+  visits: number;
+  pageViews: number;
+}
+
+export interface CloudflarePagesSnapshot {
+  meta: SnapshotMeta;
+  rows: CloudflarePageRow[];
+}
+
+export interface CloudflareReferrerRow {
+  /** Referring host, e.g. "google.com", or "Direct / none". */
+  referrer: string;
+  visits: number;
+}
+
+export interface CloudflareReferrersSnapshot {
+  meta: SnapshotMeta;
+  rows: CloudflareReferrerRow[];
+}
+
+export interface CloudflareCountryRow {
+  country: string;
+  visits: number;
+}
+
+export interface CloudflareCountriesSnapshot {
+  meta: SnapshotMeta;
+  rows: CloudflareCountryRow[];
 }

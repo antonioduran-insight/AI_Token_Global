@@ -22,9 +22,13 @@ import { SeoGa4TrafficSources } from './SeoGa4TrafficSources';
 import { SeoGa4TopPages } from './SeoGa4TopPages';
 import { SeoGa4Events } from './SeoGa4Events';
 import { SeoGa4ByLocale } from './SeoGa4ByLocale';
+import { SeoCfOverview } from './SeoCfOverview';
+import { SeoCfTopPages } from './SeoCfTopPages';
+import { SeoCfReferrers } from './SeoCfReferrers';
+import { SeoCfCountries } from './SeoCfCountries';
 import { downloadFullReportAsJson } from './lib/exportReport';
 
-type View = 'search' | 'behavior';
+type View = 'search' | 'behavior' | 'traffic';
 
 export function SeoDashboard() {
   // Top-level view switcher: keeps Search (GSC) and Behavior (GA4) on separate
@@ -75,10 +79,17 @@ export function SeoDashboard() {
               onClick={() => setView('behavior')}
               selected={view === 'behavior'}
             />
+            <Tab
+              aria-controls="seo-view-traffic"
+              id="seo-tab-traffic"
+              label="Traffic · Cloudflare"
+              onClick={() => setView('traffic')}
+              selected={view === 'traffic'}
+            />
           </TabList>
         </Stack>
 
-        {view === 'search' ? (
+        {view === 'search' && (
           <Box
             key="search"
             id="seo-view-search"
@@ -94,7 +105,9 @@ export function SeoDashboard() {
               <SeoCtrOutliers />
             </Stack>
           </Box>
-        ) : (
+        )}
+
+        {view === 'behavior' && (
           <Box
             key="behavior"
             id="seo-view-behavior"
@@ -107,6 +120,22 @@ export function SeoDashboard() {
               <SeoGa4TopPages />
               <SeoGa4Events />
               <SeoGa4ByLocale />
+            </Stack>
+          </Box>
+        )}
+
+        {view === 'traffic' && (
+          <Box
+            key="traffic"
+            id="seo-view-traffic"
+            aria-labelledby="seo-tab-traffic"
+            role="tabpanel"
+          >
+            <Stack space={5}>
+              <SeoCfOverview />
+              <SeoCfTopPages />
+              <SeoCfReferrers />
+              <SeoCfCountries />
             </Stack>
           </Box>
         )}
