@@ -1,0 +1,149 @@
+import lighthouse from 'lighthouse';
+import * as chromeLauncher from 'chrome-launcher';
+import { writeFileSync } from 'fs';
+
+const BASE = 'http://localhost:4324';
+const URLS = [
+  { label: 'Home (`/en/`)', url: `${BASE}/en/` },
+  { label: 'AI Trends (`/en/ai-trends`)', url: `${BASE}/en/ai-trends` },
+  { label: 'Blog Index (`/en/blog/`)', url: `${BASE}/en/blog/` },
+  {
+    label: 'Blog Post (`/en/blog/what-is-ai-token-novices-can-understand-why-ai-keeps-mentioning-token-at-once`)',
+    url: `${BASE}/en/blog/what-is-ai-token-novices-can-understand-why-ai-keeps-mentioning-token-at-once`,
+  },
+];
+
+const MOBILE_CONFIG = {
+  extends: 'lighthouse:default',
+  settings: {
+    formFactor: 'mobile',
+    throttlingMethod: 'simulate',
+    throttling: {
+      rttMs: 150,
+      throughputKbps: 1638.4,
+      cpuSlowdownMultiplier: 4,
+      requestLatencyMs: 562.5,
+      downloadThroughputKbps: 1474.56,
+      uploadThroughputKbps: 675,
+    },
+    screenEmulation: {
+      mobile: true,
+      width: 390,
+      height: 844,
+      deviceScaleFactor: 3,
+      disabled: false,
+    },
+    emulatedUserAgent:
+      'Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Mobile Safari/537.36',
+  },
+};
+
+function fmt(val) {
+  if (val === null || val === undefined) return 'N/A';
+  if (typeof val === 'number') return val.toFixed(0);
+  return val;
+}
+
+function fmtScore(val) {
+  if (val === null || val === undefined) return 'N/A';
+  return Math.round(val * 100);
+}
+
+async function runAudit(url) {
+  const chrome = await chromeLauncher.launch({ chromeFlags: ['--headless', '--no-sandbox', '--disable-dev-shm-usage'] });
+  try {
+    const result = await lighthouse(url, { port: chrome.port, output: 'json' }, MOBILE_CONFIG);
+    const cats = result.lhr.categories;
+    const audits = result.lhr.audits;
+    return {
+      performance: fmtScore(cats.performance?.score),
+      accessibility: fmtScore(cats.accessibility?.score),
+      bestPractices: fmtScore(cats['best-practices']?.score),
+      seo: fmtScore(cats.seo?.score),
+      fcp: fmt(audits['first-contentful-paint']?.numericValue),
+      lcp: fmt(audits['largest-contentful-paint']?.numericValue),
+      cls: audits['cumulative-layout-shift']?.numericValue != null
+        ? audits['cumulative-layout-shift'].numericValue.toFixed(3)
+        : 'N/A',
+      tbt: fmt(audits['total-blocking-time']?.numericValue),
+      inp: audits['interaction-to-next-paint']?.numericValue != null
+        ? fmt(audits['interaction-to-next-paint'].numericValue)
+        : 'N/A',
+    };
+  } finally {
+    await chrome.kill();
+  }
+}
+
+const results = [];
+for (const { label, url } of URLS) {
+  console.log(`Auditing: ${url}`);
+  const r = await runAudit(url);
+  results.push({ label, url, ...r });
+  console.log(`  Performance: ${r.performance} | FCP: ${r.fcp}ms | LCP: ${r.lcp}ms | CLS: ${r.cls} | TBT: ${r.tbt}ms`);
+}
+
+// Build markdown
+const lines = [
+  '# Lighthouse Mobile Baseline — 2026-05',
+  '',
+  `**Date:** ${new Date().toISOString().slice(0, 10)}  `,
+  '**Preset:** Mobile (simulated throttling, 390×844, 4× CPU slowdown, 1.6 Mbps)  ',
+  '**Build:** `npm run build` + `astro preview`  ',
+  '**Note:** Captured before any tracking scripts (pre-GA4, pre-consent banner).  ',
+  '',
+];
+
+for (const r of results) {
+  lines.push(`## ${r.label}`, '');
+  lines.push('| Metric | Value |');
+  lines.push('|---|---|');
+  lines.push(`| Performance Score | **${r.performance}** |`);
+  lines.push(`| Accessibility Score | **${r.accessibility}** |`);
+  lines.push(`| Best Practices Score | **${r.bestPractices}** |`);
+  lines.push(`| SEO Score | **${r.seo}** |`);
+  lines.push(`| FCP (ms) | ${r.fcp} |`);
+  lines.push(`| LCP (ms) | ${r.lcp} |`);
+  lines.push(`| CLS | ${r.cls} |`);
+  lines.push(`| TBT (ms) | ${r.tbt} |`);
+  lines.push(`| INP (ms) | ${r.inp} |`);
+  lines.push('');
+}
+
+// Summary table
+const numericKeys = ['performance', 'accessibility', 'bestPractices', 'seo'];
+const msKeys = ['fcp', 'lcp', 'tbt'];
+
+lines.push('## Summary — Averages Across All Pages', '');
+lines.push('| Metric | Home | AI Trends | Blog Index | Blog Post | Avg |');
+lines.push('|---|---|---|---|---|---|');
+
+for (const key of [...numericKeys, ...msKeys, 'cls', 'inp']) {
+  const vals = results.map(r => r[key]);
+  const numVals = vals.map(v => parseFloat(v)).filter(v => !isNaN(v));
+  const avg = numVals.length ? (numVals.reduce((a, b) => a + b, 0) / numVals.length) : null;
+  const avgStr = avg !== null
+    ? (key === 'cls' ? avg.toFixed(3) : Math.round(avg).toString())
+    : 'N/A';
+  const label = {
+    performance: 'Performance Score',
+    accessibility: 'Accessibility Score',
+    bestPractices: 'Best Practices Score',
+    seo: 'SEO Score',
+    fcp: 'FCP (ms)',
+    lcp: 'LCP (ms)',
+    cls: 'CLS',
+    tbt: 'TBT (ms)',
+    inp: 'INP (ms)',
+  }[key];
+  lines.push(`| ${label} | ${vals.join(' | ')} | **${avgStr}** |`);
+}
+
+lines.push('');
+lines.push('---');
+lines.push('');
+lines.push('*Generated by `run-lighthouse.mjs`. Re-run after adding tracking scripts (5A-04) to measure impact.*');
+
+const md = lines.join('\n');
+writeFileSync('audits/lighthouse-baseline-2026-05.md', md);
+console.log('\nReport saved to audits/lighthouse-baseline-2026-05.md');

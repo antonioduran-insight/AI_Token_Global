@@ -1,0 +1,194 @@
+"Name","Description","Section/Column","Parent Task","Task ID","Effort","Owner Role","Dependencies","Status"
+"Capture Lighthouse mobile baseline (pre-tracking)","Run `npm run build && npx astro preview`, Lighthouse mobile preset against /en/, /en/ai-trends, /en/blog/[any-slug]. Save scores to audits/lighthouse-baseline-2026-05.md. MUST precede 5A-04.","5A — Measurement & Ops Foundation","","5A-01","S","exec","","Pending"
+"Claude Code prompt — paste into VS Code","I need to capture a Lighthouse mobile performance baseline before we add any tracking scripts.
+
+1. Run `npm run build` and serve the result on localhost.
+2. Use Puppeteer + the `lighthouse` npm package to run a mobile preset audit against three URLs:
+   - http://localhost:4321/en/
+   - http://localhost:4321/en/ai-trends
+   - http://localhost:4321/en/blog/ (then pick the first blog post slug and audit that too)
+3. Capture FCP, LCP, CLS, INP, TBT, Performance score, Accessibility score, SEO score, Best Practices score per URL.
+4. Save a markdown report to audits/lighthouse-baseline-2026-05.md with one table per URL and a summary table aggregating averages.
+5. Do NOT modify any site code — this is read-only measurement.","","Capture Lighthouse mobile baseline (pre-tracking)","5A-01-prompt","","exec","","Pending"
+"Build cookie consent banner","Three-button consent (Accept all, Reject, Customize). Sanity-driven copy keys so i18n-aware out of the box. 1st-party cookie. Block GA4 init until granted.","5A — Measurement & Ops Foundation","","5A-02","M","exec","","Pending"
+"Claude Code prompt — paste into VS Code","Build a cookie consent banner for AI Token Global.
+
+Requirements:
+- Three actions: Accept all, Reject non-essential, Customize.
+- Customize opens an inline panel with three toggles (Analytics, Marketing, Preferences). Essential is always on.
+- Copy lives in Sanity (new schema `cookieConsent` with fields per language). Banner reads copy via the existing GROQ fetcher pattern.
+- Persist consent in a 1st-party cookie `aitg_consent` (JSON: {analytics: bool, marketing: bool, preferences: bool, ts: ISO}), 12-month TTL.
+- Dispatch a custom event `aitg-consent-change` on grant/revoke so GA4 (5A-04) can react.
+- Mobile-first responsive per CLAUDE.md rules. Only animate transform and opacity.
+- Don't add it to BaseLayout.astro until I confirm the schema and copy land in Sanity first.","","Build cookie consent banner","5A-02-prompt","","exec","","Pending"
+"Verify Google Search Console + submit sitemap","DNS TXT verification (Cloudflare DNS), submit https://aitokenglobal.com/sitemap.xml. Confirm hreflang clusters are recognized.","5A — Measurement & Ops Foundation","","5A-03","S","manual","","Pending"
+"Wire GA4 with Consent Mode v2","Property + stream setup, GA4 tag in BaseLayout.astro gated on consent. Configure consent mode so anonymized hits fire pre-consent. Define initial event taxonomy (see 5A-05).","5A — Measurement & Ops Foundation","","5A-04","M","exec","5A-01, 5A-02","Pending"
+"Claude Code prompt — paste into VS Code","Wire GA4 to AI Token Global with Google Consent Mode v2.
+
+1. Add GA4 tag to BaseLayout.astro with gtag('consent', 'default', {...}) set to denied for analytics_storage, ad_storage, ad_user_data, ad_personalization BEFORE the GA4 config call. Use wait_for_update: 500.
+2. Listen for `aitg-consent-change` (dispatched by 5A-02 banner). When analytics: true arrives, call gtag('consent', 'update', {analytics_storage: 'granted'}).
+3. Implement event tracking for: outbound_click (all <a> with hostname !== aitokenglobal.com), pdf_download (any <a> href ending in .pdf), blog_read_75pct (IntersectionObserver on blog post <article> 75% mark), lang_switch (existing language switcher in Nav.astro), nav_open_mobile, faq_open (existing window.toggleFaq()).
+4. GA4 Measurement ID lives in PUBLIC_GA4_MEASUREMENT_ID env var. Add to .env.example and Amplify Console.
+5. Document the event taxonomy in docs/analytics/events.md with one row per event: name, trigger, params, business question it answers.","","Wire GA4 with Consent Mode v2","5A-04-prompt","","exec","","Pending"
+"Define + implement event taxonomy","Events: outbound_click (to aitokenking.com.tw), pdf_download (AI Trends PDF), blog_read_75pct (scroll milestone), lang_switch, nav_open_mobile, faq_open. Document in docs/analytics/events.md.","5A — Measurement & Ops Foundation","","5A-05","M","exec","5A-04","Pending"
+"Wire Cloudflare Web Analytics","Cloudflare token in BaseLayout.astro. No consent gate needed (privacy-friendly, no cookies). Always-on fallback if consent is refused for GA4.","5A — Measurement & Ops Foundation","","5A-06","S","exec","","Pending"
+"Build Sanity Studio dashboard widget","Custom widget aggregating GA4 + GSC + CWA via a proxy (Cloudflare Worker or Amplify Lambda) since none are CORS-safe from browser. Widget shows top pages 7d/30d, top queries 30d, conversion events 7d, traffic by language.","5A — Measurement & Ops Foundation","","5A-07","L","exec","5A-04, 5A-06","Pending"
+"Claude Code prompt — paste into VS Code","Build a custom Sanity Studio dashboard widget that aggregates analytics inside the Studio.
+
+Data sources (all server-side via a proxy — none are CORS-safe from browser):
+- GA4 Data API (top pages 7d/30d, conversion events 7d, traffic by language)
+- Google Search Console API (top queries 30d, top landing pages 30d, impressions/clicks trend)
+- Cloudflare Web Analytics GraphQL API (pageviews, top countries — fallback when GA4 consent is low)
+
+Build the proxy as a Cloudflare Worker (preferred — same-vendor as our CDN) at analytics-proxy.aitokenglobal.com. Worker holds the service-account credentials and exposes three GET endpoints: /ga4, /gsc, /cwa. Restrict CORS to https://aitokenglobal.sanity.studio.
+
+In studio/, create studio/widgets/AnalyticsWidget.tsx that renders three cards (Top Pages, Top Queries, Traffic by Lang) with simple bar/list visualizations. Register it in sanity.config.ts as a dashboard tool.
+
+Auth model: editors are already authenticated to Studio; widget calls proxy with a short-lived signed token derived from the Studio user session. Document the auth flow in docs/analytics/sanity-widget-auth.md.","","Build Sanity Studio dashboard widget","5A-07-prompt","","exec","","Pending"
+"Add Sanity → Amplify webhook","Outstanding from IMPLEMENTATION_PLAN Task #8. Sanity Studio → API → Webhooks → POST to Amplify build hook on publish of _type in [""aiTrendsPage"",""post"",...]. Add 15-min debounce.","5A — Measurement & Ops Foundation","","5A-08","S","manual","","Pending"
+"Add AWS Budget alarm","Outstanding from Task #8. Alarms at $20 and $50 monthly thresholds → SNS → email.","5A — Measurement & Ops Foundation","","5A-09","S","manual","","Pending"
+"Stand up Decision Log (ADR format)","Create docs/decisions/, define ADR template (0001-template.md). Backfill 8–12 existing decisions: Astro+Sanity+Amplify stack, [lang] routing, Portable Text, Make.com pipeline, etc.","5A — Measurement & Ops Foundation","","5A-10","S","exec","","Pending"
+"Claude Code prompt — paste into VS Code","Set up an Architecture Decision Record (ADR) system for AI Token Global.
+
+1. Create docs/decisions/ and a template at docs/decisions/0000-template.md with sections: Status, Context, Decision, Consequences, Date, Supersedes.
+2. Backfill the following decisions as ADRs 0001–0012 (one file each). For each, write the Context (what problem we were solving), Decision (what we chose), and Consequences (what tradeoffs we accepted). Pull facts from summary.md and the audit docs:
+   - 0001 Astro as the static framework
+   - 0002 Sanity as the headless CMS (project mq3wxr8n)
+   - 0003 AWS Amplify for hosting
+   - 0004 [lang] dynamic routing with SUPPORTED_LANGS constant
+   - 0005 Portable Text for body content (vs. markdown)
+   - 0006 Make.com for blog post import pipeline
+   - 0007 EN+ES as launch language pair
+   - 0008 Kanit + Plus Jakarta Sans typography pairing
+   - 0009 Brand color #6155F1 + design system in global.css
+   - 0010 Sanity-first content policy (no hardcoded English in .astro)
+   - 0011 Mobile-first responsive system (post Task #0f)
+   - 0012 Centralized translation pipeline via translate-page.mjs
+3. Add an index README at docs/decisions/README.md listing all ADRs with date + one-line status.","","Stand up Decision Log (ADR format)","5A-10-prompt","","exec","","Pending"
+"Weekly Sanity dataset backup","Outstanding from Task #11. GitHub Action runs Sunday 06:00 UTC, calls sanity dataset export, uploads artifact (or S3). 90-day retention.","5A — Measurement & Ops Foundation","","5A-11","M","exec","","Pending"
+"Pre-commit secret block (Husky)","Outstanding from Task #11. Husky pre-commit hook scanning staged diff for sk-..., AKIA..., mq3wxr8n paired with literal strings, and .env filename.","5A — Measurement & Ops Foundation","","5A-12","S","exec","","Pending"
+"HTML prototype ↔ Astro diff audit","Per-page comparison via Puppeteer. Output: audits/prototype-fidelity-2026-05.md with one section per page and a numbered punch list of intentional vs unintentional drift.","5B — Component Fidelity Pass","","5B-01","M","exec","","Pending"
+"Claude Code prompt — paste into VS Code","I need a fidelity audit comparing my archived HTML prototypes (archive/*.html) against the current Astro EN implementation.
+
+Method:
+1. Start the Astro dev server (npm run dev → port 4321). Use the existing serve.mjs at the repo root to serve archive/ on port 3000.
+2. For each prototype HTML file in archive/ that has an Astro equivalent, use Puppeteer to:
+   - Load both URLs at 1440×900 desktop and 390×844 mobile.
+   - Capture full-page screenshots, side by side, into audits/prototype-fidelity-screenshots/<page>/.
+   - Diff key DOM/style attributes programmatically: heading text + size + weight + line-height, card padding + gap + border-radius + shadow, button label + bg + border-radius, image aspect ratio, section background color.
+   - Record link href differences (prototype likely has placeholder anchors; Astro uses real routes).
+3. Build a markdown report at audits/prototype-fidelity-2026-05.md with:
+   - One section per page.
+   - Numbered punch list of differences. For each: what differs, where in the code (file:line of the Astro component), likely cause (intentional / drift / unknown).
+   - Summary at top: total pages audited, total differences, count of likely intentional vs likely drift.
+4. Do NOT fix anything — this is observation only. I'll triage the list and create fix tasks separately.
+
+If a prototype has no clear Astro equivalent (e.g., legacy variant), note it and skip.","","HTML prototype ↔ Astro diff audit","5B-01-prompt","","exec","","Pending"
+"Triage the punch list","Antonio reviews each item: keep current (intentional), fix to match prototype (drift), or defer (out of scope).","5B — Component Fidelity Pass","","5B-02","S","review","5B-01","Pending"
+"Fix prioritized drift items — Batch 1 (hero/above-fold)","Hero sections across all 13 pages — biggest visual impact.","5B — Component Fidelity Pass","","5B-03","M","exec","5B-02","Pending"
+"Fix prioritized drift items — Batch 2 (cards/CTAs/sections)","Card grids, CTA blocks, section transitions.","5B — Component Fidelity Pass","","5B-04","M","exec","5B-02","Pending"
+"Fix prioritized drift items — Batch 3 (footer/nav/secondary)","Footer, nav, breadcrumbs, secondary nav.","5B — Component Fidelity Pass","","5B-05","S","exec","5B-02","Pending"
+"Set up Puppeteer visual regression baseline","Script captures full-page screenshot of each /en/<page> and /es/<page> at mobile (390px) and desktop (1440px). Stores under tests/visual-baseline/. Run on every PR going forward.","5B — Component Fidelity Pass","","5B-06","M","exec","5B-03, 5B-04, 5B-05","Pending"
+"Audit translate-page.mjs for post-shape compatibility","Map current page schema vs post.ts. Identify fields needing different handling: slug regen, category mapping, coverImage.alt translation, body (Portable Text), faqItems.","5C — ES Blog Automation","","5C-01","S","exec","","Pending"
+"Build scripts/translate-post.mjs","Fork translate-page.mjs. Accepts --source and --target. Reads source post from Sanity, generates translated draft, writes to Sanity as drafts.<newId> with language set.","5C — ES Blog Automation","","5C-02","M","exec","5C-01","Pending"
+"Claude Code prompt — paste into VS Code","Build scripts/translate-post.mjs for blog post translation.
+
+Start from scripts/translate-page.mjs (working translation pipeline for page singletons). Fork it; do not modify the original.
+
+Differences from page translation:
+1. Source document type is `post` (see studio/schemas/post.ts).
+2. slug.current must be regenerated for the target language via slugify(translatedTitle, {lower: true, strict: true}).
+3. category is a string slug — map via a lookup table at the top of the script:
+     const CATEGORY_MAP = {
+       es: { 'getting-started': 'primeros-pasos', 'api-guides': 'guias-api', ... }
+     };
+   Document the table; ask me to fill in the slugs for all categories present in Sanity before running.
+4. coverImage.alt translates; the image asset reference is reused.
+5. body is Portable Text — reuse the existing block-traversal logic from translate-page.mjs.
+6. faqItems array — translate each item's question and answer.
+7. Output is written to Sanity as a draft: _id = drafts.${nanoid()}, language set to target, translatedFrom set to source _id. Don't auto-publish.
+
+CLI: AI_TOKEN_KING_KEY=sk-... node scripts/translate-post.mjs --source <postId> --target es. Print the new draft's _id and a Studio URL to it on success.
+
+Use claude-sonnet-4.6 (note the dot — aggregator format) via the AI Token King API, same as translate-page.mjs.","","Build scripts/translate-post.mjs","5C-02-prompt","","exec","","Pending"
+"Build batch runner scripts/translate-post-batch.mjs","Reads JSON list of source post IDs, calls translate-post.mjs for each, writes manifest of generated drafts.","5C — ES Blog Automation","","5C-03","S","exec","5C-02","Pending"
+"Claude Code prompt — paste into VS Code","Build scripts/translate-post-batch.mjs that wraps translate-post.mjs.
+
+CLI: AI_TOKEN_KING_KEY=sk-... node scripts/translate-post-batch.mjs --input batch.json --target es
+
+batch.json shape: [{sourceId: ""abc123"", note?: ""optional""}, ...]
+
+For each item:
+1. Spawn translate-post.mjs as a subprocess.
+2. Capture the resulting draft _id.
+3. Append to a manifest at scripts/data/translation-batch-<ISO-date>.json with {sourceId, targetDraftId, targetLang, status: 'pending-review' | 'failed', error?, ts}.
+4. If any single post fails, log and continue — do not abort the batch.
+
+Print a summary at the end: N translated, M failed, manifest at <path>.
+
+Add basic concurrency (max 3 parallel) to keep API load reasonable.","","Build batch runner scripts/translate-post-batch.mjs","5C-03-prompt","","exec","","Pending"
+"Document the human review checklist","docs/pipelines/blog-translation-review.md — target ~10 min per post review time.","5C — ES Blog Automation","","5C-04","S","review","5C-02","Pending"
+"Run Batch 1: translate existing 10 EN posts to ES","First batch is the validation. Capture review-time-per-post for sizing future batches. Log translation quality issues for prompt tuning.","5C — ES Blog Automation","","5C-05","M","exec","5C-03, 5C-04","Pending"
+"Frontend wiring: blog category filter tabs","Task #13 from old plan. Category field already in Sanity; index page needs filter tabs UI. Mobile-first, sticky on scroll, accessible (radio-group ARIA). Parallel-safe with 5C-01–5C-05.","5C — ES Blog Automation","","5C-06","M","exec","","Pending"
+"Define Batch 2 source criteria","Decision: next 10 posts come from which topic cluster on aitoken.com.tw? Cluster decision feeds 5G content planning.","5C — ES Blog Automation","","5C-07","S","review","5C-05","Pending"
+"Run Batch 2 import (EN) + translate (ES)","Existing Make.com scenario does EN import; 5C-03 batch runner does ES. Document end-to-end runbook.","5C — ES Blog Automation","","5C-08","M","exec","5C-07","Pending"
+"Add ES translation review to weekly cadence","Recurring task: review pending ES drafts every Friday.","5C — ES Blog Automation","","5C-09","S","manual","5C-08","Pending"
+"Verify Kanit + Plus Jakarta Sans CJK fallback","Neither has Simplified Chinese coverage. Pick a CJK display face (Noto Sans SC for body) and decide heading face. Document in ADR.","5D — Add zh-CN (Simplified Chinese)","","5D-01","S","exec","","Pending"
+"Claude Code prompt — paste into VS Code","I'm adding Simplified Chinese (zh-CN) as language 3 for AI Token Global. Neither Kanit (current heading font) nor Plus Jakarta Sans (current body font) covers CJK glyphs. I need to pick a CJK fallback that visually integrates with the existing design system.
+
+Tasks:
+1. Render a sample zh-CN page section (heading + body + button + card text — invent reasonable copy about AI tokens) using each of these CJK fonts: Noto Sans SC, ZCOOL XiaoWei, Long Cang, Noto Serif SC, Source Han Sans SC. Use Puppeteer to load a test HTML page with each font from Google Fonts and screenshot the result.
+2. Compare against the existing EN/ES design at the same section width — do shapes, weights, and spacing feel consistent?
+3. Save screenshots to temporary screenshots/cjk-font-test/ numbered per option.
+4. Write a recommendation memo at docs/translation-style/zh-CN-font-decision.md with: which face for headings, which for body, fallback CSS stack, font-weight mapping (Kanit 700 → CJK <what>?), and notes on character-density compensation (CJK rendered at the same px is visually larger — may need font-size: 0.95em adjustment).
+5. Do NOT yet modify BaseLayout.astro or global.css — I'll review the recommendation first.","","Verify Kanit + Plus Jakarta Sans CJK fallback","5D-01-prompt","","exec","","Pending"
+"Add zh-CN to SUPPORTED_LANGS + LANG_META","One-line constant change in src/i18n/index.ts. Add locale: 'zh-CN', dir: 'ltr', displayName: '简体中文'.","5D — Add zh-CN (Simplified Chinese)","","5D-02","S","exec","5D-01","Pending"
+"Translate UI strings to src/i18n/zh-CN.json","~60+ keys. Use Claude via translate pipeline OR human translator. Term consistency matters — do a glossary pass first.","5D — Add zh-CN (Simplified Chinese)","","5D-03","M","exec","5D-02","Pending"
+"Glossary + style guide for zh-CN translations","docs/translation-style/zh-CN.md: 15–25 key term mappings, tone (formal/informal, mainland vs cross-strait), do/don'ts. Distinct from zh-TW.","5D — Add zh-CN (Simplified Chinese)","","5D-04","S","review","","Pending"
+"Translate all 13 page documents to zh-CN via pipeline","Run translate-page.mjs --target zh-CN for each page. Human review per page. Adjust prompt with glossary context.","5D — Add zh-CN (Simplified Chinese)","","5D-05","L","exec","5D-03, 5D-04","Pending"
+"Translate first 10 blog posts to zh-CN","Run translate-post-batch.mjs --target zh-CN. Human review.","5D — Add zh-CN (Simplified Chinese)","","5D-06","M","exec","5C-02, 5D-04","Pending"
+"Per-locale OG image for zh-CN","Generate /og-zh-CN.png with translated headline. Hook into BaseLayout.astro OG tag emission per locale.","5D — Add zh-CN (Simplified Chinese)","","5D-07","S","exec","5D-02","Pending"
+"Update language switcher visual + sort order","With three languages the switcher may need a different layout. Test on mobile.","5D — Add zh-CN (Simplified Chinese)","","5D-08","S","exec","5D-02","Pending"
+"Submit zh-CN sitemap to GSC + Baidu Webmaster","Baidu has its own webmaster console — register and submit.","5D — Add zh-CN (Simplified Chinese)","","5D-09","S","manual","5D-05","Pending"
+"Capture framework gaps surfaced by zh-CN","Running journal docs/framework-gaps-zh-CN.md: any pattern, file, or assumption that broke. Feeds 5E extraction.","5D — Add zh-CN (Simplified Chinese)","","5D-10","S","review","5D-05","Pending"
+"Define starter scope","In scope: Astro scaffold, Sanity schema base, i18n harness, translate-page/post.mjs, design system, Nav/Footer, BaseLayout SEO, GA4+consent skeleton, ADR template, amplify.yml. Out: brand assets, content, analytics IDs.","5E — Framework Extraction (aitoken-framework-starter)","","5E-01","S","review","5D-10","Pending"
+"Create aitoken-framework-starter repo","New private GitHub repo. Skeleton README with one-paragraph description.","5E — Framework Extraction (aitoken-framework-starter)","","5E-02","S","manual","5E-01","Pending"
+"Strip + copy code into starter","Copy in-scope files. Replace brand assets with framework-starter placeholder. Lorem Ipsum for content. Genericize i18n JSONs.","5E — Framework Extraction (aitoken-framework-starter)","","5E-03","M","exec","5E-02","Pending"
+"Parameterize via framework.config.js","Top-level config: brandName, primaryColor, accentColor, headingFont, bodyFont, supportedLanguages, sanityProjectId. Build step substitutes into appropriate places.","5E — Framework Extraction (aitoken-framework-starter)","","5E-04","M","exec","5E-03","Pending"
+"Write SETUP.md","5-step setup. Target: fresh project to 'Hello World on Amplify' in under 1 hour.","5E — Framework Extraction (aitoken-framework-starter)","","5E-05","M","exec","5E-04","Pending"
+"Write ARCHITECTURE.md","One-page overview: what the framework is, what choices are locked in, what's customizable, the i18n model, the content model.","5E — Framework Extraction (aitoken-framework-starter)","","5E-06","S","exec","5E-03","Pending"
+"Migrate ADRs into starter","Copy docs/decisions/ into the starter. Mark which ADRs are 'framework-locked' vs 'project-can-override'.","5E — Framework Extraction (aitoken-framework-starter)","","5E-07","S","exec","5A-10, 5E-03","Pending"
+"Validate starter with a throwaway test project","Run through SETUP.md end-to-end on a clean machine. Capture pain points. Iterate on docs.","5E — Framework Extraction (aitoken-framework-starter)","","5E-08","M","exec","5E-05","Pending"
+"Tag starter v0.1.0","First versioned release.","5E — Framework Extraction (aitoken-framework-starter)","","5E-09","S","manual","5E-08","Pending"
+"Glossary + style guide for id-ID","docs/translation-style/id-ID.md. Indonesian formal vs informal, English loanword preference (typically high for tech). 15–25 key terms.","5F — Add id-ID (Indonesian)","","5F-01","S","review","","Pending"
+"Add id-ID to SUPPORTED_LANGS + LANG_META","One-line constant change. locale: 'id-ID'.","5F — Add id-ID (Indonesian)","","5F-02","S","exec","","Pending"
+"Translate UI strings to src/i18n/id-ID.json","~60+ keys.","5F — Add id-ID (Indonesian)","","5F-03","M","exec","5F-01, 5F-02","Pending"
+"Translate all page documents to id-ID","Pipeline run + human review.","5F — Add id-ID (Indonesian)","","5F-04","L","exec","5F-03","Pending"
+"Translate first 10 blog posts to id-ID","Pipeline run + human review.","5F — Add id-ID (Indonesian)","","5F-05","M","exec","5C-02, 5F-01","Pending"
+"Per-locale OG image + sitemap submission","OG image, GSC submission. Indonesia uses Google primarily.","5F — Add id-ID (Indonesian)","","5F-06","S","exec","5F-04","Pending"
+"Capture starter improvements from id-ID experience","Anything that surfaced as friction → file as issue against starter repo for next version.","5F — Add id-ID (Indonesian)","","5F-07","S","review","5F-04","Pending"
+"GSC + GA4 data pull: what's already working","After 30 days of data: top 20 landing pages, top 20 queries, CTR distribution. Anchors prioritization.","5G — Content Planning","","5G-01","S","review","5A-03, 5A-04","Pending"
+"Topic-cluster map","Map existing 13 pages + 10 EN posts to 4–6 pillar clusters (AI APIs, Tokenomics & Costs, Compliance, Practical Use Cases). Identify white-space clusters.","5G — Content Planning","","5G-02","M","review","5G-01","Pending"
+"Internal linking audit + plan","Crawl current site, log link graph. Identify orphan pages, missing cluster→pillar links. Produce 50–100 internal-link punch list per language.","5G — Content Planning","","5G-03","M","exec","5G-02","Pending"
+"60-day editorial calendar","8–12 posts per language. Each entry: pillar cluster, target query, target word count, due date, source on aitoken.com.tw if any.","5G — Content Planning","","5G-04","M","review","5G-02","Pending"
+"Refresh cadence for time-sensitive pages","API pricing pages (chatgpt-api, claude-api, gemini-api) drift quarterly. AI trends drifts monthly. Set Asana recurring tasks.","5G — Content Planning","","5G-05","S","manual","","Pending"
+"E-E-A-T signaling (author bios + schema)","Author bios in Sanity (new author document). Byline + bio on blog post template. /about and /authors pages. Schema.org Person JSON-LD per author.","5G — Content Planning","","5G-06","M","exec","","Pending"
+"Newsletter / lead capture","Email capture (ConvertKit/Buttondown/similar — decision TBD). Inline form on blog posts and footer. Consent-aware.","5G — Content Planning","","5G-07","M","exec","5A-02","Pending"
+"Channel strategy memo","One-page memo: which 2–3 channels we go deep on. Candidates: LinkedIn, Reddit (/r/LocalLLaMA, /r/MachineLearning), X/Twitter, Hacker News, Substack, partnerships with AI tool aggregators.","5H — Marketing Planning","","5H-01","M","review","5A-04","Pending"
+"Repurposing plan for existing 10 posts","Per post: which channel, what format (carousel, thread, comment), when. Outcome: 30-day distribution schedule.","5H — Marketing Planning","","5H-02","M","review","5H-01","Pending"
+"Backlink + outreach plan","20–30 target sites (AI directories, Spanish-language tech blogs for ES, dev tool comparison sites). Cold email template. Track in Asana.","5H — Marketing Planning","","5H-03","M","review","5G-02","Pending"
+"Cross-language marketing","Localize promotional assets per language. Decide whether to run separate LinkedIn/X handles per language or one multilingual handle.","5H — Marketing Planning","","5H-04","M","review","5D-05, 5F-04","Pending"
+"Partnership outreach: aitokenking.com.tw cross-promotion","Coordinated cross-linking with the Taiwan source site. Mutual blog post links, audience swap.","5H — Marketing Planning","","5H-05","S","manual","","Pending"
+"Measurement dashboard for marketing","Extend the Sanity widget with a Marketing tab: traffic by source, channel ROI, post-promo lift.","5H — Marketing Planning","","5H-06","S","exec","5A-07","Pending"
+"Astro <Image> migration for all <img> tags","Task #9 / Q-13 / S-17 — WebP, srcset, CLS prevention.","Backlog — Outstanding from IMPLEMENTATION_PLAN.md","","BL-01","L","exec","","Pending"
+"Tailwind CDN → build-step migration","Task #9 / Q-15 — production-appropriate Tailwind.","Backlog — Outstanding from IMPLEMENTATION_PLAN.md","","BL-02","M","exec","","Pending"
+"Google Fonts: replace @import with preconnect","Task #9 / S-13 / Q-14.","Backlog — Outstanding from IMPLEMENTATION_PLAN.md","","BL-03","S","exec","","Pending"
+"JSON-LD: Article on blog posts","Task #9 / S-10.","Backlog — Outstanding from IMPLEMENTATION_PLAN.md","","BL-04","M","exec","","Pending"
+"JSON-LD: FAQPage on AI Trends + guides with FAQ","Task #9 / S-11.","Backlog — Outstanding from IMPLEMENTATION_PLAN.md","","BL-05","M","exec","","Pending"
+"JSON-LD: Organization site-wide","Task #9 / S-12.","Backlog — Outstanding from IMPLEMENTATION_PLAN.md","","BL-06","S","exec","","Pending"
+"JSON-LD: BreadcrumbList on deep pages","Task #9 / S-15.","Backlog — Outstanding from IMPLEMENTATION_PLAN.md","","BL-07","M","exec","","Pending"
+"Per-page language switcher equivalence","Task #10 / S-14 — switcher routes to current page's translation, not /{lang}/ root.","Backlog — Outstanding from IMPLEMENTATION_PLAN.md","","BL-08","M","exec","","Pending"
+"Fill aiTrendsPage.downloadUrl (EN + ES)","summary.md gap — null guard hides card until real PDF URL added.","Backlog — Outstanding from IMPLEMENTATION_PLAN.md","","BL-09","S","manual","","Pending"
+"Replace hard-coded https://aitokenglobal.com in blog slug page with Astro.site","F-08.","Backlog — Outstanding from IMPLEMENTATION_PLAN.md","","BL-10","S","exec","","Pending"
+"Document imageMeta.ts extending sanity.imageAsset (Sanity-major-upgrade risk note)","Task #11 / D-10.","Backlog — Outstanding from IMPLEMENTATION_PLAN.md","","BL-11","S","exec","","Pending"
+"Privacy / Terms footer pages (currently dead href='#')","F-09.","Backlog — Outstanding from IMPLEMENTATION_PLAN.md","","BL-12","M","exec","","Pending"
