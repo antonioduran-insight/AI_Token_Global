@@ -94,6 +94,7 @@ export function SeoTopPages() {
     <Stack space={4}>
       <SectionHeader
         title="Top Pages"
+        subtitle="URLs on your site, ranked by how much search traffic each one brings in. Pairs with Top Queries: that section asks 'what people want,' this one asks 'what we already have.' Use this to decide which pages to refresh first."
         rangeDays={data.meta.rangeDays}
         visibleCount={sortedRows.length}
         totalCount={data.rows.length}

@@ -1,5 +1,5 @@
 import { useState, useMemo } from 'react';
-import { Stack, Flex, Badge, Card, Text } from '@sanity/ui';
+import { Stack, Flex, Badge } from '@sanity/ui';
 import styled from 'styled-components';
 import type { CtrOutlierRow, CtrOutliersSnapshot } from './lib/types';
 import { loadCtrOutliers } from './lib/loadSnapshot';
@@ -175,21 +175,12 @@ export function SeoCtrOutliers() {
     <Stack space={4}>
       <SectionHeader
         title="CTR Outliers"
+        subtitle="Pages with strong rankings but unusually low click-through rates. The page itself is ranking fine — the search-result snippet (the page title and meta description that Google displays) is what's not compelling enough. Action here is to rewrite the title and meta description, not the page content."
         rangeDays={data.meta.rangeDays}
         visibleCount={sortedRows.length}
         totalCount={data.rows.length}
         countNoun="pages"
       />
-
-      <Card padding={3} radius={2} tone="caution">
-        <Text size={1}>
-          Pages where actual CTR is meaningfully below the typical CTR for the position
-          they rank at. The ranking is fine — the snippet (title tag + meta description)
-          isn't compelling enough. <strong>Editorial action:</strong> rewrite the page's
-          title and meta description. <strong>Gain</strong> estimates additional clicks
-          per {data.meta.rangeDays}-day window if CTR matches the curve.
-        </Text>
-      </Card>
 
       <CtrVsPositionScatter rows={data.rows} />
 

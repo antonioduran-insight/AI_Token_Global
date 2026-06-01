@@ -217,7 +217,11 @@ function MetricCell({
 export function SeoByLocale() {
   return (
     <Stack space={4}>
-      <SectionHeader title="By Locale" rangeDays={data.meta.rangeDays} />
+      <SectionHeader
+        title="By Locale"
+        rangeDays={data.meta.rangeDays}
+        subtitle="The same headline metrics from Overview, broken out per language version of the site (EN · ES · ID). Use this to see where your traffic is concentrated and whether a particular locale is under- or over-performing for the effort you've put into it."
+      />
 
       <LocaleDonut locales={data.locales} />
 

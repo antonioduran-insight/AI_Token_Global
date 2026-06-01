@@ -12,6 +12,7 @@ import {
 import { PositionDistribution } from './charts/PositionDistribution';
 import { InfoTooltip } from './InfoTooltip';
 import { GLOSSARY } from './lib/glossary';
+import { SectionHeader } from './SectionHeader';
 
 const data: OverviewSnapshot = loadOverview();
 const queriesData = loadQueries();
@@ -83,19 +84,11 @@ export function SeoOverview() {
 
   return (
     <Stack space={4}>
-      <Flex align="baseline" justify="space-between" gap={3} wrap="wrap">
-        <Heading as="h2" size={2}>
-          Overview
-        </Heading>
-        <Text
-          size={0}
-          weight="semibold"
-          muted
-          style={{ textTransform: 'uppercase', letterSpacing: '0.08em' }}
-        >
-          Last {data.meta.rangeDays} days
-        </Text>
-      </Flex>
+      <SectionHeader
+        title="Overview"
+        rangeDays={data.meta.rangeDays}
+        subtitle="Site-wide totals for the last 30 days, with the change vs. the prior 30 days. Use this as a 5-second status check on whether the site is growing. The histogram below shows where your search rankings sit — page 1, page 2, or deeper."
+      />
 
       <Box
         style={{

@@ -1,5 +1,5 @@
 import { useState, useMemo } from 'react';
-import { Stack, Flex, Badge, Card, Text } from '@sanity/ui';
+import { Stack, Flex, Badge } from '@sanity/ui';
 import styled from 'styled-components';
 import type { StrikingRow, StrikingSnapshot } from './lib/types';
 import { loadStriking } from './lib/loadSnapshot';
@@ -128,10 +128,6 @@ const COLUMNS: ColumnDef<AugmentedRow>[] = [
   },
 ];
 
-const ExplainerCard = styled(Card)`
-  /* Subtle informational tone using semi-transparent purple to match Sanity's primary accent. */
-`;
-
 export function SeoStrikingDistance() {
   const [locale, setLocale] = useState<LocaleFilterValue>('all');
 
@@ -150,20 +146,12 @@ export function SeoStrikingDistance() {
     <Stack space={4}>
       <SectionHeader
         title="Striking Distance"
+        subtitle="Queries you're almost winning at — ranking page 2 of Google (positions ~11–20). A content refresh can push them onto page 1, where click-through rates are 3–5× higher. This is the highest-leverage editorial work on a content site. The Gain column estimates extra clicks if each query reached position 1."
         rangeDays={data.meta.rangeDays}
         visibleCount={sortedRows.length}
         totalCount={data.rows.length}
         countNoun="queries"
       />
-
-      <ExplainerCard padding={3} radius={2} tone="primary">
-        <Text size={1}>
-          Queries already ranking on page 2 (positions ~11–20) with non-trivial impressions.
-          A content refresh can push them onto page 1, where CTR typically jumps from ~2% to
-          ~28%. <strong>Gain</strong> estimates the additional clicks per {data.meta.rangeDays}-day
-          window at position 1.
-        </Text>
-      </ExplainerCard>
 
       <Flex align="center" gap={3} wrap="wrap">
         <LocaleFilter value={locale} onChange={setLocale} counts={LOCALE_COUNTS} />

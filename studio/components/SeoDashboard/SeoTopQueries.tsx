@@ -92,6 +92,7 @@ export function SeoTopQueries() {
     <Stack space={4}>
       <SectionHeader
         title="Top Queries"
+        subtitle="The search terms people typed into Google before clicking through to your site. Use this to discover what your audience is actively searching for — then check whether you have content that matches."
         rangeDays={data.meta.rangeDays}
         visibleCount={sortedRows.length}
         totalCount={data.rows.length}
