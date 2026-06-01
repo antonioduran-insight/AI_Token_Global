@@ -47,6 +47,15 @@ const hreflangs = SUPPORTED_LANGS.map(l => ({
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <!-- Google tag (gtag.js) — GA4 measurement ID G-2KG5EVJQ22 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2KG5EVJQ22" is:inline></script>
+  <script is:inline>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-2KG5EVJQ22');
+  </script>
+
   <!-- Primary meta -->
   <title>{seoTitle}</title>
   <meta name="description" content={seoDescription} />
