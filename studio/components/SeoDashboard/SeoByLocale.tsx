@@ -34,19 +34,25 @@ const BAD = '#ef4444';
 const FLAT = '#9ca3af';
 const HAIRLINE = 'rgba(127, 127, 127, 0.18)';
 
-const Grid = styled.div`
+const Grid = styled.div<{ $localeCount: number }>`
   display: grid;
-  grid-template-columns: minmax(120px, 1fr) repeat(3, minmax(160px, 1.4fr));
+  grid-template-columns: minmax(120px, 1fr) repeat(${(p) => p.$localeCount}, minmax(160px, 1.4fr));
   border: 1px solid ${HAIRLINE};
   border-radius: 12px;
   overflow: hidden;
+
+  /* Drop the bottom border on the last row (metric label + one cell per locale)
+     so it doesn't double up with the grid's own border. Locale-count-aware: the
+     last row is the final (localeCount + 1) cells, whatever the locale count. */
+  > *:nth-last-child(-n + ${(p) => p.$localeCount + 1}) {
+    border-bottom: 0;
+  }
 `;
 
 const Cell = styled.div<{ $align?: 'left' | 'right' }>`
   padding: 1rem 1.125rem;
   border-bottom: 1px solid ${HAIRLINE};
   text-align: ${(p) => p.$align ?? 'left'};
-  &:nth-last-child(-n + 4) { border-bottom: 0; }
 `;
 
 const HeaderCell = styled(Cell)`
@@ -225,7 +231,7 @@ export function SeoByLocale() {
 
       <LocaleDonut locales={data.locales} />
 
-      <Grid>
+      <Grid $localeCount={data.locales.length}>
         {/* Header row */}
         <HeaderCell>Metric</HeaderCell>
         {data.locales.map((l) => (
