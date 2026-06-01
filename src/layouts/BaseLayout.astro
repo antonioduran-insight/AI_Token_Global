@@ -40,6 +40,12 @@ const hreflangs = SUPPORTED_LANGS.map(l => ({
   lang: l,
   url: new URL(Astro.url.pathname.replace(`/${lang}/`, `/${l}/`), siteOrigin).href,
 }));
+
+// Cloudflare Web Analytics — token comes from the PUBLIC_CLOUDFLARE_BEACON_TOKEN env var
+// (set in AWS Amplify). Cookieless, so no consent gate. Beacon is only emitted when the
+// token is present, so local/dev builds without the var simply skip it.
+const cfToken = import.meta.env.PUBLIC_CLOUDFLARE_BEACON_TOKEN;
+const cloudflareBeacon = cfToken ? JSON.stringify({ token: cfToken }) : null;
 ---
 
 <!DOCTYPE html>
@@ -66,6 +72,12 @@ const hreflangs = SUPPORTED_LANGS.map(l => ({
     gtag('js', new Date());
     gtag('config', 'G-2KG5EVJQ22');
   </script>
+
+  <!-- Cloudflare Web Analytics — cookieless, no consent gate (fires for every visitor).
+       Token injected from the PUBLIC_CLOUDFLARE_BEACON_TOKEN env var (set in Amplify). -->
+  {cloudflareBeacon && (
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon={cloudflareBeacon} is:inline></script>
+  )}
 
   <!-- Primary meta -->
   <title>{seoTitle}</title>
