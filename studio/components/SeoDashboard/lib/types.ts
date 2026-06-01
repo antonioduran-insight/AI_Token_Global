@@ -240,3 +240,26 @@ export interface Ga4EventsSnapshot {
   meta: SnapshotMeta;
   rows: Ga4EventRow[];
 }
+
+// ---- GA4 By Locale -----------------------------------------------------
+//
+// Per-locale behaviour aggregates (en/es/id), mirroring the GSC By Locale grid
+// but with GA4 metrics. Contextual per locale: top page + top acquisition
+// channel (GA4 has no search queries, so top channel takes that slot).
+
+export interface Ga4LocaleAggregate {
+  locale: Locale;
+  /** Friendly label, e.g. "English". */
+  label: string;
+  current: Ga4OverviewBucket;
+  previous: Ga4OverviewBucket;
+  /** Highest-traffic page (path) in this locale. */
+  topPage: string;
+  /** Channel bringing the most users to this locale, e.g. "Organic Search". */
+  topChannel: string;
+}
+
+export interface Ga4LocaleSnapshot {
+  meta: SnapshotMeta;
+  locales: Ga4LocaleAggregate[];
+}

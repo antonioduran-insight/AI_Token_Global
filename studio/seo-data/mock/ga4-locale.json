@@ -1,0 +1,35 @@
+{
+  "meta": {
+    "siteUrl": "aitoken.global",
+    "snapshotDate": "2026-06-01",
+    "rangeDays": 30,
+    "dataSource": "mock",
+    "mockNote": "Hand-crafted GA4 per-locale placeholders until the GA4 Data API credentials land. Users sum to the Behavior Overview total."
+  },
+  "locales": [
+    {
+      "locale": "en",
+      "label": "English",
+      "current": { "users": 13800, "engagedSessions": 11400, "engagementRate": 0.626, "avgEngagementSeconds": 78 },
+      "previous": { "users": 12100, "engagedSessions": 9700, "engagementRate": 0.601, "avgEngagementSeconds": 71 },
+      "topPage": "/en/token-calculator",
+      "topChannel": "Organic Search"
+    },
+    {
+      "locale": "es",
+      "label": "Español",
+      "current": { "users": 2700, "engagedSessions": 2050, "engagementRate": 0.572, "avgEngagementSeconds": 66 },
+      "previous": { "users": 2300, "engagedSessions": 1680, "engagementRate": 0.548, "avgEngagementSeconds": 62 },
+      "topPage": "/es/token-calculator",
+      "topChannel": "Organic Search"
+    },
+    {
+      "locale": "id",
+      "label": "Indonesia",
+      "current": { "users": 1920, "engagedSessions": 1430, "engagementRate": 0.561, "avgEngagementSeconds": 63 },
+      "previous": { "users": 1610, "engagedSessions": 1130, "engagementRate": 0.532, "avgEngagementSeconds": 58 },
+      "topPage": "/id/token-calculator",
+      "topChannel": "Direct"
+    }
+  ]
+}

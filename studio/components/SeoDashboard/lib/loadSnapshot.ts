@@ -28,6 +28,7 @@ import type {
   Ga4ChannelsSnapshot,
   Ga4PagesSnapshot,
   Ga4EventsSnapshot,
+  Ga4LocaleSnapshot,
 } from './types';
 
 type Loaded<T> = { default: T };
@@ -310,6 +311,34 @@ export function loadGa4Events(): Ga4EventsSnapshot {
       'No GA4 events snapshot found. Expected either ' +
         'studio/seo-data/ga4/ga4-events-YYYY-MM-DD.json or ' +
         'studio/seo-data/mock/ga4-events.json. See studio/seo-data/README.md.',
+    );
+  }
+  return mock[0].default;
+}
+
+// ---- GA4 By Locale ---------------------------------------------------------
+
+const realGa4LocaleModules = import.meta.glob<Loaded<Ga4LocaleSnapshot>>(
+  '../../../seo-data/ga4/ga4-locale-*.json',
+  { eager: true },
+);
+const mockGa4LocaleModules = import.meta.glob<Loaded<Ga4LocaleSnapshot>>(
+  '../../../seo-data/mock/ga4-locale.json',
+  { eager: true },
+);
+
+export function loadGa4Locale(): Ga4LocaleSnapshot {
+  const real = Object.entries(realGa4LocaleModules).sort(
+    ([a], [b]) => b.localeCompare(a),
+  );
+  if (real.length > 0) return real[0][1].default;
+
+  const mock = Object.values(mockGa4LocaleModules);
+  if (mock.length === 0) {
+    throw new Error(
+      'No GA4 locale snapshot found. Expected either ' +
+        'studio/seo-data/ga4/ga4-locale-YYYY-MM-DD.json or ' +
+        'studio/seo-data/mock/ga4-locale.json. See studio/seo-data/README.md.',
     );
   }
   return mock[0].default;

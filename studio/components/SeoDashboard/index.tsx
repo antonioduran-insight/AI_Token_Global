@@ -21,6 +21,7 @@ import { SeoGa4Overview } from './SeoGa4Overview';
 import { SeoGa4TrafficSources } from './SeoGa4TrafficSources';
 import { SeoGa4TopPages } from './SeoGa4TopPages';
 import { SeoGa4Events } from './SeoGa4Events';
+import { SeoGa4ByLocale } from './SeoGa4ByLocale';
 import { downloadFullReportAsJson } from './lib/exportReport';
 
 type View = 'search' | 'behavior';
@@ -105,6 +106,7 @@ export function SeoDashboard() {
               <SeoGa4TrafficSources />
               <SeoGa4TopPages />
               <SeoGa4Events />
+              <SeoGa4ByLocale />
             </Stack>
           </Box>
         )}
