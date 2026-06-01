@@ -184,6 +184,27 @@ tool to add `<langCode>: '<English name of the language>'` to the object,
 preferably with a region qualifier where it matters (e.g. `pt: 'Portuguese
 (Brazilian)'`, `zh: 'Traditional Chinese (Taiwan)'`).
 
+## Step 4.6 — Update studio/components/SeoDashboard/lib/locales.ts
+
+The SEO Insights dashboard keeps its OWN locale list, separate from the site
+i18n in the steps above. If the new code isn't in `SUPPORTED_LOCALES` there,
+the dashboard's locale filter chips and the By Locale comparison grids won't
+know about the language (no crash — it just silently omits the locale).
+
+Read `studio/components/SeoDashboard/lib/locales.ts`. If `<langCode>` is
+already in `SUPPORTED_LOCALES`, skip. Otherwise use the Edit tool to add,
+before the closing `] as const;`:
+
+```typescript
+  { code: '<langCode>', label: '<label in its own language>' },
+```
+
+The By Locale grids are locale-count-robust, so no other dashboard edits are
+needed. Dashboard mock data for the new locale is optional — real data fills
+in via the fetch script once GSC/GA4 start collecting the new language's pages.
+
+Record in the report whether this was added or already present.
+
 ## Step 5 — Verify the build
 
 Run:
@@ -235,6 +256,7 @@ Use this format:
 ## Steps performed
 
 - `studio/config/languages.ts`: added / already done, skipped
+- `studio/components/SeoDashboard/lib/locales.ts`: added / already done, skipped
 - `src/i18n/<langCode>.json`: created (<N> strings translated) / updated (<N> missing keys filled in) / already in sync, skipped
 - `src/i18n/index.ts`:
     - import added / already done
@@ -331,10 +353,11 @@ Send a concise message to the invoker covering:
 - **Order matters.** Create `src/i18n/<langCode>.json` BEFORE modifying
   `src/i18n/index.ts`. Otherwise the new import in index.ts will fail
   because the JSON file doesn't exist, and the build will break.
-- **Don't touch files outside the five listed** (`studio/config/languages.ts`,
+- **Don't touch files outside the six listed** (`studio/config/languages.ts`,
   `src/i18n/index.ts`, `src/i18n/<langCode>.json`, `src/i18n/en.json` for
-  reading, `scripts/translate-page.mjs`). No edits to Astro pages,
-  components, layouts, or anything else.
+  reading, `scripts/translate-page.mjs`, and
+  `studio/components/SeoDashboard/lib/locales.ts`). No other edits to Astro
+  pages, components, layouts, or anything else.
 - **Stop on build failure.** If `npm run build` fails, stop and report.
   Do not write a success report. Do not proceed.
 - **One Bash call per shell command.** Chain only when commands are
