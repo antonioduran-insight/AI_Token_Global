@@ -46,9 +46,9 @@ const Count = styled.span`
 `;
 
 const BarTrack = styled.div`
-  background: rgba(127, 127, 127, 0.1);
-  height: 8px;
-  border-radius: 4px;
+  background: rgba(127, 127, 127, 0.08);
+  height: 22px;
+  border-radius: 3px;
   overflow: hidden;
 `;
 
@@ -56,7 +56,7 @@ const BarFill = styled.div<{ $width: number; $color: string }>`
   width: ${(p) => p.$width}%;
   height: 100%;
   background: ${(p) => p.$color};
-  border-radius: 4px;
+  border-radius: 3px;
   transition: width 0.4s ease;
 `;
 
