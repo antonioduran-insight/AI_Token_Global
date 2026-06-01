@@ -24,6 +24,7 @@ import type {
   StrikingSnapshot,
   LocaleSnapshot,
   CtrOutliersSnapshot,
+  Ga4OverviewSnapshot,
 } from './types';
 
 type Loaded<T> = { default: T };
@@ -191,6 +192,37 @@ export function loadCtrOutliers(): CtrOutliersSnapshot {
       'No CTR outliers snapshot found. Expected either ' +
         'studio/seo-data/gsc/ctr-outliers-YYYY-MM-DD.json or ' +
         'studio/seo-data/mock/ctr-outliers.json. See studio/seo-data/README.md.',
+    );
+  }
+  return mock[0].default;
+}
+
+// ---- GA4 Behavior Overview -------------------------------------------------
+//
+// Real GA4 snapshots land in seo-data/ga4/ (written by the GA4 fetch script once
+// credentials arrive); mock fallback lives in seo-data/mock/. Same rule as GSC.
+
+const realGa4OverviewModules = import.meta.glob<Loaded<Ga4OverviewSnapshot>>(
+  '../../../seo-data/ga4/ga4-overview-*.json',
+  { eager: true },
+);
+const mockGa4OverviewModules = import.meta.glob<Loaded<Ga4OverviewSnapshot>>(
+  '../../../seo-data/mock/ga4-overview.json',
+  { eager: true },
+);
+
+export function loadGa4Overview(): Ga4OverviewSnapshot {
+  const real = Object.entries(realGa4OverviewModules).sort(
+    ([a], [b]) => b.localeCompare(a),
+  );
+  if (real.length > 0) return real[0][1].default;
+
+  const mock = Object.values(mockGa4OverviewModules);
+  if (mock.length === 0) {
+    throw new Error(
+      'No GA4 overview snapshot found. Expected either ' +
+        'studio/seo-data/ga4/ga4-overview-YYYY-MM-DD.json or ' +
+        'studio/seo-data/mock/ga4-overview.json. See studio/seo-data/README.md.',
     );
   }
   return mock[0].default;

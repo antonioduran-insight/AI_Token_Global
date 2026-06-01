@@ -1,0 +1,21 @@
+{
+  "meta": {
+    "siteUrl": "aitoken.global",
+    "snapshotDate": "2026-06-01",
+    "rangeDays": 30,
+    "dataSource": "mock",
+    "mockNote": "Hand-crafted GA4 behaviour placeholders until the GA4 Data API credentials land. Same shape as real GA4 data — only meta.dataSource flips to 'ga4' when real snapshots arrive."
+  },
+  "current": {
+    "users": 18420,
+    "engagedSessions": 14980,
+    "engagementRate": 0.612,
+    "avgEngagementSeconds": 74
+  },
+  "previous": {
+    "users": 16310,
+    "engagedSessions": 12740,
+    "engagementRate": 0.587,
+    "avgEngagementSeconds": 68
+  }
+}

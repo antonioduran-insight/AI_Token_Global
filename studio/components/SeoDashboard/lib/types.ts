@@ -12,7 +12,7 @@
 import type { Locale } from './locales';
 export type { Locale };
 
-export type DataSourceKind = 'mock' | 'gsc';
+export type DataSourceKind = 'mock' | 'gsc' | 'ga4';
 
 export interface SnapshotMeta {
   /** Domain or property the data is for (e.g. "aitoken.global"). */
@@ -147,4 +147,33 @@ export interface CtrOutliersSnapshot {
   /** Filter criteria used by the fetch script when picking rows. Free-form text. */
   criteria?: string;
   rows: CtrOutlierRow[];
+}
+
+// ---- GA4 Behavior Overview --------------------------------------------
+//
+// On-site behaviour from Google Analytics 4 (Data API). Complements the GSC
+// Overview: GSC answers "how do people find us" (search), GA4 answers "what do
+// they do once they're here". Metrics picked for a content site — engagement
+// rate replaces the old bounce rate; engagement time measures real attention.
+//
+// `dataSource` on the meta flips 'mock' -> 'ga4' when real snapshots land in
+// studio/seo-data/ga4/. Same loader-with-fallback pattern as the GSC sections.
+
+export interface Ga4OverviewBucket {
+  /** Distinct users in the window. */
+  users: number;
+  /** Sessions that lasted >10s, fired a key event, or had >=2 pageviews. */
+  engagedSessions: number;
+  /** Engaged sessions / total sessions, fraction in [0, 1]. Replaces bounce rate. */
+  engagementRate: number;
+  /** Average engagement time per active user, in seconds. */
+  avgEngagementSeconds: number;
+}
+
+export interface Ga4OverviewSnapshot {
+  meta: SnapshotMeta;
+  /** Most recent N-day window. */
+  current: Ga4OverviewBucket;
+  /** Prior N-day window, for period-over-period comparison. */
+  previous: Ga4OverviewBucket;
 }

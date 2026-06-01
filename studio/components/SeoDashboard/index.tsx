@@ -5,6 +5,7 @@ import { SeoTopPages } from './SeoTopPages';
 import { SeoStrikingDistance } from './SeoStrikingDistance';
 import { SeoByLocale } from './SeoByLocale';
 import { SeoCtrOutliers } from './SeoCtrOutliers';
+import { SeoGa4Overview } from './SeoGa4Overview';
 import { downloadFullReportAsJson } from './lib/exportReport';
 
 export function SeoDashboard() {
@@ -50,6 +51,20 @@ export function SeoDashboard() {
         <SeoByLocale />
 
         <SeoCtrOutliers />
+
+        <Stack space={3}>
+          <Heading as="h2" size={3}>
+            Behavior · Google Analytics 4
+          </Heading>
+          <Text size={1} muted>
+            The sections above are search (Google Search Console). The section
+            below is on-site behaviour (Google Analytics 4) — mock data until the
+            GA4 Data API credentials land, then it swaps to real automatically,
+            same as the search sections.
+          </Text>
+        </Stack>
+
+        <SeoGa4Overview />
       </Stack>
     </Container>
   );

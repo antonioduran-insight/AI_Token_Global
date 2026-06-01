@@ -24,6 +24,15 @@ export function formatPosition(value: number): string {
   return value.toFixed(1);
 }
 
+/** "1m 14s" / "52s" / "2m" — a duration given in seconds. */
+export function formatDuration(seconds: number): string {
+  const s = Math.round(seconds);
+  if (s < 60) return `${s}s`;
+  const minutes = Math.floor(s / 60);
+  const rem = s % 60;
+  return rem === 0 ? `${minutes}m` : `${minutes}m ${rem}s`;
+}
+
 /** Direction the metric should move for the result to be "good." */
 export type DesirableDirection = 'up' | 'down';
 
