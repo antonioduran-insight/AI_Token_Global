@@ -52,6 +52,16 @@ const hreflangs = SUPPORTED_LANGS.map(l => ({
   <script is:inline>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
+    // Consent Mode v2 — default everything to 'denied' until the visitor chooses.
+    // GDPR-safe: no analytics/ad storage fires before consent. The cookie consent
+    // banner flips these to 'granted' via gtag('consent', 'update', …) on Accept.
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: 'denied',
+      wait_for_update: 500
+    });
     gtag('js', new Date());
     gtag('config', 'G-2KG5EVJQ22');
   </script>
