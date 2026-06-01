@@ -13,6 +13,13 @@
     "getStarted": "Mulai Sekarang",
     "toggleMobileMenu": "Buka/tutup menu"
   },
+  "consent": {
+    "title": "Kami menghargai privasi Anda",
+    "body": "Kami menggunakan cookie untuk memahami cara pengunjung menggunakan situs agar dapat kami tingkatkan. Analitik tetap nonaktif hingga Anda menyetujui.",
+    "privacyLink": "Kebijakan Privasi",
+    "accept": "Terima semua",
+    "reject": "Tolak yang tidak penting"
+  },
   "footer": {
     "tagline": "Pusat referensi terlengkap untuk memahami token AI, model, dan API. Gratis, selamanya.",
     "learn": "Belajar",

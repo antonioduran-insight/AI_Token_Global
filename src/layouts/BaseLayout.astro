@@ -1,6 +1,7 @@
 ---
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
+import CookieConsent from '../components/CookieConsent.astro';
 import '../styles/global.css';
 import { useTranslations, SUPPORTED_LANGS, LANG_META } from '../i18n/index';
 import type { Lang } from '../i18n/index';
@@ -143,6 +144,7 @@ const hreflangs = SUPPORTED_LANGS.map(l => ({
     <slot />
   </main>
   <Footer lang={lang as Lang} />
+  <CookieConsent lang={lang as Lang} />
 
   <script is:inline>
     // Scroll reveal
