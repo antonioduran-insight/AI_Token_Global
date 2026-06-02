@@ -1,0 +1,64 @@
+{
+  "meta": {
+    "siteUrl": "aitoken.global",
+    "snapshotDate": "2026-06-02",
+    "rangeDays": 30,
+    "dataSource": "gsc"
+  },
+  "locales": [
+    {
+      "locale": "en",
+      "label": "English",
+      "current": {
+        "clicks": 2,
+        "impressions": 155,
+        "ctr": 0.012903225806451613,
+        "avgPosition": 18.677419354838708
+      },
+      "previous": {
+        "clicks": 0,
+        "impressions": 0,
+        "ctr": 0,
+        "avgPosition": 0
+      },
+      "topQuery": "ai cloud infrastructure",
+      "topPage": "/en/blog/approximately-how-many-ai-tokens-will-be-used-to-write-a-1000-word-article/"
+    },
+    {
+      "locale": "es",
+      "label": "Español",
+      "current": {
+        "clicks": 0,
+        "impressions": 76,
+        "ctr": 0,
+        "avgPosition": 11.644736842105264
+      },
+      "previous": {
+        "clicks": 0,
+        "impressions": 0,
+        "ctr": 0,
+        "avgPosition": 0
+      },
+      "topQuery": "api chatgpt",
+      "topPage": "/es/blog/cmo-comprobar-el-uso-de-ai-token-los-principiantes-pueden-entender-los-nmeros-en-segundo-plano-s/"
+    },
+    {
+      "locale": "id",
+      "label": "Indonesia",
+      "current": {
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "avgPosition": 39.75
+      },
+      "previous": {
+        "clicks": 0,
+        "impressions": 0,
+        "ctr": 0,
+        "avgPosition": 0
+      },
+      "topQuery": "ai enterprise",
+      "topPage": "/id/"
+    }
+  ]
+}
