@@ -1,0 +1,104 @@
+# Refreshes the SEO dashboard's data snapshots (GSC + GA4 + Cloudflare) on a
+# schedule, commits them, and redeploys the Studio so the live dashboard updates.
+#
+# ── Activation checklist ────────────────────────────────────────────────────
+# 1. Add these repo secrets (Settings → Secrets and variables → Actions).
+#    The three JSON creds are base64 (avoids newline/paste issues): on your
+#    machine run e.g. `base64 -w0 studio/secrets/ga4-service-account.json`.
+#      GA4_SERVICE_ACCOUNT_JSON_B64 – base64 of the GA4 service-account key
+#      GOOGLE_OAUTH_CLIENT_JSON_B64 – base64 of secrets/oauth-credentials.json
+#      GSC_OAUTH_TOKEN_JSON_B64     – base64 of secrets/gsc-oauth-token.json (the
+#                                     refresh token from the first local run —
+#                                     this is what lets GSC run without a browser)
+#      CLOUDFLARE_API_TOKEN         – the cfut_… token (plain)
+#      SANITY_AUTH_TOKEN            – a Sanity deploy token (only if using sanity deploy)
+# 2. Merge this branch to main — `schedule:` only fires from the default branch.
+#    (Until then, use the "Run workflow" button — workflow_dispatch — to test.)
+#
+# Non-secret config (IDs / public beacon token) is set in `env:` below.
+
+name: Refresh SEO data
+
+on:
+  workflow_dispatch: {} # manual "Run workflow" button (works on any branch)
+  schedule:
+    - cron: '0 6 * * 1' # Mondays 06:00 UTC. Weekly is plenty (GSC lags ~2-3 days). Adjust freely.
+
+permissions:
+  contents: write # commit the regenerated snapshots back to the repo
+
+concurrency:
+  group: refresh-seo-data
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: studio
+    env:
+      # Non-secret config (already public / in the repo).
+      GA4_PROPERTY_ID: '539617761'
+      GSC_SITE_URL: 'sc-domain:aitoken.global'
+      CLOUDFLARE_ACCOUNT_ID: '96d690116e92a5de014189ece0fd30bd'
+      CLOUDFLARE_SITE_TAG: '88312c1f31ca4a1a998bdbe7a78b4e19'
+      # Where the scripts look for the credential files we write below.
+      GOOGLE_SERVICE_ACCOUNT_KEYFILE: './secrets/ga4-service-account.json'
+      GOOGLE_OAUTH_CLIENT: './secrets/oauth-credentials.json'
+      GOOGLE_OAUTH_TOKEN: './secrets/gsc-oauth-token.json'
+      # Secret.
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install studio dependencies
+        run: npm ci
+
+      - name: Write credential files from secrets
+        run: |
+          mkdir -p secrets
+          echo "${{ secrets.GA4_SERVICE_ACCOUNT_JSON_B64 }}" | base64 -d > secrets/ga4-service-account.json
+          echo "${{ secrets.GOOGLE_OAUTH_CLIENT_JSON_B64 }}" | base64 -d > secrets/oauth-credentials.json
+          echo "${{ secrets.GSC_OAUTH_TOKEN_JSON_B64 }}" | base64 -d > secrets/gsc-oauth-token.json
+
+      - name: Fetch GA4
+        run: node scripts/fetch-ga4.mjs
+
+      - name: Fetch GSC
+        run: node scripts/fetch-gsc.mjs
+
+      - name: Fetch Cloudflare
+        run: node scripts/fetch-cloudflare.mjs
+        continue-on-error: true # tolerate empty / transient Cloudflare data
+
+      - name: Remove credential files (never commit)
+        if: always()
+        run: rm -rf secrets
+
+      - name: Commit refreshed snapshots
+        run: |
+          git config user.name "seo-data-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add seo-data/gsc seo-data/ga4 seo-data/cloudflare
+          if git diff --cached --quiet; then
+            echo "No data changes."
+          else
+            git commit -m "chore(seo): refresh data snapshots [skip ci]"
+            git push
+          fi
+
+      # ── Studio redeploy ──────────────────────────────────────────────────
+      # The Studio reads JSON at build time, so it must be redeployed to show the
+      # fresh data. This assumes a Sanity-hosted Studio. If the Studio is hosted
+      # elsewhere and auto-rebuilds on push, DELETE this step (the commit above
+      # already triggered that rebuild).
+      - name: Redeploy Studio
+        if: success()
+        run: npx sanity deploy
+        env:
+          SANITY_AUTH_TOKEN: ${{ secrets.SANITY_AUTH_TOKEN }}
