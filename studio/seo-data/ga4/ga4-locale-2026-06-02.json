@@ -11,9 +11,9 @@
       "label": "English",
       "current": {
         "users": 3,
-        "engagedSessions": 0,
-        "engagementRate": 0,
-        "avgEngagementSeconds": 5
+        "engagedSessions": 1,
+        "engagementRate": 0.3333333333333333,
+        "avgEngagementSeconds": 7
       },
       "previous": {
         "users": 0,

@@ -10,15 +10,8 @@
       "channel": "Direct",
       "users": 3,
       "sessions": 3,
-      "engagementRate": 0,
-      "avgEngagementSeconds": 4
-    },
-    {
-      "channel": "Unassigned",
-      "users": 2,
-      "sessions": 2,
-      "engagementRate": 0,
-      "avgEngagementSeconds": 3
+      "engagementRate": 0.3333333333333333,
+      "avgEngagementSeconds": 7
     }
   ]
 }

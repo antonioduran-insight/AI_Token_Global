@@ -7,15 +7,15 @@
   },
   "rows": [
     {
-      "event": "page_view",
-      "count": 4,
+      "event": "user_engagement",
+      "count": 5,
       "users": 3,
       "custom": false
     },
     {
-      "event": "user_engagement",
+      "event": "page_view",
       "count": 4,
-      "users": 2,
+      "users": 3,
       "custom": false
     },
     {
