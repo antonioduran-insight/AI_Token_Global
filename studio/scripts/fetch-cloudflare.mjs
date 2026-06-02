@@ -30,7 +30,7 @@ if (!TOKEN || !ACCOUNT || !SITE_TAG) {
 
 const GQL_URL = 'https://api.cloudflare.com/client/v4/graphql';
 const day = (offset) => new Date(Date.now() - offset * 86400000).toISOString().slice(0, 10);
-const CURRENT = { start: day(30), end: day(1) };
+const CURRENT = { start: day(30), end: day(0) }; // include today (fresh beacon data lands today)
 const PREVIOUS = { start: day(60), end: day(31) };
 const SNAPSHOT_DATE = new Date().toISOString().slice(0, 10);
 const META = { siteUrl: SITE_URL, snapshotDate: SNAPSHOT_DATE, rangeDays: RANGE_DAYS, dataSource: 'cloudflare' };
