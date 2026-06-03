@@ -52,6 +52,15 @@ const ViewTabs = styled.div`
   border: 1px solid rgba(127, 127, 127, 0.25);
   border-radius: 10px;
   background: rgba(127, 127, 127, 0.06);
+  /* On phones the three long source labels don't fit on one row and force
+     horizontal scroll. Stack them full-width instead (matches the 600px
+     breakpoint the chart legends already use). */
+  @media (max-width: 600px) {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: stretch;
+  }
 `;
 
 const ViewTab = styled.button<{ $active: boolean }>`
@@ -77,6 +86,10 @@ const ViewTab = styled.button<{ $active: boolean }>`
     outline: 2px solid #6155f1;
     outline-offset: 2px;
   }
+  @media (max-width: 600px) {
+    width: 100%;
+    text-align: center;
+  }
 `;
 
 export function SeoDashboard() {
@@ -85,7 +98,7 @@ export function SeoDashboard() {
   const [view, setView] = useState<View>('search');
 
   return (
-    <Container width={3} paddingX={5} paddingY={5}>
+    <Container width={3} paddingX={[3, 4, 5]} paddingY={[4, 4, 5]}>
       <Stack space={5}>
         <Stack space={4}>
           <Flex align="center" gap={3} wrap="wrap" justify="space-between">

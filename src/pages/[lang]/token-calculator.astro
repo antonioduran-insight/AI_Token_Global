@@ -657,6 +657,10 @@ function pt(blocks: any[] | undefined): string {
   @media (max-width: 640px) {
     .stat-grid { grid-template-columns: 1fr; }
     .cta-card { padding: 2.25rem 1.75rem; }
+    /* Side-by-side info/cost crushes the platform name + chip into the cost
+       column on phones. Stack them so each gets the full card width. */
+    .platform-row { flex-direction: column; align-items: stretch; gap: 0.75rem; }
+    .platform-cost-col { text-align: left; }
   }
 </style>
 

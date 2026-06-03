@@ -80,6 +80,9 @@ const HeaderCell = styled.th<{ $align: Align; $active: boolean }>`
     outline-offset: -2px;
     opacity: 1;
   }
+  @media (max-width: 600px) {
+    padding: 0.7rem 0.6rem;
+  }
 `;
 
 const HeaderLabel = styled.span`
@@ -123,6 +126,10 @@ const BodyCell = styled.td<{ $align: Align; $numeric: boolean }>`
   font-variant-numeric: ${(p) => (p.$numeric ? 'tabular-nums' : 'normal')};
   border-bottom: 1px solid ${HAIRLINE};
   vertical-align: middle;
+  @media (max-width: 600px) {
+    padding: 0.55rem 0.6rem;
+    font-size: 0.8rem;
+  }
 `;
 
 const PagerRow = styled(Flex)`

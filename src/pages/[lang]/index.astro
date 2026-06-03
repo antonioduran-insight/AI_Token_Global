@@ -219,7 +219,7 @@ const noindex  = page?.seo?.noindex ?? false;
         <div class="reveal">
           <div class="card-elevated" style="padding: 1.5rem;">
             <div style="font-family: 'Kanit', sans-serif; font-size: 0.85rem; font-weight: 700; color: #3C315B; margin-bottom: 1rem; letter-spacing: 0.02em; text-transform: uppercase;">{t('home.tokenBreakdownTitle')}</div>
-            <div style="background: #F5F2FF; border-radius: 12px; padding: 1rem; margin-bottom: 1.25rem; font-size: 0.9rem; line-height: 1.8; color: #3C315B;">
+            <div style="background: #F5F2FF; border-radius: 12px; padding: 1rem; margin-bottom: 1.25rem; font-size: 0.9rem; line-height: 1.8; color: #3C315B; display: flex; flex-wrap: wrap; align-items: center; row-gap: 0.35rem;">
               {tokenChunks.map((chunk, idx) => (
                 <span style={`background: ${idx % 2 === 0 ? 'rgba(97,85,241,0.18)' : 'rgba(62,129,229,0.18)'}; border-radius: 4px; padding: 0.1rem 0.35rem; margin: 0 0.1rem;`}>{chunk}</span>
               ))}
@@ -415,7 +415,8 @@ const noindex  = page?.seo?.noindex ?? false;
     </div>
 
     <div class="card-elevated reveal" style="overflow: hidden;">
-      <table class="compare-table" style="width: 100%; border-collapse: collapse;">
+      <div style="overflow-x: auto; -webkit-overflow-scrolling: touch;">
+      <table class="compare-table" style="width: 100%; min-width: 560px; border-collapse: collapse;">
         <thead>
           <tr style="background: #FAFAFE;">
             <th>{t('home.compareColModel')}</th><th>{t('home.compareColProvider')}</th><th>{t('home.compareColContext')}</th><th>{t('home.compareColInput')}</th><th>{t('home.compareColOutput')}</th><th>{t('home.compareColModality')}</th>
@@ -460,6 +461,7 @@ const noindex  = page?.seo?.noindex ?? false;
           </tr>
         </tbody>
       </table>
+      </div>
     </div>
     <p style="font-size: 0.78rem; color: #999; margin-top: 1rem; text-align: center;">{t('home.tableNote')}</p>
   </div>
