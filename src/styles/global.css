@@ -210,6 +210,11 @@ body::before {
 
 /* ── Banner gradient ── */
 .banner-gradient { background: linear-gradient(135deg, #F1F1FF 0%, #dce8ff 50%, #c8f7fd 100%); }
+/* Grid children default to min-width:auto and refuse to shrink below their
+   content's min-content width. Once the banner collapses to a single column on
+   mobile, long words (notably in the es/id locales) push the column wider than
+   the viewport. Allow the columns to shrink so their content wraps instead. */
+.banner-inner > * { min-width: 0; }
 
 /* ── Comparison table ── */
 .compare-table th {
@@ -352,6 +357,7 @@ body::before {
 @media (max-width: 640px) {
   .topics-grid { grid-template-columns: 1fr !important; }
   .footer-grid { grid-template-columns: 1fr !important; }
+  .banner-inner { padding: 1.75rem !important; }
 }
 
 /* ── Blog post prose ── */
