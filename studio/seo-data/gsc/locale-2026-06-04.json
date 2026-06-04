@@ -1,0 +1,64 @@
+{
+  "meta": {
+    "siteUrl": "aitoken.global",
+    "snapshotDate": "2026-06-04",
+    "rangeDays": 30,
+    "dataSource": "gsc"
+  },
+  "locales": [
+    {
+      "locale": "en",
+      "label": "English",
+      "current": {
+        "clicks": 3,
+        "impressions": 313,
+        "ctr": 0.009584664536741214,
+        "avgPosition": 16.083067092651756
+      },
+      "previous": {
+        "clicks": 0,
+        "impressions": 0,
+        "ctr": 0,
+        "avgPosition": 0
+      },
+      "topQuery": "ai cloud infrastructure",
+      "topPage": "/en/blog/approximately-how-many-ai-tokens-will-be-used-to-write-a-1000-word-article/"
+    },
+    {
+      "locale": "es",
+      "label": "Español",
+      "current": {
+        "clicks": 2,
+        "impressions": 286,
+        "ctr": 0.006993006993006993,
+        "avgPosition": 11.05944055944056
+      },
+      "previous": {
+        "clicks": 0,
+        "impressions": 0,
+        "ctr": 0,
+        "avgPosition": 0
+      },
+      "topQuery": "api chat gpt",
+      "topPage": "/es/blog/cmo-reduce-ai-token-las-tarifas-no-se-trata-solo-de-cambiar-a-un-modelo-ms-barato/"
+    },
+    {
+      "locale": "id",
+      "label": "Indonesia",
+      "current": {
+        "clicks": 0,
+        "impressions": 6,
+        "ctr": 0,
+        "avgPosition": 30
+      },
+      "previous": {
+        "clicks": 0,
+        "impressions": 0,
+        "ctr": 0,
+        "avgPosition": 0
+      },
+      "topQuery": "ai enterprise",
+      "topPage": "/id/"
+    }
+  ]
+}

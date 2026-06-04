@@ -1,0 +1,94 @@
+{
+  "meta": {
+    "siteUrl": "aitoken.global",
+    "snapshotDate": "2026-06-04",
+    "rangeDays": 30,
+    "dataSource": "ga4"
+  },
+  "rows": [
+    {
+      "page": "/en/",
+      "locale": "en",
+      "views": 18,
+      "users": 6,
+      "avgEngagementSeconds": 40
+    },
+    {
+      "page": "/en/blog/",
+      "locale": "en",
+      "views": 9,
+      "users": 2,
+      "avgEngagementSeconds": 55
+    },
+    {
+      "page": "/id/",
+      "locale": "id",
+      "views": 4,
+      "users": 2,
+      "avgEngagementSeconds": 15
+    },
+    {
+      "page": "/en/chatgpt-api/",
+      "locale": "en",
+      "views": 2,
+      "users": 1,
+      "avgEngagementSeconds": 3
+    },
+    {
+      "page": "/id/beginners-guide/",
+      "locale": "id",
+      "views": 2,
+      "users": 1,
+      "avgEngagementSeconds": 2
+    },
+    {
+      "page": "/en/beginners-guide/",
+      "locale": "en",
+      "views": 1,
+      "users": 1,
+      "avgEngagementSeconds": 19
+    },
+    {
+      "page": "/en/blog/how-many-ai-tokens-does-a-50-page-legal-contract-cost-full-analysis-of-token-consumption-for-ai-/",
+      "locale": "en",
+      "views": 1,
+      "users": 1,
+      "avgEngagementSeconds": 125
+    },
+    {
+      "page": "/en/blog/what-is-ai-token-novices-can-understand-why-ai-keeps-mentioning-token-at-once/",
+      "locale": "en",
+      "views": 1,
+      "users": 1,
+      "avgEngagementSeconds": 31
+    },
+    {
+      "page": "/en/token-calculator/",
+      "locale": "en",
+      "views": 1,
+      "users": 1,
+      "avgEngagementSeconds": 15
+    },
+    {
+      "page": "/es/beginners-guide/",
+      "locale": "es",
+      "views": 1,
+      "users": 1,
+      "avgEngagementSeconds": 5
+    },
+    {
+      "page": "/es/token-calculator/",
+      "locale": "es",
+      "views": 1,
+      "users": 1,
+      "avgEngagementSeconds": 7
+    },
+    {
+      "page": "/id/token-calculator/",
+      "locale": "id",
+      "views": 1,
+      "users": 1,
+      "avgEngagementSeconds": 2
+    }
+  ]
+}

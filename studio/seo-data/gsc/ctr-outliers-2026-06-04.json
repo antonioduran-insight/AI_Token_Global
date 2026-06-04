@@ -1,0 +1,67 @@
+{
+  "meta": {
+    "siteUrl": "aitoken.global",
+    "snapshotDate": "2026-06-04",
+    "rangeDays": 30,
+    "dataSource": "gsc"
+  },
+  "criteria": "CTR < 60% of position-expected, impressions >= 20",
+  "rows": [
+    {
+      "page": "/es/blog/cmo-ver-la-facturacin-de-gemini-token-recopilacin-enfocada-de-costos-del-modelo-de-google/",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 52,
+      "ctr": 0,
+      "position": 9.75
+    },
+    {
+      "page": "/en/blog/approximately-how-many-ai-tokens-will-be-used-to-write-a-1000-word-article",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 37,
+      "ctr": 0,
+      "position": 7.081081081081081
+    },
+    {
+      "page": "/en/blog/approximately-how-many-ai-tokens-will-be-used-to-write-a-1000-word-article/",
+      "locale": "en",
+      "clicks": 1,
+      "impressions": 34,
+      "ctr": 0.029411764705882353,
+      "position": 6.088235294117647
+    },
+    {
+      "page": "/es/blog/cuntos-tokens-se-consumirn-por-el-mismo-contenido-en-chatgpt-claude-y-gemini-comparacin-de-las-d/",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 33,
+      "ctr": 0,
+      "position": 8.93939393939394
+    },
+    {
+      "page": "/en/blog/how-are-chatgpt-api-fees-calculated-whats-the-difference-between-the-monthly-fee-and-chatgpt-plu/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 28,
+      "ctr": 0,
+      "position": 11.107142857142858
+    },
+    {
+      "page": "/en/blog/what-is-gemini-api-what-is-the-difference-between-the-general-usage-of-gemini-and-what-applicati/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 27,
+      "ctr": 0,
+      "position": 9.296296296296296
+    },
+    {
+      "page": "/en/blog/what-is-ai-infrastructure-why-are-technology-giants-spending-money-to-build-ai-data-centers/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 21,
+      "ctr": 0,
+      "position": 70.33333333333333
+    }
+  ]
+}

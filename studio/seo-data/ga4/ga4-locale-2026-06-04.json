@@ -1,0 +1,64 @@
+{
+  "meta": {
+    "siteUrl": "aitoken.global",
+    "snapshotDate": "2026-06-04",
+    "rangeDays": 30,
+    "dataSource": "ga4"
+  },
+  "locales": [
+    {
+      "locale": "en",
+      "label": "English",
+      "current": {
+        "users": 13,
+        "engagedSessions": 17,
+        "engagementRate": 0.85,
+        "avgEngagementSeconds": 42
+      },
+      "previous": {
+        "users": 0,
+        "engagedSessions": 0,
+        "engagementRate": 0,
+        "avgEngagementSeconds": 0
+      },
+      "topPage": "/en/",
+      "topChannel": "Direct"
+    },
+    {
+      "locale": "es",
+      "label": "Español",
+      "current": {
+        "users": 2,
+        "engagedSessions": 2,
+        "engagementRate": 1,
+        "avgEngagementSeconds": 6
+      },
+      "previous": {
+        "users": 0,
+        "engagedSessions": 0,
+        "engagementRate": 0,
+        "avgEngagementSeconds": 0
+      },
+      "topPage": "/es/beginners-guide/",
+      "topChannel": "Organic Search"
+    },
+    {
+      "locale": "id",
+      "label": "Indonesia",
+      "current": {
+        "users": 4,
+        "engagedSessions": 4,
+        "engagementRate": 1,
+        "avgEngagementSeconds": 9
+      },
+      "previous": {
+        "users": 0,
+        "engagedSessions": 0,
+        "engagementRate": 0,
+        "avgEngagementSeconds": 0
+      },
+      "topPage": "/id/",
+      "topChannel": "Direct"
+    }
+  ]
+}

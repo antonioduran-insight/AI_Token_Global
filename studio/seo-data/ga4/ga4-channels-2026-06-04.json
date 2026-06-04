@@ -1,0 +1,31 @@
+{
+  "meta": {
+    "siteUrl": "aitoken.global",
+    "snapshotDate": "2026-06-04",
+    "rangeDays": 30,
+    "dataSource": "ga4"
+  },
+  "rows": [
+    {
+      "channel": "Direct",
+      "users": 5,
+      "sessions": 10,
+      "engagementRate": 0.7,
+      "avgEngagementSeconds": 85
+    },
+    {
+      "channel": "Organic Search",
+      "users": 1,
+      "sessions": 2,
+      "engagementRate": 1,
+      "avgEngagementSeconds": 164
+    },
+    {
+      "channel": "Referral",
+      "users": 1,
+      "sessions": 1,
+      "engagementRate": 1,
+      "avgEngagementSeconds": 0
+    }
+  ]
+}
