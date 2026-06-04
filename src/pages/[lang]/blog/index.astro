@@ -21,9 +21,9 @@ const CATEGORIES = [
   { value: 'compliance',   label: t('blog.cat.compliance') },
   { value: 'calculation',  label: t('blog.cat.calculation') },
   { value: 'pricing',      label: t('blog.cat.pricing') },
-  { value: 'models',       label: t('blog.cat.models') },
+  { value: 'comparison',   label: t('blog.cat.models') },
   { value: 'platform',     label: t('blog.cat.platform') },
-  { value: 'tutorials',    label: t('blog.cat.tutorials') },
+  { value: 'tutorial',     label: t('blog.cat.tutorials') },
 ];
 
 const usedCategories = CATEGORIES.filter(c => posts.some(p => p.category === c.value));
@@ -34,9 +34,9 @@ const CAT_PILL: Record<string, string> = {
   compliance:   'dark',
   calculation:  'purple',
   pricing:      'blue',
-  models:       'blue',
+  comparison:   'blue',
   platform:     'amber',
-  tutorials:    'green',
+  tutorial:     'green',
 };
 
 function formatDate(iso: string) {
@@ -142,8 +142,8 @@ const pageOfTemplate  = t('blog.pageOf');
               >
                 <div class="featured-inner">
                   <div class="featured-img" style={`background: ${fallbackBg};`}>
-                    {post.coverImage?.asset?.url && (
-                      <img src={post.coverImage.asset.url} alt={post.title} loading={idx === 0 ? 'eager' : 'lazy'} />
+                    {post.featuredImage?.asset?.url && (
+                      <img src={post.featuredImage.asset.url} alt={post.featuredImage.alt ?? post.title} loading={idx === 0 ? 'eager' : 'lazy'} />
                     )}
                     <div class="featured-img-overlay"></div>
                     <div class="featured-img-sheen"></div>
@@ -153,7 +153,7 @@ const pageOfTemplate  = t('blog.pageOf');
                       {post.category && (
                         <span class={`tag-pill tag-${pillClass}`}>{catLabel(post.category)}</span>
                       )}
-                      {post.tags && post.tags.slice(0, 1).map(tag => (
+                      {post.secondaryKeywords && post.secondaryKeywords.slice(0, 1).map(tag => (
                         <span class="tag-pill tag-blue">{tag}</span>
                       ))}
                     </div>
@@ -243,8 +243,8 @@ const pageOfTemplate  = t('blog.pageOf');
                   aria-label={post.title}
                 >
                   <div class="post-img-wrap" style={`background: ${fallbackBg};`}>
-                    {post.coverImage?.asset?.url
-                      ? <img class="post-img" src={post.coverImage.asset.url} alt="" loading="lazy" />
+                    {post.featuredImage?.asset?.url
+                      ? <img class="post-img" src={post.featuredImage.asset.url} alt="" loading="lazy" />
                       : <div class="post-img-placeholder"><svg width="40" height="40" viewBox="0 0 24 24" fill="none"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="rgba(255,255,255,0.25)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
                     }
                     <div class="post-img-overlay" style={`background: linear-gradient(to top, ${tintRgba} 0%, transparent 60%);`}></div>
@@ -254,7 +254,7 @@ const pageOfTemplate  = t('blog.pageOf');
                       {post.category && (
                         <span class={`tag-pill tag-${pillClass}`}>{catLabel(post.category)}</span>
                       )}
-                      {post.tags && post.tags.slice(0, 1).map(tag => (
+                      {post.secondaryKeywords && post.secondaryKeywords.slice(0, 1).map(tag => (
                         <span class="tag-pill tag-blue">{tag}</span>
                       ))}
                     </div>

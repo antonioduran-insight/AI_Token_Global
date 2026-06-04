@@ -27,36 +27,36 @@ const CATEGORIES = [
   { value: 'compliance',   label: t('blog.cat.compliance') },
   { value: 'calculation',  label: t('blog.cat.calculation') },
   { value: 'pricing',      label: t('blog.cat.pricing') },
-  { value: 'models',       label: t('blog.cat.models') },
+  { value: 'comparison',   label: t('blog.cat.models') },
   { value: 'platform',     label: t('blog.cat.platform') },
-  { value: 'tutorials',    label: t('blog.cat.tutorials') },
+  { value: 'tutorial',     label: t('blog.cat.tutorials') },
 ];
 const CAT_PILL: Record<string, string> = {
   fundamentals: 'purple',
   compliance:   'dark',
   calculation:  'purple',
   pricing:      'blue',
-  models:       'blue',
+  comparison:   'blue',
   platform:     'amber',
-  tutorials:    'green',
+  tutorial:     'green',
 };
 const CAT_GRADIENT: Record<string, string> = {
   fundamentals: 'linear-gradient(135deg, #6155F1, #2A1F5C)',
   compliance:   'linear-gradient(135deg, #3C315B, #0D1547)',
   calculation:  'linear-gradient(135deg, #6155F1, #2A1F5C)',
   pricing:      'linear-gradient(135deg, #3E81E5, #0D1547)',
-  models:       'linear-gradient(135deg, #3E81E5, #0D1547)',
+  comparison:   'linear-gradient(135deg, #3E81E5, #0D1547)',
   platform:     'linear-gradient(135deg, #B07D2E, #4A2B0F)',
-  tutorials:    'linear-gradient(135deg, #2D8653, #0F4030)',
+  tutorial:     'linear-gradient(135deg, #2D8653, #0F4030)',
 };
 const CAT_TINT: Record<string, string> = {
   fundamentals: 'rgba(97,85,241,0.4)',
   compliance:   'rgba(60,49,91,0.45)',
   calculation:  'rgba(97,85,241,0.4)',
   pricing:      'rgba(62,129,229,0.4)',
-  models:       'rgba(62,129,229,0.4)',
+  comparison:   'rgba(62,129,229,0.4)',
   platform:     'rgba(176,125,46,0.45)',
-  tutorials:    'rgba(45,134,83,0.4)',
+  tutorial:     'rgba(45,134,83,0.4)',
 };
 
 function catLabel(value?: string) {
@@ -126,17 +126,36 @@ const bodyHtml = post.body ? toHTML(post.body, {
       },
     },
     types: {
-      image: ({ value }) => {
+      sectionImage: ({ value }) => {
         const url = value?.asset?.url ?? value?.url ?? '';
         const alt = value?.alt ?? '';
         const caption = value?.caption ?? '';
         if (!url) return '';
         return `<figure class="article-figure"><img src="${url}" alt="${alt}" />${caption ? `<figcaption>${caption}</figcaption>` : ''}</figure>`;
       },
-      codeBlock: ({ value }) => {
-        const codeLang = value?.language ?? '';
-        const code = (value?.code ?? '').replace(/</g, '&lt;').replace(/>/g, '&gt;');
-        return `<pre><code class="language-${codeLang}">${code}</code></pre>`;
+      callout: ({ value }) => {
+        const type = value?.type ?? 'info';
+        const text = value?.text ?? '';
+        const icons: Record<string, string> = { tip: '💡', warning: '⚠️', info: 'ℹ️' };
+        const colors: Record<string, string> = {
+          tip:     'background:#F0FFF4;border-color:#2D8653;color:#1a4731',
+          warning: 'background:#FFFBEB;border-color:#B07D2E;color:#4a3200',
+          info:    'background:#EBF4FF;border-color:#3E81E5;color:#1a3a6b',
+        };
+        return `<div class="article-callout" style="border-left:4px solid;border-radius:0 10px 10px 0;padding:1rem 1.25rem;margin:1.5rem 0;${colors[type] ?? colors.info}"><strong>${icons[type] ?? ''} ${type.charAt(0).toUpperCase() + type.slice(1)}</strong><p style="margin:0.375rem 0 0;">${text}</p></div>`;
+      },
+      comparisonTable: ({ value }) => {
+        const caption = value?.caption ?? '';
+        const headers: string[] = value?.headers ?? [];
+        const rows: { cells: string[] }[] = value?.rows ?? [];
+        if (!headers.length && !rows.length) return '';
+        const thead = headers.length
+          ? `<thead><tr>${headers.map((h: string) => `<th>${h}</th>`).join('')}</tr></thead>`
+          : '';
+        const tbody = rows.length
+          ? `<tbody>${rows.map((r: { cells: string[] }) => `<tr>${(r.cells ?? []).map((c: string) => `<td>${c}</td>`).join('')}</tr>`).join('')}</tbody>`
+          : '';
+        return `<figure class="article-figure"><table class="article-table">${thead}${tbody}</table>${caption ? `<figcaption>${caption}</figcaption>` : ''}</figure>`;
       },
     },
   },
@@ -152,8 +171,8 @@ const coverTint = post.category ? CAT_TINT[post.category] ?? CAT_TINT.fundamenta
 ---
 
 <BaseLayout
-  title={`${post.title} — AI Token King ${t('nav.blog')}`}
-  description={post.excerpt}
+  title={post.metaTitle ?? `${post.title} — AI Token King ${t('nav.blog')}`}
+  description={post.metaDescription ?? post.excerpt}
   activePage="blog"
   lang={lang as Lang}
 >
@@ -185,7 +204,7 @@ const coverTint = post.category ? CAT_TINT[post.category] ?? CAT_TINT.fundamenta
           {post.category && (
             <a href={`/${lang}/blog`} class={`tag-pill tag-${heroPill}`}>{heroCategoryLabel}</a>
           )}
-          {post.tags && post.tags.slice(0, 1).map(tag => (
+          {post.secondaryKeywords && post.secondaryKeywords.slice(0, 1).map(tag => (
             <a href={`/${lang}/blog`} class="tag-pill tag-blue">{tag}</a>
           ))}
         </div>
@@ -226,8 +245,8 @@ const coverTint = post.category ? CAT_TINT[post.category] ?? CAT_TINT.fundamenta
 
         <!-- Hero image -->
         <div class="hero-img reveal" style={`background: ${coverGradient};`}>
-          {post.coverImage?.asset?.url && (
-            <img src={post.coverImage.asset.url} alt={post.title} />
+          {post.featuredImage?.asset?.url && (
+            <img src={post.featuredImage.asset.url} alt={post.featuredImage.alt ?? post.title} />
           )}
           <div class="hero-img-overlay" style={`background: linear-gradient(to top, ${coverTint} 0%, transparent 50%);`}></div>
           <div class="hero-img-tint"></div>
@@ -329,8 +348,8 @@ const coverTint = post.category ? CAT_TINT[post.category] ?? CAT_TINT.fundamenta
             return (
               <a class="related-card" href={`/${lang}/blog/${r.slug.current}`}>
                 <div class="related-img-wrap" style={`background: ${gradient};`}>
-                  {r.coverImage?.asset?.url && (
-                    <img class="related-img" src={r.coverImage.asset.url} alt="" loading="lazy" />
+                  {r.featuredImage?.asset?.url && (
+                    <img class="related-img" src={r.featuredImage.asset.url} alt="" loading="lazy" />
                   )}
                   <div class="related-img-overlay" style={`background: linear-gradient(to top, ${tint} 0%, transparent 60%);`}></div>
                 </div>
@@ -608,6 +627,30 @@ const coverTint = post.category ? CAT_TINT[post.category] ?? CAT_TINT.fundamenta
     color: #999;
     padding: 0.5rem 0;
     text-align: center;
+  }
+  .article-body :global(.article-callout) {
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+  .article-body :global(.article-table) {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+  }
+  .article-body :global(.article-table th),
+  .article-body :global(.article-table td) {
+    padding: 0.625rem 0.875rem;
+    border: 1px solid rgba(97, 85, 241, 0.15);
+    text-align: left;
+    color: #444;
+  }
+  .article-body :global(.article-table th) {
+    background: #F5F2FF;
+    font-weight: 700;
+    color: #3C315B;
+  }
+  .article-body :global(.article-table tr:nth-child(even) td) {
+    background: #FAFAFE;
   }
 
   /* ── Share row ─────────────────────────────────────────────────────── */

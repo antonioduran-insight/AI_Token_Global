@@ -16,8 +16,11 @@ export interface SanityPost {
   articleNumber?: number;
   language: string;
   category?: string;
-  coverImage?: { asset: { url: string } };
-  tags?: string[];
+  featuredImage?: { asset: { url: string }; alt?: string };
+  secondaryKeywords?: string[];
+  metaTitle?: string;
+  metaDescription?: string;
+  readTime?: number;
   body: any[];
 }
 
@@ -78,9 +81,9 @@ export async function getAllPosts(lang: string): Promise<SanityPost[]> {
   const client = getClient();
   if (!client) return [];
   return client.fetch(
-    `*[_type == "post" && language == $lang] | order(articleNumber asc) {
-      _id, title, slug, publishedAt, excerpt, tags, category, articleNumber, language,
-      coverImage { asset -> { url } }
+    `*[_type == "post" && language == $lang] | order(publishedAt desc) {
+      _id, title, slug, publishedAt, excerpt, secondaryKeywords, category, articleNumber, language,
+      featuredImage { asset -> { url }, alt }
     }`,
     { lang }
   );
@@ -91,8 +94,9 @@ export async function getPostBySlug(slug: string, lang: string): Promise<SanityP
   if (!client) return null;
   return client.fetch(
     `*[_type == "post" && slug.current == $slug && language == $lang][0] {
-      _id, title, slug, publishedAt, excerpt, tags, category, articleNumber, language, body,
-      coverImage { asset -> { url } }
+      _id, title, slug, publishedAt, excerpt, secondaryKeywords, category, articleNumber, language,
+      metaTitle, metaDescription, readTime, body,
+      featuredImage { asset -> { url }, alt }
     }`,
     { slug, lang }
   );
@@ -105,8 +109,8 @@ export async function getRelatedPosts(currentSlug: string, lang: string, categor
   const sameCat = category
     ? await client.fetch(
         `*[_type == "post" && language == $lang && category == $category && slug.current != $currentSlug] | order(publishedAt desc, articleNumber asc) [0...$limit] {
-          _id, title, slug, publishedAt, excerpt, tags, category, articleNumber, language,
-          coverImage { asset -> { url } }
+          _id, title, slug, publishedAt, excerpt, secondaryKeywords, category, articleNumber, language,
+          featuredImage { asset -> { url }, alt }
         }`,
         { lang, category, currentSlug, limit }
       )
