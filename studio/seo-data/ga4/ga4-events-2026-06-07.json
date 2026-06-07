@@ -1,0 +1,70 @@
+{
+  "meta": {
+    "siteUrl": "aitoken.global",
+    "snapshotDate": "2026-06-07",
+    "rangeDays": 30,
+    "dataSource": "ga4"
+  },
+  "rows": [
+    {
+      "event": "page_view",
+      "count": 338,
+      "users": 12,
+      "custom": false
+    },
+    {
+      "event": "user_engagement",
+      "count": 135,
+      "users": 12,
+      "custom": false
+    },
+    {
+      "event": "scroll",
+      "count": 41,
+      "users": 9,
+      "custom": false
+    },
+    {
+      "event": "session_start",
+      "count": 31,
+      "users": 12,
+      "custom": false
+    },
+    {
+      "event": "language_switch",
+      "count": 25,
+      "users": 6,
+      "custom": true
+    },
+    {
+      "event": "first_visit",
+      "count": 12,
+      "users": 12,
+      "custom": false
+    },
+    {
+      "event": "click",
+      "count": 2,
+      "users": 2,
+      "custom": false
+    },
+    {
+      "event": "calculator_used",
+      "count": 1,
+      "users": 1,
+      "custom": true
+    },
+    {
+      "event": "cta_get_started",
+      "count": 1,
+      "users": 1,
+      "custom": true
+    },
+    {
+      "event": "faq_open",
+      "count": 1,
+      "users": 1,
+      "custom": true
+    }
+  ]
+}

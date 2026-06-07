@@ -1,0 +1,131 @@
+{
+  "meta": {
+    "siteUrl": "aitoken.global",
+    "snapshotDate": "2026-06-07",
+    "rangeDays": 30,
+    "dataSource": "gsc"
+  },
+  "criteria": "CTR < 60% of position-expected, impressions >= 20",
+  "rows": [
+    {
+      "page": "/es/blog/cmo-ver-la-facturacin-de-gemini-token-recopilacin-enfocada-de-costos-del-modelo-de-google/",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 113,
+      "ctr": 0,
+      "position": 9.4070796460177
+    },
+    {
+      "page": "/es/blog/qu-es-la-api-de-gminis-cul-es-la-diferencia-entre-el-uso-general-de-gemini-y-para-qu-aplicacione/",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 59,
+      "ctr": 0,
+      "position": 9.305084745762711
+    },
+    {
+      "page": "/en/blog/approximately-how-many-ai-tokens-will-be-used-to-write-a-1000-word-article/",
+      "locale": "en",
+      "clicks": 1,
+      "impressions": 51,
+      "ctr": 0.0196078431372549,
+      "position": 6.549019607843137
+    },
+    {
+      "page": "/en/blog/approximately-how-many-ai-tokens-will-be-used-to-write-a-1000-word-article",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 48,
+      "ctr": 0,
+      "position": 7.083333333333333
+    },
+    {
+      "page": "/en/blog/how-are-chatgpt-api-fees-calculated-whats-the-difference-between-the-monthly-fee-and-chatgpt-plu/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 47,
+      "ctr": 0,
+      "position": 11.659574468085106
+    },
+    {
+      "page": "/en/blog/what-is-gemini-api-what-is-the-difference-between-the-general-usage-of-gemini-and-what-applicati/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 42,
+      "ctr": 0,
+      "position": 8.952380952380953
+    },
+    {
+      "page": "/es/blog/cmo-comprar-tokens-ai-la-forma-ms-sencilla-de-entender-para-los-usuarios-individuales/",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 41,
+      "ctr": 0,
+      "position": 7.560975609756097
+    },
+    {
+      "page": "/en/blog/will-corporate-data-be-used-to-train-ai-7-things-you-must-understand-before-importing-ai-apis/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 34,
+      "ctr": 0,
+      "position": 9
+    },
+    {
+      "page": "/en/blog/what-is-the-difference-between-ai-token-and-points-not-every-platform-uses-the-same-algorithm/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 28,
+      "ctr": 0,
+      "position": 5.785714285714286
+    },
+    {
+      "page": "/en/blog/how-to-calculate-ai-token-cost-it-can-be-seen-most-clearly-from-the-separation-of-input-and-outp/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 25,
+      "ctr": 0,
+      "position": 15.6
+    },
+    {
+      "page": "/es/blog/qu-es-la-api-chatgpt-en-qu-se-diferencia-de-chatgpt-y-para-qu-escenarios-de-uso-es-adecuado/",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 25,
+      "ctr": 0,
+      "position": 11.08
+    },
+    {
+      "page": "/es/blog/aproximadamente-cuntos-tokens-ai-se-utilizarn-para-escribir-un-artculo-de-1000-palabras/",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 23,
+      "ctr": 0,
+      "position": 7.304347826086956
+    },
+    {
+      "page": "/en/blog/what-is-ai-infrastructure-why-are-technology-giants-spending-money-to-build-ai-data-centers/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 21,
+      "ctr": 0,
+      "position": 70.33333333333333
+    },
+    {
+      "page": "/es/blog/cmo-se-calcula-el-token-ai-los-novatos-comprenden-los-mtodos-de-clculo-ms-bsicos/",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 21,
+      "ctr": 0,
+      "position": 10.80952380952381
+    },
+    {
+      "page": "/en/blog/why-is-ai-token-deducted-so-quickly-the-8-most-common-reasons/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 20,
+      "ctr": 0,
+      "position": 7.4
+    }
+  ]
+}
