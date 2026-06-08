@@ -40,7 +40,11 @@ const Grid = styled.div<{ $localeCount: number }>`
   grid-template-columns: minmax(120px, 1fr) repeat(${(p) => p.$localeCount}, minmax(160px, 1.4fr));
   border: 1px solid ${HAIRLINE};
   border-radius: 12px;
-  overflow: hidden;
+  /* Scroll horizontally instead of clipping: the per-locale columns add up to
+     ~600px min, so on a narrow panel the extra locales were hidden with no way
+     to reach them. overflow-x:auto keeps the rounded corners and only shows a
+     scrollbar when the grid is wider than its container. */
+  overflow-x: auto;
 
   /* Drop the bottom border on the last row (metric label + one cell per locale)
      so it doesn't double up with the grid's own border. Locale-count-aware: the
