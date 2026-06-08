@@ -5,9 +5,9 @@
 //
 // Verified against the live API. The RUM pageload dataset exposes `count` (page
 // views), `sum.visits`, and dimensions requestPath / refererHost / countryName.
-// There is NO page-load-time metric here (it lives in a separate web-vitals
-// dataset), so medianLoadMs stays 0 for now. The dashboard shows an empty-state
-// when there's no data — no mock fallback.
+// Median page-load time comes from the SEPARATE RUM performance dataset
+// (rumPerformanceEventsAdaptiveGroups → quantiles.pageLoadTimeP50, in ms). The
+// dashboard shows an empty-state when there's no data — no mock fallback.
 
 import 'dotenv/config';
 import { mkdir, writeFile } from 'node:fs/promises';
@@ -69,16 +69,37 @@ async function write(section, payload) {
   console.log(`✓ wrote ${file}`);
 }
 
+// Median page-load time lives in the SEPARATE RUM performance dataset (not the
+// pageload dataset above). pageLoadTimeP50 is the p50 (median) full page-load
+// time — Cloudflare reports RUM timings in MICROSECONDS, so we divide by 1000
+// to get milliseconds. Returns 0 when there are no performance samples.
+async function fetchMedianLoadMs(range) {
+  const query = `query($account:String!,$siteTag:String!,$start:Date!,$end:Date!){
+    viewer { accounts(filter:{ accountTag:$account }) {
+      rumPerformanceEventsAdaptiveGroups(filter:${FILTER}, limit:1) {
+        quantiles { pageLoadTimeP50 }
+      }
+    }}
+  }`;
+  const res = await fetch(GQL_URL, {
+    method: 'POST',
+    headers: { Authorization: `Bearer ${TOKEN}`, 'Content-Type': 'application/json' },
+    body: JSON.stringify({ query, variables: { account: ACCOUNT, siteTag: SITE_TAG, start: range.start, end: range.end } }),
+  });
+  const json = await res.json();
+  if (json.errors) throw new Error('Cloudflare GraphQL errors (performance):\n' + JSON.stringify(json.errors, null, 2));
+  const g = json.data?.viewer?.accounts?.[0]?.rumPerformanceEventsAdaptiveGroups?.[0];
+  return Math.round((g?.quantiles?.pageLoadTimeP50 ?? 0) / 1000); // µs → ms
+}
+
 async function overviewBucket(range) {
-  // The RUM pageload dataset exposes only `count` (page views) and `sum.visits`
-  // — there is NO page-load-time metric here (it lives in a separate web-vitals
-  // dataset). So visits + page views are real; medianLoadMs stays 0 until/unless
-  // we wire the web-vitals dataset for it.
+  // visits + page views come from the RUM pageload dataset; median load time
+  // comes from the separate RUM performance dataset (see fetchMedianLoadMs).
   const g = (await gql('', range, 1))[0];
   return {
     visits: g?.sum?.visits ?? 0,
     pageViews: g?.count ?? 0,
-    medianLoadMs: 0,
+    medianLoadMs: await fetchMedianLoadMs(range),
   };
 }
 
