@@ -42,7 +42,7 @@ jobs:
       GA4_PROPERTY_ID: '539617761'
       GSC_SITE_URL: 'sc-domain:aitoken.global'
       CLOUDFLARE_ACCOUNT_ID: '96d690116e92a5de014189ece0fd30bd'
-      CLOUDFLARE_SITE_TAG: '88312c1f31ca4a1a998bdbe7a78b4e19'
+      CLOUDFLARE_SITE_TAG: 'f5db792d35f3405596f19785fa273027'
       # Where the scripts look for the credential files we write below.
       GOOGLE_SERVICE_ACCOUNT_KEYFILE: './secrets/ga4-service-account.json'
       GOOGLE_OAUTH_CLIENT: './secrets/oauth-credentials.json'
