@@ -1,0 +1,64 @@
+{
+  "meta": {
+    "siteUrl": "aitoken.global",
+    "snapshotDate": "2026-06-08",
+    "rangeDays": 30,
+    "dataSource": "gsc"
+  },
+  "locales": [
+    {
+      "locale": "en",
+      "label": "English",
+      "current": {
+        "clicks": 8,
+        "impressions": 1144,
+        "ctr": 0.006993006993006993,
+        "avgPosition": 12.625874125874127
+      },
+      "previous": {
+        "clicks": 0,
+        "impressions": 0,
+        "ctr": 0,
+        "avgPosition": 0
+      },
+      "topQuery": "ai cloud infrastructure",
+      "topPage": "/en/blog/ai-api-platforms-vs-chat-tools-for-businesses-and-developers/"
+    },
+    {
+      "locale": "es",
+      "label": "Español",
+      "current": {
+        "clicks": 8,
+        "impressions": 878,
+        "ctr": 0.009111617312072893,
+        "avgPosition": 11.864464692482915
+      },
+      "previous": {
+        "clicks": 0,
+        "impressions": 0,
+        "ctr": 0,
+        "avgPosition": 0
+      },
+      "topQuery": "agentes ia criptomonedas",
+      "topPage": "/es/blog/cmo-reduce-ai-token-las-tarifas-no-se-trata-solo-de-cambiar-a-un-modelo-ms-barato/"
+    },
+    {
+      "locale": "id",
+      "label": "Indonesia",
+      "current": {
+        "clicks": 1,
+        "impressions": 62,
+        "ctr": 0.016129032258064516,
+        "avgPosition": 11.516129032258064
+      },
+      "previous": {
+        "clicks": 0,
+        "impressions": 0,
+        "ctr": 0,
+        "avgPosition": 0
+      },
+      "topQuery": "ai enterprise",
+      "topPage": "/id/api-compare/"
+    }
+  ]
+}

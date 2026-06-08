@@ -1,0 +1,10 @@
+{
+  "meta": {
+    "siteUrl": "aitoken.global",
+    "snapshotDate": "2026-06-08",
+    "rangeDays": 30,
+    "dataSource": "gsc"
+  },
+  "criteria": "position 8-20, impressions >= 10",
+  "rows": []
+}

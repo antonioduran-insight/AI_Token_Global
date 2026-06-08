@@ -1,0 +1,203 @@
+{
+  "meta": {
+    "siteUrl": "aitoken.global",
+    "snapshotDate": "2026-06-08",
+    "rangeDays": 30,
+    "dataSource": "gsc"
+  },
+  "criteria": "CTR < 60% of position-expected, impressions >= 20",
+  "rows": [
+    {
+      "page": "/en/blog/will-corporate-data-be-used-to-train-ai-7-things-you-must-understand-before-importing-ai-apis/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 176,
+      "ctr": 0,
+      "position": 8.914772727272727
+    },
+    {
+      "page": "/es/blog/cmo-ver-la-facturacin-de-gemini-token-recopilacin-enfocada-de-costos-del-modelo-de-google/",
+      "locale": "es",
+      "clicks": 1,
+      "impressions": 132,
+      "ctr": 0.007575757575757576,
+      "position": 9.613636363636363
+    },
+    {
+      "page": "/en/blog/approximately-how-many-ai-tokens-will-be-used-to-write-a-1000-word-article/",
+      "locale": "en",
+      "clicks": 1,
+      "impressions": 118,
+      "ctr": 0.00847457627118644,
+      "position": 6.703389830508475
+    },
+    {
+      "page": "/es/blog/qu-es-la-api-de-gminis-cul-es-la-diferencia-entre-el-uso-general-de-gemini-y-para-qu-aplicacione/",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 94,
+      "ctr": 0,
+      "position": 8.76595744680851
+    },
+    {
+      "page": "/en/blog/how-are-chatgpt-api-fees-calculated-whats-the-difference-between-the-monthly-fee-and-chatgpt-plu/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 69,
+      "ctr": 0,
+      "position": 11.898550724637682
+    },
+    {
+      "page": "/es/blog/cmo-comprar-tokens-ai-la-forma-ms-sencilla-de-entender-para-los-usuarios-individuales/",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 69,
+      "ctr": 0,
+      "position": 7.130434782608695
+    },
+    {
+      "page": "/en/blog/what-is-gemini-api-what-is-the-difference-between-the-general-usage-of-gemini-and-what-applicati/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 65,
+      "ctr": 0,
+      "position": 8.830769230769231
+    },
+    {
+      "page": "/en/blog/approximately-how-many-ai-tokens-will-be-used-to-write-a-1000-word-article",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 58,
+      "ctr": 0,
+      "position": 7.362068965517241
+    },
+    {
+      "page": "/en/blog/is-ai-token-the-same-as-api-key-many-novices-get-confused-at-the-first-step/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 42,
+      "ctr": 0,
+      "position": 14.904761904761905
+    },
+    {
+      "page": "/es/blog/qu-es-la-api-chatgpt-en-qu-se-diferencia-de-chatgpt-y-para-qu-escenarios-de-uso-es-adecuado/",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 36,
+      "ctr": 0,
+      "position": 12.916666666666666
+    },
+    {
+      "page": "/en/blog/how-to-calculate-ai-token-cost-it-can-be-seen-most-clearly-from-the-separation-of-input-and-outp/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 33,
+      "ctr": 0,
+      "position": 13.666666666666666
+    },
+    {
+      "page": "/en/token-calculator/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 32,
+      "ctr": 0,
+      "position": 28.59375
+    },
+    {
+      "page": "/en/blog/what-is-the-difference-between-ai-token-and-points-not-every-platform-uses-the-same-algorithm/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 30,
+      "ctr": 0,
+      "position": 5.966666666666667
+    },
+    {
+      "page": "/es/blog/cmo-se-calcula-el-token-ai-los-novatos-comprenden-los-mtodos-de-clculo-ms-bsicos/",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 30,
+      "ctr": 0,
+      "position": 11.5
+    },
+    {
+      "page": "/en/blog/how-to-calculate-ai-token-cost-it-can-be-seen-most-clearly-from-the-separation-of-input-and-outp",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 27,
+      "ctr": 0,
+      "position": 9.814814814814815
+    },
+    {
+      "page": "/en/blog/how-to-use-ai-token-the-first-step-of-teaching-for-newbies-from-scratch/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 27,
+      "ctr": 0,
+      "position": 11.222222222222221
+    },
+    {
+      "page": "/en/beginners-guide/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 26,
+      "ctr": 0,
+      "position": 12.038461538461538
+    },
+    {
+      "page": "/en/blog/why-is-ai-token-deducted-so-quickly-the-8-most-common-reasons/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 25,
+      "ctr": 0,
+      "position": 8.16
+    },
+    {
+      "page": "/es/blog/aproximadamente-cuntos-tokens-ai-se-utilizarn-para-escribir-un-artculo-de-1000-palabras/",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 23,
+      "ctr": 0,
+      "position": 7.304347826086956
+    },
+    {
+      "page": "/en/blog/how-to-view-gpt-token-billing-it-is-enough-for-novices-to-understand-the-key-points-first",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 22,
+      "ctr": 0,
+      "position": 10.090909090909092
+    },
+    {
+      "page": "/en/blog/what-is-ai-infrastructure-why-are-technology-giants-spending-money-to-build-ai-data-centers/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 21,
+      "ctr": 0,
+      "position": 70.33333333333333
+    },
+    {
+      "page": "/es/blog/qu-es-claude-api-cul-es-la-diferencia-entre-la-versin-de-chat-de-claude-y-quin-es-apto-para-usar/",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 21,
+      "ctr": 0,
+      "position": 16.904761904761905
+    },
+    {
+      "page": "/es/blog/qu-puede-hacer-la-api-de-claude-procesamiento-de-documentos-servicio-al-cliente-flujo-de-conteni/",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 21,
+      "ctr": 0,
+      "position": 9.095238095238095
+    },
+    {
+      "page": "/en/blog/what-is-the-price-of-ai-token-newbies-should-first-understand-where-the-fees-come-from/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 20,
+      "ctr": 0,
+      "position": 31.7
+    }
+  ]
+}
