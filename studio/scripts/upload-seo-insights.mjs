@@ -128,11 +128,11 @@ async function buildCloudflare() {
                   `Cloudflare Web Analytics, last ${ov.meta.rangeDays} days for ${ov.meta.siteUrl}: ` +
                   `${num(c.pageViews)} page views (${change(c.pageViews, p.pageViews)} vs prior window), ` +
                   `${num(c.visits)} visits (${change(c.visits, p.visits)}), ` +
-                  `${ms(c.medianPageLoadMs)} median page load.`,
+                  `${ms(c.medianLoadMs)} median page load.`,
           metrics: keyed([
             { label: 'Page views', value: num(c.pageViews), change: change(c.pageViews, p.pageViews) },
             { label: 'Visits', value: num(c.visits), change: change(c.visits, p.visits) },
-            { label: 'Median load', value: ms(c.medianPageLoadMs), change: change(c.medianPageLoadMs, p.medianPageLoadMs) },
+            { label: 'Median load', value: ms(c.medianLoadMs), change: change(c.medianLoadMs, p.medianLoadMs) },
                 ]),
           topItems: keyed(top),
     };
