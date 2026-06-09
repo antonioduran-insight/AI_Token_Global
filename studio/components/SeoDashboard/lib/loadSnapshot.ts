@@ -31,10 +31,27 @@ import type {
 
 type Loaded<T> = { default: T };
 
+/**
+ * Normalise a snapshot so callers can always read `.meta.*`. Most fetch scripts
+ * nest meta under `meta`, but some (e.g. the service-account fetch-gsc) write the
+ * meta fields at the top level. Without this, components doing `data.meta.rangeDays`
+ * crash on the top-level shape.
+ */
+function withMeta<T>(snap: unknown): T | null {
+  if (!snap || typeof snap !== 'object') return null;
+  const s = snap as Record<string, unknown>;
+  if (s.meta) return snap as T;
+  if (s.siteUrl !== undefined || s.rangeDays !== undefined || s.dataSource !== undefined) {
+    const { siteUrl, snapshotDate, rangeDays, dataSource, ...rest } = s;
+    return { meta: { siteUrl, snapshotDate, rangeDays, dataSource }, ...rest } as T;
+  }
+  return snap as T;
+}
+
 /** Most recent file (by filename date) from a glob result, or null if none. */
 function newest<T>(modules: Record<string, Loaded<T>>): T | null {
   const entries = Object.entries(modules).sort(([a], [b]) => b.localeCompare(a));
-  return entries.length > 0 ? entries[0][1].default : null;
+  return entries.length > 0 ? withMeta<T>(entries[0][1].default) : null;
 }
 
 const RANGE_DAYS = 30;
