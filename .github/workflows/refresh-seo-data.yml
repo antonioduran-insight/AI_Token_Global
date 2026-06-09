@@ -117,4 +117,4 @@ jobs:
         if: always()
         run: npx sanity deploy
         env:
-          SANITY_AUTH_TOKEN: ${{ secrets.SANITY_AUTH_TOKEN }}
+                    SANITY_AUTH_TOKEN: ${{ secrets.SANITY_DEPLOY_TOKEN }}
