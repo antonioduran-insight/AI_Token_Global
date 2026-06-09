@@ -105,6 +105,7 @@ jobs:
       # write/Editor access (not just deploy).
       - name: Upload SEO insights to Sanity
         if: success()
+                  continue-on-error: true
         run: node scripts/upload-seo-insights.mjs
         env:
           SANITY_AUTH_TOKEN: ${{ secrets.SANITY_AUTH_TOKEN }}
@@ -115,7 +116,7 @@ jobs:
       # elsewhere and auto-rebuilds on push, DELETE this step (the commit above
       # already triggered that rebuild).
       - name: Redeploy Studio
-        if: success()
+        if: always()
         run: npx sanity deploy
         env:
           SANITY_AUTH_TOKEN: ${{ secrets.SANITY_AUTH_TOKEN }}
