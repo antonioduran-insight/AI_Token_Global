@@ -11,9 +11,10 @@
 #                                 refresh token from the first local run —
 #                                 this is what lets GSC run without a browser)
 #      CLOUDFLARE_API_TOKEN     – the cfut_… token (plain)
-#      SANITY_AUTH_TOKEN        – a Sanity token with Deploy Studio AND write/Editor
-#                                 access (deploy = redeploy Studio; write = upload
-#                                 the seoInsights documents)
+#      SANITY_AUTH_TOKEN        – Editor token (read+write) — used by the seoInsights
+#                                 upload step. Sanity has no single role that both
+#                                 writes and deploys, hence two tokens:
+#      SANITY_DEPLOY_TOKEN      – Deploy Studio token — used by the Studio redeploy step
 # 2. Merge this branch to main — `schedule:` only fires from the default branch.
 #    (Until then, use the "Run workflow" button — workflow_dispatch — to test.)
 #
@@ -113,4 +114,8 @@ jobs:
         if: always()
         run: npx sanity deploy --yes
         env:
-          SANITY_AUTH_TOKEN: ${{ secrets.SANITY_AUTH_TOKEN }}
+          # `sanity deploy` needs Deploy Studio permission, which the Editor
+          # token (SANITY_AUTH_TOKEN, used by the upload step) does not have.
+          # Sanity has no single role that both writes and deploys, so the
+          # deploy step uses its own Deploy-Studio token.
+          SANITY_AUTH_TOKEN: ${{ secrets.SANITY_DEPLOY_TOKEN }}
