@@ -32,7 +32,10 @@ type View = 'search' | 'behavior' | 'traffic';
 
 // No mock data: sections show real snapshots, or an empty-state when a source has
 // no data in the window. The site name comes from the snapshot meta.
-const SITE_URL = loadOverview().meta.siteUrl;
+// Read defensively: `sanity deploy` extracts the schema by loading this config in
+// a non-Vite worker where import.meta.glob can yield no snapshot, so loadOverview()
+// may lack `.meta` — guarding here keeps schema/manifest deployment from crashing.
+const SITE_URL = loadOverview()?.meta?.siteUrl ?? 'aitoken.global';
 
 const VIEWS: { id: View; label: string }[] = [
   { id: 'search', label: 'Search · Google Search Console' },
