@@ -113,8 +113,13 @@ jobs:
       # fresh data. This assumes a Sanity-hosted Studio. If the Studio is hosted
       # elsewhere and auto-rebuilds on push, DELETE this step (the commit above
       # already triggered that rebuild).
+# ── Studio redeploy ──────────────────────────────────────────────────
+      # The Studio reads JSON at build time, so it must be redeployed to show the
+      # fresh data. This assumes a Sanity-hosted Studio. If the Studio is hosted
+      # elsewhere and auto-rebuilds on push, DELETE this step (the commit above
+      # already triggered that rebuild).
       - name: Redeploy Studio
         if: always()
-        run: npx sanity deploy
+        run: npx sanity deploy --yes
         env:
-                    SANITY_AUTH_TOKEN: ${{ secrets.SANITY_DEPLOY_TOKEN }}
+          SANITY_AUTH_TOKEN: ${{ secrets.SANITY_DEPLOY_TOKEN }}
