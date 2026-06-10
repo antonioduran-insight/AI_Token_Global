@@ -1,5 +1,6 @@
 import { defineConfig } from 'sanity';
 import { structureTool } from 'sanity/structure';
+import type { StructureBuilder } from 'sanity/structure';
 import { visionTool } from '@sanity/vision';
 import { media, mediaAssetSource } from 'sanity-plugin-media';
 import { postSchema } from './schemas/post';
@@ -18,13 +19,37 @@ import { seoInsightsSchema } from './schemas/seoInsights';
 import { ArticleNumberFilter } from './components/ArticleNumberFilter';
 import { SeoDashboard } from './components/SeoDashboard';
 
+const structure = (S: StructureBuilder) =>
+  S.list()
+    .title('Content')
+    .items([
+      S.listItem()
+        .title('Blog Posts')
+        .child(
+          S.documentList()
+            .title('Blog Posts')
+            .filter('_type == "post"')
+            .defaultOrdering([{ field: '_createdAt', direction: 'desc' }])
+        ),
+      S.listItem()
+        .title('Pipeline Posts')
+        .child(
+          S.documentList()
+            .title('Pipeline Posts')
+            .filter('_type == "post" && generatedByPipeline == true')
+            .defaultOrdering([{ field: '_createdAt', direction: 'desc' }])
+        ),
+      S.divider(),
+      ...S.documentTypeListItems(),
+    ]);
+
 export default defineConfig({
   name: 'ai-token-global',
   title: 'AI Token Global',
   projectId: 'mq3wxr8n',
   dataset: 'production',
   plugins: [
-    structureTool(),
+    structureTool({ structure }),
     visionTool(),
     media(),
     {

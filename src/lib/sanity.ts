@@ -78,7 +78,7 @@ export async function getAllPosts(lang: string): Promise<SanityPost[]> {
   const client = getClient();
   if (!client) return [];
   return client.fetch(
-    `*[_type == "post" && language == $lang] | order(articleNumber asc) {
+    `*[_type == "post" && language == $lang] | order(coalesce(articleNumber, 999999) asc, _createdAt desc) {
       _id, title, slug, publishedAt, excerpt, tags, category, articleNumber, language,
       coverImage { asset -> { url } }
     }`,

@@ -1,11 +1,50 @@
 import { useState } from 'react';
 import { useClient } from 'sanity';
+import { useIntentLink } from 'sanity/router';
 
 interface Post {
   _id: string;
   title: string;
   articleNumber: number;
   slug: { current: string };
+}
+
+function PostResultCard({ post }: { post: Post }) {
+  const href = useIntentLink({ intent: 'edit', params: { id: post._id } });
+  return (
+    <a
+      href={href}
+      style={{
+        display: 'flex',
+        alignItems: 'center',
+        gap: '0.75rem',
+        padding: '0.75rem',
+        background: '#f9f9f9',
+        borderRadius: '8px',
+        textDecoration: 'none',
+        color: 'inherit',
+        marginBottom: '0.5rem',
+        border: '1px solid #eee',
+      }}
+    >
+      <span style={{
+        minWidth: 32,
+        height: 32,
+        background: '#6155F1',
+        color: '#fff',
+        borderRadius: '6px',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        fontSize: '0.8rem',
+        fontWeight: 700,
+        flexShrink: 0,
+      }}>
+        #{post.articleNumber}
+      </span>
+      <span style={{ fontSize: '0.9rem', fontWeight: 500 }}>{post.title}</span>
+    </a>
+  );
 }
 
 export function ArticleNumberFilter() {
@@ -76,39 +115,7 @@ export function ArticleNumberFilter() {
       )}
 
       {results.map(post => (
-        <a
-          key={post._id}
-          href={`/structure/post;${post._id}`}
-          style={{
-            display: 'flex',
-            alignItems: 'center',
-            gap: '0.75rem',
-            padding: '0.75rem',
-            background: '#f9f9f9',
-            borderRadius: '8px',
-            textDecoration: 'none',
-            color: 'inherit',
-            marginBottom: '0.5rem',
-            border: '1px solid #eee',
-          }}
-        >
-          <span style={{
-            minWidth: 32,
-            height: 32,
-            background: '#6155F1',
-            color: '#fff',
-            borderRadius: '6px',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            fontSize: '0.8rem',
-            fontWeight: 700,
-            flexShrink: 0,
-          }}>
-            #{post.articleNumber}
-          </span>
-          <span style={{ fontSize: '0.9rem', fontWeight: 500 }}>{post.title}</span>
-        </a>
+        <PostResultCard key={post._id} post={post} />
       ))}
     </div>
   );
