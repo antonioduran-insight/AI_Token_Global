@@ -204,10 +204,10 @@ const pageOfTemplate  = t('blog.pageOf');
             </div>
             <div class="results-sort">
               <span class="sort-label">{t('blog.sortBy')}</span>
-              <select aria-label={t('blog.sortBy')}>
-                <option>{t('blog.sortLatest')}</option>
-                <option>{t('blog.sortPopular')}</option>
-                <option>{t('blog.sortBeginner')}</option>
+              <select id="sort-select" aria-label={t('blog.sortBy')}>
+                <option value="latest">{t('blog.sortLatest')}</option>
+                <option value="popular">{t('blog.sortPopular')}</option>
+                <option value="beginner">{t('blog.sortBeginner')}</option>
               </select>
             </div>
           </div>
@@ -240,6 +240,8 @@ const pageOfTemplate  = t('blog.pageOf');
                   class="post-card"
                   data-category={post.category ?? 'uncategorized'}
                   data-idx={idx}
+                  data-published={post.publishedAt}
+                  data-number={String(post.articleNumber ?? 999999)}
                   aria-label={post.title}
                 >
                   <div class="post-img-wrap" style={`background: ${fallbackBg};`}>
@@ -797,6 +799,9 @@ const pageOfTemplate  = t('blog.pageOf');
 
     let currentFilter = 'all';
     let currentPage = 1;
+    let currentSort = 'latest';
+
+    const sortSelect = document.getElementById('sort-select') as HTMLSelectElement | null;
 
     function pageOf(n: number, total: number) {
       return pageOfTpl.replace('{n}', String(n)).replace('{total}', String(total));
@@ -851,9 +856,37 @@ const pageOfTemplate  = t('blog.pageOf');
       return featuredIdx;
     }
 
+    const CAT_DIFFICULTY: Record<string, number> = {
+      fundamentals: 0, calculation: 1, pricing: 2, comparison: 3,
+      models: 3, platform: 4, tutorials: 5, tutorial: 5, compliance: 6,
+    };
+
+    function sortMatching(arr: HTMLAnchorElement[]) {
+      if (currentSort === 'popular') {
+        return [...arr].sort((a, b) =>
+          Number(a.dataset.number ?? 999999) - Number(b.dataset.number ?? 999999) ||
+          (b.dataset.published ?? '').localeCompare(a.dataset.published ?? '')
+        );
+      }
+      if (currentSort === 'beginner') {
+        return [...arr].sort((a, b) =>
+          (CAT_DIFFICULTY[a.dataset.category ?? ''] ?? 99) -
+          (CAT_DIFFICULTY[b.dataset.category ?? ''] ?? 99)
+        );
+      }
+      // latest: newest first
+      return [...arr].sort((a, b) =>
+        (b.dataset.published ?? '').localeCompare(a.dataset.published ?? '')
+      );
+    }
+
     function render() {
       const featuredIdx = pickFeatured(currentFilter);
-      const matching = getMatching(currentFilter).filter(c => Number(c.dataset.idx) !== featuredIdx);
+      const matching = sortMatching(
+        getMatching(currentFilter).filter(c => Number(c.dataset.idx) !== featuredIdx)
+      );
+      // Apply CSS grid order so cards render in sorted sequence
+      matching.forEach((card, i) => { card.style.order = String(i); });
       const total = matching.length;
       const totalPages = Math.max(1, Math.ceil(total / POSTS_PER_PAGE));
       if (currentPage > totalPages) currentPage = totalPages;
@@ -890,6 +923,13 @@ const pageOfTemplate  = t('blog.pageOf');
       const featuredVisible = featuredIdx >= 0;
       if (emptyState) emptyState.style.display = !featuredVisible && visible === 0 ? 'block' : 'none';
     }
+
+    // Sort select
+    sortSelect?.addEventListener('change', () => {
+      currentSort = sortSelect.value;
+      currentPage = 1;
+      render();
+    });
 
     // Tab clicks
     tabs.forEach(tab => {
