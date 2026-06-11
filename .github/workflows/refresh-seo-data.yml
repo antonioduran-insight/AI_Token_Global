@@ -25,7 +25,7 @@ name: Refresh SEO data
 on:
   workflow_dispatch: {} # manual "Run workflow" button (works on any branch)
   schedule:
-    - cron: '0 6 * * *' # Daily 06:00 UTC. (GSC lags ~2-3 days, so the search numbers move slowly; GA4/Cloudflare are fresher.)
+    - cron: '0 6 * * 1' # Weekly, Mondays 06:00 UTC. Free Sanity plan has API limits, so we refresh weekly rather than daily; GSC lags ~2-3 days anyway, so the numbers move slowly.
 
 permissions:
   contents: write # commit the regenerated snapshots back to the repo
