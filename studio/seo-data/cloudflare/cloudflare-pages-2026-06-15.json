@@ -1,0 +1,136 @@
+{
+  "meta": {
+    "siteUrl": "aitoken.global",
+    "snapshotDate": "2026-06-15",
+    "rangeDays": 30,
+    "dataSource": "cloudflare"
+  },
+  "rows": [
+    {
+      "page": "/en/blog/ai-token-pricing-for-beginners/",
+      "locale": "en",
+      "visits": 60,
+      "pageViews": 60
+    },
+    {
+      "page": "/en/",
+      "locale": "en",
+      "visits": 40,
+      "pageViews": 130
+    },
+    {
+      "page": "/en/blog/ai-token-cost-for-1000-word-article/",
+      "locale": "en",
+      "visits": 10,
+      "pageViews": 10
+    },
+    {
+      "page": "/en/blog/optimizing-ai-token-costs-for-small-businesses/",
+      "locale": "en",
+      "visits": 10,
+      "pageViews": 10
+    },
+    {
+      "page": "/en/blog/why-is-ai-token-deducted-so-quickly-the-8-most-common-reasons/",
+      "locale": "en",
+      "visits": 10,
+      "pageViews": 10
+    },
+    {
+      "page": "/en/blog/chatgpt-vs-claude-vs-gemini-ai-models-comparison/",
+      "locale": "en",
+      "visits": 10,
+      "pageViews": 10
+    },
+    {
+      "page": "/en/blog/",
+      "locale": "en",
+      "visits": 0,
+      "pageViews": 90
+    },
+    {
+      "page": "/es/blog/la-eleccion-del-plataforma-de-tokens-de-inteligencia-artificial-adecuada-para-tus-needs/",
+      "locale": "es",
+      "visits": 0,
+      "pageViews": 10
+    },
+    {
+      "page": "/id/token-calculator/",
+      "locale": "id",
+      "visits": 0,
+      "pageViews": 20
+    },
+    {
+      "page": "/en/token-calculator/",
+      "locale": "en",
+      "visits": 0,
+      "pageViews": 10
+    },
+    {
+      "page": "/en/beginners-guide/",
+      "locale": "en",
+      "visits": 0,
+      "pageViews": 40
+    },
+    {
+      "page": "/es/blog/",
+      "locale": "es",
+      "visits": 0,
+      "pageViews": 180
+    },
+    {
+      "page": "/es/blog/token-ai-cualidad-respuesta/",
+      "locale": "es",
+      "visits": 0,
+      "pageViews": 40
+    },
+    {
+      "page": "/es/token-calculator/",
+      "locale": "es",
+      "visits": 0,
+      "pageViews": 10
+    },
+    {
+      "page": "/id/beginners-guide/",
+      "locale": "id",
+      "visits": 0,
+      "pageViews": 10
+    },
+    {
+      "page": "/en/api-compare/",
+      "locale": "en",
+      "visits": 0,
+      "pageViews": 40
+    },
+    {
+      "page": "/es/blog/seleccionar-la-mejor-plataforma-de-tokens-ai/",
+      "locale": "es",
+      "visits": 0,
+      "pageViews": 10
+    },
+    {
+      "page": "/en/chatgpt-api/",
+      "locale": "en",
+      "visits": 0,
+      "pageViews": 10
+    },
+    {
+      "page": "/en/compliance/",
+      "locale": "en",
+      "visits": 0,
+      "pageViews": 40
+    },
+    {
+      "page": "/es/blog/seleccion-de-plataformas-de-tokens-ai/",
+      "locale": "es",
+      "visits": 0,
+      "pageViews": 20
+    },
+    {
+      "page": "/id/blog/",
+      "locale": "id",
+      "visits": 0,
+      "pageViews": 20
+    }
+  ]
+}

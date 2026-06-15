@@ -1,0 +1,1994 @@
+{
+  "siteUrl": "aitoken.global",
+  "snapshotDate": "2026-06-15",
+  "rangeDays": 30,
+  "dataSource": "gsc",
+  "rows": [
+    {
+      "query": "chat api platform",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 26,
+      "ctr": 0,
+      "position": 11.653846153846153
+    },
+    {
+      "query": "tiempo hasta el primer token",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 25,
+      "ctr": 0,
+      "position": 28.28
+    },
+    {
+      "query": "token calculator",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 25,
+      "ctr": 0,
+      "position": 45.56
+    },
+    {
+      "query": "ai token",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 19,
+      "ctr": 0,
+      "position": 25.57894736842105
+    },
+    {
+      "query": "aitoken",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 18,
+      "ctr": 0,
+      "position": 5.055555555555555
+    },
+    {
+      "query": "openai api data usage business data not used to train models official",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 16,
+      "ctr": 0,
+      "position": 8.875
+    },
+    {
+      "query": "analytics token comparison",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 14,
+      "ctr": 0,
+      "position": 83.92857142857143
+    },
+    {
+      "query": "openai api data not used to train models business data official",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 14,
+      "ctr": 0,
+      "position": 8.5
+    },
+    {
+      "query": "comparison of all chat apis",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 13,
+      "ctr": 0,
+      "position": 68.38461538461539
+    },
+    {
+      "query": "ai tokens",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 12,
+      "ctr": 0,
+      "position": 55.166666666666664
+    },
+    {
+      "query": "does system prompt count as input token",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 10,
+      "ctr": 0,
+      "position": 6.3
+    },
+    {
+      "query": "aitokenking",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 9,
+      "ctr": 0,
+      "position": 4.111111111111111
+    },
+    {
+      "query": "key differences between chinese and english token calculation -filetype:txt -filetype:pdf -filetype:epub -filetype:doc -filetype:docx -filetype:xls -filetype:xlsx -filetype:ppt -filetype:csv -site:youtube.com -site:tiktok.com -site:instagram.com -site:ebay.com -site:jd.com -site:amazon.com -site:iqiyi.com -site:bilibili.com -site:t.me -site:douyin.com -site:douban.com -site:apple.com -site:reddit.com -site:researchgate.net -site:academia.edu -site:dokumen.pub -site:en.wikipedia.org -site:quora.com -site:sciencedirect.com -site:cambridge.org -site:mdpi.com -site:link.springer.com -site:zhuanlan.zhihu.com -site:journals.sagepub.com -site:imdb.com -site:tandfonline.com -site:onlinelibrary.wiley.com -site:brill.com -site:getyourguide.com -site:academic.oup.com -site:www.emerald.com -site:eresources.nlb.gov.sg -site:www.govinfo.gov",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 9,
+      "ctr": 0,
+      "position": 10.222222222222221
+    },
+    {
+      "query": "openai api data used to train models by default official",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 9,
+      "ctr": 0,
+      "position": 11
+    },
+    {
+      "query": "chatgpt api",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 8,
+      "ctr": 0,
+      "position": 22
+    },
+    {
+      "query": "how are claude tokens calculated",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 8,
+      "ctr": 0,
+      "position": 10.625
+    },
+    {
+      "query": "how are tokens calculated in claude",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 8,
+      "ctr": 0,
+      "position": 10
+    },
+    {
+      "query": "inteligencia artificial para infraestructura",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 8,
+      "ctr": 0,
+      "position": 66.25
+    },
+    {
+      "query": "contratos apis data sharing legal",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 7,
+      "ctr": 0,
+      "position": 6.285714285714286
+    },
+    {
+      "query": "openai api data controls business data not used to train models official",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 7,
+      "ctr": 0,
+      "position": 7.285714285714286
+    },
+    {
+      "query": "openai api data usage business data not used to train by default official",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 7,
+      "ctr": 0,
+      "position": 9
+    },
+    {
+      "query": "token ai",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 7,
+      "ctr": 0,
+      "position": 51.142857142857146
+    },
+    {
+      "query": "what is chat api",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 7,
+      "ctr": 0,
+      "position": 70.85714285714286
+    },
+    {
+      "query": "ai infrastructure",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 6,
+      "ctr": 0,
+      "position": 72.83333333333333
+    },
+    {
+      "query": "ai token cost",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 6,
+      "ctr": 0,
+      "position": 67.5
+    },
+    {
+      "query": "claude api",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 6,
+      "ctr": 0,
+      "position": 56.333333333333336
+    },
+    {
+      "query": "claude token",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 6,
+      "ctr": 0,
+      "position": 23.666666666666668
+    },
+    {
+      "query": "claude tokens",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 6,
+      "ctr": 0,
+      "position": 26.833333333333332
+    },
+    {
+      "query": "enterprise ai compliance",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 6,
+      "ctr": 0,
+      "position": 93
+    },
+    {
+      "query": "enterprise tokens",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 6,
+      "ctr": 0,
+      "position": 69.33333333333333
+    },
+    {
+      "query": "tokens claude",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 6,
+      "ctr": 0,
+      "position": 31.333333333333332
+    },
+    {
+      "query": "ai token king",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 5,
+      "ctr": 0,
+      "position": 5.6
+    },
+    {
+      "query": "cara melihat token claude",
+      "locale": "id",
+      "clicks": 0,
+      "impressions": 5,
+      "ctr": 0,
+      "position": 9.2
+    },
+    {
+      "query": "how are ai tokens calculated",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 5,
+      "ctr": 0,
+      "position": 12
+    },
+    {
+      "query": "openai api business data not used to train by default official",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 5,
+      "ctr": 0,
+      "position": 7.4
+    },
+    {
+      "query": "openai api business data not used to train models by default official",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 5,
+      "ctr": 0,
+      "position": 9
+    },
+    {
+      "query": "openai api data not used to train models by default business data official",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 5,
+      "ctr": 0,
+      "position": 7
+    },
+    {
+      "query": "apa itu token claude",
+      "locale": "id",
+      "clicks": 1,
+      "impressions": 4,
+      "ctr": 0.25,
+      "position": 4
+    },
+    {
+      "query": "api pricing examples",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 91.75
+    },
+    {
+      "query": "comprar tokens chatgpt",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 8.25
+    },
+    {
+      "query": "do ai tokens cost money",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 64.25
+    },
+    {
+      "query": "openai api data not used to train models by default official",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 9
+    },
+    {
+      "query": "openai api data usage not used to train business data official",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 7.25
+    },
+    {
+      "query": "openai api data usage policy business data not used to train models official",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 9.5
+    },
+    {
+      "query": "openai api data used to train models business data official",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 8
+    },
+    {
+      "query": "pricing api",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 73.5
+    },
+    {
+      "query": "que es gemini api",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 9.5
+    },
+    {
+      "query": "what is the purpose of the gemini api?",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 10.75
+    },
+    {
+      "query": "ai enterprise",
+      "locale": "id",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 62
+    },
+    {
+      "query": "ai token control",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 39.666666666666664
+    },
+    {
+      "query": "ai tokenization",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 40.666666666666664
+    },
+    {
+      "query": "apa itu token ai",
+      "locale": "id",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 16.666666666666664
+    },
+    {
+      "query": "api charges",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 94
+    },
+    {
+      "query": "api chat gpt",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 21.333333333333332
+    },
+    {
+      "query": "api price",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 83
+    },
+    {
+      "query": "api pricing",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 81.33333333333333
+    },
+    {
+      "query": "chat gpt api",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 42.666666666666664
+    },
+    {
+      "query": "cost of ai tokens",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 74
+    },
+    {
+      "query": "factura google gemini",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 11.333333333333334
+    },
+    {
+      "query": "gemini api que es",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 9.333333333333334
+    },
+    {
+      "query": "gemini facturacion",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 10.333333333333334
+    },
+    {
+      "query": "harga token claude",
+      "locale": "id",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 9
+    },
+    {
+      "query": "infrastructure ai",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 77.33333333333333
+    },
+    {
+      "query": "openai api data usage business data not used to train models by default official",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 8.666666666666668
+    },
+    {
+      "query": "openai api data usage not used to train models business data official",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 9.333333333333334
+    },
+    {
+      "query": "openai api data used to train models business data policy official",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 8.333333333333332
+    },
+    {
+      "query": "openai business products data not used to train models official",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 11
+    },
+    {
+      "query": "que es un token en ia",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 50.666666666666664
+    },
+    {
+      "query": "token hesaplama",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 60.666666666666664
+    },
+    {
+      "query": "what is ai infrastructure",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 76
+    },
+    {
+      "query": "[ai fuzzing]",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 28
+    },
+    {
+      "query": "ai compute infrastructure",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 62.5
+    },
+    {
+      "query": "ai token api",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 69
+    },
+    {
+      "query": "ai token quota",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 4
+    },
+    {
+      "query": "ai token usage",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 85
+    },
+    {
+      "query": "ai token usage costs",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 61.5
+    },
+    {
+      "query": "api chatgpt",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 22.5
+    },
+    {
+      "query": "api claude",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 27
+    },
+    {
+      "query": "api costs",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 81.5
+    },
+    {
+      "query": "api de chatgpt",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 50.5
+    },
+    {
+      "query": "api model",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 73.5
+    },
+    {
+      "query": "average tokens per message in long grok conversations",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 10
+    },
+    {
+      "query": "cara cek token claude",
+      "locale": "id",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 9
+    },
+    {
+      "query": "chat api",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 43
+    },
+    {
+      "query": "enterprise ai compliance solution",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 55
+    },
+    {
+      "query": "gemini api tokens",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 39.5
+    },
+    {
+      "query": "gemini token",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 50
+    },
+    {
+      "query": "gemini tokens usage",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 10
+    },
+    {
+      "query": "how do claude tokens work",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 33
+    },
+    {
+      "query": "how does claude tokens work",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 26.5
+    },
+    {
+      "query": "how tokens are calculated in claude",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 10
+    },
+    {
+      "query": "ia aplicada a infraestructura ti",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 82
+    },
+    {
+      "query": "ia token",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 48
+    },
+    {
+      "query": "infraestructura de inteligencia artificial",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 80.5
+    },
+    {
+      "query": "openai api data controls business data not used to train official",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 8.5
+    },
+    {
+      "query": "openai api data not used to train models by default official api data controls",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 10.5
+    },
+    {
+      "query": "openai api data not used to train models by default official business data",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 6.5
+    },
+    {
+      "query": "openai api data retention business data not used to train models official",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 10
+    },
+    {
+      "query": "openai api data usage business data not used to train official",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 9
+    },
+    {
+      "query": "openai api data usage policy business data not used to train models by default official",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 9.5
+    },
+    {
+      "query": "openai api data usage policy business data not used to train official",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 9
+    },
+    {
+      "query": "openai api data used to train models business data not used by default official",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 7
+    },
+    {
+      "query": "openai api data used to train models default official",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 11
+    },
+    {
+      "query": "openai api enterprise data not used to train by default official",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 11
+    },
+    {
+      "query": "openai business data api not used to train models official",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 8
+    },
+    {
+      "query": "openai business data not used to train models by default chatgpt business enterprise api official",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 9
+    },
+    {
+      "query": "que son los tokens de claude",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 29
+    },
+    {
+      "query": "token ai adalah",
+      "locale": "id",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 16.5
+    },
+    {
+      "query": "token cost",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 67
+    },
+    {
+      "query": "token cost reduction",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 72
+    },
+    {
+      "query": "token gemini",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 29
+    },
+    {
+      "query": "token price ai",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 57.5
+    },
+    {
+      "query": "tokenization ai",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 28
+    },
+    {
+      "query": "tokenized ai",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 34
+    },
+    {
+      "query": "tokens calculator",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 46
+    },
+    {
+      "query": "what are tokens in claude",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 24
+    },
+    {
+      "query": "claude -p token",
+      "locale": "id",
+      "clicks": 1,
+      "impressions": 1,
+      "ctr": 1,
+      "position": 9
+    },
+    {
+      "query": "\"ai\" \"company\" \"scandal\" -\"artificial intelligence company\" -\"silicon valley\" -\"software\" -\"startup\" -\"tech\" -site:reddit.com -site:twitter.com -site:x.com -site:wykop.pl -site:tripadvisor.com -site:youtube.com -site:yelp.com -site:booking.com -site:facebook.com -site:instagram.com -site:tiktok.com",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 10
+    },
+    {
+      "query": "1 million tokens to words",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 71
+    },
+    {
+      "query": "1000 tokens to words",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 50
+    },
+    {
+      "query": "agentes ia criptomonedas",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 51
+    },
+    {
+      "query": "ai cloud infrastructure",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 90
+    },
+    {
+      "query": "ai compliance enterprise",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 98
+    },
+    {
+      "query": "ai cost per token",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 53
+    },
+    {
+      "query": "ai crypto",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 23
+    },
+    {
+      "query": "ai importer compliance",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 62
+    },
+    {
+      "query": "ai infrastructure budget",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 96
+    },
+    {
+      "query": "ai infrastructure computing",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 67
+    },
+    {
+      "query": "ai infrastructure for enterprises",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 77
+    },
+    {
+      "query": "ai infrastructure scale",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 99
+    },
+    {
+      "query": "ai token analysis",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 79
+    },
+    {
+      "query": "ai token calculator",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 49
+    },
+    {
+      "query": "ai token costs",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 66
+    },
+    {
+      "query": "ai token subscription",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 11
+    },
+    {
+      "query": "anthropic commercial terms api data not used to train models official",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 8
+    },
+    {
+      "query": "api api",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 76
+    },
+    {
+      "query": "api chat",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 36
+    },
+    {
+      "query": "api cost",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 86
+    },
+    {
+      "query": "api de infraestructura financiera impulsada por inteligencia artificial",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 65
+    },
+    {
+      "query": "api de retención",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 23
+    },
+    {
+      "query": "api pricing models",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 89
+    },
+    {
+      "query": "api pricing.",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 82
+    },
+    {
+      "query": "api proxy",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 33
+    },
+    {
+      "query": "api rates",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 100
+    },
+    {
+      "query": "api token chatgpt",
+      "locale": "id",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 10
+    },
+    {
+      "query": "autenticación tasa límite openrouter",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 12
+    },
+    {
+      "query": "best platform for managing token-level costs in ai",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 93
+    },
+    {
+      "query": "calculadora tokens",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 55
+    },
+    {
+      "query": "cara cek token claude ai",
+      "locale": "id",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 7
+    },
+    {
+      "query": "cara liat token claude",
+      "locale": "id",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 9
+    },
+    {
+      "query": "cara melihat token claude ai",
+      "locale": "id",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 11
+    },
+    {
+      "query": "chat ai api",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 52
+    },
+    {
+      "query": "chat gpt token",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 45
+    },
+    {
+      "query": "chatgpt ai token",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 5
+    },
+    {
+      "query": "chatgpt api tokens",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 49
+    },
+    {
+      "query": "chatgpt free api",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 12
+    },
+    {
+      "query": "claude apis",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 47
+    },
+    {
+      "query": "claude gemini",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 86
+    },
+    {
+      "query": "claude token pricing",
+      "locale": "id",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 18
+    },
+    {
+      "query": "claude token?",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 28
+    },
+    {
+      "query": "claude vs chatgpt vs gemini",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 75
+    },
+    {
+      "query": "claude what is a token",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 19
+    },
+    {
+      "query": "como comprar tokens openai",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 10
+    },
+    {
+      "query": "comparacion de modelos ia",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 7
+    },
+    {
+      "query": "compare videoken",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 27
+    },
+    {
+      "query": "comprar tokens openai",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 9
+    },
+    {
+      "query": "cost of tokens for claude",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 78
+    },
+    {
+      "query": "dedicated infrastructure in ai",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 65
+    },
+    {
+      "query": "gemini api pricing",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 71
+    },
+    {
+      "query": "gemini api usage",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 10
+    },
+    {
+      "query": "gemini token ai",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 26
+    },
+    {
+      "query": "healthcare ai api",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 58
+    },
+    {
+      "query": "how many characters is 1 million tokens",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 66
+    },
+    {
+      "query": "how many tokens does gemini have",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 40
+    },
+    {
+      "query": "how many tokens is 2000 words",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 99
+    },
+    {
+      "query": "how much does an ai token cost",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 79
+    },
+    {
+      "query": "how much is a token",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 66
+    },
+    {
+      "query": "how much is a token in ai",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 75
+    },
+    {
+      "query": "how much is an ai token",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 58
+    },
+    {
+      "query": "how to calculate token usage",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 20
+    },
+    {
+      "query": "how to connect ai token",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 33
+    },
+    {
+      "query": "how to use token",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 23
+    },
+    {
+      "query": "ia aplicada a infraestructura it",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 88
+    },
+    {
+      "query": "ia para infraestructura",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 72
+    },
+    {
+      "query": "infraestructura ia ml",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 47
+    },
+    {
+      "query": "infraestructura ml",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 47
+    },
+    {
+      "query": "infrastructure for ai",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 79
+    },
+    {
+      "query": "is api key and token the same",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 26
+    },
+    {
+      "query": "king ia",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 26
+    },
+    {
+      "query": "meskipun memiliki keunggulan yang berbeda-beda, apa arsitektur dasar yang digunakan oleh gpt, claude, dan gemini? * a. convolutional neural network b. neural engine c. recurrent neural network d. transformer",
+      "locale": "id",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 1
+    },
+    {
+      "query": "meta ai models api differences comparison",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 67
+    },
+    {
+      "query": "open router",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 86
+    },
+    {
+      "query": "openai api data controls business data not used to train by default official",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 9
+    },
+    {
+      "query": "openai api data not used for training business data official",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 12
+    },
+    {
+      "query": "openai api data not used to train by default business data official",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 10
+    },
+    {
+      "query": "openai api data not used to train models business products official",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 8
+    },
+    {
+      "query": "openai api data privacy business data not used to train models by default official",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 7
+    },
+    {
+      "query": "openai api data privacy enterprise api data not used to train models official",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 10
+    },
+    {
+      "query": "openai api data privacy enterprise data not used to train official",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 9
+    },
+    {
+      "query": "openai api data usage business data not used to train models default official",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 8
+    },
+    {
+      "query": "openai api data usage policy business api data not used to train models official",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 10
+    },
+    {
+      "query": "openai api data used for training business data official",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 11
+    },
+    {
+      "query": "openai api data used to train models by default business data privacy official",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 8
+    },
+    {
+      "query": "openai api enterprise data not used to train models official",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 7
+    },
+    {
+      "query": "openai business data api not used to train models by default official",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 10
+    },
+    {
+      "query": "openai business data not used to train models api chatgpt enterprise official",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 10
+    },
+    {
+      "query": "openai business data not used to train models by default api chatgpt enterprise official",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 12
+    },
+    {
+      "query": "openai business data not used to train models official",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 10
+    },
+    {
+      "query": "openai chatgpt business data not used to train models by default official",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 11
+    },
+    {
+      "query": "openai chatgpt plus api usage billed separately official",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 12
+    },
+    {
+      "query": "openai chatgpt subscription api usage billed separately official",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 10
+    },
+    {
+      "query": "openai chatgpt subscription api usage separate billing official",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 11
+    },
+    {
+      "query": "openai enterprise api data not used to train models official",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 9
+    },
+    {
+      "query": "openai enterprise api data not used to train official",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 11
+    },
+    {
+      "query": "openai enterprise data not used for training official",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 11
+    },
+    {
+      "query": "openai enterprise privacy api data not used to train models by default official",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 8
+    },
+    {
+      "query": "price token claude",
+      "locale": "id",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 8
+    },
+    {
+      "query": "quantos tokens tem o gemini",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 29
+    },
+    {
+      "query": "que es un token ai",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 10
+    },
+    {
+      "query": "que son los tokens en ia",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 71
+    },
+    {
+      "query": "router api",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 61
+    },
+    {
+      "query": "token ai gratis",
+      "locale": "id",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 3
+    },
+    {
+      "query": "token api key",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 22
+    },
+    {
+      "query": "token claude",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 23
+    },
+    {
+      "query": "token fee",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 66
+    },
+    {
+      "query": "token ia",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 68
+    },
+    {
+      "query": "token king",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 10
+    },
+    {
+      "query": "token price calculator",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 79
+    },
+    {
+      "query": "token price ranking",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 63
+    },
+    {
+      "query": "token to word calculator",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 52
+    },
+    {
+      "query": "tokenización ia",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 36
+    },
+    {
+      "query": "tokenization",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 8
+    },
+    {
+      "query": "tokenization of financial assets",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 65
+    },
+    {
+      "query": "tokens chat gpt",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 38
+    },
+    {
+      "query": "tokens de gemini",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 8
+    },
+    {
+      "query": "tokens ia",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 65
+    },
+    {
+      "query": "tokin ai",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 3
+    },
+    {
+      "query": "using ai tokens",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 30
+    },
+    {
+      "query": "what are ai api keys",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 39
+    },
+    {
+      "query": "what are api tokens",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 95
+    },
+    {
+      "query": "what are the main features of the gemini api?",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 10
+    },
+    {
+      "query": "what is a token fee",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 12
+    },
+    {
+      "query": "what is an ai input token",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 81
+    },
+    {
+      "query": "what is api pricing",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 76
+    },
+    {
+      "query": "what is claude token",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 11
+    },
+    {
+      "query": "what is token prices",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 78
+    },
+    {
+      "query": "what is token pricing in ai",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 12
+    },
+    {
+      "query": "¿a qué datos puede acceder claude a través de los conectores? solo se permite el acceso a los datos que usted ha autorizado. todos los datos en el servicio conectado solo datos creados en los últimos 30 días. solo documentos que se hayan compartido individualmente con anthropic.",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 12
+    }
+  ],
+  "strikingDistance": [],
+  "ctrOutliers": []
+}
