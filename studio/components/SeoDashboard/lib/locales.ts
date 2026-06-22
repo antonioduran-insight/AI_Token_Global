@@ -19,6 +19,7 @@ export const SUPPORTED_LOCALES = [
   { code: 'en', label: 'English' },
   { code: 'es', label: 'Español' },
   { code: 'id', label: 'Indonesia' },
+  { code: 'vi', label: 'Tiếng Việt' },   
 ] as const;
 
 /** Two-letter code union, derived from the constant above. */
