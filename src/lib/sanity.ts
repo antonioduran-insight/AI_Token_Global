@@ -71,7 +71,7 @@ function getClient() {
   const projectId = import.meta.env.PUBLIC_SANITY_PROJECT_ID;
   const dataset = import.meta.env.PUBLIC_SANITY_DATASET ?? 'production';
   if (!projectId) return null;
-  return createClient({ projectId, dataset, apiVersion: '2024-01-01', useCdn: false });
+  return createClient({ projectId, dataset, apiVersion: '2024-01-01', useCdn: true });
 }
 
 export async function getAllPosts(lang: string): Promise<SanityPost[]> {
