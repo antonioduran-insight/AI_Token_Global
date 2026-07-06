@@ -1,0 +1,227 @@
+{
+  "meta": {
+    "siteUrl": "aitoken.global",
+    "snapshotDate": "2026-07-06",
+    "rangeDays": 30,
+    "dataSource": "ga4"
+  },
+  "rows": [
+    {
+      "page": "/en/",
+      "locale": "en",
+      "views": 36,
+      "users": 16,
+      "avgEngagementSeconds": 67
+    },
+    {
+      "page": "/en/blog/",
+      "locale": "en",
+      "views": 36,
+      "users": 9,
+      "avgEngagementSeconds": 92
+    },
+    {
+      "page": "/en/beginners-guide/",
+      "locale": "en",
+      "views": 8,
+      "users": 5,
+      "avgEngagementSeconds": 13
+    },
+    {
+      "page": "/en/api-compare/",
+      "locale": "en",
+      "views": 5,
+      "users": 3,
+      "avgEngagementSeconds": 12
+    },
+    {
+      "page": "/en/compliance/",
+      "locale": "en",
+      "views": 4,
+      "users": 1,
+      "avgEngagementSeconds": 28
+    },
+    {
+      "page": "/en/use-cases/",
+      "locale": "en",
+      "views": 3,
+      "users": 3,
+      "avgEngagementSeconds": 4
+    },
+    {
+      "page": "/en/ai-trends/",
+      "locale": "en",
+      "views": 2,
+      "users": 1,
+      "avgEngagementSeconds": 20
+    },
+    {
+      "page": "/en/blog/ai-token-impact-answer-quality/",
+      "locale": "en",
+      "views": 2,
+      "users": 1,
+      "avgEngagementSeconds": 0
+    },
+    {
+      "page": "/en/blog/calculating-ai-token-costs-for-small-businesses/",
+      "locale": "en",
+      "views": 2,
+      "users": 1,
+      "avgEngagementSeconds": 6
+    },
+    {
+      "page": "/en/blog/understanding-ai-token-basics-for-a-smarter-future/",
+      "locale": "en",
+      "views": 2,
+      "users": 2,
+      "avgEngagementSeconds": 17
+    },
+    {
+      "page": "/en/user-guide/",
+      "locale": "en",
+      "views": 2,
+      "users": 1,
+      "avgEngagementSeconds": 23
+    },
+    {
+      "page": "/es/blog/",
+      "locale": "es",
+      "views": 2,
+      "users": 2,
+      "avgEngagementSeconds": 7
+    },
+    {
+      "page": "/id/api-compare/",
+      "locale": "id",
+      "views": 2,
+      "users": 2,
+      "avgEngagementSeconds": 20
+    },
+    {
+      "page": "/id/blog/",
+      "locale": "id",
+      "views": 2,
+      "users": 2,
+      "avgEngagementSeconds": 4
+    },
+    {
+      "page": "/en/blog/ai-infrastructure-investment-by-tech-giants/",
+      "locale": "en",
+      "views": 1,
+      "users": 1,
+      "avgEngagementSeconds": 11
+    },
+    {
+      "page": "/en/blog/ai-token-pricing-for-beginners/",
+      "locale": "en",
+      "views": 1,
+      "users": 1,
+      "avgEngagementSeconds": 3
+    },
+    {
+      "page": "/en/blog/ai-token-pricing-models-comparison/",
+      "locale": "en",
+      "views": 1,
+      "users": 1,
+      "avgEngagementSeconds": 3
+    },
+    {
+      "page": "/en/blog/google-io-2026-ai-tooling-token-cost-optimization/",
+      "locale": "en",
+      "views": 1,
+      "users": 1,
+      "avgEngagementSeconds": 47
+    },
+    {
+      "page": "/en/blog/google-io-2026-ai-updates-webmcp-client-side-models-skills-api-token-costs/",
+      "locale": "en",
+      "views": 1,
+      "users": 1,
+      "avgEngagementSeconds": 196
+    },
+    {
+      "page": "/en/blog/medical-data-ai-api-risk-healthcare-institutions/",
+      "locale": "en",
+      "views": 1,
+      "users": 1,
+      "avgEngagementSeconds": 13
+    },
+    {
+      "page": "/en/blog/optimizing-ai-token-costs-for-small-businesses/",
+      "locale": "en",
+      "views": 1,
+      "users": 1,
+      "avgEngagementSeconds": 0
+    },
+    {
+      "page": "/en/blog/understanding-ai-token-mechanics/",
+      "locale": "en",
+      "views": 1,
+      "users": 1,
+      "avgEngagementSeconds": 10
+    },
+    {
+      "page": "/en/blog/understanding-ai-token-usage-for-beginners/",
+      "locale": "en",
+      "views": 1,
+      "users": 1,
+      "avgEngagementSeconds": 28
+    },
+    {
+      "page": "/en/chatgpt-api/",
+      "locale": "en",
+      "views": 1,
+      "users": 1,
+      "avgEngagementSeconds": 1
+    },
+    {
+      "page": "/en/claude-api/",
+      "locale": "en",
+      "views": 1,
+      "users": 1,
+      "avgEngagementSeconds": 0
+    },
+    {
+      "page": "/en/gemini-api/",
+      "locale": "en",
+      "views": 1,
+      "users": 1,
+      "avgEngagementSeconds": 0
+    },
+    {
+      "page": "/id/blog/harga-token-claude-antropik-api/",
+      "locale": "id",
+      "views": 1,
+      "users": 1,
+      "avgEngagementSeconds": 2
+    },
+    {
+      "page": "/id/blog/membeli-token-ai-pemula/",
+      "locale": "id",
+      "views": 1,
+      "users": 1,
+      "avgEngagementSeconds": 4
+    },
+    {
+      "page": "/id/blog/pasar-ai-crypto-dan-analisinya/",
+      "locale": "id",
+      "views": 1,
+      "users": 1,
+      "avgEngagementSeconds": 1
+    },
+    {
+      "page": "/id/token-calculator/",
+      "locale": "id",
+      "views": 1,
+      "users": 1,
+      "avgEngagementSeconds": 75
+    },
+    {
+      "page": "/en/blog/calculate-ai-token-costs-enterprise-workloads/",
+      "locale": "en",
+      "views": 0,
+      "users": 1,
+      "avgEngagementSeconds": 33
+    }
+  ]
+}

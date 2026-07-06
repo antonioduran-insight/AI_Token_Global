@@ -1,0 +1,118 @@
+{
+  "meta": {
+    "siteUrl": "aitoken.global",
+    "snapshotDate": "2026-07-06",
+    "rangeDays": 30,
+    "dataSource": "cloudflare"
+  },
+  "rows": [
+    {
+      "page": "/en/blog/ai-token-pricing-for-beginners/",
+      "locale": "en",
+      "visits": 60,
+      "pageViews": 60
+    },
+    {
+      "page": "/en/",
+      "locale": "en",
+      "visits": 30,
+      "pageViews": 200
+    },
+    {
+      "page": "/en/api-compare/",
+      "locale": "en",
+      "visits": 20,
+      "pageViews": 40
+    },
+    {
+      "page": "/en/blog/ai-token-cost-for-1000-word-article/",
+      "locale": "en",
+      "visits": 10,
+      "pageViews": 10
+    },
+    {
+      "page": "/en/blog/why-long-conversations-use-more-ai-tokens/",
+      "locale": "en",
+      "visits": 10,
+      "pageViews": 10
+    },
+    {
+      "page": "/es/blog/comparar-precio-token-ai-con-precision/",
+      "locale": "es",
+      "visits": 10,
+      "pageViews": 10
+    },
+    {
+      "page": "/es/blog/como-comparar-precios-de-modelos-de-inteligencia-artificial/",
+      "locale": "es",
+      "visits": 10,
+      "pageViews": 10
+    },
+    {
+      "page": "/en/blog/optimizing-ai-token-costs-for-small-businesses/",
+      "locale": "en",
+      "visits": 10,
+      "pageViews": 10
+    },
+    {
+      "page": "/en/chatgpt-api/",
+      "locale": "en",
+      "visits": 10,
+      "pageViews": 10
+    },
+    {
+      "page": "/en/blog/chatgpt-vs-claude-vs-gemini-ai-models-comparison/",
+      "locale": "en",
+      "visits": 10,
+      "pageViews": 10
+    },
+    {
+      "page": "/en/blog/understanding-ai-token-basics-and-cost-control/",
+      "locale": "en",
+      "visits": 10,
+      "pageViews": 10
+    },
+    {
+      "page": "/es/blog/comparacion-de-modelos-de-inteligencia-artificial-para-2026/",
+      "locale": "es",
+      "visits": 10,
+      "pageViews": 10
+    },
+    {
+      "page": "/en/blog/",
+      "locale": "en",
+      "visits": 0,
+      "pageViews": 80
+    },
+    {
+      "page": "/en/token-calculator/",
+      "locale": "en",
+      "visits": 0,
+      "pageViews": 10
+    },
+    {
+      "page": "/en/beginners-guide/",
+      "locale": "en",
+      "visits": 0,
+      "pageViews": 50
+    },
+    {
+      "page": "/id/api-compare/",
+      "locale": "id",
+      "visits": 0,
+      "pageViews": 10
+    },
+    {
+      "page": "/en/compliance/",
+      "locale": "en",
+      "visits": 0,
+      "pageViews": 40
+    },
+    {
+      "page": "/en/blog/calculate-ai-token-costs-enterprise-workloads/",
+      "locale": "en",
+      "visits": 0,
+      "pageViews": 20
+    }
+  ]
+}
