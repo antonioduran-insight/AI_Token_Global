@@ -1,0 +1,18 @@
+{
+  "meta": {
+    "siteUrl": "aitoken.global",
+    "snapshotDate": "2026-07-13",
+    "rangeDays": 30,
+    "dataSource": "cloudflare"
+  },
+  "current": {
+    "visits": 230,
+    "pageViews": 470,
+    "medianLoadMs": 1399
+  },
+  "previous": {
+    "visits": 140,
+    "pageViews": 780,
+    "medianLoadMs": 218
+  }
+}

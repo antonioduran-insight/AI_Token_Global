@@ -1,0 +1,136 @@
+{
+  "meta": {
+    "siteUrl": "aitoken.global",
+    "snapshotDate": "2026-07-13",
+    "rangeDays": 30,
+    "dataSource": "ga4"
+  },
+  "rows": [
+    {
+      "page": "/en/",
+      "locale": "en",
+      "views": 26,
+      "users": 15,
+      "avgEngagementSeconds": 66
+    },
+    {
+      "page": "/en/blog/",
+      "locale": "en",
+      "views": 19,
+      "users": 6,
+      "avgEngagementSeconds": 103
+    },
+    {
+      "page": "/en/beginners-guide/",
+      "locale": "en",
+      "views": 3,
+      "users": 2,
+      "avgEngagementSeconds": 25
+    },
+    {
+      "page": "/en/api-compare/",
+      "locale": "en",
+      "views": 1,
+      "users": 1,
+      "avgEngagementSeconds": 16
+    },
+    {
+      "page": "/en/blog/buying-ai-tokens-for-personal-use/",
+      "locale": "en",
+      "views": 1,
+      "users": 1,
+      "avgEngagementSeconds": 45
+    },
+    {
+      "page": "/en/blog/google-io-2026-ai-tooling-token-cost-optimization/",
+      "locale": "en",
+      "views": 1,
+      "users": 1,
+      "avgEngagementSeconds": 47
+    },
+    {
+      "page": "/en/blog/google-io-2026-ai-updates-webmcp-client-side-models-skills-api-token-costs/",
+      "locale": "en",
+      "views": 1,
+      "users": 1,
+      "avgEngagementSeconds": 196
+    },
+    {
+      "page": "/en/blog/understanding-ai-token-mechanics/",
+      "locale": "en",
+      "views": 1,
+      "users": 1,
+      "avgEngagementSeconds": 10
+    },
+    {
+      "page": "/en/use-cases/",
+      "locale": "en",
+      "views": 1,
+      "users": 1,
+      "avgEngagementSeconds": 3
+    },
+    {
+      "page": "/es/blog/",
+      "locale": "es",
+      "views": 1,
+      "users": 1,
+      "avgEngagementSeconds": 3
+    },
+    {
+      "page": "/es/blog/long-conversations-ai-tokens/",
+      "locale": "es",
+      "views": 1,
+      "users": 1,
+      "avgEngagementSeconds": 1
+    },
+    {
+      "page": "/id/api-compare/",
+      "locale": "id",
+      "views": 1,
+      "users": 1,
+      "avgEngagementSeconds": 22
+    },
+    {
+      "page": "/id/blog/",
+      "locale": "id",
+      "views": 1,
+      "users": 1,
+      "avgEngagementSeconds": 0
+    },
+    {
+      "page": "/id/blog/membeli-token-ai-pemula/",
+      "locale": "id",
+      "views": 1,
+      "users": 1,
+      "avgEngagementSeconds": 4
+    },
+    {
+      "page": "/id/blog/mengerti-ekonomi-token-ai-bagaimana-token-membentuk-biaya-api-dan-efisiensi/",
+      "locale": "id",
+      "views": 1,
+      "users": 1,
+      "avgEngagementSeconds": 5
+    },
+    {
+      "page": "/id/blog/pasar-ai-crypto-dan-analisinya/",
+      "locale": "id",
+      "views": 1,
+      "users": 1,
+      "avgEngagementSeconds": 1
+    },
+    {
+      "page": "/id/blog/token-ai-vs-api-key-pemula/",
+      "locale": "id",
+      "views": 1,
+      "users": 1,
+      "avgEngagementSeconds": 163
+    },
+    {
+      "page": "/en/blog/calculate-ai-token-costs-enterprise-workloads/",
+      "locale": "en",
+      "views": 0,
+      "users": 1,
+      "avgEngagementSeconds": 33
+    }
+  ]
+}
