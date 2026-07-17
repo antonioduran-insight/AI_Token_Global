@@ -224,14 +224,14 @@ const coverTint = post.category ? CAT_TINT[post.category] ?? CAT_TINT.fundamenta
       <!-- ── MAIN ARTICLE ── -->
       <article>
 
-        <!-- Hero image -->
-        <div class="hero-img reveal" style={`background: ${coverGradient};`}>
-          {post.coverImage?.asset?.url && (
+        <!-- Hero image (only rendered when the post actually has a cover image) -->
+        {post.coverImage?.asset?.url && (
+          <div class="hero-img reveal" style={`background: ${coverGradient};`}>
             <img src={post.coverImage.asset.url} alt={post.title} />
-          )}
-          <div class="hero-img-overlay" style={`background: linear-gradient(to top, ${coverTint} 0%, transparent 50%);`}></div>
-          <div class="hero-img-tint"></div>
-        </div>
+            <div class="hero-img-overlay" style={`background: linear-gradient(to top, ${coverTint} 0%, transparent 50%);`}></div>
+            <div class="hero-img-tint"></div>
+          </div>
+        )}
 
         <!-- Article body -->
         <div class="article-body" set:html={bodyHtml} />
@@ -328,12 +328,12 @@ const coverTint = post.category ? CAT_TINT[post.category] ?? CAT_TINT.fundamenta
             const tint = r.category ? CAT_TINT[r.category] ?? CAT_TINT.fundamentals : CAT_TINT.fundamentals;
             return (
               <a class="related-card" href={`/${lang}/blog/${r.slug.current}`}>
-                <div class="related-img-wrap" style={`background: ${gradient};`}>
-                  {r.coverImage?.asset?.url && (
+                {r.coverImage?.asset?.url && (
+                  <div class="related-img-wrap" style={`background: ${gradient};`}>
                     <img class="related-img" src={r.coverImage.asset.url} alt="" loading="lazy" />
-                  )}
-                  <div class="related-img-overlay" style={`background: linear-gradient(to top, ${tint} 0%, transparent 60%);`}></div>
-                </div>
+                    <div class="related-img-overlay" style={`background: linear-gradient(to top, ${tint} 0%, transparent 60%);`}></div>
+                  </div>
+                )}
                 <div class="related-body">
                   {r.category && (
                     <span class={`tag-pill tag-${pill}`} style="margin-bottom: 0.75rem;">{catLabel(r.category)}</span>
