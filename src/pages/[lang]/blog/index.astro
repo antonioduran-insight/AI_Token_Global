@@ -141,13 +141,13 @@ const pageOfTemplate  = t('blog.pageOf');
                 aria-label={post.title}
               >
                 <div class="featured-inner">
-                  <div class="featured-img" style={`background: ${fallbackBg};`}>
-                    {post.coverImage?.asset?.url && (
+                  {post.coverImage?.asset?.url && (
+                    <div class="featured-img" style={`background: ${fallbackBg};`}>
                       <img src={post.coverImage.asset.url} alt={post.title} loading={idx === 0 ? 'eager' : 'lazy'} />
-                    )}
-                    <div class="featured-img-overlay"></div>
-                    <div class="featured-img-sheen"></div>
-                  </div>
+                      <div class="featured-img-overlay"></div>
+                      <div class="featured-img-sheen"></div>
+                    </div>
+                  )}
                   <div class="featured-content">
                     <div class="featured-tag-row">
                       {post.category && (
@@ -244,13 +244,12 @@ const pageOfTemplate  = t('blog.pageOf');
                   data-number={String(post.articleNumber ?? 999999)}
                   aria-label={post.title}
                 >
-                  <div class="post-img-wrap" style={`background: ${fallbackBg};`}>
-                    {post.coverImage?.asset?.url
-                      ? <img class="post-img" src={post.coverImage.asset.url} alt="" loading="lazy" />
-                      : <div class="post-img-placeholder"><svg width="40" height="40" viewBox="0 0 24 24" fill="none"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="rgba(255,255,255,0.25)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-                    }
-                    <div class="post-img-overlay" style={`background: linear-gradient(to top, ${tintRgba} 0%, transparent 60%);`}></div>
-                  </div>
+                  {post.coverImage?.asset?.url && (
+                    <div class="post-img-wrap" style={`background: ${fallbackBg};`}>
+                      <img class="post-img" src={post.coverImage.asset.url} alt="" loading="lazy" />
+                      <div class="post-img-overlay" style={`background: linear-gradient(to top, ${tintRgba} 0%, transparent 60%);`}></div>
+                    </div>
+                  )}
                   <div class="post-body">
                     <div class="post-tag-row">
                       {post.category && (
