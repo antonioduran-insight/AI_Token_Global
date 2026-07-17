@@ -53,6 +53,14 @@ const structure = (S: StructureBuilder) =>
                     .filter('_type == "post" && language == "id"')
                     .defaultOrdering([{ field: '_createdAt', direction: 'desc' }])
                 ),
+              S.listItem()
+                .title('🇻🇳 Vietnamese')
+                .child(
+                  S.documentList()
+                    .title('🇻🇳 Vietnamese')
+                    .filter('_type == "post" && language == "vi"')
+                    .defaultOrdering([{ field: '_createdAt', direction: 'desc' }])
+                ),
             ])
         ),
       S.divider(),
