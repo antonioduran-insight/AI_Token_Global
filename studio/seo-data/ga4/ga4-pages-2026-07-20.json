@@ -1,0 +1,178 @@
+{
+  "meta": {
+    "siteUrl": "aitoken.global",
+    "snapshotDate": "2026-07-20",
+    "rangeDays": 30,
+    "dataSource": "ga4"
+  },
+  "rows": [
+    {
+      "page": "/en/",
+      "locale": "en",
+      "views": 27,
+      "users": 10,
+      "avgEngagementSeconds": 73
+    },
+    {
+      "page": "/en/blog/",
+      "locale": "en",
+      "views": 21,
+      "users": 7,
+      "avgEngagementSeconds": 94
+    },
+    {
+      "page": "/en/blog/how-to-cut-llm-api-costs-cheaper-model-strategy/",
+      "locale": "en",
+      "views": 4,
+      "users": 4,
+      "avgEngagementSeconds": 72
+    },
+    {
+      "page": "/en/beginners-guide/",
+      "locale": "en",
+      "views": 3,
+      "users": 2,
+      "avgEngagementSeconds": 25
+    },
+    {
+      "page": "/en/blog/mcp-vs-api-ai-agent-token-cost-efficiency/",
+      "locale": "en",
+      "views": 3,
+      "users": 2,
+      "avgEngagementSeconds": 17
+    },
+    {
+      "page": "/en/blog/what-is-google-gemini-enterprise-agent-platform-and-pricing/",
+      "locale": "en",
+      "views": 3,
+      "users": 2,
+      "avgEngagementSeconds": 4
+    },
+    {
+      "page": "/es/blog/",
+      "locale": "es",
+      "views": 3,
+      "users": 3,
+      "avgEngagementSeconds": 8
+    },
+    {
+      "page": "/en/ai-trends/",
+      "locale": "en",
+      "views": 2,
+      "users": 2,
+      "avgEngagementSeconds": 3
+    },
+    {
+      "page": "/en/api-compare/",
+      "locale": "en",
+      "views": 2,
+      "users": 1,
+      "avgEngagementSeconds": 18
+    },
+    {
+      "page": "/en/blog/how-to-reduce-ai-token-costs-lessons-from-1486-experiment/",
+      "locale": "en",
+      "views": 2,
+      "users": 1,
+      "avgEngagementSeconds": 59
+    },
+    {
+      "page": "/en/blog/token-consumption-comparison-between-chatgpt-claude-and-gemini/",
+      "locale": "en",
+      "views": 2,
+      "users": 2,
+      "avgEngagementSeconds": 32
+    },
+    {
+      "page": "/en/blog/what-is-amazon-quick-aws-agentic-ai-assistant-for-work/",
+      "locale": "en",
+      "views": 2,
+      "users": 2,
+      "avgEngagementSeconds": 13
+    },
+    {
+      "page": "/id/blog/",
+      "locale": "id",
+      "views": 2,
+      "users": 2,
+      "avgEngagementSeconds": 1
+    },
+    {
+      "page": "/en/blog/buying-ai-tokens-for-personal-use/",
+      "locale": "en",
+      "views": 1,
+      "users": 1,
+      "avgEngagementSeconds": 45
+    },
+    {
+      "page": "/en/blog/google-io-2026-ai-tooling-token-cost-optimization/",
+      "locale": "en",
+      "views": 1,
+      "users": 1,
+      "avgEngagementSeconds": 47
+    },
+    {
+      "page": "/en/blog/understanding-ai-token-mechanics/",
+      "locale": "en",
+      "views": 1,
+      "users": 1,
+      "avgEngagementSeconds": 10
+    },
+    {
+      "page": "/en/claude-api/",
+      "locale": "en",
+      "views": 1,
+      "users": 1,
+      "avgEngagementSeconds": 8
+    },
+    {
+      "page": "/en/use-cases/",
+      "locale": "en",
+      "views": 1,
+      "users": 1,
+      "avgEngagementSeconds": 3
+    },
+    {
+      "page": "/es/blog/long-conversations-ai-tokens/",
+      "locale": "es",
+      "views": 1,
+      "users": 1,
+      "avgEngagementSeconds": 1
+    },
+    {
+      "page": "/es/blog/mcp-vs-api-eficiencia-tokens-agentes-ia/",
+      "locale": "es",
+      "views": 1,
+      "users": 1,
+      "avgEngagementSeconds": 10
+    },
+    {
+      "page": "/id/api-compare/",
+      "locale": "id",
+      "views": 1,
+      "users": 1,
+      "avgEngagementSeconds": 22
+    },
+    {
+      "page": "/id/blog/mcp-vs-api-efisiensi-biaya-token-ai-agent/",
+      "locale": "id",
+      "views": 1,
+      "users": 1,
+      "avgEngagementSeconds": 11
+    },
+    {
+      "page": "/id/blog/mengerti-ekonomi-token-ai-bagaimana-token-membentuk-biaya-api-dan-efisiensi/",
+      "locale": "id",
+      "views": 1,
+      "users": 1,
+      "avgEngagementSeconds": 5
+    },
+    {
+      "page": "/id/blog/token-ai-vs-api-key-pemula/",
+      "locale": "id",
+      "views": 1,
+      "users": 1,
+      "avgEngagementSeconds": 163
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "meta": {
+    "siteUrl": "aitoken.global",
+    "snapshotDate": "2026-07-20",
+    "rangeDays": 30,
+    "dataSource": "ga4"
+  },
+  "locales": [
+    {
+      "locale": "en",
+      "label": "English",
+      "current": {
+        "users": 40,
+        "engagedSessions": 49,
+        "engagementRate": 0.7777777777777778,
+        "avgEngagementSeconds": 51
+      },
+      "previous": {
+        "users": 69,
+        "engagedSessions": 99,
+        "engagementRate": 0.8389830508474576,
+        "avgEngagementSeconds": 31
+      },
+      "topPage": "/en/",
+      "topChannel": "Direct"
+    },
+    {
+      "locale": "es",
+      "label": "Español",
+      "current": {
+        "users": 5,
+        "engagedSessions": 4,
+        "engagementRate": 0.8,
+        "avgEngagementSeconds": 7
+      },
+      "previous": {
+        "users": 16,
+        "engagedSessions": 16,
+        "engagementRate": 1,
+        "avgEngagementSeconds": 45
+      },
+      "topPage": "/es/blog/",
+      "topChannel": "Direct"
+    },
+    {
+      "locale": "id",
+      "label": "Indonesia",
+      "current": {
+        "users": 6,
+        "engagedSessions": 6,
+        "engagementRate": 1,
+        "avgEngagementSeconds": 34
+      },
+      "previous": {
+        "users": 14,
+        "engagedSessions": 11,
+        "engagementRate": 0.6875,
+        "avgEngagementSeconds": 14
+      },
+      "topPage": "/id/blog/",
+      "topChannel": "Direct"
+    }
+  ]
+}
