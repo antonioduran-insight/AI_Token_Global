@@ -19,6 +19,7 @@ export interface SanityPost {
   coverImage?: { asset: { url: string } };
   tags?: string[];
   body: any[];
+  seo?: SeoData;
 }
 
 export type PortableTextBlock = any[];
@@ -93,6 +94,7 @@ export async function getPostBySlug(slug: string, lang: string): Promise<SanityP
     `*[_type == "post" && slug.current == $slug && language == $lang][0] {
       _id, title, slug, publishedAt, excerpt, tags, category, articleNumber, language,
       coverImage { asset -> { url } },
+      seo { seoTitle, seoDescription, ogImage { asset -> { url } }, noindex },
       body[] {
         ...,
         _type == "image" => {

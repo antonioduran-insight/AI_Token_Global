@@ -154,6 +154,12 @@ const coverTint = post.category ? CAT_TINT[post.category] ?? CAT_TINT.fundamenta
 <BaseLayout
   title={`${post.title} — AI Token King ${t('nav.blog')}`}
   description={post.excerpt}
+  seo={{
+    seoTitle: post.seo?.seoTitle,
+    seoDescription: post.seo?.seoDescription,
+    ogImage: post.seo?.ogImage ?? post.coverImage,
+    noindex: post.seo?.noindex,
+  }}
   activePage="blog"
   lang={lang as Lang}
 >
