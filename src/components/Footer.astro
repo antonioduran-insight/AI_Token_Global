@@ -7,6 +7,7 @@ export interface Props {
 }
 const { lang = 'en' } = Astro.props;
 const t = useTranslations(lang);
+const copyright = t('footer.copyright').replace('{year}', String(new Date().getFullYear()));
 ---
 
 <footer style="background: #1C1C1C; color: #999; padding: 3.5rem 1.5rem 2rem;">
@@ -64,7 +65,7 @@ const t = useTranslations(lang);
     </div>
 
     <div style="border-top: 1px solid #2A2A2A; padding-top: 1.75rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
-      <p style="font-size: 0.8rem; color: #555; margin: 0;">{t('footer.copyright')}</p>
+      <p style="font-size: 0.8rem; color: #555; margin: 0;">{copyright}</p>
       <div style="display: flex; gap: 1.5rem;">
         <a href="#" style="font-size: 0.8rem; color: #555; text-decoration: none; transition: color 0.15s ease;" onmouseover="this.style.color='#E2DFFE'" onmouseout="this.style.color='#555'">{t('footer.privacy')}</a>
         <a href="#" style="font-size: 0.8rem; color: #555; text-decoration: none; transition: color 0.15s ease;" onmouseover="this.style.color='#E2DFFE'" onmouseout="this.style.color='#555'">{t('footer.terms')}</a>
