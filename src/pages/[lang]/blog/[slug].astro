@@ -142,7 +142,7 @@ const bodyHtml = post.body ? toHTML(post.body, {
   },
 }) : '';
 
-const siteOrigin = (Astro.site ?? new URL('https://aitokenglobal.com')).origin;
+const siteOrigin = (Astro.site ?? new URL('https://www.aitoken.global')).origin;
 const postUrl = `${siteOrigin}/${lang}/blog/${post.slug.current}`;
 
 const heroPill = catPill(post.category);
