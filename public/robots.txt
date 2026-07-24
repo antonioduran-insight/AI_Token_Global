@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://aitoken.global/sitemap-index.xml
+Sitemap: https://www.aitoken.global/sitemap-index.xml
