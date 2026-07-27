@@ -1,0 +1,42 @@
+{
+  "meta": {
+    "siteUrl": "aitoken.global",
+    "snapshotDate": "2026-07-27",
+    "rangeDays": 30,
+    "dataSource": "cloudflare"
+  },
+  "rows": [
+    {
+      "referrer": "Direct / none",
+      "visits": 170
+    },
+    {
+      "referrer": "www.google.com",
+      "visits": 100
+    },
+    {
+      "referrer": "www.linkedin.com",
+      "visits": 40
+    },
+    {
+      "referrer": "m.facebook.com",
+      "visits": 20
+    },
+    {
+      "referrer": "bing.com",
+      "visits": 10
+    },
+    {
+      "referrer": "www.facebook.com",
+      "visits": 10
+    },
+    {
+      "referrer": "www.google.com.hk",
+      "visits": 10
+    },
+    {
+      "referrer": "www.aitoken.global",
+      "visits": 0
+    }
+  ]
+}
