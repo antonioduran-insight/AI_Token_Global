@@ -1,0 +1,196 @@
+{
+  "meta": {
+    "siteUrl": "aitoken.global",
+    "snapshotDate": "2026-08-03",
+    "rangeDays": 30,
+    "dataSource": "cloudflare"
+  },
+  "rows": [
+    {
+      "page": "/en/blog/understanding-tokenization-in-ai-platforms-a-beginners-guide/",
+      "locale": "en",
+      "visits": 50,
+      "pageViews": 50
+    },
+    {
+      "page": "/en/blog/how-to-reduce-ai-token-costs-lessons-from-1486-experiment/",
+      "locale": "en",
+      "visits": 40,
+      "pageViews": 40
+    },
+    {
+      "page": "/en/",
+      "locale": "en",
+      "visits": 30,
+      "pageViews": 90
+    },
+    {
+      "page": "/en/blog/what-is-amazon-quick-aws-agentic-ai-assistant-for-work/",
+      "locale": "en",
+      "visits": 20,
+      "pageViews": 20
+    },
+    {
+      "page": "/id/",
+      "locale": "id",
+      "visits": 20,
+      "pageViews": 20
+    },
+    {
+      "page": "/id/blog/membeli-token-ai-pemula/",
+      "locale": "id",
+      "visits": 20,
+      "pageViews": 20
+    },
+    {
+      "page": "/en/blog/ai-token-vs-quota-explained/",
+      "locale": "en",
+      "visits": 10,
+      "pageViews": 10
+    },
+    {
+      "page": "/en/blog/how-to-cut-llm-api-costs-cheaper-model-strategy/",
+      "locale": "en",
+      "visits": 10,
+      "pageViews": 10
+    },
+    {
+      "page": "/en/blog/why-long-conversations-use-more-ai-tokens/",
+      "locale": "en",
+      "visits": 10,
+      "pageViews": 10
+    },
+    {
+      "page": "/en/blog/ai-token-conversion-guide-for-beginners/",
+      "locale": "en",
+      "visits": 10,
+      "pageViews": 10
+    },
+    {
+      "page": "/en/blog/mcp-vs-api-ai-agent-token-cost-efficiency/",
+      "locale": "en",
+      "visits": 10,
+      "pageViews": 10
+    },
+    {
+      "page": "/en/blog/chrome-ai-api-costs-token-management/",
+      "locale": "en",
+      "visits": 10,
+      "pageViews": 10
+    },
+    {
+      "page": "/en/blog/get-chatgpt-api-key-beginners-guide/",
+      "locale": "en",
+      "visits": 10,
+      "pageViews": 10
+    },
+    {
+      "page": "/en/blog/software-factories-ai-agent-platform-comparison-2026/",
+      "locale": "en",
+      "visits": 10,
+      "pageViews": 10
+    },
+    {
+      "page": "/en/blog/ai-token-management-for-enterprises/",
+      "locale": "en",
+      "visits": 10,
+      "pageViews": 10
+    },
+    {
+      "page": "/en/blog/ai-token-usage-control/",
+      "locale": "en",
+      "visits": 10,
+      "pageViews": 10
+    },
+    {
+      "page": "/en/blog/token-consumption-comparison-between-chatgpt-claude-and-gemini/",
+      "locale": "en",
+      "visits": 10,
+      "pageViews": 10
+    },
+    {
+      "page": "/en/blog/how-to-build-your-first-ai-agent/",
+      "locale": "en",
+      "visits": 10,
+      "pageViews": 10
+    },
+    {
+      "page": "/en/blog/operrouter-vs-direct-api-comparison/",
+      "locale": "en",
+      "visits": 10,
+      "pageViews": 10
+    },
+    {
+      "page": "/en/blog/context-engineering-enterprise-ai-governance/",
+      "locale": "en",
+      "visits": 10,
+      "pageViews": 10
+    },
+    {
+      "page": "/en/blog/ai-hype-reality-2026/",
+      "locale": "en",
+      "visits": 10,
+      "pageViews": 10
+    },
+    {
+      "page": "/en/blog/financial-data-ai-api-security/",
+      "locale": "en",
+      "visits": 10,
+      "pageViews": 10
+    },
+    {
+      "page": "/id/blog/mengenal-claude-api-pemula/",
+      "locale": "id",
+      "visits": 10,
+      "pageViews": 10
+    },
+    {
+      "page": "/en/blog/",
+      "locale": "en",
+      "visits": 0,
+      "pageViews": 40
+    },
+    {
+      "page": "/en/token-calculator/",
+      "locale": "en",
+      "visits": 0,
+      "pageViews": 10
+    },
+    {
+      "page": "/en/blog/what-is-claude-sonnet-5/",
+      "locale": "en",
+      "visits": 0,
+      "pageViews": 10
+    },
+    {
+      "page": "/en/blog/what-is-kimi-k3-moonshot-ai-deepseek-moment/",
+      "locale": "en",
+      "visits": 0,
+      "pageViews": 10
+    },
+    {
+      "page": "/es/blog/mcp-vs-api-eficiencia-tokens-agentes-ia/",
+      "locale": "es",
+      "visits": 0,
+      "pageViews": 20
+    },
+    {
+      "page": "/en/blog/what-is-claude-opus-5/",
+      "locale": "en",
+      "visits": 0,
+      "pageViews": 30
+    },
+    {
+      "page": "/id/blog/",
+      "locale": "id",
+      "visits": 0,
+      "pageViews": 20
+    },
+    {
+      "page": "/en/ai-trends/",
+      "locale": "en",
+      "visits": 0,
+      "pageViews": 10
+    }
+  ]
+}
