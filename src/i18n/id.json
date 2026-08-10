@@ -93,6 +93,11 @@
   "meta": {
     "defaultDescription": "Panduan terlengkap tentang token AI, model, API, dan biaya."
   },
+  "rss": {
+    "title": "Blog AI Token King",
+    "description": "Panduan tentang token AI, harga model, dan biaya API dari AI Token King.",
+    "feedLinkTitle": "Feed RSS Blog AI Token King"
+  },
   "common": {
     "home": "Beranda",
     "comingSoon": "Segera Hadir",

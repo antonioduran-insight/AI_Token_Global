@@ -93,6 +93,11 @@
   "meta": {
     "defaultDescription": "The definitive English-language guide to AI tokens, models, APIs, and costs."
   },
+  "rss": {
+    "title": "AI Token King Blog",
+    "description": "Guides on AI tokens, model pricing, and API costs from AI Token King.",
+    "feedLinkTitle": "AI Token King Blog RSS Feed"
+  },
   "common": {
     "home": "Home",
     "comingSoon": "Coming Soon",

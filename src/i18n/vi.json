@@ -93,6 +93,11 @@
   "meta": {
     "defaultDescription": "Hướng dẫn tiếng Việt toàn diện về token, mô hình, API và chi phí của AI."
   },
+  "rss": {
+    "title": "Blog AI Token King",
+    "description": "Hướng dẫn về token AI, giá mô hình và chi phí API từ AI Token King.",
+    "feedLinkTitle": "Nguồn cấp RSS của Blog AI Token King"
+  },
   "common": {
     "home": "Trang chủ",
     "comingSoon": "Sắp ra mắt",

@@ -93,6 +93,11 @@
   "meta": {
     "defaultDescription": "La guía definitiva en español sobre tokens de IA, modelos y APIs. Gratis, siempre."
   },
+  "rss": {
+    "title": "Blog de AI Token King",
+    "description": "Guías sobre tokens de IA, precios de modelos y costes de API de AI Token King.",
+    "feedLinkTitle": "Feed RSS del blog de AI Token King"
+  },
   "common": {
     "home": "Inicio",
     "comingSoon": "Próximamente",

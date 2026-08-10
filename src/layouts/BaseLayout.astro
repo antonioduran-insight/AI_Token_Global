@@ -109,6 +109,9 @@ gtag('config', ${JSON.stringify(ga4Id)});`
   <meta name="twitter:description" content={seoDescription} />
   <meta name="twitter:image" content={ogImageUrl} />
 
+  <!-- RSS feed for the current locale (one feed per language) -->
+  <link rel="alternate" type="application/rss+xml" title={t('rss.feedLinkTitle')} href={`/${lang}/rss.xml`} />
+
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="/favicon-corgi.png" />
   <link rel="shortcut icon" href="/favicon.ico" />
