@@ -238,7 +238,8 @@ const mailSubject = `Contact form (${lang}) — aitoken.global`;
   }
   .contact-optional {
     font-weight: 500;
-    color: #999;
+    /* #999 on white is 2.85:1 — too low for 13px text; #666 is 5.74:1 */
+    color: #666;
     margin-left: 0.375rem;
   }
   .contact-field input,
@@ -269,12 +270,14 @@ const mailSubject = `Contact form (${lang}) — aitoken.global`;
 
   .contact-submit { align-self: flex-start; margin-top: 0.25rem; }
   .contact-submit[disabled] { opacity: 0.65; cursor: progress; }
-  .contact-privacy { font-size: 0.75rem; color: #999; line-height: 1.6; margin: 0; }
+  .contact-privacy { font-size: 0.75rem; color: #666; line-height: 1.6; margin: 0; }
 
   /* ── Sidebar ───────────────────────────────────────────────────────── */
   .contact-aside { display: flex; flex-direction: column; gap: 1.25rem; }
   .contact-side-card {
-    background: linear-gradient(135deg, #6155F1 0%, #3E81E5 100%);
+    /* Darker of the two brand gradients (as used by the compliance proposal card):
+       the purple→blue pair bottoms out at 3.8:1 against white body text. */
+    background: linear-gradient(135deg, #3C315B 0%, #6155F1 100%);
     border-radius: 18px;
     padding: 1.5rem;
     color: #fff;
@@ -298,7 +301,7 @@ const mailSubject = `Contact form (${lang}) — aitoken.global`;
     letter-spacing: -0.02em;
     margin-bottom: 0.5rem;
   }
-  .contact-side-body { font-size: 0.84rem; line-height: 1.65; color: rgba(255,255,255,0.85); margin: 0 0 1rem; }
+  .contact-side-body { font-size: 0.84rem; line-height: 1.65; color: rgba(255,255,255,0.95); margin: 0 0 1rem; }
   .contact-email-link {
     display: inline-block;
     /* user-select:all so one click selects the whole address for copying */
@@ -311,13 +314,15 @@ const mailSubject = `Contact form (${lang}) — aitoken.global`;
     word-break: break-all;
     padding: 0.55rem 0.75rem;
     border-radius: 10px;
-    background: rgba(255,255,255,0.14);
-    border: 1px solid rgba(255,255,255,0.26);
+    /* Dark pill, not a white wash: a translucent white chip over the purple stop
+       dropped this to 3.99:1. Darkening instead measures 8.3:1. */
+    background: rgba(17,16,34,0.34);
+    border: 1px solid rgba(255,255,255,0.3);
     transition: background-color 0.18s ease, transform 0.18s cubic-bezier(.22,1,.36,1);
   }
-  .contact-email-link:hover { background: rgba(255,255,255,0.24); transform: translateY(-1px); }
+  .contact-email-link:hover { background: rgba(17,16,34,0.22); transform: translateY(-1px); }
   .contact-email-link:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
-  .contact-email-link:active { transform: translateY(0); background: rgba(255,255,255,0.3); }
+  .contact-email-link:active { transform: translateY(0); background: rgba(17,16,34,0.44); }
 
   .contact-side-card-plain {
     background: #FFFFFF;
@@ -387,8 +392,10 @@ const mailSubject = `Contact form (${lang}) — aitoken.global`;
         if (!res.ok) throw new Error('HTTP ' + res.status);
         form.reset();
         if (okMsg) okMsg.hidden = false;
-        if (typeof window.gtag === 'function') {
-          window.gtag('event', 'contact_submit', { location: 'contact_page' });
+        // gtag is injected by BaseLayout's inline GA4 tag, so it isn't in the module's types.
+        const gtag = (window as unknown as { gtag?: (...args: unknown[]) => void }).gtag;
+        if (typeof gtag === 'function') {
+          gtag('event', 'contact_submit', { location: 'contact_page' });
         }
       } catch {
         if (errMsg) errMsg.hidden = false;

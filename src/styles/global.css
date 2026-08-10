@@ -406,14 +406,17 @@ body::before {
 }
 .form-msg[hidden] { display: none; }
 .form-msg svg { flex-shrink: 0; margin-top: 0.15em; }
+/* Dark scrim rather than a white wash: the home banner's gradient ends in light
+   cyan (#56c7fd), where white-on-translucent-white text would be unreadable.
+   Against the lightest stop this still measures 6.3:1. */
 .form-msg-success {
-  background: rgba(255, 255, 255, 0.18);
-  border: 1px solid rgba(255, 255, 255, 0.34);
+  background: rgba(21, 20, 40, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.32);
   color: #FFFFFF;
 }
 .form-msg-error {
-  background: rgba(28, 28, 28, 0.3);
-  border: 1px solid rgba(255, 255, 255, 0.28);
+  background: rgba(21, 20, 40, 0.62);
+  border: 1px solid rgba(255, 200, 200, 0.34);
   color: #FFE0E0;
 }
 /* On-light variant, for the contact page where the form sits on a white surface. */
