@@ -1,0 +1,403 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { SUPPORTED_LANGS, isValidLang, useTranslations } from '../../i18n/index';
+import type { Lang } from '../../i18n/index';
+import { FORMSPREE_CONTACT_ACTION, CONTACT_EMAIL } from '../../lib/forms';
+
+export async function getStaticPaths() {
+  return SUPPORTED_LANGS.map(lang => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params;
+if (!isValidLang(lang)) return Astro.redirect('/en/');
+
+const t = useTranslations(lang as Lang);
+
+// Kept in English on purpose: it lands in the inbox as the mail subject, so it
+// should stay searchable/filterable regardless of which locale sent it.
+const mailSubject = `Contact form (${lang}) — aitoken.global`;
+---
+
+<BaseLayout
+  title={t('contact.seoTitle')}
+  description={t('contact.seoDescription')}
+  lang={lang as Lang}
+  activePage="contact"
+>
+
+  <!-- ── Hero ── -->
+  <section class="hero-bg" style="padding: 3.5rem 1.5rem 3rem;">
+    <div class="hero-bg-canvas" aria-hidden="true">
+      <svg style="display:none"><defs><filter id="hero-goo"><feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur"/><feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8" result="goo"/><feBlend in="SourceGraphic" in2="goo"/></filter></defs></svg>
+      <div class="grad-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+        <div class="blob blob-4"></div>
+        <div class="blob blob-5"></div>
+      </div>
+    </div>
+    <div class="hero-bg-content" style="max-width:1200px;margin:0 auto;">
+      <nav style="display:flex;align-items:center;gap:0.5rem;margin-bottom:1.75rem;font-size:0.8rem;color:rgba(255,255,255,0.5);" aria-label={t('common.aria.breadcrumb')}>
+        <a href={`/${lang}/`} class="contact-crumb">{t('common.home')}</a>
+        <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="rgba(255,255,255,0.3)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span style="color:rgba(255,255,255,0.9);font-weight:600;">{t('nav.contact')}</span>
+      </nav>
+      <div style="max-width:720px;">
+        <div class="section-label fade-up" style="margin-bottom:1.125rem;background:rgba(226,223,254,0.15);color:rgba(255,255,255,0.9);border:1px solid rgba(255,255,255,0.15);">
+          <svg width="10" height="10" viewBox="0 0 16 16" fill="currentColor"><circle cx="8" cy="8" r="8"/></svg>
+          {t('contact.eyebrow')}
+        </div>
+        <h1 class="fade-up" style="font-family:'Kanit',sans-serif;font-size:clamp(2rem,4vw,3rem);font-weight:800;color:#fff;letter-spacing:-0.04em;line-height:1.1;margin-bottom:1.125rem;animation-delay:0.07s;">
+          {t('contact.heading')}
+        </h1>
+        <p class="fade-up" style="font-size:1.05rem;line-height:1.75;color:rgba(255,255,255,0.72);max-width:620px;margin:0;animation-delay:0.14s;">
+          {t('contact.subheading')}
+        </p>
+        <div class="contact-sla fade-up" style="animation-delay:0.21s;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.75"/><path d="M12 7.5V12l3 2" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          {t('contact.responseTime')}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Form + direct routes ── -->
+  <div class="contact-layout">
+
+    <div class="contact-card reveal">
+      <h2 class="contact-card-title">{t('contact.formTitle')}</h2>
+      <p class="contact-card-sub">{t('contact.formIntro')}</p>
+
+      <div data-contact-wrap>
+        <form
+          id="contact-form"
+          class="contact-form"
+          action={FORMSPREE_CONTACT_ACTION}
+          method="POST">
+
+          <input type="hidden" name="_subject" value={mailSubject} />
+          <input type="hidden" name="locale" value={lang} />
+          <!-- Formspree honeypot: bots fill it, humans never see it. -->
+          <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="sr-only" aria-hidden="true" />
+
+          <div class="contact-row">
+            <div class="contact-field">
+              <label for="contact-name">{t('contact.nameLabel')}</label>
+              <input id="contact-name" type="text" name="name" required autocomplete="name" placeholder={t('contact.namePlaceholder')} />
+            </div>
+            <div class="contact-field">
+              <label for="contact-email">{t('contact.emailLabel')}</label>
+              <input id="contact-email" type="email" name="email" required autocomplete="email" placeholder={t('contact.emailPlaceholder')} />
+            </div>
+          </div>
+
+          <div class="contact-field">
+            <label for="contact-company">
+              {t('contact.companyLabel')}
+              <span class="contact-optional">{t('contact.optional')}</span>
+            </label>
+            <input id="contact-company" type="text" name="company" autocomplete="organization" placeholder={t('contact.companyPlaceholder')} />
+          </div>
+
+          <div class="contact-field">
+            <label for="contact-message">{t('contact.messageLabel')}</label>
+            <textarea id="contact-message" name="message" rows="6" required placeholder={t('contact.messagePlaceholder')}></textarea>
+          </div>
+
+          <button type="submit" class="btn-primary contact-submit" data-sending={t('contact.sending')}>
+            {t('contact.submit')}
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+
+          <p class="contact-privacy">{t('contact.privacyNote')}</p>
+        </form>
+
+        <p class="form-msg form-msg-onlight form-msg-success" role="status" aria-live="polite" hidden>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          {t('contact.success')}
+        </p>
+        <p class="form-msg form-msg-onlight form-msg-error" role="alert" aria-live="assertive" hidden>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/><path d="M12 8v4.5M12 16h.01" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
+          {t('contact.error')}
+        </p>
+      </div>
+    </div>
+
+    <aside class="contact-aside">
+      <div class="contact-side-card reveal">
+        <div class="contact-side-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2.5" stroke="#fff" stroke-width="1.75"/><path d="M3.5 6.5l8.5 6 8.5-6" stroke="#fff" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="contact-side-title">{t('contact.emailCardTitle')}</div>
+        <p class="contact-side-body">{t('contact.emailCardBody')}</p>
+        <a class="contact-email-link" href={`mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(mailSubject)}`}>{CONTACT_EMAIL}</a>
+      </div>
+
+      <div class="contact-side-card contact-side-card-plain reveal">
+        <div class="contact-side-title contact-side-title-dark">{t('contact.meanwhileTitle')}</div>
+        <ul class="contact-links">
+          <li>
+            <a href={`/${lang}/token-calculator`}>
+              <svg width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              {t('nav.tokenCalculator')}
+            </a>
+          </li>
+          <li>
+            <a href={`/${lang}/api-compare`}>
+              <svg width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              {t('nav.compareModels')}
+            </a>
+          </li>
+          <li>
+            <a href={`/${lang}/compliance`}>
+              <svg width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              {t('nav.compliance')}
+            </a>
+          </li>
+          <li>
+            <a href="https://www.aitokenking.com.tw/docs" target="_blank" rel="noopener noreferrer">
+              <svg width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              {t('nav.documentation')}
+            </a>
+          </li>
+        </ul>
+      </div>
+    </aside>
+
+  </div>
+
+</BaseLayout>
+
+<style>
+  /* ── Hero extras ───────────────────────────────────────────────────── */
+  .contact-crumb {
+    color: rgba(255,255,255,0.5);
+    text-decoration: none;
+    transition: color 0.15s ease;
+  }
+  .contact-crumb:hover { color: rgba(255,255,255,0.9); }
+  .contact-crumb:focus-visible { outline: 2px solid rgba(255,255,255,0.8); outline-offset: 3px; border-radius: 4px; }
+
+  .contact-sla {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1.75rem;
+    padding: 0.5rem 0.875rem;
+    border-radius: 100px;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.18);
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: rgba(255,255,255,0.9);
+  }
+
+  /* ── Layout ────────────────────────────────────────────────────────── */
+  .contact-layout {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3.5rem 1.5rem 5rem;
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 2.5rem;
+    align-items: start;
+  }
+
+  /* ── Form card (elevated surface) ──────────────────────────────────── */
+  .contact-card {
+    background: #FFFFFF;
+    border: 1px solid rgba(97,85,241,0.1);
+    border-radius: 20px;
+    padding: 2.5rem;
+    box-shadow: 0 18px 44px rgba(97,85,241,0.1), 0 2px 8px rgba(60,49,91,0.05);
+  }
+  .contact-card-title {
+    font-family: 'Kanit', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #3C315B;
+    letter-spacing: -0.03em;
+    margin: 0 0 0.5rem;
+  }
+  .contact-card-sub {
+    font-size: 0.9rem;
+    line-height: 1.7;
+    color: #666;
+    margin: 0 0 2rem;
+  }
+
+  .contact-form { display: flex; flex-direction: column; gap: 1.25rem; }
+  .contact-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+  .contact-field { display: flex; flex-direction: column; gap: 0.45rem; }
+  .contact-field label {
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: #3C315B;
+    letter-spacing: 0.01em;
+  }
+  .contact-optional {
+    font-weight: 500;
+    color: #999;
+    margin-left: 0.375rem;
+  }
+  .contact-field input,
+  .contact-field textarea {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.9rem;
+    color: #1C1C1C;
+    background: #FCFBFF;
+    padding: 0.75rem 1rem;
+    border: 1.5px solid rgba(97,85,241,0.18);
+    border-radius: 12px;
+    outline: none;
+    transition: border-color 0.18s ease, box-shadow 0.18s ease, background-color 0.18s ease;
+  }
+  .contact-field textarea { resize: vertical; min-height: 130px; line-height: 1.7; }
+  .contact-field input::placeholder,
+  .contact-field textarea::placeholder { color: #A9A6BC; }
+  .contact-field input:hover,
+  .contact-field textarea:hover { border-color: rgba(97,85,241,0.32); }
+  .contact-field input:focus,
+  .contact-field textarea:focus {
+    background: #FFFFFF;
+    border-color: #6155F1;
+    box-shadow: 0 0 0 4px rgba(97,85,241,0.12);
+  }
+  .contact-field input:invalid:not(:placeholder-shown),
+  .contact-field textarea:invalid:not(:placeholder-shown) { border-color: rgba(190,51,51,0.45); }
+
+  .contact-submit { align-self: flex-start; margin-top: 0.25rem; }
+  .contact-submit[disabled] { opacity: 0.65; cursor: progress; }
+  .contact-privacy { font-size: 0.75rem; color: #999; line-height: 1.6; margin: 0; }
+
+  /* ── Sidebar ───────────────────────────────────────────────────────── */
+  .contact-aside { display: flex; flex-direction: column; gap: 1.25rem; }
+  .contact-side-card {
+    background: linear-gradient(135deg, #6155F1 0%, #3E81E5 100%);
+    border-radius: 18px;
+    padding: 1.5rem;
+    color: #fff;
+    box-shadow: 0 14px 34px rgba(97,85,241,0.22), 0 2px 6px rgba(62,129,229,0.14);
+  }
+  .contact-side-icon {
+    width: 38px;
+    height: 38px;
+    border-radius: 11px;
+    background: rgba(255,255,255,0.18);
+    border: 1px solid rgba(255,255,255,0.24);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+  .contact-side-title {
+    font-family: 'Kanit', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+  }
+  .contact-side-body { font-size: 0.84rem; line-height: 1.65; color: rgba(255,255,255,0.85); margin: 0 0 1rem; }
+  .contact-email-link {
+    display: inline-block;
+    /* user-select:all so one click selects the whole address for copying */
+    user-select: all;
+    -webkit-user-select: all;
+    font-size: 0.84rem;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+    word-break: break-all;
+    padding: 0.55rem 0.75rem;
+    border-radius: 10px;
+    background: rgba(255,255,255,0.14);
+    border: 1px solid rgba(255,255,255,0.26);
+    transition: background-color 0.18s ease, transform 0.18s cubic-bezier(.22,1,.36,1);
+  }
+  .contact-email-link:hover { background: rgba(255,255,255,0.24); transform: translateY(-1px); }
+  .contact-email-link:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
+  .contact-email-link:active { transform: translateY(0); background: rgba(255,255,255,0.3); }
+
+  .contact-side-card-plain {
+    background: #FFFFFF;
+    border: 1px solid rgba(97,85,241,0.12);
+    box-shadow: 0 8px 24px rgba(97,85,241,0.08);
+    color: #3C315B;
+  }
+  .contact-side-title-dark { color: #3C315B; }
+  .contact-links { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.2rem; }
+  .contact-links a {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 0.5rem;
+    margin: 0 -0.5rem;
+    border-radius: 9px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #6155F1;
+    text-decoration: none;
+    transition: background-color 0.15s ease, transform 0.15s ease;
+  }
+  .contact-links a:hover { background: #F5F2FF; transform: translateX(2px); }
+  .contact-links a:focus-visible { outline: 2px solid #6155F1; outline-offset: 2px; }
+  .contact-links a:active { background: #E2DFFE; }
+
+  /* ── Responsive ────────────────────────────────────────────────────── */
+  @media (max-width: 900px) {
+    .contact-layout { grid-template-columns: 1fr; gap: 2rem; padding-top: 2.5rem; }
+  }
+  @media (max-width: 640px) {
+    .contact-card { padding: 1.75rem 1.25rem; }
+    .contact-row { grid-template-columns: 1fr; }
+    .contact-submit { align-self: stretch; justify-content: center; }
+  }
+</style>
+
+<script>
+  // Formspree accepts AJAX submissions and answers with readable JSON, so unlike
+  // the MailerLite subscribe forms this success state is verified, not optimistic.
+  // The form keeps its action/method: if this script fails to run, the browser
+  // does a normal POST and Formspree shows its own confirmation page.
+  const form = document.getElementById('contact-form') as HTMLFormElement | null;
+  if (form) {
+    const wrap = form.closest('[data-contact-wrap]');
+    const okMsg = wrap?.querySelector<HTMLElement>('.form-msg-success') ?? null;
+    const errMsg = wrap?.querySelector<HTMLElement>('.form-msg-error') ?? null;
+    const btn = form.querySelector<HTMLButtonElement>('button[type="submit"]');
+    // innerHTML, not textContent: the button also holds an arrow <svg> to restore.
+    const btnMarkup = btn?.innerHTML ?? '';
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      if (okMsg) okMsg.hidden = true;
+      if (errMsg) errMsg.hidden = true;
+      if (btn) {
+        btn.disabled = true;
+        const sending = btn.dataset.sending;
+        if (sending) btn.textContent = sending;
+      }
+      try {
+        const res = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { Accept: 'application/json' },
+        });
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        form.reset();
+        if (okMsg) okMsg.hidden = false;
+        if (typeof window.gtag === 'function') {
+          window.gtag('event', 'contact_submit', { location: 'contact_page' });
+        }
+      } catch {
+        if (errMsg) errMsg.hidden = false;
+      } finally {
+        if (btn) {
+          btn.disabled = false;
+          btn.innerHTML = btnMarkup;
+        }
+      }
+    });
+  }
+</script>
