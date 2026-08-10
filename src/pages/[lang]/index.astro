@@ -4,6 +4,7 @@ import { getHomePage, getAllPosts } from '../../lib/sanity';
 import { useTranslations, SUPPORTED_LANGS, LANG_META, isValidLang } from '../../i18n/index';
 import type { Lang } from '../../i18n/index';
 import type { HomePageData, FaqItem, SanityPost } from '../../lib/sanity';
+import { MAILERLITE_SUBSCRIBE_ACTION } from '../../lib/forms';
 import { toHTML } from '@portabletext/to-html';
 
 export async function getStaticPaths() {
@@ -683,12 +684,31 @@ const noindex  = page?.seo?.noindex ?? false;
         <p style="font-size: 1rem; color: rgba(255,255,255,0.85); line-height: 1.7; max-width: 480px; margin: 0 auto 2rem;">
           {t('home.newsletterSubtitle')}
         </p>
-        <form style="display: flex; gap: 0.75rem; justify-content: center; max-width: 440px; margin: 0 auto; flex-wrap: wrap;" onsubmit="return false;">
-          <input type="email" placeholder={t('home.newsletterPlaceholder')} style="flex: 1; min-width: 200px; padding: 0.75rem 1.125rem; border-radius: 12px; border: none; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.9rem; color: #1C1C1C; background: #FFFFFF; box-shadow: 0 2px 8px rgba(0,0,0,0.1);" />
-          <button type="submit" style="background: #1C1C1C; color: #fff; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.9rem; font-weight: 700; padding: 0.75rem 1.5rem; border-radius: 12px; border: none; cursor: pointer; white-space: nowrap; transition: transform 0.18s cubic-bezier(.22,1,.36,1), background-color 0.18s ease; box-shadow: 0 4px 12px rgba(0,0,0,0.2);">
-            {t('home.newsletterBtn')}
-          </button>
-        </form>
+        <div data-ml-wrap style="max-width: 440px; margin: 0 auto;">
+          <form
+            data-ml-subscribe
+            data-ga-location="home_banner"
+            action={MAILERLITE_SUBSCRIBE_ACTION}
+            method="POST"
+            style="display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap;">
+            <label for="home-subscribe-email" class="sr-only">{t('subscribe.emailLabel')}</label>
+            <input id="home-subscribe-email" type="email" name="fields[email]" required autocomplete="email" placeholder={t('home.newsletterPlaceholder')} style="flex: 1; min-width: 200px; padding: 0.75rem 1.125rem; border-radius: 12px; border: none; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.9rem; color: #1C1C1C; background: #FFFFFF; box-shadow: 0 2px 8px rgba(0,0,0,0.1);" />
+            <input type="hidden" name="fields[language]" value={lang} />
+            <input type="hidden" name="ml-submit" value="1" />
+            <input type="hidden" name="anticsrf" value="true" />
+            <button type="submit" style="background: #1C1C1C; color: #fff; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.9rem; font-weight: 700; padding: 0.75rem 1.5rem; border-radius: 12px; border: none; cursor: pointer; white-space: nowrap; transition: transform 0.18s cubic-bezier(.22,1,.36,1), background-color 0.18s ease; box-shadow: 0 4px 12px rgba(0,0,0,0.2);">
+              {t('home.newsletterBtn')}
+            </button>
+          </form>
+          <p class="form-msg form-msg-success" role="status" aria-live="polite" hidden>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            {t('subscribe.success')}
+          </p>
+          <p class="form-msg form-msg-error" role="alert" aria-live="assertive" hidden>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/><path d="M12 8v4.5M12 16h.01" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
+            {t('subscribe.error')}
+          </p>
+        </div>
         <p style="font-size: 0.78rem; color: rgba(255,255,255,0.6); margin-top: 1rem;">{t('home.newsletterDisclaimer')}</p>
       </div>
     </div>

@@ -93,6 +93,11 @@
   "meta": {
     "defaultDescription": "The definitive English-language guide to AI tokens, models, APIs, and costs."
   },
+  "subscribe": {
+    "emailLabel": "Email address",
+    "success": "You're on the list. We'll email you when a new post goes up.",
+    "error": "That didn't go through. Please try again, or email antonio.duran@insight-software.com."
+  },
   "rss": {
     "title": "AI Token King Blog",
     "description": "Guides on AI tokens, model pricing, and API costs from AI Token King.",

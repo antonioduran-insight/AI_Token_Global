@@ -190,6 +190,39 @@ gtag('config', ${JSON.stringify(ga4Id)});`
       }
     };
 
+    // Subscribe forms (MailerLite) — one delegated handler for every
+    // form[data-ml-subscribe] on the site. The site is static (no server, no
+    // function), so the form posts cross-origin to MailerLite directly.
+    // mode:'no-cors' means the response is opaque: we cannot read status or body,
+    // so a resolved fetch is treated as success (optimistic) and only a network
+    // failure surfaces the error state. Real delivery is confirmed in MailerLite.
+    document.addEventListener('submit', function (e) {
+      var form = e.target.closest('form[data-ml-subscribe]');
+      if (!form) return;
+      e.preventDefault();
+      var wrap = form.closest('[data-ml-wrap]') || form.parentElement;
+      var okMsg = wrap && wrap.querySelector('.form-msg-success');
+      var errMsg = wrap && wrap.querySelector('.form-msg-error');
+      var btn = form.querySelector('button[type="submit"]');
+      if (okMsg) okMsg.hidden = true;
+      if (errMsg) errMsg.hidden = true;
+      if (btn) btn.disabled = true;
+      fetch(form.action, { method: 'POST', body: new FormData(form), mode: 'no-cors' })
+        .then(function () {
+          form.reset();
+          if (okMsg) okMsg.hidden = false;
+          if (typeof window.gtag === 'function') {
+            window.gtag('event', 'newsletter_subscribe', { location: form.getAttribute('data-ga-location') || '' });
+          }
+        })
+        .catch(function () {
+          if (errMsg) errMsg.hidden = false;
+        })
+        .finally(function () {
+          if (btn) btn.disabled = false;
+        });
+    });
+
     // Hero pointer blob — follows cursor with smooth lerp inside .hero-bg sections
     if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
       document.querySelectorAll('.hero-bg').forEach(hero => {

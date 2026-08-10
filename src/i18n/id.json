@@ -93,6 +93,11 @@
   "meta": {
     "defaultDescription": "Panduan terlengkap tentang token AI, model, API, dan biaya."
   },
+  "subscribe": {
+    "emailLabel": "Alamat email",
+    "success": "Kamu sudah terdaftar. Kami akan mengirim email setiap ada artikel baru.",
+    "error": "Pengiriman gagal. Silakan coba lagi, atau email ke antonio.duran@insight-software.com."
+  },
   "rss": {
     "title": "Blog AI Token King",
     "description": "Panduan tentang token AI, harga model, dan biaya API dari AI Token King.",

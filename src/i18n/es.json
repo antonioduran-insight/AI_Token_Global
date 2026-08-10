@@ -93,6 +93,11 @@
   "meta": {
     "defaultDescription": "La guía definitiva en español sobre tokens de IA, modelos y APIs. Gratis, siempre."
   },
+  "subscribe": {
+    "emailLabel": "Correo electrónico",
+    "success": "Ya estás en la lista. Te escribiremos cuando publiquemos un artículo nuevo.",
+    "error": "No se pudo enviar. Inténtalo de nuevo o escríbenos a antonio.duran@insight-software.com."
+  },
   "rss": {
     "title": "Blog de AI Token King",
     "description": "Guías sobre tokens de IA, precios de modelos y costes de API de AI Token King.",
