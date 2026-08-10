@@ -70,8 +70,8 @@
     "sortPopular": "Phổ biến nhất",
     "sortBeginner": "Người mới trước",
     "pageOf": "Trang {n} / {total}",
-    "newsletterTitle": "Luôn nắm bắt thay đổi về giá AI",
-    "newsletterCopy": "Bài viết mới mỗi tuần về token, mô hình và chi phí API. Không nhiễu — chỉ những điều quan trọng.",
+    "newsletterTitle": "Nhận email khi có bài viết mới",
+    "newsletterCopy": "Một email cho mỗi bài viết mới về token, mô hình và chi phí API. Không gửi theo lịch.",
     "newsletterEmail": "ban@email.com",
     "newsletterSubscribe": "Đăng ký",
     "cat": {
@@ -213,11 +213,11 @@
     "modalityAudio": "Âm thanh",
     "readMore": "Đọc thêm",
     "newsletterLabel": "Luôn cập nhật",
-    "newsletterHeading": "Nhận thông tin AI mới nhất gửi vào hộp thư của bạn",
-    "newsletterSubtitle": "Tổng hợp hằng tuần về mô hình AI mới, thay đổi giá, mẹo về token và hướng dẫn thực hành. Không spam — chỉ tín hiệu hữu ích.",
+    "newsletterHeading": "Nhận email khi chúng tôi xuất bản bài viết mới",
+    "newsletterSubtitle": "Một email cho mỗi bài viết mới về token AI, giá mô hình và chi phí API. Không có bản tổng hợp hằng tuần, không theo lịch cố định — chỉ bài viết mới.",
     "newsletterPlaceholder": "Nhập email của bạn",
     "newsletterBtn": "Đăng ký miễn phí",
-    "newsletterDisclaimer": "Tham gia cùng hàng nghìn lập trình viên và người yêu thích AI. Hủy đăng ký bất cứ lúc nào."
+    "newsletterDisclaimer": "Một email cho mỗi bài viết được xuất bản. Hủy đăng ký bất cứ lúc nào."
   },
   "aiTrends": {
     "heroLabel": "Theo dõi xu hướng",

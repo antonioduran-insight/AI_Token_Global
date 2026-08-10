@@ -70,8 +70,8 @@
     "sortPopular": "Más populares",
     "sortBeginner": "Para principiantes",
     "pageOf": "Página {n} de {total}",
-    "newsletterTitle": "Mantente al día con los cambios de precios de IA",
-    "newsletterCopy": "Nuevos artículos cada semana sobre tokens, modelos y costos de API. Sin ruido — solo lo que importa.",
+    "newsletterTitle": "Recibe un correo cuando publiquemos un artículo nuevo",
+    "newsletterCopy": "Un correo por cada artículo nuevo sobre tokens, modelos y costes de API. Nada programado.",
     "newsletterEmail": "tu@correo.com",
     "newsletterSubscribe": "Suscribirse",
     "cat": {
@@ -213,11 +213,11 @@
     "modalityAudio": "Audio",
     "readMore": "Leer Más",
     "newsletterLabel": "Mantente Actualizado",
-    "newsletterHeading": "Recibe las Últimas Novedades de IA en Tu Bandeja de Entrada",
-    "newsletterSubtitle": "Resúmenes semanales de nuevos modelos de IA, cambios de precios, consejos sobre tokens y guías prácticas. Sin spam — solo información útil.",
+    "newsletterHeading": "Recibe un Correo Cuando Publiquemos un Artículo Nuevo",
+    "newsletterSubtitle": "Un correo por cada artículo nuevo sobre tokens de IA, precios de modelos y costes de API. Sin resúmenes semanales ni calendario fijo — solo el artículo nuevo.",
     "newsletterPlaceholder": "Ingresa tu correo electrónico",
     "newsletterBtn": "Suscríbete Gratis",
-    "newsletterDisclaimer": "Únete a miles de desarrolladores y entusiastas de la IA. Cancela cuando quieras."
+    "newsletterDisclaimer": "Un correo por artículo publicado. Cancela la suscripción cuando quieras."
   },
   "aiTrends": {
     "heroLabel": "Tendencias IA",

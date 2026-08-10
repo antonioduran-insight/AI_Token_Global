@@ -70,8 +70,8 @@
     "sortPopular": "Most Popular",
     "sortBeginner": "Beginner First",
     "pageOf": "Page {n} of {total}",
-    "newsletterTitle": "Stay ahead of AI pricing changes",
-    "newsletterCopy": "New articles every week on tokens, models, and API costs. No noise — just what matters.",
+    "newsletterTitle": "Get an email when a new post goes up",
+    "newsletterCopy": "One email per new article on tokens, models, and API costs. Nothing on a schedule.",
     "newsletterEmail": "your@email.com",
     "newsletterSubscribe": "Subscribe",
     "cat": {
@@ -213,11 +213,11 @@
     "modalityAudio": "Audio",
     "readMore": "Read More",
     "newsletterLabel": "Stay Updated",
-    "newsletterHeading": "Get the Latest AI Insights Delivered to Your Inbox",
-    "newsletterSubtitle": "Weekly roundups of new AI models, pricing changes, token tips, and practical guides. No spam — just signal.",
+    "newsletterHeading": "Get an Email When a New Post Goes Up",
+    "newsletterSubtitle": "One email per new article on AI tokens, model pricing, and API costs. No weekly roundup, no fixed schedule — just the new post.",
     "newsletterPlaceholder": "Enter your email",
     "newsletterBtn": "Subscribe Free",
-    "newsletterDisclaimer": "Join thousands of developers and AI enthusiasts. Unsubscribe anytime."
+    "newsletterDisclaimer": "One email per published article. Unsubscribe anytime."
   },
   "aiTrends": {
     "heroLabel": "Trend Watch",
