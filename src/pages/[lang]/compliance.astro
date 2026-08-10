@@ -127,7 +127,10 @@ const BLOCKER_COLORS  = ['#F43F5E', '#F59E0B', '#6155F1', '#3E81E5', '#0ABFBC', 
               <div style="font-size:0.72rem;font-weight:700;color:rgba(255,255,255,0.6);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:0.75rem;">{t('compliance.enterpriseProposalLabel')}</div>
               <h3 style="font-family:'Kanit',sans-serif;font-size:1.4rem;font-weight:800;color:#fff;letter-spacing:-0.03em;margin-bottom:0.75rem;">{page.proposalTitle}</h3>
               {page.proposalBody && <p style="font-size:0.9rem;color:rgba(255,255,255,0.8);line-height:1.7;margin-bottom:1.5rem;max-width:520px;">{page.proposalBody}</p>}
-              <a href={page.proposalCtaUrl ?? '#'} class="btn-primary" style="background:rgba(255,255,255,0.18);box-shadow:none;border:1px solid rgba(255,255,255,0.3);color:#fff;">
+              <!-- Hardcoded to the contact page: the Sanity proposalCtaUrl field held
+                   /{lang}/compliance, i.e. this very page, so the CTA went nowhere.
+                   The CMS field is intentionally no longer read. -->
+              <a href={`/${lang}/contact/`} class="btn-primary" style="background:rgba(255,255,255,0.18);box-shadow:none;border:1px solid rgba(255,255,255,0.3);color:#fff;">
                 {page.proposalCtaLabel ?? t('compliance.proposalCtaFallback')}
                 <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
               </a>
@@ -244,7 +247,9 @@ const BLOCKER_COLORS  = ['#F43F5E', '#F59E0B', '#6155F1', '#3E81E5', '#0ABFBC', 
       <div style="padding:1.5rem;border-radius:16px;background:linear-gradient(135deg,#3E81E5,#6155F1);color:#fff;">
         <div style="font-family:'Kanit',sans-serif;font-size:1rem;font-weight:700;margin-bottom:0.5rem;">{page.sidebarCtaTitle ?? t('compliance.sidebarCtaTitleFallback')}</div>
         {page.sidebarCtaBody && <p style="font-size:0.825rem;opacity:0.88;line-height:1.6;margin-bottom:1.125rem;">{page.sidebarCtaBody}</p>}
-        <a href={page.sidebarCtaUrl ?? '#'} class="btn-primary" style="background:rgba(255,255,255,0.2);box-shadow:none;border:1px solid rgba(255,255,255,0.35);font-size:0.825rem;padding:0.5rem 1rem;width:100%;justify-content:center;">
+        <!-- Same as the proposal CTA above: sidebarCtaUrl in Sanity pointed back at
+             /{lang}/compliance, so "Contact Enterprise Sales" led to this page. -->
+        <a href={`/${lang}/contact/`} class="btn-primary" style="background:rgba(255,255,255,0.2);box-shadow:none;border:1px solid rgba(255,255,255,0.35);font-size:0.825rem;padding:0.5rem 1rem;width:100%;justify-content:center;">
           {page.sidebarCtaLabel ?? t('compliance.sidebarCtaLabelFallback')}
           <svg width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
