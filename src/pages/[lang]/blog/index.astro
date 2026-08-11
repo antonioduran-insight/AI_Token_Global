@@ -4,6 +4,7 @@ import { getAllPosts } from '../../../lib/sanity';
 import { useTranslations, SUPPORTED_LANGS, LANG_META, isValidLang } from '../../../i18n/index';
 import type { Lang } from '../../../i18n/index';
 import type { SanityPost } from '../../../lib/sanity';
+import { MAILERLITE_SUBSCRIBE_ACTION } from '../../../lib/forms';
 
 export async function getStaticPaths() {
   return SUPPORTED_LANGS.map(lang => ({ params: { lang } }));
@@ -307,10 +308,29 @@ const pageOfTemplate  = t('blog.pageOf');
               <div class="newsletter-title">{t('blog.newsletterTitle')}</div>
               <p class="newsletter-sub">{t('blog.newsletterCopy')}</p>
             </div>
-            <form class="newsletter-form" onsubmit="return false;">
-              <input type="email" placeholder={t('blog.newsletterEmail')} aria-label={t('blog.newsletterEmail')} />
-              <button type="submit">{t('blog.newsletterSubscribe')}</button>
-            </form>
+            <div class="newsletter-form-wrap" data-ml-wrap>
+              <form
+                class="newsletter-form"
+                data-ml-subscribe
+                data-ga-location="blog_banner"
+                action={MAILERLITE_SUBSCRIBE_ACTION}
+                method="POST">
+                <label for="blog-subscribe-email" class="sr-only">{t('subscribe.emailLabel')}</label>
+                <input id="blog-subscribe-email" type="email" name="fields[email]" required autocomplete="email" placeholder={t('blog.newsletterEmail')} />
+                <input type="hidden" name="fields[language]" value={lang} />
+                <input type="hidden" name="ml-submit" value="1" />
+                <input type="hidden" name="anticsrf" value="true" />
+                <button type="submit">{t('blog.newsletterSubscribe')}</button>
+              </form>
+              <p class="form-msg form-msg-success" role="status" aria-live="polite" hidden>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                {t('subscribe.success')}
+              </p>
+              <p class="form-msg form-msg-error" role="alert" aria-live="assertive" hidden>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/><path d="M12 8v4.5M12 16h.01" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
+                {t('subscribe.error')}
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -723,6 +743,7 @@ const pageOfTemplate  = t('blog.pageOf');
     max-width: 420px;
     margin: 0;
   }
+  .newsletter-form-wrap { position: relative; max-width: 420px; }
   .newsletter-form {
     display: flex;
     gap: 0.75rem;
@@ -776,6 +797,7 @@ const pageOfTemplate  = t('blog.pageOf');
     .cat-tab { font-size: 0.78rem; padding: 0.4rem 0.875rem; }
     .results-bar { gap: 0.75rem; }
     .newsletter-banner { padding: 2.25rem 1.75rem; }
+    .newsletter-form-wrap { width: 100%; max-width: none; }
     .newsletter-form input { min-width: 0; flex: 1; }
   }
 </style>

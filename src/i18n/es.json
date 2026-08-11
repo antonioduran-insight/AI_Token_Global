@@ -9,6 +9,7 @@
     "useCases": "Casos de Uso",
     "beginnersGuide": "Guía para Principiantes",
     "blog": "Blog",
+    "contact": "Contacto",
     "documentation": "Documentación",
     "getStarted": "Comenzar",
     "toggleMobileMenu": "Abrir menú móvil"
@@ -22,6 +23,7 @@
   },
   "footer": {
     "tagline": "La guía definitiva en español sobre tokens de IA, modelos y APIs. Gratis, siempre.",
+    "linkedinAria": "AI Token King en LinkedIn",
     "learn": "Aprender",
     "compare": "Comparar",
     "more": "Más",
@@ -35,6 +37,7 @@
     "geminiApi": "API de Gemini",
     "aiTrends": "Tendencias de IA",
     "compliance": "Cumplimiento Empresarial",
+    "contact": "Contacto",
     "documentation": "Documentación",
     "copyright": "© {year} AI Token King. Todos los derechos reservados.",
     "privacy": "Política de Privacidad",
@@ -70,8 +73,8 @@
     "sortPopular": "Más populares",
     "sortBeginner": "Para principiantes",
     "pageOf": "Página {n} de {total}",
-    "newsletterTitle": "Mantente al día con los cambios de precios de IA",
-    "newsletterCopy": "Nuevos artículos cada semana sobre tokens, modelos y costos de API. Sin ruido — solo lo que importa.",
+    "newsletterTitle": "Recibe un correo cuando publiquemos un artículo nuevo",
+    "newsletterCopy": "Un correo por cada artículo nuevo sobre tokens, modelos y costes de API. Nada programado.",
     "newsletterEmail": "tu@correo.com",
     "newsletterSubscribe": "Suscribirse",
     "cat": {
@@ -92,6 +95,43 @@
   },
   "meta": {
     "defaultDescription": "La guía definitiva en español sobre tokens de IA, modelos y APIs. Gratis, siempre."
+  },
+  "subscribe": {
+    "emailLabel": "Correo electrónico",
+    "success": "Ya estás en la lista. Te escribiremos cuando publiquemos un artículo nuevo.",
+    "error": "No se pudo enviar. Inténtalo de nuevo o escríbenos a antonio.duran@insight-software.com."
+  },
+  "contact": {
+    "seoTitle": "Contacta con AI Token King",
+    "seoDescription": "¿Dudas sobre costes de tokens de IA, precios de modelos o cumplimiento para empresas? Escríbenos: respondemos en un plazo de 2 días laborables.",
+    "eyebrow": "Contacto",
+    "heading": "Pregúntanos sobre tokens de IA, precios o cumplimiento",
+    "subheading": "Si estás calculando los costes de API de tu equipo o necesitas respuestas de cumplimiento para empresas, escríbenos y una persona lo leerá.",
+    "responseTime": "Respondemos en un plazo de 2 días laborables",
+    "formTitle": "Envíanos un mensaje",
+    "formIntro": "Cuéntanos qué necesitas. Cuanto más contexto nos des, más útil será nuestra primera respuesta.",
+    "nameLabel": "Tu nombre",
+    "namePlaceholder": "Ana García",
+    "emailLabel": "Correo electrónico",
+    "emailPlaceholder": "tu@empresa.com",
+    "companyLabel": "Empresa",
+    "companyPlaceholder": "Dónde trabajas",
+    "optional": "(opcional)",
+    "messageLabel": "Mensaje",
+    "messagePlaceholder": "¿Qué te gustaría saber?",
+    "submit": "Enviar mensaje",
+    "sending": "Enviando…",
+    "privacyNote": "Solo usamos tus datos para responder a este mensaje.",
+    "success": "Gracias, hemos recibido tu mensaje. Respondemos en un plazo de 2 días laborables.",
+    "error": "No se pudo enviar. Escríbenos directamente a antonio.duran@insight-software.com.",
+    "emailCardTitle": "¿Prefieres el correo?",
+    "emailCardBody": "Escríbenos directamente. Misma bandeja de entrada, misma respuesta en 2 días laborables.",
+    "meanwhileTitle": "Mientras tanto"
+  },
+  "rss": {
+    "title": "Blog de AI Token King",
+    "description": "Guías sobre tokens de IA, precios de modelos y costes de API de AI Token King.",
+    "feedLinkTitle": "Feed RSS del blog de AI Token King"
   },
   "common": {
     "home": "Inicio",
@@ -203,11 +243,11 @@
     "modalityAudio": "Audio",
     "readMore": "Leer Más",
     "newsletterLabel": "Mantente Actualizado",
-    "newsletterHeading": "Recibe las Últimas Novedades de IA en Tu Bandeja de Entrada",
-    "newsletterSubtitle": "Resúmenes semanales de nuevos modelos de IA, cambios de precios, consejos sobre tokens y guías prácticas. Sin spam — solo información útil.",
+    "newsletterHeading": "Recibe un Correo Cuando Publiquemos un Artículo Nuevo",
+    "newsletterSubtitle": "Un correo por cada artículo nuevo sobre tokens de IA, precios de modelos y costes de API. Sin resúmenes semanales ni calendario fijo — solo el artículo nuevo.",
     "newsletterPlaceholder": "Ingresa tu correo electrónico",
     "newsletterBtn": "Suscríbete Gratis",
-    "newsletterDisclaimer": "Únete a miles de desarrolladores y entusiastas de la IA. Cancela cuando quieras."
+    "newsletterDisclaimer": "Un correo por artículo publicado. Cancela la suscripción cuando quieras."
   },
   "aiTrends": {
     "heroLabel": "Tendencias IA",

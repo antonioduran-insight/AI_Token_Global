@@ -9,6 +9,7 @@
     "useCases": "Kasus Penggunaan",
     "beginnersGuide": "Panduan Pemula",
     "blog": "Blog",
+    "contact": "Kontak",
     "documentation": "Dokumentasi",
     "getStarted": "Mulai Sekarang",
     "toggleMobileMenu": "Buka/tutup menu"
@@ -22,6 +23,7 @@
   },
   "footer": {
     "tagline": "Pusat referensi terlengkap untuk memahami token AI, model, dan API. Gratis, selamanya.",
+    "linkedinAria": "AI Token King di LinkedIn",
     "learn": "Belajar",
     "compare": "Bandingkan",
     "more": "Lainnya",
@@ -35,6 +37,7 @@
     "geminiApi": "Gemini API",
     "aiTrends": "Tren AI",
     "compliance": "Kepatuhan Enterprise",
+    "contact": "Kontak",
     "documentation": "Dokumentasi",
     "copyright": "© {year} AI Token King. Semua hak dilindungi.",
     "privacy": "Kebijakan Privasi",
@@ -70,8 +73,8 @@
     "sortPopular": "Terpopuler",
     "sortBeginner": "Untuk pemula",
     "pageOf": "Halaman {n} dari {total}",
-    "newsletterTitle": "Pantau perubahan harga AI lebih dulu",
-    "newsletterCopy": "Artikel baru setiap minggu tentang token, model, dan biaya API. Tanpa kebisingan — hanya yang penting.",
+    "newsletterTitle": "Dapatkan email saat ada artikel baru",
+    "newsletterCopy": "Satu email untuk setiap artikel baru tentang token, model, dan biaya API. Tidak ada kiriman terjadwal.",
     "newsletterEmail": "email@kamu.com",
     "newsletterSubscribe": "Berlangganan",
     "cat": {
@@ -92,6 +95,43 @@
   },
   "meta": {
     "defaultDescription": "Panduan terlengkap tentang token AI, model, API, dan biaya."
+  },
+  "subscribe": {
+    "emailLabel": "Alamat email",
+    "success": "Kamu sudah terdaftar. Kami akan mengirim email setiap ada artikel baru.",
+    "error": "Pengiriman gagal. Silakan coba lagi, atau email ke antonio.duran@insight-software.com."
+  },
+  "contact": {
+    "seoTitle": "Hubungi AI Token King",
+    "seoDescription": "Ada pertanyaan tentang biaya token AI, harga model, atau kepatuhan untuk perusahaan? Kirim pesan — kami membalas dalam 2 hari kerja.",
+    "eyebrow": "Kontak",
+    "heading": "Tanya kami soal token AI, harga, atau kepatuhan",
+    "subheading": "Baik kamu sedang menghitung biaya API untuk satu tim atau butuh jawaban soal kepatuhan perusahaan, kirim pesan dan akan dibaca oleh orang sungguhan.",
+    "responseTime": "Kami membalas dalam 2 hari kerja",
+    "formTitle": "Kirim pesan",
+    "formIntro": "Ceritakan apa yang kamu butuhkan. Makin lengkap konteksnya, makin berguna balasan pertama kami.",
+    "nameLabel": "Nama kamu",
+    "namePlaceholder": "Budi Santoso",
+    "emailLabel": "Alamat email",
+    "emailPlaceholder": "kamu@perusahaan.com",
+    "companyLabel": "Perusahaan",
+    "companyPlaceholder": "Tempat kamu bekerja",
+    "optional": "(opsional)",
+    "messageLabel": "Pesan",
+    "messagePlaceholder": "Apa yang ingin kamu ketahui?",
+    "submit": "Kirim pesan",
+    "sending": "Mengirim…",
+    "privacyNote": "Data kamu hanya kami pakai untuk membalas pesan ini.",
+    "success": "Terima kasih, pesan kamu sudah masuk. Kami membalas dalam 2 hari kerja.",
+    "error": "Pesan gagal terkirim. Silakan email langsung ke antonio.duran@insight-software.com.",
+    "emailCardTitle": "Lebih suka email biasa?",
+    "emailCardBody": "Kirim email langsung ke kami. Inbox yang sama, balasan tetap dalam 2 hari kerja.",
+    "meanwhileTitle": "Sementara itu"
+  },
+  "rss": {
+    "title": "Blog AI Token King",
+    "description": "Panduan tentang token AI, harga model, dan biaya API dari AI Token King.",
+    "feedLinkTitle": "Feed RSS Blog AI Token King"
   },
   "common": {
     "home": "Beranda",
@@ -203,11 +243,11 @@
     "modalityAudio": "Audio",
     "readMore": "Baca Selengkapnya",
     "newsletterLabel": "Tetap Update",
-    "newsletterHeading": "Dapatkan Wawasan AI Terbaru Langsung ke Inbox Kamu",
-    "newsletterSubtitle": "Rangkuman mingguan model AI baru, perubahan harga, tips token, dan panduan praktis. Tanpa spam — hanya informasi berguna.",
+    "newsletterHeading": "Dapatkan Email Saat Kami Menerbitkan Artikel Baru",
+    "newsletterSubtitle": "Satu email untuk setiap artikel baru tentang token AI, harga model, dan biaya API. Tanpa rangkuman mingguan, tanpa jadwal tetap — hanya artikel barunya.",
     "newsletterPlaceholder": "Masukkan email kamu",
     "newsletterBtn": "Berlangganan Gratis",
-    "newsletterDisclaimer": "Bergabung dengan ribuan developer dan penggemar AI. Berhenti kapan saja."
+    "newsletterDisclaimer": "Satu email per artikel yang diterbitkan. Berhenti berlangganan kapan saja."
   },
   "aiTrends": {
     "heroLabel": "Pantauan Tren",

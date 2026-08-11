@@ -9,6 +9,7 @@
     "useCases": "Use Cases",
     "beginnersGuide": "Beginners Guide",
     "blog": "Blog",
+    "contact": "Contact",
     "documentation": "Documentation",
     "getStarted": "Get Started",
     "toggleMobileMenu": "Toggle mobile menu"
@@ -22,6 +23,7 @@
   },
   "footer": {
     "tagline": "The definitive English-language hub for understanding AI tokens, models, and APIs. Free, always.",
+    "linkedinAria": "AI Token King on LinkedIn",
     "learn": "Learn",
     "compare": "Compare",
     "more": "More",
@@ -35,6 +37,7 @@
     "geminiApi": "Gemini API",
     "aiTrends": "AI Trends",
     "compliance": "Enterprise Compliance",
+    "contact": "Contact",
     "documentation": "Documentation",
     "copyright": "© {year} AI Token King. All rights reserved.",
     "privacy": "Privacy Policy",
@@ -70,8 +73,8 @@
     "sortPopular": "Most Popular",
     "sortBeginner": "Beginner First",
     "pageOf": "Page {n} of {total}",
-    "newsletterTitle": "Stay ahead of AI pricing changes",
-    "newsletterCopy": "New articles every week on tokens, models, and API costs. No noise — just what matters.",
+    "newsletterTitle": "Get an email when a new post goes up",
+    "newsletterCopy": "One email per new article on tokens, models, and API costs. Nothing on a schedule.",
     "newsletterEmail": "your@email.com",
     "newsletterSubscribe": "Subscribe",
     "cat": {
@@ -92,6 +95,43 @@
   },
   "meta": {
     "defaultDescription": "The definitive English-language guide to AI tokens, models, APIs, and costs."
+  },
+  "subscribe": {
+    "emailLabel": "Email address",
+    "success": "You're on the list. We'll email you when a new post goes up.",
+    "error": "That didn't go through. Please try again, or email antonio.duran@insight-software.com."
+  },
+  "contact": {
+    "seoTitle": "Contact AI Token King",
+    "seoDescription": "Questions about AI token costs, model pricing, or enterprise compliance? Send us a message — we reply within 2 business days.",
+    "eyebrow": "Contact",
+    "heading": "Ask us about AI tokens, pricing, or compliance",
+    "subheading": "Whether you're sizing up API costs for a team or need enterprise compliance answers, write to us and a person will read it.",
+    "responseTime": "We reply within 2 business days",
+    "formTitle": "Send us a message",
+    "formIntro": "Tell us what you need. The more context you give, the more useful our first reply will be.",
+    "nameLabel": "Your name",
+    "namePlaceholder": "Jane Chen",
+    "emailLabel": "Email address",
+    "emailPlaceholder": "you@company.com",
+    "companyLabel": "Company",
+    "companyPlaceholder": "Where you work",
+    "optional": "(optional)",
+    "messageLabel": "Message",
+    "messagePlaceholder": "What would you like to know?",
+    "submit": "Send message",
+    "sending": "Sending…",
+    "privacyNote": "We use your details only to reply to this message.",
+    "success": "Thanks — your message is in. We reply within 2 business days.",
+    "error": "That didn't send. Please email antonio.duran@insight-software.com directly.",
+    "emailCardTitle": "Prefer plain email?",
+    "emailCardBody": "Write to us directly. Same inbox, same 2-business-day reply.",
+    "meanwhileTitle": "In the meantime"
+  },
+  "rss": {
+    "title": "AI Token King Blog",
+    "description": "Guides on AI tokens, model pricing, and API costs from AI Token King.",
+    "feedLinkTitle": "AI Token King Blog RSS Feed"
   },
   "common": {
     "home": "Home",
@@ -203,11 +243,11 @@
     "modalityAudio": "Audio",
     "readMore": "Read More",
     "newsletterLabel": "Stay Updated",
-    "newsletterHeading": "Get the Latest AI Insights Delivered to Your Inbox",
-    "newsletterSubtitle": "Weekly roundups of new AI models, pricing changes, token tips, and practical guides. No spam — just signal.",
+    "newsletterHeading": "Get an Email When a New Post Goes Up",
+    "newsletterSubtitle": "One email per new article on AI tokens, model pricing, and API costs. No weekly roundup, no fixed schedule — just the new post.",
     "newsletterPlaceholder": "Enter your email",
     "newsletterBtn": "Subscribe Free",
-    "newsletterDisclaimer": "Join thousands of developers and AI enthusiasts. Unsubscribe anytime."
+    "newsletterDisclaimer": "One email per published article. Unsubscribe anytime."
   },
   "aiTrends": {
     "heroLabel": "Trend Watch",
