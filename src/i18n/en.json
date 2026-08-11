@@ -217,7 +217,7 @@
     "step1Body": "Learn what tokens are, how models read text, and why token limits matter for your applications.",
     "step1Link": "Read Token Guide →",
     "step2Title": "Choose Your Model",
-    "step2Body": "Compare GPT-4o, Claude, Gemini, and more. Find the right balance of capability, speed, and cost for your needs.",
+    "step2Body": "Compare GPT-5.6, Claude, Gemini, and more. Find the right balance of capability, speed, and cost for your needs.",
     "step2Link": "Compare Models →",
     "step3Title": "Make Your First API Call",
     "step3Body": "Follow our step-by-step guide to get your API key, write your first prompt, and understand the response.",
@@ -296,7 +296,7 @@
     "backToHomeBtn": "Back to Home",
     "tocFaqLabel": "FAQ",
     "quickTipTitle": "Quick Tip",
-    "quickTipBody": "New to AI? Start with a text model like GPT-4o mini or Claude Haiku — low cost, easy to test, and widely documented.",
+    "quickTipBody": "New to AI? Start with a text model like GPT-5.6 Luna or Claude Haiku 4.5 — low cost, easy to test, and widely documented.",
     "comparePricesBtn": "Compare Prices"
   },
   "beginners": {

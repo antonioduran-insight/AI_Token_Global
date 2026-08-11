@@ -217,7 +217,7 @@
     "step1Body": "Tìm hiểu token là gì, mô hình đọc văn bản như thế nào, và tại sao giới hạn token lại quan trọng với ứng dụng của bạn.",
     "step1Link": "Đọc hướng dẫn Token →",
     "step2Title": "Chọn mô hình của bạn",
-    "step2Body": "So sánh GPT-4o, Claude, Gemini và nhiều hơn nữa. Tìm sự cân bằng phù hợp giữa khả năng, tốc độ và chi phí cho nhu cầu của bạn.",
+    "step2Body": "So sánh GPT-5.6, Claude, Gemini và nhiều hơn nữa. Tìm sự cân bằng phù hợp giữa khả năng, tốc độ và chi phí cho nhu cầu của bạn.",
     "step2Link": "So sánh mô hình →",
     "step3Title": "Thực hiện lệnh gọi API đầu tiên",
     "step3Body": "Theo hướng dẫn từng bước của chúng tôi để lấy khóa API, viết prompt đầu tiên và hiểu phản hồi.",
@@ -296,7 +296,7 @@
     "backToHomeBtn": "Về trang chủ",
     "tocFaqLabel": "Câu hỏi thường gặp",
     "quickTipTitle": "Mẹo nhanh",
-    "quickTipBody": "Mới với AI? Hãy bắt đầu với mô hình văn bản như GPT-4o mini hoặc Claude Haiku — chi phí thấp, dễ thử nghiệm và có nhiều tài liệu.",
+    "quickTipBody": "Mới với AI? Hãy bắt đầu với mô hình văn bản như GPT-5.6 Luna hoặc Claude Haiku 4.5 — chi phí thấp, dễ thử nghiệm và có nhiều tài liệu.",
     "comparePricesBtn": "So sánh giá"
   },
   "beginners": {

@@ -217,7 +217,7 @@
     "step1Body": "Pelajari apa itu token, cara model membaca teks, dan kenapa batas token penting untuk aplikasimu.",
     "step1Link": "Baca Panduan Token →",
     "step2Title": "Pilih Model Kamu",
-    "step2Body": "Bandingkan GPT-4o, Claude, Gemini, dan lainnya. Temukan keseimbangan yang tepat antara kemampuan, kecepatan, dan biaya sesuai kebutuhanmu.",
+    "step2Body": "Bandingkan GPT-5.6, Claude, Gemini, dan lainnya. Temukan keseimbangan yang tepat antara kemampuan, kecepatan, dan biaya sesuai kebutuhanmu.",
     "step2Link": "Bandingkan Model →",
     "step3Title": "Buat Panggilan API Pertama",
     "step3Body": "Ikuti panduan langkah demi langkah kami untuk mendapatkan API key, tulis prompt pertamamu, dan pahami responsnya.",
@@ -296,7 +296,7 @@
     "backToHomeBtn": "Kembali ke Beranda",
     "tocFaqLabel": "FAQ",
     "quickTipTitle": "Tips Cepat",
-    "quickTipBody": "Baru kenal AI? Mulai dengan model teks seperti GPT-4o mini atau Claude Haiku — biaya rendah, mudah dicoba, dan dokumentasinya banyak.",
+    "quickTipBody": "Baru kenal AI? Mulai dengan model teks seperti GPT-5.6 Luna atau Claude Haiku 4.5 — biaya rendah, mudah dicoba, dan dokumentasinya banyak.",
     "comparePricesBtn": "Bandingkan Harga"
   },
   "beginners": {
