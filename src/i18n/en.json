@@ -150,6 +150,15 @@
       "clearInput": "Clear text"
     }
   },
+  "pricing": {
+    "colModel": "Model",
+    "colProvider": "Provider",
+    "colInput": "Input (per 1M tokens)",
+    "colOutput": "Output (per 1M tokens)",
+    "tableLabel": "Pricing",
+    "tableHeading": "What each model costs per million tokens",
+    "upcomingChange": "Rises to {input} input / {output} output per 1M tokens on {date}"
+  },
   "home": {
     "heroLabel": "Your AI Knowledge Hub",
     "heroHeadline": "Master AI Tokens,",
@@ -233,15 +242,6 @@
     "tableCellModel": "Model",
     "tableCellInput": "Input",
     "tableCellOutput": "Output",
-    "compareColModel": "Model",
-    "compareColProvider": "Provider",
-    "compareColContext": "Context Window",
-    "compareColInput": "Input (per 1M tokens)",
-    "compareColOutput": "Output (per 1M tokens)",
-    "compareColModality": "Modality",
-    "modalityText": "Text",
-    "modalityVision": "Vision",
-    "modalityAudio": "Audio",
     "readMore": "Read More",
     "newsletterLabel": "Stay Updated",
     "newsletterHeading": "Get an Email When a New Post Goes Up",
@@ -272,7 +272,7 @@
     "furtherReadingFallback": "Further Reading",
     "faqFallback": "Common Questions",
     "compareAllModelsTitle": "Compare All Models",
-    "compareAllModelsBody": "See ChatGPT, Claude, and Gemini side-by-side on pricing, context window, and use case fit.",
+    "compareAllModelsBody": "See ChatGPT, Claude, and Gemini side-by-side on input and output pricing, plus which model fits which use case.",
     "viewAllModelsBtn": "View Full Comparison",
     "alsoCompareTitle": "Also Compare",
     "chatgptApiShort": "ChatGPT API",
@@ -296,7 +296,7 @@
     "backToHomeBtn": "Back to Home",
     "tocFaqLabel": "FAQ",
     "quickTipTitle": "Quick Tip",
-    "quickTipBody": "New to AI? Start with a text model like GPT-5.6 Luna or Claude Haiku 4.5 — low cost, easy to test, and cheap to experiment with.",
+    "quickTipBody": "New to AI? Start with a text model like GPT-5.6 Luna or Claude Haiku 4.5 — low cost, easy to test, and fast.",
     "comparePricesBtn": "Compare Prices"
   },
   "beginners": {

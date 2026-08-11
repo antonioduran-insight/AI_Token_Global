@@ -1,9 +1,13 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { SUPPORTED_LANGS, useTranslations } from '../../i18n/index';
+import { SUPPORTED_LANGS, useTranslations, LANG_META } from '../../i18n/index';
 import type { Lang } from '../../i18n/index';
 import { getApiComparePage } from '../../lib/sanity';
 import type { ModelRow, TypeCard } from '../../lib/sanity';
+import {
+  MODELS, PROVIDER_PRICING_URL, formatPrice, formatPricingDate, formatUpcomingChange,
+} from '../../lib/pricing';
+import type { Provider } from '../../lib/pricing';
 
 export async function getStaticPaths() {
   return SUPPORTED_LANGS.map(lang => ({ params: { lang } }));
@@ -15,19 +19,33 @@ const page = await getApiComparePage(lang as Lang);
 if (!page) return Astro.redirect(`/${lang}/`);
 
 // Portable text for FAQ answers
-import { toHTML } from '@portabletext/to-html';
+import { renderPortableText } from '../../lib/portable-text';
 function pt(blocks: any[] | undefined): string {
-  if (!blocks?.length) return '';
-  return toHTML(blocks, {
-    components: {
-      marks: {
-        strong: ({ children }) => `<strong style="font-weight:700;color:#3C315B;">${children}</strong>`,
-        em:     ({ children }) => `<em>${children}</em>`,
-        link:   ({ value, children }) => `<a href="${value?.href ?? '#'}" style="color:#6155F1;text-decoration:underline;" target="${value?.href?.startsWith('http') ? '_blank' : '_self'}" rel="noopener noreferrer">${children}</a>`,
-      },
-    },
-  });
+  return renderPortableText(blocks, { strongStyle: 'font-weight:700;color:#3C315B;', linkStyle: 'color:#6155F1;text-decoration:underline;' });
 }
+
+// ── Pricing table ──
+// Prices are code, not content: every figure below comes from src/lib/pricing.ts
+// and none of it is editable in Sanity. The surrounding editorial copy stays
+// Sanity's. Context window and modality are deliberately absent — we have no
+// verified figures for either and a plausible guess is what broke this page's
+// credibility in the first place.
+const PROVIDER_BADGE: Record<Provider, string> = {
+  OpenAI:    'background:#E8F5E9;color:#2E7D32;',
+  Anthropic: 'background:#F3E5F5;color:#6A1B9A;',
+  Google:    'background:#E3F2FD;color:#1565C0;',
+};
+const locale = LANG_META[lang as Lang].locale;
+const pricingCheckedLabel = t('common.pricingLastChecked').replace('{date}', formatPricingDate(locale));
+const upcomingTemplate = t('pricing.upcomingChange');
+
+// Grouped by provider, preserving the order models are declared in pricing.ts.
+const providerOrder = [...new Set(MODELS.map(m => m.provider))];
+const pricingGroups = providerOrder.map(provider => ({
+  provider,
+  sourceUrl: PROVIDER_PRICING_URL[provider],
+  models: MODELS.filter(m => m.provider === provider),
+}));
 
 // Per-type-card visual config (gradient + white SVG)
 const TYPE_CARD_CONFIG: Record<string, { gradient: string; svg: string; sectionGradient: string; tocBadge: { bg: string; color: string } }> = {
@@ -178,6 +196,57 @@ const sectionDefs: SectionDef[] = [
       </div>
     </section>
   )}
+
+  <!-- Pricing table (code, not Sanity) ─────────────────── -->
+  <section id="pricing" style="padding: 2.5rem 1.5rem 0; scroll-margin-top: 80px;">
+    <div style="max-width: 1200px; margin: 0 auto;">
+      <div class="section-label reveal" style="margin-bottom: 0.875rem;">
+        <svg width="10" height="10" viewBox="0 0 16 16" fill="currentColor"><circle cx="8" cy="8" r="8"/></svg>
+        {t('pricing.tableLabel')}
+      </div>
+      <h2 class="compare-section-title reveal" style="margin-bottom: 1.5rem;">{t('pricing.tableHeading')}</h2>
+
+      <div class="card-elevated reveal" style="overflow: hidden;">
+        <div style="overflow-x: auto; -webkit-overflow-scrolling: touch;">
+          <table class="compare-table" style="width: 100%; min-width: 480px; border-collapse: collapse;">
+            <thead>
+              <tr style="background: #FAFAFE;">
+                <th>{t('pricing.colModel')}</th><th>{t('pricing.colProvider')}</th><th>{t('pricing.colInput')}</th><th>{t('pricing.colOutput')}</th>
+              </tr>
+            </thead>
+            {pricingGroups.map((group, groupIndex) => (
+              <tbody class={groupIndex > 0 ? 'price-group' : undefined}>
+                {group.models.map((model) => (
+                  <tr>
+                    <td>
+                      <a href={model.sourceUrl} class="price-source-link" target="_blank" rel="noopener noreferrer"><strong style="color:#1C1C1C;">{model.displayName}</strong></a>
+                      {model.upcomingChange && (
+                        <span class="price-upcoming">{formatUpcomingChange(upcomingTemplate, model, locale)}</span>
+                      )}
+                    </td>
+                    <td><span style={`${PROVIDER_BADGE[group.provider]}font-size:0.75rem;font-weight:600;padding:0.2rem 0.6rem;border-radius:6px;white-space:nowrap;`}>{group.provider}</span></td>
+                    <td style="color:#6155F1;font-weight:600;white-space:nowrap;">{formatPrice(model.inputPerMillion)}</td>
+                    <td style="color:#3E81E5;font-weight:600;white-space:nowrap;">{formatPrice(model.outputPerMillion)}</td>
+                  </tr>
+                ))}
+              </tbody>
+            ))}
+          </table>
+        </div>
+      </div>
+
+      <p class="pricing-checked" style="justify-content: center; margin-top: 1rem;">
+        {pricingCheckedLabel}
+        <span class="pricing-checked-sep">·</span>
+        {pricingGroups.map((group, i) => (
+          <>
+            {i > 0 && <span class="pricing-checked-sep">·</span>}
+            <a href={group.sourceUrl} target="_blank" rel="noopener noreferrer">{group.provider}</a>
+          </>
+        ))}
+      </p>
+    </div>
+  </section>
 
   <!-- Main content + sidebar grid ─────────────────────── -->
   <div class="compare-grid">

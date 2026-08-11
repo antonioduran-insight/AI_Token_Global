@@ -150,6 +150,15 @@
       "clearInput": "Hapus teks"
     }
   },
+  "pricing": {
+    "colModel": "Model",
+    "colProvider": "Penyedia",
+    "colInput": "Input (per 1M token)",
+    "colOutput": "Output (per 1M token)",
+    "tableLabel": "Harga",
+    "tableHeading": "Berapa biaya setiap model per satu juta token",
+    "upcomingChange": "Naik ke {input} input / {output} output per 1M token pada {date}"
+  },
   "home": {
     "heroLabel": "Pusat Pengetahuan AI Kamu",
     "heroHeadline": "Kuasai Token AI,",
@@ -233,15 +242,6 @@
     "tableCellModel": "Model",
     "tableCellInput": "Input",
     "tableCellOutput": "Output",
-    "compareColModel": "Model",
-    "compareColProvider": "Penyedia",
-    "compareColContext": "Context Window",
-    "compareColInput": "Input (per 1M token)",
-    "compareColOutput": "Output (per 1M token)",
-    "compareColModality": "Modalitas",
-    "modalityText": "Teks",
-    "modalityVision": "Visi",
-    "modalityAudio": "Audio",
     "readMore": "Baca Selengkapnya",
     "newsletterLabel": "Tetap Update",
     "newsletterHeading": "Dapatkan Email Saat Kami Menerbitkan Artikel Baru",
@@ -272,7 +272,7 @@
     "furtherReadingFallback": "Bacaan Lanjutan",
     "faqFallback": "Pertanyaan Umum",
     "compareAllModelsTitle": "Bandingkan Semua Model",
-    "compareAllModelsBody": "Lihat ChatGPT, Claude, dan Gemini berdampingan dalam harga, jendela konteks, dan kesesuaian kasus penggunaan.",
+    "compareAllModelsBody": "Lihat ChatGPT, Claude, dan Gemini berdampingan dalam harga input dan output, plus model mana yang cocok untuk kasus penggunaan apa.",
     "viewAllModelsBtn": "Lihat Perbandingan Lengkap",
     "alsoCompareTitle": "Bandingkan Juga",
     "chatgptApiShort": "API ChatGPT",
@@ -296,7 +296,7 @@
     "backToHomeBtn": "Kembali ke Beranda",
     "tocFaqLabel": "FAQ",
     "quickTipTitle": "Tips Cepat",
-    "quickTipBody": "Baru kenal AI? Mulai dengan model teks seperti GPT-5.6 Luna atau Claude Haiku 4.5 — biaya rendah, mudah dicoba, dan murah untuk bereksperimen.",
+    "quickTipBody": "Baru kenal AI? Mulai dengan model teks seperti GPT-5.6 Luna atau Claude Haiku 4.5 — biaya rendah, mudah dicoba, dan cepat.",
     "comparePricesBtn": "Bandingkan Harga"
   },
   "beginners": {

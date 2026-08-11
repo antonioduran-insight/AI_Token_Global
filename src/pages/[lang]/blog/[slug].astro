@@ -4,7 +4,7 @@ import { getAllPostSlugs, getPostBySlug, getRelatedPosts } from '../../../lib/sa
 import { useTranslations, LANG_META, isValidLang } from '../../../i18n/index';
 import type { Lang } from '../../../i18n/index';
 import type { SanityPost } from '../../../lib/sanity';
-import { toHTML } from '@portabletext/to-html';
+import { renderPortableText, repairSpanSpacing } from '../../../lib/portable-text';
 
 export async function getStaticPaths() {
   const slugs = await getAllPostSlugs();
@@ -86,7 +86,10 @@ function countWords(blocks: any[]): number {
   }
   return total;
 }
-const wordCount = countWords(post.body || []);
+// Repair span spacing once, up front: the word count, the TOC heading slugs and
+// the rendered HTML must all read the same text or the anchors stop matching.
+const body = repairSpanSpacing(post.body || []);
+const wordCount = countWords(body);
 const readingMinutes = Math.max(1, Math.round(wordCount / 225));
 const readingLabel = t('blog.minRead').replace('{n}', String(readingMinutes));
 
@@ -101,7 +104,7 @@ function slugify(text: string) {
   return s;
 }
 const headings: { id: string; text: string }[] = [];
-for (const block of post.body || []) {
+for (const block of body) {
   if (block?._type === 'block' && block?.style === 'h2') {
     const text = blockText(block).trim();
     if (!text) continue;
@@ -111,7 +114,7 @@ for (const block of post.body || []) {
 // Reset for the render pass below so we generate matching IDs.
 usedSlugs.clear();
 
-const bodyHtml = post.body ? toHTML(post.body, {
+const bodyHtml = renderPortableText(body, {
   components: {
     block: {
       h2: ({ value, children }) => {
@@ -140,7 +143,7 @@ const bodyHtml = post.body ? toHTML(post.body, {
       },
     },
   },
-}) : '';
+});
 
 const siteOrigin = (Astro.site ?? new URL('https://www.aitoken.global')).origin;
 const postUrl = `${siteOrigin}/${lang}/blog/${post.slug.current}`;

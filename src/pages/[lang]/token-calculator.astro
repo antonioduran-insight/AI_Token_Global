@@ -4,7 +4,7 @@ import { SUPPORTED_LANGS, isValidLang, useTranslations, LANG_META } from '../../
 import type { Lang } from '../../i18n/index';
 import { getTokenCalculatorPage } from '../../lib/sanity';
 import { getModel, formatPrice, formatPricingDate } from '../../lib/pricing';
-import { toHTML } from '@portabletext/to-html';
+import { renderPortableText } from '../../lib/portable-text';
 
 export async function getStaticPaths() {
   return SUPPORTED_LANGS.map(lang => ({ params: { lang } }));
@@ -38,15 +38,7 @@ const pricingCheckedLabel = t('common.pricingLastChecked')
   .replace('{date}', formatPricingDate(LANG_META[lang as Lang].locale));
 
 function pt(blocks: any[] | undefined): string {
-  if (!blocks?.length) return '';
-  return toHTML(blocks, {
-    components: {
-      marks: {
-        strong: ({ children }) => `<strong>${children}</strong>`,
-        em:     ({ children }) => `<em>${children}</em>`,
-      },
-    },
-  });
+  return renderPortableText(blocks);
 }
 ---
 

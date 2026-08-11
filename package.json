@@ -8,6 +8,7 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
+    "test": "node --test src/lib/*.test.mjs",
     "preview": "astro preview",
     "astro": "astro",
     "studio": "cd studio && npx sanity dev",

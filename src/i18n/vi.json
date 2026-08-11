@@ -150,6 +150,15 @@
       "clearInput": "Xóa văn bản"
     }
   },
+  "pricing": {
+    "colModel": "Mô hình",
+    "colProvider": "Nhà cung cấp",
+    "colInput": "Đầu vào (mỗi 1 triệu token)",
+    "colOutput": "Đầu ra (mỗi 1 triệu token)",
+    "tableLabel": "Giá",
+    "tableHeading": "Chi phí của mỗi mô hình cho một triệu token",
+    "upcomingChange": "Tăng lên {input} đầu vào / {output} đầu ra cho mỗi 1 triệu token vào {date}"
+  },
   "home": {
     "heroLabel": "Trung tâm kiến thức AI của bạn",
     "heroHeadline": "Làm chủ Token AI,",
@@ -233,15 +242,6 @@
     "tableCellModel": "Mô hình",
     "tableCellInput": "Đầu vào",
     "tableCellOutput": "Đầu ra",
-    "compareColModel": "Mô hình",
-    "compareColProvider": "Nhà cung cấp",
-    "compareColContext": "Cửa sổ ngữ cảnh",
-    "compareColInput": "Đầu vào (mỗi 1 triệu token)",
-    "compareColOutput": "Đầu ra (mỗi 1 triệu token)",
-    "compareColModality": "Phương thức",
-    "modalityText": "Văn bản",
-    "modalityVision": "Hình ảnh",
-    "modalityAudio": "Âm thanh",
     "readMore": "Đọc thêm",
     "newsletterLabel": "Luôn cập nhật",
     "newsletterHeading": "Nhận email khi chúng tôi xuất bản bài viết mới",
@@ -272,7 +272,7 @@
     "furtherReadingFallback": "Đọc thêm",
     "faqFallback": "Câu hỏi thường gặp",
     "compareAllModelsTitle": "So sánh tất cả mô hình",
-    "compareAllModelsBody": "Xem ChatGPT, Claude và Gemini cạnh nhau về giá, cửa sổ ngữ cảnh và mức độ phù hợp với trường hợp sử dụng.",
+    "compareAllModelsBody": "Xem ChatGPT, Claude và Gemini cạnh nhau về giá đầu vào và đầu ra, cùng với mô hình nào phù hợp với trường hợp sử dụng nào.",
     "viewAllModelsBtn": "Xem so sánh đầy đủ",
     "alsoCompareTitle": "Cũng nên so sánh",
     "chatgptApiShort": "ChatGPT API",
@@ -296,7 +296,7 @@
     "backToHomeBtn": "Về trang chủ",
     "tocFaqLabel": "Câu hỏi thường gặp",
     "quickTipTitle": "Mẹo nhanh",
-    "quickTipBody": "Mới với AI? Hãy bắt đầu với mô hình văn bản như GPT-5.6 Luna hoặc Claude Haiku 4.5 — chi phí thấp, dễ thử nghiệm và rẻ để thử nghiệm.",
+    "quickTipBody": "Mới với AI? Hãy bắt đầu với mô hình văn bản như GPT-5.6 Luna hoặc Claude Haiku 4.5 — chi phí thấp, dễ thử nghiệm và nhanh.",
     "comparePricesBtn": "So sánh giá"
   },
   "beginners": {
