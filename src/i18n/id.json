@@ -272,7 +272,7 @@
     "furtherReadingFallback": "Bacaan Lanjutan",
     "faqFallback": "Pertanyaan Umum",
     "compareAllModelsTitle": "Bandingkan Semua Model",
-    "compareAllModelsBody": "Lihat ChatGPT, Claude, dan Gemini berdampingan dalam harga, jendela konteks, dan kesesuaian kasus penggunaan.",
+    "compareAllModelsBody": "Lihat ChatGPT, Claude, dan Gemini berdampingan dalam harga input dan output, plus model mana yang cocok untuk kasus penggunaan apa.",
     "viewAllModelsBtn": "Lihat Perbandingan Lengkap",
     "alsoCompareTitle": "Bandingkan Juga",
     "chatgptApiShort": "API ChatGPT",

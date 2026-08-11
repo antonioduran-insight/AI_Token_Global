@@ -278,6 +278,33 @@ body::before {
 .pricing-checked a:active { color: #3C315B; }
 .pricing-checked-sep { color: #D6D3E0; }
 
+/* One <tbody> per provider. tr:last-child already drops the row border inside a
+   group, so a single top rule is all that separates one provider from the next. */
+.compare-table tbody.price-group tr:first-child td { border-top: 1px solid #E4E1EC; }
+
+/* A vendor-announced price change that has not taken effect yet. Sits under the
+   model name so it travels with the model when the table scrolls sideways. */
+.price-upcoming {
+  display: block;
+  margin-top: 0.3rem;
+  max-width: 22rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  line-height: 1.45;
+  color: #92500E;
+  white-space: normal;
+}
+.price-upcoming::before {
+  content: '';
+  display: inline-block;
+  width: 0.4rem;
+  height: 0.4rem;
+  margin-right: 0.4rem;
+  border-radius: 50%;
+  background: #E8933D;
+  vertical-align: 0.05em;
+}
+
 /* ── FAQ accordion ── */
 .faq-item { border-bottom: 1px solid #EDEDEF; }
 .faq-item:last-child { border-bottom: none; }

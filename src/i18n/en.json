@@ -272,7 +272,7 @@
     "furtherReadingFallback": "Further Reading",
     "faqFallback": "Common Questions",
     "compareAllModelsTitle": "Compare All Models",
-    "compareAllModelsBody": "See ChatGPT, Claude, and Gemini side-by-side on pricing, context window, and use case fit.",
+    "compareAllModelsBody": "See ChatGPT, Claude, and Gemini side-by-side on input and output pricing, plus which model fits which use case.",
     "viewAllModelsBtn": "View Full Comparison",
     "alsoCompareTitle": "Also Compare",
     "chatgptApiShort": "ChatGPT API",
