@@ -28,7 +28,7 @@ const {
 } = Astro.props;
 
 const t = useTranslations(lang as Lang);
-const siteOrigin = (Astro.site ?? new URL('https://aitokenglobal.com')).origin;
+const siteOrigin = (Astro.site ?? new URL('https://www.aitoken.global')).origin;
 const canonicalURL = new URL(Astro.url.pathname, siteOrigin).href;
 
 const seoTitle = seo?.seoTitle ?? title;

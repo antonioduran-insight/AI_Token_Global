@@ -39,7 +39,7 @@
     "compliance": "Cumplimiento Empresarial",
     "contact": "Contacto",
     "documentation": "Documentación",
-    "copyright": "© 2025 AI Token King. Todos los derechos reservados.",
+    "copyright": "© {year} AI Token King. Todos los derechos reservados.",
     "privacy": "Política de Privacidad",
     "terms": "Términos de Servicio"
   },
