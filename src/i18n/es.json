@@ -139,6 +139,7 @@
     "comingText": "El sitio está siendo configurado. Mientras tanto, visita el blog.",
     "onThisPage": "En esta página",
     "live": "En vivo",
+    "pricingLastChecked": "Precios verificados por última vez el {date}",
     "aria": {
       "breadcrumb": "Migas de pan",
       "pagination": "Paginación",
@@ -216,7 +217,7 @@
     "step1Body": "Aprende qué son los tokens, cómo los modelos leen el texto y por qué los límites de tokens importan en tus aplicaciones.",
     "step1Link": "Leer Guía de Tokens →",
     "step2Title": "Elige tu Modelo",
-    "step2Body": "Compara GPT-4o, Claude, Gemini y más. Encuentra el equilibrio adecuado de capacidad, velocidad y costo para tus necesidades.",
+    "step2Body": "Compara GPT-5.6, Claude, Gemini y más. Encuentra el equilibrio adecuado de capacidad, velocidad y costo para tus necesidades.",
     "step2Link": "Comparar Modelos →",
     "step3Title": "Haz tu Primera Llamada a la API",
     "step3Body": "Sigue nuestra guía paso a paso para obtener tu clave de API, escribir tu primer prompt y entender la respuesta.",
@@ -295,7 +296,7 @@
     "backToHomeBtn": "Volver al Inicio",
     "tocFaqLabel": "FAQ",
     "quickTipTitle": "Consejo Rápido",
-    "quickTipBody": "¿Nuevo en IA? Empieza con un modelo de texto como GPT-4o mini o Claude Haiku — bajo coste, fáciles de probar y muy documentados.",
+    "quickTipBody": "¿Nuevo en IA? Empieza con un modelo de texto como GPT-5.6 Luna o Claude Haiku 4.5 — bajo coste, fáciles de probar y baratos para experimentar.",
     "comparePricesBtn": "Comparar Precios"
   },
   "beginners": {

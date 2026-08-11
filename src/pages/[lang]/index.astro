@@ -5,6 +5,8 @@ import { useTranslations, SUPPORTED_LANGS, LANG_META, isValidLang } from '../../
 import type { Lang } from '../../i18n/index';
 import type { HomePageData, FaqItem, SanityPost } from '../../lib/sanity';
 import { MAILERLITE_SUBSCRIBE_ACTION } from '../../lib/forms';
+import { MODELS, FLAGSHIP_MODELS, PROVIDER_PRICING_URL, formatPrice, formatPricingDate } from '../../lib/pricing';
+import type { Provider } from '../../lib/pricing';
 import { toHTML } from '@portabletext/to-html';
 
 export async function getStaticPaths() {
@@ -57,6 +59,17 @@ const bottomPosts = blogPosts.slice(4, 7);
 function formatDate(iso: string) {
   return new Date(iso).toLocaleDateString(LANG_META[lang as Lang].locale, { year: 'numeric', month: 'long', day: 'numeric' });
 }
+
+// Every price on this page comes from src/lib/pricing.ts — never inline a number here.
+const PROVIDER_BADGE: Record<Provider, string> = {
+  OpenAI:    'background:#E8F5E9;color:#2E7D32;',
+  Anthropic: 'background:#F3E5F5;color:#6A1B9A;',
+  Google:    'background:#E3F2FD;color:#1565C0;',
+};
+const pricingCheckedLabel = t('common.pricingLastChecked')
+  .replace('{date}', formatPricingDate(LANG_META[lang as Lang].locale));
+// Distinct vendor pricing pages behind the models in the full comparison table.
+const comparisonSources = [...new Set(MODELS.map(m => m.provider))];
 
 const seoTitle = page?.seo?.seoTitle ?? t('home.seoTitleFallback');
 const seoDesc  = page?.seo?.seoDescription ?? t('meta.defaultDescription');
@@ -140,24 +153,31 @@ const noindex  = page?.seo?.noindex ?? false;
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td style="padding: 0.625rem 0.875rem; color: #3C315B; font-weight: 600; border-bottom: 1px solid #F4F2F4;">GPT-4o</td>
-                  <td style="padding: 0.625rem 0.875rem; text-align: right; color: #6155F1; font-weight: 600; border-bottom: 1px solid #F4F2F4;">$2.50/M</td>
-                  <td style="padding: 0.625rem 0.875rem; text-align: right; color: #3E81E5; font-weight: 600; border-bottom: 1px solid #F4F2F4;">$10/M</td>
-                </tr>
-                <tr>
-                  <td style="padding: 0.625rem 0.875rem; color: #3C315B; font-weight: 600; border-bottom: 1px solid #F4F2F4;">Claude 3.5 Sonnet</td>
-                  <td style="padding: 0.625rem 0.875rem; text-align: right; color: #6155F1; font-weight: 600; border-bottom: 1px solid #F4F2F4;">$3.00/M</td>
-                  <td style="padding: 0.625rem 0.875rem; text-align: right; color: #3E81E5; font-weight: 600; border-bottom: 1px solid #F4F2F4;">$15/M</td>
-                </tr>
-                <tr>
-                  <td style="padding: 0.625rem 0.875rem; color: #3C315B; font-weight: 600;">Gemini 1.5 Pro</td>
-                  <td style="padding: 0.625rem 0.875rem; text-align: right; color: #6155F1; font-weight: 600;">$1.25/M</td>
-                  <td style="padding: 0.625rem 0.875rem; text-align: right; color: #3E81E5; font-weight: 600;">$5/M</td>
-                </tr>
+                {FLAGSHIP_MODELS.map((model, i) => {
+                  const divider = i < FLAGSHIP_MODELS.length - 1 ? 'border-bottom: 1px solid #F4F2F4;' : '';
+                  return (
+                    <tr>
+                      <td style={`padding: 0.625rem 0.875rem; color: #3C315B; font-weight: 600; ${divider}`}>
+                        <a href={model.sourceUrl} class="price-source-link" target="_blank" rel="noopener noreferrer">{model.displayName}</a>
+                      </td>
+                      <td style={`padding: 0.625rem 0.875rem; text-align: right; color: #6155F1; font-weight: 600; ${divider}`}>{formatPrice(model.inputPerMillion)}/M</td>
+                      <td style={`padding: 0.625rem 0.875rem; text-align: right; color: #3E81E5; font-weight: 600; ${divider}`}>{formatPrice(model.outputPerMillion)}/M</td>
+                    </tr>
+                  );
+                })}
               </tbody>
             </table>
           </div>
+          <p class="pricing-checked">
+            {pricingCheckedLabel}
+            <span class="pricing-checked-sep">·</span>
+            {FLAGSHIP_MODELS.map((model, i) => (
+              <>
+                {i > 0 && <span class="pricing-checked-sep">·</span>}
+                <a href={model.sourceUrl} target="_blank" rel="noopener noreferrer">{model.provider}</a>
+              </>
+            ))}
+          </p>
           <a href={`/${lang}/api-compare`} class="btn-ghost" style="margin-top: 0.875rem; font-size: 0.8rem;">
             {t('home.heroPriceCardLink')}
             <svg width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -417,54 +437,40 @@ const noindex  = page?.seo?.noindex ?? false;
 
     <div class="card-elevated reveal" style="overflow: hidden;">
       <div style="overflow-x: auto; -webkit-overflow-scrolling: touch;">
-      <table class="compare-table" style="width: 100%; min-width: 560px; border-collapse: collapse;">
+      <table class="compare-table" style="width: 100%; min-width: 480px; border-collapse: collapse;">
         <thead>
           <tr style="background: #FAFAFE;">
-            <th>{t('home.compareColModel')}</th><th>{t('home.compareColProvider')}</th><th>{t('home.compareColContext')}</th><th>{t('home.compareColInput')}</th><th>{t('home.compareColOutput')}</th><th>{t('home.compareColModality')}</th>
+            <th>{t('home.compareColModel')}</th><th>{t('home.compareColProvider')}</th><th>{t('home.compareColInput')}</th><th>{t('home.compareColOutput')}</th>
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td><strong style="color:#1C1C1C;">GPT-4o</strong></td>
-            <td><span style="background:#E8F5E9;color:#2E7D32;font-size:0.75rem;font-weight:600;padding:0.2rem 0.6rem;border-radius:6px;">OpenAI</span></td>
-            <td>128K</td><td style="color:#6155F1;font-weight:600;">$2.50</td><td style="color:#3E81E5;font-weight:600;">$10.00</td>
-            <td><span class="tag">{t('home.modalityText')}</span> <span class="tag" style="background:#EBF4FF;color:#3E81E5;">{t('home.modalityVision')}</span></td>
-          </tr>
-          <tr>
-            <td><strong style="color:#1C1C1C;">GPT-4o mini</strong></td>
-            <td><span style="background:#E8F5E9;color:#2E7D32;font-size:0.75rem;font-weight:600;padding:0.2rem 0.6rem;border-radius:6px;">OpenAI</span></td>
-            <td>128K</td><td style="color:#6155F1;font-weight:600;">$0.15</td><td style="color:#3E81E5;font-weight:600;">$0.60</td>
-            <td><span class="tag">{t('home.modalityText')}</span> <span class="tag" style="background:#EBF4FF;color:#3E81E5;">{t('home.modalityVision')}</span></td>
-          </tr>
-          <tr>
-            <td><strong style="color:#1C1C1C;">Claude 3.5 Sonnet</strong></td>
-            <td><span style="background:#F3E5F5;color:#6A1B9A;font-size:0.75rem;font-weight:600;padding:0.2rem 0.6rem;border-radius:6px;">Anthropic</span></td>
-            <td>200K</td><td style="color:#6155F1;font-weight:600;">$3.00</td><td style="color:#3E81E5;font-weight:600;">$15.00</td>
-            <td><span class="tag">{t('home.modalityText')}</span> <span class="tag" style="background:#EBF4FF;color:#3E81E5;">{t('home.modalityVision')}</span></td>
-          </tr>
-          <tr>
-            <td><strong style="color:#1C1C1C;">Claude 3 Haiku</strong></td>
-            <td><span style="background:#F3E5F5;color:#6A1B9A;font-size:0.75rem;font-weight:600;padding:0.2rem 0.6rem;border-radius:6px;">Anthropic</span></td>
-            <td>200K</td><td style="color:#6155F1;font-weight:600;">$0.25</td><td style="color:#3E81E5;font-weight:600;">$1.25</td>
-            <td><span class="tag">{t('home.modalityText')}</span> <span class="tag" style="background:#EBF4FF;color:#3E81E5;">{t('home.modalityVision')}</span></td>
-          </tr>
-          <tr>
-            <td><strong style="color:#1C1C1C;">Gemini 1.5 Pro</strong></td>
-            <td><span style="background:#E3F2FD;color:#1565C0;font-size:0.75rem;font-weight:600;padding:0.2rem 0.6rem;border-radius:6px;">Google</span></td>
-            <td>1M</td><td style="color:#6155F1;font-weight:600;">$1.25</td><td style="color:#3E81E5;font-weight:600;">$5.00</td>
-            <td><span class="tag">{t('home.modalityText')}</span> <span class="tag" style="background:#EBF4FF;color:#3E81E5;">{t('home.modalityVision')}</span> <span class="tag" style="background:#FFF3E0;color:#E65100;">{t('home.modalityAudio')}</span></td>
-          </tr>
-          <tr>
-            <td><strong style="color:#1C1C1C;">Llama 3.1 405B</strong></td>
-            <td><span style="background:#FFF8E1;color:#F57F17;font-size:0.75rem;font-weight:600;padding:0.2rem 0.6rem;border-radius:6px;">Meta</span></td>
-            <td>128K</td><td style="color:#6155F1;font-weight:600;">$5.00</td><td style="color:#3E81E5;font-weight:600;">$15.00</td>
-            <td><span class="tag">{t('home.modalityText')}</span></td>
-          </tr>
+          {MODELS.map((model) => (
+            <tr>
+              <td>
+                <a href={model.sourceUrl} class="price-source-link" target="_blank" rel="noopener noreferrer">
+                  <strong style="color:#1C1C1C;">{model.displayName}</strong>
+                </a>
+              </td>
+              <td><span style={`${PROVIDER_BADGE[model.provider]}font-size:0.75rem;font-weight:600;padding:0.2rem 0.6rem;border-radius:6px;`}>{model.provider}</span></td>
+              <td style="color:#6155F1;font-weight:600;">{formatPrice(model.inputPerMillion)}</td>
+              <td style="color:#3E81E5;font-weight:600;">{formatPrice(model.outputPerMillion)}</td>
+            </tr>
+          ))}
         </tbody>
       </table>
       </div>
     </div>
-    <p style="font-size: 0.78rem; color: #999; margin-top: 1rem; text-align: center;">{t('home.tableNote')}</p>
+    <p class="pricing-checked" style="justify-content: center; margin-top: 1rem;">
+      {pricingCheckedLabel}
+      <span class="pricing-checked-sep">·</span>
+      {comparisonSources.map((provider, i) => (
+        <>
+          {i > 0 && <span class="pricing-checked-sep">·</span>}
+          <a href={PROVIDER_PRICING_URL[provider]} target="_blank" rel="noopener noreferrer">{provider}</a>
+        </>
+      ))}
+    </p>
+    <p style="font-size: 0.78rem; color: #999; margin-top: 0.5rem; text-align: center;">{t('home.tableNote')}</p>
   </div>
 </section>
 
