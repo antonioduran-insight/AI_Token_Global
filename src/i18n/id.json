@@ -150,6 +150,15 @@
       "clearInput": "Hapus teks"
     }
   },
+  "pricing": {
+    "colModel": "Model",
+    "colProvider": "Penyedia",
+    "colInput": "Input (per 1M token)",
+    "colOutput": "Output (per 1M token)",
+    "tableLabel": "Harga",
+    "tableHeading": "Berapa biaya setiap model per satu juta token",
+    "upcomingChange": "Naik ke {input} input / {output} output per 1M token pada {date}"
+  },
   "home": {
     "heroLabel": "Pusat Pengetahuan AI Kamu",
     "heroHeadline": "Kuasai Token AI,",
@@ -233,15 +242,6 @@
     "tableCellModel": "Model",
     "tableCellInput": "Input",
     "tableCellOutput": "Output",
-    "compareColModel": "Model",
-    "compareColProvider": "Penyedia",
-    "compareColContext": "Context Window",
-    "compareColInput": "Input (per 1M token)",
-    "compareColOutput": "Output (per 1M token)",
-    "compareColModality": "Modalitas",
-    "modalityText": "Teks",
-    "modalityVision": "Visi",
-    "modalityAudio": "Audio",
     "readMore": "Baca Selengkapnya",
     "newsletterLabel": "Tetap Update",
     "newsletterHeading": "Dapatkan Email Saat Kami Menerbitkan Artikel Baru",

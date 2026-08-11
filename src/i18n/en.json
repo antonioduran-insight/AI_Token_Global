@@ -150,6 +150,15 @@
       "clearInput": "Clear text"
     }
   },
+  "pricing": {
+    "colModel": "Model",
+    "colProvider": "Provider",
+    "colInput": "Input (per 1M tokens)",
+    "colOutput": "Output (per 1M tokens)",
+    "tableLabel": "Pricing",
+    "tableHeading": "What each model costs per million tokens",
+    "upcomingChange": "Rises to {input} input / {output} output per 1M tokens on {date}"
+  },
   "home": {
     "heroLabel": "Your AI Knowledge Hub",
     "heroHeadline": "Master AI Tokens,",
@@ -233,15 +242,6 @@
     "tableCellModel": "Model",
     "tableCellInput": "Input",
     "tableCellOutput": "Output",
-    "compareColModel": "Model",
-    "compareColProvider": "Provider",
-    "compareColContext": "Context Window",
-    "compareColInput": "Input (per 1M tokens)",
-    "compareColOutput": "Output (per 1M tokens)",
-    "compareColModality": "Modality",
-    "modalityText": "Text",
-    "modalityVision": "Vision",
-    "modalityAudio": "Audio",
     "readMore": "Read More",
     "newsletterLabel": "Stay Updated",
     "newsletterHeading": "Get an Email When a New Post Goes Up",

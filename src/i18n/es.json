@@ -150,6 +150,15 @@
       "clearInput": "Borrar texto"
     }
   },
+  "pricing": {
+    "colModel": "Modelo",
+    "colProvider": "Proveedor",
+    "colInput": "Entrada (por 1M tokens)",
+    "colOutput": "Salida (por 1M tokens)",
+    "tableLabel": "Precios",
+    "tableHeading": "Cuánto cuesta cada modelo por millón de tokens",
+    "upcomingChange": "Sube a {input} de entrada / {output} de salida por 1M de tokens el {date}"
+  },
   "home": {
     "heroLabel": "Tu Centro de Conocimiento en IA",
     "heroHeadline": "Domina los Tokens de IA,",
@@ -233,15 +242,6 @@
     "tableCellModel": "Modelo",
     "tableCellInput": "Entrada",
     "tableCellOutput": "Salida",
-    "compareColModel": "Modelo",
-    "compareColProvider": "Proveedor",
-    "compareColContext": "Ventana de Contexto",
-    "compareColInput": "Entrada (por 1M tokens)",
-    "compareColOutput": "Salida (por 1M tokens)",
-    "compareColModality": "Modalidad",
-    "modalityText": "Texto",
-    "modalityVision": "Visión",
-    "modalityAudio": "Audio",
     "readMore": "Leer Más",
     "newsletterLabel": "Mantente Actualizado",
     "newsletterHeading": "Recibe un Correo Cuando Publiquemos un Artículo Nuevo",

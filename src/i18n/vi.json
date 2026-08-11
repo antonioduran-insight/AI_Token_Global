@@ -150,6 +150,15 @@
       "clearInput": "Xóa văn bản"
     }
   },
+  "pricing": {
+    "colModel": "Mô hình",
+    "colProvider": "Nhà cung cấp",
+    "colInput": "Đầu vào (mỗi 1 triệu token)",
+    "colOutput": "Đầu ra (mỗi 1 triệu token)",
+    "tableLabel": "Giá",
+    "tableHeading": "Chi phí của mỗi mô hình cho một triệu token",
+    "upcomingChange": "Tăng lên {input} đầu vào / {output} đầu ra cho mỗi 1 triệu token vào {date}"
+  },
   "home": {
     "heroLabel": "Trung tâm kiến thức AI của bạn",
     "heroHeadline": "Làm chủ Token AI,",
@@ -233,15 +242,6 @@
     "tableCellModel": "Mô hình",
     "tableCellInput": "Đầu vào",
     "tableCellOutput": "Đầu ra",
-    "compareColModel": "Mô hình",
-    "compareColProvider": "Nhà cung cấp",
-    "compareColContext": "Cửa sổ ngữ cảnh",
-    "compareColInput": "Đầu vào (mỗi 1 triệu token)",
-    "compareColOutput": "Đầu ra (mỗi 1 triệu token)",
-    "compareColModality": "Phương thức",
-    "modalityText": "Văn bản",
-    "modalityVision": "Hình ảnh",
-    "modalityAudio": "Âm thanh",
     "readMore": "Đọc thêm",
     "newsletterLabel": "Luôn cập nhật",
     "newsletterHeading": "Nhận email khi chúng tôi xuất bản bài viết mới",
