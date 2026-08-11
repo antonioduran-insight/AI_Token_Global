@@ -3,7 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import { useTranslations } from '../i18n/index';
 import type { Lang } from '../i18n/index';
 import type { ApiModelPageData } from '../lib/sanity';
-import { toHTML } from '@portabletext/to-html';
+import { renderPortableText } from '../lib/portable-text';
 
 export interface Props {
   page: ApiModelPageData;
@@ -15,16 +15,7 @@ const { page, lang, modelSlug } = Astro.props;
 const t = useTranslations(lang);
 
 function pt(blocks: any[] | undefined): string {
-  if (!blocks?.length) return '';
-  return toHTML(blocks, {
-    components: {
-      marks: {
-        strong: ({ children }) => `<strong>${children}</strong>`,
-        em:     ({ children }) => `<em>${children}</em>`,
-        link:   ({ value, children }) => `<a href="${value?.href ?? '#'}" target="${value?.href?.startsWith('http') ? '_blank' : '_self'}" rel="noopener noreferrer">${children}</a>`,
-      },
-    },
-  });
+  return renderPortableText(blocks);
 }
 
 // Per-model hero gradient: outer section overlay + inner solid card
@@ -164,14 +155,7 @@ const seoDesc  = page.seo?.seoDescription ?? page.heroSubtitle ?? '';
             <h2 id="further-reading">{page.furtherReadingTitle ?? t('apiModel.furtherReadingFallback')}</h2>
             <ul>
               {page.furtherReading.map(link => (
-                <li>
-                  <a
-                    href={link.url ?? '#'}
-                    target={link.url?.startsWith('http') ? '_blank' : '_self'}
-                    rel="noopener noreferrer">
-                    {link.label}
-                  </a>
-                </li>
+                <li><a href={link.url ?? '#'} target={link.url?.startsWith('http') ? '_blank' : '_self'} rel="noopener noreferrer">{link.label}</a></li>
               ))}
             </ul>
           </Fragment>

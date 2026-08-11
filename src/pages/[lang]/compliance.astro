@@ -3,7 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import { SUPPORTED_LANGS, isValidLang, useTranslations } from '../../i18n/index';
 import type { Lang } from '../../i18n/index';
 import { getCompliancePage } from '../../lib/sanity';
-import { toHTML } from '@portabletext/to-html';
+import { renderPortableText } from '../../lib/portable-text';
 
 export async function getStaticPaths() {
   return SUPPORTED_LANGS.map(lang => ({ params: { lang } }));
@@ -18,16 +18,7 @@ if (!page) return Astro.redirect(`/${lang}/`);
 const t = useTranslations(lang as Lang);
 
 function pt(blocks: any[] | undefined): string {
-  if (!blocks?.length) return '';
-  return toHTML(blocks, {
-    components: {
-      marks: {
-        strong: ({ children }) => `<strong>${children}</strong>`,
-        em:     ({ children }) => `<em>${children}</em>`,
-        link:   ({ value, children }) => `<a href="${value?.href ?? '#'}" style="color:#6155F1;text-decoration:underline;text-underline-offset:3px;" target="${value?.href?.startsWith('http') ? '_blank' : '_self'}" rel="noopener noreferrer">${children}</a>`,
-      },
-    },
-  });
+  return renderPortableText(blocks, { linkStyle: 'color:#6155F1;text-decoration:underline;text-underline-offset:3px;' });
 }
 
 const SOLUTION_COLORS = ['#6155F1', '#3E81E5', '#0ABFBC', '#F59E0B', '#F43F5E'];

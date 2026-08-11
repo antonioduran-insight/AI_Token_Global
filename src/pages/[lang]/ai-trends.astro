@@ -4,7 +4,7 @@ import { getAiTrendsPage } from '../../lib/sanity';
 import { useTranslations, SUPPORTED_LANGS, isValidLang } from '../../i18n/index';
 import type { Lang } from '../../i18n/index';
 import type { AiTrendsPageData, TrendCard, AudienceCard } from '../../lib/sanity';
-import { toHTML } from '@portabletext/to-html';
+import { renderPortableText } from '../../lib/portable-text';
 
 export async function getStaticPaths() {
   return SUPPORTED_LANGS.map(lang => ({ params: { lang } }));
@@ -18,17 +18,8 @@ const page: AiTrendsPageData | null = await getAiTrendsPage(lang);
 if (!page) return Astro.redirect(`/${lang}/`);
 
 // Portable Text → HTML with brand-styled bold
-const ptOptions = {
-  components: {
-    marks: {
-      strong: ({ children }: any) => `<strong style="color:#3C315B;font-weight:700;">${children}</strong>`,
-      em:     ({ children }: any) => `<em>${children}</em>`,
-    },
-  },
-};
 function pt(blocks: any): string {
-  if (!blocks) return '';
-  return toHTML(blocks, ptOptions);
+  return renderPortableText(blocks, { strongStyle: 'color:#3C315B;font-weight:700;' });
 }
 
 // Accent color → visual style tokens

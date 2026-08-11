@@ -7,7 +7,7 @@ import type { HomePageData, FaqItem, SanityPost } from '../../lib/sanity';
 import { MAILERLITE_SUBSCRIBE_ACTION } from '../../lib/forms';
 import { MODELS, FLAGSHIP_MODELS, PROVIDER_PRICING_URL, formatPrice, formatPricingDate } from '../../lib/pricing';
 import type { Provider } from '../../lib/pricing';
-import { toHTML } from '@portabletext/to-html';
+import { renderPortableText } from '../../lib/portable-text';
 
 export async function getStaticPaths() {
   return SUPPORTED_LANGS.map(lang => ({ params: { lang } }));
@@ -19,17 +19,8 @@ const t = useTranslations(lang as Lang);
 
 const page: HomePageData | null = await getHomePage(lang);
 
-const ptOptions = {
-  components: {
-    marks: {
-      strong: ({ children }: any) => `<strong style="color:#3C315B;font-weight:700;">${children}</strong>`,
-      em:     ({ children }: any) => `<em>${children}</em>`,
-    },
-  },
-};
 function pt(blocks: any): string {
-  if (!blocks) return '';
-  return toHTML(blocks, ptOptions);
+  return renderPortableText(blocks, { strongStyle: 'color:#3C315B;font-weight:700;' });
 }
 
 const heroStats = page?.heroStats?.length
@@ -447,9 +438,7 @@ const noindex  = page?.seo?.noindex ?? false;
           {MODELS.map((model) => (
             <tr>
               <td>
-                <a href={model.sourceUrl} class="price-source-link" target="_blank" rel="noopener noreferrer">
-                  <strong style="color:#1C1C1C;">{model.displayName}</strong>
-                </a>
+                <a href={model.sourceUrl} class="price-source-link" target="_blank" rel="noopener noreferrer"><strong style="color:#1C1C1C;">{model.displayName}</strong></a>
               </td>
               <td><span style={`${PROVIDER_BADGE[model.provider]}font-size:0.75rem;font-weight:600;padding:0.2rem 0.6rem;border-radius:6px;`}>{model.provider}</span></td>
               <td style="color:#6155F1;font-weight:600;">{formatPrice(model.inputPerMillion)}</td>

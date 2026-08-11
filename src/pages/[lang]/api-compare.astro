@@ -19,18 +19,9 @@ const page = await getApiComparePage(lang as Lang);
 if (!page) return Astro.redirect(`/${lang}/`);
 
 // Portable text for FAQ answers
-import { toHTML } from '@portabletext/to-html';
+import { renderPortableText } from '../../lib/portable-text';
 function pt(blocks: any[] | undefined): string {
-  if (!blocks?.length) return '';
-  return toHTML(blocks, {
-    components: {
-      marks: {
-        strong: ({ children }) => `<strong style="font-weight:700;color:#3C315B;">${children}</strong>`,
-        em:     ({ children }) => `<em>${children}</em>`,
-        link:   ({ value, children }) => `<a href="${value?.href ?? '#'}" style="color:#6155F1;text-decoration:underline;" target="${value?.href?.startsWith('http') ? '_blank' : '_self'}" rel="noopener noreferrer">${children}</a>`,
-      },
-    },
-  });
+  return renderPortableText(blocks, { strongStyle: 'font-weight:700;color:#3C315B;', linkStyle: 'color:#6155F1;text-decoration:underline;' });
 }
 
 // ── Pricing table ──
@@ -228,9 +219,7 @@ const sectionDefs: SectionDef[] = [
                 {group.models.map((model) => (
                   <tr>
                     <td>
-                      <a href={model.sourceUrl} class="price-source-link" target="_blank" rel="noopener noreferrer">
-                        <strong style="color:#1C1C1C;">{model.displayName}</strong>
-                      </a>
+                      <a href={model.sourceUrl} class="price-source-link" target="_blank" rel="noopener noreferrer"><strong style="color:#1C1C1C;">{model.displayName}</strong></a>
                       {model.upcomingChange && (
                         <span class="price-upcoming">{formatUpcomingChange(upcomingTemplate, model, locale)}</span>
                       )}
