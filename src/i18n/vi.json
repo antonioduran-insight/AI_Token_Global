@@ -139,6 +139,7 @@
     "comingText": "Trang web chạy bằng Astro đang được thiết lập. Trong lúc chờ, hãy ghé xem blog.",
     "onThisPage": "Trong trang này",
     "live": "Trực tiếp",
+    "pricingLastChecked": "Giá được kiểm tra lần cuối vào {date}",
     "aria": {
       "breadcrumb": "Đường dẫn",
       "pagination": "Phân trang",

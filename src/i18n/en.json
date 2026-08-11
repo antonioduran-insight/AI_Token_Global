@@ -139,6 +139,7 @@
     "comingText": "The Astro-powered site is being set up. In the meantime, check out the blog.",
     "onThisPage": "On This Page",
     "live": "Live",
+    "pricingLastChecked": "Prices last checked {date}",
     "aria": {
       "breadcrumb": "Breadcrumb",
       "pagination": "Pagination",

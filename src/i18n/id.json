@@ -139,6 +139,7 @@
     "comingText": "Situs berbasis Astro sedang disiapkan. Sementara itu, lihat dulu blognya.",
     "onThisPage": "Di Halaman Ini",
     "live": "Langsung",
+    "pricingLastChecked": "Harga terakhir diperiksa {date}",
     "aria": {
       "breadcrumb": "Navigasi remah roti",
       "pagination": "Paginasi",

@@ -139,6 +139,7 @@
     "comingText": "El sitio está siendo configurado. Mientras tanto, visita el blog.",
     "onThisPage": "En esta página",
     "live": "En vivo",
+    "pricingLastChecked": "Precios verificados por última vez el {date}",
     "aria": {
       "breadcrumb": "Migas de pan",
       "pagination": "Paginación",
