@@ -1,8 +1,9 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { SUPPORTED_LANGS, isValidLang, useTranslations } from '../../i18n/index';
+import { SUPPORTED_LANGS, isValidLang, useTranslations, LANG_META } from '../../i18n/index';
 import type { Lang } from '../../i18n/index';
 import { getTokenCalculatorPage } from '../../lib/sanity';
+import { getModel, formatPrice, formatPricingDate } from '../../lib/pricing';
 import { toHTML } from '@portabletext/to-html';
 
 export async function getStaticPaths() {
@@ -16,6 +17,25 @@ const page = await getTokenCalculatorPage(lang as Lang);
 if (!page) return Astro.redirect(`/${lang}/`);
 
 const t = useTranslations(lang as Lang);
+
+// One model per platform card. The same object feeds the card label, the
+// reference price shown on it, and the number the client script multiplies by —
+// so the label and the arithmetic can never drift apart. See src/lib/pricing.ts.
+const CALC_MODELS = {
+  openai: getModel('GPT-5.6 Terra'),
+  claude: getModel('Claude Opus 5'),
+  gemini: getModel('Gemini 3.1 Pro'),
+} as const;
+
+// Input tokens only — this page deliberately does not estimate output cost.
+const calcPricing = {
+  openai: CALC_MODELS.openai.inputPerMillion,
+  claude: CALC_MODELS.claude.inputPerMillion,
+  gemini: CALC_MODELS.gemini.inputPerMillion,
+};
+
+const pricingCheckedLabel = t('common.pricingLastChecked')
+  .replace('{date}', formatPricingDate(LANG_META[lang as Lang].locale));
 
 function pt(blocks: any[] | undefined): string {
   if (!blocks?.length) return '';
@@ -176,9 +196,9 @@ function pt(blocks: any[] | undefined): string {
                   <div>
                     <div class="platform-head">
                       <span class="platform-name">OpenAI</span>
-                      <span class="platform-chip" style="color:#999;background:#F0F0F0;">GPT-4o</span>
+                      <span class="platform-chip" style="color:#999;background:#F0F0F0;">{CALC_MODELS.openai.displayName}</span>
                     </div>
-                    <div class="platform-meta">{t('calculator.refPriceLabel')} <strong>$2.50 / 1M {t('calculator.tokens')}</strong> · USD</div>
+                    <div class="platform-meta">{t('calculator.refPriceLabel')} <strong>{formatPrice(CALC_MODELS.openai.inputPerMillion)} / 1M {t('calculator.tokens')}</strong> · USD</div>
                   </div>
                 </div>
                 <div class="platform-cost-col">
@@ -195,9 +215,9 @@ function pt(blocks: any[] | undefined): string {
                   <div>
                     <div class="platform-head">
                       <span class="platform-name">Anthropic</span>
-                      <span class="platform-chip" style="color:#C9622A;background:#FFF0E8;">Claude Opus</span>
+                      <span class="platform-chip" style="color:#C9622A;background:#FFF0E8;">{CALC_MODELS.claude.displayName}</span>
                     </div>
-                    <div class="platform-meta">{t('calculator.refPriceLabel')} <strong>$5.00 / 1M {t('calculator.tokens')}</strong> · USD</div>
+                    <div class="platform-meta">{t('calculator.refPriceLabel')} <strong>{formatPrice(CALC_MODELS.claude.inputPerMillion)} / 1M {t('calculator.tokens')}</strong> · USD</div>
                   </div>
                 </div>
                 <div class="platform-cost-col">
@@ -214,9 +234,9 @@ function pt(blocks: any[] | undefined): string {
                   <div>
                     <div class="platform-head">
                       <span class="platform-name">Google</span>
-                      <span class="platform-chip" style="color:#6155F1;background:#EEEAFF;">Gemini 1.5 Pro</span>
+                      <span class="platform-chip" style="color:#6155F1;background:#EEEAFF;">{CALC_MODELS.gemini.displayName}</span>
                     </div>
-                    <div class="platform-meta">{t('calculator.refPriceLabel')} <strong>$2.00 / 1M {t('calculator.tokens')}</strong> · USD</div>
+                    <div class="platform-meta">{t('calculator.refPriceLabel')} <strong>{formatPrice(CALC_MODELS.gemini.inputPerMillion)} / 1M {t('calculator.tokens')}</strong> · USD</div>
                   </div>
                 </div>
                 <div class="platform-cost-col">
@@ -227,6 +247,17 @@ function pt(blocks: any[] | undefined): string {
             </div>
 
           </div>
+
+          <p class="pricing-checked">
+            {pricingCheckedLabel}
+            <span class="pricing-checked-sep">·</span>
+            {Object.values(CALC_MODELS).map((model, i) => (
+              <>
+                {i > 0 && <span class="pricing-checked-sep">·</span>}
+                <a href={model.sourceUrl} target="_blank" rel="noopener noreferrer">{model.provider}</a>
+              </>
+            ))}
+          </p>
 
           <p class="footer-note">{t('calculator.disclaimer')}</p>
         </div>
@@ -664,8 +695,11 @@ function pt(blocks: any[] | undefined): string {
   }
 </style>
 
-<script is:inline define:vars={{ calcI18n: { lowest: t('calculator.summaryLowest'), highest: t('calculator.summaryHighest'), inputCostOnly: t('calculator.inputCostOnly') } }}>
+<script is:inline define:vars={{ calcI18n: { lowest: t('calculator.summaryLowest'), highest: t('calculator.summaryHighest'), inputCostOnly: t('calculator.inputCostOnly') }, calcPricing }}>
   window.__CALC_I18N__ = calcI18n;
+  /* Input price per 1M tokens, injected from src/lib/pricing.ts so the maths
+     uses the exact same number the card above it prints. */
+  window.__CALC_PRICING__ = calcPricing;
 </script>
 
 <script is:inline>
@@ -687,7 +721,7 @@ function pt(blocks: any[] | undefined): string {
   const resultSummaryEl = document.getElementById('resultSummary');
   const charCountEl    = document.getElementById('charCount');
 
-  const pricing = { openai: 2.5, claude: 5, gemini: 2 };
+  const pricing = window.__CALC_PRICING__;
   const platformNames = { openai: 'OpenAI', claude: 'Anthropic', gemini: 'Google' };
 
   const SUMMARY_PLACEHOLDER = resultSummaryEl ? resultSummaryEl.textContent.trim() : '';
