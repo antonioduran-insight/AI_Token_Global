@@ -44,10 +44,34 @@ const NEEDS_SPACE_BEFORE = /^[\p{L}\p{N}_$€£¥([{«“‘¿¡—–]/u;
  */
 const NEVER_SPACE_AFTER = /[-–—/\\([{«“‘¿¡$€£¥&@#+=~^<>|]$/u;
 
+/**
+ * Scripts that do not separate words with spaces. `\p{L}` covers these too, so
+ * without this guard the rule would read a Han character as a word character and
+ * insert a space at every span boundary — corrupting the text rather than
+ * repairing it. zh-CN is on the roadmap, and Chinese already appears inside
+ * English articles today.
+ *
+ * The check is per-character rather than per-locale on purpose. A zh-CN page will
+ * quote Latin model names, where a space between two Latin words is still wanted;
+ * an English page quoting a Chinese phrase must still be left alone. Keying off
+ * the characters at the boundary handles both, and needs no locale threaded
+ * through every caller.
+ */
+const NON_SPACING_SCRIPT = new RegExp(
+  '[' +
+  '\\p{Script=Han}\\p{Script=Hiragana}\\p{Script=Katakana}\\p{Script=Hangul}' +
+  '\\p{Script=Thai}\\p{Script=Lao}\\p{Script=Khmer}\\p{Script=Myanmar}' +
+  '\\p{Script=Tibetan}' +
+  '\\u3000-\\u303F' +   // CJK punctuation: 。 、 「 」 【 】
+  '\\uFF00-\\uFFEF' +   // fullwidth and halfwidth forms
+  ']', 'u');
+
 function boundaryNeedsSpace(left: string, right: string): boolean {
   if (!left || !right) return false;
   // Already separated — never create a double space.
   if (/[\s ]$/u.test(left) || /^[\s ]/u.test(right)) return false;
+  // Either side in a non-spacing script: no space belongs at this boundary.
+  if (NON_SPACING_SCRIPT.test(left.slice(-1)) || NON_SPACING_SCRIPT.test(right.slice(0, 1))) return false;
   if (NEVER_SPACE_AFTER.test(left)) return false;
   return NEEDS_SPACE_AFTER.test(left) && NEEDS_SPACE_BEFORE.test(right);
 }
