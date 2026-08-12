@@ -616,3 +616,39 @@ export async function getHomePage(lang: string): Promise<HomePageData | null> {
   );
 }
 
+
+// ── Legal Pages (privacy / terms) ─────────────────────────────────────────
+
+export type LegalDocType = 'privacy' | 'terms';
+
+export interface LegalPageData {
+  _id: string;
+  language: string;
+  docType: LegalDocType;
+  title: string;
+  lastUpdated: string;
+  body?: PortableTextBlock;
+  seo?: SeoData;
+}
+
+/**
+ * Fetch a legal document, falling back to the English one when the requested
+ * language has none.
+ *
+ * The cookie banner links to the privacy page before asking for consent, so a
+ * missing translation must not produce a dead end — an English policy a reader
+ * can actually read beats a 404. The caller gets the document's own `language`
+ * back so the page can tell the reader it is not in their language.
+ */
+export async function getLegalPage(docType: LegalDocType, lang: string): Promise<LegalPageData | null> {
+  const client = getClient();
+  if (!client) return null;
+  const query = `*[_type == "legalPage" && docType == $docType && language == $lang][0] {
+      _id, language, docType, title, lastUpdated, body,
+      seo { seoTitle, seoDescription, ogImage { asset -> { url } }, noindex }
+    }`;
+  const page = await client.fetch(query, { docType, lang });
+  if (page) return page;
+  if (lang === 'en') return null;
+  return client.fetch(query, { docType, lang: 'en' });
+}
