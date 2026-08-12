@@ -19,7 +19,7 @@ if (!page) return Astro.redirect(`/${lang}/`);
 
 // Portable Text → HTML with brand-styled bold
 function pt(blocks: any): string {
-  return renderPortableText(blocks, { strongStyle: 'color:#3C315B;font-weight:700;' });
+  return renderPortableText(blocks, { strongStyle: 'color:#3C315B;font-weight:700;', source: `aiTrendsPage/${lang}` });
 }
 
 // Accent color → visual style tokens

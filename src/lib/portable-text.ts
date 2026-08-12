@@ -77,6 +77,77 @@ function boundaryNeedsSpace(left: string, right: string): boolean {
 }
 
 /**
+ * Build-time reporting for content the renderer could not use as stored.
+ *
+ * The point is that a defect fails loudly for us and silently for readers: the
+ * page renders without the library's diagnostic text, and the build log names
+ * the document so somebody can fix it in Sanity.
+ *
+ * Two outcomes are tracked separately, because they are not the same problem.
+ * `dropped` is a node that rendered as nothing — it carried no reader content.
+ * `recovered` is a node whose content was salvaged and did render; the stored
+ * document is still wrong and still needs an edit.
+ *
+ * Deduplicated per document + kind + detail, because one bad article carries the
+ * same defect five times over and five identical lines teach nothing.
+ */
+type DefectOutcome = 'dropped' | 'recovered';
+const reported = new Map<string, { count: number; outcome: DefectOutcome }>();
+let summaryArmed = false;
+
+function reportContentDefect(source: string, kind: string, detail: string, outcome: DefectOutcome): void {
+  const key = `${source}\u0000${kind}\u0000${detail}`;
+  const entry = reported.get(key);
+  if (entry) {
+    entry.count++;
+  } else {
+    reported.set(key, { count: 1, outcome });
+    console.warn(`[portable-text] ${kind}: ${detail} — in ${source} (${outcome})`);
+  }
+  if (!summaryArmed && typeof process !== 'undefined' && process.on) {
+    summaryArmed = true;
+    process.on('exit', () => {
+      if (!reported.size) return;
+      const tally = (o: DefectOutcome) =>
+        [...reported.values()].filter(e => e.outcome === o).reduce((a, e) => a + e.count, 0);
+      const dropped = tally('dropped');
+      const recovered = tally('recovered');
+      const parts = [];
+      if (dropped) parts.push(`${dropped} node(s) rendered as nothing`);
+      if (recovered) parts.push(`${recovered} node(s) recovered but still malformed in Sanity`);
+      console.warn(
+        `\n[portable-text] ${parts.join(', ')} — across ${reported.size} document/defect pair(s). Fix them in Sanity.`
+      );
+    });
+  }
+}
+
+/**
+ * Coerce a span whose `text` is not a string.
+ *
+ * Four articles store `text` as an array of strings — a bullet list flattened
+ * into one span by whatever wrote the document:
+ *
+ *   text: ["Tier 1: 10 tokens/second ($0.01/token)", "Tier 2: …", "Tier 3: …"]
+ *
+ * Portable text requires a string there, so the serializer cannot read the span
+ * and falls through to its unknown-node path, dropping all three tiers from the
+ * article. Joining the entries recovers every character of the real content and
+ * invents no markup; the underlying document still wants fixing into a proper
+ * list, which is a CMS edit, not a render-time one.
+ */
+function normalizeSpanText(child: any, source: string): any {
+  if (!child || child._type !== 'span' || typeof child.text === 'string') return child;
+
+  if (Array.isArray(child.text) && child.text.every((t: unknown) => typeof t === 'string')) {
+    reportContentDefect(source, 'span.text was an array', `${child.text.length} entries joined`, 'recovered');
+    return { ...child, text: child.text.join(' ') };
+  }
+  reportContentDefect(source, 'span.text was not a string', typeof child.text, 'dropped');
+  return { ...child, text: '' };
+}
+
+/**
  * Restore the space dropped between two adjacent spans.
  *
  * Pure: returns new block/child objects and never mutates the input, so the
@@ -87,16 +158,17 @@ function boundaryNeedsSpace(left: string, right: string): boolean {
  * inside a bold run or a link's clickable text. When both sides are marked it
  * goes on the right.
  */
-export function repairSpanSpacing<T>(blocks: T): T {
-  if (Array.isArray(blocks)) return blocks.map(repairBlock) as unknown as T;
+export function repairSpanSpacing<T>(blocks: T, source = 'unknown document'): T {
+  if (Array.isArray(blocks)) return blocks.map(b => repairBlock(b, source)) as unknown as T;
   return blocks;
 }
 
-function repairBlock(block: any): any {
+function repairBlock(block: any, source: string): any {
   if (!block || block._type !== 'block' || !Array.isArray(block.children)) return block;
 
-  const children = block.children.map((child: any) => child);
-  let changed = false;
+  // Malformed spans are normalised first, so the spacing pass below sees strings.
+  const children = block.children.map((child: any) => normalizeSpanText(child, source));
+  let changed = children.some((c: any, i: number) => c !== block.children[i]);
 
   for (let i = 0; i < children.length - 1; i++) {
     const left = children[i];
@@ -126,6 +198,11 @@ export interface RenderOptions {
   linkStyle?: string;
   /** Extra serializers merged in — block styles, custom types, list items. */
   components?: Record<string, any>;
+  /**
+   * What is being rendered, for build warnings — e.g. `post/en/my-slug`.
+   * Only ever reaches the build log, never the page.
+   */
+  source?: string;
 }
 
 /**
@@ -136,10 +213,10 @@ export interface RenderOptions {
  */
 export function renderPortableText(blocks: any[] | undefined, options: RenderOptions = {}): string {
   if (!blocks?.length) return '';
-  const { strongStyle, linkStyle, components = {} } = options;
+  const { strongStyle, linkStyle, components = {}, source = 'unknown document' } = options;
   const { marks: extraMarks, ...restComponents } = components;
 
-  return toHTML(repairSpanSpacing(blocks), {
+  return toHTML(repairSpanSpacing(blocks, source), {
     components: {
       marks: {
         strong: ({ children }: any) => `<strong${strongStyle ? ` style="${strongStyle}"` : ''}>${children}</strong>`,
@@ -151,6 +228,28 @@ export function renderPortableText(blocks: any[] | undefined, options: RenderOpt
         },
         ...(extraMarks ?? {}),
       },
+
+      // ── Nodes this renderer does not recognise ──
+      // The library's defaults write "Unknown block type …, specify a component
+      // for it in the `components.types` option" into the page. That is a message
+      // for us, shipped to readers. These handlers report it to the build log
+      // instead and put nothing on the page.
+      //
+      // An unknown *object* renders as nothing: it carries no text, and the one
+      // real case — `imagePrompt`, art-direction notes for illustrating an
+      // article — must never have been published in the first place.
+      unknownType: ({ value }: any) => {
+        reportContentDefect(source, 'unknown block type', `"${value?._type}"`, 'dropped');
+        return '';
+      },
+      // An unknown *mark*, *style* or *list* wraps real text. Dropping it would
+      // delete a reader's content over a presentation detail, so the text is kept
+      // and only the styling is lost.
+      unknownMark: ({ children }: any) => `${children}`,
+      unknownBlockStyle: ({ children }: any) => `<p>${children}</p>`,
+      unknownList: ({ children }: any) => `<ul>${children}</ul>`,
+      unknownListItem: ({ children }: any) => `<li>${children}</li>`,
+
       ...restComponents,
     },
   });

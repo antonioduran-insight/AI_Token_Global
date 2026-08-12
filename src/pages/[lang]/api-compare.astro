@@ -21,7 +21,7 @@ if (!page) return Astro.redirect(`/${lang}/`);
 // Portable text for FAQ answers
 import { renderPortableText } from '../../lib/portable-text';
 function pt(blocks: any[] | undefined): string {
-  return renderPortableText(blocks, { strongStyle: 'font-weight:700;color:#3C315B;', linkStyle: 'color:#6155F1;text-decoration:underline;' });
+  return renderPortableText(blocks, { strongStyle: 'font-weight:700;color:#3C315B;', linkStyle: 'color:#6155F1;text-decoration:underline;', source: `apiComparePage/${lang}` });
 }
 
 // ── Pricing table ──

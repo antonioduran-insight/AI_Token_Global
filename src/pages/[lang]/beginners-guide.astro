@@ -18,7 +18,7 @@ if (!page) return Astro.redirect(`/${lang}/`);
 const t = useTranslations(lang as Lang);
 
 function pt(blocks: any[] | undefined): string {
-  return renderPortableText(blocks, { strongStyle: 'font-weight:700;color:#3C315B;', linkStyle: 'color:#6155F1;text-decoration:underline;text-underline-offset:3px;' });
+  return renderPortableText(blocks, { strongStyle: 'font-weight:700;color:#3C315B;', linkStyle: 'color:#6155F1;text-decoration:underline;text-underline-offset:3px;', source: `beginnersPage/${lang}` });
 }
 
 const STEP_BORDERS = ['#6155F1', '#3E81E5', '#0ABFBC'];

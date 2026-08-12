@@ -86,9 +86,11 @@ function countWords(blocks: any[]): number {
   }
   return total;
 }
+// Names this article in any build warning the renderer emits.
+const postSource = `post/${lang}/${post.slug.current}`;
 // Repair span spacing once, up front: the word count, the TOC heading slugs and
 // the rendered HTML must all read the same text or the anchors stop matching.
-const body = repairSpanSpacing(post.body || []);
+const body = repairSpanSpacing(post.body || [], postSource);
 const wordCount = countWords(body);
 const readingMinutes = Math.max(1, Math.round(wordCount / 225));
 const readingLabel = t('blog.minRead').replace('{n}', String(readingMinutes));
@@ -115,6 +117,7 @@ for (const block of body) {
 usedSlugs.clear();
 
 const bodyHtml = renderPortableText(body, {
+  source: postSource,
   components: {
     block: {
       h2: ({ value, children }) => {

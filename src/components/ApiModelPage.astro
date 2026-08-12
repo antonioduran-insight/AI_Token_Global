@@ -15,7 +15,7 @@ const { page, lang, modelSlug } = Astro.props;
 const t = useTranslations(lang);
 
 function pt(blocks: any[] | undefined): string {
-  return renderPortableText(blocks);
+  return renderPortableText(blocks, { source: `apiModelPage/${lang}/${modelSlug}` });
 }
 
 // Per-model hero gradient: outer section overlay + inner solid card

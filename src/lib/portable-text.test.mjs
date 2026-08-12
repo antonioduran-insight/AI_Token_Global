@@ -8,7 +8,7 @@
  */
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { repairSpanSpacing } from './portable-text.ts';
+import { repairSpanSpacing, renderPortableText } from './portable-text.ts';
 
 /** Build a portable-text block from [text, marks] pairs. */
 const block = (...spans) => ({
@@ -139,4 +139,92 @@ test('ignores non-span children and short blocks', () => {
   const img = { _type: 'image', asset: { url: 'x' } };
   assert.deepEqual(repairSpanSpacing([img]), [img]);
   assert.equal(repair(block(['only one span'])), 'only one span');
+});
+
+// ── Nodes the renderer cannot use ──────────────────────────────────────────────
+// The library's defaults write "Unknown block type …, specify a component for it
+// in the `components.types` option" into the page. That message is for us; it
+// must never ship. 90 occurrences of it reached production via `imagePrompt`.
+
+const WARNING_TEXT = /Unknown block type|specify a component/;
+
+test('an unrecognised block type renders nothing, not a warning', () => {
+  // Real shape from post/en/ai-token-usage-dashboard-interpreter: art-direction
+  // notes for illustrating the article, never meant for readers.
+  const html = renderPortableText([
+    { _type: 'block', style: 'normal', markDefs: [], children: [{ _type: 'span', text: 'Before.', marks: [] }] },
+    { _type: 'imagePrompt', _key: 'or29pfog', text: 'Token flow diagram showing input, processing, and output' },
+    { _type: 'block', style: 'normal', markDefs: [], children: [{ _type: 'span', text: 'After.', marks: [] }] },
+  ], { source: 'post/en/test-fixture' });
+
+  assert.doesNotMatch(html, WARNING_TEXT, 'no serializer warning may reach the page');
+  assert.ok(!html.includes('Token flow diagram'), 'the prompt text itself must not render');
+  assert.equal(html, '<p>Before.</p><p>After.</p>');
+});
+
+test('no unknown type can leak, whatever it is called', () => {
+  for (const type of ['imagePrompt', 'somethingNobodyAddedYet', 'videoPrompt', 'internalNote']) {
+    const html = renderPortableText([{ _type: type, text: 'scaffolding' }], { source: 'post/en/test-fixture' });
+    assert.doesNotMatch(html, WARNING_TEXT, `${type} leaked a warning`);
+    assert.equal(html, '', `${type} rendered something`);
+  }
+});
+
+test('an unknown mark keeps its text and loses only the styling', () => {
+  // Dropping the node would delete a reader's sentence over a presentation detail.
+  const html = renderPortableText([{
+    _type: 'block', style: 'normal', markDefs: [],
+    children: [
+      { _type: 'span', text: 'keep ', marks: [] },
+      { _type: 'span', text: 'this text', marks: ['someUnregisteredMark'] },
+    ],
+  }], { source: 'post/en/test-fixture' });
+  assert.doesNotMatch(html, WARNING_TEXT);
+  assert.ok(html.includes('this text'), 'text under an unknown mark must survive');
+});
+
+test('an unknown block style keeps its text', () => {
+  const html = renderPortableText([{
+    _type: 'block', style: 'someUnregisteredStyle', markDefs: [],
+    children: [{ _type: 'span', text: 'still readable', marks: [] }],
+  }], { source: 'post/en/test-fixture', components: { block: { normal: ({ children }) => `<p>${children}</p>` } } });
+  assert.doesNotMatch(html, WARNING_TEXT);
+  assert.ok(html.includes('still readable'));
+});
+
+test('recovers a span whose text is an array instead of a string', () => {
+  // post/en/ai-token-basics-for-beginners body[14] — three pricing tiers
+  // flattened into one span. The serializer could not read it, so all three
+  // vanished from the article.
+  const tiers = [
+    'Tier 1: 10 tokens/second ($0.01/token)',
+    'Tier 2: 100 tokens/second ($0.005/token)',
+    'Tier 3: 1,000 tokens/second ($0.001/token)',
+  ];
+  const html = renderPortableText([{
+    _type: 'block', style: 'normal', markDefs: [],
+    children: [{ _type: 'span', _key: 'bgy4aea5c', text: tiers, marks: [] }],
+  }], { source: 'post/en/test-fixture' });
+
+  assert.doesNotMatch(html, WARNING_TEXT);
+  for (const tier of tiers) assert.ok(html.includes(tier), `lost: ${tier}`);
+});
+
+test('a span with a text type we cannot use renders empty, not a warning', () => {
+  const html = renderPortableText([{
+    _type: 'block', style: 'normal', markDefs: [],
+    children: [{ _type: 'span', text: { nope: true }, marks: [] }],
+  }], { source: 'post/en/test-fixture' });
+  assert.doesNotMatch(html, WARNING_TEXT);
+  assert.equal(html, '<p></p>');
+});
+
+test('span normalisation does not mutate the input', () => {
+  const block = {
+    _type: 'block', style: 'normal', markDefs: [],
+    children: [{ _type: 'span', text: ['a', 'b'], marks: [] }],
+  };
+  const before = JSON.stringify(block);
+  repairSpanSpacing([block], 'post/en/test-fixture');
+  assert.equal(JSON.stringify(block), before);
 });

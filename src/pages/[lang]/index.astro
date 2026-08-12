@@ -20,7 +20,7 @@ const t = useTranslations(lang as Lang);
 const page: HomePageData | null = await getHomePage(lang);
 
 function pt(blocks: any): string {
-  return renderPortableText(blocks, { strongStyle: 'color:#3C315B;font-weight:700;' });
+  return renderPortableText(blocks, { strongStyle: 'color:#3C315B;font-weight:700;', source: `homePage/${lang}` });
 }
 
 const heroStats = page?.heroStats?.length
