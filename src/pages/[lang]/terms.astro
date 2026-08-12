@@ -1,0 +1,17 @@
+---
+import LegalPage from '../../components/LegalPage.astro';
+import { SUPPORTED_LANGS, isValidLang } from '../../i18n/index';
+import type { Lang } from '../../i18n/index';
+import { getLegalPage } from '../../lib/sanity';
+
+export async function getStaticPaths() {
+  return SUPPORTED_LANGS.map(lang => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params;
+if (!isValidLang(lang)) return Astro.redirect('/en/terms/');
+
+const page = await getLegalPage('terms', lang);
+---
+
+<LegalPage page={page} lang={lang as Lang} docType="terms" />

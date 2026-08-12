@@ -159,6 +159,15 @@
     "tableHeading": "Cuánto cuesta cada modelo por millón de tokens",
     "upcomingChange": "Sube a {input} de entrada / {output} de salida por 1M de tokens el {date}"
   },
+  "legal": {
+    "privacyTitle": "Política de Privacidad",
+    "termsTitle": "Términos del Servicio",
+    "lastUpdated": "Última actualización: {date}",
+    "englishFallbackNotice": "Esta página aún no está disponible en tu idioma, por lo que se muestra la versión en inglés.",
+    "notPublished": "Este documento aún no se ha publicado. Escríbenos y te enviaremos la versión vigente.",
+    "privacySeoDescription": "Cómo AI Token King recopila, usa y protege tus datos, y cómo funciona el consentimiento de analítica en este sitio.",
+    "termsSeoDescription": "Las condiciones que aceptas al usar AI Token King, incluido el uso permitido y los límites de nuestra información de precios."
+  },
   "home": {
     "heroLabel": "Tu Centro de Conocimiento en IA",
     "heroHeadline": "Domina los Tokens de IA,",

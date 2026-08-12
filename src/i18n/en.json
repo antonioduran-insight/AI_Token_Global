@@ -159,6 +159,15 @@
     "tableHeading": "What each model costs per million tokens",
     "upcomingChange": "Rises to {input} input / {output} output per 1M tokens on {date}"
   },
+  "legal": {
+    "privacyTitle": "Privacy Policy",
+    "termsTitle": "Terms of Service",
+    "lastUpdated": "Last updated {date}",
+    "englishFallbackNotice": "This page is not available in your language yet, so the English version is shown.",
+    "notPublished": "This document has not been published yet. Email us and we will send you the current version.",
+    "privacySeoDescription": "How AI Token King collects, uses, and protects your data, and how analytics consent works on this site.",
+    "termsSeoDescription": "The terms you agree to when using AI Token King, including acceptable use and the limits of our pricing information."
+  },
   "home": {
     "heroLabel": "Your AI Knowledge Hub",
     "heroHeadline": "Master AI Tokens,",

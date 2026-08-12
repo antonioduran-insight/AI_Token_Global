@@ -36,7 +36,7 @@ const t = useTranslations(lang);
     <p class="cookie-consent__title">{t('consent.title')}</p>
     <p class="cookie-consent__text">
       {t('consent.body')}
-      <a href="#" class="cookie-consent__link">{t('consent.privacyLink')}</a>
+      <a href={`/${lang}/privacy/`} class="cookie-consent__link">{t('consent.privacyLink')}</a>
     </p>
   </div>
 

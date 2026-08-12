@@ -159,6 +159,15 @@
     "tableHeading": "Berapa biaya setiap model per satu juta token",
     "upcomingChange": "Naik ke {input} input / {output} output per 1M token pada {date}"
   },
+  "legal": {
+    "privacyTitle": "Kebijakan Privasi",
+    "termsTitle": "Syarat Layanan",
+    "lastUpdated": "Terakhir diperbarui {date}",
+    "englishFallbackNotice": "Halaman ini belum tersedia dalam bahasamu, jadi yang ditampilkan adalah versi bahasa Inggris.",
+    "notPublished": "Dokumen ini belum diterbitkan. Kirim email kepada kami dan kami akan mengirimkan versi terbarunya.",
+    "privacySeoDescription": "Bagaimana AI Token King mengumpulkan, menggunakan, dan melindungi datamu, serta cara kerja persetujuan analitik di situs ini.",
+    "termsSeoDescription": "Ketentuan yang kamu setujui saat menggunakan AI Token King, termasuk penggunaan yang wajar dan batasan informasi harga kami."
+  },
   "home": {
     "heroLabel": "Pusat Pengetahuan AI Kamu",
     "heroHeadline": "Kuasai Token AI,",

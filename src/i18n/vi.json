@@ -159,6 +159,15 @@
     "tableHeading": "Chi phí của mỗi mô hình cho một triệu token",
     "upcomingChange": "Tăng lên {input} đầu vào / {output} đầu ra cho mỗi 1 triệu token vào {date}"
   },
+  "legal": {
+    "privacyTitle": "Chính Sách Bảo Mật",
+    "termsTitle": "Điều Khoản Dịch Vụ",
+    "lastUpdated": "Cập nhật lần cuối {date}",
+    "englishFallbackNotice": "Trang này chưa có bản tiếng Việt, nên bản tiếng Anh được hiển thị.",
+    "notPublished": "Tài liệu này chưa được công bố. Hãy gửi email cho chúng tôi và chúng tôi sẽ gửi bạn bản hiện hành.",
+    "privacySeoDescription": "Cách AI Token King thu thập, sử dụng và bảo vệ dữ liệu của bạn, cùng cách hoạt động của việc đồng ý phân tích trên trang này.",
+    "termsSeoDescription": "Các điều khoản bạn chấp nhận khi dùng AI Token King, bao gồm phạm vi sử dụng hợp lệ và giới hạn của thông tin giá."
+  },
   "home": {
     "heroLabel": "Trung tâm kiến thức AI của bạn",
     "heroHeadline": "Làm chủ Token AI,",

@@ -1,0 +1,155 @@
+---
+/**
+ * Privacy Policy and Terms of Service.
+ *
+ * Deliberately plain next to the rest of the site: no gradient hero, no blobs,
+ * no reveal animations. Someone reading this is checking what we do with their
+ * data, and decoration competing with the text would be working against them.
+ * One accent rule, a dated stamp, and a measure capped near 70 characters.
+ */
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { useTranslations, LANG_META } from '../i18n/index';
+import type { Lang } from '../i18n/index';
+import { renderPortableText } from '../lib/portable-text';
+import type { LegalPageData, LegalDocType } from '../lib/sanity';
+
+export interface Props {
+  page: LegalPageData | null;
+  lang: Lang;
+  docType: LegalDocType;
+}
+
+const { page, lang, docType } = Astro.props;
+const t = useTranslations(lang);
+const locale = LANG_META[lang].locale;
+
+// The document may be the English fallback; say so rather than leaving a reader
+// wondering why the page switched language on them.
+const isEnglishFallback = Boolean(page) && page!.language !== lang;
+
+const titleFallback = docType === 'privacy' ? t('legal.privacyTitle') : t('legal.termsTitle');
+const heading = page?.title ?? titleFallback;
+
+const seoDescription = page?.seo?.seoDescription
+  ?? (docType === 'privacy' ? t('legal.privacySeoDescription') : t('legal.termsSeoDescription'));
+
+/** `lastUpdated` is a plain YYYY-MM-DD; build the date locally so it does not slip a day. */
+function formatLastUpdated(iso: string): string {
+  const [year, month, day] = iso.split('-').map(Number);
+  return new Date(year, month - 1, day).toLocaleDateString(locale, {
+    year: 'numeric', month: 'long', day: 'numeric',
+  });
+}
+const lastUpdatedLabel = page?.lastUpdated
+  ? t('legal.lastUpdated').replace('{date}', formatLastUpdated(page.lastUpdated))
+  : '';
+
+const bodyHtml = renderPortableText(page?.body as any[] | undefined, {
+  source: `legalPage/${page?.language ?? lang}/${docType}`,
+});
+
+// Nothing published yet: still serve the page so the consent banner's link is
+// not a dead end, but keep it out of the index until there is a policy to read.
+const noindex = page?.seo?.noindex ?? !page;
+---
+
+<BaseLayout
+  title={page?.seo?.seoTitle ?? `${heading} — AI Token King`}
+  description={seoDescription}
+  noindex={noindex}
+  lang={lang}
+  seo={page?.seo}
+>
+  <article class="legal-page">
+    <header class="legal-head">
+      <h1 class="legal-title">{heading}</h1>
+      {lastUpdatedLabel && <p class="legal-updated"><time datetime={page!.lastUpdated}>{lastUpdatedLabel}</time></p>}
+    </header>
+
+    {isEnglishFallback && (
+      <p class="legal-notice" lang="en">{t('legal.englishFallbackNotice')}</p>
+    )}
+
+    {page && bodyHtml
+      ? <div class="prose legal-body" set:html={bodyHtml} />
+      : (
+        <p class="legal-notice legal-notice--empty">
+          {t('legal.notPublished')}
+          <a href={`/${lang}/contact/`}>{t('nav.contact')}</a>
+        </p>
+      )}
+  </article>
+</BaseLayout>
+
+<style>
+  .legal-page {
+    /* The `ch` unit measures the "0" glyph, which in Plus Jakarta Sans is wider
+       than the average letter — 68ch measured out at 87 characters per line.
+       54ch lands at ~69, inside the comfortable 60–75 reading range. */
+    max-width: 54ch;
+    margin: 0 auto;
+    padding: 3.5rem 1.5rem 5rem;
+  }
+
+  .legal-head {
+    padding-bottom: 1.5rem;
+    margin-bottom: 2.5rem;
+    border-bottom: 2px solid #6155F1;
+  }
+
+  .legal-title {
+    font-family: 'Kanit', sans-serif;
+    font-size: clamp(1.875rem, 4vw, 2.5rem);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    line-height: 1.15;
+    color: #1C1C1C;
+    margin: 0;
+  }
+
+  /* The date is the first thing a careful reader looks for, so it sits directly
+     under the title rather than being buried at the foot of the document. */
+  .legal-updated {
+    margin: 0.75rem 0 0;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    color: #6155F1;
+  }
+
+  .legal-notice {
+    margin: 0 0 2rem;
+    padding: 0.875rem 1.125rem;
+    border-left: 3px solid #E8933D;
+    border-radius: 0 8px 8px 0;
+    background: #FDF6EC;
+    font-size: 0.9rem;
+    line-height: 1.7;
+    color: #92500E;
+  }
+
+  .legal-notice--empty { margin-bottom: 0; }
+
+  .legal-notice a {
+    margin-left: 0.4rem;
+    color: #92500E;
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: color 0.18s ease;
+  }
+  .legal-notice a:hover { color: #6D3B08; }
+  .legal-notice a:focus-visible { outline: 2px solid #92500E; outline-offset: 2px; border-radius: 3px; }
+  .legal-notice a:active { color: #5A3006; }
+
+  /* Longer measure and looser leading than .prose gives elsewhere: this is dense
+     text somebody reads top to bottom, not scans. */
+  .legal-body.prose :global(p),
+  .legal-body.prose :global(li) { line-height: 1.85; }
+  .legal-body.prose :global(h2) { margin-top: 2.75rem; }
+  .legal-body.prose :global(h2:first-child) { margin-top: 0; }
+
+  @media (max-width: 640px) {
+    .legal-page { padding: 2.5rem 1.25rem 3.5rem; }
+  }
+</style>

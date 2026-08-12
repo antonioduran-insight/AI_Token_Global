@@ -65,8 +65,8 @@ const copyright = t('footer.copyright').replace('{year}', String(new Date().getF
     <div style="border-top: 1px solid #2A2A2A; padding-top: 1.75rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
       <p style="font-size: 0.8rem; color: #555; margin: 0;">{copyright}</p>
       <div style="display: flex; gap: 1.5rem;">
-        <a href="#" style="font-size: 0.8rem; color: #555; text-decoration: none; transition: color 0.15s ease;" onmouseover="this.style.color='#E2DFFE'" onmouseout="this.style.color='#555'">{t('footer.privacy')}</a>
-        <a href="#" style="font-size: 0.8rem; color: #555; text-decoration: none; transition: color 0.15s ease;" onmouseover="this.style.color='#E2DFFE'" onmouseout="this.style.color='#555'">{t('footer.terms')}</a>
+        <a href={`/${lang}/privacy/`} style="font-size: 0.8rem; color: #555; text-decoration: none; transition: color 0.15s ease;" onmouseover="this.style.color='#E2DFFE'" onmouseout="this.style.color='#555'">{t('footer.privacy')}</a>
+        <a href={`/${lang}/terms/`} style="font-size: 0.8rem; color: #555; text-decoration: none; transition: color 0.15s ease;" onmouseover="this.style.color='#E2DFFE'" onmouseout="this.style.color='#555'">{t('footer.terms')}</a>
       </div>
     </div>
   </div>
