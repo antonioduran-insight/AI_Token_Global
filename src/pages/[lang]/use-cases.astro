@@ -18,7 +18,7 @@ if (!page) return Astro.redirect(`/${lang}/`);
 const t = useTranslations(lang as Lang);
 
 function pt(blocks: any[] | undefined): string {
-  return renderPortableText(blocks, { linkStyle: 'color:#6155F1;text-decoration:underline;text-underline-offset:3px;' });
+  return renderPortableText(blocks, { linkStyle: 'color:#6155F1;text-decoration:underline;text-underline-offset:3px;', source: `useCasesPage/${lang}` });
 }
 
 // Archive bolds the leading question of the footer note (e.g. "Not sure which direction to start with?").
