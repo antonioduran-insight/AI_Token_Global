@@ -1,11 +1,13 @@
 {
   "name": "ai-token-global-studio",
   "private": true,
+  "type": "module",
   "version": "1.0.0",
   "scripts": {
     "dev": "sanity dev",
     "build": "sanity build",
-    "deploy": "sanity deploy"
+    "deploy": "sanity deploy",
+    "test": "node --test config/*.test.mjs"
   },
   "dependencies": {
     "@sanity/vision": "*",

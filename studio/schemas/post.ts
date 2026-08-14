@@ -1,6 +1,7 @@
 import { defineField, defineType } from 'sanity';
 import { mediaAssetSource } from 'sanity-plugin-media';
 import { STUDIO_LANGUAGES } from '../config/languages';
+import { validateUniqueArticleNumber } from '../config/validation';
 
 export const postSchema = defineType({
   name: 'post',
@@ -17,8 +18,16 @@ export const postSchema = defineType({
       name: 'articleNumber',
       title: 'Article Number',
       type: 'number',
-      description: 'Unique article number for ordering and lookup (e.g. 1, 2, 3...)',
-      validation: Rule => Rule.required().integer().positive(),
+      description:
+        'Links this post to its translations: the same article carries the same number in every ' +
+        'language, and the number must be unique within a language. It is also the sort order — ' +
+        'the lowest numbers reach the home page, so changing it moves the post.',
+      validation: Rule =>
+        Rule.required()
+          .integer()
+          .positive()
+          // Async, because uniqueness can only be answered by asking the dataset.
+          .custom((value, context) => validateUniqueArticleNumber(value, context)),
     }),
     defineField({
       name: 'slug',
