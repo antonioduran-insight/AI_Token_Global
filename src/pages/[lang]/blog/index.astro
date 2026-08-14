@@ -162,7 +162,7 @@ const pageOfTemplate  = t('blog.pageOf');
                     <p class="featured-excerpt">{post.excerpt}</p>
                     <div class="featured-meta-row">
                       <div class="featured-meta">
-                        <span>{formatDate(post.publishedAt)}</span>
+                        <time datetime={post.publishedAt}>{formatDate(post.publishedAt)}</time>
                       </div>
                       <span class="featured-read btn-ghost">
                         {t('blog.readArticle')}
@@ -263,7 +263,7 @@ const pageOfTemplate  = t('blog.pageOf');
                     <h3 class="post-title">{post.title}</h3>
                     <p class="post-excerpt">{post.excerpt}</p>
                     <div class="post-meta-row">
-                      <span class="post-date">{formatDate(post.publishedAt)}</span>
+                      <time class="post-date" datetime={post.publishedAt}>{formatDate(post.publishedAt)}</time>
                       <span class="post-read">
                         {t('blog.read')}
                         <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>

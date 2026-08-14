@@ -9,6 +9,8 @@ export interface SeoData {
 
 export interface SanityPost {
   _id: string;
+  /** Sanity's own last-write timestamp — the only modified date the CMS records. */
+  _updatedAt?: string;
   title: string;
   slug: { current: string };
   publishedAt: string;
@@ -92,7 +94,7 @@ export async function getPostBySlug(slug: string, lang: string): Promise<SanityP
   if (!client) return null;
   return client.fetch(
     `*[_type == "post" && slug.current == $slug && language == $lang][0] {
-      _id, title, slug, publishedAt, excerpt, tags, category, articleNumber, language,
+      _id, _updatedAt, title, slug, publishedAt, excerpt, tags, category, articleNumber, language,
       coverImage { asset -> { url } },
       seo { seoTitle, seoDescription, ogImage { asset -> { url } }, noindex },
       body[] {

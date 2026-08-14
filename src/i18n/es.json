@@ -55,6 +55,7 @@
     "backToBlog": "Volver al Blog",
     "share": "Comparte este artículo:",
     "published": "Publicado",
+    "updated": "Actualizado el {date}",
     "tags": "Etiquetas",
     "author": "Equipo Editorial de AI Token King",
     "minRead": "{n} min de lectura",
