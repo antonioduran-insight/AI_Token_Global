@@ -1,7 +1,7 @@
 import { defineField, defineType } from 'sanity';
 import { mediaAssetSource } from 'sanity-plugin-media';
 import { STUDIO_LANGUAGES } from '../config/languages';
-import { validateUniqueArticleNumber } from '../config/validation';
+import { validateUniqueArticleNumber, isSlugUniqueInLanguage } from '../config/validation';
 
 export const postSchema = defineType({
   name: 'post',
@@ -33,7 +33,17 @@ export const postSchema = defineType({
       name: 'slug',
       title: 'Slug',
       type: 'slug',
-      options: { source: 'title', maxLength: 96 },
+      description:
+        'The URL segment: /<language>/blog/<slug>/. Two posts in the same language cannot share ' +
+        'one — they would be competing for the same page. Sharing across languages is fine and ' +
+        'common where a locale keeps the English slug.',
+      options: {
+        source: 'title',
+        maxLength: 96,
+        // Sanity's default checks the whole dataset, which would reject the many
+        // slugs a locale legitimately shares with English.
+        isUnique: isSlugUniqueInLanguage,
+      },
       validation: Rule => Rule.required(),
     }),
     defineField({

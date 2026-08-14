@@ -1,5 +1,5 @@
 /**
- * Validation for fields that have to be unique within one language.
+ * Shared validation for fields that have to be unique within one language.
  *
  * ── Why ──
  * `articleNumber` is the only field connecting a post to its translations. The
@@ -84,4 +84,39 @@ export async function validateUniqueArticleNumber(
     'the translation of which, and drops the hreflang link. Use the "Find by #" ' +
     'tool to see what holds a number before picking one.'
   );
+}
+
+/**
+ * Rejects a slug another post in the same language already holds.
+ *
+ * A language and a slug together decide the URL, so two documents sharing both
+ * are two documents competing for one page: the build writes one over the other
+ * and the loser is unreachable. Three slugs are in that state today, one of them
+ * held by three documents.
+ *
+ * Shaped for a slug field's `options.isUnique`, which receives the string and
+ * expects a boolean.
+ *
+ * Note the level: Sanity reports a non-unique slug as a **warning**, so it is
+ * visible in the Studio but does not block publishing — unlike the article-number
+ * rule above, which is an error. To make it blocking, move this call into a
+ * `Rule.custom` on the slug field returning a message instead of `false`.
+ */
+export async function isSlugUniqueInLanguage(
+  slug: string,
+  context: UniquenessContext,
+): Promise<boolean> {
+  const language = languageOf(context);
+  if (!language) return true;
+
+  const taken = await context.getClient({ apiVersion: API_VERSION }).fetch<number>(
+    `count(*[_type == $type && slug.current == $slug && language == $language && !(_id in $self)])`,
+    {
+      type: context.document?._type ?? 'post',
+      slug,
+      language,
+      self: selfIds(context),
+    },
+  );
+  return taken === 0;
 }

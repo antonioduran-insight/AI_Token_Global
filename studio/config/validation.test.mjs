@@ -1,5 +1,5 @@
 /**
- * Tests for the per-language `articleNumber` validator.
+ * Tests for the per-language uniqueness validators.
  *
  *   cd studio && npm test
  *
@@ -10,7 +10,7 @@
  */
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { validateUniqueArticleNumber } from './validation.ts';
+import { validateUniqueArticleNumber, isSlugUniqueInLanguage } from './validation.ts';
 
 /** A context whose client returns `result` and records what it was asked. */
 function stubContext({ document, result }) {
@@ -97,4 +97,35 @@ test('a blank language is treated as no language', async () => {
   const { context, calls } = stubContext({ document: post({ language: '' }), result: [] });
   assert.equal(await validateUniqueArticleNumber(5, context), true);
   assert.equal(calls.length, 0);
+});
+
+// ── slug ──────────────────────────────────────────────────────────────────
+
+test('a slug no other post in the language holds is unique', async () => {
+  const { context } = stubContext({ document: post(), result: 0 });
+  assert.equal(await isSlugUniqueInLanguage('a-post', context), true);
+});
+
+test('a slug another post in the same language holds is not unique', async () => {
+  const { context } = stubContext({ document: post(), result: 2 });
+  assert.equal(await isSlugUniqueInLanguage('choosing-the-right-ai-model-for-your-needs', context), false);
+});
+
+test('the slug query counts within the language and excludes the document itself', async () => {
+  const { context, calls } = stubContext({ document: post({ _id: 'drafts.xyz' }), result: 0 });
+  await isSlugUniqueInLanguage('a-post', context);
+  const { query, params } = calls[0];
+  assert.match(query, /^count\(/);
+  assert.match(query, /slug\.current == \$slug/);
+  assert.match(query, /language == \$language/);
+  assert.match(query, /!\(_id in \$self\)/);
+  assert.deepEqual(params.self, ['xyz', 'drafts.xyz']);
+  assert.equal(params.slug, 'a-post');
+});
+
+test('a slug shared across languages is fine — en and vi share many', async () => {
+  // The query is language-scoped, so a vi post with the same slug returns 0 here.
+  const { context, calls } = stubContext({ document: post({ language: 'vi' }), result: 0 });
+  assert.equal(await isSlugUniqueInLanguage('calculating-ai-token-costs', context), true);
+  assert.equal(calls[0].params.language, 'vi');
 });
