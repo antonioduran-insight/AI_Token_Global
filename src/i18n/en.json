@@ -164,6 +164,7 @@
     "privacyTitle": "Privacy Policy",
     "termsTitle": "Terms of Service",
     "lastUpdated": "Last updated {date}",
+    "documentInfo": "Document",
     "englishFallbackNotice": "This page is not available in your language yet, so the English version is shown.",
     "notPublished": "This document has not been published yet. Email us and we will send you the current version.",
     "privacySeoDescription": "How AI Token King collects, uses, and protects your data, and how analytics consent works on this site.",
