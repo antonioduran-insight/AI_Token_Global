@@ -8,11 +8,12 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
-    "test": "node --test src/lib/*.test.mjs",
+    "test": "node scripts/check-astro-compile.mjs && node --test src/lib/*.test.mjs",
     "preview": "astro preview",
     "astro": "astro",
     "studio": "cd studio && npx sanity dev",
-    "setup": "npm install && cd studio && npm install"
+    "setup": "npm install && cd studio && npm install",
+    "verify": "node scripts/verify-machine-layer.mjs"
   },
   "dependencies": {
     "@astrojs/rss": "^4.0.19",
