@@ -6,6 +6,8 @@ import '../styles/global.css';
 import { useTranslations, SUPPORTED_LANGS, LANG_META } from '../i18n/index';
 import type { Lang } from '../i18n/index';
 import type { SeoData } from '../lib/sanity';
+import { staticPageAlternates } from '../lib/hreflang';
+import type { Alternate } from '../lib/hreflang';
 
 export interface Props {
   title: string;
@@ -15,6 +17,12 @@ export interface Props {
   activePage?: string;
   activeDropdown?: string;
   lang?: Lang;
+  /**
+   * Locale variants of this page that are known to exist. Blog posts pass the
+   * translation map from Sanity; static pages leave it undefined and the route
+   * registry answers. Anything not covered by either gets no hreflang.
+   */
+  alternates?: Alternate[];
 }
 
 const {
@@ -25,6 +33,7 @@ const {
   activePage = '',
   activeDropdown = '',
   lang = 'en',
+  alternates,
 } = Astro.props;
 
 const t = useTranslations(lang as Lang);
@@ -36,10 +45,17 @@ const seoDescription = seo?.seoDescription ?? description ?? t('meta.defaultDesc
 const ogImageUrl = seo?.ogImage?.asset?.url ?? `${siteOrigin}/og-image.png`;
 const shouldNoindex = seo?.noindex ?? noindex;
 
-const hreflangs = SUPPORTED_LANGS.map(l => ({
-  lang: l,
-  url: new URL(Astro.url.pathname.replace(`/${lang}/`, `/${l}/`), siteOrigin).href,
+// hreflang is emitted only for locale variants that are actually generated. The
+// caller knows for blog posts (translated slugs); the route registry knows for
+// every other page. Neither derives a URL by rewriting the current path, which is
+// how the site came to advertise 1,511 alternates that 404. An empty list — the
+// locale-less root — emits no alternates at all.
+const resolvedAlternates = alternates ?? staticPageAlternates(Astro.url.pathname, lang, SUPPORTED_LANGS);
+const hreflangs = resolvedAlternates.map(alternate => ({
+  lang: alternate.lang,
+  url: new URL(alternate.path, siteOrigin).href,
 }));
+const xDefaultUrl = hreflangs.find(h => h.lang === 'en')?.url;
 
 // Cloudflare Web Analytics — token comes from the PUBLIC_CLOUDFLARE_BEACON_TOKEN env var
 // (set in AWS Amplify). Cookieless, so no consent gate. Beacon is only emitted when the
@@ -91,7 +107,7 @@ gtag('config', ${JSON.stringify(ga4Id)});`
   <!-- Canonical + hreflang -->
   <link rel="canonical" href={canonicalURL} />
   {hreflangs.map(h => <link rel="alternate" hreflang={h.lang} href={h.url} />)}
-  <link rel="alternate" hreflang="x-default" href={hreflangs.find(h => h.lang === 'en')?.url ?? canonicalURL} />
+  {xDefaultUrl && <link rel="alternate" hreflang="x-default" href={xDefaultUrl} />}
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />

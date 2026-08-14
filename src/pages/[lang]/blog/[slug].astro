@@ -1,10 +1,11 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
-import { getAllPostSlugs, getPostBySlug, getRelatedPosts } from '../../../lib/sanity';
+import { getAllPostSlugs, getPostBySlug, getRelatedPosts, getAlternatesForPost } from '../../../lib/sanity';
 import { useTranslations, LANG_META, isValidLang } from '../../../i18n/index';
 import type { Lang } from '../../../i18n/index';
 import type { SanityPost } from '../../../lib/sanity';
 import { renderPortableText, repairSpanSpacing, countWords, headingAnchors, articleTypeComponents } from '../../../lib/portable-text';
+import { postAlternates } from '../../../lib/blog-urls';
 
 export async function getStaticPaths() {
   const slugs = await getAllPostSlugs();
@@ -90,6 +91,11 @@ const bodyHtml = renderPortableText(body, {
 const siteOrigin = (Astro.site ?? new URL('https://www.aitoken.global')).origin;
 const postUrl = `${siteOrigin}/${lang}/blog/${post.slug.current}`;
 
+// hreflang from the real translation clusters. Blog slugs are translated, so the
+// locale-segment swap BaseLayout used to fall back on pointed at URLs that do not
+// exist — this list only ever contains posts Sanity actually holds.
+const alternates = postAlternates(await getAlternatesForPost(lang, post.slug.current));
+
 const heroPill = catPill(post.category);
 const heroCategoryLabel = catLabel(post.category);
 const coverGradient = post.category ? CAT_GRADIENT[post.category] ?? CAT_GRADIENT.fundamentals : CAT_GRADIENT.fundamentals;
@@ -107,6 +113,7 @@ const coverTint = post.category ? CAT_TINT[post.category] ?? CAT_TINT.fundamenta
   }}
   activePage="blog"
   lang={lang as Lang}
+  alternates={alternates}
 >
 
   <!-- Reading progress bar -->

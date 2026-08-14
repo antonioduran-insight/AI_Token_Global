@@ -142,6 +142,103 @@ export async function getAllPostSlugs(): Promise<{ slug: string; lang: string }[
   return posts.map((p: any) => ({ slug: p.slug, lang: p.language ?? 'en' }));
 }
 
+// ── Blog post translations (hreflang) ─────────────────────────────────────
+
+export interface PostAlternate {
+  lang: string;
+  slug: string;
+}
+
+interface PostIdentity {
+  slug: string;
+  language: string;
+  articleNumber?: number;
+}
+
+/**
+ * Which locales genuinely have a given article, keyed by `"<lang>:<slug>"`.
+ *
+ * `articleNumber` is the cross-language key: a translated post keeps the number
+ * of the article it was translated from, so grouping by it recovers the clusters
+ * the slugs cannot. The value always includes the post itself, so a post with no
+ * translations still gets its own self-referencing hreflang.
+ *
+ * The number is not guaranteed unique within a locale, and today it is not: four
+ * numbers (1, 2, 60 and 144) are carried by more than one post in the same
+ * language — 38 posts in total. Inside those groups there is no way to tell which
+ * Spanish post translates which English one, so they get self-only alternates and
+ * a build warning naming the number to fix in Sanity. Pointing hreflang at the
+ * wrong translation is worse than pointing it at nothing: a wrong pair is a claim
+ * Google will act on, a missing pair is only a missed opportunity.
+ *
+ * Fetched once per build and memoized — every one of the 600+ post pages needs it.
+ */
+let postAlternatesPromise: Promise<Map<string, PostAlternate[]>> | null = null;
+
+export function getPostAlternates(): Promise<Map<string, PostAlternate[]>> {
+  postAlternatesPromise ??= buildPostAlternates();
+  return postAlternatesPromise;
+}
+
+async function buildPostAlternates(): Promise<Map<string, PostAlternate[]>> {
+  const map = new Map<string, PostAlternate[]>();
+  const client = getClient();
+  if (!client) return map;
+
+  const posts: PostIdentity[] = await client.fetch(
+    `*[_type == "post" && defined(slug.current) && !(_id in path("drafts.**"))] {
+      "slug": slug.current, language, articleNumber
+    }`
+  );
+
+  const selfOnly = (p: PostIdentity) => map.set(key(p), [{ lang: p.language, slug: p.slug }]);
+
+  // No number to group on: the post is its own cluster of one.
+  const numbered = new Map<number, PostIdentity[]>();
+  for (const post of posts) {
+    if (!post.language) continue;
+    if (typeof post.articleNumber !== 'number') {
+      selfOnly(post);
+      continue;
+    }
+    const group = numbered.get(post.articleNumber);
+    if (group) group.push(post);
+    else numbered.set(post.articleNumber, [post]);
+  }
+
+  for (const [articleNumber, group] of numbered) {
+    const perLang = new Map<string, number>();
+    for (const post of group) perLang.set(post.language, (perLang.get(post.language) ?? 0) + 1);
+    const collidingLangs = [...perLang].filter(([, n]) => n > 1).map(([l]) => l);
+
+    if (collidingLangs.length > 0) {
+      console.warn(
+        `[hreflang] articleNumber ${articleNumber} is carried by ${group.length} posts, ` +
+        `with more than one in ${collidingLangs.sort().join(', ')}. The translation pairs ` +
+        'are ambiguous, so these posts get self-only hreflang. Give each article a unique ' +
+        'articleNumber per language in Sanity to reconnect them.'
+      );
+      for (const post of group) selfOnly(post);
+      continue;
+    }
+
+    const alternates: PostAlternate[] = group.map(p => ({ lang: p.language, slug: p.slug }));
+    for (const post of group) map.set(key(post), alternates);
+  }
+
+  return map;
+}
+
+function key(post: { language: string; slug: string }): string {
+  return `${post.language}:${post.slug}`;
+}
+
+/** Alternates for one post, or its own self-referencing entry when it is unknown. */
+export async function getAlternatesForPost(lang: string, slug: string): Promise<PostAlternate[]> {
+  const map = await getPostAlternates();
+  return map.get(`${lang}:${slug}`) ?? [{ lang, slug }];
+}
+
 export async function getAiTrendsPage(lang: string): Promise<AiTrendsPageData | null> {
   const client = getClient();
   if (!client) return null;
