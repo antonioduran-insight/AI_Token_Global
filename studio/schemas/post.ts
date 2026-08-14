@@ -1,6 +1,7 @@
 import { defineField, defineType } from 'sanity';
 import { mediaAssetSource } from 'sanity-plugin-media';
 import { STUDIO_LANGUAGES } from '../config/languages';
+import { validateUniqueArticleNumber, isSlugUniqueInLanguage } from '../config/validation';
 
 export const postSchema = defineType({
   name: 'post',
@@ -17,14 +18,32 @@ export const postSchema = defineType({
       name: 'articleNumber',
       title: 'Article Number',
       type: 'number',
-      description: 'Unique article number for ordering and lookup (e.g. 1, 2, 3...)',
-      validation: Rule => Rule.required().integer().positive(),
+      description:
+        'Links this post to its translations: the same article carries the same number in every ' +
+        'language, and the number must be unique within a language. It is also the sort order — ' +
+        'the lowest numbers reach the home page, so changing it moves the post.',
+      validation: Rule =>
+        Rule.required()
+          .integer()
+          .positive()
+          // Async, because uniqueness can only be answered by asking the dataset.
+          .custom((value, context) => validateUniqueArticleNumber(value, context)),
     }),
     defineField({
       name: 'slug',
       title: 'Slug',
       type: 'slug',
-      options: { source: 'title', maxLength: 96 },
+      description:
+        'The URL segment: /<language>/blog/<slug>/. Two posts in the same language cannot share ' +
+        'one — they would be competing for the same page. Sharing across languages is fine and ' +
+        'common where a locale keeps the English slug.',
+      options: {
+        source: 'title',
+        maxLength: 96,
+        // Sanity's default checks the whole dataset, which would reject the many
+        // slugs a locale legitimately shares with English.
+        isUnique: isSlugUniqueInLanguage,
+      },
       validation: Rule => Rule.required(),
     }),
     defineField({
