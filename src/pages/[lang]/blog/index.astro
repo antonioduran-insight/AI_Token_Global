@@ -11,7 +11,7 @@ export async function getStaticPaths() {
 }
 
 const { lang } = Astro.params;
-if (!isValidLang(lang)) return Astro.redirect('/en/blog');
+if (!isValidLang(lang)) return Astro.redirect('/en/blog/');
 
 const t = useTranslations(lang as Lang);
 const posts: SanityPost[] = await getAllPosts(lang);
@@ -135,7 +135,7 @@ const pageOfTemplate  = t('blog.pageOf');
                     : 'linear-gradient(135deg, #6155F1, #2A1F5C)';
             return (
               <a
-                href={`/${lang}/blog/${post.slug.current}`}
+                href={`/${lang}/blog/${post.slug.current}/`}
                 class={`featured-card${idx === 0 ? '' : ' hidden-post'}`}
                 data-category={post.category ?? 'uncategorized'}
                 data-idx={idx}
@@ -237,7 +237,7 @@ const pageOfTemplate  = t('blog.pageOf');
                       : 'linear-gradient(135deg, #6155F1, #2A1F5C)';
               return (
                 <a
-                  href={`/${lang}/blog/${post.slug.current}`}
+                  href={`/${lang}/blog/${post.slug.current}/`}
                   class="post-card"
                   data-category={post.category ?? 'uncategorized'}
                   data-idx={idx}

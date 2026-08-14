@@ -292,6 +292,27 @@ export function articleTypeComponents(): Record<string, any> {
   };
 }
 
+/** A last path segment carrying an extension is a file, not a directory. */
+const FILE_SEGMENT = /\/[^/]*\.[a-z0-9]+$/i;
+
+/**
+ * Give a site-internal link the trailing slash the rest of the site uses.
+ *
+ * The build emits `/en/blog/slug/index.html`, so `/en/blog/slug` only reaches the
+ * reader through a redirect — and the audit found 248 URLs indexed in their
+ * slash-less form, splitting each page's signals in two. Editors writing links in
+ * Sanity should not have to remember the convention, so it is applied here.
+ *
+ * External links, protocol-relative links, and paths ending in a filename are
+ * left exactly as authored. A query string or fragment stays on the end.
+ */
+export function withTrailingSlash(href: string): string {
+  if (!href.startsWith('/') || href.startsWith('//')) return href;
+  const [, path, suffix] = /^([^?#]*)([?#].*)?$/.exec(href) as [string, string, string | undefined];
+  if (!path || path.endsWith('/') || FILE_SEGMENT.test(path)) return href;
+  return `${path}/${suffix ?? ''}`;
+}
+
 export interface RenderOptions {
   /** Inline style applied to `<strong>`. Some pages tint bold text. */
   strongStyle?: string;
@@ -323,7 +344,8 @@ export function renderPortableText(blocks: any[] | undefined, options: RenderOpt
         strong: ({ children }: any) => `<strong${strongStyle ? ` style="${strongStyle}"` : ''}>${children}</strong>`,
         em: ({ children }: any) => `<em>${children}</em>`,
         link: ({ value, children }: any) => {
-          const href = value?.href ?? '#';
+          const raw = value?.href ?? '#';
+          const href = typeof raw === 'string' ? withTrailingSlash(raw) : raw;
           const external = typeof href === 'string' && href.startsWith('http');
           return `<a href="${href}"${linkStyle ? ` style="${linkStyle}"` : ''} target="${external ? '_blank' : '_self'}" rel="noopener noreferrer">${children}</a>`;
         },

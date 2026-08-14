@@ -5,7 +5,7 @@ import { useTranslations, LANG_META, isValidLang } from '../../../i18n/index';
 import type { Lang } from '../../../i18n/index';
 import type { SanityPost } from '../../../lib/sanity';
 import { renderPortableText, repairSpanSpacing, countWords, headingAnchors, articleTypeComponents } from '../../../lib/portable-text';
-import { postAlternates } from '../../../lib/blog-urls';
+import { postPath, postAlternates } from '../../../lib/blog-urls';
 
 export async function getStaticPaths() {
   const slugs = await getAllPostSlugs();
@@ -15,11 +15,11 @@ export async function getStaticPaths() {
 }
 
 const { lang, slug } = Astro.params;
-if (!isValidLang(lang)) return Astro.redirect('/en/blog');
+if (!isValidLang(lang)) return Astro.redirect('/en/blog/');
 
 const t = useTranslations(lang as Lang);
 const post: SanityPost | null = await getPostBySlug(slug as string, lang);
-if (!post) return Astro.redirect(`/${lang}/blog`);
+if (!post) return Astro.redirect(`/${lang}/blog/`);
 
 const related: SanityPost[] = await getRelatedPosts(post.slug.current, lang, post.category, 3);
 
@@ -89,7 +89,7 @@ const bodyHtml = renderPortableText(body, {
 });
 
 const siteOrigin = (Astro.site ?? new URL('https://www.aitoken.global')).origin;
-const postUrl = `${siteOrigin}/${lang}/blog/${post.slug.current}`;
+const postUrl = siteOrigin + postPath(lang, post.slug.current);
 
 // hreflang from the real translation clusters. Blog slugs are translated, so the
 // locale-segment swap BaseLayout used to fall back on pointed at URLs that do not
@@ -127,7 +127,7 @@ const coverTint = post.category ? CAT_TINT[post.category] ?? CAT_TINT.fundamenta
       <nav class="post-breadcrumb" aria-label={t('common.aria.breadcrumb')}>
         <a href={`/${lang}/`}>{t('common.home')}</a>
         <svg width="12" height="12" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M6 4l4 4-4 4" stroke="#CCC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        <a href={`/${lang}/blog`}>{t('nav.blog')}</a>
+        <a href={`/${lang}/blog/`}>{t('nav.blog')}</a>
         {heroCategoryLabel && (
           <>
             <svg width="12" height="12" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M6 4l4 4-4 4" stroke="#CCC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -141,10 +141,10 @@ const coverTint = post.category ? CAT_TINT[post.category] ?? CAT_TINT.fundamenta
         <!-- Tags -->
         <div class="fade-up post-hero-tags">
           {post.category && (
-            <a href={`/${lang}/blog`} class={`tag-pill tag-${heroPill}`}>{heroCategoryLabel}</a>
+            <a href={`/${lang}/blog/`} class={`tag-pill tag-${heroPill}`}>{heroCategoryLabel}</a>
           )}
           {post.tags && post.tags.slice(0, 1).map(tag => (
-            <a href={`/${lang}/blog`} class="tag-pill tag-blue">{tag}</a>
+            <a href={`/${lang}/blog/`} class="tag-pill tag-blue">{tag}</a>
           ))}
         </div>
 
@@ -234,7 +234,7 @@ const coverTint = post.category ? CAT_TINT[post.category] ?? CAT_TINT.fundamenta
           <div class="sidebar-cta-blob" aria-hidden="true"></div>
           <div class="sidebar-cta-title">{t('blog.tryTitle')}</div>
           <p class="sidebar-cta-body">{t('blog.tryCopy')}</p>
-          <a class="sidebar-cta-btn" href={`/${lang}/api-compare`}>
+          <a class="sidebar-cta-btn" href={`/${lang}/api-compare/`}>
             {t('blog.tryButton')}
             <svg width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
@@ -273,7 +273,7 @@ const coverTint = post.category ? CAT_TINT[post.category] ?? CAT_TINT.fundamenta
       <div class="related-wrap">
         <div class="related-head">
           <div class="related-heading">{t('blog.relatedArticles')}</div>
-          <a class="related-viewall" href={`/${lang}/blog`}>
+          <a class="related-viewall" href={`/${lang}/blog/`}>
             {t('blog.viewAllArticles')}
             <svg width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
@@ -285,7 +285,7 @@ const coverTint = post.category ? CAT_TINT[post.category] ?? CAT_TINT.fundamenta
             const gradient = r.category ? CAT_GRADIENT[r.category] ?? CAT_GRADIENT.fundamentals : CAT_GRADIENT.fundamentals;
             const tint = r.category ? CAT_TINT[r.category] ?? CAT_TINT.fundamentals : CAT_TINT.fundamentals;
             return (
-              <a class="related-card" href={`/${lang}/blog/${r.slug.current}`}>
+              <a class="related-card" href={`/${lang}/blog/${r.slug.current}/`}>
                 {r.coverImage?.asset?.url && (
                   <div class="related-img-wrap" style={`background: ${gradient};`}>
                     <img class="related-img" src={r.coverImage.asset.url} alt="" loading="lazy" />

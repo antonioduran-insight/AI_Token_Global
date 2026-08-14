@@ -8,7 +8,7 @@
  */
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { repairSpanSpacing, renderPortableText, headingAnchors, countWords, blockText } from './portable-text.ts';
+import { repairSpanSpacing, renderPortableText, headingAnchors, countWords, blockText, withTrailingSlash } from './portable-text.ts';
 
 /** Build a portable-text block from [text, marks] pairs. */
 const block = (...spans) => ({
@@ -227,6 +227,31 @@ test('span normalisation does not mutate the input', () => {
   const before = JSON.stringify(block);
   repairSpanSpacing([block], 'post/en/test-fixture');
   assert.equal(JSON.stringify(block), before);
+});
+
+// ── withTrailingSlash ─────────────────────────────────────────────────────
+
+test('withTrailingSlash adds the slash to a site-internal path', () => {
+  assert.equal(withTrailingSlash('/en/blog'), '/en/blog/');
+  assert.equal(withTrailingSlash('/en/blog/a-post'), '/en/blog/a-post/');
+});
+
+test('withTrailingSlash leaves a path that already has one', () => {
+  assert.equal(withTrailingSlash('/en/blog/'), '/en/blog/');
+});
+
+test('withTrailingSlash keeps a query string or fragment on the end', () => {
+  assert.equal(withTrailingSlash('/en/api-compare#pricing'), '/en/api-compare/#pricing');
+  assert.equal(withTrailingSlash('/en/api-compare?tab=text'), '/en/api-compare/?tab=text');
+});
+
+test('withTrailingSlash leaves files, external and protocol-relative links alone', () => {
+  assert.equal(withTrailingSlash('/en/rss.xml'), '/en/rss.xml');
+  assert.equal(withTrailingSlash('/og-image.png'), '/og-image.png');
+  assert.equal(withTrailingSlash('https://openai.com/api/pricing'), 'https://openai.com/api/pricing');
+  assert.equal(withTrailingSlash('//cdn.example/x'), '//cdn.example/x');
+  assert.equal(withTrailingSlash('mailto:hello@example.com'), 'mailto:hello@example.com');
+  assert.equal(withTrailingSlash('#pricing'), '#pricing');
 });
 
 // ── Heading anchors ───────────────────────────────────────────────────────
