@@ -4,7 +4,7 @@ import { getAllPostSlugs, getPostBySlug, getRelatedPosts } from '../../../lib/sa
 import { useTranslations, LANG_META, isValidLang } from '../../../i18n/index';
 import type { Lang } from '../../../i18n/index';
 import type { SanityPost } from '../../../lib/sanity';
-import { renderPortableText, repairSpanSpacing } from '../../../lib/portable-text';
+import { renderPortableText, repairSpanSpacing, countWords, headingAnchors, articleTypeComponents } from '../../../lib/portable-text';
 
 export async function getStaticPaths() {
   const slugs = await getAllPostSlugs();
@@ -71,81 +71,20 @@ function formatDate(iso: string) {
   return new Date(iso).toLocaleDateString(LANG_META[lang as Lang].locale, { year: 'numeric', month: 'long', day: 'numeric' });
 }
 
-// ── Word count + reading time ──────────────────────────────────────────────
-function blockText(block: any): string {
-  if (!block || !Array.isArray(block.children)) return '';
-  return block.children.map((c: any) => c?.text ?? '').join('');
-}
-function countWords(blocks: any[]): number {
-  let total = 0;
-  for (const block of blocks ?? []) {
-    if (block?._type !== 'block') continue;
-    const text = blockText(block);
-    if (!text) continue;
-    total += text.trim().split(/\s+/).filter(Boolean).length;
-  }
-  return total;
-}
 // Names this article in any build warning the renderer emits.
 const postSource = `post/${lang}/${post.slug.current}`;
 // Repair span spacing once, up front: the word count, the TOC heading slugs and
 // the rendered HTML must all read the same text or the anchors stop matching.
 const body = repairSpanSpacing(post.body || [], postSource);
-const wordCount = countWords(body);
-const readingMinutes = Math.max(1, Math.round(wordCount / 225));
+const readingMinutes = Math.max(1, Math.round(countWords(body) / 225));
 const readingLabel = t('blog.minRead').replace('{n}', String(readingMinutes));
 
-// ── Collect h2 headings for TOC ────────────────────────────────────────────
-const usedSlugs = new Set<string>();
-function slugify(text: string) {
-  const base = text.toLowerCase().replace(/[^\p{L}\p{N}]+/gu, '-').replace(/^-+|-+$/g, '');
-  let s = base || 'section';
-  let i = 2;
-  while (usedSlugs.has(s)) s = `${base}-${i++}`;
-  usedSlugs.add(s);
-  return s;
-}
-const headings: { id: string; text: string }[] = [];
-for (const block of body) {
-  if (block?._type === 'block' && block?.style === 'h2') {
-    const text = blockText(block).trim();
-    if (!text) continue;
-    headings.push({ id: slugify(text), text });
-  }
-}
-// Reset for the render pass below so we generate matching IDs.
-usedSlugs.clear();
+// Headings for the sidebar, and the ids that make its links land.
+const { headings, components: headingComponents } = headingAnchors(body);
 
 const bodyHtml = renderPortableText(body, {
   source: postSource,
-  components: {
-    block: {
-      h2: ({ value, children }) => {
-        const text = blockText(value).trim();
-        const id = slugify(text);
-        return `<h2 id="${id}">${children}</h2>`;
-      },
-      h3: ({ value, children }) => {
-        const text = blockText(value).trim();
-        const id = slugify(text);
-        return `<h3 id="${id}">${children}</h3>`;
-      },
-    },
-    types: {
-      image: ({ value }) => {
-        const url = value?.asset?.url ?? value?.url ?? '';
-        const alt = value?.alt ?? '';
-        const caption = value?.caption ?? '';
-        if (!url) return '';
-        return `<figure class="article-figure"><img src="${url}" alt="${alt}" />${caption ? `<figcaption>${caption}</figcaption>` : ''}</figure>`;
-      },
-      codeBlock: ({ value }) => {
-        const codeLang = value?.language ?? '';
-        const code = (value?.code ?? '').replace(/</g, '&lt;').replace(/>/g, '&gt;');
-        return `<pre><code class="language-${codeLang}">${code}</code></pre>`;
-      },
-    },
-  },
+  components: { ...headingComponents, types: articleTypeComponents() },
 });
 
 const siteOrigin = (Astro.site ?? new URL('https://www.aitoken.global')).origin;

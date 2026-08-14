@@ -191,6 +191,107 @@ function repairBlock(block: any, source: string): any {
   return changed ? { ...block, children } : block;
 }
 
+/** The plain text of one portable-text block, marks and all. */
+export function blockText(block: any): string {
+  if (!Array.isArray(block?.children)) return '';
+  return block.children.map((child: any) => child?.text ?? '').join('');
+}
+
+/** Words across every text block, for reading-time estimates. */
+export function countWords(blocks: any[] | undefined): number {
+  let total = 0;
+  for (const block of blocks ?? []) {
+    if (block?._type !== 'block') continue;
+    const text = blockText(block).trim();
+    if (text) total += text.split(/\s+/).filter(Boolean).length;
+  }
+  return total;
+}
+
+/**
+ * A slug generator that de-duplicates within one document: a second "Overview"
+ * becomes `overview-2`, so two headings never share an anchor.
+ */
+export function createSlugger(): (text: string) => string {
+  const used = new Set<string>();
+  return function slugify(text: string): string {
+    const base = text.toLowerCase().replace(/[^\p{L}\p{N}]+/gu, '-').replace(/^-+|-+$/g, '');
+    let slug = base || 'section';
+    let n = 2;
+    while (used.has(slug)) slug = `${base}-${n++}`;
+    used.add(slug);
+    return slug;
+  };
+}
+
+export interface HeadingAnchors {
+  /** Headings in document order, for a table of contents. */
+  headings: { id: string; text: string }[];
+  /** Serializers that stamp the matching `id` on each heading as it renders. */
+  components: Record<string, any>;
+}
+
+/**
+ * Headings and the serializers that anchor them, from one pass over the document.
+ *
+ * The two must agree or every sidebar link points at nothing, which is why they
+ * are produced together: the collect pass and the render pass each get their own
+ * slugger, fed the same headings in the same order, so they land on the same ids.
+ *
+ * `tocStyles` is what the sidebar lists; `anchorStyles` is what gets an id. They
+ * differ on purpose — a deep h3 is worth linking to from the body but would bury
+ * the sidebar.
+ */
+export function headingAnchors(
+  blocks: any[] | undefined,
+  { tocStyles = ['h2'], anchorStyles = ['h2', 'h3'] }: { tocStyles?: string[]; anchorStyles?: string[] } = {},
+): HeadingAnchors {
+  const collect = createSlugger();
+  const headings: { id: string; text: string }[] = [];
+  for (const block of blocks ?? []) {
+    if (block?._type !== 'block' || !anchorStyles.includes(block?.style)) continue;
+    const text = blockText(block).trim();
+    if (!text) continue;
+    const id = collect(text);
+    if (tocStyles.includes(block.style)) headings.push({ id, text });
+  }
+
+  const render = createSlugger();
+  const block: Record<string, any> = {};
+  for (const style of anchorStyles) {
+    block[style] = ({ value, children }: any) => {
+      const text = blockText(value).trim();
+      // An empty heading is skipped above, so it must not consume a slug here
+      // either — one extra call would shift every later id by one.
+      if (!text) return `<${style}>${children}</${style}>`;
+      return `<${style} id="${render(text)}">${children}</${style}>`;
+    };
+  }
+  return { headings, components: { block } };
+}
+
+/**
+ * Serializers for the non-text nodes an article body can hold. Kept beside the
+ * renderer so the markup for a figure or a code block is defined once.
+ */
+export function articleTypeComponents(): Record<string, any> {
+  return {
+    image: ({ value }: any) => {
+      const url = value?.asset?.url ?? value?.url ?? '';
+      if (!url) return '';
+      const alt = value?.alt ?? '';
+      const caption = value?.caption ?? '';
+      const figcaption = caption ? `<figcaption>${caption}</figcaption>` : '';
+      return `<figure class="article-figure"><img src="${url}" alt="${alt}" />${figcaption}</figure>`;
+    },
+    codeBlock: ({ value }: any) => {
+      const codeLang = value?.language ?? '';
+      const code = (value?.code ?? '').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+      return `<pre><code class="language-${codeLang}">${code}</code></pre>`;
+    },
+  };
+}
+
 export interface RenderOptions {
   /** Inline style applied to `<strong>`. Some pages tint bold text. */
   strongStyle?: string;

@@ -8,7 +8,7 @@
  */
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { repairSpanSpacing, renderPortableText } from './portable-text.ts';
+import { repairSpanSpacing, renderPortableText, headingAnchors, countWords, blockText } from './portable-text.ts';
 
 /** Build a portable-text block from [text, marks] pairs. */
 const block = (...spans) => ({
@@ -227,4 +227,66 @@ test('span normalisation does not mutate the input', () => {
   const before = JSON.stringify(block);
   repairSpanSpacing([block], 'post/en/test-fixture');
   assert.equal(JSON.stringify(block), before);
+});
+
+// ── Heading anchors ───────────────────────────────────────────────────────
+
+const heading = (style, text) => ({
+  _type: 'block',
+  style,
+  markDefs: [],
+  children: [{ _type: 'span', text, marks: [] }],
+});
+
+test('headingAnchors lists h2s and gives both h2 and h3 matching ids', () => {
+  const blocks = [
+    heading('h2', 'Who we are'),
+    heading('h3', 'Contact details'),
+    heading('h2', 'What we collect, and when'),
+    heading('normal', 'Body copy.'),
+  ];
+  const { headings, components } = headingAnchors(blocks);
+  assert.deepEqual(headings, [
+    { id: 'who-we-are', text: 'Who we are' },
+    { id: 'what-we-collect-and-when', text: 'What we collect, and when' },
+  ]);
+
+  // The render pass must reproduce the same ids, in document order.
+  const rendered = blocks
+    .filter(b => b.style === 'h2' || b.style === 'h3')
+    .map(b => components.block[b.style]({ value: b, children: blockText(b) }));
+  assert.equal(rendered[0], '<h2 id="who-we-are">Who we are</h2>');
+  assert.equal(rendered[1], '<h3 id="contact-details">Contact details</h3>');
+  assert.equal(rendered[2], '<h2 id="what-we-collect-and-when">What we collect, and when</h2>');
+});
+
+test('headingAnchors de-duplicates repeated headings the same way in both passes', () => {
+  const blocks = [heading('h2', 'Overview'), heading('h2', 'Overview')];
+  const { headings, components } = headingAnchors(blocks);
+  assert.deepEqual(headings.map(h => h.id), ['overview', 'overview-2']);
+  const rendered = blocks.map(b => components.block.h2({ value: b, children: 'Overview' }));
+  assert.equal(rendered[1], '<h2 id="overview-2">Overview</h2>');
+});
+
+test('headingAnchors does not let an empty heading shift the ids after it', () => {
+  const blocks = [heading('h2', ''), heading('h2', 'Real section')];
+  const { headings, components } = headingAnchors(blocks);
+  assert.deepEqual(headings, [{ id: 'real-section', text: 'Real section' }]);
+  assert.equal(components.block.h2({ value: blocks[0], children: '' }), '<h2></h2>');
+  assert.equal(
+    components.block.h2({ value: blocks[1], children: 'Real section' }),
+    '<h2 id="real-section">Real section</h2>'
+  );
+});
+
+test('headingAnchors on a document with no headings yields no sidebar', () => {
+  assert.deepEqual(headingAnchors([heading('normal', 'Just prose.')]).headings, []);
+  assert.deepEqual(headingAnchors(undefined).headings, []);
+});
+
+// ── Word count ────────────────────────────────────────────────────────────
+
+test('countWords counts text blocks only', () => {
+  assert.equal(countWords([heading('normal', 'one two three'), { _type: 'image', asset: {} }]), 3);
+  assert.equal(countWords(undefined), 0);
 });
