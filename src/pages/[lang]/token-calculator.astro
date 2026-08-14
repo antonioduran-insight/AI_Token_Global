@@ -5,6 +5,7 @@ import type { Lang } from '../../i18n/index';
 import { getTokenCalculatorPage } from '../../lib/sanity';
 import { getModel, formatPrice, formatPricingDate } from '../../lib/pricing';
 import { renderPortableText } from '../../lib/portable-text';
+import { faqPageSchema } from '../../lib/schema';
 
 export async function getStaticPaths() {
   return SUPPORTED_LANGS.map(lang => ({ params: { lang } }));
@@ -40,6 +41,10 @@ const pricingCheckedLabel = t('common.pricingLastChecked')
 function pt(blocks: any[] | undefined): string {
   return renderPortableText(blocks, { source: `tokenCalculatorPage/${lang}` });
 }
+
+// FAQPage only where the page really carries questions and answers;
+// faqPageSchema returns null otherwise and nothing is emitted.
+const faqJsonLd = faqPageSchema(page.faq, `tokenCalculatorPage/${lang}`);
 ---
 
 <BaseLayout
@@ -50,6 +55,7 @@ function pt(blocks: any[] | undefined): string {
   seo={page.seo}
   activePage="token-calculator"
   activeDropdown="resources"
+  jsonLd={[faqJsonLd]}
 >
 
   <!-- Hero -->

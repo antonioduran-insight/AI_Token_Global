@@ -4,6 +4,7 @@ import { SUPPORTED_LANGS, isValidLang, useTranslations } from '../../i18n/index'
 import type { Lang } from '../../i18n/index';
 import { getCompliancePage } from '../../lib/sanity';
 import { renderPortableText } from '../../lib/portable-text';
+import { faqPageSchema } from '../../lib/schema';
 
 export async function getStaticPaths() {
   return SUPPORTED_LANGS.map(lang => ({ params: { lang } }));
@@ -25,6 +26,10 @@ const SOLUTION_COLORS = ['#6155F1', '#3E81E5', '#0ABFBC', '#F59E0B', '#F43F5E'];
 const AUDIENCE_COLORS = ['#6155F1', '#3E81E5', '#0ABFBC', '#F59E0B'];
 const ROLE_COLORS     = ['#6155F1', '#3E81E5', '#0ABFBC'];
 const BLOCKER_COLORS  = ['#F43F5E', '#F59E0B', '#6155F1', '#3E81E5', '#0ABFBC', '#F43F5E'];
+
+// FAQPage only where the page really carries questions and answers;
+// faqPageSchema returns null otherwise and nothing is emitted.
+const faqJsonLd = faqPageSchema(page.faq, `compliancePage/${lang}`);
 ---
 
 <BaseLayout
@@ -35,6 +40,7 @@ const BLOCKER_COLORS  = ['#F43F5E', '#F59E0B', '#6155F1', '#3E81E5', '#0ABFBC', 
   seo={page.seo}
   activePage="compliance"
   activeDropdown="resources"
+  jsonLd={[faqJsonLd]}
 >
 
   <!-- Hero -->

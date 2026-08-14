@@ -4,6 +4,7 @@ import { SUPPORTED_LANGS, isValidLang, useTranslations } from '../../i18n/index'
 import type { Lang } from '../../i18n/index';
 import { getBeginnersGuidePage } from '../../lib/sanity';
 import { renderPortableText, withTrailingSlash } from '../../lib/portable-text';
+import { faqPageSchema } from '../../lib/schema';
 
 export async function getStaticPaths() {
   return SUPPORTED_LANGS.map(lang => ({ params: { lang } }));
@@ -38,6 +39,10 @@ const READ_ICONS = [
   { bg: '#EBF4FF', color: '#3E81E5', path: 'M8 3H5a2 2 0 00-2 2v3m18 0V5a2 2 0 00-2-2h-3m0 18h3a2 2 0 002-2v-3M3 16v3a2 2 0 002 2h3' },
   { bg: '#FEF3C7', color: '#D97706', path: 'M13 2L3 14h9l-1 8 10-12h-9l1-8z' },
 ];
+
+// FAQPage only where the page really carries questions and answers;
+// faqPageSchema returns null otherwise and nothing is emitted.
+const faqJsonLd = faqPageSchema(page.faq, `beginnersGuidePage/${lang}`);
 ---
 
 <BaseLayout
@@ -46,6 +51,7 @@ const READ_ICONS = [
   noindex={page.seo?.noindex ?? false}
   lang={lang as Lang}
   seo={page.seo}
+  jsonLd={[faqJsonLd]}
 >
 
   <!-- Hero -->

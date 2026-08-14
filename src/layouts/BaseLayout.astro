@@ -8,6 +8,7 @@ import type { Lang } from '../i18n/index';
 import type { SeoData } from '../lib/sanity';
 import { staticPageAlternates } from '../lib/hreflang';
 import type { Alternate } from '../lib/hreflang';
+import { organizationSchema, breadcrumbSchema, buildBreadcrumbs, serializeJsonLd } from '../lib/schema';
 
 export interface Props {
   title: string;
@@ -23,6 +24,10 @@ export interface Props {
    * registry answers. Anything not covered by either gets no hreflang.
    */
   alternates?: Alternate[];
+  /** Extra JSON-LD blocks — Article, FAQPage. Organization is always emitted. */
+  jsonLd?: unknown[];
+  /** Real name for the final breadcrumb when the URL segment is not one. */
+  breadcrumbLabel?: string;
 }
 
 const {
@@ -34,6 +39,8 @@ const {
   activeDropdown = '',
   lang = 'en',
   alternates,
+  jsonLd = [],
+  breadcrumbLabel,
 } = Astro.props;
 
 const t = useTranslations(lang as Lang);
@@ -56,6 +63,13 @@ const hreflangs = resolvedAlternates.map(alternate => ({
   url: new URL(alternate.path, siteOrigin).href,
 }));
 const xDefaultUrl = hreflangs.find(h => h.lang === 'en')?.url;
+
+// Organization sitewide, plus a breadcrumb trail derived from the URL and named
+// with the nav labels. Blocks the page supplies (Article, FAQPage) come last.
+const breadcrumbs = breadcrumbSchema(
+  buildBreadcrumbs({ pathname: Astro.url.pathname, lang, siteOrigin, t, leafLabel: breadcrumbLabel })
+);
+const jsonLdBlocks = [organizationSchema(siteOrigin), breadcrumbs, ...jsonLd].filter(Boolean);
 
 // Cloudflare Web Analytics — token comes from the PUBLIC_CLOUDFLARE_BEACON_TOKEN env var
 // (set in AWS Amplify). Cookieless, so no consent gate. Beacon is only emitted when the
@@ -108,6 +122,12 @@ gtag('config', ${JSON.stringify(ga4Id)});`
   <link rel="canonical" href={canonicalURL} />
   {hreflangs.map(h => <link rel="alternate" hreflang={h.lang} href={h.url} />)}
   {xDefaultUrl && <link rel="alternate" hreflang="x-default" href={xDefaultUrl} />}
+
+  <!-- Structured data. Every field traces to a real source; anything without one
+       is omitted rather than filled in. See lib/schema.ts. -->
+  {jsonLdBlocks.map(block => (
+    <script type="application/ld+json" is:inline set:html={serializeJsonLd(block)}></script>
+  ))}
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />

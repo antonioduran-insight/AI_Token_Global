@@ -5,6 +5,7 @@ import { useTranslations, LANG_META, isValidLang } from '../../../i18n/index';
 import type { Lang } from '../../../i18n/index';
 import type { SanityPost } from '../../../lib/sanity';
 import { renderPortableText, repairSpanSpacing, countWords, headingAnchors, articleTypeComponents } from '../../../lib/portable-text';
+import { articleSchema } from '../../../lib/schema';
 import { postPath, postAlternates } from '../../../lib/blog-urls';
 
 export async function getStaticPaths() {
@@ -96,6 +97,16 @@ const postUrl = siteOrigin + postPath(lang, post.slug.current);
 // exist — this list only ever contains posts Sanity actually holds.
 const alternates = postAlternates(await getAlternatesForPost(lang, post.slug.current));
 
+const articleJsonLd = articleSchema({
+  siteOrigin,
+  url: postUrl,
+  headline: post.title,
+  description: post.excerpt,
+  datePublished: post.publishedAt,
+  imageUrl: post.coverImage?.asset?.url,
+  inLanguage: LANG_META[lang as Lang].locale,
+});
+
 const heroPill = catPill(post.category);
 const heroCategoryLabel = catLabel(post.category);
 const coverGradient = post.category ? CAT_GRADIENT[post.category] ?? CAT_GRADIENT.fundamentals : CAT_GRADIENT.fundamentals;
@@ -114,6 +125,8 @@ const coverTint = post.category ? CAT_TINT[post.category] ?? CAT_TINT.fundamenta
   activePage="blog"
   lang={lang as Lang}
   alternates={alternates}
+  jsonLd={[articleJsonLd]}
+  breadcrumbLabel={post.title}
 >
 
   <!-- Reading progress bar -->

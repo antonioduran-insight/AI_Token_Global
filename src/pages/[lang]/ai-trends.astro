@@ -5,6 +5,7 @@ import { useTranslations, SUPPORTED_LANGS, isValidLang } from '../../i18n/index'
 import type { Lang } from '../../i18n/index';
 import type { AiTrendsPageData, TrendCard, AudienceCard } from '../../lib/sanity';
 import { renderPortableText, withTrailingSlash } from '../../lib/portable-text';
+import { faqPageSchema } from '../../lib/schema';
 
 export async function getStaticPaths() {
   return SUPPORTED_LANGS.map(lang => ({ params: { lang } }));
@@ -48,6 +49,10 @@ const AUDIENCE_ICONS = [
   `<path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9" cy="7" r="4" stroke="currentColor" stroke-width="1.75"/>`,
   `<rect x="2" y="7" width="20" height="14" rx="2" stroke="currentColor" stroke-width="1.75"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2M12 12v4M10 14h4" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>`,
 ];
+
+// FAQPage only where the page really carries questions and answers;
+// faqPageSchema returns null otherwise and nothing is emitted.
+const faqJsonLd = faqPageSchema(page.faq, `aiTrendsPage/${lang}`);
 ---
 
 <BaseLayout
@@ -57,6 +62,7 @@ const AUDIENCE_ICONS = [
   activePage="ai-trends"
   activeDropdown="resources"
   lang={lang as Lang}
+  jsonLd={[faqJsonLd]}
 >
 
   <!-- ── Hero ─────────────────────────────────────────── -->

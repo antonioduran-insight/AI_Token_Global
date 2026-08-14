@@ -8,6 +8,7 @@ import { MAILERLITE_SUBSCRIBE_ACTION } from '../../lib/forms';
 import { MODELS, FLAGSHIP_MODELS, PROVIDER_PRICING_URL, formatPrice, formatPricingDate } from '../../lib/pricing';
 import type { Provider } from '../../lib/pricing';
 import { renderPortableText } from '../../lib/portable-text';
+import { faqPageSchema } from '../../lib/schema';
 
 export async function getStaticPaths() {
   return SUPPORTED_LANGS.map(lang => ({ params: { lang } }));
@@ -65,9 +66,13 @@ const comparisonSources = [...new Set(MODELS.map(m => m.provider))];
 const seoTitle = page?.seo?.seoTitle ?? t('home.seoTitleFallback');
 const seoDesc  = page?.seo?.seoDescription ?? t('meta.defaultDescription');
 const noindex  = page?.seo?.noindex ?? false;
+
+// FAQPage only where the page really carries questions and answers;
+// faqPageSchema returns null otherwise and nothing is emitted.
+const faqJsonLd = faqPageSchema(faqs, `homePage/${lang}`);
 ---
 
-<BaseLayout title={seoTitle} description={seoDesc} noindex={noindex} activePage="home" lang={lang as Lang}>
+<BaseLayout title={seoTitle} description={seoDesc} noindex={noindex} activePage="home" lang={lang as Lang} jsonLd={[faqJsonLd]}>
 
 <!-- ════════════════════════════════════════════
      HERO

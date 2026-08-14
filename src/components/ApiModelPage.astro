@@ -4,6 +4,7 @@ import { useTranslations } from '../i18n/index';
 import type { Lang } from '../i18n/index';
 import type { ApiModelPageData } from '../lib/sanity';
 import { renderPortableText, withTrailingSlash } from '../lib/portable-text';
+import { faqPageSchema } from '../lib/schema';
 
 export interface Props {
   page: ApiModelPageData;
@@ -53,6 +54,10 @@ const breadcrumbCurrent = t(`apiModel.${ALL_MODELS.find(m => m.slug === modelSlu
 
 const seoTitle = page.seo?.seoTitle ?? page.heroHeadline;
 const seoDesc  = page.seo?.seoDescription ?? page.heroSubtitle ?? '';
+
+// FAQPage only where the page really carries questions and answers;
+// faqPageSchema returns null otherwise and nothing is emitted.
+const faqJsonLd = faqPageSchema(page.faq, `apiModelPage/${lang}/${modelSlug}`);
 ---
 
 <BaseLayout
@@ -61,6 +66,7 @@ const seoDesc  = page.seo?.seoDescription ?? page.heroSubtitle ?? '';
   activePage="api-compare"
   lang={lang}
   seo={page.seo}
+  jsonLd={[faqJsonLd]}
 >
 
   <!-- HERO ──────────────────────────────────────────────── -->
