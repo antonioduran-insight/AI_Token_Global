@@ -1,10 +1,12 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
-import { getAllPostSlugs, getPostBySlug, getRelatedPosts } from '../../../lib/sanity';
+import { getAllPostSlugs, getPostBySlug, getRelatedPosts, getAlternatesForPost } from '../../../lib/sanity';
 import { useTranslations, LANG_META, isValidLang } from '../../../i18n/index';
 import type { Lang } from '../../../i18n/index';
 import type { SanityPost } from '../../../lib/sanity';
-import { renderPortableText, repairSpanSpacing } from '../../../lib/portable-text';
+import { renderPortableText, repairSpanSpacing, countWords, headingAnchors, articleTypeComponents } from '../../../lib/portable-text';
+import { articleSchema } from '../../../lib/schema';
+import { postPath, postAlternates } from '../../../lib/blog-urls';
 
 export async function getStaticPaths() {
   const slugs = await getAllPostSlugs();
@@ -14,11 +16,11 @@ export async function getStaticPaths() {
 }
 
 const { lang, slug } = Astro.params;
-if (!isValidLang(lang)) return Astro.redirect('/en/blog');
+if (!isValidLang(lang)) return Astro.redirect('/en/blog/');
 
 const t = useTranslations(lang as Lang);
 const post: SanityPost | null = await getPostBySlug(slug as string, lang);
-if (!post) return Astro.redirect(`/${lang}/blog`);
+if (!post) return Astro.redirect(`/${lang}/blog/`);
 
 const related: SanityPost[] = await getRelatedPosts(post.slug.current, lang, post.category, 3);
 
@@ -71,85 +73,48 @@ function formatDate(iso: string) {
   return new Date(iso).toLocaleDateString(LANG_META[lang as Lang].locale, { year: 'numeric', month: 'long', day: 'numeric' });
 }
 
-// ── Word count + reading time ──────────────────────────────────────────────
-function blockText(block: any): string {
-  if (!block || !Array.isArray(block.children)) return '';
-  return block.children.map((c: any) => c?.text ?? '').join('');
-}
-function countWords(blocks: any[]): number {
-  let total = 0;
-  for (const block of blocks ?? []) {
-    if (block?._type !== 'block') continue;
-    const text = blockText(block);
-    if (!text) continue;
-    total += text.trim().split(/\s+/).filter(Boolean).length;
-  }
-  return total;
-}
 // Names this article in any build warning the renderer emits.
 const postSource = `post/${lang}/${post.slug.current}`;
 // Repair span spacing once, up front: the word count, the TOC heading slugs and
 // the rendered HTML must all read the same text or the anchors stop matching.
 const body = repairSpanSpacing(post.body || [], postSource);
-const wordCount = countWords(body);
-const readingMinutes = Math.max(1, Math.round(wordCount / 225));
+const readingMinutes = Math.max(1, Math.round(countWords(body) / 225));
 const readingLabel = t('blog.minRead').replace('{n}', String(readingMinutes));
 
-// ── Collect h2 headings for TOC ────────────────────────────────────────────
-const usedSlugs = new Set<string>();
-function slugify(text: string) {
-  const base = text.toLowerCase().replace(/[^\p{L}\p{N}]+/gu, '-').replace(/^-+|-+$/g, '');
-  let s = base || 'section';
-  let i = 2;
-  while (usedSlugs.has(s)) s = `${base}-${i++}`;
-  usedSlugs.add(s);
-  return s;
-}
-const headings: { id: string; text: string }[] = [];
-for (const block of body) {
-  if (block?._type === 'block' && block?.style === 'h2') {
-    const text = blockText(block).trim();
-    if (!text) continue;
-    headings.push({ id: slugify(text), text });
-  }
-}
-// Reset for the render pass below so we generate matching IDs.
-usedSlugs.clear();
+// Headings for the sidebar, and the ids that make its links land.
+const { headings, components: headingComponents } = headingAnchors(body);
 
 const bodyHtml = renderPortableText(body, {
   source: postSource,
-  components: {
-    block: {
-      h2: ({ value, children }) => {
-        const text = blockText(value).trim();
-        const id = slugify(text);
-        return `<h2 id="${id}">${children}</h2>`;
-      },
-      h3: ({ value, children }) => {
-        const text = blockText(value).trim();
-        const id = slugify(text);
-        return `<h3 id="${id}">${children}</h3>`;
-      },
-    },
-    types: {
-      image: ({ value }) => {
-        const url = value?.asset?.url ?? value?.url ?? '';
-        const alt = value?.alt ?? '';
-        const caption = value?.caption ?? '';
-        if (!url) return '';
-        return `<figure class="article-figure"><img src="${url}" alt="${alt}" />${caption ? `<figcaption>${caption}</figcaption>` : ''}</figure>`;
-      },
-      codeBlock: ({ value }) => {
-        const codeLang = value?.language ?? '';
-        const code = (value?.code ?? '').replace(/</g, '&lt;').replace(/>/g, '&gt;');
-        return `<pre><code class="language-${codeLang}">${code}</code></pre>`;
-      },
-    },
-  },
+  components: { ...headingComponents, types: articleTypeComponents() },
 });
 
 const siteOrigin = (Astro.site ?? new URL('https://www.aitoken.global')).origin;
-const postUrl = `${siteOrigin}/${lang}/blog/${post.slug.current}`;
+const postUrl = siteOrigin + postPath(lang, post.slug.current);
+
+// hreflang from the real translation clusters. Blog slugs are translated, so the
+// locale-segment swap BaseLayout used to fall back on pointed at URLs that do not
+// exist — this list only ever contains posts Sanity actually holds.
+const alternates = postAlternates(await getAlternatesForPost(lang, post.slug.current));
+
+// `_updatedAt` is Sanity's own last-write stamp — the only modified date on record.
+// Shown to readers only when it lands on a different day from publication, since
+// "Published 3 June · Updated 3 June" tells nobody anything. The machine-readable
+// dateModified is emitted either way.
+const updatedIso = post._updatedAt;
+const showUpdated = Boolean(updatedIso) && updatedIso!.slice(0, 10) !== post.publishedAt.slice(0, 10);
+const updatedLabel = showUpdated ? t('blog.updated').replace('{date}', formatDate(updatedIso!)) : '';
+
+const articleJsonLd = articleSchema({
+  siteOrigin,
+  url: postUrl,
+  headline: post.title,
+  description: post.excerpt,
+  datePublished: post.publishedAt,
+  dateModified: updatedIso,
+  imageUrl: post.coverImage?.asset?.url,
+  inLanguage: LANG_META[lang as Lang].locale,
+});
 
 const heroPill = catPill(post.category);
 const heroCategoryLabel = catLabel(post.category);
@@ -168,6 +133,9 @@ const coverTint = post.category ? CAT_TINT[post.category] ?? CAT_TINT.fundamenta
   }}
   activePage="blog"
   lang={lang as Lang}
+  alternates={alternates}
+  jsonLd={[articleJsonLd]}
+  breadcrumbLabel={post.title}
 >
 
   <!-- Reading progress bar -->
@@ -181,7 +149,7 @@ const coverTint = post.category ? CAT_TINT[post.category] ?? CAT_TINT.fundamenta
       <nav class="post-breadcrumb" aria-label={t('common.aria.breadcrumb')}>
         <a href={`/${lang}/`}>{t('common.home')}</a>
         <svg width="12" height="12" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M6 4l4 4-4 4" stroke="#CCC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        <a href={`/${lang}/blog`}>{t('nav.blog')}</a>
+        <a href={`/${lang}/blog/`}>{t('nav.blog')}</a>
         {heroCategoryLabel && (
           <>
             <svg width="12" height="12" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M6 4l4 4-4 4" stroke="#CCC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -195,10 +163,10 @@ const coverTint = post.category ? CAT_TINT[post.category] ?? CAT_TINT.fundamenta
         <!-- Tags -->
         <div class="fade-up post-hero-tags">
           {post.category && (
-            <a href={`/${lang}/blog`} class={`tag-pill tag-${heroPill}`}>{heroCategoryLabel}</a>
+            <a href={`/${lang}/blog/`} class={`tag-pill tag-${heroPill}`}>{heroCategoryLabel}</a>
           )}
           {post.tags && post.tags.slice(0, 1).map(tag => (
-            <a href={`/${lang}/blog`} class="tag-pill tag-blue">{tag}</a>
+            <a href={`/${lang}/blog/`} class="tag-pill tag-blue">{tag}</a>
           ))}
         </div>
 
@@ -213,7 +181,13 @@ const coverTint = post.category ? CAT_TINT[post.category] ?? CAT_TINT.fundamenta
             </div>
             <span class="post-author-name">{t('blog.author')}</span>
           </div>
-          <span class="post-meta-dim">{formatDate(post.publishedAt)}</span>
+          <time class="post-meta-dim" datetime={post.publishedAt}>{formatDate(post.publishedAt)}</time>
+          {showUpdated && (
+            <>
+              <span class="post-meta-dim" aria-hidden="true">·</span>
+              <time class="post-meta-dim" datetime={updatedIso}>{updatedLabel}</time>
+            </>
+          )}
           <span class="post-meta-dim" aria-hidden="true">·</span>
           <span class="post-meta-dim">{readingLabel}</span>
           {heroCategoryLabel && (
@@ -288,7 +262,7 @@ const coverTint = post.category ? CAT_TINT[post.category] ?? CAT_TINT.fundamenta
           <div class="sidebar-cta-blob" aria-hidden="true"></div>
           <div class="sidebar-cta-title">{t('blog.tryTitle')}</div>
           <p class="sidebar-cta-body">{t('blog.tryCopy')}</p>
-          <a class="sidebar-cta-btn" href={`/${lang}/api-compare`}>
+          <a class="sidebar-cta-btn" href={`/${lang}/api-compare/`}>
             {t('blog.tryButton')}
             <svg width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
@@ -304,8 +278,14 @@ const coverTint = post.category ? CAT_TINT[post.category] ?? CAT_TINT.fundamenta
             </div>
             <div class="sidebar-info-row">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="18" rx="2" stroke="#999" stroke-width="1.75"/><path d="M16 2v4M8 2v4M3 10h18" stroke="#999" stroke-width="1.75" stroke-linecap="round"/></svg>
-              <span>{formatDate(post.publishedAt)}</span>
+              <time datetime={post.publishedAt}>{formatDate(post.publishedAt)}</time>
             </div>
+            {showUpdated && (
+              <div class="sidebar-info-row">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M21 12a9 9 0 11-3.5-7.14" stroke="#999" stroke-width="1.75" stroke-linecap="round"/><path d="M21 3v5h-5" stroke="#999" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <time datetime={updatedIso}>{updatedLabel}</time>
+              </div>
+            )}
             {heroCategoryLabel && (
               <div class="sidebar-info-row">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z" stroke="#999" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/><circle cx="7" cy="7" r="1" fill="#999"/></svg>
@@ -327,7 +307,7 @@ const coverTint = post.category ? CAT_TINT[post.category] ?? CAT_TINT.fundamenta
       <div class="related-wrap">
         <div class="related-head">
           <div class="related-heading">{t('blog.relatedArticles')}</div>
-          <a class="related-viewall" href={`/${lang}/blog`}>
+          <a class="related-viewall" href={`/${lang}/blog/`}>
             {t('blog.viewAllArticles')}
             <svg width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
@@ -339,7 +319,7 @@ const coverTint = post.category ? CAT_TINT[post.category] ?? CAT_TINT.fundamenta
             const gradient = r.category ? CAT_GRADIENT[r.category] ?? CAT_GRADIENT.fundamentals : CAT_GRADIENT.fundamentals;
             const tint = r.category ? CAT_TINT[r.category] ?? CAT_TINT.fundamentals : CAT_TINT.fundamentals;
             return (
-              <a class="related-card" href={`/${lang}/blog/${r.slug.current}`}>
+              <a class="related-card" href={`/${lang}/blog/${r.slug.current}/`}>
                 {r.coverImage?.asset?.url && (
                   <div class="related-img-wrap" style={`background: ${gradient};`}>
                     <img class="related-img" src={r.coverImage.asset.url} alt="" loading="lazy" />
@@ -351,7 +331,7 @@ const coverTint = post.category ? CAT_TINT[post.category] ?? CAT_TINT.fundamenta
                     <span class={`tag-pill tag-${pill}`} style="margin-bottom: 0.75rem;">{catLabel(r.category)}</span>
                   )}
                   <h3 class="related-title">{r.title}</h3>
-                  <span class="related-date">{formatDate(r.publishedAt)}</span>
+                  <time class="related-date" datetime={r.publishedAt}>{formatDate(r.publishedAt)}</time>
                 </div>
               </a>
             );

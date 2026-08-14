@@ -40,19 +40,19 @@ function localizedPath(targetLang: Lang): string {
           <svg width="12" height="12" viewBox="0 0 16 16" fill="none" style="transition: transform 0.2s ease;" class="dropdown-chevron"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </button>
         <div class="nav-dropdown-menu" style="display: none; position: absolute; top: calc(100% + 8px); left: 50%; transform: translateX(-50%); background: #fff; border-radius: 14px; box-shadow: 0 8px 32px rgba(97,85,241,0.14), 0 2px 8px rgba(0,0,0,0.07); padding: 0.5rem; min-width: 230px; z-index: 200; border: 1px solid rgba(97,85,241,0.1);">
-          <a href={`/${lang}/ai-trends`} class={`dropdown-item${activePage === 'ai-trends' ? ' active' : ''}`}>
+          <a href={`/${lang}/ai-trends/`} class={`dropdown-item${activePage === 'ai-trends' ? ' active' : ''}`}>
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M3 12h18M3 6h18M3 18h12" stroke="#6155F1" stroke-width="1.75" stroke-linecap="round"/></svg>
             {t('nav.aiTrends')}
           </a>
-          <a href={`/${lang}/user-guide`} class={`dropdown-item${activePage === 'user-guide' ? ' active' : ''}`}>
+          <a href={`/${lang}/user-guide/`} class={`dropdown-item${activePage === 'user-guide' ? ' active' : ''}`}>
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z" fill="#6155F1"/></svg>
             {t('nav.userGuide')}
           </a>
-          <a href={`/${lang}/compliance`} class={`dropdown-item${activePage === 'compliance' ? ' active' : ''}`}>
+          <a href={`/${lang}/compliance/`} class={`dropdown-item${activePage === 'compliance' ? ' active' : ''}`}>
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M19 21H5a2 2 0 01-2-2V7l4-4h10a2 2 0 012 2v14a2 2 0 01-2 2z" stroke="#6155F1" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 3v4H5M9 12h6M9 16h4" stroke="#6155F1" stroke-width="1.5" stroke-linecap="round"/></svg>
             {t('nav.compliance')}
           </a>
-          <a href={`/${lang}/token-calculator`} class={`dropdown-item${activePage === 'token-calculator' ? ' active' : ''}`}>
+          <a href={`/${lang}/token-calculator/`} class={`dropdown-item${activePage === 'token-calculator' ? ' active' : ''}`}>
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><rect x="4" y="3" width="16" height="18" rx="2" stroke="#6155F1" stroke-width="1.75"/><line x1="8" y1="8" x2="16" y2="8" stroke="#6155F1" stroke-width="1.5" stroke-linecap="round"/><line x1="8" y1="12" x2="16" y2="12" stroke="#6155F1" stroke-width="1.5" stroke-linecap="round"/><line x1="8" y1="16" x2="12" y2="16" stroke="#6155F1" stroke-width="1.5" stroke-linecap="round"/></svg>
             {t('nav.tokenCalculator')}
           </a>
@@ -63,11 +63,11 @@ function localizedPath(targetLang: Lang): string {
         </div>
       </div>
 
-      <a href={`/${lang}/api-compare`} class={`nav-link${activePage === 'api-compare' ? ' active' : ''}`}>{t('nav.compareModels')}</a>
-      <a href={`/${lang}/use-cases`} class={`nav-link${activePage === 'use-cases' ? ' active' : ''}`}>{t('nav.useCases')}</a>
-      <a href={`/${lang}/beginners-guide`} class={`nav-link${activePage === 'beginners-guide' ? ' active' : ''}`}>{t('nav.beginnersGuide')}</a>
-      <a href={`/${lang}/blog`} class={`nav-link${activePage === 'blog' ? ' active' : ''}`}>{t('nav.blog')}</a>
-      <a href={`/${lang}/contact`} class={`nav-link${activePage === 'contact' ? ' active' : ''}`}>{t('nav.contact')}</a>
+      <a href={`/${lang}/api-compare/`} class={`nav-link${activePage === 'api-compare' ? ' active' : ''}`}>{t('nav.compareModels')}</a>
+      <a href={`/${lang}/use-cases/`} class={`nav-link${activePage === 'use-cases' ? ' active' : ''}`}>{t('nav.useCases')}</a>
+      <a href={`/${lang}/beginners-guide/`} class={`nav-link${activePage === 'beginners-guide' ? ' active' : ''}`}>{t('nav.beginnersGuide')}</a>
+      <a href={`/${lang}/blog/`} class={`nav-link${activePage === 'blog' ? ' active' : ''}`}>{t('nav.blog')}</a>
+      <a href={`/${lang}/contact/`} class={`nav-link${activePage === 'contact' ? ' active' : ''}`}>{t('nav.contact')}</a>
     </nav>
 
     <div style="display: flex; align-items: center; gap: 0.625rem; flex-shrink: 0;">
@@ -114,18 +114,18 @@ function localizedPath(targetLang: Lang): string {
 <div class="mobile-nav-panel" id="mobile-nav-panel" aria-hidden="true">
 
   <div class="mobile-nav-section">{t('nav.resources')}</div>
-  <a href={`/${lang}/ai-trends`} class={`mobile-nav-link${activePage === 'ai-trends' ? ' active' : ''}`}>{t('nav.aiTrends')}</a>
-  <a href={`/${lang}/user-guide`} class={`mobile-nav-link${activePage === 'user-guide' ? ' active' : ''}`}>{t('nav.userGuide')}</a>
-  <a href={`/${lang}/compliance`} class={`mobile-nav-link${activePage === 'compliance' ? ' active' : ''}`}>{t('nav.compliance')}</a>
-  <a href={`/${lang}/token-calculator`} class={`mobile-nav-link${activePage === 'token-calculator' ? ' active' : ''}`}>{t('nav.tokenCalculator')}</a>
+  <a href={`/${lang}/ai-trends/`} class={`mobile-nav-link${activePage === 'ai-trends' ? ' active' : ''}`}>{t('nav.aiTrends')}</a>
+  <a href={`/${lang}/user-guide/`} class={`mobile-nav-link${activePage === 'user-guide' ? ' active' : ''}`}>{t('nav.userGuide')}</a>
+  <a href={`/${lang}/compliance/`} class={`mobile-nav-link${activePage === 'compliance' ? ' active' : ''}`}>{t('nav.compliance')}</a>
+  <a href={`/${lang}/token-calculator/`} class={`mobile-nav-link${activePage === 'token-calculator' ? ' active' : ''}`}>{t('nav.tokenCalculator')}</a>
 
   <div style="height: 1px; background: rgba(97,85,241,0.12); margin: 0.75rem 1rem;"></div>
 
-  <a href={`/${lang}/api-compare`} class={`mobile-nav-link${activePage === 'api-compare' ? ' active' : ''}`}>{t('nav.compareModels')}</a>
-  <a href={`/${lang}/use-cases`} class={`mobile-nav-link${activePage === 'use-cases' ? ' active' : ''}`}>{t('nav.useCases')}</a>
-  <a href={`/${lang}/beginners-guide`} class={`mobile-nav-link${activePage === 'beginners-guide' ? ' active' : ''}`}>{t('nav.beginnersGuide')}</a>
-  <a href={`/${lang}/blog`} class={`mobile-nav-link${activePage === 'blog' ? ' active' : ''}`}>{t('nav.blog')}</a>
-  <a href={`/${lang}/contact`} class={`mobile-nav-link${activePage === 'contact' ? ' active' : ''}`}>{t('nav.contact')}</a>
+  <a href={`/${lang}/api-compare/`} class={`mobile-nav-link${activePage === 'api-compare' ? ' active' : ''}`}>{t('nav.compareModels')}</a>
+  <a href={`/${lang}/use-cases/`} class={`mobile-nav-link${activePage === 'use-cases' ? ' active' : ''}`}>{t('nav.useCases')}</a>
+  <a href={`/${lang}/beginners-guide/`} class={`mobile-nav-link${activePage === 'beginners-guide' ? ' active' : ''}`}>{t('nav.beginnersGuide')}</a>
+  <a href={`/${lang}/blog/`} class={`mobile-nav-link${activePage === 'blog' ? ' active' : ''}`}>{t('nav.blog')}</a>
+  <a href={`/${lang}/contact/`} class={`mobile-nav-link${activePage === 'contact' ? ' active' : ''}`}>{t('nav.contact')}</a>
   <a href="https://www.aitokenking.com.tw/docs" class="mobile-nav-link" target="_blank" rel="noopener noreferrer">{t('nav.documentation')}</a>
 
   <div style="height: 1px; background: rgba(97,85,241,0.12); margin: 1rem 1rem 0.75rem;"></div>

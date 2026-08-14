@@ -3,7 +3,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import { useTranslations } from '../i18n/index';
 import type { Lang } from '../i18n/index';
 import type { ApiModelPageData } from '../lib/sanity';
-import { renderPortableText } from '../lib/portable-text';
+import { renderPortableText, withTrailingSlash } from '../lib/portable-text';
+import { faqPageSchema } from '../lib/schema';
 
 export interface Props {
   page: ApiModelPageData;
@@ -43,9 +44,9 @@ const ALSO_COMPARE_COLOR: Record<string, Record<string, string>> = {
 };
 
 const ALL_MODELS = [
-  { slug: 'chatgpt', shortKey: 'chatgptApiShort', guideKey: 'chatgptApiGuide', path: `/${lang}/chatgpt-api` },
-  { slug: 'claude',  shortKey: 'claudeApiShort',  guideKey: 'claudeApiGuide',  path: `/${lang}/claude-api`  },
-  { slug: 'gemini',  shortKey: 'geminiApiShort',  guideKey: 'geminiApiGuide',  path: `/${lang}/gemini-api`  },
+  { slug: 'chatgpt', shortKey: 'chatgptApiShort', guideKey: 'chatgptApiGuide', path: `/${lang}/chatgpt-api/` },
+  { slug: 'claude',  shortKey: 'claudeApiShort',  guideKey: 'claudeApiGuide',  path: `/${lang}/claude-api/`  },
+  { slug: 'gemini',  shortKey: 'geminiApiShort',  guideKey: 'geminiApiGuide',  path: `/${lang}/gemini-api/`  },
 ] as const;
 const alsoCompare = ALL_MODELS.filter(m => m.slug !== modelSlug);
 
@@ -53,6 +54,10 @@ const breadcrumbCurrent = t(`apiModel.${ALL_MODELS.find(m => m.slug === modelSlu
 
 const seoTitle = page.seo?.seoTitle ?? page.heroHeadline;
 const seoDesc  = page.seo?.seoDescription ?? page.heroSubtitle ?? '';
+
+// FAQPage only where the page really carries questions and answers;
+// faqPageSchema returns null otherwise and nothing is emitted.
+const faqJsonLd = faqPageSchema(page.faq, `apiModelPage/${lang}/${modelSlug}`);
 ---
 
 <BaseLayout
@@ -61,6 +66,7 @@ const seoDesc  = page.seo?.seoDescription ?? page.heroSubtitle ?? '';
   activePage="api-compare"
   lang={lang}
   seo={page.seo}
+  jsonLd={[faqJsonLd]}
 >
 
   <!-- HERO ──────────────────────────────────────────────── -->
@@ -70,7 +76,7 @@ const seoDesc  = page.seo?.seoDescription ?? page.heroSubtitle ?? '';
       <nav style="display:flex;align-items:center;gap:.5rem;margin-bottom:1.75rem;font-size:.8rem;color:#999;flex-wrap:wrap;" aria-label={t('common.aria.breadcrumb')}>
         <a href={`/${lang}/`} style="color:#999;text-decoration:none;transition:color .15s ease;" onmouseover="this.style.color='#6155F1'" onmouseout="this.style.color='#999'">{t('common.home')}</a>
         <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="#CCC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        <a href={`/${lang}/api-compare`} style="color:#999;text-decoration:none;transition:color .15s ease;" onmouseover="this.style.color='#6155F1'" onmouseout="this.style.color='#999'">{t('nav.compareModels')}</a>
+        <a href={`/${lang}/api-compare/`} style="color:#999;text-decoration:none;transition:color .15s ease;" onmouseover="this.style.color='#6155F1'" onmouseout="this.style.color='#999'">{t('nav.compareModels')}</a>
         <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="#CCC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         <span style="color:#6155F1;font-weight:600;">{breadcrumbCurrent}</span>
       </nav>
@@ -155,7 +161,7 @@ const seoDesc  = page.seo?.seoDescription ?? page.heroSubtitle ?? '';
             <h2 id="further-reading">{page.furtherReadingTitle ?? t('apiModel.furtherReadingFallback')}</h2>
             <ul>
               {page.furtherReading.map(link => (
-                <li><a href={link.url ?? '#'} target={link.url?.startsWith('http') ? '_blank' : '_self'} rel="noopener noreferrer">{link.label}</a></li>
+                <li><a href={withTrailingSlash(link.url ?? '#')} target={link.url?.startsWith('http') ? '_blank' : '_self'} rel="noopener noreferrer">{link.label}</a></li>
               ))}
             </ul>
           </Fragment>
@@ -204,7 +210,7 @@ const seoDesc  = page.seo?.seoDescription ?? page.heroSubtitle ?? '';
         <div class="sidebar-cta" style={`background:${hero.cardBg};`}>
           <div class="sidebar-cta-title">{t('apiModel.compareAllModelsTitle')}</div>
           <p class="sidebar-cta-body">{t('apiModel.compareAllModelsBody')}</p>
-          <a href={`/${lang}/api-compare#pricing`} class="sidebar-cta-btn">
+          <a href={`/${lang}/api-compare/#pricing`} class="sidebar-cta-btn">
             {t('apiModel.viewAllModelsBtn')}
             <svg width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>

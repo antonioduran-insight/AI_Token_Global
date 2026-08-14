@@ -4,6 +4,7 @@ import { SUPPORTED_LANGS, isValidLang, useTranslations } from '../../i18n/index'
 import type { Lang } from '../../i18n/index';
 import { getUserGuidePage } from '../../lib/sanity';
 import { renderPortableText } from '../../lib/portable-text';
+import { faqPageSchema } from '../../lib/schema';
 
 export async function getStaticPaths() {
   return SUPPORTED_LANGS.map(lang => ({ params: { lang } }));
@@ -44,6 +45,10 @@ const STEP_BG            = ['#6155F1', '#3E81E5', '#0ABFBC', '#F59E0B', '#F43F5E
 
 const problemItems = [t('userGuide.problemItem1'), t('userGuide.problemItem2'), t('userGuide.problemItem3')];
 const solutionItems = [t('userGuide.solutionItem1'), t('userGuide.solutionItem2'), t('userGuide.solutionItem3')];
+
+// FAQPage only where the page really carries questions and answers;
+// faqPageSchema returns null otherwise and nothing is emitted.
+const faqJsonLd = faqPageSchema(page.faq, `userGuidePage/${lang}`);
 ---
 
 <BaseLayout
@@ -54,6 +59,7 @@ const solutionItems = [t('userGuide.solutionItem1'), t('userGuide.solutionItem2'
   seo={page.seo}
   activePage="user-guide"
   activeDropdown="resources"
+  jsonLd={[faqJsonLd]}
 >
 
   <!-- Hero -->

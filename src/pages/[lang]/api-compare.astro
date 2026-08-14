@@ -20,6 +20,7 @@ if (!page) return Astro.redirect(`/${lang}/`);
 
 // Portable text for FAQ answers
 import { renderPortableText } from '../../lib/portable-text';
+import { faqPageSchema } from '../../lib/schema';
 function pt(blocks: any[] | undefined): string {
   return renderPortableText(blocks, { strongStyle: 'font-weight:700;color:#3C315B;', linkStyle: 'color:#6155F1;text-decoration:underline;', source: `apiComparePage/${lang}` });
 }
@@ -94,6 +95,10 @@ const sectionDefs: SectionDef[] = [
   { id: 'image-models', iconKey: 'image' as IconKey, title: page.imageModelsTitle ?? t('apiCompare.imageModelsFallback'), subtitle: page.imageModelsSubtitle, rows: page.imageModels },
   { id: 'video-models', iconKey: 'video' as IconKey, title: page.videoModelsTitle ?? t('apiCompare.videoModelsFallback'), subtitle: page.videoModelsSubtitle, rows: page.videoModels },
 ].filter(s => s.rows && s.rows.length > 0);
+
+// FAQPage only where the page really carries questions and answers;
+// faqPageSchema returns null otherwise and nothing is emitted.
+const faqJsonLd = faqPageSchema(page.faq, `apiComparePage/${lang}`);
 ---
 
 <BaseLayout
@@ -103,6 +108,7 @@ const sectionDefs: SectionDef[] = [
   activeDropdown="resources"
   lang={lang as Lang}
   seo={page.seo}
+  jsonLd={[faqJsonLd]}
 >
 
   <!-- Hero (with embedded type cards) ─────────────────── -->

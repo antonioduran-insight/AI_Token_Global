@@ -8,6 +8,7 @@ import { MAILERLITE_SUBSCRIBE_ACTION } from '../../lib/forms';
 import { MODELS, FLAGSHIP_MODELS, PROVIDER_PRICING_URL, formatPrice, formatPricingDate } from '../../lib/pricing';
 import type { Provider } from '../../lib/pricing';
 import { renderPortableText } from '../../lib/portable-text';
+import { faqPageSchema } from '../../lib/schema';
 
 export async function getStaticPaths() {
   return SUPPORTED_LANGS.map(lang => ({ params: { lang } }));
@@ -65,9 +66,13 @@ const comparisonSources = [...new Set(MODELS.map(m => m.provider))];
 const seoTitle = page?.seo?.seoTitle ?? t('home.seoTitleFallback');
 const seoDesc  = page?.seo?.seoDescription ?? t('meta.defaultDescription');
 const noindex  = page?.seo?.noindex ?? false;
+
+// FAQPage only where the page really carries questions and answers;
+// faqPageSchema returns null otherwise and nothing is emitted.
+const faqJsonLd = faqPageSchema(faqs, `homePage/${lang}`);
 ---
 
-<BaseLayout title={seoTitle} description={seoDesc} noindex={noindex} activePage="home" lang={lang as Lang}>
+<BaseLayout title={seoTitle} description={seoDesc} noindex={noindex} activePage="home" lang={lang as Lang} jsonLd={[faqJsonLd]}>
 
 <!-- ════════════════════════════════════════════
      HERO
@@ -102,11 +107,11 @@ const noindex  = page?.seo?.noindex ?? false;
           {page?.heroSubtitle ?? t('home.heroSubtitle')}
         </p>
         <div class="fade-up fade-up-3" style="display: flex; gap: 0.875rem; flex-wrap: wrap; align-items: center;">
-          <a href={`/${lang}/beginners-guide`} class="btn-primary">
+          <a href={`/${lang}/beginners-guide/`} class="btn-primary">
             {t('home.heroCtaPrimary')}
             <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
-          <a href={`/${lang}/api-compare`} class="btn-secondary" style="color: rgba(255,255,255,0.85); border-color: rgba(255,255,255,0.3); background: rgba(255,255,255,0.08);">
+          <a href={`/${lang}/api-compare/`} class="btn-secondary" style="color: rgba(255,255,255,0.85); border-color: rgba(255,255,255,0.3); background: rgba(255,255,255,0.08);">
             {t('home.heroCtaSecondary')}
           </a>
         </div>
@@ -169,14 +174,14 @@ const noindex  = page?.seo?.noindex ?? false;
               </>
             ))}
           </p>
-          <a href={`/${lang}/api-compare`} class="btn-ghost" style="margin-top: 0.875rem; font-size: 0.8rem;">
+          <a href={`/${lang}/api-compare/`} class="btn-ghost" style="margin-top: 0.875rem; font-size: 0.8rem;">
             {t('home.heroPriceCardLink')}
             <svg width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
         </div>
 
         <!-- Floating mini card -->
-        <a href={`/${lang}/token-calculator`} class="hero-mini-card card" style="padding: 1rem 1.25rem; display: flex; align-items: center; gap: 0.875rem; max-width: 260px; position: absolute; bottom: -1.5rem; right: -1rem; z-index: 10; text-decoration: none; background: linear-gradient(135deg, #6155F1 0%, #3E81E5 100%); border: none; box-shadow: 0 6px 24px rgba(97,85,241,0.45), 0 2px 8px rgba(62,129,229,0.25); overflow: hidden;">
+        <a href={`/${lang}/token-calculator/`} class="hero-mini-card card" style="padding: 1rem 1.25rem; display: flex; align-items: center; gap: 0.875rem; max-width: 260px; position: absolute; bottom: -1.5rem; right: -1rem; z-index: 10; text-decoration: none; background: linear-gradient(135deg, #6155F1 0%, #3E81E5 100%); border: none; box-shadow: 0 6px 24px rgba(97,85,241,0.45), 0 2px 8px rgba(62,129,229,0.25); overflow: hidden;">
           <div style="position: absolute; inset: 0; background: linear-gradient(135deg, rgba(255,255,255,0.18) 0%, transparent 60%); pointer-events: none; border-radius: 16px;"></div>
           <div style="background: rgba(255,255,255,0.2); width: 40px; height: 40px; border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; backdrop-filter: blur(4px);">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="4" y="3" width="16" height="18" rx="2" stroke="#fff" stroke-width="1.75"/><line x1="8" y1="8" x2="16" y2="8" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/><line x1="8" y1="12" x2="16" y2="12" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/><line x1="8" y1="16" x2="12" y2="16" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/></svg>
@@ -218,8 +223,8 @@ const noindex  = page?.seo?.noindex ?? false;
           }
         </div>
         <div class="reveal" style="display: flex; gap: 0.875rem; flex-wrap: wrap; align-items: center;">
-          <a href={`/${lang}/beginners-guide`} class="btn-primary">{t('home.tokenCtaPrimary')} →</a>
-          <a href={`/${lang}/token-calculator`} class="btn-calculator">
+          <a href={`/${lang}/beginners-guide/`} class="btn-primary">{t('home.tokenCtaPrimary')} →</a>
+          <a href={`/${lang}/token-calculator/`} class="btn-calculator">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><rect x="4" y="3" width="16" height="18" rx="2" stroke="#fff" stroke-width="1.75"/><line x1="8" y1="8" x2="16" y2="8" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/><line x1="8" y1="12" x2="16" y2="12" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/><line x1="8" y1="16" x2="12" y2="16" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/></svg>
             {t('home.tokenCtaCalc')}
           </a>
@@ -277,7 +282,7 @@ const noindex  = page?.seo?.noindex ?? false;
 
     <div class="topics-grid" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem;">
 
-      <a href={`/${lang}/beginners-guide`} class="card reveal" style="padding: 1.5rem; text-decoration: none; display: block;">
+      <a href={`/${lang}/beginners-guide/`} class="card reveal" style="padding: 1.5rem; text-decoration: none; display: block;">
         <div class="icon-box" style="margin-bottom: 1rem;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="4" y="4" width="6" height="6" rx="1.5" stroke="#6155F1" stroke-width="1.75"/><rect x="14" y="4" width="6" height="6" rx="1.5" stroke="#6155F1" stroke-width="1.75"/><rect x="4" y="14" width="6" height="6" rx="1.5" stroke="#6155F1" stroke-width="1.75"/><rect x="14" y="14" width="6" height="6" rx="1.5" stroke="#6155F1" stroke-width="1.75"/></svg></div>
         <div style="font-family: 'Kanit', sans-serif; font-size: 1rem; font-weight: 700; color: #1C1C1C; margin-bottom: 0.4rem;">{t('home.topic1Title')}</div>
         <div style="font-size: 0.82rem; color: #666; line-height: 1.6;">{t('home.topic1Desc')}</div>
@@ -289,31 +294,31 @@ const noindex  = page?.seo?.noindex ?? false;
         <div style="font-size: 0.82rem; color: #666; line-height: 1.6;">{t('home.topic2Desc')}</div>
       </a>
 
-      <a href={`/${lang}/token-calculator`} class="card reveal" style="padding: 1.5rem; text-decoration: none; display: block;">
+      <a href={`/${lang}/token-calculator/`} class="card reveal" style="padding: 1.5rem; text-decoration: none; display: block;">
         <div class="icon-box" style="margin-bottom: 1rem;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="4" y="3" width="16" height="18" rx="2" stroke="#6155F1" stroke-width="1.75"/><line x1="8" y1="8" x2="12" y2="8" stroke="#6155F1" stroke-width="1.5" stroke-linecap="round"/><line x1="8" y1="12" x2="16" y2="12" stroke="#6155F1" stroke-width="1.5" stroke-linecap="round"/><line x1="8" y1="16" x2="14" y2="16" stroke="#6155F1" stroke-width="1.5" stroke-linecap="round"/></svg></div>
         <div style="font-family: 'Kanit', sans-serif; font-size: 1rem; font-weight: 700; color: #1C1C1C; margin-bottom: 0.4rem;">{t('home.topic3Title')}</div>
         <div style="font-size: 0.82rem; color: #666; line-height: 1.6;">{t('home.topic3Desc')}</div>
       </a>
 
-      <a href={`/${lang}/user-guide`} class="card reveal" style="padding: 1.5rem; text-decoration: none; display: block;">
+      <a href={`/${lang}/user-guide/`} class="card reveal" style="padding: 1.5rem; text-decoration: none; display: block;">
         <div class="icon-box" style="margin-bottom: 1rem;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M4 19V7a2 2 0 012-2h12a2 2 0 012 2v12" stroke="#6155F1" stroke-width="1.75" stroke-linecap="round"/><path d="M4 19h16" stroke="#6155F1" stroke-width="1.75" stroke-linecap="round"/><path d="M9 11h6M9 15h4" stroke="#6155F1" stroke-width="1.5" stroke-linecap="round"/></svg></div>
         <div style="font-family: 'Kanit', sans-serif; font-size: 1rem; font-weight: 700; color: #1C1C1C; margin-bottom: 0.4rem;">{t('home.topic4Title')}</div>
         <div style="font-size: 0.82rem; color: #666; line-height: 1.6;">{t('home.topic4Desc')}</div>
       </a>
 
-      <a href={`/${lang}/beginners-guide`} class="card reveal" style="padding: 1.5rem; text-decoration: none; display: block;">
+      <a href={`/${lang}/beginners-guide/`} class="card reveal" style="padding: 1.5rem; text-decoration: none; display: block;">
         <div class="icon-box" style="margin-bottom: 1rem;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#6155F1" stroke-width="1.75"/><path d="M8 12l3 3 5-5" stroke="#6155F1" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
         <div style="font-family: 'Kanit', sans-serif; font-size: 1rem; font-weight: 700; color: #1C1C1C; margin-bottom: 0.4rem;">{t('home.topic5Title')}</div>
         <div style="font-size: 0.82rem; color: #666; line-height: 1.6;">{t('home.topic5Desc')}</div>
       </a>
 
-      <a href={`/${lang}/use-cases`} class="card reveal" style="padding: 1.5rem; text-decoration: none; display: block;">
+      <a href={`/${lang}/use-cases/`} class="card reveal" style="padding: 1.5rem; text-decoration: none; display: block;">
         <div class="icon-box" style="margin-bottom: 1rem;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" stroke="#6155F1" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
         <div style="font-family: 'Kanit', sans-serif; font-size: 1rem; font-weight: 700; color: #1C1C1C; margin-bottom: 0.4rem;">{t('home.topic6Title')}</div>
         <div style="font-size: 0.82rem; color: #666; line-height: 1.6;">{t('home.topic6Desc')}</div>
       </a>
 
-      <a href={`/${lang}/api-compare`} class="card reveal" style="padding: 1.5rem; text-decoration: none; display: block;">
+      <a href={`/${lang}/api-compare/`} class="card reveal" style="padding: 1.5rem; text-decoration: none; display: block;">
         <div class="icon-box" style="margin-bottom: 1rem;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 2L2 7l10 5 10-5-10-5z" stroke="#6155F1" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/><path d="M2 17l10 5 10-5" stroke="#6155F1" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/><path d="M2 12l10 5 10-5" stroke="#6155F1" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
         <div style="font-family: 'Kanit', sans-serif; font-size: 1rem; font-weight: 700; color: #1C1C1C; margin-bottom: 0.4rem;">{t('home.topic7Title')}</div>
         <div style="font-size: 0.82rem; color: #666; line-height: 1.6;">{t('home.topic7Desc')}</div>
@@ -358,7 +363,7 @@ const noindex  = page?.seo?.noindex ?? false;
         </div>
         <div style="font-family: 'Kanit', sans-serif; font-size: 1.2rem; font-weight: 800; color: #1C1C1C; letter-spacing: -0.02em; margin-bottom: 0.875rem;">{t('home.chatgptTitle')}</div>
         <p style="font-size: 0.9rem; line-height: 1.75; color: #666; margin-bottom: 1.5rem;">{t('home.chatgptDesc')}</p>
-        <a href={`/${lang}/chatgpt-api`} style="display: inline-flex; align-items: center; gap: 0.375rem; font-size: 0.875rem; font-weight: 700; color: #111111; text-decoration: none; transition: gap 0.18s ease;">
+        <a href={`/${lang}/chatgpt-api/`} style="display: inline-flex; align-items: center; gap: 0.375rem; font-size: 0.875rem; font-weight: 700; color: #111111; text-decoration: none; transition: gap 0.18s ease;">
           {t('home.chatgptLink')}
           <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
@@ -371,7 +376,7 @@ const noindex  = page?.seo?.noindex ?? false;
         </div>
         <div style="font-family: 'Kanit', sans-serif; font-size: 1.2rem; font-weight: 800; color: #1C1C1C; letter-spacing: -0.02em; margin-bottom: 0.875rem;">{t('home.geminiTitle')}</div>
         <p style="font-size: 0.9rem; line-height: 1.75; color: #666; margin-bottom: 1.5rem;">{t('home.geminiDesc')}</p>
-        <a href={`/${lang}/gemini-api`} style="display: inline-flex; align-items: center; gap: 0.375rem; font-size: 0.875rem; font-weight: 700; color: #4285F4; text-decoration: none; transition: gap 0.18s ease;">
+        <a href={`/${lang}/gemini-api/`} style="display: inline-flex; align-items: center; gap: 0.375rem; font-size: 0.875rem; font-weight: 700; color: #4285F4; text-decoration: none; transition: gap 0.18s ease;">
           {t('home.geminiLink')}
           <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
@@ -384,7 +389,7 @@ const noindex  = page?.seo?.noindex ?? false;
         </div>
         <div style="font-family: 'Kanit', sans-serif; font-size: 1.2rem; font-weight: 800; color: #1C1C1C; letter-spacing: -0.02em; margin-bottom: 0.875rem;">{t('home.claudeTitle')}</div>
         <p style="font-size: 0.9rem; line-height: 1.75; color: #666; margin-bottom: 1.5rem;">{t('home.claudeDesc')}</p>
-        <a href={`/${lang}/claude-api`} style="display: inline-flex; align-items: center; gap: 0.375rem; font-size: 0.875rem; font-weight: 700; color: #CC785C; text-decoration: none; transition: gap 0.18s ease;">
+        <a href={`/${lang}/claude-api/`} style="display: inline-flex; align-items: center; gap: 0.375rem; font-size: 0.875rem; font-weight: 700; color: #CC785C; text-decoration: none; transition: gap 0.18s ease;">
           {t('home.claudeLink')}
           <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
@@ -420,7 +425,7 @@ const noindex  = page?.seo?.noindex ?? false;
           {t('home.tableHeading')}
         </h2>
       </div>
-      <a href={`/${lang}/api-compare`} class="btn-secondary reveal">
+      <a href={`/${lang}/api-compare/`} class="btn-secondary reveal">
         {t('home.tableCtaBtn')}
         <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </a>
@@ -491,7 +496,7 @@ const noindex  = page?.seo?.noindex ?? false;
         </div>
         <h3 style="font-family: 'Kanit', sans-serif; font-size: 1.2rem; font-weight: 700; color: #1C1C1C; margin-bottom: 0.625rem; letter-spacing: -0.02em;">{t('home.step1Title')}</h3>
         <p style="font-size: 0.875rem; color: #666; line-height: 1.7;">{t('home.step1Body')}</p>
-        <a href={`/${lang}/beginners-guide`} class="btn-ghost" style="margin-top: 1rem; color: #6155F1; font-weight: 600;">{t('home.step1Link')}</a>
+        <a href={`/${lang}/beginners-guide/`} class="btn-ghost" style="margin-top: 1rem; color: #6155F1; font-weight: 600;">{t('home.step1Link')}</a>
       </div>
 
       <div class="card reveal" style="padding: 2rem; position: relative; overflow: hidden;">
@@ -511,7 +516,7 @@ const noindex  = page?.seo?.noindex ?? false;
         </div>
         <h3 style="font-family: 'Kanit', sans-serif; font-size: 1.2rem; font-weight: 700; color: #1C1C1C; margin-bottom: 0.625rem; letter-spacing: -0.02em;">{t('home.step3Title')}</h3>
         <p style="font-size: 0.875rem; color: #666; line-height: 1.7;">{t('home.step3Body')}</p>
-        <a href={`/${lang}/beginners-guide`} class="btn-ghost" style="margin-top: 1rem; color: #6155F1; font-weight: 600;">{t('home.step3Link')}</a>
+        <a href={`/${lang}/beginners-guide/`} class="btn-ghost" style="margin-top: 1rem; color: #6155F1; font-weight: 600;">{t('home.step3Link')}</a>
       </div>
 
     </div>
@@ -534,7 +539,7 @@ const noindex  = page?.seo?.noindex ?? false;
           {t('home.blogHeading')}
         </h2>
       </div>
-      <a href={`/${lang}/blog`} class="btn-ghost reveal" style="color: #6155F1; font-weight: 600;">
+      <a href={`/${lang}/blog/`} class="btn-ghost reveal" style="color: #6155F1; font-weight: 600;">
         {t('home.blogCtaBtn')}
         <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </a>
@@ -548,7 +553,7 @@ const noindex  = page?.seo?.noindex ?? false;
     <div class="blog-featured-grid" style="display: grid; grid-template-columns: 1.5fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem;">
 
       {featuredPost && (
-      <a href={`/${lang}/blog/${featuredPost.slug.current}`} class="card reveal" style="text-decoration: none; display: block; overflow: hidden;">
+      <a href={`/${lang}/blog/${featuredPost.slug.current}/`} class="card reveal" style="text-decoration: none; display: block; overflow: hidden;">
         {featuredPost.coverImage?.asset?.url && (
         <div class="blog-img-wrap" style="height: 260px; background: linear-gradient(135deg, #2A1F5C, #0D1547); display: flex; align-items: center; justify-content: center;">
           <img src={featuredPost.coverImage.asset.url} alt={featuredPost.title} style="width: 100%; height: 100%; object-fit: cover; display: block;" loading="lazy" />
@@ -571,7 +576,7 @@ const noindex  = page?.seo?.noindex ?? false;
           </p>
           )}
           <div style="display: flex; align-items: center; justify-content: space-between;">
-            <span style="font-size: 0.78rem; color: #999; font-weight: 500;">{formatDate(featuredPost.publishedAt)}</span>
+            <time style="font-size: 0.78rem; color: #999; font-weight: 500;" datetime={featuredPost.publishedAt}>{formatDate(featuredPost.publishedAt)}</time>
             <span style="color: #6155F1; font-size: 0.85rem; font-weight: 600; display: flex; align-items: center; gap: 0.3rem;">{t('blog.readArticle')} <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
           </div>
         </div>
@@ -580,7 +585,7 @@ const noindex  = page?.seo?.noindex ?? false;
 
       <div style="display: flex; flex-direction: column; gap: 1.25rem; height: 100%;">
         {sidePosts.map(post => (
-        <a href={`/${lang}/blog/${post.slug.current}`} class="card reveal" style="text-decoration: none; display: flex; gap: 1rem; padding: 1.125rem; align-items: flex-start; flex: 1;">
+        <a href={`/${lang}/blog/${post.slug.current}/`} class="card reveal" style="text-decoration: none; display: flex; gap: 1rem; padding: 1.125rem; align-items: flex-start; flex: 1;">
           {post.coverImage?.asset?.url && (
           <div style="width: 80px; height: 80px; border-radius: 10px; flex-shrink: 0; overflow: hidden; background: linear-gradient(135deg, #2A1F5C, #0D1547); display: flex; align-items: center; justify-content: center;">
             <img src={post.coverImage.asset.url} alt={post.title} style="width: 100%; height: 100%; object-fit: cover;" loading="lazy" />
@@ -591,7 +596,7 @@ const noindex  = page?.seo?.noindex ?? false;
             <div style="display: flex; gap: 0.4rem; margin-bottom: 0.5rem;"><span class="tag">{post.tags[0]}</span></div>
             )}
             <h4 style="font-family: 'Kanit', sans-serif; font-size: 0.95rem; font-weight: 700; color: #1C1C1C; line-height: 1.35; margin-bottom: 0.375rem; letter-spacing: -0.01em;">{post.title}</h4>
-            <span style="font-size: 0.75rem; color: #999; font-weight: 500;">{formatDate(post.publishedAt)}</span>
+            <time style="font-size: 0.75rem; color: #999; font-weight: 500;" datetime={post.publishedAt}>{formatDate(post.publishedAt)}</time>
           </div>
         </a>
         ))}
@@ -601,7 +606,7 @@ const noindex  = page?.seo?.noindex ?? false;
     {bottomPosts.length > 0 && (
     <div class="blog-bottom-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem;">
       {bottomPosts.map(post => (
-      <a href={`/${lang}/blog/${post.slug.current}`} class="card reveal" style="text-decoration: none; display: block; overflow: hidden;">
+      <a href={`/${lang}/blog/${post.slug.current}/`} class="card reveal" style="text-decoration: none; display: block; overflow: hidden;">
         {post.coverImage?.asset?.url && (
         <div style="height: 160px; background: linear-gradient(135deg, #2A1F5C, #0D1547); display: flex; align-items: center; justify-content: center; overflow: hidden;">
           <img src={post.coverImage.asset.url} alt={post.title} style="width: 100%; height: 100%; object-fit: cover; display: block;" loading="lazy" />
@@ -612,7 +617,7 @@ const noindex  = page?.seo?.noindex ?? false;
           <div style="display: flex; gap: 0.4rem; margin-bottom: 0.625rem;"><span class="tag">{post.tags[0]}</span></div>
           )}
           <h4 style="font-family: 'Kanit', sans-serif; font-size: 1rem; font-weight: 700; color: #1C1C1C; line-height: 1.35; margin-bottom: 0.5rem; letter-spacing: -0.01em;">{post.title}</h4>
-          <span style="font-size: 0.75rem; color: #999; font-weight: 500;">{formatDate(post.publishedAt)}</span>
+          <time style="font-size: 0.75rem; color: #999; font-weight: 500;" datetime={post.publishedAt}>{formatDate(post.publishedAt)}</time>
         </div>
       </a>
       ))}
