@@ -55,8 +55,8 @@ const shouldNoindex = seo?.noindex ?? noindex;
 // hreflang is emitted only for locale variants that are actually generated. The
 // caller knows for blog posts (translated slugs); the route registry knows for
 // every other page. Neither derives a URL by rewriting the current path, which is
-// how the site came to advertise 1,511 alternates that 404. An empty list — the
-// locale-less root — emits no alternates at all.
+// how the site came to advertise 1,511 alternates that 404. An empty list — /404
+// and the locale-less root — emits no alternates at all.
 const resolvedAlternates = alternates ?? staticPageAlternates(Astro.url.pathname, lang, SUPPORTED_LANGS);
 const hreflangs = resolvedAlternates.map(alternate => ({
   lang: alternate.lang,
