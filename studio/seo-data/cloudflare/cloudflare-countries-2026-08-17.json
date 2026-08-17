@@ -1,0 +1,54 @@
+{
+  "meta": {
+    "siteUrl": "aitoken.global",
+    "snapshotDate": "2026-08-17",
+    "rangeDays": 30,
+    "dataSource": "cloudflare"
+  },
+  "rows": [
+    {
+      "country": "TW",
+      "visits": 180
+    },
+    {
+      "country": "SG",
+      "visits": 90
+    },
+    {
+      "country": "US",
+      "visits": 50
+    },
+    {
+      "country": "ID",
+      "visits": 30
+    },
+    {
+      "country": "CN",
+      "visits": 20
+    },
+    {
+      "country": "CO",
+      "visits": 10
+    },
+    {
+      "country": "IE",
+      "visits": 10
+    },
+    {
+      "country": "ES",
+      "visits": 10
+    },
+    {
+      "country": "CA",
+      "visits": 10
+    },
+    {
+      "country": "NL",
+      "visits": 0
+    },
+    {
+      "country": "AE",
+      "visits": 0
+    }
+  ]
+}

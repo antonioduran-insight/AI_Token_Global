@@ -1,0 +1,64 @@
+{
+  "meta": {
+    "siteUrl": "aitoken.global",
+    "snapshotDate": "2026-08-17",
+    "rangeDays": 30,
+    "dataSource": "ga4"
+  },
+  "locales": [
+    {
+      "locale": "en",
+      "label": "English",
+      "current": {
+        "users": 108,
+        "engagedSessions": 127,
+        "engagementRate": 0.6580310880829016,
+        "avgEngagementSeconds": 29
+      },
+      "previous": {
+        "users": 40,
+        "engagedSessions": 49,
+        "engagementRate": 0.765625,
+        "avgEngagementSeconds": 46
+      },
+      "topPage": "/en/blog/",
+      "topChannel": "Direct"
+    },
+    {
+      "locale": "es",
+      "label": "Español",
+      "current": {
+        "users": 3,
+        "engagedSessions": 3,
+        "engagementRate": 1,
+        "avgEngagementSeconds": 5
+      },
+      "previous": {
+        "users": 5,
+        "engagedSessions": 4,
+        "engagementRate": 0.8,
+        "avgEngagementSeconds": 7
+      },
+      "topPage": "/es/blog/",
+      "topChannel": "Organic Search"
+    },
+    {
+      "locale": "id",
+      "label": "Indonesia",
+      "current": {
+        "users": 3,
+        "engagedSessions": 3,
+        "engagementRate": 1,
+        "avgEngagementSeconds": 7
+      },
+      "previous": {
+        "users": 7,
+        "engagedSessions": 6,
+        "engagementRate": 0.75,
+        "avgEngagementSeconds": 30
+      },
+      "topPage": "/id/blog/context-engineering-tata-kelola-ai-perusahaan/",
+      "topChannel": "Direct"
+    }
+  ]
+}
