@@ -1,0 +1,32 @@
+{
+  "siteUrl": "aitoken.global",
+  "snapshotDate": "2026-08-31",
+  "rangeDays": 30,
+  "dataSource": "gsc",
+  "rows": [
+    {
+      "locale": "id",
+      "label": "Indonesia",
+      "clicks": 4,
+      "impressions": 92,
+      "ctr": 0.043478260869565216,
+      "avgPosition": 5.369565217391305
+    },
+    {
+      "locale": "en",
+      "label": "English",
+      "clicks": 0,
+      "impressions": 107,
+      "ctr": 0,
+      "avgPosition": 47.86915887850467
+    },
+    {
+      "locale": "es",
+      "label": "Español",
+      "clicks": 0,
+      "impressions": 5,
+      "ctr": 0,
+      "avgPosition": 43.8
+    }
+  ]
+}

@@ -1,0 +1,154 @@
+{
+  "siteUrl": "aitoken.global",
+  "snapshotDate": "2026-08-31",
+  "rangeDays": 30,
+  "dataSource": "gsc",
+  "rows": [
+    {
+      "query": "beli token ai",
+      "locale": "id",
+      "clicks": 3,
+      "impressions": 57,
+      "ctr": 0.05263157894736842,
+      "position": 2.824561403508772
+    },
+    {
+      "query": "chat api platform",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 19,
+      "ctr": 0,
+      "position": 42.94736842105263
+    },
+    {
+      "query": "chat api",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 10,
+      "ctr": 0,
+      "position": 87.7
+    },
+    {
+      "query": "jual token ai",
+      "locale": "id",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 9
+    },
+    {
+      "query": "token use",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 93.5
+    },
+    {
+      "query": "ai and tokenization",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 82
+    },
+    {
+      "query": "ai token analysis",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 97
+    },
+    {
+      "query": "ai token consumption",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 84
+    },
+    {
+      "query": "ai tokenization",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 75
+    },
+    {
+      "query": "ai tokens for business",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 68
+    },
+    {
+      "query": "api chat",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 73
+    },
+    {
+      "query": "api-chat",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 71
+    },
+    {
+      "query": "chat-api",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 89
+    },
+    {
+      "query": "chatgpt token usage",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 45
+    },
+    {
+      "query": "gemini token",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 50
+    },
+    {
+      "query": "token usage data",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 94
+    },
+    {
+      "query": "tokenization ai",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 71
+    },
+    {
+      "query": "tokens gemini",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 44
+    }
+  ],
+  "strikingDistance": [],
+  "ctrOutliers": []
+}

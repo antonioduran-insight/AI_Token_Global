@@ -1,0 +1,208 @@
+{
+  "meta": {
+    "siteUrl": "aitoken.global",
+    "snapshotDate": "2026-08-31",
+    "rangeDays": 30,
+    "dataSource": "cloudflare"
+  },
+  "rows": [
+    {
+      "page": "/en/use-cases/",
+      "locale": "en",
+      "visits": 70,
+      "pageViews": 80
+    },
+    {
+      "page": "/en/",
+      "locale": "en",
+      "visits": 50,
+      "pageViews": 160
+    },
+    {
+      "page": "/en/claude-api/",
+      "locale": "en",
+      "visits": 30,
+      "pageViews": 30
+    },
+    {
+      "page": "/en/token-calculator/",
+      "locale": "en",
+      "visits": 30,
+      "pageViews": 30
+    },
+    {
+      "page": "/en/gemini-api/",
+      "locale": "en",
+      "visits": 30,
+      "pageViews": 30
+    },
+    {
+      "page": "/en/blog/how-to-build-reliable-ai-agent-skills/",
+      "locale": "en",
+      "visits": 20,
+      "pageViews": 20
+    },
+    {
+      "page": "/en/beginners-guide/",
+      "locale": "en",
+      "visits": 20,
+      "pageViews": 20
+    },
+    {
+      "page": "/en/blog/ai-token-impact-answer-quality/",
+      "locale": "en",
+      "visits": 20,
+      "pageViews": 20
+    },
+    {
+      "page": "/en/blog/what-altmans-token-forecast-means-for-your-ai-startup/",
+      "locale": "en",
+      "visits": 20,
+      "pageViews": 30
+    },
+    {
+      "page": "/en/blog/calculating-ai-token-costs-made-easy/",
+      "locale": "en",
+      "visits": 20,
+      "pageViews": 20
+    },
+    {
+      "page": "/en/user-guide/",
+      "locale": "en",
+      "visits": 20,
+      "pageViews": 20
+    },
+    {
+      "page": "/en/blog/ai-token-provider-comparison-prices-features-use-cases/",
+      "locale": "en",
+      "visits": 20,
+      "pageViews": 20
+    },
+    {
+      "page": "/en/blog/",
+      "locale": "en",
+      "visits": 10,
+      "pageViews": 80
+    },
+    {
+      "page": "/en/blog/claude-api-usage-and-cost-metrics-explained/",
+      "locale": "en",
+      "visits": 10,
+      "pageViews": 10
+    },
+    {
+      "page": "/en/blog/understanding-tokenization-in-finance/",
+      "locale": "en",
+      "visits": 10,
+      "pageViews": 10
+    },
+    {
+      "page": "/en/blog/gpt-5-6-sol-price-cut-2026-vs-claude-opus-5/",
+      "locale": "en",
+      "visits": 10,
+      "pageViews": 10
+    },
+    {
+      "page": "/es/gemini-api/",
+      "locale": "es",
+      "visits": 10,
+      "pageViews": 10
+    },
+    {
+      "page": "/en/blog/understanding-ai-tokens-beginners-guide-api-token-mechanics/",
+      "locale": "en",
+      "visits": 10,
+      "pageViews": 10
+    },
+    {
+      "page": "/es/claude-api/",
+      "locale": "es",
+      "visits": 10,
+      "pageViews": 10
+    },
+    {
+      "page": "/id/beginners-guide/",
+      "locale": "id",
+      "visits": 10,
+      "pageViews": 10
+    },
+    {
+      "page": "/en/blog/ai-token-management-for-enterprises/",
+      "locale": "en",
+      "visits": 10,
+      "pageViews": 10
+    },
+    {
+      "page": "/en/api-compare/",
+      "locale": "en",
+      "visits": 10,
+      "pageViews": 10
+    },
+    {
+      "page": "/en/blog/the-ai-bill-that-scared-him-turned-out-to-be-a-mirror/",
+      "locale": "en",
+      "visits": 10,
+      "pageViews": 10
+    },
+    {
+      "page": "/en/chatgpt-api/",
+      "locale": "en",
+      "visits": 10,
+      "pageViews": 10
+    },
+    {
+      "page": "/en/blog/how-to-build-your-first-ai-agent/",
+      "locale": "en",
+      "visits": 10,
+      "pageViews": 10
+    },
+    {
+      "page": "/en/ai-trends/",
+      "locale": "en",
+      "visits": 10,
+      "pageViews": 10
+    },
+    {
+      "page": "/en/blog/ai-token-basics-for-beginners/",
+      "locale": "en",
+      "visits": 10,
+      "pageViews": 10
+    },
+    {
+      "page": "/en/blog/ai-token-prepayment-postpayment/",
+      "locale": "en",
+      "visits": 10,
+      "pageViews": 10
+    },
+    {
+      "page": "/en/blog/financial-data-ai-api-security/",
+      "locale": "en",
+      "visits": 10,
+      "pageViews": 10
+    },
+    {
+      "page": "/en/blog/what-is-openrouter-ai-gateway/",
+      "locale": "en",
+      "visits": 0,
+      "pageViews": 10
+    },
+    {
+      "page": "/en/blog/how-much-does-it-cost-to-self-host-a-frontier-ai-model/",
+      "locale": "en",
+      "visits": 0,
+      "pageViews": 10
+    },
+    {
+      "page": "/en/blog/why-ai-agent-went-rogue-security-lessons-for-taiwan-enterprises/",
+      "locale": "en",
+      "visits": 0,
+      "pageViews": 10
+    },
+    {
+      "page": "/en/blog/how-new-ai-model-is-54-percent-more-token-efficient-what-it-means-for-cost/",
+      "locale": "en",
+      "visits": 0,
+      "pageViews": 10
+    }
+  ]
+}
