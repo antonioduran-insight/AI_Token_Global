@@ -10,7 +10,7 @@
  * date is rendered next to every pricing block on the site.
  */
 
-export const PRICING_LAST_CHECKED = '2026-08-11';
+export const PRICING_LAST_CHECKED = '2026-09-03';
 
 export type Provider = 'OpenAI' | 'Anthropic' | 'Google';
 
@@ -82,11 +82,6 @@ export const MODELS: Model[] = [
     inputPerMillion: 2.0,
     outputPerMillion: 10.0,
     sourceUrl: PROVIDER_PRICING_URL.Anthropic,
-    upcomingChange: {
-      effectiveDate: '2026-09-01',
-      inputPerMillion: 3.0,
-      outputPerMillion: 15.0,
-    },
   },
   {
     provider: 'Anthropic',
