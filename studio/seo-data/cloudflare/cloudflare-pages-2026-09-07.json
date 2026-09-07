@@ -1,0 +1,46 @@
+{
+  "meta": {
+    "siteUrl": "aitoken.global",
+    "snapshotDate": "2026-09-07",
+    "rangeDays": 30,
+    "dataSource": "cloudflare"
+  },
+  "rows": [
+    {
+      "page": "/en/use-cases/",
+      "locale": "en",
+      "visits": 200,
+      "pageViews": 200
+    },
+    {
+      "page": "/en/blog/how-to-build-reliable-ai-agent-skills/",
+      "locale": "en",
+      "visits": 100,
+      "pageViews": 100
+    },
+    {
+      "page": "/en/",
+      "locale": "en",
+      "visits": 100,
+      "pageViews": 400
+    },
+    {
+      "page": "/en/blog/ai-token-provider-comparison-prices-features-use-cases/",
+      "locale": "en",
+      "visits": 100,
+      "pageViews": 100
+    },
+    {
+      "page": "/en/blog/what-is-openrouter-ai-gateway/",
+      "locale": "en",
+      "visits": 0,
+      "pageViews": 100
+    },
+    {
+      "page": "/en/blog/what-altmans-token-forecast-means-for-your-ai-startup/",
+      "locale": "en",
+      "visits": 0,
+      "pageViews": 100
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "meta": {
+    "siteUrl": "aitoken.global",
+    "snapshotDate": "2026-09-07",
+    "rangeDays": 30,
+    "dataSource": "cloudflare"
+  },
+  "rows": [
+    {
+      "referrer": "Direct / none",
+      "visits": 310
+    },
+    {
+      "referrer": "www.google.com",
+      "visits": 60
+    },
+    {
+      "referrer": "www.linkedin.com",
+      "visits": 20
+    },
+    {
+      "referrer": "www.echonimo.com",
+      "visits": 10
+    },
+    {
+      "referrer": "www.perplexity.ai",
+      "visits": 10
+    },
+    {
+      "referrer": "www.aitoken.global",
+      "visits": 0
+    }
+  ]
+}
