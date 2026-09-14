@@ -1,0 +1,136 @@
+{
+  "meta": {
+    "siteUrl": "aitoken.global",
+    "snapshotDate": "2026-09-14",
+    "rangeDays": 30,
+    "dataSource": "cloudflare"
+  },
+  "rows": [
+    {
+      "page": "/en/use-cases/",
+      "locale": "en",
+      "visits": 70,
+      "pageViews": 70
+    },
+    {
+      "page": "/en/",
+      "locale": "en",
+      "visits": 40,
+      "pageViews": 160
+    },
+    {
+      "page": "/en/blog/ai-token-impact-answer-quality/",
+      "locale": "en",
+      "visits": 40,
+      "pageViews": 40
+    },
+    {
+      "page": "/en/token-calculator/",
+      "locale": "en",
+      "visits": 30,
+      "pageViews": 30
+    },
+    {
+      "page": "/en/beginners-guide/",
+      "locale": "en",
+      "visits": 20,
+      "pageViews": 20
+    },
+    {
+      "page": "/es/api-compare/",
+      "locale": "es",
+      "visits": 20,
+      "pageViews": 20
+    },
+    {
+      "page": "/en/blog/ai-token-provider-comparison-prices-features-use-cases/",
+      "locale": "en",
+      "visits": 20,
+      "pageViews": 20
+    },
+    {
+      "page": "/en/blog/claude-api-usage-and-cost-metrics-explained/",
+      "locale": "en",
+      "visits": 10,
+      "pageViews": 10
+    },
+    {
+      "page": "/en/blog/gpt-5-6-sol-price-cut-2026-vs-claude-opus-5/",
+      "locale": "en",
+      "visits": 10,
+      "pageViews": 10
+    },
+    {
+      "page": "/en/gemini-api/",
+      "locale": "en",
+      "visits": 10,
+      "pageViews": 10
+    },
+    {
+      "page": "/es/gemini-api/",
+      "locale": "es",
+      "visits": 10,
+      "pageViews": 10
+    },
+    {
+      "page": "/en/blog/what-altmans-token-forecast-means-for-your-ai-startup/",
+      "locale": "en",
+      "visits": 10,
+      "pageViews": 10
+    },
+    {
+      "page": "/en/blog/understanding-ai-tokens-beginners-guide-api-token-mechanics/",
+      "locale": "en",
+      "visits": 10,
+      "pageViews": 10
+    },
+    {
+      "page": "/es/claude-api/",
+      "locale": "es",
+      "visits": 10,
+      "pageViews": 10
+    },
+    {
+      "page": "/en/blog/calculating-ai-token-costs-made-easy/",
+      "locale": "en",
+      "visits": 10,
+      "pageViews": 10
+    },
+    {
+      "page": "/id/beginners-guide/",
+      "locale": "id",
+      "visits": 10,
+      "pageViews": 10
+    },
+    {
+      "page": "/en/api-compare/",
+      "locale": "en",
+      "visits": 10,
+      "pageViews": 10
+    },
+    {
+      "page": "/en/blog/the-ai-bill-that-scared-him-turned-out-to-be-a-mirror/",
+      "locale": "en",
+      "visits": 10,
+      "pageViews": 10
+    },
+    {
+      "page": "/en/chatgpt-api/",
+      "locale": "en",
+      "visits": 10,
+      "pageViews": 10
+    },
+    {
+      "page": "/en/blog/",
+      "locale": "en",
+      "visits": 0,
+      "pageViews": 20
+    },
+    {
+      "page": "/en/blog/what-is-openrouter-ai-gateway/",
+      "locale": "en",
+      "visits": 0,
+      "pageViews": 10
+    }
+  ]
+}

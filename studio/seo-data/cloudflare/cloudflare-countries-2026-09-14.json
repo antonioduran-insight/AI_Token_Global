@@ -1,0 +1,38 @@
+{
+  "meta": {
+    "siteUrl": "aitoken.global",
+    "snapshotDate": "2026-09-14",
+    "rangeDays": 30,
+    "dataSource": "cloudflare"
+  },
+  "rows": [
+    {
+      "country": "CN",
+      "visits": 360
+    },
+    {
+      "country": "US",
+      "visits": 30
+    },
+    {
+      "country": "TW",
+      "visits": 20
+    },
+    {
+      "country": "HK",
+      "visits": 10
+    },
+    {
+      "country": "AE",
+      "visits": 10
+    },
+    {
+      "country": "CA",
+      "visits": 10
+    },
+    {
+      "country": "FR",
+      "visits": 0
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "meta": {
+    "siteUrl": "aitoken.global",
+    "snapshotDate": "2026-09-14",
+    "rangeDays": 30,
+    "dataSource": "ga4"
+  },
+  "locales": [
+    {
+      "locale": "en",
+      "label": "English",
+      "current": {
+        "users": 18,
+        "engagedSessions": 25,
+        "engagementRate": 0.8064516129032258,
+        "avgEngagementSeconds": 23
+      },
+      "previous": {
+        "users": 119,
+        "engagedSessions": 138,
+        "engagementRate": 0.6602870813397129,
+        "avgEngagementSeconds": 28
+      },
+      "topPage": "/en/blog/",
+      "topChannel": "Organic Search"
+    },
+    {
+      "locale": "es",
+      "label": "Español",
+      "current": {
+        "users": 1,
+        "engagedSessions": 1,
+        "engagementRate": 1,
+        "avgEngagementSeconds": 6
+      },
+      "previous": {
+        "users": 5,
+        "engagedSessions": 6,
+        "engagementRate": 1,
+        "avgEngagementSeconds": 10
+      },
+      "topPage": "/es/blog/",
+      "topChannel": "Organic Search"
+    },
+    {
+      "locale": "id",
+      "label": "Indonesia",
+      "current": {
+        "users": 1,
+        "engagedSessions": 0,
+        "engagementRate": 0,
+        "avgEngagementSeconds": 7
+      },
+      "previous": {
+        "users": 4,
+        "engagedSessions": 5,
+        "engagementRate": 1,
+        "avgEngagementSeconds": 9
+      },
+      "topPage": "/id/blog/membeli-token-ai-pemula/",
+      "topChannel": "Organic Search"
+    }
+  ]
+}
