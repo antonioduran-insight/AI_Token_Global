@@ -1,0 +1,20 @@
+{
+  "meta": {
+    "siteUrl": "aitoken.global",
+    "snapshotDate": "2026-09-28",
+    "rangeDays": 30,
+    "dataSource": "ga4"
+  },
+  "current": {
+    "users": 6,
+    "engagedSessions": 14,
+    "engagementRate": 0.7,
+    "avgEngagementSeconds": 54
+  },
+  "previous": {
+    "users": 49,
+    "engagedSessions": 42,
+    "engagementRate": 0.4375,
+    "avgEngagementSeconds": 44
+  }
+}

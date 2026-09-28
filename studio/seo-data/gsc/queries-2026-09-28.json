@@ -1,0 +1,138 @@
+{
+  "siteUrl": "aitoken.global",
+  "snapshotDate": "2026-09-28",
+  "rangeDays": 30,
+  "dataSource": "gsc",
+  "rows": [
+    {
+      "query": "beli token ai",
+      "locale": "id",
+      "clicks": 0,
+      "impressions": 11,
+      "ctr": 0,
+      "position": 3.272727272727273
+    },
+    {
+      "query": "beli token ai murah",
+      "locale": "id",
+      "clicks": 1,
+      "impressions": 10,
+      "ctr": 0.1,
+      "position": 6.8
+    },
+    {
+      "query": "ai token usage",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 82.33333333333333
+    },
+    {
+      "query": "ai token management",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 41
+    },
+    {
+      "query": "aitoken",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 1
+    },
+    {
+      "query": "api tokens",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 9
+    },
+    {
+      "query": "chatgpt token usage",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 44
+    },
+    {
+      "query": "claude price",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 10
+    },
+    {
+      "query": "claude token",
+      "locale": "id",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 6
+    },
+    {
+      "query": "how many tokens do you use per month",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 64
+    },
+    {
+      "query": "how to see token usage in chatgpt",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 11
+    },
+    {
+      "query": "token api",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 83
+    },
+    {
+      "query": "token usage ai",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 77
+    },
+    {
+      "query": "token usage tracking",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 18
+    },
+    {
+      "query": "token use",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 100
+    },
+    {
+      "query": "what are ai tokens",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 41
+    }
+  ],
+  "strikingDistance": [],
+  "ctrOutliers": []
+}

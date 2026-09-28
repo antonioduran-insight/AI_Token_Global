@@ -1,0 +1,118 @@
+{
+  "meta": {
+    "siteUrl": "aitoken.global",
+    "snapshotDate": "2026-09-28",
+    "rangeDays": 30,
+    "dataSource": "cloudflare"
+  },
+  "rows": [
+    {
+      "page": "/en/api-compare/",
+      "locale": "en",
+      "visits": 70,
+      "pageViews": 70
+    },
+    {
+      "page": "/en/token-calculator/",
+      "locale": "en",
+      "visits": 40,
+      "pageViews": 40
+    },
+    {
+      "page": "/en/",
+      "locale": "en",
+      "visits": 40,
+      "pageViews": 130
+    },
+    {
+      "page": "/en/use-cases/",
+      "locale": "en",
+      "visits": 40,
+      "pageViews": 40
+    },
+    {
+      "page": "/es/api-compare/",
+      "locale": "es",
+      "visits": 40,
+      "pageViews": 40
+    },
+    {
+      "page": "/en/blog/ai-token-impact-answer-quality/",
+      "locale": "en",
+      "visits": 30,
+      "pageViews": 30
+    },
+    {
+      "page": "/en/beginners-guide/",
+      "locale": "en",
+      "visits": 20,
+      "pageViews": 20
+    },
+    {
+      "page": "/es/",
+      "locale": "es",
+      "visits": 20,
+      "pageViews": 20
+    },
+    {
+      "page": "/en/gemini-api/",
+      "locale": "en",
+      "visits": 10,
+      "pageViews": 10
+    },
+    {
+      "page": "/id/",
+      "locale": "id",
+      "visits": 10,
+      "pageViews": 10
+    },
+    {
+      "page": "/en/blog/how-to-use-chatgpt-work-agents-md-guide/",
+      "locale": "en",
+      "visits": 10,
+      "pageViews": 10
+    },
+    {
+      "page": "/en/user-guide/",
+      "locale": "en",
+      "visits": 10,
+      "pageViews": 10
+    },
+    {
+      "page": "/id/beginners-guide/",
+      "locale": "id",
+      "visits": 10,
+      "pageViews": 10
+    },
+    {
+      "page": "/en/blog/",
+      "locale": "en",
+      "visits": 0,
+      "pageViews": 10
+    },
+    {
+      "page": "/id/blog/what-is-intent-md-claude-code-ai-native-sdlc/",
+      "locale": "id",
+      "visits": 0,
+      "pageViews": 10
+    },
+    {
+      "page": "/en/blog/why-1-6-billion-free-claude-code-tokens-has-a-catch/",
+      "locale": "en",
+      "visits": 0,
+      "pageViews": 10
+    },
+    {
+      "page": "/en/blog/how-to-build-realtime-voice-ai-agent-with-gemini-live-api/",
+      "locale": "en",
+      "visits": 0,
+      "pageViews": 10
+    },
+    {
+      "page": "/en/blog/what-is-gpt-image-2-5-sunburst-flare/",
+      "locale": "en",
+      "visits": 0,
+      "pageViews": 10
+    }
+  ]
+}
