@@ -1,0 +1,160 @@
+{
+  "meta": {
+    "siteUrl": "aitoken.global",
+    "snapshotDate": "2026-10-05",
+    "rangeDays": 30,
+    "dataSource": "cloudflare"
+  },
+  "rows": [
+    {
+      "page": "/en/",
+      "locale": "en",
+      "visits": 80,
+      "pageViews": 170
+    },
+    {
+      "page": "/en/api-compare/",
+      "locale": "en",
+      "visits": 80,
+      "pageViews": 80
+    },
+    {
+      "page": "/en/use-cases/",
+      "locale": "en",
+      "visits": 60,
+      "pageViews": 60
+    },
+    {
+      "page": "/es/api-compare/",
+      "locale": "es",
+      "visits": 50,
+      "pageViews": 50
+    },
+    {
+      "page": "/en/token-calculator/",
+      "locale": "en",
+      "visits": 40,
+      "pageViews": 40
+    },
+    {
+      "page": "/es/",
+      "locale": "es",
+      "visits": 40,
+      "pageViews": 40
+    },
+    {
+      "page": "/en/beginners-guide/",
+      "locale": "en",
+      "visits": 30,
+      "pageViews": 30
+    },
+    {
+      "page": "/en/blog/ai-token-impact-answer-quality/",
+      "locale": "en",
+      "visits": 30,
+      "pageViews": 30
+    },
+    {
+      "page": "/en/blog/ai-tokens-api-keys-for-beginners/",
+      "locale": "en",
+      "visits": 20,
+      "pageViews": 20
+    },
+    {
+      "page": "/id/beginners-guide/",
+      "locale": "id",
+      "visits": 20,
+      "pageViews": 20
+    },
+    {
+      "page": "/id/blog/membeli-token-ai-pemula/",
+      "locale": "id",
+      "visits": 20,
+      "pageViews": 20
+    },
+    {
+      "page": "/id/blog/harga-token-claude-antropik-api/",
+      "locale": "id",
+      "visits": 10,
+      "pageViews": 10
+    },
+    {
+      "page": "/es/token-calculator/",
+      "locale": "es",
+      "visits": 10,
+      "pageViews": 10
+    },
+    {
+      "page": "/id/",
+      "locale": "id",
+      "visits": 10,
+      "pageViews": 10
+    },
+    {
+      "page": "/en/blog/how-to-use-chatgpt-work-agents-md-guide/",
+      "locale": "en",
+      "visits": 10,
+      "pageViews": 10
+    },
+    {
+      "page": "/en/user-guide/",
+      "locale": "en",
+      "visits": 10,
+      "pageViews": 10
+    },
+    {
+      "page": "/en/blog/understanding-ai-token-basics-for-a-smarter-future/",
+      "locale": "en",
+      "visits": 10,
+      "pageViews": 10
+    },
+    {
+      "page": "/en/blog/",
+      "locale": "en",
+      "visits": 0,
+      "pageViews": 20
+    },
+    {
+      "page": "/id/blog/what-is-intent-md-claude-code-ai-native-sdlc/",
+      "locale": "id",
+      "visits": 0,
+      "pageViews": 10
+    },
+    {
+      "page": "/id/api-compare/",
+      "locale": "id",
+      "visits": 0,
+      "pageViews": 10
+    },
+    {
+      "page": "/en/blog/why-1-6-billion-free-claude-code-tokens-has-a-catch/",
+      "locale": "en",
+      "visits": 0,
+      "pageViews": 10
+    },
+    {
+      "page": "/en/blog/local-ai-vs-cloud-ai-same-job-comparison/",
+      "locale": "en",
+      "visits": 0,
+      "pageViews": 10
+    },
+    {
+      "page": "/en/blog/how-to-build-realtime-voice-ai-agent-with-gemini-live-api/",
+      "locale": "en",
+      "visits": 0,
+      "pageViews": 10
+    },
+    {
+      "page": "/id/blog/",
+      "locale": "id",
+      "visits": 0,
+      "pageViews": 10
+    },
+    {
+      "page": "/en/blog/what-is-gpt-image-2-5-sunburst-flare/",
+      "locale": "en",
+      "visits": 0,
+      "pageViews": 10
+    }
+  ]
+}

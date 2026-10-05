@@ -1,0 +1,304 @@
+{
+  "meta": {
+    "siteUrl": "aitoken.global",
+    "snapshotDate": "2026-10-05",
+    "rangeDays": 30,
+    "dataSource": "ga4"
+  },
+  "rows": [
+    {
+      "page": "/en/blog/",
+      "locale": "en",
+      "views": 36,
+      "users": 2,
+      "avgEngagementSeconds": 237
+    },
+    {
+      "page": "/en/",
+      "locale": "en",
+      "views": 17,
+      "users": 9,
+      "avgEngagementSeconds": 20
+    },
+    {
+      "page": "/en/blog/what-is-gpt-image-2-5-sunburst-flare/",
+      "locale": "en",
+      "views": 7,
+      "users": 1,
+      "avgEngagementSeconds": 29
+    },
+    {
+      "page": "/id/blog/membeli-token-ai-pemula/",
+      "locale": "id",
+      "views": 7,
+      "users": 7,
+      "avgEngagementSeconds": 8
+    },
+    {
+      "page": "/en/api-compare/",
+      "locale": "en",
+      "views": 5,
+      "users": 3,
+      "avgEngagementSeconds": 24
+    },
+    {
+      "page": "/id/",
+      "locale": "id",
+      "views": 4,
+      "users": 2,
+      "avgEngagementSeconds": 17
+    },
+    {
+      "page": "/en/blog/how-to-automate-business-workflow-with-codex/",
+      "locale": "en",
+      "views": 3,
+      "users": 1,
+      "avgEngagementSeconds": 19
+    },
+    {
+      "page": "/en/blog/how-to-use-chatgpt-work-agents-md-guide/",
+      "locale": "en",
+      "views": 3,
+      "users": 1,
+      "avgEngagementSeconds": 5
+    },
+    {
+      "page": "/en/blog/what-is-meta-muse-personal-agent-vs-openclaw/",
+      "locale": "en",
+      "views": 3,
+      "users": 1,
+      "avgEngagementSeconds": 5
+    },
+    {
+      "page": "/en/blog/why-1-6-billion-free-claude-code-tokens-has-a-catch/",
+      "locale": "en",
+      "views": 3,
+      "users": 1,
+      "avgEngagementSeconds": 11
+    },
+    {
+      "page": "/es/blog/",
+      "locale": "es",
+      "views": 3,
+      "users": 1,
+      "avgEngagementSeconds": 14
+    },
+    {
+      "page": "/id/blog/",
+      "locale": "id",
+      "views": 3,
+      "users": 2,
+      "avgEngagementSeconds": 15
+    },
+    {
+      "page": "/en/blog/ai-tokens-api-keys-for-beginners/",
+      "locale": "en",
+      "views": 2,
+      "users": 2,
+      "avgEngagementSeconds": 81
+    },
+    {
+      "page": "/en/blog/buying-ai-tokens-for-personal-use/",
+      "locale": "en",
+      "views": 2,
+      "users": 2,
+      "avgEngagementSeconds": 41
+    },
+    {
+      "page": "/en/blog/how-to-build-ai-agency-with-codex-automation/",
+      "locale": "en",
+      "views": 2,
+      "users": 1,
+      "avgEngagementSeconds": 14
+    },
+    {
+      "page": "/en/blog/how-to-build-ai-video-generator-reduce-cost-seedance/",
+      "locale": "en",
+      "views": 2,
+      "users": 1,
+      "avgEngagementSeconds": 3
+    },
+    {
+      "page": "/en/blog/how-to-build-realtime-voice-ai-agent-with-gemini-live-api/",
+      "locale": "en",
+      "views": 2,
+      "users": 1,
+      "avgEngagementSeconds": 8
+    },
+    {
+      "page": "/en/blog/how-to-prompt-claude-5-models/",
+      "locale": "en",
+      "views": 2,
+      "users": 1,
+      "avgEngagementSeconds": 3
+    },
+    {
+      "page": "/en/blog/local-ai-vs-cloud-ai-same-job-comparison/",
+      "locale": "en",
+      "views": 2,
+      "users": 1,
+      "avgEngagementSeconds": 5
+    },
+    {
+      "page": "/en/blog/self-hosted-ai-stack-guide/",
+      "locale": "en",
+      "views": 2,
+      "users": 1,
+      "avgEngagementSeconds": 1
+    },
+    {
+      "page": "/en/blog/what-is-intent-md-claude-code-ai-native-sdlc/",
+      "locale": "en",
+      "views": 2,
+      "users": 1,
+      "avgEngagementSeconds": 9
+    },
+    {
+      "page": "/id/blog/harga-token-claude-antropik-api/",
+      "locale": "id",
+      "views": 2,
+      "users": 2,
+      "avgEngagementSeconds": 8
+    },
+    {
+      "page": "/id/blog/what-is-intent-md-claude-code-ai-native-sdlc/",
+      "locale": "id",
+      "views": 2,
+      "users": 1,
+      "avgEngagementSeconds": 10
+    },
+    {
+      "page": "/en/beginners-guide/",
+      "locale": "en",
+      "views": 1,
+      "users": 1,
+      "avgEngagementSeconds": 5
+    },
+    {
+      "page": "/en/blog/ai-token-pricing-models-comparison/",
+      "locale": "en",
+      "views": 1,
+      "users": 1,
+      "avgEngagementSeconds": 1
+    },
+    {
+      "page": "/en/blog/ai-token-usage-limits/",
+      "locale": "en",
+      "views": 1,
+      "users": 1,
+      "avgEngagementSeconds": 70
+    },
+    {
+      "page": "/en/blog/chatgpt-api-pricing-vs-subscription-cost-difference/",
+      "locale": "en",
+      "views": 1,
+      "users": 1,
+      "avgEngagementSeconds": 81
+    },
+    {
+      "page": "/en/blog/context-engineering-missing-piece-enterprise-ai/",
+      "locale": "en",
+      "views": 1,
+      "users": 1,
+      "avgEngagementSeconds": 1
+    },
+    {
+      "page": "/en/blog/geminia-api-vs-gemini/",
+      "locale": "en",
+      "views": 1,
+      "users": 1,
+      "avgEngagementSeconds": 33
+    },
+    {
+      "page": "/en/blog/gpt-5-6-sol-price-cut-2026-vs-claude-opus-5/",
+      "locale": "en",
+      "views": 1,
+      "users": 1,
+      "avgEngagementSeconds": 3
+    },
+    {
+      "page": "/en/blog/how-to-replace-ai-subscription-stack-with-open-source-tools/",
+      "locale": "en",
+      "views": 1,
+      "users": 1,
+      "avgEngagementSeconds": 2
+    },
+    {
+      "page": "/en/blog/how-to-stop-wasting-ai-credits-prompt-engineering-tips/",
+      "locale": "en",
+      "views": 1,
+      "users": 0,
+      "avgEngagementSeconds": 0
+    },
+    {
+      "page": "/en/blog/token-consumption-comparison-between-chatgpt-claude-and-gemini/",
+      "locale": "en",
+      "views": 1,
+      "users": 1,
+      "avgEngagementSeconds": 7
+    },
+    {
+      "page": "/en/contact/",
+      "locale": "en",
+      "views": 1,
+      "users": 1,
+      "avgEngagementSeconds": 1
+    },
+    {
+      "page": "/es/blog/what-is-intent-md-claude-code-ai-native-sdlc/",
+      "locale": "es",
+      "views": 1,
+      "users": 1,
+      "avgEngagementSeconds": 3
+    },
+    {
+      "page": "/id/ai-trends/",
+      "locale": "id",
+      "views": 1,
+      "users": 1,
+      "avgEngagementSeconds": 8
+    },
+    {
+      "page": "/id/api-compare/",
+      "locale": "id",
+      "views": 1,
+      "users": 1,
+      "avgEngagementSeconds": 13
+    },
+    {
+      "page": "/id/blog/how-to-automate-business-workflow-with-codex/",
+      "locale": "id",
+      "views": 1,
+      "users": 1,
+      "avgEngagementSeconds": 0
+    },
+    {
+      "page": "/id/blog/how-to-build-ai-agency-with-codex-automation/",
+      "locale": "id",
+      "views": 1,
+      "users": 1,
+      "avgEngagementSeconds": 0
+    },
+    {
+      "page": "/id/blog/mengerti-penggunaan-token-ai/",
+      "locale": "id",
+      "views": 1,
+      "users": 1,
+      "avgEngagementSeconds": 13
+    },
+    {
+      "page": "/id/blog/tidak-panik-ketika-token-ai-anda-habis-panduan-langkah-demi-langkah/",
+      "locale": "id",
+      "views": 1,
+      "users": 1,
+      "avgEngagementSeconds": 6
+    },
+    {
+      "page": "/id/token-calculator/",
+      "locale": "id",
+      "views": 1,
+      "users": 1,
+      "avgEngagementSeconds": 26
+    }
+  ]
+}
