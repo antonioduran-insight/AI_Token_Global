@@ -337,7 +337,7 @@ const CACHE_LEFT_RE = /(?:cach(?:e|ed)\s(?:input|read|write|hit)s?|cache\swrites
  * Model names that are not in MODELS. A price written right after one of these
  * belongs to that model, even when a MODELS name sits a little further back.
  */
-const OTHER_MODEL_RE = /(?<![\p{L}\p{N}-])(?:GPT-?\d[\d.]*(?:\s?(?:Sol|Terra|Luna|Turbo|mini|nano|Pro|o))?|o\d(?:-mini|-pro)?|ChatGPT|Claude(?:\s(?:Opus|Sonnet|Haiku))?(?:\s\d+(?:\.\d+)?)?|(?:Opus|Sonnet|Haiku)\s\d+(?:\.\d+)?|Gemini(?:\s\d+(?:\.\d+)?)?(?:\s(?:Pro|Flash(?:-Lite)?|Ultra|Nano|Live))?|Llama\s?[\d.]*|Mistral(?:\s(?:Large|Medium|Small))?|DeepSeek(?:[\s-][A-Z]?\d[\w.]*)?|Grok\s?[\d.]*|Qwen[\w.-]*|Kimi[\w.\s-]{0,4}|GLM-?[\d.]*|Sol)(?![\p{L}\p{N}])/gu;
+const OTHER_MODEL_RE = /(?<![\p{L}\p{N}-])(?:GPT-?\d[\d.]*(?:\s?(?:Sol|Terra|Luna|Cyber|Codex|Turbo|mini|nano|Pro|o))?|o\d(?:-mini|-pro)?|ChatGPT|Claude(?:\s(?:Opus|Sonnet|Haiku))?(?:\s\d+(?:\.\d+)?)?|(?:Opus|Sonnet|Haiku)\s\d+(?:\.\d+)?|Gemini(?:\s\d+(?:\.\d+)?)?(?:\s(?:Pro|Flash(?:-Lite)?|Ultra|Nano|Live))?|Llama\s?[\d.]*|Mistral(?:\s(?:Large|Medium|Small))?|DeepSeek(?:[\s-][A-Z]?\d[\w.]*)?|Grok\s?[\d.]*|Qwen[\w.-]*|Kimi[\w.\s-]{0,4}|GLM-?[\d.]*|Sol)(?![\p{L}\p{N}])/gu;
 
 /** Every model mention in the window, MODELS or not, nearest-first, preceding ones before following. */
 function mentionsInWindow(text, start, end) {
