@@ -59,6 +59,14 @@ export const PROVIDER_PRICING_URL: Record<Provider, string> = {
 export const MODELS: Model[] = [
   {
     provider: 'OpenAI',
+    displayName: 'GPT-5.6 Sol',
+    inputPerMillion: 5.0,
+    outputPerMillion: 30.0,
+    lastChecked: '2026-10-07',
+    sourceUrl: PROVIDER_PRICING_URL.OpenAI,
+  },
+  {
+    provider: 'OpenAI',
     displayName: 'GPT-5.6 Terra',
     inputPerMillion: 2.0,
     outputPerMillion: 12.0,
