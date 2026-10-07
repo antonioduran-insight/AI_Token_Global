@@ -4,12 +4,13 @@ Corpus: 723 published posts (en 193, es 184, id 184, vi 162), pulled 2026-10-07T
 
 ## 1. Price claims
 
-3819 currency figures found. MISMATCH 59 (high confidence 6, low 53) · MATCH 34 · UNVERIFIABLE 3726.
+3819 currency figures found. MISMATCH 124 (high confidence 23, low 101) · MATCH 51 · UNVERIFIABLE 3644.
 
 Mismatches by model and locale:
 
 | Model | en | es | id | vi | Total |
 |---|---|---|---|---|---|
+| GPT-5.6 Sol | 18 | 16 | 16 | 15 | 65 |
 | GPT-5.6 Terra | 6 | 6 | 6 | 6 | 24 |
 | GPT-5.6 Luna | 6 | 6 | 6 | 6 | 24 |
 | Claude Opus 5 | 2 | 1 | 1 | 1 | 5 |
@@ -21,22 +22,20 @@ Most frequent mismatched figures:
 | Model | Figure | Expected | Posts | Confidence |
 |---|---|---|---|---|
 | Gemini 3.1 Pro | $0.02 | input $2.00 / output $12.00 | 4 | high |
+| GPT-5.6 Sol | $4 | input $5.00 / output $30.00 | 4 | high |
+| GPT-5.6 Sol | $4 | input $5.00 | 4 | high |
+| GPT-5.6 Sol | $20 | output $30.00 | 4 | high |
+| GPT-5.6 Sol | $75 | output $30.00 | 4 | high |
+| GPT-5.6 Sol | $20 | input $5.00 / output $30.00 | 4 | low |
+| GPT-5.6 Sol | $8 | input $5.00 | 4 | low |
 | GPT-5.6 Terra | $4 | input $2.00 | 4 | low |
 | GPT-5.6 Terra | $18 | output $12.00 | 4 | low |
 | GPT-5.6 Luna | $0.4 | input $0.20 | 4 | low |
 | GPT-5.6 Luna | $1.8 | output $1.20 | 4 | low |
+| GPT-5.6 Sol | $40 | output $30.00 | 4 | low |
 | GPT-5.6 Terra | $24 | output $12.00 | 4 | low |
 | GPT-5.6 Luna | $2.4 | output $1.20 | 4 | low |
-| GPT-5.6 Terra | $1 | input $2.00 | 4 | low |
-| GPT-5.6 Terra | $6 | output $12.00 | 4 | low |
-| GPT-5.6 Luna | $0.1 | input $0.20 | 4 | low |
-| GPT-5.6 Luna | $0.6 | output $1.20 | 4 | low |
-| Claude Opus 5 | $12.5 | input $5.00 / output $25.00 | 4 | low |
-| Claude Sonnet 5 | $3 | input $2.00 | 1 | high |
-| Claude Sonnet 5 | $15 | output $10.00 | 1 | high |
-| Claude Opus 5 | $1486 | input $5.00 / output $25.00 | 1 | low |
-
-2 mismatches equal the Sonnet 5 `upcomingChange` price ($3/$15) that PR #34 removes as cancelled.
+| GPT-5.6 Sol | $10 | output $30.00 | 4 | low |
 
 ## 2. Near-duplicates
 
