@@ -49,3 +49,6 @@ archive/.puppeteer-profile/
 # August 2026 audit screenshots: ~83 MB of PNGs kept out of history (see audits/2026-08-06/README.md)
 audits/2026-08-06/screenshots/
 audits/2026-08-06/annotated/
+
+# chat deliverables handed over from Claude sessions (not repo files)
+Claude outputs/
