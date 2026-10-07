@@ -1,1 +1,1 @@
-Screenshots (`screenshots/`, `annotated/`, ~83 MB of PNGs) are not in git: they live only in Antonio Duran's local working copy of this folder.
+The screenshots behind this audit (`screenshots/`, `annotated/`, ~83 MB of PNGs) are not in git and no other copy is known to exist: the only copy is in Antonio Duran's local working copy of this folder, so losing that disk loses the original audit evidence.
