@@ -37,7 +37,7 @@ const PROVIDER_BADGE: Record<Provider, string> = {
   Google:    'background:#E3F2FD;color:#1565C0;',
 };
 const locale = LANG_META[lang as Lang].locale;
-const pricingCheckedLabel = t('common.pricingLastChecked').replace('{date}', formatPricingDate(locale));
+const pricingCheckedLabel = t('common.pricingLastChecked').replace('{date}', formatPricingDate(locale, MODELS));
 const upcomingTemplate = t('pricing.upcomingChange');
 
 // Grouped by provider, preserving the order models are declared in pricing.ts.

@@ -45,3 +45,13 @@ TASK*_PROGRESS.md
 # persisted puppeteer profile used for screenshotting authenticated Sanity Studio
 # (created locally by archive/sanity-auth-setup.mjs — never commit)
 archive/.puppeteer-profile/
+
+# August 2026 audit screenshots: ~83 MB of PNGs kept out of history (see audits/2026-08-06/README.md)
+audits/2026-08-06/screenshots/
+audits/2026-08-06/annotated/
+
+# chat deliverables handed over from Claude sessions (not repo files)
+Claude outputs/
+
+# content corpus: 8 MB of post text, rebuilt by `node scripts/build-content-corpus.mjs`
+audits/*/content-corpus.json

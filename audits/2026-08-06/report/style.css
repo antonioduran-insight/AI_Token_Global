@@ -1,0 +1,190 @@
+/* AI Token Global website audit, August 2026. Print stylesheet for WeasyPrint. */
+
+@page {
+  size: A4;
+  margin: 20mm 18mm 18mm 18mm;
+  @bottom-center {
+    content: "aitoken.global Website Audit, August 2026  |  Page " counter(page) " of " counter(pages);
+    font-family: "Times New Roman", "Liberation Serif", serif;
+    font-size: 8.5pt;
+    color: #6b6b66;
+    padding-top: 4mm;
+  }
+}
+
+/* Cover carries no folio. */
+@page :first {
+  margin: 0;
+  @bottom-center { content: ""; }
+}
+
+html {
+  font-family: "Times New Roman", "Liberation Serif", serif;
+  font-size: 11pt;
+  line-height: 1.45;
+  color: #1b1b18;
+}
+
+body { margin: 0; }
+
+p { margin: 0 0 1.9mm 0; text-align: justify; hyphens: auto; }
+
+/* ---------- Cover ---------- */
+.cover {
+  page-break-after: always;
+  padding: 46mm 24mm 20mm 24mm;
+  height: 100%;
+  box-sizing: border-box;
+}
+.cover-rule { border-top: 3px solid #7f1d1d; width: 38mm; margin-bottom: 9mm; }
+.cover h1 {
+  font-size: 30pt;
+  line-height: 1.12;
+  margin: 0 0 5mm 0;
+  border: none;
+  letter-spacing: -0.01em;
+}
+.cover .sub { font-size: 13pt; color: #4a4a45; margin-bottom: 22mm; }
+.cover dl { font-size: 10.5pt; margin: 0; }
+.cover dt {
+  font-variant: small-caps;
+  letter-spacing: 0.06em;
+  color: #6b6b66;
+  font-size: 8.5pt;
+  margin-top: 4.5mm;
+}
+.cover dd { margin: 0.6mm 0 0 0; }
+.cover .evidence {
+  margin-top: 24mm;
+  border-top: 0.5pt solid #c9c9c2;
+  padding-top: 4mm;
+  font-size: 9pt;
+  color: #4a4a45;
+}
+
+/* ---------- Headings ---------- */
+h1 {
+  font-size: 19pt;
+  line-height: 1.2;
+  margin: 0 0 6mm 0;
+  padding-bottom: 2.5mm;
+  border-bottom: 1.5pt solid #1b1b18;
+  letter-spacing: -0.01em;
+}
+h2 { font-size: 13pt; margin: 5.2mm 0 2.2mm 0; }
+h3 { font-size: 11pt; margin: 5mm 0 1.8mm 0; }
+h4 { font-size: 10pt; margin: 4mm 0 1.5mm 0; font-style: italic; font-weight: normal; }
+
+/* Each numbered section opens a page. */
+section.chapter { page-break-before: always; }
+section.chapter.first { page-break-before: avoid; }
+
+/* ---------- Contents ---------- */
+.toc { page-break-after: always; }
+.toc ol { list-style: none; padding: 0; margin: 0; font-size: 10.5pt; }
+.toc li { margin: 0 0 2.4mm 0; }
+.toc .num { display: inline-block; width: 9mm; color: #6b6b66; }
+.toc .sub-item { padding-left: 9mm; font-size: 9.5pt; color: #4a4a45; }
+
+/* ---------- Callout boxes ---------- */
+.meaning, .warn, .note {
+  padding: 2.6mm 3.6mm;
+  margin: 3.2mm 0;
+  page-break-inside: auto;
+  orphans: 2;
+  widows: 2;
+  font-size: 10pt;
+}
+.meaning { border-left: 4px solid #3b6fb5; background: #eef4fb; }
+.warn    { border-left: 4px solid #9b1c1c; background: #fbeeee; }
+.note    { border-left: 4px solid #8a8a82; background: #f4f4f1; }
+
+.meaning .lbl, .warn .lbl, .note .lbl {
+  font-variant: small-caps;
+  letter-spacing: 0.07em;
+  font-weight: bold;
+  font-size: 9pt;
+}
+.meaning .lbl { color: #2b5a94; }
+.warn .lbl { color: #9b1c1c; }
+.note .lbl { color: #55554f; }
+.meaning p:last-child, .warn p:last-child, .note p:last-child { margin-bottom: 0; }
+
+/* ---------- Severity ---------- */
+.sev { font-weight: bold; font-variant: small-caps; letter-spacing: 0.05em; }
+.sev-critical { color: #7f1d1d; }
+.sev-high     { color: #a53f35; }
+.sev-medium   { color: #8a6d00; }
+.sev-low      { color: #3f6b3f; }
+
+/* ---------- Tables ---------- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 9.5pt;
+  margin: 3.2mm 0;
+}
+th {
+  text-align: left;
+  border-bottom: 1pt solid #1b1b18;
+  padding: 1.8mm 2mm;
+  font-variant: small-caps;
+  letter-spacing: 0.05em;
+  font-size: 9pt;
+}
+td { padding: 1.5mm 2mm; border-bottom: 0.5pt solid #d9d9d2; vertical-align: top; }
+tr { page-break-inside: avoid; }
+thead { display: table-header-group; }
+td.num, th.num { text-align: right; white-space: nowrap; }
+
+/* ---------- Stat tiles ---------- */
+table.tiles { border-collapse: separate; border-spacing: 2.5mm 0; margin: 5mm -2.5mm; }
+table.tiles td {
+  border: 0.75pt solid #c9c9c2;
+  padding: 3.5mm 3mm;
+  text-align: center;
+  width: 25%;
+  vertical-align: top;
+}
+table.tiles .fig { font-size: 19pt; font-weight: bold; line-height: 1.05; display: block; }
+table.tiles .fig.bad { color: #7f1d1d; }
+table.tiles .fig.good { color: #3f6b3f; }
+table.tiles .cap {
+  font-size: 8.5pt;
+  color: #4a4a45;
+  display: block;
+  margin-top: 1.8mm;
+  line-height: 1.3;
+}
+
+/* ---------- Figures ---------- */
+figure { margin: 4mm 0; page-break-inside: avoid; }
+figure img { width: 100%; border: 0.75pt solid #b8b8b0; display: block; }
+figcaption { font-size: 9pt; color: #4a4a45; margin-top: 2mm; line-height: 1.35; }
+figcaption .cn { color: #c8382b; font-weight: bold; }
+figure.chart { page-break-inside: avoid; }
+figure.chart svg { width: 100%; height: auto; display: block; }
+
+/* ---------- Misc ---------- */
+code {
+  font-family: "DejaVu Sans Mono", "Courier New", monospace;
+  font-size: 8.6pt;
+  background: #f2f2ee;
+  padding: 0.3mm 1mm;
+  word-break: break-all;
+}
+ul, ol { margin: 0 0 2.5mm 0; padding-left: 6mm; }
+li { margin-bottom: 1.2mm; text-align: justify; }
+.lead { font-size: 12pt; line-height: 1.4; }
+.muted { color: #6b6b66; }
+.small { font-size: 9pt; }
+hr { border: none; border-top: 0.5pt solid #c9c9c2; margin: 5mm 0; }
+.keep { page-break-inside: avoid; }
+
+/* Portrait (phone) captures are far taller than the text column is wide.
+   Constrain by height so they never claim a whole page. */
+figure.portrait img {
+  max-height: 138mm;
+  width: auto;
+  margin: 0 auto;
+}
