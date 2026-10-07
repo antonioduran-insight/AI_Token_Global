@@ -36,7 +36,7 @@ const calcPricing = {
 };
 
 const pricingCheckedLabel = t('common.pricingLastChecked')
-  .replace('{date}', formatPricingDate(LANG_META[lang as Lang].locale));
+  .replace('{date}', formatPricingDate(LANG_META[lang as Lang].locale, Object.values(CALC_MODELS)));
 
 function pt(blocks: any[] | undefined): string {
   return renderPortableText(blocks, { source: `tokenCalculatorPage/${lang}` });

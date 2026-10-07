@@ -2,15 +2,15 @@
  * Single source of truth for every model price shown on this site.
  *
  * Prices are USD per million tokens, taken from the vendors' own public pricing
- * pages on the date in PRICING_LAST_CHECKED. Nothing here is rounded, averaged
+ * pages on each model's `lastChecked` date. Nothing here is rounded, averaged
  * or estimated — if a number changes at the vendor, change it here and nowhere
  * else. No page is allowed to hardcode a price.
  *
- * When you update a price, update PRICING_LAST_CHECKED in the same commit: the
- * date is rendered next to every pricing block on the site.
+ * When you check a model against its vendor page, set that model's
+ * `lastChecked` in the same commit — and only that model's. Every pricing block
+ * on the site renders the oldest `lastChecked` among the models it shows, so a
+ * block can never claim to be fresher than its stalest row.
  */
-
-export const PRICING_LAST_CHECKED = '2026-09-03';
 
 export type Provider = 'OpenAI' | 'Anthropic' | 'Google';
 
@@ -44,6 +44,8 @@ export interface Model {
   outputPerMillion: number;
   /** The vendor's own pricing page — the thing these numbers were checked against. */
   sourceUrl: string;
+  /** ISO date (YYYY-MM-DD) these numbers were last checked against sourceUrl. */
+  lastChecked: string;
   /** Set only when the vendor has announced a dated price change. */
   upcomingChange?: UpcomingChange;
 }
@@ -60,6 +62,7 @@ export const MODELS: Model[] = [
     displayName: 'GPT-5.6 Terra',
     inputPerMillion: 2.0,
     outputPerMillion: 12.0,
+    lastChecked: '2026-10-07',
     sourceUrl: PROVIDER_PRICING_URL.OpenAI,
   },
   {
@@ -67,6 +70,7 @@ export const MODELS: Model[] = [
     displayName: 'GPT-5.6 Luna',
     inputPerMillion: 0.2,
     outputPerMillion: 1.2,
+    lastChecked: '2026-10-07',
     sourceUrl: PROVIDER_PRICING_URL.OpenAI,
   },
   {
@@ -74,6 +78,7 @@ export const MODELS: Model[] = [
     displayName: 'Claude Opus 5',
     inputPerMillion: 5.0,
     outputPerMillion: 25.0,
+    lastChecked: '2026-09-03',
     sourceUrl: PROVIDER_PRICING_URL.Anthropic,
   },
   {
@@ -81,6 +86,7 @@ export const MODELS: Model[] = [
     displayName: 'Claude Sonnet 5',
     inputPerMillion: 2.0,
     outputPerMillion: 10.0,
+    lastChecked: '2026-09-03',
     sourceUrl: PROVIDER_PRICING_URL.Anthropic,
   },
   {
@@ -88,6 +94,7 @@ export const MODELS: Model[] = [
     displayName: 'Claude Haiku 4.5',
     inputPerMillion: 1.0,
     outputPerMillion: 5.0,
+    lastChecked: '2026-09-03',
     sourceUrl: PROVIDER_PRICING_URL.Anthropic,
   },
   {
@@ -95,6 +102,7 @@ export const MODELS: Model[] = [
     displayName: 'Gemini 3.1 Pro',
     inputPerMillion: 2.0,
     outputPerMillion: 12.0,
+    lastChecked: '2026-09-03',
     sourceUrl: PROVIDER_PRICING_URL.Google,
   },
   {
@@ -102,9 +110,21 @@ export const MODELS: Model[] = [
     displayName: 'Gemini 3.5 Flash-Lite',
     inputPerMillion: 0.3,
     outputPerMillion: 2.5,
+    lastChecked: '2026-09-03',
     sourceUrl: PROVIDER_PRICING_URL.Google,
   },
 ];
+
+/** The oldest lastChecked among `models` — the date a block showing them can honestly claim. */
+export function oldestCheck(models: readonly Model[] = MODELS): string {
+  return models.map(m => m.lastChecked).reduce((a, b) => (b < a ? b : a));
+}
+
+/**
+ * Kept for anything that still wants one site-wide date. Derived, never set by
+ * hand: it is the stalest model's date, so it cannot run ahead of any row.
+ */
+export const PRICING_LAST_CHECKED = oldestCheck(MODELS);
 
 /** Look a model up by its exact displayName. Throws so a typo fails the build. */
 export function getModel(displayName: string): Model {
@@ -130,15 +150,18 @@ export function formatPrice(usdPerMillion: number): string {
 }
 
 /**
- * PRICING_LAST_CHECKED rendered for a locale.
- * Built from the date parts rather than Date.parse so the ISO string is not
- * read as UTC midnight and shifted a day backwards at build time.
+ * The last-checked date for a pricing block, rendered for a locale: the oldest
+ * lastChecked among the models the block shows. Pass exactly those models.
  */
-export function formatPricingDate(locale: string): string {
-  return formatIsoDate(PRICING_LAST_CHECKED, locale);
+export function formatPricingDate(locale: string, models: readonly Model[]): string {
+  return formatIsoDate(oldestCheck(models), locale);
 }
 
-/** Any YYYY-MM-DD rendered for a locale, without the UTC-midnight shift. */
+/**
+ * Any YYYY-MM-DD rendered for a locale. Built from the date parts rather than
+ * Date.parse so the ISO string is not read as UTC midnight and shifted a day
+ * backwards at build time.
+ */
 export function formatIsoDate(iso: string, locale: string): string {
   const [year, month, day] = iso.split('-').map(Number);
   return new Date(year, month - 1, day).toLocaleDateString(locale, {

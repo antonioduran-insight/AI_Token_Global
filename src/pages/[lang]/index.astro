@@ -58,8 +58,11 @@ const PROVIDER_BADGE: Record<Provider, string> = {
   Anthropic: 'background:#F3E5F5;color:#6A1B9A;',
   Google:    'background:#E3F2FD;color:#1565C0;',
 };
+// Each block states the oldest check among the models it shows.
 const pricingCheckedLabel = t('common.pricingLastChecked')
-  .replace('{date}', formatPricingDate(LANG_META[lang as Lang].locale));
+  .replace('{date}', formatPricingDate(LANG_META[lang as Lang].locale, FLAGSHIP_MODELS));
+const comparisonCheckedLabel = t('common.pricingLastChecked')
+  .replace('{date}', formatPricingDate(LANG_META[lang as Lang].locale, MODELS));
 // Distinct vendor pricing pages behind the models in the full comparison table.
 const comparisonSources = [...new Set(MODELS.map(m => m.provider))];
 
@@ -455,7 +458,7 @@ const faqJsonLd = faqPageSchema(faqs, `homePage/${lang}`);
       </div>
     </div>
     <p class="pricing-checked" style="justify-content: center; margin-top: 1rem;">
-      {pricingCheckedLabel}
+      {comparisonCheckedLabel}
       <span class="pricing-checked-sep">·</span>
       {comparisonSources.map((provider, i) => (
         <>
