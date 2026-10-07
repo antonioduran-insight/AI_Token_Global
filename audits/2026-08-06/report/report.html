@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>aitoken.global Website Audit, August 2026</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============ COVER ============ -->
+<div class="cover">
+  <div class="cover-rule"></div>
+  <h1>Website Audit<br>aitoken.global</h1>
+  <div class="sub">An evidence-based review of the site as a sales resource</div>
+  <dl>
+    <dt>Prepared for</dt><dd>AI Token Global</dd>
+    <dt>Site audited</dt><dd>https://www.aitoken.global</dd>
+    <dt>Scope</dt><dd>English in full depth; Spanish, Indonesian and Vietnamese spot-checked for indexing, hreflang and translation integrity</dd>
+    <dt>Date of evidence capture</dt><dd>6 August 2026</dd>
+  </dl>
+  <div class="evidence">
+    Evidence base: 656 of 656 published URLs fetched and parsed (no sampling), 3,275 hreflang annotations resolved individually,
+    80 screenshots at two viewports, 5 specialist review files, 90 severity-rated findings.
+    Every figure in this report traces to a recorded HTTP response, a rendered DOM measurement, a repository file, or a cited public source.
+  </div>
+</div>
+
+<!-- ============ CONTENTS ============ -->
+<div class="toc">
+  <h1>Contents</h1>
+  <ol>
+    <li><span class="num">1.</span> The Verdict in One Page</li>
+    <li><span class="num">2.</span> The Big Picture</li>
+    <li><span class="num">3.</span> A Visitor Who Wants to Buy Cannot Reach You</li>
+    <li><span class="num">4.</span> Ninety-Three Percent of the Site Leads Nowhere</li>
+    <li><span class="num">5.</span> The Pages Promise Answers They Do Not Contain</li>
+    <li><span class="num">6.</span> Search Engines and AI Assistants Cannot Read the Site Properly</li>
+    <li><span class="num">7.</span> Nothing on the Site Proves You Are a Real Company</li>
+    <li><span class="num">8.</span> The Phone Experience Hides the One Thing You Want Clicked</li>
+    <li><span class="num">9.</span> Risks That Need a Decision, Not Just a Fix</li>
+    <li><span class="num">10.</span> The Plan</li>
+    <li><span class="num">11.</span> What Is Already Good</li>
+    <li><span class="num">12.</span> Appendix: Evidence, Method and Limits</li>
+  </ol>
+</div>
+
+<!-- ============ 1. VERDICT ============ -->
+<section class="chapter first">
+<h1>1. The Verdict in One Page</h1>
+
+<p class="lead">Start with what is real. This is a technically well-built site. The pages are served
+as finished HTML from a fast global network, they load without a single console error, they do not break
+on a phone screen, and search engines receive exactly the same content a human does. The
+611 published articles across four languages represent genuine work, and the translation quality
+is high. None of that is in question.</p>
+
+<p>The problem is that the site does not currently do the job you are using it for. It is a sales
+resource, and a sales resource has to do two things: convince a stranger, and let that stranger
+reach you. Right now it does neither reliably. Five compounding problems explain almost all of the
+90 findings in this report.</p>
+
+<ol>
+<li><strong>There is no working way to become a customer.</strong> The only lead-capture form on
+the site is switched off in the code and silently throws away every email typed into it. There is no
+contact page, no email address, and no phone number anywhere. On the page that sells compliance
+services to financial institutions, the button marked "Contact Enterprise Sales" links to the page
+it already sits on.</li>
+
+<li><strong>Almost the whole site is a dead end.</strong> All 607 blog posts contain exactly zero
+links into the pages that sell. Not few: zero. Your token calculator, the single most useful thing
+you own, receives four inbound links from the entire site. A reader who arrives from Google finishes
+the article and has nowhere to go.</li>
+
+<li><strong>Key pages do not contain what their titles promise.</strong> The navigation item
+"Compare Models" leads to a page with no comparison table on it at all, and its only pricing
+element sends the visitor to a different company's website. The Claude pricing reference shows
+prices that are roughly two model generations out of date.</li>
+
+<li><strong>Machines cannot read the site properly.</strong> There is no structured data on any of
+the 656 pages, no machine-readable publication date anywhere, and 1,511 of the 3,275
+language annotations point at pages that do not exist. For a site whose value is current pricing
+data, being unable to prove freshness is a direct competitive loss.</li>
+
+<li><strong>Nothing proves you are a real company.</strong> There is no About page, no company
+name, no address, no privacy policy and no terms. The social icons in the footer are unedited
+placeholders. A cautious buyer performing basic diligence finds nothing and leaves.</li>
+</ol>
+
+<p><strong>The sequencing logic.</strong> These problems multiply rather than add. Fixing search
+visibility while the site cannot capture a lead simply delivers more strangers to a dead end.
+Publishing more articles while no article links anywhere deepens the same hole. So the order below
+is deliberate: first make it possible to convert a visitor at all, then make the existing traffic
+flow toward those conversion points, and only then work on bringing more people in.</p>
+
+<div class="meaning"><span class="lbl">How to read this report.</span>
+<p>Each chapter covers one root cause, not one symptom. It shows the evidence, explains the business
+consequence in plain language, and ends with a box stating the takeaway and the fix. Severity labels
+are <span class="sev sev-critical">Critical</span>, <span class="sev sev-high">High</span>,
+<span class="sev sev-medium">Medium</span> and <span class="sev sev-low">Low</span>. Chapter 10 turns
+everything into a dated action plan with an owner per task. Chapter 11 records what is genuinely
+working, and Chapter 12 lists every claim we could not verify.</p></div>
+</section>
+
+<!-- ============ 2. BIG PICTURE ============ -->
+<section class="chapter">
+<h1>2. The Big Picture</h1>
+
+<p>Four numbers describe the gap between what the site is and what it needs to be.</p>
+
+<table class="tiles"><tr>
+  <td><span class="fig bad">0</span><span class="cap">Working ways to capture a lead, across all four languages</span></td>
+  <td><span class="fig bad">0</span><span class="cap">Links from 607 blog posts into any page that sells</span></td>
+  <td><span class="fig bad">91.9%</span><span class="cap">Pages emitting at least one broken language link</span></td>
+  <td><span class="fig bad">28<span style="font-size:11pt">/100</span></span><span class="cap">Trust and expertise score, against a 70 healthy threshold</span></td>
+</tr></table>
+
+<h2>Quality scores against the healthy threshold</h2>
+
+<p>These scores rate how the site reads to a cautious buyer and to an AI assistant asked to
+recommend a pricing resource. The four components are weighted, with trustworthiness weighted
+heaviest because on a pricing site the accuracy of the data <em>is</em> the product. All scores are
+normalised to a 100-point scale so they can be compared directly.</p>
+
+<figure class="chart">
+<svg viewBox="0 0 660 236" role="img" aria-label="Quality scores out of 100. Authoritativeness 20, Trustworthiness 20, overall trust and expertise 28, Experience 30, AI-citation readiness 38, Expertise 44. All fall below the healthy threshold of 70.">
+  <line x1="488" y1="8" x2="488" y2="212" stroke="#8a8a82" stroke-width="1" stroke-dasharray="4 3"/>
+  <text x="488" y="226" font-family="Times New Roman, serif" font-size="10" fill="#6b6b66" text-anchor="middle">healthy: 70+</text>
+  <line x1="180" y1="212" x2="620" y2="212" stroke="#c9c9c2" stroke-width="1"/>
+
+  <text x="170" y="32"  font-family="Times New Roman, serif" font-size="11.5" fill="#1b1b18" text-anchor="end">Authoritativeness</text>
+  <rect x="180" y="24" width="88"    height="11" rx="5.5" fill="#3b6fb5"/>
+  <text x="276" y="33" font-family="Times New Roman, serif" font-size="11" fill="#1b1b18">20</text>
+
+  <text x="170" y="66"  font-family="Times New Roman, serif" font-size="11.5" fill="#1b1b18" text-anchor="end">Trustworthiness</text>
+  <rect x="180" y="58" width="88"    height="11" rx="5.5" fill="#3b6fb5"/>
+  <text x="276" y="67" font-family="Times New Roman, serif" font-size="11" fill="#1b1b18">20</text>
+
+  <text x="170" y="100" font-family="Times New Roman, serif" font-size="11.5" fill="#1b1b18" text-anchor="end">Overall trust and expertise</text>
+  <rect x="180" y="92" width="123.2" height="11" rx="5.5" fill="#3b6fb5"/>
+  <text x="311" y="101" font-family="Times New Roman, serif" font-size="11" fill="#1b1b18">28</text>
+
+  <text x="170" y="134" font-family="Times New Roman, serif" font-size="11.5" fill="#1b1b18" text-anchor="end">Experience</text>
+  <rect x="180" y="126" width="132"   height="11" rx="5.5" fill="#3b6fb5"/>
+  <text x="320" y="135" font-family="Times New Roman, serif" font-size="11" fill="#1b1b18">30</text>
+
+  <text x="170" y="168" font-family="Times New Roman, serif" font-size="11.5" fill="#1b1b18" text-anchor="end">AI-citation readiness</text>
+  <rect x="180" y="160" width="167.2" height="11" rx="5.5" fill="#3b6fb5"/>
+  <text x="355" y="169" font-family="Times New Roman, serif" font-size="11" fill="#1b1b18">38</text>
+
+  <text x="170" y="202" font-family="Times New Roman, serif" font-size="11.5" fill="#1b1b18" text-anchor="end">Expertise</text>
+  <rect x="180" y="194" width="193.6" height="11" rx="5.5" fill="#3b6fb5"/>
+  <text x="381" y="203" font-family="Times New Roman, serif" font-size="11" fill="#1b1b18">44</text>
+</svg>
+<figcaption>Every dimension sits below the healthy threshold. Expertise scores highest because the
+newer articles are genuinely competent. Authoritativeness and trustworthiness score lowest because
+the site offers no evidence of who is behind it.</figcaption>
+</figure>
+
+<h2>Findings by severity</h2>
+
+<figure class="chart">
+<svg viewBox="0 0 660 172" role="img" aria-label="Findings by severity: 17 critical, 26 high, 28 medium, 19 low, totalling 90.">
+  <text x="90" y="30"  font-family="Times New Roman, serif" font-size="11.5" fill="#1b1b18" text-anchor="end">Critical</text>
+  <rect x="100" y="22" width="291.4" height="12" rx="6" fill="#7f1d1d"/>
+  <text x="399" y="32" font-family="Times New Roman, serif" font-size="11" fill="#1b1b18">17</text>
+
+  <text x="90" y="66"  font-family="Times New Roman, serif" font-size="11.5" fill="#1b1b18" text-anchor="end">High</text>
+  <rect x="100" y="58" width="445.7" height="12" rx="6" fill="#a53f35"/>
+  <text x="553" y="68" font-family="Times New Roman, serif" font-size="11" fill="#1b1b18">26</text>
+
+  <text x="90" y="102" font-family="Times New Roman, serif" font-size="11.5" fill="#1b1b18" text-anchor="end">Medium</text>
+  <rect x="100" y="94" width="480"   height="12" rx="6" fill="#c76b52"/>
+  <text x="588" y="104" font-family="Times New Roman, serif" font-size="11" fill="#1b1b18">28</text>
+
+  <text x="90" y="138" font-family="Times New Roman, serif" font-size="11.5" fill="#1b1b18" text-anchor="end">Low</text>
+  <rect x="100" y="130" width="325.7" height="12" rx="6" fill="#e0a184"/>
+  <text x="433" y="140" font-family="Times New Roman, serif" font-size="11" fill="#1b1b18">19</text>
+
+  <line x1="100" y1="154" x2="620" y2="154" stroke="#c9c9c2" stroke-width="1"/>
+</svg>
+<figcaption>90 findings in total. Severity is an ordered scale, so the shading runs dark to light
+with severity rather than using unrelated colours. The 17 critical items are concentrated in
+conversion, trust and indexing, and are the subject of Chapters 3 to 7.</figcaption>
+</figure>
+
+<h2>Why the language links fail, by locale</h2>
+
+<p>The site tells search engines which page is the Spanish, Indonesian or Vietnamese version of
+each article. Those instructions are generated by swapping the language code in the web address.
+That works for the 11 standard pages in each language, whose addresses match across languages. It
+fails for every article, because article addresses are translated. The pattern is almost identical
+in all four languages, which confirms a single mechanical cause rather than scattered mistakes.</p>
+
+<figure class="chart">
+<svg viewBox="0 0 660 250" role="img" aria-label="Pages with all language links working versus pages with at least one broken link, by locale. English 13 versus 161, Spanish 13 versus 155, Indonesian 13 versus 154, Vietnamese 13 versus 133.">
+  <rect x="70" y="6" width="11" height="11" rx="3" fill="#3b6fb5"/>
+  <text x="88" y="16" font-family="Times New Roman, serif" font-size="10.5" fill="#1b1b18">All language links work</text>
+  <rect x="240" y="6" width="11" height="11" rx="3" fill="#c03a2b"/>
+  <text x="258" y="16" font-family="Times New Roman, serif" font-size="10.5" fill="#1b1b18">At least one link is broken</text>
+
+  <text x="60" y="46" font-family="Times New Roman, serif" font-size="11.5" fill="#1b1b18" text-anchor="end">English</text>
+  <rect x="70" y="36" width="42.1"  height="10" rx="5" fill="#3b6fb5"/>
+  <text x="120" y="45" font-family="Times New Roman, serif" font-size="10.5" fill="#1b1b18">13</text>
+  <rect x="70" y="50" width="520.9" height="10" rx="5" fill="#c03a2b"/>
+  <text x="599" y="59" font-family="Times New Roman, serif" font-size="10.5" fill="#1b1b18">161</text>
+
+  <text x="60" y="98" font-family="Times New Roman, serif" font-size="11.5" fill="#1b1b18" text-anchor="end">Spanish</text>
+  <rect x="70" y="88"  width="42.1"  height="10" rx="5" fill="#3b6fb5"/>
+  <text x="120" y="97" font-family="Times New Roman, serif" font-size="10.5" fill="#1b1b18">13</text>
+  <rect x="70" y="102" width="501.4" height="10" rx="5" fill="#c03a2b"/>
+  <text x="580" y="111" font-family="Times New Roman, serif" font-size="10.5" fill="#1b1b18">155</text>
+
+  <text x="60" y="150" font-family="Times New Roman, serif" font-size="11.5" fill="#1b1b18" text-anchor="end">Indonesian</text>
+  <rect x="70" y="140" width="42.1"  height="10" rx="5" fill="#3b6fb5"/>
+  <text x="120" y="149" font-family="Times New Roman, serif" font-size="10.5" fill="#1b1b18">13</text>
+  <rect x="70" y="154" width="498.2" height="10" rx="5" fill="#c03a2b"/>
+  <text x="577" y="163" font-family="Times New Roman, serif" font-size="10.5" fill="#1b1b18">154</text>
+
+  <text x="60" y="202" font-family="Times New Roman, serif" font-size="11.5" fill="#1b1b18" text-anchor="end">Vietnamese</text>
+  <rect x="70" y="192" width="42.1"  height="10" rx="5" fill="#3b6fb5"/>
+  <text x="120" y="201" font-family="Times New Roman, serif" font-size="10.5" fill="#1b1b18">13</text>
+  <rect x="70" y="206" width="430.3" height="10" rx="5" fill="#c03a2b"/>
+  <text x="509" y="215" font-family="Times New Roman, serif" font-size="10.5" fill="#1b1b18">133</text>
+
+  <line x1="70" y1="228" x2="620" y2="228" stroke="#c9c9c2" stroke-width="1"/>
+  <text x="70" y="243" font-family="Times New Roman, serif" font-size="10" fill="#6b6b66">Pages, counted per locale. Exactly 13 pages per locale are clean in every language.</text>
+</svg>
+<figcaption>The identical figure of 13 clean pages in each of the four languages is the fingerprint
+of the bug. Those are the standard pages whose addresses do not change between languages. Every
+translated article fails.</figcaption>
+</figure>
+</section>
+
+<!-- ============ 3. CONVERSION ============ -->
+<section class="chapter">
+<h1>3. A Visitor Who Wants to Buy Cannot Reach You</h1>
+
+<p><span class="sev sev-critical">Critical</span> &nbsp;This is the most consequential finding in
+the audit, and it is also among the cheapest to fix.</p>
+
+<p>The site has exactly two forms. Both are newsletter sign-ups, one on the home page and one on the
+blog index. Both are disabled in the source code. The form tag carries the instruction
+<code>onsubmit="return false;"</code>, the email box has no name, and the form has no destination
+address. There is no newsletter service connected anywhere in the codebase.</p>
+
+<p>The practical effect: a visitor types their email, presses Subscribe, and the page does nothing.
+No confirmation, no error, no network request. The address is discarded. This is true on the home
+page and the blog index, in all four languages.</p>
+
+<figure>
+<img src="../annotated/fig4-dead-newsletter.png" alt="Home page newsletter form with a red callout box around the email field and Subscribe button">
+<figcaption><span class="cn">1</span> The site's only lead-capture form, on the home page. The
+heading invites the visitor to subscribe and the button reads "Subscribe Free", but the form is
+disabled in code and discards the address. Source: <code>src/pages/[lang]/index.astro</code> line
+686, and <code>src/pages/[lang]/blog/index.astro</code> line 310.</figcaption>
+</figure>
+
+<p>Beyond the form, there is no other route to you. Across every page we fetched there are zero
+email links and zero telephone links. There is no contact page: <code>/en/contact/</code>,
+<code>/en/about/</code>, <code>/en/legal/</code> and <code>/en/imprint/</code> all return "page not
+found". The enterprise compliance page, which pitches services to banks and listed companies,
+carries two prominent calls to action that both point back at the page the visitor is already
+reading.</p>
+
+<figure>
+<img src="../annotated/fig2-compliance-selflink.png" alt="Compliance page with red callout boxes around two buttons that link to the same page">
+<figcaption><span class="cn">1</span> "Contact Enterprise Sales" and <span class="cn">2</span> "View
+the Full Enterprise AI Compliance Proposal". Both buttons have the destination
+<code>/en/compliance</code>, which is the page they appear on. A prospect who clicks either one
+stays exactly where they were, with no explanation.</figcaption>
+</figure>
+
+<div class="meaning"><span class="lbl">What this means.</span>
+<p>Every visitor the site attracts today, from any language and any source, has no functioning way
+to identify themselves as interested. Money spent on traffic before this is fixed is money spent
+delivering people to a closed door. The fix is roughly a day of work: connect the two forms to a
+real mailing service, build one contact page with an email address and a form that actually posts,
+and correct the two compliance buttons to point at it.</p></div>
+</section>
+
+<!-- ============ 4. DEAD END ============ -->
+<section class="chapter">
+<h1>4. Ninety-Three Percent of the Site Leads Nowhere</h1>
+
+<p><span class="sev sev-critical">Critical</span> &nbsp;Of the 656 published pages, 607 are blog
+articles. That is 93 percent of the site. We examined the article body of every one of them and
+counted the links pointing to other pages on the site.</p>
+
+<p>The total is zero. Not an average of zero, not a low number: across all 607 articles in four
+languages, the body text contains no internal links whatsoever. The only links inside an article
+element are the two social sharing buttons at the foot of the page.</p>
+
+<p>The consequence shows up on the pages that matter. The table below counts how many pages
+anywhere on the site link to each English money page.</p>
+
+<table>
+<thead><tr><th>Money page</th><th class="num">Words</th><th class="num">Inbound links</th></tr></thead>
+<tbody>
+<tr><td><code>/en/ai-trends/</code></td><td class="num">845</td><td class="num">0</td></tr>
+<tr><td><code>/en/user-guide/</code></td><td class="num">1,021</td><td class="num">1</td></tr>
+<tr><td><code>/en/compliance/</code></td><td class="num">706</td><td class="num">2</td></tr>
+<tr><td><code>/en/chatgpt-api/</code></td><td class="num">818</td><td class="num">3</td></tr>
+<tr><td><code>/en/claude-api/</code></td><td class="num">871</td><td class="num">3</td></tr>
+<tr><td><code>/en/gemini-api/</code></td><td class="num">819</td><td class="num">3</td></tr>
+<tr><td><code>/en/token-calculator/</code></td><td class="num">480</td><td class="num">4</td></tr>
+<tr><td><code>/en/use-cases/</code></td><td class="num">511</td><td class="num">5</td></tr>
+<tr><td><code>/en/beginners-guide/</code></td><td class="num">969</td><td class="num">9</td></tr>
+</tbody>
+</table>
+
+<p>The token calculator is the most genuinely useful asset on the site and the most likely reason
+someone would remember the brand. It has 480 words on it and four links pointing to it. The AI
+trends page has none at all.</p>
+
+<p>There is a second, compounding effect. Because no article links to another article, search
+engines see 607 isolated pages rather than a connected body of work on one subject. That is a large
+part of why the site does not rank as an authority on a topic it has written about 607 times.</p>
+
+<div class="meaning"><span class="lbl">What this means.</span>
+<p>You have already paid for the hardest part, which is having 607 pages of content that can attract
+strangers. None of that traffic is being routed anywhere. Adding two or three contextual links per
+article, pointing at the calculator and the relevant provider page, converts an existing cost into
+an existing asset. This does not require new content, and for the highest-traffic articles it can be
+done by hand in a few days.</p></div>
+</section>
+
+<!-- ============ 5. BROKEN PROMISES ============ -->
+<section class="chapter">
+<h1>5. The Pages Promise Answers They Do Not Contain</h1>
+
+<p><span class="sev sev-critical">Critical</span> &nbsp;A visitor arrives expecting a specific
+answer. On several key pages the answer is not there.</p>
+
+<h2>The comparison page contains no comparison</h2>
+
+<p>The main navigation offers "Compare Models". It leads to a page titled "AI Model Type Overview".
+We counted the comparison tables on that page: there are none. There are no prices on it either.
+What it contains is three category cards and a banner advertising live pricing, whose button sends
+the visitor to <code>aitokenking.com.tw</code>, a different website.</p>
+
+<figure>
+<img src="../annotated/fig1-api-compare.png" alt="API comparison page with callouts on the navigation item and the external pricing banner">
+<figcaption><span class="cn">1</span> The navigation promises "Compare Models".
+<span class="cn">2</span> The only pricing element on the page is a banner whose button, "View Live
+Pricing", leaves the site entirely for <code>aitokenking.com.tw/models</code>. Measured table count
+on this page: 0.</figcaption>
+</figure>
+
+<h2>The pricing reference is about two model generations out of date</h2>
+
+<p>The Claude page carries a section headed "Pricing Reference". It lists Claude 3.5 Sonnet, Claude
+3.5 Haiku and Claude 3 Opus. Those models have been superseded. The site's own article published on
+30 July 2026 states that the current Opus model costs 5 dollars per million input tokens and 25
+dollars per million output tokens. The reference page still shows the older Opus at 15 and 75
+dollars, which is three times and three times again the current figures.</p>
+
+<figure>
+<img src="../annotated/fig3-stale-pricing.png" alt="Claude API pricing reference showing Claude 3 era prices with a red callout">
+<figcaption><span class="cn">1</span> The "Pricing Reference" block on <code>/en/claude-api/</code>,
+captured 6 August 2026. All three models listed belong to the Claude 3 generation. No "last
+updated" date appears anywhere on the page, so a visitor has no way to know the figures are
+old.</figcaption>
+</figure>
+
+<h2>Two articles featured on the home page describe the product incorrectly</h2>
+
+<p>The home page features seven articles. Two of them explain AI tokens as though they were
+cryptocurrency assets on a blockchain. One states that the cost of a token includes "the network
+fees associated with transferring it". Another says that "by leveraging blockchain technology,
+AI-powered systems can create secure and tamper-proof tokens".</p>
+
+<p>This conflates two unrelated ideas. An AI token is a fragment of text that a language model
+processes. It is not an asset, it cannot be transferred, and there are no network fees. A technical
+buyer, who is precisely the audience for an API cost resource, will recognise this immediately.</p>
+
+<div class="warn"><span class="lbl">Risk.</span>
+<p>Incorrect pricing presented as a reference is the most damaging error a pricing resource can
+make, because accuracy is the entire value proposition. A visitor who checks one figure against the
+provider's own website and finds it wrong has no reason to trust any other number on the site.</p></div>
+
+<div class="meaning"><span class="lbl">What this means.</span>
+<p>Three fixes, in order of urgency. Correct the Claude, ChatGPT and Gemini pricing blocks and add a
+visible "last checked" date to each. Either build the comparison table the navigation promises, or
+rename the navigation item to match what the page actually is. Then rewrite or remove the two
+blockchain articles and drop them from the home page feature list today.</p></div>
+</section>
+
+<!-- ============ 6. MACHINE READABILITY ============ -->
+<section class="chapter">
+<h1>6. Search Engines and AI Assistants Cannot Read the Site Properly</h1>
+
+<p>The good news first: the site is served as complete HTML, and we confirmed that Google's
+crawler, OpenAI's crawler and an ordinary browser all receive byte-for-byte identical pages. Many
+sites fail here. This one does not. What is missing is the machine-readable layer on top.</p>
+
+<h2>No structured data anywhere</h2>
+
+<p><span class="sev sev-critical">Critical</span> &nbsp;All 656 pages carry zero structured data,
+the standardised summary telling a search engine what a page is. No organisation identity, no article
+records, no breadcrumbs, and no question-and-answer markup, despite the home, calculator and
+comparison pages already displaying 8 to 14 qualifying question blocks.</p>
+
+<h2>No publication or update dates that a machine can read</h2>
+
+<p><span class="sev sev-critical">Critical</span> &nbsp;No page carries a machine-readable date:
+no published-time tag, no date element, no sitemap date. The only signal is the server timestamp,
+which reports the last rebuild rather than when the content was written.</p>
+
+<p>For most sites this is minor. Here it is central: the product is current pricing information,
+and nothing lets Google, or an AI assistant deciding what to cite, establish that it is recent.</p>
+
+<h2>Language links that point at pages which do not exist</h2>
+
+<p><span class="sev sev-critical">Critical</span> &nbsp;Of 3,275 language annotations, 1,511 point
+to addresses returning "page not found". We requested all 1,257 unique targets individually and every
+one failed. In total 603 of 656 pages, or 91.9 percent, emit at least one such dead link.</p>
+
+<p>The cause is one line of template logic: the alternate address is produced by swapping the
+language code in the current address. Standard pages survive because their addresses match in every
+language. Articles do not, because theirs are translated. The English article at
+<code>/en/blog/ai-token-basics-for-beginners/</code> claims a Spanish version at the same path, which
+does not exist. The real one is <code>/es/blog/ai-token-explained-guia-para-principiantes/</code>.</p>
+
+<div class="keep">
+<h2>The website answers on two different addresses</h2>
+
+<p><span class="sev sev-high">High</span> &nbsp;The site is served from
+<code>www.aitoken.global</code>, but every canonical tag, social sharing address, language link and
+all 656 sitemap entries name the address without <code>www</code>, which redirects. The site's own
+instructions to Google point at a doorway rather than a room. The redirect is also temporary rather
+than permanent, and adds 217 milliseconds.</p>
+
+<div class="note"><span class="lbl">Already in progress.</span>
+<p>An open pull request on the branch <code>antonioduran/canonical-www-seo-fix</code> resolves this
+address problem, and also corrects a wrong fallback domain in the configuration. It is worth
+merging. It does <em>not</em> fix the broken language links: it moves those 1,511 dead addresses to
+the new hostname, where they remain dead. That needs a separate change.</p></div>
+
+<div class="meaning"><span class="lbl">What this means.</span>
+<p>The site does the expensive part correctly and the cheap part not at all. Structured data, real
+dates, and language links generated from stored article addresses are each small, contained pieces of
+work. Together they decide whether search engines see 611 disconnected pages or a body of work they
+can attribute, date and rank.</p></div>
+</div>
+</section>
+
+<!-- ============ 7. TRUST ============ -->
+<section class="chapter">
+<h1>7. Nothing on the Site Proves You Are a Real Company</h1>
+
+<p><span class="sev sev-critical">Critical</span> &nbsp;We approached the site the way a cautious
+buyer would, and tried to answer a simple question: who is this?</p>
+
+<p>The site does not say. There is no About page. No company name appears anywhere in the page
+text, no registered address, no company number, and no named people. There are no author names on
+any of the 607 articles. The privacy policy and terms of service links in the footer are placeholders
+that lead nowhere: their destination in the code is <code>href="#"</code>, and the corresponding
+pages return "page not found".</p>
+
+<p>The social media icons in the footer are also unedited placeholders, pointing at
+<code>https://twitter.com</code> and <code>https://linkedin.com</code>, the platforms' own home
+pages, rather than at any profile.</p>
+
+<p>This last one is a missed opportunity as much as an error, because a real company profile does
+exist. We found a LinkedIn page under the name "AI Token King (ATK)", listing 11 to 50 employees.
+The site does not link to it. Its follower count is 5.</p>
+
+<table>
+<thead><tr><th>Trust signal a B2B buyer looks for</th><th>Status on the site</th></tr></thead>
+<tbody>
+<tr><td>Company legal name</td><td>Absent</td></tr>
+<tr><td>Registered address</td><td>Absent</td></tr>
+<tr><td>Contact email or telephone</td><td>Absent</td></tr>
+<tr><td>About or team page</td><td>Returns page not found</td></tr>
+<tr><td>Privacy policy</td><td>Link is a placeholder; page returns not found</td></tr>
+<tr><td>Terms of service</td><td>Link is a placeholder; page returns not found</td></tr>
+<tr><td>Named authors on articles</td><td>Absent on all 607</td></tr>
+<tr><td>Customer proof, case studies or reviews</td><td>None found on site or on review platforms</td></tr>
+<tr><td>Social profiles linked from the site</td><td>Placeholder links to platform home pages</td></tr>
+</tbody>
+</table>
+
+<p>Two external factors sharpen this. The domain was registered on 9 April 2026, making it about
+four months old, and it has never been captured by the Internet Archive. Neither fact is a problem
+by itself. Combined with a site that names no operator, they leave a diligence-minded buyer with
+nothing to verify.</p>
+
+<div class="meaning"><span class="lbl">What this means.</span>
+<p>This is the cheapest large win available. An About page naming the company and the people, a real
+privacy policy and terms, a contact route, author names on articles, and a correct link to the
+LinkedIn profile are perhaps two days of combined writing and development. They move the
+trustworthiness score more than any other single action, and several of them are prerequisites for
+enterprise procurement.</p></div>
+</section>
+
+<!-- ============ 8. MOBILE ============ -->
+<section class="chapter">
+<h1>8. The Phone Experience Hides the One Thing You Want Clicked</h1>
+
+<p><span class="sev sev-high">High</span> &nbsp;The mobile layout is technically sound: at 390
+pixels wide no page overflows sideways, every page has a clear headline near the top, and there are
+no broken images or script errors. The problem is what the first screen prioritises. The primary
+conversion button, "Get Started", is not visible on the phone at all, sitting inside the closed
+navigation menu, so reaching it takes two taps. The cookie consent panel meanwhile occupies 27.5
+percent of the first screen with no close button, and on six of the thirteen pages tested it is the
+largest visible element.</p>
+
+<figure class="portrait">
+<img src="../annotated/fig5-mobile-consent.png" alt="Mobile home page with callouts on the cookie consent panel and its privacy policy link">
+<figcaption><span class="cn">1</span> The consent panel occupies 27.5 percent of the first screen on
+a 390 by 844 pixel phone, with no dismiss control other than the two choices.
+<span class="cn">2</span> Its "Privacy Policy" link, offered as the basis for an informed decision,
+has the destination <code>href="#"</code> and leads nowhere.</figcaption>
+</figure>
+
+<div class="keep">
+<p>Separately, the blog index is extremely heavy: 18,636 kilobytes on desktop, of which 18,184 are
+images, being 146 full-resolution files none of them resized for display. Because no image declares
+its dimensions the page also shifts as it loads, scoring 0.71 on Google's layout stability measure
+where anything above 0.25 is poor. Sitewide, 100 of 104 images are served at more than twice their
+displayed size, the worst being 1,344 by 768 pixel files shown in an 80 by 80 pixel box.</p>
+
+<div class="meaning"><span class="lbl">What this means.</span>
+<p>Three contained fixes. Put a "Get Started" button in the visible header bar on mobile rather than
+inside the menu. Add width and height attributes to images and serve them resized through the image
+service already in use, which will cut the blog index from roughly 18 megabytes to under 2 and fix
+the layout shifting. Give the consent panel a smaller footprint and a working privacy link.</p></div>
+</div>
+</section>
+
+<!-- ============ 9. RISKS ============ -->
+<section class="chapter">
+<h1>9. Risks That Need a Decision, Not Just a Fix</h1>
+
+<p>The items in this chapter carry legal, regulatory or platform exposure. They are separated out
+because they need a decision from you or your advisers, not only a developer ticket.</p>
+
+<div class="warn"><span class="lbl">Risk.</span>
+<p><strong>Analytics run in four languages with no privacy policy.</strong> Google Analytics
+(property G-2KG5EVJQ22) and Cloudflare's analytics are both live on every page. The site has no
+privacy policy, and the consent panel's own link to that policy is a placeholder. The site publishes
+in Spanish, so European visitors are likely. To the site's credit, the consent panel does hold
+analytics until the visitor accepts, which is the harder half of the requirement. Publishing a
+genuine privacy policy and wiring the link to it closes the gap.</p></div>
+
+<div class="warn"><span class="lbl">Risk.</span>
+<p><strong>The commercial relationship behind the calls to action is not disclosed.</strong> Every
+conversion path on the site leaves for <code>aitokenking.com.tw</code>. The code shipped by that
+site indicates it operates as a white-labelled tenant of a platform trading as BasicRouter. We found
+no disclosure of any commercial or affiliate relationship anywhere on aitoken.global: a search of
+the codebase for the terms affiliate, disclosure, sponsored, commission and referral returns no
+matches. Whether a disclosure is legally required depends on the commercial terms, which we cannot
+see. This should be confirmed with counsel rather than assumed either way.</p></div>
+
+<div class="warn"><span class="lbl">Risk.</span>
+<p><strong>An enterprise compliance offer with no identifiable seller.</strong> The compliance page
+markets governance and audit services to financial institutions and listed companies. It names no
+legal entity, provides no contact route, and its enquiry buttons link to themselves. Selling
+compliance services while displaying no verifiable corporate identity is a credibility problem in
+the one market segment least likely to tolerate it.</p></div>
+
+<div class="warn"><span class="lbl">Risk.</span>
+<p><strong>Placeholder links are live in production.</strong> The footer social icons point at
+<code>twitter.com</code> and <code>linkedin.com</code> rather than at your profiles, and two legal
+links point nowhere. These are visible to every visitor and read as an unfinished site.</p></div>
+
+<div class="note"><span class="lbl">Worth watching.</span>
+<p><strong>Cached pages could persist for a year.</strong> Pages are cached at the edge network with
+a one-year lifetime. Content updates depend on that cache being cleared at each deploy. We confirmed
+the live pages were fresher than the last commit on the main branch, so a rebuild path clearly
+works, but we could not verify the cache-clearing mechanism itself. If it is ever missed, a stale
+price could remain published for a very long time.</p></div>
+</section>
+
+<!-- ============ 10. PLAN ============ -->
+<section class="chapter">
+<h1>10. The Plan</h1>
+
+<p>Three stages. The order is deliberate and explained at the end of the chapter.</p>
+
+<h2>P0. This week: make conversion possible</h2>
+
+<table>
+<thead><tr><th class="num">#</th><th>Action</th><th>Who</th><th>Fixes</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td>Connect both newsletter forms to a real mailing service; remove <code>onsubmit="return false;"</code>, add a name to the email field, add success and error states</td><td>Developer</td><td>Ch. 3</td></tr>
+<tr><td class="num">2</td><td>Build a contact page with a working form, an email address and a stated response time; link it from the header and footer</td><td>Developer, Copywriter</td><td>Ch. 3</td></tr>
+<tr><td class="num">3</td><td>Point the two compliance page buttons at the new contact page</td><td>Developer</td><td>Ch. 3</td></tr>
+<tr><td class="num">4</td><td>Publish a privacy policy and terms of service; wire the footer and consent panel links to them</td><td>Owner, Copywriter</td><td>Ch. 7, 9</td></tr>
+<tr><td class="num">5</td><td>Correct the Claude, ChatGPT and Gemini pricing blocks and add a visible "last checked" date to each</td><td>Copywriter</td><td>Ch. 5</td></tr>
+<tr><td class="num">6</td><td>Remove the two blockchain articles from the home page feature list; correct or unpublish them</td><td>Copywriter</td><td>Ch. 5</td></tr>
+<tr><td class="num">7</td><td>Replace the placeholder social links with the real LinkedIn profile, or remove the icons</td><td>Developer</td><td>Ch. 7, 9</td></tr>
+<tr><td class="num">8</td><td>Merge the open canonical host pull request</td><td>Developer</td><td>Ch. 6</td></tr>
+</tbody>
+</table>
+
+<h2>P1. Next 30 days: rebuild the foundation</h2>
+
+<table>
+<thead><tr><th class="num">#</th><th>Action</th><th>Who</th><th>Fixes</th></tr></thead>
+<tbody>
+<tr><td class="num">9</td><td>Generate language links from the stored article addresses instead of by swapping the language code; emit a link only where a translation exists</td><td>Developer</td><td>Ch. 6</td></tr>
+<tr><td class="num">10</td><td>Add organisation, article, breadcrumb and question-and-answer structured data</td><td>Developer</td><td>Ch. 6</td></tr>
+<tr><td class="num">11</td><td>Publish real machine-readable dates on every article and add them to the sitemap</td><td>Developer</td><td>Ch. 6</td></tr>
+<tr><td class="num">12</td><td>Add two or three contextual links into the calculator and provider pages within the top 50 articles by traffic</td><td>Copywriter</td><td>Ch. 4</td></tr>
+<tr><td class="num">13</td><td>Write an About page naming the company, the people and the operating entity; add author names and short biographies to articles</td><td>Owner, Copywriter</td><td>Ch. 7</td></tr>
+<tr><td class="num">14</td><td>Serve resized images with declared dimensions and paginate the blog index</td><td>Developer</td><td>Ch. 8</td></tr>
+<tr><td class="num">15</td><td>Move the primary call to action into the visible mobile header; shrink the consent panel</td><td>Designer, Developer</td><td>Ch. 8</td></tr>
+<tr><td class="num">16</td><td>Either build the comparison table the navigation promises, or rename the navigation item</td><td>Designer, Copywriter</td><td>Ch. 5</td></tr>
+<tr><td class="num">17</td><td>Fix internal links to include the trailing slash, removing a redirect from 78.6 percent of internal clicks</td><td>Developer</td><td>Ch. 6</td></tr>
+<tr><td class="num">18</td><td>Add security response headers at the content delivery network</td><td>Developer</td><td>Ch. 12</td></tr>
+<tr><td class="num">19</td><td>Take a decision on disclosing the commercial relationship, with counsel</td><td>Owner</td><td>Ch. 9</td></tr>
+</tbody>
+</table>
+
+<h2>P2. Days 30 to 90: build the growth engine</h2>
+
+<table>
+<thead><tr><th class="num">#</th><th>Action</th><th>Who</th><th>Fixes</th></tr></thead>
+<tbody>
+<tr><td class="num">20</td><td>Audit the 129 articles published in June 2026; merge, rewrite or unpublish the thin ones. The 55 title pairs with more than half their words in common are competing with each other</td><td>Copywriter</td><td>Ch. 12</td></tr>
+<tr><td class="num">21</td><td>Apply the editorial standard already used in the July and August articles, which are sourced and roughly three times longer, to all new work</td><td>Copywriter</td><td>Ch. 11</td></tr>
+<tr><td class="num">22</td><td>Establish a monthly pricing verification routine with a published "last checked" date on every pricing surface</td><td>Owner, Copywriter</td><td>Ch. 5</td></tr>
+<tr><td class="num">23</td><td>Shorten the 244 over-length meta descriptions and the 123 over-length titles</td><td>Copywriter</td><td>Ch. 12</td></tr>
+<tr><td class="num">24</td><td>Build the LinkedIn presence from 5 followers, and pursue a review footprint on at least one recognised platform</td><td>Marketing</td><td>Ch. 7</td></tr>
+<tr><td class="num">25</td><td>Add case studies or named customer proof once available</td><td>Marketing, Owner</td><td>Ch. 7</td></tr>
+</tbody>
+</table>
+
+<div class="meaning"><span class="lbl">Why this order.</span>
+<p>Spending on marketing before completing P0 wastes the money. Traffic arriving at a site with no
+working form, no contact route and no privacy policy cannot convert and cannot be captured for later
+follow-up, so the spend produces visits and nothing else. P1 makes the existing 611 articles work as
+a connected, machine-readable asset that routes readers toward the calculator and the provider
+pages. Only after that does additional traffic compound rather than leak away.</p></div>
+</section>
+
+<!-- ============ 11. GOOD ============ -->
+<section class="chapter">
+<h1>11. What Is Already Good</h1>
+
+<p>An audit that lists only faults is a sales pitch rather than an assessment. The following are
+genuine strengths, verified in the same way as the problems.</p>
+
+<h2>The engineering foundation is sound</h2>
+<ul>
+<li>Pages are served as complete HTML from a global network. Google's crawler, OpenAI's crawler and
+an ordinary browser all receive byte-for-byte identical content. Many modern sites fail this test
+badly; this one passes cleanly.</li>
+<li>Modern transport is fully configured, with compression reducing the home page from 101 kilobytes
+to 17.5 kilobytes.</li>
+<li>Invalid addresses return proper "not found" responses, and addresses without a trailing slash
+redirect correctly and permanently.</li>
+<li>Content pages other than the blog index are lean, at 419 to 424 kilobytes.</li>
+</ul>
+
+<h2>The front end is carefully built</h2>
+<ul>
+<li>Zero console errors, zero failed resources and zero broken images across all thirteen pages
+tested.</li>
+<li>No horizontal overflow at 390 pixels on any page, and a unique headline visible near the top of
+all 26 desktop and mobile captures.</li>
+<li>A visible keyboard focus indicator on all 312 interactive elements tested, which many
+commercial sites lack entirely.</li>
+<li>The consent panel presents accept and reject with equal prominence and genuinely withholds
+analytics until the visitor chooses. That is the ethically and legally harder half done correctly.</li>
+</ul>
+
+<h2>The content operation has already improved</h2>
+<ul>
+<li>The 33 articles published in July and August 2026 have a median length of 1,878 words, cite
+their sources, and are transparent about method. The editorial process that produced them works.
+The problem is the older material, not the current capability.</li>
+<li>Translation quality is high across Spanish, Indonesian and Vietnamese, with no source-language
+text left in the body copy. Vietnamese articles are the deepest on the site, averaging 1,371 words.</li>
+<li>Metadata is genuinely translated rather than copied: across 399 comparable pairs there were zero
+identical descriptions and zero identical headlines.</li>
+<li>There are zero duplicate meta descriptions across all 656 pages, which is unusual at this scale.</li>
+<li>The token calculator carries honest disclaimers about estimate accuracy.</li>
+<li>Analytics event tracking is already wired to the calls to action, so measurement will work as
+soon as there is something to measure.</li>
+</ul>
+</section>
+
+<!-- ============ 12. APPENDIX ============ -->
+<section class="chapter">
+<h1>12. Appendix: Evidence, Method and Limits</h1>
+
+<h2>Evidence files</h2>
+
+<table>
+<thead><tr><th>File</th><th>Lane</th><th class="num">Findings</th></tr></thead>
+<tbody>
+<tr><td><code>findings/technical-seo.md</code></td><td>Crawlability, indexing, headers, performance</td><td class="num">12</td></tr>
+<tr><td><code>findings/page-inventory.md</code></td><td>Full 656-page metadata census</td><td class="num">20</td></tr>
+<tr><td><code>findings/content-eeat.md</code></td><td>Content quality, trust, conversion path</td><td class="num">18</td></tr>
+<tr><td><code>findings/ui-visual.md</code></td><td>Interface, accessibility, performance</td><td class="num">23</td></tr>
+<tr><td><code>findings/marketing-socials.md</code></td><td>Off-site presence, reputation, entity</td><td class="num">17</td></tr>
+<tr><td><code>findings/page-inventory-data.tsv</code></td><td>Raw dataset, 656 rows by 39 columns</td><td class="num">n/a</td></tr>
+<tr><td><code>findings/reconciliation.md</code></td><td>Cross-lane conflict resolution</td><td class="num">n/a</td></tr>
+<tr><td><code>screenshots/</code></td><td>80 captures, two viewports, three states</td><td class="num">n/a</td></tr>
+<tr><td><code>annotated/</code></td><td>5 annotated figures used in this report</td><td class="num">n/a</td></tr>
+</tbody>
+</table>
+
+<h2>Method</h2>
+
+<p>Ground truth was established first by direct HTTP requests, then five specialist reviews ran in
+parallel, each briefed with that shared ground truth. Every finding rated Critical was independently
+re-verified by the lead auditor against the live site before inclusion here, and three claims were
+corrected as a result. Coverage was complete rather than sampled: all 656 published addresses were
+fetched and parsed, and all 1,257 unique language-link targets were requested individually.</p>
+
+<p>Annotation boxes were positioned from measured element coordinates taken from the rendered page,
+not drawn by eye. Chart colours were checked with a contrast and colour-blindness validator against
+the white page background: the two-colour comparison passes all six categorical checks, and the
+severity scale passes all four ordinal checks.</p>
+
+<h2>Conflicts reconciled</h2>
+
+<p>Two reviews reported different rates of language-link breakage, 59.9 percent and 57.7 percent.
+Both were set aside in favour of a direct count from the raw dataset, which gives 1,511 broken
+annotations out of 3,275, or 46.1 percent. The broken count itself was consistent across sources;
+only the denominators differed. This report therefore uses the per-page figure, 603 of 656 pages
+affected, which all three sources support and which is the more meaningful measure.</p>
+
+<p>Two expectations carried into the audit were not supported by the evidence and are recorded as
+negative findings: duplicate page titles and descriptions are not a significant problem here, and
+translated metadata is genuine rather than copied. A third, the common pattern of a site rendered
+only in the browser and invisible to crawlers, was tested for and found absent.</p>
+
+<h2>Verification limits</h2>
+
+<p>The following could not be verified and are recorded as no data rather than estimated. Which
+hostname Google actually has indexed, because a domain-level property masks the distinction. The
+cache-clearing mechanism used at deploy. Whether the hosting is managed or raw content delivery
+network configuration. Per-page indexation status, traffic and Core Web Vitals from real users, all
+of which require account access. Backlink volume, which requires a paid tool. Screen reader
+behaviour, tested only through structural inspection. Performance under throttled network
+conditions. Intermediate screen widths between 390 and 1,920 pixels. Non-English pages were not
+covered by the interface review. Several social and review platforms return blocking responses to
+automated requests, specifically Facebook, Instagram, TikTok, Threads, Medium, Reddit, Trustpilot,
+G2, Capterra and Product Hunt; absence of a profile on those platforms is therefore unverified
+rather than confirmed. LinkedIn absences were control-tested against a known-good profile and are
+asserted as verified. Company register searches returned an entity whose name does not match the one
+implied by the product code, and that discrepancy remains unresolved. Whether the addresses found
+are mass virtual offices is suspected but not established.</p>
+</section>
+
+</body>
+</html>
