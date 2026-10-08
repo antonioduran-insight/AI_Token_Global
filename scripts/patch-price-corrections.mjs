@@ -11,6 +11,8 @@
  *      in the four AI-model-comparison posts.
  *   3. REPLACE the text of block b21 (Claude Sonnet 5 "$3 / $15") in
  *      aitk-en-155, English only.
+ *   4. UNLINK or REPOINT the five links into the unpublished cluster (see the
+ *      rule above LINKS). Only marks and markDefs change; the words stay.
  *
  * Replacement copy is not in this file. It comes from a JSON file you write
  * (default scripts/data/price-corrections.json):
@@ -187,6 +189,74 @@ for (const target of BLOCKS) {
     }
     say('');
   }
+}
+
+// ── 4. Links into the unpublished cluster ─────────────────────────────────
+// Rule: an anchor that names the price cut cannot honestly point anywhere
+// else, so its link is removed and its words are kept; a generic anchor
+// ("GPT-5.6 Sol pricing", "Sol vs Opus 5") is repointed to /{locale}/api-compare/.
+// All five anchors are the cut article's own headline ("Sol Down 20%+"), so
+// all five are UNLINK. REPOINT stays supported for any link added later.
+const LINKS = [
+  { _id: 'WrDyrcpEcKzVA0WNZUlVBJ', lang: 'en', blockKey: 'b44', markKey: 'b44mk1', action: 'unlink' },
+  { _id: 'omD0WVM15RlaoFPycaTkzj', lang: 'en', blockKey: 'b34', markKey: 'b34mk1', action: 'unlink' },
+  { _id: 'pqZUkO11VFO6GURruenJiC', lang: 'es', blockKey: 'b44', markKey: 'b44mk1', action: 'unlink' },
+  { _id: 'Qm3zd23VCf0DzKaRFRhETm', lang: 'id', blockKey: 'b44', markKey: 'b44mk1', action: 'unlink' },
+  { _id: 'Qm3zd23VCf0DzKaRFRhEnW', lang: 'vi', blockKey: 'b44', markKey: 'b44mk1', action: 'unlink' },
+];
+const pointsAtCluster = href => SOL_SLUGS.some(s => (href ?? '').includes(`/blog/${s}`));
+
+say('## 4. Links into the unpublished cluster');
+say('');
+for (const target of LINKS) {
+  say(`### \`${target._id}\` (${target.lang}) · block \`${target.blockKey}\` · ${target.action.toUpperCase()}`);
+  say('');
+  const doc = await client.fetch('*[_id == $id][0]', { id: target._id });
+  const block = doc?.body?.find(b => b._key === target.blockKey);
+  if (!block) { say('FAILED: document or block not found.'); say(''); failures++; continue; }
+  const def = (block.markDefs ?? []).find(m => m._key === target.markKey);
+  const anchor = (block.children ?? []).filter(c => c.marks?.includes(target.markKey)).map(c => c.text).join('');
+  const expectedHref = `https://aitoken.global/${target.lang}/api-compare/`;
+
+  if (!def) { say('Already done: the link is gone.'); say(''); continue; }
+  if (target.action === 'repoint' && def.href === expectedHref) { say(`Already done: points at ${expectedHref}.`); say(''); continue; }
+  if (!pointsAtCluster(def.href)) {
+    say(`FAILED: link \`${target.markKey}\` now points at ${def.href}, not at the cluster. Nothing changed.`);
+    say(''); failures++; continue;
+  }
+
+  say(`Anchor: "${anchor}"`);
+  say(`Before: href ${def.href}`);
+  const patch = client.patch(doc._id).ifRevisionId(doc._rev);
+  if (target.action === 'unlink') {
+    // Drop the mark from every span carrying it, then the markDef. Text untouched.
+    for (const span of block.children.filter(c => c.marks?.includes(target.markKey))) {
+      patch.set({ [`body[_key=="${block._key}"].children[_key=="${span._key}"].marks`]: span.marks.filter(m => m !== target.markKey) });
+    }
+    patch.unset([`body[_key=="${block._key}"].markDefs[_key=="${target.markKey}"]`]);
+    say('After: no link; text unchanged.');
+  } else {
+    patch.set({ [`body[_key=="${block._key}"].markDefs[_key=="${target.markKey}"].href`]: expectedHref });
+    say(`After: href ${expectedHref}`);
+  }
+  if (APPLY) {
+    backup(doc);
+    try {
+      await patch.commit();
+      const check = await client.fetch('*[_id == $id][0].body[_key == $b][0]', { id: doc._id, b: block._key });
+      const text = (check.children ?? []).map(c => c.text).join('');
+      const ok = text === (block.children ?? []).map(c => c.text).join('')
+        && (target.action === 'unlink'
+          ? !(check.markDefs ?? []).some(m => m._key === target.markKey) && !check.children.some(c => c.marks?.includes(target.markKey))
+          : check.markDefs.find(m => m._key === target.markKey)?.href === expectedHref);
+      say(ok ? 'Written and re-read: matches; text unchanged.' : 'FAILED: re-read block does not match.');
+      if (!ok) failures++;
+    } catch (err) {
+      say(`FAILED: ${err.message}`);
+      failures++;
+    }
+  }
+  say('');
 }
 
 mkdirSync(OUT_DIR, { recursive: true });
