@@ -43,7 +43,8 @@
  *
  * Idempotent: an already-unpublished post and a block that already reads the
  * replacement are reported as "already done" and skipped. Every run writes a
- * before/after log to audits/<today>/price-corrections-log.md, and --apply
+ * before/after log to audits/<today>/ (price-corrections-log.md for --apply,
+ * price-corrections-dryrun.md otherwise), and --apply
  * also saves each document as it was before the write, under
  * audits/<today>/price-corrections-backup/.
  */
@@ -299,7 +300,8 @@ for (const target of LINKS) {
 }
 
 mkdirSync(OUT_DIR, { recursive: true });
-const logPath = join(OUT_DIR, 'price-corrections-log.md');
+// A dry run never overwrites the record of an --apply run.
+const logPath = join(OUT_DIR, APPLY ? 'price-corrections-log.md' : 'price-corrections-dryrun.md');
 writeFileSync(logPath, log.join('\n') + '\n');
 console.log(`\nLog → ${logPath}${failures ? `\n${failures} problem(s); see above.` : ''}`);
 process.exit(failures ? 1 : 0);
