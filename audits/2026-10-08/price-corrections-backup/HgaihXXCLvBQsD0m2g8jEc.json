@@ -1,0 +1,898 @@
+{
+  "_createdAt": "2026-08-25T07:19:08Z",
+  "_id": "HgaihXXCLvBQsD0m2g8jEc",
+  "_rev": "lQ9B2UJ9DPgrVbnXguNTWs",
+  "_type": "post",
+  "_updatedAt": "2026-08-25T07:41:21Z",
+  "articleNumber": 173,
+  "body": [
+    {
+      "_key": "b0",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b0s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Pada 21 Agustus 2026, OpenAI resmi memangkas lagi harga API GPT-5.6 Sol: harga input turun dari $5 menjadi $4 per juta token, dan harga output turun dari $30 menjadi $20, penurunan lebih dari 20%, promo ini berlaku setidaknya hingga 21 November. Ini menyusul pemangkasan harga Terra (turun 20%) dan Luna (turun 80%) pada 30 Juli — ronde kedua pemangkasan harga resmi GPT-5.6 dalam dua bulan. Setelah pemangkasan ini, harga resmi Sol sudah lebih rendah dari Claude Opus 5 ($5 input / $25 output) — tapi ini bukan berarti Sol otomatis jadi \"pilihan yang lebih murah\". Kamu masih perlu memperhitungkan Fast Mode, caching, harga konteks panjang, dan pemrosesan Batch sebelum bisa menghitung berapa sebenarnya yang akan kamu bayar."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b1",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b1s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Harga Lengkap GPT-5.6 Saat Ini: Sol, Terra, dan Luna"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "b2",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b2s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Berikut harga resmi terbaru per Agustus 2026 (per juta token, dalam USD, mode Standard):"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b3",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b3s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Konteks pendek (Short context):"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b4",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b4s1",
+          "_type": "span",
+          "marks": [],
+          "text": "GPT-5.6 Sol: input $4.00, cached input $0.40, cache writes $5.00, output $20.00"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b5",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b5s1",
+          "_type": "span",
+          "marks": [],
+          "text": "GPT-5.6 Terra: input $2.00, cached input $0.20, cache writes $2.50, output $12.00"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b6",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b6s1",
+          "_type": "span",
+          "marks": [],
+          "text": "GPT-5.6 Luna: input $0.20, cached input $0.02, cache writes $0.25, output $1.20"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b7",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b7s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Konteks panjang (Long context, umumnya permintaan di atas ambang token tertentu):"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b8",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b8s1",
+          "_type": "span",
+          "marks": [],
+          "text": "GPT-5.6 Sol: input $8.00, cached input $0.80, cache writes $10.00, output $30.00"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b9",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b9s1",
+          "_type": "span",
+          "marks": [],
+          "text": "GPT-5.6 Terra: input $4.00, cached input $0.40, cache writes $5.00, output $18.00"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b10",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b10s1",
+          "_type": "span",
+          "marks": [],
+          "text": "GPT-5.6 Luna: input $0.40, cached input $0.04, cache writes $0.50, output $1.80"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b11",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b11s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Kamu akan melihat bahwa harga input konteks panjang tepat dua kali lipat dari konteks pendek, tapi output tidak naik dengan proporsi yang sama (misalnya output Sol hanya naik dari 20 ke 30, bukan 40). Ini menunjukkan bahwa OpenAI menerapkan logika kenaikan yang berbeda antara \"output yang lebih panjang\" dan \"input yang lebih panjang\", jadi saat memperkirakan biaya dokumen panjang atau percakapan panjang, kamu tidak bisa hanya mengalikannya dengan dua."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b12",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b12s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Bukan Pemangkasan Pertama: Dalam Dua Bulan, OpenAI Menurunkan Harga GPT-5.6 dalam Dua Tahap"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "b13",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b13s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Pemangkasan harga kali ini bukan kejadian yang berdiri sendiri, melainkan kelanjutan dari langkah sebelumnya:"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b14",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b14s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Pada 30 Juli, OpenAI mengumumkan di komunitas developer-nya bahwa tim GPT-5.6 menugaskan model itu sendiri untuk mengoptimalkan efisiensi runtime-nya, dan menghasilkan dua hal: penurunan biaya layanan sebesar 20% melalui peningkatan GPU kernel di lingkungan produksi, serta peningkatan efisiensi generasi token lebih dari 15% melalui perbaikan speculative decoding. OpenAI langsung menerapkan peningkatan efisiensi tersebut ke dalam harga: Luna turun 80%, Terra turun 20%, dan pada saat yang sama Sol mendapatkan fitur baru Fast Mode (kecepatan hingga 2,5 kali lipat dari Standard, dengan harga dua kali lipat)."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b15",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b15s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Pada 21 Agustus, OpenAI mengumumkan lagi bahwa Sol sendiri akan turun lebih dari 20% (input turun 20%, output turun 33%), dan secara eksplisit menyatakan bahwa pemangkasan ini \"berlaku untuk Fast Mode, permintaan konteks panjang, serta pemrosesan Batch dan Flex\" — artinya pemangkasan ini bukan hanya memotong satu harga masuk, melainkan menurunkan seluruh kurva harga sekaligus. OpenAI juga menjelaskan bahwa penyesuaian ini \"mencakup API, kredit Codex, dan secara bertahap diperluas ke paket ChatGPT Work yang memenuhi syarat\", tetapi harga paket berlangganan Pro, Plus, dan Business tidak berubah — ini mengingatkan kita bahwa penagihan API dan penagihan langganan konsumen adalah dua sistem harga yang sepenuhnya terpisah; pemangkasan di satu sisi tidak otomatis berdampak ke sisi lainnya."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b16",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b16s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Fast Mode (Dulu Bernama Priority): Berapa Lebih Mahal dari Standard, dan Kapan Harus Digunakan"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "b17",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b17s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Fast Mode adalah nama resmi baru dari \"pemrosesan Priority\" sejak 30 Juli 2026. Dalam permintaan API kamu bisa tetap menggunakan `service_tier: \"priority\"`, atau beralih ke nama baru `service_tier: \"fast\"` — keduanya setara. Harga Fast Mode setelah pemangkasan (konteks pendek):"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b18",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b18s1",
+          "_type": "span",
+          "marks": [],
+          "text": "GPT-5.6 Sol: input $8.00, cached input $0.80, cache writes $10.00, output $40.00"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b19",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b19s1",
+          "_type": "span",
+          "marks": [],
+          "text": "GPT-5.6 Terra: input $4.00, cached input $0.40, cache writes $5.00, output $24.00"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b20",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b20s1",
+          "_type": "span",
+          "marks": [],
+          "text": "GPT-5.6 Luna: input $0.40, cached input $0.04, cache writes $0.50, output $2.40"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b21",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b21s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Singkatnya: Fast Mode secara keseluruhan dua kali lipat harga Standard, sebagai gantinya kamu mendapat kecepatan pemrosesan hingga 2,5 kali lipat, tanpa perubahan pada tingkat kecerdasan model. Jika aplikasi kamu berupa layanan pelanggan real-time atau interaksi suara — di mana pengguna sedang menunggu — membayar dua kali lipat untuk latensi yang lebih rendah biasanya sepadan. Jika ini tugas batch di belakang layar atau menjalankan laporan di jam sepi, membayar lebih untuk kecepatan jadi tidak ada gunanya — sebaiknya gunakan Batch/Flex yang dibahas di bagian berikutnya."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b22",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b22s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Batch dan Flex: Hemat Setengah Harga, dengan Konsekuensi Harus Menunggu"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "b23",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b23s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Mode pemrosesan Batch dan Flex memiliki harga yang benar-benar sama, keduanya diskon 50% dari Standard (konteks pendek):"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b24",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b24s1",
+          "_type": "span",
+          "marks": [],
+          "text": "GPT-5.6 Sol: input $2.00, cached input $0.20, cache writes $2.50, output $10.00"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b25",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b25s1",
+          "_type": "span",
+          "marks": [],
+          "text": "GPT-5.6 Terra: input $1.00, cached input $0.10, cache writes $1.25, output $6.00"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b26",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b26s1",
+          "_type": "span",
+          "marks": [],
+          "text": "GPT-5.6 Luna: input $0.10, cached input $0.01, cache writes $0.125, output $0.60"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b27",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b27s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Perbedaannya, Batch mengirim sekumpulan permintaan secara asinkron dan menunggu hingga selesai, cocok untuk pekerjaan seperti rekapitulasi laporan atau ringkasan dokumen dalam jumlah besar yang hasilnya tidak perlu dilihat segera. Flex adalah mode pemrosesan fleksibel resmi lainnya dari OpenAI, dengan harga yang sama seperti Batch tapi cara penggunaannya berbeda. Keduanya tidak cocok untuk skenario yang membutuhkan respons langsung ke pengguna."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b28",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b28s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Model Cyber (Daybreak): Daftar Harga Terpisah yang Tidak Semua Orang Perlukan"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "b29",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b29s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Keluarga GPT-5.6 juga punya cabang independen bernama model Cyber, yang berkaitan dengan program Daybreak milik OpenAI, dan saat ini hanya tersedia dengan harga konteks pendek: GPT-5.6 Sol tetap di $4.00 / $0.40 / $5.00 / $20.00 (sama seperti Sol biasa), sementara GPT-5.6 Cyber dihargai $12.50 input / $1.25 cached input / $15.625 cache writes / $75.00 output — jauh lebih mahal berkali-kali lipat. Dokumentasi resmi juga menyebutkan bahwa alias `daybreak-blue-latest` dan `daybreak-red-latest` saat ini masing-masing mengarah ke `gpt-5.6-sol` dan `gpt-5.6-cyber`, dan akan diperbarui — dengan harga yang disesuaikan — seiring program Daybreak meluncurkan model baru. Jika aplikasi kamu tidak berkaitan dengan evaluasi keamanan siber, latihan red team, atau kasus penggunaan sasaran program Daybreak lainnya, kamu umumnya tidak akan bersentuhan dengan harga model Cyber ini."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b30",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b30s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Promo Berlaku hingga 21 November 2026: Apakah Harga Akan Naik Lagi Setelahnya"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "b31",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b31s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Dokumentasi resmi menyatakan dengan jelas bahwa \"harga promosi GPT-5.6 Sol berlaku setidaknya hingga 21 November 2026\" — perhatikan kata \"setidaknya\" di sini, yang berarti OpenAI tidak berkomitmen bahwa harga akan kembali ke $5/$30 setelah promo berakhir, dan juga tidak berkomitmen akan tetap mempertahankan $4/$20. Di forum diskusi komunitas developer resmi OpenAI, pendapat para engineer dan developer terbelah dua: sebagian berpendapat tekanan kompetisi — terutama dari model open-source dan perang harga antar penyedia — akan membuat diskon ini terus berlanjut; sebagian lain berpendapat sangat mungkin dalam 3 bulan akan ada model generasi baru yang dirilis, dan pada saat itu strategi harga model lama pun akan tergantikan begitu saja. Hal ini belum ada pengumuman resmi yang bisa diverifikasi, jadi sifatnya masih spekulasi komunitas, bukan fakta yang sudah terbukti. Saat menyusun anggaran untuk periode setelah November, sebaiknya perhitungkan kedua skenario — \"diskon tetap berlanjut\" dan \"harga kembali normal\" — jangan hanya bertaruh pada satu kemungkinan saja."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b32",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b32s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Apakah GPT-5.6 Sol Sekarang Benar-Benar Lebih Murah dari Claude Opus 5"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "b33",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b33s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Kalau kita bandingkan kedua harga resmi berdampingan: GPT-5.6 Sol (Standard, konteks pendek) adalah $4.00 input / $20.00 output; Claude Opus 5 (Standard) adalah $5 input / $25 output. Dilihat dari harga daftar saja, Sol memang lebih rendah dari Opus 5 di kedua dimensi, input maupun output. Tapi perbandingan ini punya dua batasan yang perlu kamu perhatikan: pertama, kedua penyedia menggunakan tokenizer yang berbeda, sehingga teks yang sama tidak akan menghasilkan jumlah token yang identik di Sol maupun Opus 5 — harga daftar yang lebih murah tidak menjamin tagihan aktual untuk tugas yang sama pasti lebih rendah. Kedua, Claude Opus 5 menawarkan diskon Batch 50% ($2.50 / $12.50) dan diskon caching prompt hingga 90%, sementara diskon Batch GPT-5.6 Sol juga 50% ($2.00 / $10.00), tapi struktur caching-nya berbeda (cached input Sol adalah sepersepuluh dari harga standar, sementara cache read Opus 5 adalah 0,1 kali harga input dan cache write-nya 1,25 kali atau 2 kali tergantung apakah write 5 menit atau 1 jam). Yang sebenarnya perlu kamu bandingkan bukan angka utama di pengumuman resmi, melainkan tagihan aktual yang dihasilkan dari beban kerja kamu sendiri."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b34",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b34s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Keputusan Pengadaan Perusahaan: Berita Penurunan Harga Bukan Berarti Kamu Harus Langsung Ganti Model"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "b35",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b35s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Melihat berita penurunan harga lalu langsung ingin mengganti seluruh pipeline adalah reaksi yang paling mudah membuat kamu justru mengeluarkan lebih banyak uang. Sebelum berpindah, pastikan tiga hal ini dulu: di mode mana sebenarnya penggunaan kamu saat ini terdistribusi (Standard / Fast Mode / Batch), dan apakah pemangkasan harga ini benar-benar mencakup mode yang kamu gunakan; seberapa sensitif tugas kamu terhadap latensi — kalau memang ini tugas di belakang layar, penurunan harga Fast Mode sebenarnya tidak relevan untuk kamu; dan apakah kamu menggunakan opsi Data Residency (residensi data). Dokumentasi resmi menyebutkan bahwa endpoint pemrosesan regional dikenakan biaya tambahan 10% untuk model yang memenuhi syarat dan dirilis pada atau setelah 5 Maret 2026, dan keluarga GPT-5.6 termasuk dalam kategori ini — jadi harga setelah pemangkasan perlu dikalikan 1,1 lagi untuk mendapatkan biaya pemrosesan regional yang sebenarnya. Hitung dengan jelas ketiga hal ini sebelum memutuskan apakah perlu memindahkan pipeline kamu."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b36",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b36s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Pertanyaan yang Sering Diajukan"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "b37",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b37s1",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "Q1: Setelah pemangkasan harga ini, apakah kredit ChatGPT Work atau Codex yang sudah saya beli sebelumnya akan otomatis jadi lebih murah?"
+        },
+        {
+          "_key": "b37s2",
+          "_type": "span",
+          "marks": [],
+          "text": " Pengumuman resmi menyatakan bahwa pemangkasan ini \"mencakup API, kredit Codex, dan secara bertahap diperluas ke paket ChatGPT Work yang memenuhi syarat\", tetapi harga paket berlangganan Pro, Plus, dan Business tidak berubah. Artinya, jika kamu menggunakan API atau kredit Codex, diskon biasanya akan otomatis berlaku; tapi jika kamu pengguna berlangganan, pemangkasan harga ini tidak memengaruhi biaya langganan kamu."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b38",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b38s1",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "Q2: Apakah harga pasti akan naik lagi ke $5/$30 setelah promo berakhir pada 21 November 2026?"
+        },
+        {
+          "_key": "b38s2",
+          "_type": "span",
+          "marks": [],
+          "text": " Sampai saat ini OpenAI belum mengumumkan bagaimana kebijakan harga setelah promo berakhir, hanya menyebutkan promo ini berlaku \"setidaknya\" hingga tanggal tersebut. Ini adalah kejadian di masa depan yang belum terverifikasi — kamu bisa menjadikannya referensi, tapi jangan menganggapnya sebagai fakta pasti untuk perencanaan anggaran jangka panjang."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b39",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b39s1",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "Q3: Apakah Fast Mode itu sama dengan pemrosesan Priority yang lama?"
+        },
+        {
+          "_key": "b39s2",
+          "_type": "span",
+          "marks": [],
+          "text": " Betul. Dokumentasi resmi menyebutkan \"Priority processing was renamed Fast mode on July 30, 2026\" (pemrosesan Priority resmi diganti nama menjadi Fast Mode pada 30 Juli 2026). Parameter API `service_tier` masih bisa menggunakan `\"priority\"`, atau bisa diganti dengan nama baru `\"fast\"` — efeknya sama."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b40",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b40s1",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "Q4: Apakah pemangkasan harga ini juga berlaku untuk Batch dan konteks panjang?"
+        },
+        {
+          "_key": "b40s2",
+          "_type": "span",
+          "marks": [],
+          "text": " Berlaku. Pengumuman resmi 21 Agustus menyebutkan bahwa \"penurunan harga ini juga berlaku untuk Fast Mode, permintaan konteks panjang, serta pemrosesan Batch dan Flex\". Harga tiap mode yang tercantum di artikel ini sudah merupakan angka resmi terbaru pascapemangkasan."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b41",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b41s1",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "Q5: Apakah GPT-5.6 Sol sekarang benar-benar lebih murah dari Claude Opus 5?"
+        },
+        {
+          "_key": "b41s2",
+          "_type": "span",
+          "marks": [],
+          "text": " Berdasarkan perbandingan harga daftar resmi, harga input dan output Sol memang lebih rendah dari Opus 5. Tapi karena tokenizer kedua penyedia berbeda, serta struktur diskon caching dan Batch-nya juga berbeda, total biaya aktual harus dihitung berdasarkan uji coba dengan beban kerja kamu sendiri, bukan hanya melihat harga satuan di judul berita."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b42",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b42s1",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "Q6: Apa bedanya GPT-5.6 Cyber dengan Sol biasa, dan apakah saya perlu peduli soal ini?"
+        },
+        {
+          "_key": "b42s2",
+          "_type": "span",
+          "marks": [],
+          "text": " Cyber adalah cabang model independen yang berkaitan dengan program Daybreak (terkait evaluasi keamanan siber), dengan harga yang jauh lebih tinggi dari Sol biasa (output mencapai $75), dan saat ini hanya tersedia dengan harga konteks pendek. Jika aplikasi kamu tidak berkaitan dengan evaluasi keamanan atau latihan red team, umumnya kamu tidak akan menggunakannya dan tidak perlu memperhatikan harga ini secara khusus."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b43",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b43s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Pernyataan Sumber Data"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "b44",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b44s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Angka-angka dalam artikel ini diverifikasi hingga 25 Agustus 2026, berdasarkan sumber resmi berikut:"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b45",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b45s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Halaman harga resmi OpenAI, "
+        },
+        {
+          "_key": "b45s2",
+          "_type": "span",
+          "marks": [
+            "b45mk2"
+          ],
+          "text": "Pricing | OpenAI API"
+        },
+        {
+          "_key": "b45s3",
+          "_type": "span",
+          "marks": [],
+          "text": " (diverifikasi 2026-08-25)"
+        }
+      ],
+      "markDefs": [
+        {
+          "_key": "b45mk2",
+          "_type": "link",
+          "href": "https://developers.openai.com/api/docs/pricing"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "b46",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b46s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Pengumuman resmi komunitas developer OpenAI, \""
+        },
+        {
+          "_key": "b46s2",
+          "_type": "span",
+          "marks": [
+            "b46mk2"
+          ],
+          "text": "20% price reduction for GPT 5.6 Sol: API, Codex credits and ChatGPT Work"
+        },
+        {
+          "_key": "b46s3",
+          "_type": "span",
+          "marks": [],
+          "text": "\", diterbitkan 21 Agustus 2026 (diverifikasi 2026-08-25)"
+        }
+      ],
+      "markDefs": [
+        {
+          "_key": "b46mk2",
+          "_type": "link",
+          "href": "https://community.openai.com/t/20-price-reduction-for-gpt-5-6-sol-api-codex-credits-and-chatgpt-work/1391726"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "b47",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b47s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Pengumuman resmi komunitas developer OpenAI, \""
+        },
+        {
+          "_key": "b47s2",
+          "_type": "span",
+          "marks": [
+            "b47mk2"
+          ],
+          "text": "Announcing a major Price drop for 5.6 Terra and Luna and Fast mode for 5.6-Sol"
+        },
+        {
+          "_key": "b47s3",
+          "_type": "span",
+          "marks": [],
+          "text": "\", diterbitkan 30 Juli 2026 (diverifikasi 2026-08-25)"
+        }
+      ],
+      "markDefs": [
+        {
+          "_key": "b47mk2",
+          "_type": "link",
+          "href": "https://community.openai.com/t/announcing-a-major-price-drop-for-5-6-terra-and-luna-and-fast-mode-for-5-6-sol/1388484"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "b48",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b48s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Halaman harga resmi Anthropic, "
+        },
+        {
+          "_key": "b48s2",
+          "_type": "span",
+          "marks": [
+            "b48mk2"
+          ],
+          "text": "Pricing - Claude Platform Docs"
+        },
+        {
+          "_key": "b48s3",
+          "_type": "span",
+          "marks": [],
+          "text": " (diverifikasi 2026-08-25), digunakan sebagai dasar angka perbandingan Claude Opus 5"
+        }
+      ],
+      "markDefs": [
+        {
+          "_key": "b48mk2",
+          "_type": "link",
+          "href": "https://platform.claude.com/docs/en/about-claude/pricing"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "b49",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b49s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Jika kamu sedang mengevaluasi apakah pemangkasan harga ini cukup untuk menyesuaikan kombinasi model kamu, atau ingin memahami dengan tepat ke mana saja penggunaan token kamu selama ini terpakai, kunjungi "
+        },
+        {
+          "_key": "b49s2",
+          "_type": "span",
+          "marks": [
+            "b49mk2"
+          ],
+          "text": "Ai Token"
+        },
+        {
+          "_key": "b49s3",
+          "_type": "span",
+          "marks": [],
+          "text": " untuk uji coba gratis — pahami dulu tagihan kamu, baru putuskan apakah perlu berpindah."
+        }
+      ],
+      "markDefs": [
+        {
+          "_key": "b49mk2",
+          "_type": "link",
+          "href": "https://www.aitokenking.com.tw/home"
+        }
+      ],
+      "style": "normal"
+    }
+  ],
+  "category": "pricing",
+  "coverImage": {
+    "_type": "image",
+    "alt": "Ilustrasi isometrik jaringan AI yang terhubung dengan penyimpanan data, timbangan, dan grafik harga — menggambarkan perbandingan biaya antar model AI.",
+    "asset": {
+      "_ref": "image-c05eb2464fcbb0d8c109d2502c28ab890d57c0d0-1376x768-jpg",
+      "_type": "reference"
+    }
+  },
+  "difficultyLevel": "intermediate",
+  "excerpt": "OpenAI kembali memangkas harga API GPT-5.6 Sol pada 21 Agustus — pemangkasan kedua dalam dua bulan. Harga resmi Sol sekarang lebih rendah dari Claude Opus 5, tapi Fast Mode, caching, dan harga Batch mengubah berapa sebenarnya yang akan kamu bayar.",
+  "focusKeyword": "harga GPT-5.6 vs Claude Opus 5",
+  "generatedByPipeline": false,
+  "language": "id",
+  "publishedAt": "2026-08-25T07:00:00.000Z",
+  "readTime": 9,
+  "secondaryKeywords": [
+    "harga GPT-5.6 Sol",
+    "harga Claude Opus 5",
+    "perbandingan biaya API AI",
+    "pemangkasan harga OpenAI 2026",
+    "harga Fast Mode dan Batch"
+  ],
+  "seo": {
+    "seoDescription": "OpenAI kembali memangkas harga GPT-5.6 Sol pada 21 Agustus 2026. Rincian harga lengkap Sol/Terra/Luna, Fast Mode, Batch, dan perbandingan sebenarnya dengan Claude Opus 5.",
+    "seoTitle": "Pemangkasan Harga GPT-5.6 2026 vs Claude Opus 5: Rincian Lengkap"
+  },
+  "slug": {
+    "_type": "slug",
+    "current": "gpt-5-6-sol-price-cut-2026-vs-claude-opus-5"
+  },
+  "sourceUrl": "https://community.openai.com/t/20-price-reduction-for-gpt-5-6-sol-api-codex-credits-and-chatgpt-work/1391726",
+  "tags": [
+    "harga GPT-5.6",
+    "Claude Opus 5",
+    "perbandingan biaya AI",
+    "pemangkasan harga OpenAI"
+  ],
+  "title": "Harga GPT-5.6 Turun di Semua Lini: Sol Turun 20%+, Terra Turun 20%, Luna Turun 80% — Apakah Sekarang Lebih Murah dari Claude Opus 5?",
+  "translationKey": "fafa6a9b-de6b-4f03-8278-a230e528b773"
+}
