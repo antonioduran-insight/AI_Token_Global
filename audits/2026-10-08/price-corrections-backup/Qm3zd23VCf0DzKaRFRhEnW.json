@@ -1,0 +1,1000 @@
+{
+  "_createdAt": "2026-08-26T05:55:26Z",
+  "_id": "Qm3zd23VCf0DzKaRFRhEnW",
+  "_rev": "pqZUkO11VFO6GURrufD1SU",
+  "_type": "post",
+  "_updatedAt": "2026-08-26T06:23:00Z",
+  "articleNumber": 174,
+  "body": [
+    {
+      "_key": "b0",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b0s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Prompt caching (bộ nhớ đệm prompt) là một cơ chế tính giá mà một số nhà cung cấp AI đưa ra: nội dung bạn gửi đi lặp lại (system prompt, định nghĩa tool, mô tả bối cảnh dự án) sẽ được lưu tạm, để lần sau khi đúng nội dung đó xuất hiện lại, bạn chỉ bị tính theo mức giá \"đọc cache\" rẻ hơn, thay vì mức giá \"đầu vào\" đầy đủ. "
+        },
+        {
+          "_key": "b0s2",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "Nhưng việc ghi vào cache cũng tốn tiền — nếu phần tiền tố (prefix) nội dung của bạn không đủ ổn định, hoặc tỷ lệ trúng cache không đủ cao, chi phí ghi có thể vượt quá số tiền bạn tiết kiệm được từ việc đọc, và tổng hóa đơn cuối cùng lại tăng lên chứ không giảm."
+        },
+        {
+          "_key": "b0s3",
+          "_type": "span",
+          "marks": [],
+          "text": " Đây chính là kết luận đi ngược trực giác được rút ra từ một bài kiểm thử có hệ thống với 5 chiến lược quản lý ngữ cảnh của kênh YouTube Atef Ataya."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b1",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b1s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Bài viết này sẽ phân tích: caching thực sự tiết kiệm được gì, trong điều kiện nào caching lại trở thành gánh nặng, và — bên cạnh caching — còn có thứ tự tiết kiệm chi phí nào căn bản hơn đáng để xem xét trước."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b2",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b2s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Prompt caching thực chất lưu tạm cái gì?"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "b3",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b3s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Hầu hết các API LLM tách một lần gọi thành \"token đầu vào\" và \"token đầu ra\" với giá tính riêng, và caching lại tách tiếp phía đầu vào thành hai trạng thái: "
+        },
+        {
+          "_key": "b3s2",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "ghi cache (cache creation)"
+        },
+        {
+          "_key": "b3s3",
+          "_type": "span",
+          "marks": [],
+          "text": " và "
+        },
+        {
+          "_key": "b3s4",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "đọc cache (cache read)"
+        },
+        {
+          "_key": "b3s5",
+          "_type": "span",
+          "marks": [],
+          "text": ". Lần đầu tiên một đoạn nội dung cố định được gửi đi, hệ thống phải lưu nó lại, và chi phí này thường bằng hoặc cao hơn giá đầu vào thông thường; sau đó, chỉ cần đúng đoạn nội dung đó xuất hiện lại y nguyên ở đầu một yêu cầu, hệ thống sẽ trúng cache ngay và tính theo mức giá \"đọc\" thấp hơn nhiều."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b4",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b4s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Nói cách khác, caching không tiết kiệm cho bạn ở \"nội dung bản thân nó\" — nó tiết kiệm ở \"sự lặp lại\". Nếu một đoạn nội dung mỗi lần gọi đều khác nhau, cache sẽ không bao giờ trúng, và bạn coi như đã trả phí ghi cho một khoản giảm giá mà bạn không bao giờ nhận được."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b5",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b5s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Cache nên đặt ở đâu mới hiệu quả? Tiền tố ổn định vs. dữ liệu tác vụ"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "b6",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b6s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Bài kiểm thử đặc biệt nhấn mạnh một nguyên tắc thứ tự: đặt "
+        },
+        {
+          "_key": "b6s2",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "nội dung không bao giờ thay đổi ở ngay đầu yêu cầu"
+        },
+        {
+          "_key": "b6s3",
+          "_type": "span",
+          "marks": [],
+          "text": " — như quy tắc hệ thống, định nghĩa tool, mô tả cố định của dự án hoặc codebase — rồi mới đặt "
+        },
+        {
+          "_key": "b6s4",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "dữ liệu thay đổi theo mỗi lần gọi"
+        },
+        {
+          "_key": "b6s5",
+          "_type": "span",
+          "marks": [],
+          "text": " ở phía sau. Lý do rất trực quan: caching hoạt động bằng cách so khớp xem tiền tố có giống nhau từng ký tự hay không; chỉ cần một ký tự ở phía trước khác đi, phần phía sau dù giống nhau cũng không thể cứu được. Trộn nội dung dễ thay đổi lên trước nội dung ổn định thì chẳng khác nào tự tay cắt đứt chuỗi cache của mình."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b7",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b7s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Ngược lại, nếu một dự án bản thân có ít định nghĩa tool và mô tả bối cảnh thường bị viết lại theo từng tác vụ, thì \"tiền tố ổn định\" mà cache có thể bám vào cũng rất ngắn — và lợi ích của việc kích hoạt caching đã bị hạn chế ngay từ đầu."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b8",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b8s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Vì sao lượng đọc cache giảm mà hóa đơn lại tăng?"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "b9",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b9s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Đây là phần đi ngược trực giác nhất của toàn bộ bài kiểm thử. Trong thí nghiệm thêm caching thủ công, lượng \"đầu vào được cache\" thực sự giảm khoảng 15% — nghe có vẻ sẽ tiết kiệm được tiền — nhưng tổng chi phí lại tăng khoảng 7%. Nguyên nhân: phần tiết kiệm được từ việc đọc ít hơn đã bị "
+        },
+        {
+          "_key": "b9s2",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "chính chi phí phụ mà việc đọc cache sinh ra ăn hết"
+        },
+        {
+          "_key": "b9s3",
+          "_type": "span",
+          "marks": [],
+          "text": ". Khi tỷ lệ trúng cache không ổn định, tiền tố liên tục bị gãy, hệ thống buộc phải liên tục ghi lại cache và tiếp tục tạo ra các yêu cầu đọc, và những lần đọc lẻ tẻ này cộng lại vượt qua cả phần lẽ ra đã tiết kiệm được."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b10",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b10s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Điều này cũng giải thích vì sao caching không phải là một tính năng \"cứ mở lên là chắc chắn tiết kiệm\" — mà là một "
+        },
+        {
+          "_key": "b10s2",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "vấn đề về giá gắn rất chặt với mô hình sử dụng của bạn"
+        },
+        {
+          "_key": "b10s3",
+          "_type": "span",
+          "marks": [],
+          "text": ": tỷ lệ trúng cao và ổn định thì mới đáng để trả chi phí ghi để đổi lấy giảm giá đọc; tỷ lệ trúng không đủ cao thì chính chi phí ghi đó lại biến thành gánh nặng thuần túy."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b11",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b11s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Nên chọn thời gian lưu giữ cache (TTL) thế nào?"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "b12",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b12s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Hầu hết các API cung cấp prompt caching đều cho người dùng chọn \"giữ cache trong bao lâu\" — thời gian lưu giữ càng dài, thông thường bạn phải trả chi phí ghi với hệ số nhân cao hơn, để đổi lại một khoảng thời gian dài hơn có thể tiếp tục trúng giá giảm. Về bản chất đây là một sự đánh đổi rủi ro: nếu bạn chắc chắn trong một khoảng thời gian ngắn tới sẽ liên tục gọi lại đúng tiền tố đó, kéo dài TTL sẽ đáng giá; nhưng nếu tần suất gọi không đủ cao, hoặc tiền tố có thể thay đổi giữa chừng, phần chi phí ghi trả thêm có thể không bao giờ thu hồi đủ số lần trúng để hoàn vốn."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b13",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b13s1",
+          "_type": "span",
+          "marks": [],
+          "text": "⚠️ Cần nói rõ thêm: video có nhắc đến việc API của Claude hiện tại công bố mức dùng cache qua hai trường riêng biệt — \"token ghi cache\" và \"token đọc cache\" — và cung cấp hai tầng thời gian lưu giữ để lựa chọn (tầng ngắn hơn tính theo giá cache tiêu chuẩn, tầng dài hơn tính theo hệ số nhân). "
+        },
+        {
+          "_key": "b13s2",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "Đây là cách video gốc mô tả cơ chế vận hành; độ dài các tầng cụ thể và hệ số nhân giá thực tế nên được xác nhận lại theo trang giá chính thức hiện hành của Anthropic"
+        },
+        {
+          "_key": "b13s3",
+          "_type": "span",
+          "marks": [],
+          "text": ", thay vì chỉ dựa vào lời của một video duy nhất."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b14",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b14s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Bước nên làm trước caching: không phải là tải thông minh hơn, mà là ngay từ đầu đừng tải"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "b15",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b15s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Bài kiểm thử so sánh 5 cách giảm chi phí ngữ cảnh, và cách xếp hạng nhất — hiệu quả lớn nhất, ổn định nhất — không phải bất kỳ hình thức caching hay kỹ thuật truy xuất thông minh nào, mà là cách đơn giản nhất: "
+        },
+        {
+          "_key": "b15s2",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "trước khi bắt tay vào xử lý tác vụ, hãy xác định rõ ràng những file hoặc dữ liệu nào thực sự \"cần dùng đến\", những thứ khác thì nhất định không đọc."
+        },
+        {
+          "_key": "b15s3",
+          "_type": "span",
+          "marks": [],
+          "text": " Cách này giúp giảm mạnh lượng dữ liệu cần gửi vào mô hình, tính ra tổng chi phí thấp hơn khoảng 30% so với kịch bản cơ sở không làm gì cả, và là chiến lược duy nhất tiết kiệm chi phí ổn định trong mọi lượt kiểm thử lặp lại."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b16",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b16s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Logic phía sau rất đơn giản: caching hay đánh chỉ mục có cấu trúc về bản chất là làm cho việc \"tải\" hiệu quả hơn, nhưng mô hình vẫn phải trả tiền cho từng token được tải vào; còn việc lọc và loại bỏ dữ liệu không liên quan trước tiên đồng nghĩa với việc một phần token căn bản không được gửi đi — số tiền đó thực sự chưa bao giờ bị chi ra. "
+        },
+        {
+          "_key": "b16s2",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "Token rẻ nhất là token ngay từ đầu chưa từng được đưa vào yêu cầu."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b17",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b17s1",
+          "_type": "span",
+          "marks": [],
+          "text": "\"Chỉ tải khi cần\" nghe có vẻ hợp lý nhất — vì sao bài kiểm thử lại cho thấy đây là chiến lược đắt nhất?"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "b18",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b18s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Một trực giác phổ biến khác là chỉ mang theo lượng ngữ cảnh tối thiểu lúc đầu, cần gì thì đi lấy thêm, dùng xong thì bỏ — nghe có vẻ là cách tiết kiệm tài nguyên nhất, nhưng trong bài kiểm thử này nó lại là chiến lược có chi phí cao nhất, đắt hơn gần 45% so với kịch bản cơ sở."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b19",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b19s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Vấn đề nằm ở cách tính phí: hầu hết API LLM "
+        },
+        {
+          "_key": "b19s2",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "tính phí theo toàn bộ yêu cầu, và mỗi yêu cầu đều phải gửi lại toàn bộ lịch sử hội thoại đã tích lũy đến thời điểm đó."
+        },
+        {
+          "_key": "b19s3",
+          "_type": "span",
+          "marks": [],
+          "text": " \"Dùng xong thì bỏ\" chỉ khiến mô hình \"quên\" nội dung của một file — không khiến file đó biến mất khỏi hóa đơn; nếu tác vụ cần xem lần lượt vài chục file, điều đó đồng nghĩa với vài chục lượt yêu cầu qua lại, mà mỗi lượt qua lại đều phải đính kèm lại toàn bộ nội dung hội thoại trước đó. Một chiến lược được thiết kế để \"tinh giản\" ngữ cảnh cuối cùng lại trở thành chiến lược truyền lại ngữ cảnh nhiều lần nhất. Đây cũng chính là lời nhắc được chỉ ra riêng trong bài kiểm thử: "
+        },
+        {
+          "_key": "b19s4",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "hướng tối ưu quản lý ngữ cảnh phải nhìn vào tổng số token gửi đi trong toàn bộ tác vụ, không phải một yêu cầu đơn lẻ trông có \"sạch\" hay không."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b20",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b20s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Vì sao gộp hết mọi mẹo tiết kiệm lại dùng cùng lúc lại đắt hơn cả không làm gì?"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "b21",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b21s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Kết hợp đồng thời nhiều chiến lược quản lý ngữ cảnh nói trên là điều mà nhiều hướng dẫn thường mặc định khuyến nghị, nhưng kết quả kiểm thử cho thấy tổng chi phí sau khi gộp hết lại cao hơn khoảng 23% so với kịch bản cơ sở không làm gì — thậm chí còn tệ hơn việc chỉ dùng riêng một chiến lược duy nhất."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b22",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b22s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Nguyên nhân nằm ở: các chiến lược khác nhau xung đột lẫn nhau thay vì cộng dồn lợi ích. Ví dụ, cùng lúc thực hiện hai kiểu phân tích cấu trúc khác nhau sẽ tạo ra chi phí phân tích trùng lặp; còn caching và \"chỉ tải khi cần\" lại được xây trên hai giả định sử dụng trái ngược nhau (một giả định tiền tố ổn định và lặp lại, một giả định nội dung rời rạc và thường xuyên thay đổi). Kích hoạt cả hai cùng lúc chỉ khiến chi phí thiết lập bị chồng thêm mà không đổi lại được khoản tiết kiệm tương xứng. "
+        },
+        {
+          "_key": "b22s2",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "Làm nhiều hơn không đồng nghĩa với tiết kiệm hơn — mỗi chiến lược đều có chi phí khởi động riêng, và càng chồng nhiều chiến lược thì ngưỡng cần vượt qua để có lợi càng cao."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b23",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b23s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Trong tình huống nào thì mở caching mới thực sự đáng? Một thứ tự cân nhắc"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "b24",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b24s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Tổng hợp các phát hiện trên, có thể rút ra một thứ tự ưu tiên tương đối để bạn tham khảo khi đánh giá mô hình sử dụng của chính mình:"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b25",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b25s1",
+          "_type": "span",
+          "marks": [],
+          "text": "1. "
+        },
+        {
+          "_key": "b25s2",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "Lọc trước, cache sau"
+        },
+        {
+          "_key": "b25s3",
+          "_type": "span",
+          "marks": [],
+          "text": " — trước khi bắt tay vào tác vụ, hãy xác định rõ ràng tác vụ này thực sự cần những dữ liệu nào, loại trừ ngay những phần không liên quan khỏi yêu cầu. Đây là bước có hiệu quả lớn nhất và ổn định nhất. 2. "
+        },
+        {
+          "_key": "b25s4",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "Thứ hai, cung cấp cho mô hình một bản đồ cấu trúc gọn nhẹ"
+        },
+        {
+          "_key": "b25s5",
+          "_type": "span",
+          "marks": [],
+          "text": " — dùng một danh mục hoặc mô tả quan hệ phụ thuộc súc tích để mô hình định vị được nội dung cần thiết mà không phải dựa vào cách đọc dò-thử. 3. "
+        },
+        {
+          "_key": "b25s6",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "Caching nên đặt sau các quyết định kiến trúc, và chỉ nên xem như một vấn đề về giá thuần túy"
+        },
+        {
+          "_key": "b25s7",
+          "_type": "span",
+          "marks": [],
+          "text": " — trước tiên hãy xác nhận mô hình sử dụng của bạn có tồn tại tiền tố \"ổn định, được gọi lại nhiều lần\" hay không; nếu có, mới đáng để bật caching cho phần đó; nếu nội dung thay đổi thường xuyên và tần suất gọi không cao, mở caching có thể chỉ là trả thêm một khoản phí ghi. 4. "
+        },
+        {
+          "_key": "b25s8",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "Cách truy xuất kiểu \"chỉ tải khi cần\" đặt sau cùng"
+        },
+        {
+          "_key": "b25s9",
+          "_type": "span",
+          "marks": [],
+          "text": " — chỉ nên xem xét khi lượng dữ liệu ứng viên thực sự rất lớn và phần thực sự cần dùng chỉ chiếm một tỷ lệ rất nhỏ; nếu không, đặc điểm tính phí theo yêu cầu và việc đính kèm lại lịch sử hội thoại nhiều lần rất dễ khiến cách này trở thành lựa chọn đắt nhất."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b26",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b26s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Logic chung phía sau thứ tự này là: giải quyết \"có nên gửi dữ liệu này đi hay không\" trước, rồi mới giải quyết \"gửi đi có thể rẻ hơn được không\". Caching giải quyết vấn đề thứ hai — nếu vấn đề thứ nhất chưa được xử lý tốt, không gian mà caching có thể phát huy vốn đã rất hạn chế."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b27",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b27s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Câu hỏi thường gặp"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "b28",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b28s1",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "H1: Prompt caching là gì, khác gì so với cách tính giá gọi API thông thường?"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b29",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b29s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Cách tính giá thông thường chỉ chia thành hai loại token \"đầu vào\" và \"đầu ra\"; sau khi mở caching, phía đầu vào sẽ được tách thêm thành hai trạng thái \"ghi cache\" và \"đọc cache\" — nội dung cố định xuất hiện lần đầu phải trả phí ghi, sau đó khi cùng nội dung đó xuất hiện lại y nguyên sẽ được tính theo mức giá đọc thấp hơn."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b30",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b30s1",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "H2: Nếu mở prompt caching, hóa đơn có chắc chắn rẻ hơn không?"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b31",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b31s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Không hẳn. Nếu tiền tố nội dung gửi đi không đủ ổn định, hoặc số lần trúng lặp lại không đủ nhiều, chi phí ghi cache mà bạn trả có thể vượt quá số tiền tiết kiệm được từ giảm giá đọc — chính bài kiểm thử đã phát hiện trường hợp lượng đọc cache giảm nhưng tổng chi phí lại tăng."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b32",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b32s1",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "H3: Nội dung tác vụ của tôi thường xuyên thay đổi, có phù hợp mở caching không?"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b33",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b33s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Nếu dữ liệu tác vụ mỗi lần đều khác nhau, không có tiền tố cố định không đổi, caching hầu như không có gì ổn định để bám vào, và lợi ích trong trường hợp này thường rất hạn chế. Thứ tự ưu tiên nên đặt vào việc lọc trước xem cần dùng dữ liệu nào, thay vì vội vàng mở caching."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b34",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b34s1",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "H4: Nên chọn TTL ngắn hay dài?"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b35",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b35s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Tùy vào tần suất bạn sẽ gọi lại đúng tiền tố đó trong thời gian sắp tới có đủ cao hay không. TTL dài thường đồng nghĩa với hệ số chi phí ghi cao hơn, nên chỉ đáng dùng khi bạn dự đoán sẽ có nhiều lần trúng lặp lại dày đặc trong một khoảng thời gian ngắn; các tầng và hệ số giá thực tế nên tham khảo theo trang giá chính thức hiện hành của nhà cung cấp."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b36",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b36s1",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "H5: Ngoài caching, còn cách nào khác để giảm chi phí token của AI Agent?"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b37",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b37s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Bài kiểm thử cho thấy việc lọc rõ ràng \"tác vụ này thực sự cần dữ liệu gì\" trước khi bắt tay vào là cách có hiệu quả lớn nhất và ổn định nhất; thứ hai là cung cấp cho mô hình một bản đồ cấu trúc gọn nhẹ để giảm bớt việc đọc dò-thử. Cả hai đều được đặt trước caching, vì chúng làm giảm việc \"có gửi dữ liệu đi hay không\" — còn caching chỉ có thể tối ưu \"gửi đi có rẻ hay không\"."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b38",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b38s1",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "H6: Dữ liệu kiểm thử trong bài viết này có chạy trên Claude không?"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b39",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b39s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Bài kiểm thử gốc sử dụng mức giá công khai của một nhà cung cấp mô hình khác (DeepSeek), chạy năm vòng lặp lại, nhằm đảm bảo việc so sánh tập trung vào \"tỷ lệ chi phí giữa các chiến lược ngữ cảnh khác nhau\" chứ không phải số tiền tuyệt đối của riêng một nhà cung cấp nào. Video cũng giải thích riêng cách thức vận hành chung của cơ chế cache trên API Claude (token ghi/đọc cache và các tầng TTL). "
+        },
+        {
+          "_key": "b39s2",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "Kết luận về phương pháp — rằng lợi ích của caching phụ thuộc vào tỷ lệ trúng và độ ổn định của tiền tố, và việc lọc trước tốt hơn cache trước — không chỉ đúng riêng cho một nhà cung cấp cụ thể, nhưng với các số liệu cụ thể về giá chính thức của Claude, vẫn nên kiểm tra trực tiếp theo thông báo hiện hành của Anthropic."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b40",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b40s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Ghi chú về nguồn"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "b41",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b41s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Bài viết này tham khảo video *\"I Tested Claude's Prompt Cache. It Cost Me More.\"* của kênh "
+        },
+        {
+          "_key": "b41s2",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "Atef Ataya"
+        },
+        {
+          "_key": "b41s3",
+          "_type": "span",
+          "marks": [],
+          "text": ", liên kết gốc: https://www.youtube.com/watch?v=DyzDuiwISa8. Các số liệu về mức thay đổi chi phí của từng chiến lược quản lý ngữ cảnh được nhắc đến trong bài (caching, bản đồ cấu trúc, đồ thị phụ thuộc, lọc dữ liệu, truy xuất theo yêu cầu, v.v.) đều được tổng hợp từ phương pháp kiểm thử và kết luận được mô tả trong video đó. Bài kiểm thử tự thân sử dụng mức giá công khai của một nhà cung cấp mô hình khác làm cơ sở so sánh thống nhất, và video nêu rõ trọng tâm so sánh là tỷ lệ chi phí giữa các chiến lược, không phải số tiền tuyệt đối của riêng nhà cung cấp nào. Ở những phần liên quan cụ thể đến cơ chế cache của API Claude (các tầng TTL, hệ số giá), độc giả nên tự kiểm tra lại theo tài liệu giá chính thức hiện hành của Anthropic để có số liệu chính xác và cập nhật nhất."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b42",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b42s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Đọc thêm"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "b43",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b43s1",
+          "_type": "span",
+          "marks": [
+            "b43mk1"
+          ],
+          "text": "Hóa Đơn AI Đáng Sợ Đó Hóa Ra Là Một Tấm Gương"
+        }
+      ],
+      "markDefs": [
+        {
+          "_key": "b43mk1",
+          "_type": "link",
+          "href": "https://aitoken.global/vi/blog/the-ai-bill-that-scared-him-turned-out-to-be-a-mirror/"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "b44",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b44s1",
+          "_type": "span",
+          "marks": [
+            "b44mk1"
+          ],
+          "text": "GPT-5.6 giảm giá toàn diện: Sol giảm hơn 20%, Terra giảm 20%, Luna giảm 80% — Liệu đã rẻ hơn Claude Opus 5 chưa?"
+        }
+      ],
+      "markDefs": [
+        {
+          "_key": "b44mk1",
+          "_type": "link",
+          "href": "https://aitoken.global/vi/blog/gpt-5-6-sol-price-cut-2026-vs-claude-opus-5/"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "b45",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b45s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Muốn nắm rõ hơn chi phí token AI của bạn?"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "b46",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b46s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Cho dù bạn đang cân nhắc có nên mở prompt caching hay không, hay chỉ muốn biết luồng công việc Agent hiện tại thực tế đang đốt bao nhiêu Token mỗi tháng, AI Token King đều có thể giúp bạn tổng hợp lượng dùng và chi phí rải rác trên nhiều nhà cung cấp mô hình khác nhau thành một bảng điều khiển dễ hiểu, dễ theo dõi."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b47",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b47s1",
+          "_type": "span",
+          "marks": [
+            "b47mk1"
+          ],
+          "text": "Dùng thử miễn phí ngay →"
+        }
+      ],
+      "markDefs": [
+        {
+          "_key": "b47mk1",
+          "_type": "link",
+          "href": "https://aitokenking.com.tw/home"
+        }
+      ],
+      "style": "normal"
+    }
+  ],
+  "category": "pricing",
+  "coverImage": {
+    "_type": "image",
+    "alt": "Sơ đồ ghi và đọc cache prompt của Claude",
+    "asset": {
+      "_ref": "image-aabae453f03828c7e97079dee23e6958bf904516-1376x768-jpg",
+      "_type": "reference"
+    }
+  },
+  "difficultyLevel": "intermediate",
+  "excerpt": "Prompt caching nghe có vẻ là cách trực tiếp để giảm chi phí API LLM, nhưng một bài kiểm thử có hệ thống với 5 chiến lược phát hiện nó có thể khiến hóa đơn của bạn tăng lên — và việc lọc ngữ cảnh trước khi gửi hầu như luôn thắng caching.",
+  "focusKeyword": "prompt caching tăng hóa đơn AI",
+  "generatedByPipeline": false,
+  "language": "vi",
+  "publishedAt": "2026-08-26T06:00:00.000Z",
+  "readTime": 8,
+  "secondaryKeywords": [
+    "prompt caching Claude",
+    "ghi cache và đọc cache",
+    "chi phí ngữ cảnh LLM",
+    "giảm chi phí token AI agent",
+    "TTL prompt caching"
+  ],
+  "seo": {
+    "seoDescription": "Bài kiểm thử 5 chiến lược phát hiện prompt caching có thể làm tăng hóa đơn LLM của bạn thay vì giảm. Khi nào caching phản tác dụng, cách chọn TTL, và vì sao lọc ngữ cảnh trước gần như luôn thắng caching.",
+    "seoTitle": "Khi Nào Prompt Caching Làm Tăng (Không Giảm) Hóa Đơn AI Của Bạn"
+  },
+  "slug": {
+    "_type": "slug",
+    "current": "why-prompt-caching-can-increase-your-ai-bill"
+  },
+  "sourceUrl": "https://www.aitoken.com.tw/post/why-prompt-caching-can-increase-your-ai-bill",
+  "tags": [
+    "Prompt Caching",
+    "API Claude",
+    "Chi Phí Token AI",
+    "Giá LLM"
+  ],
+  "title": "Khi Nào Prompt Caching Của Claude Lại Khiến Hóa Đơn AI Của Bạn Tăng Thay Vì Giảm?",
+  "translationKey": "f967c910-9b43-41ba-813d-fe55b906a0d3"
+}

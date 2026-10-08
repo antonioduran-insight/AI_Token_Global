@@ -55,3 +55,6 @@ Claude outputs/
 
 # content corpus: 8 MB of post text, rebuilt by `node scripts/build-content-corpus.mjs`
 audits/*/content-corpus.json
+
+# dry-run logs from scripts/patch-price-corrections.mjs (the --apply log is committed)
+audits/*/price-corrections-dryrun.md

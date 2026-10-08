@@ -1,0 +1,898 @@
+{
+  "_createdAt": "2026-08-25T07:19:05Z",
+  "_id": "YDnwDiutEyNP1AlOwQpDHa",
+  "_rev": "lQ9B2UJ9DPgrVbnXguNTWs",
+  "_type": "post",
+  "_updatedAt": "2026-08-25T07:41:21Z",
+  "articleNumber": 173,
+  "body": [
+    {
+      "_key": "b0",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b0s1",
+          "_type": "span",
+          "marks": [],
+          "text": "On August 21, 2026, OpenAI officially cut API pricing for GPT-5.6 Sol again: input dropped from $5 to $4 per million tokens, and output dropped from $30 to $20 — a cut of more than 20%, running through at least November 21. This follows the July 30 price cuts for Terra (down 20%) and Luna (down 80%) — the second round of official GPT-5.6 price cuts in two months. After this cut, Sol's list price is now below Claude Opus 5 ($5 input / $25 output) — but that doesn't automatically make it the \"cheaper choice.\" You still need to factor in Fast Mode, caching, long-context pricing, and Batch processing before you can work out what you'll actually pay."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b1",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b1s1",
+          "_type": "span",
+          "marks": [],
+          "text": "The Full Current GPT-5.6 Pricing: Sol, Terra, and Luna"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "b2",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b2s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Here's the complete official pricing as of August 2026 (per million tokens, USD, Standard mode):"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b3",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b3s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Short context:"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b4",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b4s1",
+          "_type": "span",
+          "marks": [],
+          "text": "GPT-5.6 Sol: Input $4.00, Cached input $0.40, Cache writes $5.00, Output $20.00"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b5",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b5s1",
+          "_type": "span",
+          "marks": [],
+          "text": "GPT-5.6 Terra: Input $2.00, Cached input $0.20, Cache writes $2.50, Output $12.00"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b6",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b6s1",
+          "_type": "span",
+          "marks": [],
+          "text": "GPT-5.6 Luna: Input $0.20, Cached input $0.02, Cache writes $0.25, Output $1.20"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b7",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b7s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Long context (generally requests above a certain token threshold):"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b8",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b8s1",
+          "_type": "span",
+          "marks": [],
+          "text": "GPT-5.6 Sol: Input $8.00, Cached input $0.80, Cache writes $10.00, Output $30.00"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b9",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b9s1",
+          "_type": "span",
+          "marks": [],
+          "text": "GPT-5.6 Terra: Input $4.00, Cached input $0.40, Cache writes $5.00, Output $18.00"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b10",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b10s1",
+          "_type": "span",
+          "marks": [],
+          "text": "GPT-5.6 Luna: Input $0.40, Cached input $0.04, Cache writes $0.50, Output $1.80"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b11",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b11s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Notice that long-context input pricing is exactly double the short-context rate, but output doesn't scale the same way (Sol's output only rises from $20 to $30, not $40). That means OpenAI applies a different markup logic to growing output versus growing input — so you can't just multiply by two when estimating costs for long documents or long conversations."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b12",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b12s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Not the First Cut: OpenAI Has Slashed GPT-5.6 Pricing Twice in Two Months"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "b13",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b13s1",
+          "_type": "span",
+          "marks": [],
+          "text": "This latest cut is a continuation, not a one-off:"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b14",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b14s1",
+          "_type": "span",
+          "marks": [],
+          "text": "On July 30, OpenAI announced on its developer community that the GPT-5.6 team had tasked GPT-5.6 itself with optimizing its own runtime efficiency, yielding two results: a 20% reduction in serving costs through production GPU kernel improvements, and a token-generation efficiency gain of more than 15% through improved speculative decoding. OpenAI passed those efficiency gains straight through to pricing: Luna dropped 80%, Terra dropped 20%, and Sol gained a new Fast Mode (up to 2.5x the speed of Standard, at twice the price)."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b15",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b15s1",
+          "_type": "span",
+          "marks": [],
+          "text": "On August 21, OpenAI announced that Sol itself would drop more than 20% (input down 20%, output down 33%), explicitly stating the cut \"applies to Fast Mode, long-context requests, and Batch and Flex processing\" — meaning this wasn't a single headline price cut, but a shift across the entire pricing curve. OpenAI also noted the change \"covers the API, Codex credits, and is rolling out across eligible ChatGPT Work plans,\" while pricing for Pro, Plus, and Business subscription usage remains unchanged — a reminder that API billing and consumer subscription billing are two entirely separate systems; a cut on one side doesn't automatically flow through to the other."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b16",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b16s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Fast Mode (Formerly Priority): How Much More Does It Cost, and When Should You Use It"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "b17",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b17s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Fast Mode is the official rename of \"Priority processing,\" effective July 30, 2026. In your API requests you can keep using `service_tier: \"priority\"`, or switch to the new name `service_tier: \"fast\"` — they're equivalent. Post-cut Fast Mode pricing (short context):"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b18",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b18s1",
+          "_type": "span",
+          "marks": [],
+          "text": "GPT-5.6 Sol: Input $8.00, Cached input $0.80, Cache writes $10.00, Output $40.00"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b19",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b19s1",
+          "_type": "span",
+          "marks": [],
+          "text": "GPT-5.6 Terra: Input $4.00, Cached input $0.40, Cache writes $5.00, Output $24.00"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b20",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b20s1",
+          "_type": "span",
+          "marks": [],
+          "text": "GPT-5.6 Luna: Input $0.40, Cached input $0.04, Cache writes $0.50, Output $2.40"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b21",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b21s1",
+          "_type": "span",
+          "marks": [],
+          "text": "In short: Fast Mode is uniformly double the Standard price, in exchange for up to 2.5x the processing speed, with no change to model intelligence. If your application is real-time customer support or voice interaction — where a user is actively waiting — paying double for lower latency is usually worth it. If it's a background batch job or an off-peak report run, paying for speed buys you nothing, and you should look at Batch/Flex instead."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b22",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b22s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Batch and Flex: Half the Price, at the Cost of Waiting"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "b23",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b23s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Batch and Flex processing modes carry identical pricing — both 50% off Standard (short context):"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b24",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b24s1",
+          "_type": "span",
+          "marks": [],
+          "text": "GPT-5.6 Sol: Input $2.00, Cached input $0.20, Cache writes $2.50, Output $10.00"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b25",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b25s1",
+          "_type": "span",
+          "marks": [],
+          "text": "GPT-5.6 Terra: Input $1.00, Cached input $0.10, Cache writes $1.25, Output $6.00"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b26",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b26s1",
+          "_type": "span",
+          "marks": [],
+          "text": "GPT-5.6 Luna: Input $0.10, Cached input $0.01, Cache writes $0.125, Output $0.60"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b27",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b27s1",
+          "_type": "span",
+          "marks": [],
+          "text": "The difference is that Batch sends a set of requests asynchronously and waits for them to complete — well suited to report aggregation, large-scale document summarization, and other work where you don't need results right away. Flex is another official flexible-processing mode priced the same as Batch but used differently. Neither is suitable for scenarios that require an immediate response to a user."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b28",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b28s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Cyber Models (Daybreak): A Separate Price Sheet Most People Won't Need"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "b29",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b29s1",
+          "_type": "span",
+          "marks": [],
+          "text": "GPT-5.6 also has an independent branch called the Cyber models, tied to OpenAI's Daybreak program, currently with short-context pricing only: GPT-5.6 Sol stays at $4.00 / $0.40 / $5.00 / $20.00 (same as the standard Sol), while GPT-5.6 Cyber is priced at $12.50 input / $1.25 cached input / $15.625 cache writes / $75.00 output — noticeably several times higher. OpenAI's documentation also notes that the aliases `daybreak-blue-latest` and `daybreak-red-latest` currently point to `gpt-5.6-sol` and `gpt-5.6-cyber` respectively, and will be updated to point to newer models — with adjusted pricing — as the Daybreak program releases them. If your application doesn't involve cybersecurity evaluation, red-teaming, or similar Daybreak-targeted use cases, you generally won't encounter Cyber model pricing at all."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b30",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b30s1",
+          "_type": "span",
+          "marks": [],
+          "text": "The Promotion Runs Through November 21, 2026 — Will Prices Go Back Up After That"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "b31",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b31s1",
+          "_type": "span",
+          "marks": [],
+          "text": "OpenAI's documentation states plainly that \"GPT-5.6 Sol's promotional pricing is available at least through November 21, 2026\" — note the wording \"at least,\" which means OpenAI hasn't committed to reverting to the original $5/$30 after the promotion ends, nor has it committed to keeping $4/$20 in place. In OpenAI's developer community discussion threads, engineers and developers are split on this: some think competitive pressure — particularly from open-source models and pricing wars among other providers — will keep the discount alive; others think a new-generation model is likely to launch within three months, at which point the old model's pricing strategy would be superseded anyway. This is currently unverifiable, community speculation rather than confirmed fact. When budgeting beyond November, it's worth modeling both scenarios — the discount holding, and prices reverting — rather than betting on just one."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b32",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b32s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Is GPT-5.6 Sol Actually Cheaper Than Claude Opus 5 Now"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "b33",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b33s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Put the two official price sheets side by side: GPT-5.6 Sol (Standard, short context) is $4.00 input / $20.00 output; Claude Opus 5 (Standard) is $5 input / $25 output. On sticker price alone, Sol is indeed lower on both input and output. But this comparison comes with two caveats worth keeping in mind. First, the two providers use different tokenizers — the same piece of text won't produce identical token counts on Sol versus Opus 5, so a lower list price doesn't guarantee a lower actual bill for the same task. Second, Claude Opus 5 offers a 50% Batch discount ($2.50 / $12.50) and up to 90% off with prompt caching, while GPT-5.6 Sol's Batch discount is also 50% ($2.00 / $10.00) but with a different caching structure (Sol's cached input is one-tenth of the standard price, while Opus 5's cache reads are 0.1x the input price and cache writes are 1.25x or 2x depending on whether it's a 5-minute or 1-hour write). What you should really be comparing isn't the headline number in an announcement, but the actual bill your specific workload produces."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b34",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b34s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Procurement Decisions: A Price Cut Headline Doesn't Mean You Should Switch Models Right Away"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "b35",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b35s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Seeing a price-cut headline and immediately wanting to switch your entire pipeline is the easiest way to end up spending more, not less. Before you make that move, confirm three things: which mode your usage actually falls under (Standard / Fast Mode / Batch), and whether the cut genuinely covers that mode; how latency-sensitive your task really is — if it's a background job, Fast Mode's price cut is irrelevant to you; and whether you're using Data Residency. OpenAI's documentation notes a 10% surcharge on regional processing endpoints for eligible models released on or after March 5, 2026, and the GPT-5.6 family falls within that scope — so your post-cut price needs to be multiplied by 1.1 to reflect your real regional-processing cost. Work through these three points before deciding whether to move your pipeline."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b36",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b36s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Frequently Asked Questions"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "b37",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b37s1",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "Q1: After this price cut, will the ChatGPT Work or Codex credits I already purchased automatically get cheaper?"
+        },
+        {
+          "_key": "b37s2",
+          "_type": "span",
+          "marks": [],
+          "text": " OpenAI's announcement states the cut \"covers the API, Codex credits, and is rolling out across eligible ChatGPT Work plans,\" while pricing for Pro, Plus, and Business subscription usage remains unchanged. In other words, if you're using API or Codex credits, the discount will typically apply automatically; if you're a subscription user, this price cut doesn't affect your subscription cost."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b38",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b38s1",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "Q2: Will prices definitely go back to $5/$30 once the promotion ends on November 21, 2026?"
+        },
+        {
+          "_key": "b38s2",
+          "_type": "span",
+          "marks": [],
+          "text": " OpenAI hasn't announced what happens after the promotion ends — it has only said the promotion will run \"at least\" through that date. This is an unconfirmed future event; treat it as something to watch, not a fact to base a long-term budget on."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b39",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b39s1",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "Q3: Is Fast Mode the same thing as the old Priority processing?"
+        },
+        {
+          "_key": "b39s2",
+          "_type": "span",
+          "marks": [],
+          "text": " Yes. OpenAI's documentation states that \"Priority processing was renamed Fast mode on July 30, 2026.\" The API parameter `service_tier` can still use `\"priority\"`, or you can switch to the new name `\"fast\"` — the effect is identical."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b40",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b40s1",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "Q4: Does this price cut also apply to Batch and long-context requests?"
+        },
+        {
+          "_key": "b40s2",
+          "_type": "span",
+          "marks": [],
+          "text": " Yes. OpenAI's August 21 announcement explicitly states the price reduction \"also applies to Fast Mode, long-context requests, and Batch and Flex processing.\" The rates listed throughout this article already reflect the official post-cut numbers."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b41",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b41s1",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "Q5: Is GPT-5.6 Sol actually cheaper than Claude Opus 5 now?"
+        },
+        {
+          "_key": "b41s2",
+          "_type": "span",
+          "marks": [],
+          "text": " By official list price, Sol's input and output rates are both lower than Opus 5's. But because the two providers use different tokenizers and have different caching and Batch discount structures, your actual total cost should be based on a real test run of your own workload — not just the headline unit price."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b42",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b42s1",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "Q6: How does GPT-5.6 Cyber differ from the regular Sol, and should I care?"
+        },
+        {
+          "_key": "b42s2",
+          "_type": "span",
+          "marks": [],
+          "text": " Cyber is an independent model branch tied to the Daybreak program (related to cybersecurity evaluation), priced noticeably higher than regular Sol (output reaches $75) and currently only available with short-context pricing. If your application doesn't involve security evaluation or red-teaming, you generally won't use it and don't need to pay attention to this pricing."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b43",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b43s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Sources"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "b44",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b44s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Figures in this article were verified as of August 25, 2026, based on the following official sources:"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b45",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b45s1",
+          "_type": "span",
+          "marks": [],
+          "text": "OpenAI's official pricing page, "
+        },
+        {
+          "_key": "b45s2",
+          "_type": "span",
+          "marks": [
+            "b45mk2"
+          ],
+          "text": "Pricing | OpenAI API"
+        },
+        {
+          "_key": "b45s3",
+          "_type": "span",
+          "marks": [],
+          "text": " (verified 2026-08-25)"
+        }
+      ],
+      "markDefs": [
+        {
+          "_key": "b45mk2",
+          "_type": "link",
+          "href": "https://developers.openai.com/api/docs/pricing"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "b46",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b46s1",
+          "_type": "span",
+          "marks": [],
+          "text": "OpenAI Developer Community official announcement, \""
+        },
+        {
+          "_key": "b46s2",
+          "_type": "span",
+          "marks": [
+            "b46mk2"
+          ],
+          "text": "20% price reduction for GPT 5.6 Sol: API, Codex credits and ChatGPT Work"
+        },
+        {
+          "_key": "b46s3",
+          "_type": "span",
+          "marks": [],
+          "text": ",\" published August 21, 2026 (verified 2026-08-25)"
+        }
+      ],
+      "markDefs": [
+        {
+          "_key": "b46mk2",
+          "_type": "link",
+          "href": "https://community.openai.com/t/20-price-reduction-for-gpt-5-6-sol-api-codex-credits-and-chatgpt-work/1391726"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "b47",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b47s1",
+          "_type": "span",
+          "marks": [],
+          "text": "OpenAI Developer Community official announcement, \""
+        },
+        {
+          "_key": "b47s2",
+          "_type": "span",
+          "marks": [
+            "b47mk2"
+          ],
+          "text": "Announcing a major Price drop for 5.6 Terra and Luna and Fast mode for 5.6-Sol"
+        },
+        {
+          "_key": "b47s3",
+          "_type": "span",
+          "marks": [],
+          "text": ",\" published July 30, 2026 (verified 2026-08-25)"
+        }
+      ],
+      "markDefs": [
+        {
+          "_key": "b47mk2",
+          "_type": "link",
+          "href": "https://community.openai.com/t/announcing-a-major-price-drop-for-5-6-terra-and-luna-and-fast-mode-for-5-6-sol/1388484"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "b48",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b48s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Anthropic's official pricing page, "
+        },
+        {
+          "_key": "b48s2",
+          "_type": "span",
+          "marks": [
+            "b48mk2"
+          ],
+          "text": "Pricing - Claude Platform Docs"
+        },
+        {
+          "_key": "b48s3",
+          "_type": "span",
+          "marks": [],
+          "text": " (verified 2026-08-25), used as the basis for the Claude Opus 5 comparison figures"
+        }
+      ],
+      "markDefs": [
+        {
+          "_key": "b48mk2",
+          "_type": "link",
+          "href": "https://platform.claude.com/docs/en/about-claude/pricing"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "b49",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b49s1",
+          "_type": "span",
+          "marks": [],
+          "text": "If you're evaluating whether this price cut warrants a change to your model mix, or want to understand exactly where your current token spend is going, visit "
+        },
+        {
+          "_key": "b49s2",
+          "_type": "span",
+          "marks": [
+            "b49mk2"
+          ],
+          "text": "Ai Token"
+        },
+        {
+          "_key": "b49s3",
+          "_type": "span",
+          "marks": [],
+          "text": " for a free trial — understand your bill first, then decide whether to switch."
+        }
+      ],
+      "markDefs": [
+        {
+          "_key": "b49mk2",
+          "_type": "link",
+          "href": "https://www.aitokenking.com.tw/home"
+        }
+      ],
+      "style": "normal"
+    }
+  ],
+  "category": "pricing",
+  "coverImage": {
+    "_type": "image",
+    "alt": "Isometric illustration of an AI network connected to data storage, a balance scale, and a pricing chart — representing AI model cost comparison.",
+    "asset": {
+      "_ref": "image-c05eb2464fcbb0d8c109d2502c28ab890d57c0d0-1376x768-jpg",
+      "_type": "reference"
+    }
+  },
+  "difficultyLevel": "intermediate",
+  "excerpt": "OpenAI cut GPT-5.6 Sol's API price again on August 21 — its second round of cuts in two months. Sol's list price is now below Claude Opus 5, but Fast Mode, caching, and Batch pricing change what you'll actually pay.",
+  "focusKeyword": "GPT-5.6 pricing vs Claude Opus 5",
+  "generatedByPipeline": false,
+  "language": "en",
+  "publishedAt": "2026-08-25T07:00:00.000Z",
+  "readTime": 9,
+  "secondaryKeywords": [
+    "GPT-5.6 Sol pricing",
+    "Claude Opus 5 pricing",
+    "AI API cost comparison",
+    "OpenAI price cut 2026",
+    "LLM pricing Fast Mode Batch"
+  ],
+  "seo": {
+    "seoDescription": "OpenAI cut GPT-5.6 Sol pricing again on Aug 21, 2026. See the full Sol/Terra/Luna price sheet, Fast Mode and Batch rates, and how it really compares to Claude Opus 5.",
+    "seoTitle": "GPT-5.6 Price Cut 2026 vs Claude Opus 5: Full Pricing Breakdown"
+  },
+  "slug": {
+    "_type": "slug",
+    "current": "gpt-5-6-sol-price-cut-2026-vs-claude-opus-5"
+  },
+  "sourceUrl": "https://community.openai.com/t/20-price-reduction-for-gpt-5-6-sol-api-codex-credits-and-chatgpt-work/1391726",
+  "tags": [
+    "GPT-5.6 pricing",
+    "Claude Opus 5",
+    "AI API cost comparison",
+    "OpenAI price cut"
+  ],
+  "title": "GPT-5.6 Prices Just Dropped Across the Board: Sol Down 20%+, Terra Down 20%, Luna Down 80% — Is It Now Cheaper Than Claude Opus 5?",
+  "translationKey": "fafa6a9b-de6b-4f03-8278-a230e528b773"
+}
