@@ -1,0 +1,22 @@
+{
+  "lT0MJhwbFtcMofmR8IAAnJ": {
+    "scope": "sentence",
+    "to": "According to Google's pricing plan, Gemini 3.1 Pro costs $2.00 per million input tokens and $12.00 per million output tokens — the same as GPT-5.6 Terra and well below GPT-5.6 Sol at $5.00 and $30.00, with higher rates for very long context windows."
+  },
+  "PXBreekz6ug9jLuKVwmbYV": {
+    "scope": "block",
+    "to": "Según la lista de precios de Google, Gemini 3.1 Pro cuesta $2.00 por millón de tokens de entrada y $12.00 por millón de tokens de salida: el mismo precio que GPT-5.6 Terra y muy por debajo de GPT-5.6 Sol, que cuesta $5.00 y $30.00, con tarifas más altas para contextos muy largos. Para quien compare modelos de gama media, el precio por sí solo no lo distingue de GPT-5.6 Terra: la decisión depende de cuál responda mejor a tu carga de trabajo."
+  },
+  "lT0MJhwbFtcMofmR8IADGr": {
+    "scope": "block",
+    "to": "Menurut daftar harga Google, Gemini 3.1 Pro dikenakan biaya $2.00 per juta token input dan $12.00 per juta token output — sama dengan GPT-5.6 Terra dan jauh di bawah GPT-5.6 Sol yang $5.00 dan $30.00, dengan tarif lebih tinggi untuk konteks yang sangat panjang. Bagi yang membandingkan model kelas menengah, harga saja tidak membedakannya dari GPT-5.6 Terra: pilihannya bergantung pada model mana yang lebih cocok untuk beban kerja Anda."
+  },
+  "lT0MJhwbFtcMofmR8IAAnJ-vi": {
+    "scope": "sentence",
+    "to": "Theo bảng giá của Google, Gemini 3.1 Pro có giá $2.00 mỗi triệu token đầu vào và $12.00 mỗi triệu token đầu ra — ngang bằng GPT-5.6 Terra và thấp hơn nhiều so với GPT-5.6 Sol ở mức $5.00 và $30.00, với mức giá cao hơn cho ngữ cảnh rất dài."
+  },
+  "aitk-en-155": {
+    "scope": "sentence",
+    "to": "Claude Sonnet 5 costs $2.00 per million input tokens and $10.00 per million output tokens. Anthropic announced an increase to $3.00 and $15.00 from 1 September 2026, but cancelled it before it took effect."
+  }
+}
