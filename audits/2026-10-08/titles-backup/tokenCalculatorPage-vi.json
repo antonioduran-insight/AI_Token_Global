@@ -1,0 +1,113 @@
+{
+  "_createdAt": "2026-05-12T03:50:21Z",
+  "_id": "tokenCalculatorPage-vi",
+  "_rev": "HfhymUJDXQZSCW75nkwHPS",
+  "_system": {
+    "base": {
+      "id": "tokenCalculatorPage-en",
+      "rev": "Kg0CoT3A9AWcotPbSFFBB2"
+    }
+  },
+  "_type": "tokenCalculatorPage",
+  "_updatedAt": "2026-05-12T05:22:04Z",
+  "ctaBody": "Xem bảng phân tích đầy đủ cho hơn 25 mô hình từ OpenAI, Anthropic, Google và mã nguồn mở — với giá đầu vào/đầu ra, cửa sổ ngữ cảnh và hướng dẫn theo trường hợp sử dụng.",
+  "ctaTitle": "Muốn so sánh giá các mô hình?",
+  "faq": [
+    {
+      "_key": "8dcaa97dc276",
+      "_type": "faqItem",
+      "answer": [
+        {
+          "_key": "7409d90de8a9",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "39780c45f417",
+              "_type": "span",
+              "marks": [],
+              "text": "Token là đơn vị văn bản nhỏ nhất mà một mô hình AI đọc và tạo ra. Trong tiếng Anh, một token tương đương khoảng 4 ký tự hoặc ¾ một từ. Dấu câu và khoảng trắng cũng được tính là token. API của AI tính phí theo token — cả những gì bạn gửi đi (đầu vào) lẫn những gì mô hình phản hồi (đầu ra)."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ],
+      "question": "Token chính xác là gì?"
+    },
+    {
+      "_key": "ae72543fb778",
+      "_type": "faqItem",
+      "answer": [
+        {
+          "_key": "c0d82fcb60f9",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "027634997b85",
+              "_type": "span",
+              "marks": [],
+              "text": "Mỗi nhà cung cấp AI dùng tokenizer riêng (ví dụ: GPT dùng tiktoken, Claude dùng BPE tokenizer của mình). Công cụ này sử dụng công thức ước tính tổng quát, phù hợp để ước lượng nhanh, nhưng con số chính xác có thể chênh lệch 5–15% tùy vào văn bản và mô hình."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ],
+      "question": "Tại sao con số khác với API thực tế?"
+    },
+    {
+      "_key": "e0f1dfede3ba",
+      "_type": "faqItem",
+      "answer": [
+        {
+          "_key": "f5970bb6c51a",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "d4f8ecc1dbcb",
+              "_type": "span",
+              "marks": [],
+              "text": "Không — máy tính này chỉ ước tính token đầu vào (những gì bạn gửi đến mô hình). Token đầu ra phụ thuộc vào độ dài phản hồi của mô hình, vốn thay đổi tùy từng trường hợp. Để ước tính tổng chi phí, bạn cần cộng thêm ước tính đầu ra dựa trên độ dài phản hồi dự kiến."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ],
+      "question": "Công cụ có tính token đầu ra (phản hồi) không?"
+    },
+    {
+      "_key": "a6577819249f",
+      "_type": "faqItem",
+      "answer": [
+        {
+          "_key": "7a3462be56cc",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "476b01875e99",
+              "_type": "span",
+              "marks": [],
+              "text": "Các mức giá hiển thị là giá tham khảo của AI Token King và được cập nhật định kỳ. Giá AI thay đổi thường xuyên — hãy luôn xác minh mức giá hiện tại trên nền tảng chính thức của OpenAI, Anthropic hoặc Google AI trước khi quyết định về chi phí."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ],
+      "question": "Giá hiển thị có được cập nhật không?"
+    }
+  ],
+  "faqIntro": "Giải đáp nhanh các câu hỏi phổ biến nhất về cách công cụ này hoạt động và ý nghĩa của các kết quả.",
+  "faqSectionLabel": "Câu hỏi thường gặp",
+  "faqTitle": "Về Máy tính Token",
+  "heroHeadline": "Máy Tính Token AI",
+  "heroLabel": "Công cụ miễn phí",
+  "heroSubtitle": "Dán bất kỳ văn bản nào để ước tính ngay số lượng token và chi phí đầu vào trên OpenAI, Anthropic và Google — không cần đăng ký.",
+  "language": "vi",
+  "seo": {
+    "noindex": false,
+    "seoDescription": "Máy tính token AI miễn phí: dán bất kỳ văn bản nào để ước tính ngay số lượng token và chi phí đầu vào cho GPT-4o, Claude và Gemini. Không cần đăng ký.",
+    "seoTitle": "Máy Tính Token AI — Ước Tính Chi Phí Ngay Lập Tức"
+  }
+}

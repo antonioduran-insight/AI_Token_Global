@@ -1,0 +1,113 @@
+{
+  "_createdAt": "2026-05-12T03:50:21Z",
+  "_id": "tokenCalculatorPage-en",
+  "_rev": "Kg0CoT3A9AWcotPbSFd7e6",
+  "_system": {
+    "base": {
+      "id": "tokenCalculatorPage-en",
+      "rev": "Kg0CoT3A9AWcotPbSFFBB2"
+    }
+  },
+  "_type": "tokenCalculatorPage",
+  "_updatedAt": "2026-05-12T05:22:04Z",
+  "ctaBody": "See a full breakdown of 25+ models across OpenAI, Anthropic, Google, and open-source — with input/output pricing, context windows, and use case guidance.",
+  "ctaTitle": "Want to compare model prices?",
+  "faq": [
+    {
+      "_key": "8dcaa97dc276",
+      "_type": "faqItem",
+      "answer": [
+        {
+          "_key": "7409d90de8a9",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "39780c45f417",
+              "_type": "span",
+              "marks": [],
+              "text": "A token is the smallest unit of text an AI model reads and generates. In English, one token is roughly 4 characters or ¾ of a word. Punctuation and spaces also count as tokens. AI APIs bill you per token — both for what you send (input) and what the model replies (output)."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ],
+      "question": "What exactly is a token?"
+    },
+    {
+      "_key": "ae72543fb778",
+      "_type": "faqItem",
+      "answer": [
+        {
+          "_key": "c0d82fcb60f9",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "027634997b85",
+              "_type": "span",
+              "marks": [],
+              "text": "Each AI provider uses its own tokenizer (e.g. GPT uses tiktoken, Claude uses its own BPE tokenizer). This tool uses a universal approximation formula that works well for quick estimates, but the exact count may differ by 5–15% depending on the text and model."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ],
+      "question": "Why do the numbers differ from the actual API?"
+    },
+    {
+      "_key": "e0f1dfede3ba",
+      "_type": "faqItem",
+      "answer": [
+        {
+          "_key": "f5970bb6c51a",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "d4f8ecc1dbcb",
+              "_type": "span",
+              "marks": [],
+              "text": "No — this calculator only estimates input tokens (what you send to the model). Output tokens depend on the model's response length, which varies. To estimate total cost, you'd need to add an output estimate based on your expected response length."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ],
+      "question": "Does this include output (response) tokens?"
+    },
+    {
+      "_key": "a6577819249f",
+      "_type": "faqItem",
+      "answer": [
+        {
+          "_key": "7a3462be56cc",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "476b01875e99",
+              "_type": "span",
+              "marks": [],
+              "text": "The prices are AI Token King reference prices and are updated periodically. AI pricing changes frequently — always verify the current rate on the official OpenAI, Anthropic, or Google AI platform before making billing decisions."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ],
+      "question": "Are the prices shown up to date?"
+    }
+  ],
+  "faqIntro": "Quick answers to the most common questions about how this tool works and what the results mean.",
+  "faqSectionLabel": "Common Questions",
+  "faqTitle": "About the Token Calculator",
+  "heroHeadline": "AI Token Calculator",
+  "heroLabel": "Free Tool",
+  "heroSubtitle": "Paste any text to instantly estimate token count and input costs across OpenAI, Anthropic, and Google — no sign-up required.",
+  "language": "en",
+  "seo": {
+    "noindex": false,
+    "seoDescription": "Free AI token calculator: paste any text to instantly estimate token count and input costs for GPT-4o, Claude, and Gemini. No sign-up required.",
+    "seoTitle": "AI Token Calculator — Estimate Costs Instantly"
+  }
+}

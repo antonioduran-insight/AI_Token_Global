@@ -1,0 +1,107 @@
+{
+  "_createdAt": "2026-05-18T10:13:23Z",
+  "_id": "tokenCalculatorPage-es",
+  "_rev": "LJTww3gscvOUdq4I6yaUTc",
+  "_type": "tokenCalculatorPage",
+  "_updatedAt": "2026-05-18T10:13:23Z",
+  "ctaBody": "Consulta un desglose completo de más de 25 modelos de OpenAI, Anthropic, Google y código abierto — con precios de entrada/salida, ventanas de contexto y orientación por caso de uso.",
+  "ctaTitle": "¿Quieres comparar precios de modelos?",
+  "faq": [
+    {
+      "_key": "8dcaa97dc276",
+      "_type": "faqItem",
+      "answer": [
+        {
+          "_key": "7409d90de8a9",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "39780c45f417",
+              "_type": "span",
+              "marks": [],
+              "text": "Un token es la unidad mínima de texto que un modelo de IA lee y genera. En inglés, un token equivale aproximadamente a 4 caracteres o ¾ de una palabra. La puntuación y los espacios también cuentan como tokens. Las API de IA te cobran por token — tanto por lo que envías (entrada) como por lo que el modelo responde (salida)."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ],
+      "question": "¿Qué es exactamente un token?"
+    },
+    {
+      "_key": "ae72543fb778",
+      "_type": "faqItem",
+      "answer": [
+        {
+          "_key": "c0d82fcb60f9",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "027634997b85",
+              "_type": "span",
+              "marks": [],
+              "text": "Cada proveedor de IA usa su propio tokenizador (por ejemplo, GPT usa tiktoken, Claude usa su propio tokenizador BPE). Esta herramienta aplica una fórmula de aproximación universal que funciona bien para estimaciones rápidas, pero el conteo exacto puede variar entre un 5–15% según el texto y el modelo."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ],
+      "question": "¿Por qué los números difieren de los de la API real?"
+    },
+    {
+      "_key": "e0f1dfede3ba",
+      "_type": "faqItem",
+      "answer": [
+        {
+          "_key": "f5970bb6c51a",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "d4f8ecc1dbcb",
+              "_type": "span",
+              "marks": [],
+              "text": "No — esta calculadora solo estima los tokens de entrada (lo que envías al modelo). Los tokens de salida dependen de la longitud de la respuesta del modelo, que varía. Para estimar el costo total, deberías agregar una estimación de salida según la longitud de respuesta que esperas."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ],
+      "question": "¿Esto incluye los tokens de salida (respuesta)?"
+    },
+    {
+      "_key": "a6577819249f",
+      "_type": "faqItem",
+      "answer": [
+        {
+          "_key": "7a3462be56cc",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "476b01875e99",
+              "_type": "span",
+              "marks": [],
+              "text": "Los precios son precios de referencia de AI Token King y se actualizan periódicamente. Los precios de IA cambian con frecuencia — siempre verifica la tarifa vigente en la plataforma oficial de OpenAI, Anthropic o Google AI antes de tomar decisiones de facturación."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ],
+      "question": "¿Los precios mostrados están actualizados?"
+    }
+  ],
+  "faqIntro": "Respuestas rápidas a las preguntas más comunes sobre cómo funciona esta herramienta y qué significan los resultados.",
+  "faqSectionLabel": "Preguntas Frecuentes",
+  "faqTitle": "Acerca de la Calculadora de Tokens",
+  "heroHeadline": "Calculadora de Tokens de IA",
+  "heroLabel": "Herramienta Gratuita",
+  "heroSubtitle": "Pega cualquier texto para estimar al instante el conteo de tokens y los costos de entrada en OpenAI, Anthropic y Google — sin registro requerido.",
+  "language": "es",
+  "seo": {
+    "noindex": false,
+    "seoDescription": "Calculadora gratuita de tokens de IA: pega cualquier texto para estimar al instante el conteo de tokens y los costos de entrada para GPT-4o, Claude y Gemini. Sin registro requerido.",
+    "seoTitle": "Calculadora de Tokens de IA — Estima Costos al Instante"
+  }
+}

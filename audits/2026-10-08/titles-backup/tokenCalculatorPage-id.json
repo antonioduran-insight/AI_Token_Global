@@ -1,0 +1,113 @@
+{
+  "_createdAt": "2026-05-12T03:50:21Z",
+  "_id": "tokenCalculatorPage-id",
+  "_rev": "hmn3TuaIsp9b5NTHYLf24U",
+  "_system": {
+    "base": {
+      "id": "tokenCalculatorPage-en",
+      "rev": "Kg0CoT3A9AWcotPbSFFBB2"
+    }
+  },
+  "_type": "tokenCalculatorPage",
+  "_updatedAt": "2026-05-22T14:56:58Z",
+  "ctaBody": "Lihat perbandingan lengkap 25+ model dari OpenAI, Anthropic, Google, dan open-source — lengkap dengan harga input/output, context window, dan panduan kasus penggunaan.",
+  "ctaTitle": "Mau bandingkan harga model?",
+  "faq": [
+    {
+      "_key": "8dcaa97dc276",
+      "_type": "faqItem",
+      "answer": [
+        {
+          "_key": "7409d90de8a9",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "39780c45f417",
+              "_type": "span",
+              "marks": [],
+              "text": "Token adalah unit teks terkecil yang dibaca dan dihasilkan oleh model AI. Dalam bahasa Inggris, satu token kira-kira setara dengan 4 karakter atau ¾ kata. Tanda baca dan spasi juga dihitung sebagai token. AI API menagih kamu per token — baik untuk teks yang kamu kirim (input) maupun balasan dari model (output)."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ],
+      "question": "Sebenarnya, apa itu token?"
+    },
+    {
+      "_key": "ae72543fb778",
+      "_type": "faqItem",
+      "answer": [
+        {
+          "_key": "c0d82fcb60f9",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "027634997b85",
+              "_type": "span",
+              "marks": [],
+              "text": "Setiap penyedia AI menggunakan tokenizer-nya sendiri (misalnya GPT menggunakan tiktoken, Claude menggunakan BPE tokenizer miliknya sendiri). Alat ini menggunakan rumus perkiraan universal yang cocok untuk estimasi cepat, tapi jumlah pastinya bisa berbeda sekitar 5–15% tergantung teks dan model yang digunakan."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ],
+      "question": "Kenapa hasilnya beda dengan API yang sebenarnya?"
+    },
+    {
+      "_key": "e0f1dfede3ba",
+      "_type": "faqItem",
+      "answer": [
+        {
+          "_key": "f5970bb6c51a",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "d4f8ecc1dbcb",
+              "_type": "span",
+              "marks": [],
+              "text": "Tidak — kalkulator ini hanya mengestimasi token input (teks yang kamu kirim ke model). Token output bergantung pada panjang respons model, yang bisa bervariasi. Untuk mengestimasi total biaya, kamu perlu menambahkan estimasi output berdasarkan panjang respons yang kamu harapkan."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ],
+      "question": "Apakah ini sudah termasuk token output (respons)?"
+    },
+    {
+      "_key": "a6577819249f",
+      "_type": "faqItem",
+      "answer": [
+        {
+          "_key": "7a3462be56cc",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "476b01875e99",
+              "_type": "span",
+              "marks": [],
+              "text": "Harga yang ditampilkan adalah harga referensi AI Token King yang diperbarui secara berkala. Harga AI berubah cukup sering — selalu verifikasi tarif terkini di platform resmi OpenAI, Anthropic, atau Google AI sebelum membuat keputusan terkait tagihan."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ],
+      "question": "Apakah harga yang ditampilkan sudah terkini?"
+    }
+  ],
+  "faqIntro": "Jawaban singkat untuk pertanyaan paling umum tentang cara kerja alat ini dan apa arti dari hasilnya.",
+  "faqSectionLabel": "Pertanyaan Umum",
+  "faqTitle": "Tentang Kalkulator Token",
+  "heroHeadline": "AI Token Calculator",
+  "heroLabel": "Alat Gratis",
+  "heroSubtitle": "Tempel teks apa pun untuk langsung mengestimasi jumlah token dan biaya input di OpenAI, Anthropic, dan Google — tanpa perlu daftar.",
+  "language": "id",
+  "seo": {
+    "noindex": false,
+    "seoDescription": "Kalkulator token AI gratis: tempel teks apa pun untuk langsung mengestimasi jumlah token dan biaya input untuk GPT-4o, Claude, dan Gemini. Tanpa perlu daftar.",
+    "seoTitle": "AI Token Calculator — Estimasi Biaya Seketika"
+  }
+}
