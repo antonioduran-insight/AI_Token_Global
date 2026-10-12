@@ -2,7 +2,7 @@
  * patch-titles-meta.mjs
  *
  * S7d part 1: rewrites seo.seoTitle / seo.seoDescription on the four
- * token-calculator pages. Titles and meta live in Sanity,
+ * token-calculator pages and six blog posts. Titles and meta live in Sanity,
  * not in code; the site renders seoTitle as <title> and seoDescription as
  * <meta name="description">.
  *
@@ -62,6 +62,45 @@ const ROWS = [
     before: 'AI Token Calculator — Estimasi Biaya Seketika',
     title: null,
     description: 'Kalkulator token AI gratis: tempel teks apa pun untuk menghitung token dan membandingkan biaya input di model OpenAI, Claude, dan Gemini. Tanpa daftar.' },
+  { n: 5, kind: 'post', lang: 'en', slug: 'ai-token-vs-quota-explained',
+    before: "AI Token vs Quota: A Beginner's Guide",
+    title: "AI Token vs Quota vs Credits: What's the Difference?",
+    // Softened: the body never covers running out mid-project, and credits are
+    // prepaid balance rather than a usage limit.
+    description: 'Tokens, quotas and credits all shape how much AI you can use, but each works differently. See what each one means and how to plan your usage around them.' },
+  { n: 6, kind: 'post', lang: 'en', slug: 'why-does-claude-keep-cutting-off-mid-conversation',
+    before: 'Why Claude Hits Token Limits: How Context Windows Work + 3 Fixes',
+    // Softened: the body says the limit cannot be removed ("a process problem"),
+    // offers ways to manage it, and never discusses output limits.
+    title: 'Why Claude Cuts Off Mid-Conversation and 3 Ways to Manage It',
+    description: 'Claude cuts long conversations short at the context window limit. See how context windows work and three practical ways to manage it — no magic prompts.' },
+  { n: 7, kind: 'post', lang: 'es', slug: 'por-que-claude-sigue-interrumpiendo-la-conversacion-a-mitad-de-camino',
+    // Read from Sanity on 2026-10-08; matches the live page.
+    before: 'Por qué Claude alcanza límites de tokens: cómo funcionan las ventanas de contexto + 3 soluciones',
+    // Softened: the body says the limit cannot be avoided completely, and never
+    // discusses output limits.
+    title: 'Por qué Claude se corta a mitad de conversación y qué hacer',
+    description: 'Claude corta las conversaciones largas al llegar al límite de contexto. Así funcionan las ventanas de contexto y 3 formas prácticas de gestionarlo.' },
+  { n: 8, kind: 'post', lang: 'en', slug: 'claude-token-pricing-guide-for-beginners',
+    before: 'Claude Token Pricing Guide for Beginners',
+    title: 'Claude API Pricing Explained: Input, Output & Cached Tokens',
+    // Softened: the body names no Claude model and has no worked cost example
+    // for one; it does cover plan choice.
+    description: 'How Claude charges per token: input vs output tokens, prompt caching, and how to choose the right pricing plan for your usage.' },
+  { n: 9, kind: 'post', lang: 'en', slug: 'claud-api-vs-chat-version-use-cases',
+    before: 'Claude API vs Chat Version: Effective Application Strategies',
+    title: 'Claude API vs Claude Chat: Which One Should You Use?',
+    // Softened: the body covers structured output (reports, CSV) and high-volume
+    // tasks, not file processing.
+    description: "Learn when to use Claude's API and when the chat app is enough, covering automation, structured output, high-volume tasks and cost." },
+  { n: 10, kind: 'post', lang: 'id', slug: 'harga-token-claude-antropik-api',
+    // HELD 2026-10-08: the body is an untranslated copy of the en pricing guide,
+    // so an Indonesian title and description would promise a page that is not
+    // there. Translate the body first, then remove `hold`.
+    hold: 'body is untranslated English (copy of en/claude-token-pricing-guide-for-beginners); translate first',
+    before: 'Mengerti Harga Token Claude',
+    title: 'Harga Token Claude API: Input, Output & Cara Menghitungnya',
+    description: 'Panduan harga token Claude untuk pemula: beda token input dan output, cara menghitung biaya, dan tips menghemat pemakaian API.' },
 ];
 
 /** Never written, whatever ROWS says. */

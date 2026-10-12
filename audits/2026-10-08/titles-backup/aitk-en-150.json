@@ -1,0 +1,449 @@
+{
+  "_createdAt": "2026-07-24T06:01:05Z",
+  "_id": "aitk-en-150",
+  "_rev": "b9P8QgzKRl0jmOQ7eJ5jvZ",
+  "_system": {
+    "base": {
+      "id": "aitk-en-150",
+      "rev": "b9P8QgzKRl0jmOQ7eInBeP"
+    }
+  },
+  "_type": "post",
+  "_updatedAt": "2026-07-24T07:14:20Z",
+  "articleNumber": 150,
+  "body": [
+    {
+      "_key": "b0",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b0s0",
+          "_type": "span",
+          "marks": [],
+          "text": "The core reason Claude (and most mainstream AI chat tools) suddenly interrupts a conversation partway through, asking you to \"start a new chat\" or \"summarize before continuing,\" is that every conversation is bounded by a capacity limit called the context window — measured in units called tokens. Once the token count accumulated in the current conversation (everything you've typed, everything the AI has replied, plus any documents you've uploaded) approaches or exceeds that limit, the system has to start \"forgetting\" earlier content, or simply prompt you to open a new conversation. This isn't a Claude-specific quirk — it's a technical constraint shared by every mainstream large language model. This piece breaks down how token limits actually work, why conversations get interrupted when you least expect it, and a few common, logically grounded ways to manage it — but up front: a claim making the rounds online, \"paste this text and you'll never hit a token limit again,\" typically overstates what any single prompt can actually solve, and this piece won't offer or endorse any so-called cure-all text."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b1",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b1s0",
+          "_type": "span",
+          "marks": [],
+          "text": "What Is a Token Limit (Context Window), and Why Do Long Conversations Get Cut Off"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "b2",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b2s0",
+          "_type": "span",
+          "marks": [],
+          "text": "A token is the smallest unit of text an AI model processes — roughly, a \"chopped-up fragment of text.\" A single Chinese character or English word is often split into one or more tokens. Every time you talk to Claude, the system isn't just reading the sentence you just typed — it re-feeds the entire conversation from the start up to now (every question you've asked, every reply the AI has given, any document or long text you've pasted in) back into the model as one package, and that whole package is the context window. The context window has an actual capacity limit that varies by model version and plan tier, and the official number changes as products get updated — this piece won't make any specific numerical claims about it. Once the accumulated token count in a conversation approaches that limit, the system either starts discarding the earliest content to make room, or directly prompts the user with something like \"this conversation is getting long, consider starting a new one\" — that's what people commonly call \"hitting the token limit.\""
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b3",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b3s0",
+          "_type": "span",
+          "marks": [],
+          "text": "What Actually Happens When a Claude Conversation Hits the Token Limit"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "b4",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b4s0",
+          "_type": "span",
+          "marks": [],
+          "text": "The first time most users run into this, the symptoms are usually one of a few things: the AI starts \"forgetting\" settings or details you discussed earlier, response quality suddenly drops, or the system pops up a prompt telling you to start a new conversation. The mechanism behind this is actually simple — the AI hasn't suddenly gotten \"dumber\"; the range of information it can reference has been cut off by the capacity limit. Earlier parts of the conversation may already have been pushed outside that window, so the model naturally can't answer based on content it can no longer see. This matters, because it changes how you should respond when \"the AI suddenly seems to have lost the plot\": instead of treating it like a system glitch and just refreshing the page and hoping for the best, treat it as a signal that \"this conversation is full,\" and proactively hand off and organize."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b5",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b5s0",
+          "_type": "span",
+          "marks": [],
+          "text": "Tip One: Proactively Segment and Hand Off With a Summary — Let the Conversation \"Catch Its Breath\" Instead of Getting Cut Off"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "b6",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b6s0",
+          "_type": "span",
+          "marks": [],
+          "text": "One of the most common approaches to long conversations is to notice, on your own, when a conversation is getting long or the system starts showing signs of \"forgetting things,\" and proactively ask the AI (or do it yourself) to compile the key conclusions, decisions, and open items so far into a concise summary — then carry that summary into a new conversation to continue. The logic here is straightforward: rather than letting the system force a cutoff when you're unprepared and lose details you might still care about, you decide for yourself which content is worth carrying forward. There's no single fixed formula for this — exactly how you summarize, and what the summary should include, depends on the nature of your work (coding, copywriting, research). The key is building the habit of proactively handing off once a conversation gets long, rather than passively waiting for the system to remind you."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b7",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b7s0",
+          "_type": "span",
+          "marks": [],
+          "text": "Tip Two: Move Information You Need Long-Term Out of the Conversation Itself — Use External Memory and Retrieval"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "b8",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b8s0",
+          "_type": "span",
+          "marks": [],
+          "text": "Another common direction is to avoid stuffing everything you need to retain long-term into the same conversation window, and instead move it outside the conversation — saving it as a document or notes, for example, or using a tool or platform feature with retrieval-augmented generation (RAG) capability, which only pulls relevant pieces into the conversation when needed. The core idea here is separating \"the discussion currently happening in this conversation\" from \"long-term data you might need again in the future, but don't need loaded in all at once right now,\" so that each conversation's context window only carries what's actually necessary at that moment, rather than the entire history of a project. This is especially useful in enterprise scenarios adopting AI tools that need to build up a long-term knowledge base over time, but it also means you need additional tooling and process support — it's not something a single prompt alone can achieve."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b9",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b9s0",
+          "_type": "span",
+          "marks": [],
+          "text": "Tip Three: Build the Habit of Monitoring Token Usage, and Plan Ahead Before You Get Stuck"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "b10",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b10s0",
+          "_type": "span",
+          "marks": [],
+          "text": "Rather than reacting on the fly once a conversation gets interrupted, a more proactive direction is to have a basic sense, on an ongoing basis, of your own (or your team's) token usage — roughly understanding how quickly your typical conversation patterns tend to approach the limit, and which kinds of tasks (pasting large amounts of raw data, long documents) tend to burn through capacity especially fast. For an individual user, this might just mean building the habit of self-reminding to wrap up once a conversation gets long; but for an enterprise or team, when multiple people are using AI tools at once, a lack of usage visibility often means everyone is figuring things out — and hitting the same snags — on their own, and managers have a hard time getting a handle on overall usage. That's exactly why features like \"usage lookup\" and \"usage alerts\" come up so often on the evaluation checklist when enterprises adopt AI tools — not to restrict usage, but so both users and managers can see \"we're getting close to the limit\" ahead of time, rather than discovering it partway through a conversation, every single time."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b11",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b11s0",
+          "_type": "span",
+          "marks": [],
+          "text": "There's No \"Paste It and You're Done Forever\" Spell: Managing Token Limits Is Fundamentally a Process Problem"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "b12",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b12s0",
+          "_type": "span",
+          "marks": [],
+          "text": "Worth being honest about at this point: the token limit is a technical constraint at the level of the model's architecture, and there is currently no piece of text you can paste in that makes that capacity limit itself disappear or gets fully routed around. Whatever various \"magic prompts\" circulating online can actually do, at best, is nudge the AI to be more proactive about helping you summarize, or remind you when it's time to wrap up — those are genuinely helpful supporting actions, but none of them amount to \"never hitting a token limit again.\" What genuinely reduces the \"getting interrupted\" headache over the long term is turning the three directions above into habitual workflow — proactively handing off with summaries, making good use of memory and retrieval tools outside the conversation, regularly keeping an eye on your own usage — rather than searching for a single piece of text you paste in once to solve everything. Any claim along the lines of \"paste this, guaranteed to never hit a token limit again\" is worth treating with a healthy dose of skepticism — a single piece of text like that can't make the token limit itself disappear, and it shouldn't be treated as a teaching step you need to personally go verify."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b13",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b13s0",
+          "_type": "span",
+          "marks": [],
+          "text": "Enterprise and Team Scenarios: What Token Management Becomes When Many People Are Using AI at Once"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "b14",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b14s0",
+          "_type": "span",
+          "marks": [],
+          "text": "For an individual user, hitting the token limit is, at worst, mildly annoying — you refresh a conversation and move on. But in an enterprise or team setting, this problem gets amplified onto a different level entirely. When a dozen or several dozen employees are using different AI tools for different tasks at the same time, questions like \"whose conversation is about to hit the limit,\" \"how much of this month's token allowance is left,\" and \"which department is burning through usage especially fast\" — without one centralized place to check — often mean managers only find out reactively, after an employee reports that \"the AI suddenly stopped working.\" That's exactly why, when adopting AI tools, enterprises need to evaluate not just the capability of the model itself, but also whether there's a way to centrally manage and monitor usage across multiple accounts and multiple conversations — turning what would otherwise be everyone fending for themselves, figuring things out through trial and error, into a process with real visibility that can be planned ahead of time."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b15",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b15s0",
+          "_type": "span",
+          "marks": [],
+          "text": "FAQ"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "b16",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b16s0",
+          "_type": "span",
+          "marks": [],
+          "text": "Why does my Claude conversation suddenly \"cut off\" or ask me to start a new one?"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "b17",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b17s0",
+          "_type": "span",
+          "marks": [],
+          "text": "Because every conversation is bounded by the token capacity of its context window. Once the content accumulated in the current conversation (your questions, the AI's replies, uploaded documents) approaches or exceeds that limit, the system starts discarding earlier content or directly prompts you to start a new conversation — this is a technical constraint shared by every mainstream large language model, not something unique to Claude."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b18",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b18s0",
+          "_type": "span",
+          "marks": [],
+          "text": "Is a token limit the same thing as \"running out of memory\"?"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "b19",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b19s0",
+          "_type": "span",
+          "marks": [],
+          "text": "Conceptually similar, but not quite the same. A token limit refers to the cap on how much text a model can process together in a single pass — closer to the concept of \"how much this particular conversation can hold.\" It's not an issue with your computer's hardware memory usage; it's a limit on single-context length at the level of the model's architecture design."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b20",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b20s0",
+          "_type": "span",
+          "marks": [],
+          "text": "Is there any way to keep using the same conversation window \"forever\" without ever hitting a limit?"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "b21",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b21s0",
+          "_type": "span",
+          "marks": [],
+          "text": "There's currently no way to make the context window's capacity limit itself disappear or be fully routed around — this is a constraint at the level of the model architecture. Common approaches are proactively segmenting and handing off with summaries, moving long-term information outside the conversation, and regularly keeping an eye on usage — these are all supporting measures that reduce the \"getting interrupted\" headache, not ways to make the limit vanish."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b22",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b22s0",
+          "_type": "span",
+          "marks": [],
+          "text": "After starting a new conversation, is the content from the previous one still there?"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "b23",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b23s0",
+          "_type": "span",
+          "marks": [],
+          "text": "Generally speaking, the system doesn't automatically carry over details from the previous conversation window once you start a new one, unless you proactively bring a summary or key information into the new conversation, or use a tool or platform with external memory or retrieval features that can pull relevant content back in when needed."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b24",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b24s0",
+          "_type": "span",
+          "marks": [],
+          "text": "Multiple people at an enterprise are using Claude or other AI tools together — how do you avoid everyone hitting limits separately without knowing why?"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "b25",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b25s0",
+          "_type": "span",
+          "marks": [],
+          "text": "A more practical direction is adopting a management tool or platform feature that lets you centrally view usage across multiple accounts and multiple conversations, so both managers and users can see the signal before approaching the limit, rather than reacting only after someone reports \"the AI suddenly stopped working.\" This is usually another dimension worth evaluating, beyond the model's own capability, when an enterprise assesses AI tool adoption."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b26",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b26s0",
+          "_type": "span",
+          "marks": [],
+          "text": "Source"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "b27",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b27s0",
+          "_type": "span",
+          "marks": [],
+          "text": "The material that triggered this topic is a video published by the YouTube channel Austin Marchese, “Paste This Into Claude, Never Hit a Token Limit Again” (published around July 19, 2026, roughly 49,000 views, cross-verified via a third-party data source but not an official precise figure). This piece was written without access to that video's transcript, and the writer had no way to actually watch the video's content — so the body of this piece does not cite or paraphrase any specific technique, prompt text, or step described in that video; the video is used solely as the sourcing trigger for this topic (Claude / token limits / conversation interruption). The video's own title, “Paste This Into Claude, Never Hit a Token Limit Again,” is itself an unverified, sensational claim format implying a single cure-all piece of text exists — this piece explicitly does not endorse that claim. The technical background described in this piece (how context windows and token limits work, common causes of conversation interruption, and approaches like segmented handoff, external memory, and usage monitoring) is general educational content drawn from publicly known industry knowledge, and does not cite any vendor's undisclosed technical documentation, nor make any specific, potentially outdated or inaccurate claim about Anthropic's official Claude token limit numbers. This piece does not constitute a technical guarantee; for actual limit numbers and features, refer to each AI service's official announcements."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    }
+  ],
+  "category": "tutorial",
+  "coverImage": {
+    "_type": "image",
+    "alt": "Why Does Claude Keep Cutting Off Mid-Conversation? How Token Limits Actually Work, and 3 Ways to Manage Them - featured illustration",
+    "asset": {
+      "_ref": "image-53af2c626b63ee2edc0ab5bcc525fb6faff8a15a-1376x768-png",
+      "_type": "reference"
+    }
+  },
+  "difficultyLevel": "beginner",
+  "excerpt": "Claude (and most mainstream AI chat tools) suddenly interrupts a conversation and asks you to \"start a new chat\" or \"summarize before continuing\" for one core reason: every conversation is bounded by a capacity limit called the context window, measured in tokens. This piece breaks down how that limit actually works, why it catches you off guard, and a few common, logically grounded ways to manage it — but a claim making the rounds online (\"paste this and never hit a token limit again\") overstates what any single prompt can actually fix, and this piece won't offer or endorse any such cure-all text.",
+  "focusKeyword": "Claude token limit",
+  "generatedByPipeline": true,
+  "language": "en",
+  "pipelineVersion": "v1.0",
+  "publishedAt": "2026-07-24T09:00:00Z",
+  "qaCheckedAt": "2026-07-24T09:00:00Z",
+  "qaScore": 90,
+  "readTime": 7,
+  "secondaryKeywords": [
+    "context window management",
+    "AI conversation cut off",
+    "token usage monitoring"
+  ],
+  "seo": {
+    "seoDescription": "Why does Claude cut off mid-conversation? Understand how context windows and token limits actually work, and three practical, honest ways to manage them — no magic prompts.",
+    "seoTitle": "Why Claude Hits Token Limits: How Context Windows Work + 3 Fixes"
+  },
+  "slug": {
+    "_type": "slug",
+    "current": "why-does-claude-keep-cutting-off-mid-conversation"
+  },
+  "sourceUrl": "https://www.youtube.com/watch?v=SFh6MMe-XcM",
+  "tags": [
+    "Claude",
+    "token limit",
+    "context window",
+    "AI conversation management"
+  ],
+  "title": "Why Does Claude Keep Cutting Off Mid-Conversation? How Token Limits Actually Work, and 3 Ways to Manage Them",
+  "translationKey": "60e0e429-7375-4c2c-8c6e-3e8837a242b0"
+}
