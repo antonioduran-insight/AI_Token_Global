@@ -61,3 +61,30 @@ Total with ≤1: **142** (132 posts, 10 site pages: `/es/user-guide/`, `/en/user
 | `/en/blog/ai-tokens-api-keys-for-beginners/` | 4 (2%) | 0 | 3 newest-in-category | /en/api-compare/ | /en/token-calculator/, /en/blog/buying-ai-tokens-for-personal-use/, /en/blog/claud-api-vs-chat-version-use-cases/ |
 
 None of the top posts links to the calculator. Its only contextual inbound links are 5 (3 guide bodies + 2 template). That makes Part 2 commit 3 ("Useful tools": calculator + main guide) worth doing.
+
+## After S5 Part 2 (same method, local build of the branch)
+
+| Orphan list from (b) | Pages | Still ≤1 contextual | Contextual inbound, total before → after |
+|---|---:|---:|---|
+| en posts | 37 | 7 | 1 → 108 |
+| es posts | 25 | 23 | 2 → 22 |
+| id posts | 23 | 23 | 0 → 0 |
+| vi posts | 47 | 1 | 6 → 141 |
+| Site pages (user-guide, compliance, ai-trends) | 10 | 10 | 8 → 8 |
+| **All** | **142** | **64** | **17 → 279** |
+
+| Related picks per post | en | es | id | vi |
+|---|---|---|---|---|
+| Max, before → after | 65 → 6 | 61 → 13 | 61 → 13 | 53 → 5 |
+| Never picked, before → after | 139 → 30 | 122 → 106 | 122 → 107 | 96 → 0 |
+
+| Tools row target | Contextual inbound before → after |
+|---|---|
+| `/en/token-calculator/` | 5 → 171 |
+| `/es/token-calculator/` | 5 → 156 |
+| `/id/token-calculator/` | 5 → 155 |
+| `/vi/token-calculator/` | 5 → 129 |
+| `/en/beginners-guide/` | 8 → 174 |
+| `/en/api-compare/` | 10 → 176 |
+
+Still orphaned, by rule: the 7 en posts are 522–597 words (under the 600-word floor); the es/id posts have English bodies (106–107 of 151 per locale), so they are never picked. They need translating, or Part 3 body links.
