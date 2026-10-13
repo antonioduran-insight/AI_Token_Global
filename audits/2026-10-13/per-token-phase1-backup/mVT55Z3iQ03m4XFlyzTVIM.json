@@ -1,0 +1,547 @@
+{
+  "_createdAt": "2026-06-30T03:15:47Z",
+  "_id": "mVT55Z3iQ03m4XFlyzTVIM",
+  "_rev": "ozCyOlBi58GE7eckjeAqcX",
+  "_type": "post",
+  "_updatedAt": "2026-06-30T03:19:48Z",
+  "articleNumber": 127,
+  "body": [
+    {
+      "_key": "ladc26i6",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "ladc26i6c",
+          "_type": "span",
+          "marks": [],
+          "text": "AI token cost compliance is a critical challenge for developers integrating language models into production systems. This article bridges the gap between social media age restriction enforcement and API cost management strategies, revealing technical parallels between network-layer blocks and tiered API pricing models. By analyzing how platforms enforce age verification through decentralized systems, we uncover patterns that directly inform cost-effective API implementation. With API pricing models ranging from per-token billing to usage caps, understanding these parallels helps developers avoid hidden costs while maintaining regulatory compliance. This article draws insights from a YouTube video exploring technical approaches to social media restrictions, applying those network-level concepts to the complex world of AI API cost control."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "wla3vzcl",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "wla3vzclc",
+          "_type": "span",
+          "marks": [],
+          "text": "Network-Layer Social Media Blocks and Tiered API Access Models"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "tna9do31",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "tna9do31c",
+          "_type": "span",
+          "marks": [],
+          "text": "Social media age restrictions often employ network-layer blocks at home routers and ISPs to prevent underage access. These technical barriers operate similarly to tiered API pricing models, where access is controlled based on subscription levels. Just as an ISP might throttle social media traffic for underage users, API providers use rate limiting and token quotas to manage usage. For example, Anthropic's Claude API implements tiered pricing with 1 million input tokens at $0.03 and output tokens at $0.15 per million. Developers can mirror network-layer enforcement by structuring their applications to prioritize low-cost API tiers for standard operations while reserving high-cost tiers for critical tasks. This approach creates a technical 'firewall' between routine processing and expensive operations, much like how ISPs enforce traffic shaping policies."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "hfeg80pm",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "hfeg80pmc",
+          "_type": "span",
+          "marks": [],
+          "text": "The decentralized nature of network blocks introduces complexity. Just as different ISPs implement age verification systems with varying technical approaches, API providers use diverse billing models that require custom integration strategies. A developer using multiple APIs (e.g., OpenAI and Google's Vertex AI) must account for these differences in their cost management strategy. For instance, OpenAI's GPT-3.5 Turbo charges $0.002 per 1,000 input tokens while Vertex AI's Gemini Pro charges $0.005 per 1,000 tokens. This price disparity creates a technical challenge similar to coordinating network blocks across multiple ISPs, requiring developers to implement dynamic routing logic that selects the most cost-effective API endpoint based on real-time pricing data."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "8syjsqtt",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "8syjsqttc",
+          "_type": "span",
+          "marks": [],
+          "text": "Implementing tiered access requires understanding both API documentation and network architecture principles. Consider a content moderation system that uses a low-cost API for initial screening and a high-accuracy API for final review. This architecture mirrors how network blocks might use lightweight checks (like IP geolocation) before applying more intensive verification methods. By structuring API calls with cascading tiers, developers can achieve cost savings similar to how ISPs reduce bandwidth usage through traffic shaping. The key technical challenge lies in maintaining performance while implementing these cost-saving measures."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "105ti7j7",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "105ti7j7c",
+          "_type": "span",
+          "marks": [],
+          "text": "Tiered Access Models in Practice"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "s118j7kg",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "s118j7kgc",
+          "_type": "span",
+          "marks": [],
+          "text": "A real-world example demonstrates this approach. A customer support chatbot might use a low-cost API for basic queries ($0.001 per token) and switch to a premium API ($0.01 per token) for complex issues. This tiered model saved a startup $12,000 monthly by reducing high-cost API usage by 75%. The implementation required developing a routing algorithm that analyzes query complexity in real-time, similar to how network blocks evaluate packet metadata. Developers must also consider caching strategies to minimize redundant API calls, creating a technical architecture that balances performance with cost compliance."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "0wel81hf",
+      "_type": "image",
+      "alt": "How Social Media Age Restrictions Inform AI API Cost Management for Developers - section 1 illustration",
+      "asset": {
+        "_ref": "image-e55307e46b7427ae257444fa5a8f672806aabe29-1344x768-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "bcl4n31k",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "bcl4n31kc",
+          "_type": "span",
+          "marks": [],
+          "text": "Decentralized Enforcement Challenges and Hidden API Token Costs"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "thsecqct",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "thsecqctc",
+          "_type": "span",
+          "marks": [],
+          "text": "Social media regulation often faces decentralized enforcement challenges where different platforms implement age verification with unique technical requirements. This mirrors the hidden token costs developers encounter when integrating multiple APIs. For example, a content moderation system using both Meta's API and Twitter's API must navigate different verification processes, just as developers must account for varying tokenization methods between OpenAI and Anthropic. Hidden costs emerge when these systems interact unexpectedly, such as when a single API call triggers multiple billing events across services. The technical complexity of coordinating these systems is comparable to implementing cross-platform age verification with inconsistent technical standards."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "oy51iz8i",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "oy51iz8ic",
+          "_type": "span",
+          "marks": [],
+          "text": "One common hidden cost arises from API 'hidden' tokens. When using Hugging Face's Transformers library, developers might forget that model outputs are counted as tokens, leading to unexpected costs. This is analogous to social media platforms applying age verification checks at multiple network layers, where each check might incur technical overhead. For instance, a developer might budget for 100,000 input tokens but fail to account for the 20,000 output tokens generated in responses, creating a 20% cost overrun. These challenges highlight the need for comprehensive cost modeling that accounts for all API interactions, much like how social media regulation requires multi-layered verification systems."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "kwlgu1g3",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "kwlgu1g3c",
+          "_type": "span",
+          "marks": [],
+          "text": "To mitigate these issues, developers should implement cost monitoring at the application layer. This includes tracking not just API calls but also associated costs like data transfer fees and storage costs. For example, a video analysis system using AWS Rekognition and Google Cloud Vision must calculate not only API token costs but also data egress charges. This multi-dimensional cost analysis is similar to how network blocks must consider both packet filtering at the router level and user authentication at the application level. The technical solution involves building cost tracking dashboards that provide visibility into all API interactions and their associated costs."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "kv1eb52j",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "kv1eb52jc",
+          "_type": "span",
+          "marks": [],
+          "text": "Hidden Costs in Multi-Platform Integrations"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "43pioljr",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "43pioljrc",
+          "_type": "span",
+          "marks": [],
+          "text": "A case study from the video demonstrates the complexity of multi-platform cost management. A social media analytics startup integrated three AI APIs (OpenAI, Anthropic, and Cohere) but discovered that their combined costs exceeded initial projections by 40%. The issue stemmed from overlapping token counts in API responses and inconsistent billing periods. For example, Cohere charges $1.50 per 1,000 tokens but bills in 5-minute intervals, while Anthropic's billing is based on total tokens regardless of time. This created a technical challenge similar to coordinating age verification across platforms with different enforcement timelines. The solution required developing a cost normalization layer that converted all API charges to a common metric, enabling accurate budget forecasting."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "wg03kqxr",
+      "_type": "image",
+      "alt": "How Social Media Age Restrictions Inform AI API Cost Management for Developers - section 2 illustration",
+      "asset": {
+        "_ref": "image-5a4a1625d2d361c275dd92cf151c4bcf3d0a0e73-1344x768-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "129jvr2v",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "129jvr2vc",
+          "_type": "span",
+          "marks": [],
+          "text": "Age Verification Systems and Upfront Cost Analysis"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "j8gbnrfv",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "j8gbnrfvc",
+          "_type": "span",
+          "marks": [],
+          "text": "Age verification systems in social media platforms demonstrate the value of upfront cost analysis in API implementation. Just as platforms must evaluate the technical and financial costs of different verification methods (ID scanning vs. biometric authentication), developers must analyze API costs before integration. For example, implementing Amazon Rekognition's age detection API requires evaluating both the $1.00 per 1,000 image analysis cost and the potential for false positives that might trigger additional verification steps. This upfront analysis is crucial for AI token cost compliance, as it prevents unexpected budget overruns from complex API interactions."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "p4aydu7h",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "p4aydu7hc",
+          "_type": "span",
+          "marks": [],
+          "text": "The technical implementation of age verification systems provides a useful framework for API cost analysis. Social media platforms often perform a cost-benefit analysis before selecting verification methods, considering factors like accuracy, implementation time, and ongoing costs. Developers can apply this methodology to API selection by creating cost matrices that compare different providers' pricing models. For instance, comparing OpenAI's $0.03 per 1,000 tokens with Google's $0.005 per 1,000 tokens reveals that the cheaper option might not always be optimal when considering factors like latency and accuracy. This holistic approach mirrors how social media platforms balance verification accuracy with implementation costs."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "gojefvi6",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "gojefvi6c",
+          "_type": "span",
+          "marks": [],
+          "text": "A practical example from the video shows how upfront analysis saved a content platform $85,000 in API costs. By analyzing potential usage patterns and comparing different AI providers' pricing models, the team selected a hybrid approach using low-cost APIs for routine tasks and high-accuracy APIs for critical operations. This strategy, similar to how social media platforms might use basic age verification for most users and ID scanning for high-risk accounts, reduced total costs by 60% without compromising quality. The technical implementation required building a cost prediction model that factored in both API pricing and expected usage patterns."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "6v7z22ar",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "6v7z22arc",
+          "_type": "span",
+          "marks": [],
+          "text": "Cost Audits Before Implementation"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "6avqxet9",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "6avqxet9c",
+          "_type": "span",
+          "marks": [],
+          "text": "The video highlights a cost audit process that identified unexpected expenses in an AI implementation. The team discovered that their chosen API charged for both input and output tokens, with output tokens costing 5x more than input tokens. This revelation, similar to how social media platforms might discover hidden costs in age verification systems, led to a complete redesign of their implementation strategy. By shifting to a model that minimized output tokens through prompt engineering, they reduced costs by 70%. This case study demonstrates the importance of comprehensive cost audits before API implementation, mirroring how social media platforms conduct technical audits of verification systems."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "u4lt4ih8",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "u4lt4ih8c",
+          "_type": "span",
+          "marks": [],
+          "text": "5G Network Restrictions and Carrier-Specific API Pricing Structures"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "hg6w7qh8",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "hg6w7qh8c",
+          "_type": "span",
+          "marks": [],
+          "text": "The video's discussion of 5G network restrictions provides a compelling analogy for understanding carrier-specific API pricing structures. Just as telecom providers implement different 5G data policies (e.g., Verizon's 15GB monthly cap vs. T-Mobile's 25GB limit), API providers use diverse billing models that require carrier-specific implementation strategies. For example, a mobile app developer must consider how different API pricing structures interact with carrier data plans, much like how a social media platform must adapt to varying 5G restrictions across regions. This technical challenge requires implementing dynamic API selection based on the user's network conditions."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "cdtbpyhy",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "cdtbpyhyc",
+          "_type": "span",
+          "marks": [],
+          "text": "The analogy extends to technical implementation details. Just as 5G restrictions might limit social media data transfer during peak hours, API providers implement usage caps that vary by region. For instance, Azure's AI services charge $0.002 per 1,000 tokens in the US but $0.003 in the EU due to regional compliance requirements. Developers must build systems that can adapt to these variations, similar to how mobile apps might switch between 4G and 5G networks based on data caps. This requires implementing geolocation-based API routing and cost-aware load balancing at the application layer."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "idfzyzxe",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "idfzyzxec",
+          "_type": "span",
+          "marks": [],
+          "text": "A real-world implementation example shows the complexity of these interactions. A global chatbot service discovered that their European users were experiencing 40% higher costs due to regional API pricing differences. By implementing a geolocation-aware API routing system that selected the most cost-effective endpoint based on the user's location, they reduced overall costs by 25%. This technical solution mirrors how social media platforms adapt to different network restrictions across regions, demonstrating the need for location-aware cost management in API integrations."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "780emkia",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "780emkiac",
+          "_type": "span",
+          "marks": [],
+          "text": "Platform-Specific Compliance and AI Model Cost Variations"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "eyhsk9ie",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "eyhsk9iec",
+          "_type": "span",
+          "marks": [],
+          "text": "The video's analysis of platform-specific age verification mechanisms provides a useful framework for understanding AI model cost variations across providers. Just as social media platforms implement unique verification systems (Facebook's ID scanning vs. TikTok's biometric checks), AI providers use different cost structures that require custom integration approaches. For example, Anthropic's Claude 3 Opus model charges $0.015 per 1,000 tokens for high-accuracy tasks, while OpenAI's GPT-3.5 Turbo costs $0.002 per 1,000 tokens for basic tasks. This price disparity creates technical challenges similar to coordinating different age verification systems across platforms."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "bj86rky6",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "bj86rky6c",
+          "_type": "span",
+          "marks": [],
+          "text": "The technical implementation challenges mirror those of social media compliance. Just as a single user might need to verify their age on multiple platforms with different requirements, a developer might need to integrate multiple AI models with varying cost structures. For instance, a document analysis system might use a high-cost API for financial reports ($0.01 per token) and a low-cost API for routine documents ($0.001 per token). This requires building a dynamic model selection system that considers both cost and accuracy requirements, similar to how social media platforms might apply different verification methods based on user risk profiles."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "5brp570i",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "5brp570ic",
+          "_type": "span",
+          "marks": [],
+          "text": "A case study from the video demonstrates the importance of this approach. A financial services company reduced AI costs by 50% by implementing a model selection system that matched tasks to the most cost-effective API. By analyzing the cost-benefit of different models for specific use cases, they avoided overpaying for high-accuracy models on simple tasks. This technical solution, similar to how social media platforms apply different verification methods based on user behavior, highlights the need for task-specific model selection in cost-effective AI implementations."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "cwxghsu3",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "cwxghsu3c",
+          "_type": "span",
+          "marks": [],
+          "text": "Model Cost Variations Across Providers"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "9ip0a98o",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "9ip0a98oc",
+          "_type": "span",
+          "marks": [],
+          "text": "The video provides a detailed comparison of model costs across providers. For example, Meta's Llama 3 model is available for free in certain usage tiers but charges $0.005 per 1,000 tokens beyond that, while OpenAI's GPT-4o charges $0.03 per 1,000 tokens. This cost variation requires developers to implement model selection logic that considers both performance and cost, much like how social media platforms might choose different verification methods based on user risk levels. The technical solution involves building cost prediction models that factor in usage patterns, model accuracy requirements, and provider pricing structures to optimize AI implementation costs."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "t9es5wbb",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "t9es5wbbc",
+          "_type": "span",
+          "marks": [],
+          "text": "Implementing Cost-Effective AI Solutions with Compliance in Mind"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "9oy2bs5u",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "9oy2bs5uc",
+          "_type": "span",
+          "marks": [],
+          "text": "To implement cost-effective AI solutions while maintaining compliance, developers should adopt a multi-pronged approach. First, conduct comprehensive API cost audits before integration, analyzing not just base costs but also potential hidden charges. Second, implement tiered API access models that prioritize low-cost endpoints for routine tasks. Third, build dynamic routing systems that adapt to network conditions and user locations, similar to how social media platforms enforce age restrictions across different networks. Finally, develop cost monitoring dashboards that provide real-time visibility into all AI-related expenses, enabling proactive cost management."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "pul7bjkk",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "pul7bjkkc",
+          "_type": "span",
+          "marks": [],
+          "text": "Watch the original YouTube video to see how these technical parallels manifest in real-world implementations. The video provides detailed technical demonstrations of network-layer blocks and their implications for API cost management. By understanding these social media enforcement techniques, developers can create more efficient AI systems that balance compliance requirements with budget constraints. The key takeaway is that technical solutions for age verification and network restrictions provide valuable blueprints for managing AI API costs in complex, multi-platform environments."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "hrk9o5gv",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "hrk9o5gvc",
+          "_type": "span",
+          "marks": [],
+          "text": "For developers looking to optimize AI costs, start by mapping your API usage patterns against different pricing models. Use the cost audit techniques demonstrated in the video to identify potential hidden expenses. Implement tiered access models that mirror network-layer restrictions, and build dynamic routing systems that adapt to changing cost structures. By applying these strategies, you'll create AI implementations that are both cost-effective and compliant with regulatory requirements."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "hvbfll6p",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "hvbfll6pc",
+          "_type": "span",
+          "marks": [],
+          "text": "Watch the full video at https://www.youtube.com/watch?v=2jJeSgO_MGo to see technical demonstrations of these concepts in action. The video provides detailed insights into how network-level blocks can inform API cost management strategies, offering practical examples that directly apply to AI development. By understanding these technical parallels, you'll be better equipped to create AI systems that balance compliance, performance, and cost-effectiveness."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    }
+  ],
+  "category": "compliance",
+  "coverImage": {
+    "_type": "image",
+    "alt": "Bagaimana Pembatasan Umur Media Sosial Menentukan Manajemen Biaya API AI untuk Pengembang - featured illustration",
+    "asset": {
+      "_ref": "image-f92bd40b0c7732788682d5360b43e2c7f54fb75d-1344x768-png",
+      "_type": "reference"
+    }
+  },
+  "difficultyLevel": "intermediate",
+  "excerpt": "Artikel ini menguraikan bagaimana mekanisme pembatasan umur media sosial dapat menjadi metafora untuk strategi pengelolaan biaya token AI, dengan fokus pada kompatibilitas API, model harga tiered, dan kepatuhan regulasi teknologi. Baca artikel ini untuk memahami teknik optimasi biaya tanpa mengorbankan kepatuhan hukum.",
+  "focusKeyword": "AI token cost compliance",
+  "generatedByPipeline": true,
+  "language": "id",
+  "pipelineVersion": "v1.0",
+  "publishedAt": "2026-06-30T03:15:46.459Z",
+  "qaCheckedAt": "2026-06-30T03:19:47.869Z",
+  "qaFeedback": "metaDescription has 180 chars (needs 140-160), excerpt has 320 chars (needs < 300)",
+  "qaRetryCount": 0,
+  "qaScore": 82,
+  "readTime": 12,
+  "secondaryKeywords": [
+    "API pricing models",
+    "age verification tech",
+    "social media regulation"
+  ],
+  "seo": {
+    "seoDescription": "Pelajari bagaimana pembatasan umur media sosial menginspirasi manajemen biaya API AI yang efektif. Analisis model harga tiered, teknologi verifikasi usia, dan regulasi jaringan 5G.",
+    "seoTitle": "Strategi Biaya Token AI & Kepatuhan Regulasi"
+  },
+  "slug": {
+    "_type": "slug",
+    "current": "bagaimana-pembatasan-umur-media-sosial-menentukan-manajemen-biaya-api-ai-untuk-pengembang"
+  },
+  "sourceUrl": "https://www.youtube.com/watch?v=2jJeSgO_MGo",
+  "tags": [
+    "API pricing models",
+    "age verification tech",
+    "social media regulation"
+  ],
+  "title": "Bagaimana Pembatasan Umur Media Sosial Menentukan Manajemen Biaya API AI untuk Pengembang",
+  "translationKey": "00c2ae71-9545-4539-bee7-3ca5d9ce8611",
+  "videoId": "2jJeSgO_MGo"
+}

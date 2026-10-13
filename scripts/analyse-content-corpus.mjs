@@ -18,6 +18,9 @@
  *
  * ── Finding types (CSV `finding_type`), in output order ──
  *   PRICE_CLAIM       every currency figure in a body, with 100 chars each side.
+ *   PRICE_SCALE       a per-token or per-1,000-token figure whose per-1M
+ *                     equivalent is outside $0.05–$100, with or without a model
+ *                     nearby. status TOO_HIGH / TOO_LOW; score = $ per 1M.
  *                     status MISMATCH (high confidence, then low) → MATCH → UNVERIFIABLE.
  *   NEAR_DUP_BODY     same-language pairs, Jaccard of 5-word shingles > 0.70.
  *   NEAR_DUP_TITLE    any-language pairs, Jaccard of title words > 0.80.
@@ -78,6 +81,9 @@ const TITLE_PREFIX_MIN = 3;
 const SHINGLE = 5;
 const WINDOW = 100;
 const SHORT_WORDS = 400;
+/** Per-1M-token range a real price falls in; pricing.ts runs $0.20–$30. */
+const SCALE_MIN = 0.05;
+const SCALE_MAX = 100;
 
 if (!existsSync(CORPUS)) {
   console.error(`No corpus at ${CORPUS}. Run scripts/build-content-corpus.mjs first.`);
@@ -399,6 +405,20 @@ for (const post of posts) {
       context: contextAround(text, start, end),
     };
 
+    // Scale check, model or no model: a per-token or per-1K price whose
+    // per-million equivalent is nowhere near any real price. This is the class
+    // the model-matching check below cannot see.
+    if ((unit === 'per_token' || unit === 'per_thousand') && Number.isFinite(value)) {
+      const perMillion = unit === 'per_token' ? value * 1e6 : value * 1000;
+      if (perMillion < SCALE_MIN || perMillion > SCALE_MAX) {
+        add('PRICE_SCALE', post, {
+          ...base, status: perMillion > SCALE_MAX ? 'TOO_HIGH' : 'TOO_LOW', score: String(perMillion),
+          detail: `${unit === 'per_token' ? 'per token' : 'per 1,000 tokens'} = $${perMillion.toLocaleString('en', { maximumFractionDigits: 4 })} per 1M tokens, outside $${SCALE_MIN}–$${SCALE_MAX}`,
+          other_models_in_window: candidates.map(c => c.model.displayName).join('; '),
+        });
+      }
+    }
+
     if (!candidates.length) {
       add('PRICE_CLAIM', post, { ...base, status: 'UNVERIFIABLE', detail: 'no MODELS name within ±100 chars' });
       continue;
@@ -519,7 +539,7 @@ for (const post of posts) {
 }
 
 // ── Order ─────────────────────────────────────────────────────────────────
-const TYPE_ORDER = ['PRICE_CLAIM', 'NEAR_DUP_BODY', 'NEAR_DUP_TITLE', 'TITLE_PREFIX_GROUP', 'SAME_KEY_SAME_LANG', 'STALE_MARKER', 'STRUCTURE'];
+const TYPE_ORDER = ['PRICE_CLAIM', 'PRICE_SCALE', 'NEAR_DUP_BODY', 'NEAR_DUP_TITLE', 'TITLE_PREFIX_GROUP', 'SAME_KEY_SAME_LANG', 'STALE_MARKER', 'STRUCTURE'];
 const PRICE_ORDER = f => f.status === 'MISMATCH' ? (f.confidence === 'high' ? 0 : 1) : f.status === 'MATCH' ? 2 : 3;
 const LANG_ORDER = ['en', 'es', 'id', 'vi'];
 findings.sort((a, b) =>
@@ -584,6 +604,11 @@ md.push('## 1. Price claims', '');
 md.push(`${currencyFigures} currency figures found. `
   + `MISMATCH ${mismatches.length} (high confidence ${mismatches.filter(f => f.confidence === 'high').length}, low ${mismatches.filter(f => f.confidence === 'low').length}) · `
   + `MATCH ${count('PRICE_CLAIM', 'MATCH')} · UNVERIFIABLE ${count('PRICE_CLAIM', 'UNVERIFIABLE')}.`, '');
+const scale = findings.filter(f => f.finding_type === 'PRICE_SCALE');
+md.push(`Scale check (PRICE_SCALE): ${scale.length} per-token or per-1,000-token figures outside $${SCALE_MIN}–$${SCALE_MAX} per 1M tokens `
+  + `(${LANG_ORDER.map(l => `${l} ${scale.filter(f => f.post.language === l).length}`).join(', ')}; `
+  + `${scale.filter(f => f.status === 'TOO_HIGH').length} too high, ${scale.filter(f => f.status === 'TOO_LOW').length} too low), `
+  + `in ${new Set(scale.map(f => f.post._id)).size} posts. These are flagged whether or not a model is named nearby.`, '');
 md.push('Mismatches by model and locale:', '');
 md.push('| Model | en | es | id | vi | Total |', '|---|---|---|---|---|---|');
 for (const [model] of tally(mismatches, f => f.model_matched)) {
