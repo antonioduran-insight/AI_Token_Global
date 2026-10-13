@@ -86,7 +86,11 @@
       "models": "So sánh mô hình",
       "platform": "Nền tảng & Công cụ AI",
       "tutorials": "Hướng dẫn"
-    }
+    },
+    "toolsHeading": "Công cụ hữu ích",
+    "toolCalculatorDesc": "Ước tính chi phí của một prompt",
+    "toolCompareDesc": "Giá hiện tại theo từng mô hình",
+    "toolGuideDesc": "Bắt đầu tại đây nếu bạn mới làm quen với token"
   },
   "lang": {
     "selectLanguage": "Chọn ngôn ngữ",

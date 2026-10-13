@@ -86,7 +86,11 @@
       "models": "Perbandingan Model",
       "platform": "Platform & Alat AI",
       "tutorials": "Tutorial"
-    }
+    },
+    "toolsHeading": "Alat yang berguna",
+    "toolCalculatorDesc": "Hitung biaya sebuah prompt",
+    "toolCompareDesc": "Harga terkini, per model",
+    "toolGuideDesc": "Mulai di sini jika kamu baru mengenal token"
   },
   "lang": {
     "selectLanguage": "Pilih bahasa",
