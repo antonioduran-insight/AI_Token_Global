@@ -74,7 +74,11 @@ function getClient() {
   const projectId = import.meta.env.PUBLIC_SANITY_PROJECT_ID;
   const dataset = import.meta.env.PUBLIC_SANITY_DATASET ?? 'production';
   if (!projectId) return null;
-  return createClient({ projectId, dataset, apiVersion: '2024-01-01', useCdn: true });
+  // Builds read the live API, not the CDN. A Sanity write triggers an Amplify
+  // build within minutes, and the CDN can still be serving the response from
+  // before the write, so pages went out stale. Browser code, if any is ever
+  // added, keeps the CDN.
+  return createClient({ projectId, dataset, apiVersion: '2024-01-01', useCdn: !import.meta.env.SSR });
 }
 
 export async function getAllPosts(lang: string): Promise<SanityPost[]> {
