@@ -1,0 +1,471 @@
+{
+  "_createdAt": "2026-07-31T04:01:08Z",
+  "_id": "aitk-en-155",
+  "_rev": "sHwgBSKVSbbtAB6hpjHPWm",
+  "_type": "post",
+  "_updatedAt": "2026-07-31T04:48:55Z",
+  "articleNumber": 155,
+  "body": [
+    {
+      "_key": "b0",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b0s0",
+          "_type": "span",
+          "marks": [],
+          "text": "Anthropic released Claude Sonnet 5 on June 30, 2026, describing it as “the most agentic Sonnet model yet” — capable of planning its own steps, using tools like browsers and terminals, and completing tasks with a degree of autonomy that, just months ago, required a larger and more expensive model. If you've read our earlier pieces on Fable 5, Opus 4.8, and Opus 5, this piece will make clear exactly what gap Sonnet 5 fills — and there's a pricing detail with a hard deadline attached that's worth paying attention to right now."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b1",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b1s0",
+          "_type": "span",
+          "marks": [],
+          "text": "What Sonnet 5 Fills In: Agentic Capability Closes the Gap With Opus 4.8"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "b2",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b2s0",
+          "_type": "span",
+          "marks": [],
+          "text": "Anthropic's own framing is direct: for many developers, the agentic AI era — AI that can autonomously plan and execute tasks — effectively began with the Sonnet line, starting with Claude Sonnet 3.5, 3.6, and 3.7, which first showed what AI could do at coding and tool use. More recently, though, the most visible agentic gains have come from the Opus line instead. Sonnet 5's job is to close that gap — its performance now sits close to Opus 4.8's, at a lower price. Compared to its predecessor, Sonnet 4.6, Sonnet 5 shows substantive gains across reasoning, tool use, coding, and knowledge work — the key dimensions of agentic capability."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b3",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b3s0",
+          "_type": "span",
+          "marks": [],
+          "text": "Anthropic also provided concrete benchmark comparisons: on BrowseComp (an agentic search evaluation) and OSWorld-Verified (a computer-use evaluation), Sonnet 5 is a clear upgrade over Sonnet 4.6 across different “effort level” settings, and it covers a much wider cost-performance range than Sonnet 4.6 — at medium effort it already delivers noticeably better cost efficiency, and at higher effort levels, performance on some tasks can catch up to Opus 4.8. In other words, Anthropic is now letting users tune the effort levels of both Sonnet 5 and Opus 4.8 to find their own optimal balance between cost and performance, rather than having to commit to one model wholesale."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b4",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b4s0",
+          "_type": "span",
+          "marks": [],
+          "text": "Pricing: A Limited-Time Discount Through the End of August, Then a Step Up"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "b5",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b5s0",
+          "_type": "span",
+          "marks": [],
+          "text": "This is the single point this piece most wants you to walk away with. Sonnet 5 launched with a limited-time “introductory price”: $2 per million input tokens and $10 per million output tokens, through August 31, 2026; once that window closes, it reverts to standard pricing of $3 per million input tokens and $15 per million output tokens. For comparison, Opus 4.8 is priced at $5 per million input tokens and $25 per million output tokens — even at Sonnet 5's post-discount standard rate, it remains meaningfully cheaper than Opus 4.8, and the current introductory price is cheaper still."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b6",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b6s0",
+          "_type": "span",
+          "marks": [],
+          "text": "Sonnet 5 is now fully rolled out: it's the default model for Free and Pro plans, and Max, Team, and Enterprise users can access it too, alongside availability through Claude Code and the Claude Platform (API model ID `claude-sonnet-5`). Anthropic also raised rate limits across Chat, Cowork, Claude Code, and the Claude Platform at the same time, to accommodate the extra token usage that comes with users dialing up effort levels."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b7",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b7s0",
+          "_type": "span",
+          "marks": [],
+          "text": "Safety Evaluations: Safer Than Its Predecessor, Still Behind Opus 4.8 and Mythos Preview"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "b8",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b8s0",
+          "_type": "span",
+          "marks": [],
+          "text": "The safety evaluation results Anthropic disclosed point in a positive direction: Sonnet 5 shows improved safety in agentic contexts, is better at refusing malicious requests and resisting prompt-injection-style hijacking attempts, and has lower rates of hallucination and sycophancy than Sonnet 4.6. In Anthropic's own automated behavioral audit, Sonnet 5's overall rate of misaligned behavior is lower than Sonnet 4.6's — in other words, it's safer."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b9",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b9s0",
+          "_type": "span",
+          "marks": [],
+          "text": "But Anthropic also honestly disclosed a counterpoint: although safer than its predecessor, Sonnet 5's rate of misaligned behavior on this audit is still higher than that of the more capable Opus 4.8 “and Claude Mythos Preview.” Worth flagging explicitly here: the exact term Anthropic's official source uses in this context is “Claude Mythos Preview,” distinct from the “Mythos 5” name we covered in our earlier Opus 5 piece. Both terms refer to the same broad, internal, top-tier-model context at Anthropic, but this is the specific original wording used in this particular official source, and we've preserved it as-is rather than unifying or simplifying the terminology, to avoid conflating two distinct named references."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b10",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b10s0",
+          "_type": "span",
+          "marks": [],
+          "text": "On cyber capability, Anthropic states it did not deliberately train Sonnet 5 for cyber-offense tasks. It can handle some routine, harmless cybersecurity work, but on evaluations of potentially dangerous cyber skills — such as developing software vulnerability exploits — its performance is clearly behind models like Opus 4.8. Anthropic cites an evaluation developed with Mozilla that tests whether a model can develop a complete exploit for a Firefox browser vulnerability (tested against Firefox 147; all vulnerabilities involved were patched in version 148): neither Sonnet 4.6 nor Sonnet 5 succeeded in developing a complete, working exploit — both scored 0.0% success. Sonnet 5 was only slightly higher than Sonnet 4.6 on the “partial success” rate, which Anthropic attributes to a byproduct of the model's general intelligence gains rather than any deliberate cultivation of cyber capability."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b11",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b11s0",
+          "_type": "span",
+          "marks": [],
+          "text": "Precisely because Sonnet 5 is somewhat stronger at cyber capability than its predecessor, Anthropic enabled cybersecurity safeguards on it by default — the same set used on Opus 4.7 and 4.8, though looser than the one applied to Fable 5 (since Anthropic judges Sonnet 5's overall cyber risk to be relatively low, it doesn't need the stricter Fable 5-level safeguards that block a wider range of cyber-related tasks). Anthropic also notes one further detail: Sonnet 5 has been included in the Cyber Verification Program (CVP) — the same verified-institution-only channel we covered in our Opus 5 piece, through which vetted cybersecurity research organizations can access a version with fewer restrictions."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b12",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b12s0",
+          "_type": "span",
+          "marks": [],
+          "text": "What Partners Are Saying: Named Testimonials From the Official Release Page"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "b13",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b13s0",
+          "_type": "span",
+          "marks": [],
+          "text": "Anthropic's official release page lists around ten named partner testimonials. Worth being upfront about this first: the quotes below come from testimonials listed on Anthropic's own release page — official, curated customer feedback, not independent reporting or third-party evaluation from this site, and we want that to be clear. Two representative examples: Cursor engineer Neel Chotai describes asking Sonnet 5 to investigate a bug, and the model, without being specifically asked to, wrote a test that reproduced the issue, implemented a fix, and then stashed the fix itself to confirm the bug really was resolved by that change — the whole process completed in one pass. The other is GM's Yusuke Kaji, who describes having Sonnet 5 handle two tasks — updating Salesforce account tiers and sending a launch announcement to enterprise contacts — with the model completing both from start to finish on its own, work that used to routinely stall partway through."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b14",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b14s0",
+          "_type": "span",
+          "marks": [],
+          "text": "Worth noting: in the course of verifying this piece, we also observed that reception among YouTube reviews of Sonnet 5 is genuinely mixed, with no shortage of clearly negatively-titled reviews (questioning whether it “underdelivers,” or is even “more expensive and dumber”). This piece won't endorse either side, and won't take any unverified specific negative claim at face value — disclosing that “community reception is mixed” as a factual direction is meant to remind you: the testimonials and benchmark numbers on the official release page are genuine, but they are ultimately officially curated positive cases. Whether it actually works well for you is still best judged by testing it against your own tasks, rather than relying solely on official claims or any single review video."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b15",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b15s0",
+          "_type": "span",
+          "marks": [],
+          "text": "Practical Implications for Enterprise Procurement and Token Budgeting"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "b16",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b16s0",
+          "_type": "span",
+          "marks": [],
+          "text": "Pulling the points above together into a few practical judgment calls: First, if your current workflow already uses Opus 4.8 for tasks that don't necessarily need top-tier capability, Sonnet 5 is worth re-evaluating for that role — especially while the introductory price is still in effect, when the price gap is even larger. Second, the effort level is a dial worth actually tuning, not something to leave at the default and ship: running the same Sonnet 5 at different effort levels produces meaningfully different cost-performance outcomes, and dialing it up can even match Opus 4.8 on some tasks — meaning “which model to use” and “which effort level to use” are now two variables that need to be considered together. Third, the August 31 discount deadline is a real, time-bound cutoff — if your usage volume is large and you're evaluating whether to adopt Sonnet 5 now, it's more practical to factor that date into your procurement timeline than to discover the pricing has already changed after the fact."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b17",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b17s0",
+          "_type": "span",
+          "marks": [],
+          "text": "FAQ"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "b18",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b18s0",
+          "_type": "span",
+          "marks": [],
+          "text": "How should I choose between Claude Sonnet 5 and Claude Opus 4.8?"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "b19",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b19s0",
+          "_type": "span",
+          "marks": [],
+          "text": "Sonnet 5 is positioned to approach Opus 4.8's performance at a lower price, and tuning the effort level can even match Opus 4.8 on some tasks; however, Anthropic's own safety evaluations show Sonnet 5's overall rate of misaligned behavior is still slightly higher than Opus 4.8's. In practice, it's worth testing both against your own tasks first — reserve very high-complexity, risk-sensitive tasks for Opus 4.8, and try Sonnet 5 first for general agentic work."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b20",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b20s0",
+          "_type": "span",
+          "marks": [],
+          "text": "When does Sonnet 5's discounted pricing end?"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "b21",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b21s0",
+          "_type": "span",
+          "marks": [],
+          "text": "Per Anthropic's official announcement, the introductory price ($2 per million input tokens, $10 per million output tokens) runs through August 31, 2026, after which it reverts to standard pricing ($3 per million input tokens, $15 per million output tokens)."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b22",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b22s0",
+          "_type": "span",
+          "marks": [],
+          "text": "Is Sonnet 5 safe? How does it compare to Sonnet 4.6?"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "b23",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b23s0",
+          "_type": "span",
+          "marks": [],
+          "text": "Anthropic discloses that Sonnet 5's overall rate of misaligned behavior is lower than Sonnet 4.6's, and that in agentic contexts it's also better at refusing malicious requests and resisting prompt-injection attacks, with lower rates of hallucination and sycophancy. That said, Anthropic also discloses that this metric remains slightly higher than Opus 4.8's and Claude Mythos Preview's — it isn't superior to every model across the board."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b24",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b24s0",
+          "_type": "span",
+          "marks": [],
+          "text": "Is Sonnet 5's cyber-offense capability strong?"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "b25",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b25s0",
+          "_type": "span",
+          "marks": [],
+          "text": "Anthropic states it did not deliberately train Sonnet 5 for cyber-offense tasks. In the exploit-development evaluation developed with Mozilla, Sonnet 5 failed to develop a complete, working exploit (0.0% success rate, the same as its predecessor), and its cyber capability is clearly lower than that of models like Opus 4.8."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b26",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b26s0",
+          "_type": "span",
+          "marks": [],
+          "text": "Is every review of Sonnet 5 positive?"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "b27",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b27s0",
+          "_type": "span",
+          "marks": [],
+          "text": "No. The named customer testimonials on the official release page skew positive, but a number of independent review videos on YouTube carry clearly negative titles. This piece doesn't take any unverified specific negative claim at face value, but we want to be upfront that real-world experience varies by user — it's worth testing against your own tasks rather than relying solely on official claims or any single review."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b28",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b28s0",
+          "_type": "span",
+          "marks": [],
+          "text": "Source"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "b29",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b29s0",
+          "_type": "span",
+          "marks": [],
+          "text": "This piece's topic was triggered by a YouTube video, “Claude Sonnet 5 | First impressions” (channel: Arena AI, published shortly after Anthropic's official announcement). The writer did not watch this video or obtain its transcript, so this piece contains no retelling of anything from the video's footage or narration. This piece also did not use an automated view-count scraping pipeline for this topic selection, so no view count is reported here rather than substituting an estimate. Every specific fact in this piece — pricing, availability, benchmark comparisons, safety evaluation results, cyber capability evaluations, and customer testimonials — was verified directly against Anthropic's official release post (anthropic.com/news/claude-sonnet-5), by directly retrieving and checking the full raw HTML of the page, not by relying on the video or any secondhand account. The customer testimonials quoted are named partner testimonials listed on the official release page itself, not independent interviews conducted by this site."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    }
+  ],
+  "category": "models",
+  "coverImage": {
+    "_type": "image",
+    "alt": "What Is Claude Sonnet 5? Introductory Pricing Ends August 31, Closing In on Opus 4.8's “Best Tool Use Yet” - featured illustration",
+    "asset": {
+      "_ref": "image-339966da0f2376497631b49cf50f6800d12ffde4-1376x768-png",
+      "_type": "reference"
+    }
+  },
+  "difficultyLevel": "intermediate",
+  "excerpt": "Anthropic released Claude Sonnet 5 on June 30, 2026, describing it as “the most agentic Sonnet model yet.” Its performance now sits close to Opus 4.8's, at a lower price, and it launched with a limited-time introductory price that runs only through August 31, 2026. This piece covers what gap Sonnet 5 fills, its safety evaluation results, and that hard-deadline pricing detail.",
+  "focusKeyword": "Claude Sonnet 5",
+  "generatedByPipeline": true,
+  "language": "en",
+  "pipelineVersion": "v1.0",
+  "publishedAt": "2026-07-31T05:00:00.000Z",
+  "qaCheckedAt": "2026-07-31T05:00:00.000Z",
+  "qaScore": 90,
+  "readTime": 7,
+  "secondaryKeywords": [
+    "Claude Sonnet 5 pricing",
+    "Claude Sonnet 5 vs Opus 4.8",
+    "Claude Sonnet 5 release date"
+  ],
+  "seo": {
+    "seoDescription": "Claude Sonnet 5 closes in on Opus 4.8 at a lower price, with introductory pricing through August 31, 2026. Here's what changed from Sonnet 4.6, the safety evaluation results, and what enterprises should watch for.",
+    "seoTitle": "What Is Claude Sonnet 5? Pricing Deadline, Benchmarks, and Safety Evaluations"
+  },
+  "slug": {
+    "_type": "slug",
+    "current": "what-is-claude-sonnet-5"
+  },
+  "sourceUrl": "https://www.youtube.com/watch?v=hh2WLKa7uhg",
+  "tags": [
+    "Claude Sonnet 5",
+    "Anthropic",
+    "Claude Opus 4.8",
+    "AI model pricing",
+    "Claude Mythos Preview"
+  ],
+  "title": "What Is Claude Sonnet 5? Introductory Pricing Ends August 31, Closing In on Opus 4.8's “Best Tool Use Yet”"
+}
