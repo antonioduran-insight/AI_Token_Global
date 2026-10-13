@@ -1,0 +1,414 @@
+{
+  "_createdAt": "2026-06-04T11:36:24Z",
+  "_id": "uomub2hTG94T3nqbFWam48-vi",
+  "_rev": "HfhymUJDXQZSCW75nmOLH8",
+  "_type": "post",
+  "_updatedAt": "2026-06-22T10:08:01Z",
+  "articleNumber": 7,
+  "body": [
+    {
+      "_key": "ygcw4dt5",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "ygcw4dt5c",
+          "_type": "span",
+          "marks": [],
+          "text": "Khi nói đến công nghệ AI, việc hiểu rõ sự khác biệt giữa token AI và điểm (points) là rất quan trọng. Thuật ngữ 'token AI' chỉ một đơn vị đo lường cụ thể được sử dụng trong các mô hình và nền tảng AI khác nhau. Trong khi đó, 'points' hay 'credits' là các đại diện thương mại mà các nền tảng dùng để đóng gói mức giá của mình. Bài viết này nhằm cung cấp một so sánh toàn diện giữa hai khái niệm này, khám phá ý nghĩa kỹ thuật và thương mại của chúng đối với việc định giá AI."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "j240x1ig",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "j240x1igc",
+          "_type": "span",
+          "marks": [],
+          "text": "Tìm Hiểu Về Token AI"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "c05zd14x",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "c05zd14xc",
+          "_type": "span",
+          "marks": [],
+          "text": "Token AI là thước đo kỹ thuật ở tầng nền được sử dụng trong nhiều mô hình AI khác nhau. Chúng đại diện cho đơn vị tính toán hoặc năng lực xử lý cơ bản trong một hệ thống AI. Quá trình tokenization bao gồm việc chia nhỏ các tác vụ phức tạp thành những đơn vị nhỏ hơn, dễ quản lý hơn để mô hình AI có thể thực thi. Cách tiếp cận này giúp xử lý các tập dữ liệu lớn một cách hiệu quả và chính xác hơn."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "y6est13k",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "y6est13kc",
+          "_type": "span",
+          "marks": [],
+          "text": "Ví dụ, hãy xem xét một mô hình dịch thuật ngôn ngữ sử dụng token để đại diện cho các từ hoặc cụm từ trong câu. Mô hình xử lý từng token theo trình tự, tạo ra đầu ra đã dịch dựa trên cơ chế hoạt động nội tại của nó. Token AI là yếu tố thiết yếu để hiểu cách các mô hình AI vận hành ở tầng cơ bản nhất."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "a7ou6mce",
+      "_type": "image",
+      "alt": "Hình minh họa phần 1",
+      "asset": {
+        "_ref": "image-62331a6e6369151ad377004cdd63984e1ab3f31e-1344x768-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "ahsx976c",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "ahsx976cc",
+          "_type": "span",
+          "marks": [],
+          "text": "Points và Credits: Đại Diện Thương Mại"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "jmg4qilp",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "jmg4qilpc",
+          "_type": "span",
+          "marks": [],
+          "text": "Ngược lại, points hay credits là các đại diện thương mại mà các nền tảng sử dụng để đóng gói mức giá của mình. Những đơn vị này thường được dùng để đơn giản hóa quá trình thanh toán cho người dùng và mang lại sự linh hoạt hơn trong các gói giá. Points có thể được đổi lấy các dịch vụ hoặc tính năng cụ thể trong một nền tảng."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "u74lkogz",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "u74lkogzc",
+          "_type": "span",
+          "marks": [],
+          "text": "Ví dụ, hãy xem xét một nền tảng AI trên nền tảng đám mây cung cấp hệ thống giá theo bậc dựa trên points. Người dùng có thể mua points trước và dùng chúng để truy cập các mô hình AI và dịch vụ khác nhau trong nền tảng. Hệ thống points mang lại cách tiếp cận thân thiện hơn với người dùng trong việc định giá, giúp các lập trình viên dễ ước tính chi phí hơn."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "ymf6uzm2",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "ymf6uzm2c",
+          "_type": "span",
+          "marks": [],
+          "text": "Tuy nhiên, cần lưu ý rằng points hay credits thường gắn liền với các thỏa thuận thương mại cụ thể giữa nhà cung cấp nền tảng và khách hàng. Điều này có nghĩa là người dùng có thể không có toàn quyền kiểm soát cách phân bổ hoặc sử dụng points của mình."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "fcl0u72f",
+      "_type": "image",
+      "alt": "Hình minh họa phần 2",
+      "asset": {
+        "_ref": "image-aa8fafc83947afa42b1023e38d969598e77516c7-1344x768-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "zymbvhsk",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "zymbvhskc",
+          "_type": "span",
+          "marks": [],
+          "text": "Tokenization: Cách Tiếp Cận Độc Lập Với Nền Tảng"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "s5q1596x",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "s5q1596xc",
+          "_type": "span",
+          "marks": [],
+          "text": "Một trong những điểm khác biệt chính giữa token AI và points là cách tiếp cận tokenization. Các nền tảng sử dụng points hay credits thường áp dụng sơ đồ tokenization độc quyền, điều này có thể hạn chế tính linh hoạt và khả năng chuyển đổi giữa các nền tảng khác nhau."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "ok9ld14n",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "ok9ld14nc",
+          "_type": "span",
+          "marks": [],
+          "text": "Ngược lại, token AI thường không phụ thuộc vào nền tảng cụ thể, cho phép khả năng tương tác tốt hơn giữa các mô hình và nền tảng khác nhau. Điều này giúp bạn dễ dàng di chuyển dự án và dữ liệu của mình giữa các nền tảng khác nhau mà không bị ràng buộc bởi một thỏa thuận thương mại cụ thể nào."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "hwr4rb5c",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "hwr4rb5cc",
+          "_type": "span",
+          "marks": [],
+          "text": "Sự Khác Biệt Về Tokenization Giữa Các Nền Tảng"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "5jyzu2b4",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "5jyzu2b4c",
+          "_type": "span",
+          "marks": [],
+          "text": "Cần lưu ý rằng tokenization có thể khác nhau đáng kể giữa các mô hình và nền tảng AI. Một số nền tảng có thể dùng token tùy chỉnh hoặc sơ đồ độc quyền, trong khi một số khác lại áp dụng các giao thức tokenization tiêu chuẩn."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "chue0cdt",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "chue0cdtc",
+          "_type": "span",
+          "marks": [],
+          "text": "Ví dụ, hãy xem xét một mô hình dịch thuật ngôn ngữ sử dụng sơ đồ tokenization tùy chỉnh dựa trên kiến trúc nội tại của nó. Cách tiếp cận này có thể giúp tăng tốc độ xử lý nhưng lại hạn chế khả năng chuyển đổi dữ liệu sang các nền tảng khác."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "4a9e9th8",
+      "_type": "image",
+      "alt": "Hình minh họa phần 3",
+      "asset": {
+        "_ref": "image-ffc5f6ac9ecf5301a311ae5f7993d8c1bed4d802-1344x768-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "yzsz91vn",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "yzsz91vnc",
+          "_type": "span",
+          "marks": [],
+          "text": "Tính Minh Bạch và Khả Năng Dự Đoán Trong Định Giá"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "cysr108y",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "cysr108yc",
+          "_type": "span",
+          "marks": [],
+          "text": "Một khía cạnh quan trọng khác cần xem xét là tính minh bạch và khả năng dự đoán trong định giá. Các nền tảng sử dụng points hay credits thường cung cấp cái nhìn khá mờ đục về cấu trúc giá của mình, khiến người dùng khó ước tính chi phí."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "0upwlv4h",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "0upwlv4hc",
+          "_type": "span",
+          "marks": [],
+          "text": "Ngược lại, token AI mang lại sự minh bạch và khả năng dự đoán cao hơn trong định giá. Bạn có thể hiểu rõ hơn về chi phí kỹ thuật cơ bản liên quan đến việc xử lý các tập dữ liệu lớn và tối ưu hóa dự án của mình cho phù hợp."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "wmkifzil",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "wmkifzilc",
+          "_type": "span",
+          "marks": [],
+          "text": "Lựa Chọn Mô Hình Định Giá Phù Hợp"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "urd197dr",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "urd197drc",
+          "_type": "span",
+          "marks": [],
+          "text": "Cuối cùng, sự lựa chọn giữa token AI và points phụ thuộc vào nhu cầu của người dùng và chuyên môn kỹ thuật. Các nền tảng cung cấp cả hai tùy chọn nên cân nhắc kỹ về cấu trúc giá để đảm bảo phù hợp với kỳ vọng của người dùng."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "ughn4j3v",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "ughn4j3vc",
+          "_type": "span",
+          "marks": [],
+          "text": "Ví dụ, hãy xem xét một lập trình viên cần kiểm soát tốt hơn chi phí dự án và khả năng chuyển đổi dữ liệu. Trong trường hợp này, một nền tảng dựa trên token AI có thể phù hợp hơn nhờ tính minh bạch và khả năng dự đoán trong định giá."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "x0kx4x7r",
+      "_type": "image",
+      "alt": "Hình minh họa phần 4",
+      "asset": {
+        "_ref": "image-ba1acfe11bc9a95c4a53d1ece78b1bd2b6db0425-1344x768-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "7sw70qb0",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "7sw70qb0c",
+          "_type": "span",
+          "marks": [],
+          "text": "Kết Luận: Điều Hướng Sự Phức Tạp Của Việc Định Giá AI"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "n2tmnm6s",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "n2tmnm6sc",
+          "_type": "span",
+          "marks": [],
+          "text": "Tóm lại, việc hiểu rõ sự khác biệt giữa token AI và points là chìa khóa để điều hướng sự phức tạp của việc định giá AI. Bằng cách nắm bắt ý nghĩa kỹ thuật của tokenization và các đại diện thương mại mà các nền tảng sử dụng, bạn có thể đưa ra những quyết định sáng suốt hơn về chi phí dự án và khả năng chuyển đổi dữ liệu."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "uu5m6lbu",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "uu5m6lbuc",
+          "_type": "span",
+          "marks": [],
+          "text": "Hy vọng bài viết này đã cung cấp một so sánh toàn diện giữa token AI và points, giúp các lập trình viên lựa chọn mô hình định giá phù hợp với nhu cầu của mình. Hãy nhớ rằng tính minh bạch và khả năng dự đoán trong định giá là yếu tố thiết yếu để tối ưu hóa dự án và đạt được kết quả mong muốn trong công nghệ AI."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    }
+  ],
+  "category": "fundamentals",
+  "coverImage": {
+    "_type": "image",
+    "alt": "Sự Khác Biệt Giữa Token AI và Points",
+    "asset": {
+      "_ref": "image-9379d39d953ee3681bd2d70d1000ed9430c61f19-1344x768-png",
+      "_type": "reference"
+    }
+  },
+  "difficultyLevel": "beginner",
+  "excerpt": "Tìm hiểu sự khác biệt giữa token AI và points trong công nghệ AI, bao gồm ý nghĩa kỹ thuật và thương mại của chúng.",
+  "focusKeyword": "AI Token vs Points pricing comparison",
+  "generatedByPipeline": true,
+  "language": "vi",
+  "pipelineVersion": "v1.0",
+  "publishedAt": "2026-06-04T11:36:24.293Z",
+  "qaCheckedAt": "2026-06-04T12:04:06.153Z",
+  "qaFeedback": "metaDescription has 126 chars (needs 140-160)",
+  "qaRetryCount": 0,
+  "qaScore": 88,
+  "readTime": 12,
+  "secondaryKeywords": [
+    "AI Token",
+    "points",
+    "credits",
+    "tokenization",
+    "pricing"
+  ],
+  "seo": {
+    "seoDescription": "Tìm hiểu sự khác biệt giữa token AI và points, bao gồm ý nghĩa kỹ thuật và thương mại của chúng đối với việc định giá AI.",
+    "seoTitle": "Token AI vs Points: So Sánh Kỹ Thuật và Thương Mại"
+  },
+  "slug": {
+    "_type": "slug",
+    "current": "ai-token-vs-points-pricing-comparison"
+  },
+  "sourceUrl": "https://www.aitoken.com.tw/post/ai-token-vs-points",
+  "tags": [
+    "AI Token",
+    "points",
+    "credits",
+    "tokenization",
+    "pricing"
+  ],
+  "title": "Sự Khác Biệt Giữa Token AI và Points",
+  "translationKey": "69f11a21-5798-4617-8e95-8d513446d402"
+}

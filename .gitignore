@@ -64,3 +64,6 @@ audits/*/titles-meta-dryrun.md
 
 # dry-run logs from scripts/patch-per-token-phase1.mjs (the --apply log is committed)
 audits/*/per-token-phase1-dryrun.md
+
+# dry-run logs from scripts/patch-retire-not-indexed.mjs (the --apply log is committed)
+audits/*/retire-dryrun.md

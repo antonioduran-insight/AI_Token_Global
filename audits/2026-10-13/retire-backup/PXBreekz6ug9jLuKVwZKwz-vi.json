@@ -1,0 +1,325 @@
+{
+  "_createdAt": "2026-06-04T16:06:20Z",
+  "_id": "PXBreekz6ug9jLuKVwZKwz-vi",
+  "_rev": "HGC0i0hV3qn3DmfUOXsBnT",
+  "_type": "post",
+  "_updatedAt": "2026-06-23T00:31:41Z",
+  "articleNumber": 46,
+  "body": [
+    {
+      "_key": "kh1i0hgc",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "kh1i0hgcc",
+          "_type": "span",
+          "marks": [],
+          "text": "Khi tích hợp trí tuệ nhân tạo (AI) vào các dự án của bạn, một trong những khía cạnh quan trọng nhất là hiểu cấu trúc giá của các API AI. Chi phí sử dụng một mô hình AI có thể được chia thành hai thành phần chính: phí token và chi phí tính năng. Trong bài viết này, chúng ta sẽ đi sâu vào chi tiết từng thành phần và khám phá cách chúng đóng góp vào tổng chi phí khi sử dụng một API AI. Từ đó, bạn sẽ có thể đưa ra quyết định sáng suốt hơn cho các dự án machine learning của mình và chọn mô hình AI phù hợp nhất với nhu cầu."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "em7hgitl",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "em7hgitlc",
+          "_type": "span",
+          "marks": [],
+          "text": "Phí Token: Chi Phí Xử Lý Của Mô Hình"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "fsz5lttj",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "fsz5lttjc",
+          "_type": "span",
+          "marks": [],
+          "text": "Phí token là loại chi phí liên quan trực tiếp đến sức mạnh xử lý mà mô hình AI cần dùng. Các khoản phí này thường được tính theo từng token, trong đó mỗi token đại diện cho một đơn vị sức mạnh xử lý hoặc tài nguyên tính toán. Số lượng token mà một mô hình AI tiêu thụ phụ thuộc vào nhiều yếu tố như độ phức tạp của tác vụ, kích thước dữ liệu đầu vào và loại thuật toán machine learning được sử dụng."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "hflkipka",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "hflkipkac",
+          "_type": "span",
+          "marks": [],
+          "text": "Ví dụ, hãy xem xét tình huống bạn đang dùng một mô hình ngôn ngữ để tạo văn bản. Mô hình tiêu thụ 10 token cho mỗi 100 ký tự được xử lý. Nếu văn bản đầu vào của bạn dài 1.000 ký tự, tổng số token tiêu thụ sẽ là 10 x 10 = 100 token. Giả sử phí token là $0.01 mỗi token, chi phí xử lý đoạn văn bản này sẽ là $1."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "s29v7uql",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "s29v7uqlc",
+          "_type": "span",
+          "marks": [],
+          "text": "Tính Toán Token: Hướng Dẫn Từng Bước"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "3ewjoqqn",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "3ewjoqqnc",
+          "_type": "span",
+          "marks": [],
+          "text": "Để tính số lượng token mà một mô hình AI tiêu thụ, bạn cần xem xét một số yếu tố như kích thước dữ liệu đầu vào, độ phức tạp của tác vụ và yêu cầu về thuật toán. Đây là hướng dẫn từng bước giúp bạn ước tính mức tiêu thụ token cho dự án của mình:"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "f4hrin4m",
+      "_type": "imagePrompt",
+      "text": "Hình minh họa đếm token cho thấy văn bản được chia thành các đoạn đánh số"
+    },
+    {
+      "_key": "978dzr6v",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "978dzr6vc",
+          "_type": "span",
+          "marks": [],
+          "text": "Chi Phí Tính Năng: Dịch Vụ và Tính Năng Bổ Sung"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "6jqkpnom",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "6jqkpnomc",
+          "_type": "span",
+          "marks": [],
+          "text": "Ngoài phí token, chi phí tính năng còn đề cập đến các dịch vụ và tính năng bổ sung do API AI cung cấp. Các khoản chi phí này có thể dao động đáng kể tùy thuộc vào gói dịch vụ cụ thể, nhưng những ví dụ phổ biến bao gồm tìm kiếm web, caching, lưu trữ và xác thực."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "fa0lvhuz",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "fa0lvhuzc",
+          "_type": "span",
+          "marks": [],
+          "text": "Chẳng hạn, một mô hình AI phổ biến có thể cung cấp dịch vụ dịch ngôn ngữ theo thời gian thực như một phần trong gói tính năng của nó. Dịch vụ này có thể phát sinh thêm chi phí theo từng token hoặc thậm chí là phí cố định cho mỗi 1.000 token được xử lý."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "0nb240ix",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "0nb240ixc",
+          "_type": "span",
+          "marks": [],
+          "text": "Phân Tích Chi Phí Tính Năng"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "utwjpngb",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "utwjpngbc",
+          "_type": "span",
+          "marks": [],
+          "text": "Để so sánh chính xác các mô hình AI và ước tính tổng chi phí, bạn cần xem xét cả phí token lẫn chi phí tính năng. Đây là cách hai thành phần này cùng đóng góp vào tổng chi phí:"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "2atqohei",
+      "_type": "imagePrompt",
+      "text": "So sánh các mức giá theo bậc cho thấy chi phí mỗi token của các mô hình AI khác nhau"
+    },
+    {
+      "_key": "g8pfmq30",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "g8pfmq30c",
+          "_type": "span",
+          "marks": [],
+          "text": "So Sánh Các Mô Hình AI: Phí Token vs Chi Phí Tính Năng"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "doruw92e",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "doruw92ec",
+          "_type": "span",
+          "marks": [],
+          "text": "Khi đánh giá chi phí của các mô hình AI khác nhau, điều quan trọng là phải tách biệt phí token với chi phí tính năng. Điều này sẽ giúp bạn đưa ra quyết định sáng suốt về mô hình nào phù hợp nhất với yêu cầu và ngân sách của dự án."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "ac3sg0c7",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "ac3sg0c7c",
+          "_type": "span",
+          "marks": [],
+          "text": "Ví dụ, hãy xem xét hai mô hình AI: Mô hình A và Mô hình B. Mô hình A có phí token thấp hơn nhưng tính thêm phí cho dịch vụ tìm kiếm web, trong khi Mô hình B cung cấp tìm kiếm web miễn phí nhưng phí token cao hơn. Bằng cách so sánh các chi phí này và cân nhắc nhu cầu dự án của bạn, bạn có thể chọn giải pháp tiết kiệm chi phí nhất."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "9t6hyy1t",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "9t6hyy1tc",
+          "_type": "span",
+          "marks": [],
+          "text": "Dịch Vụ Proxy: Một Lựa Chọn Thay Thế cho API AI"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "c6tu6hlz",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "c6tu6hlzc",
+          "_type": "span",
+          "marks": [],
+          "text": "Một lựa chọn khác để truy cập các mô hình AI là thông qua dịch vụ proxy. Các trung gian này mang lại nhiều lợi ích, bao gồm khả năng mở rộng được cải thiện, chi phí giảm và bảo mật được tăng cường."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "y5a5cp8i",
+      "_type": "imagePrompt",
+      "text": "Sơ đồ định tuyến máy chủ proxy với luồng trung gian máy khách-máy chủ"
+    },
+    {
+      "_key": "lytccug9",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "lytccug9c",
+          "_type": "span",
+          "marks": [],
+          "text": "Kết Luận: So Sánh Chi Phí Chính Xác Để Chọn Mô Hình AI"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "m2yl8d19",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "m2yl8d19c",
+          "_type": "span",
+          "marks": [],
+          "text": "Tóm lại, việc hiểu rõ sự phức tạp trong cách định giá API AI là rất quan trọng để đưa ra các quyết định sáng suốt cho các dự án machine learning của bạn. Bằng cách tách phí token khỏi chi phí tính năng và so sánh các khoản chi phí này giữa các mô hình khác nhau, bạn sẽ có thể chọn mô hình AI phù hợp nhất với nhu cầu của mình."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "v6l8lm8o",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "v6l8lm8oc",
+          "_type": "span",
+          "marks": [],
+          "text": "Hãy nhớ rằng, so sánh chi phí chính xác đòi hỏi phải hiểu sâu cả về phí token lẫn chi phí tính năng. Hãy dành thời gian nghiên cứu và đánh giá từng thành phần trước khi đưa ra quyết định phù hợp với mục tiêu và ngân sách dự án của bạn."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    }
+  ],
+  "category": "pricing",
+  "difficultyLevel": "intermediate",
+  "excerpt": "Giải mã sự phức tạp trong cách định giá API AI để đưa ra quyết định sáng suốt hơn cho các dự án machine learning của bạn.",
+  "focusKeyword": "AI API pricing",
+  "generatedByPipeline": true,
+  "language": "vi",
+  "pipelineVersion": "v1.0",
+  "publishedAt": "2026-06-04T16:06:20.022Z",
+  "qaCheckedAt": "2026-06-04T16:34:45.996Z",
+  "qaFeedback": "metaDescription has 138 chars (needs 140-160), metaTitle has 62 chars (needs <= 60), ComfyUI not available — image pending, SEO score insufficient",
+  "qaRetryCount": 0,
+  "qaScore": 73,
+  "readTime": 12,
+  "secondaryKeywords": [
+    "token fees",
+    "functionality costs",
+    "AI model pricing"
+  ],
+  "seo": {
+    "seoDescription": "Tìm hiểu cách so sánh chính xác các mô hình AI bằng cách tách phí token khỏi chi phí tính năng. Nhận thông tin chi tiết dựa trên dữ liệu về giá API AI.",
+    "seoTitle": "Giá API AI: Hiểu Về Phí Token & Chi Phí Tính Năng"
+  },
+  "slug": {
+    "_type": "slug",
+    "current": "ai-api-pricing-token-fees-vs-functionality-costs"
+  },
+  "sourceUrl": "https://www.aitoken.com.tw/post/how-to-read-ai-api-pricing",
+  "tags": [
+    "token fees",
+    "functionality costs",
+    "AI model pricing"
+  ],
+  "title": "Tìm Hiểu Giá API AI: Phí Token vs Chi Phí Tính Năng",
+  "translationKey": "123ad3aa-f32b-413b-beda-54f989b0bce0"
+}

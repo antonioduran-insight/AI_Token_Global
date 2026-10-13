@@ -1,0 +1,475 @@
+{
+  "_createdAt": "2026-06-04T20:34:08Z",
+  "_id": "5bTmGH4csQ2ze7LA77xHSp",
+  "_rev": "dShP6JdGzwBHy3qr2Aw43H",
+  "_type": "post",
+  "_updatedAt": "2026-06-04T21:01:02Z",
+  "articleNumber": 88,
+  "body": [
+    {
+      "_key": "xr8cajiv",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "xr8cajivc",
+          "_type": "span",
+          "marks": [],
+          "text": "Choosing AI models solely based on their ranking or price can lead to subpar performance, wasted resources, and missed opportunities. A well-designed AI model should be chosen with a purpose in mind, taking into account the specific task or goal you want to achieve. This approach is often referred to as the accuracy-first approach, prioritizing precision over cost or complexity."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "5d0r8tyd",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "5d0r8tydc",
+          "_type": "span",
+          "marks": [],
+          "text": "Understanding Your Task or Purpose"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "8dxvqtzy",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "8dxvqtzyc",
+          "_type": "span",
+          "marks": [],
+          "text": "Before selecting an AI model, you need to define your task or purpose. What do you want the AI to achieve? Is it a simple classification task, such as image recognition, or a more complex task like natural language processing? Identifying your goal will help you narrow down the list of potential AI models and make a more informed decision."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "fwljf8yg",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "fwljf8ygc",
+          "_type": "span",
+          "marks": [],
+          "text": "Let's consider an example. Suppose you're building a chatbot for customer support, and you want it to understand user queries and respond accordingly. You need to choose an AI model that excels in natural language processing, specifically in understanding context and intent."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "ln3ehuyv",
+      "_type": "image",
+      "alt": "Section image 1",
+      "asset": {
+        "_ref": "image-35bc1a9772975f4f6d78ec77cc09122d425c6fd7-1344x768-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "isuwpd67",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "isuwpd67c",
+          "_type": "span",
+          "marks": [],
+          "text": "The 4-Class Categorization System"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "65zwne80",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "65zwne80c",
+          "_type": "span",
+          "marks": [],
+          "text": "To simplify the selection process, we can categorize AI models into four classes based on their primary function: simple high-frequency tasks, long content output tasks, high-reasoning value tasks, and enterprise workflow tasks."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "j33q6rtd",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "j33q6rtdc",
+          "_type": "span",
+          "marks": [],
+          "text": "Simple high-frequency tasks involve repetitive, low-complexity operations such as text classification or object detection. These tasks require AI models that can process large amounts of data quickly and accurately."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "0wfljub2",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "0wfljub2c",
+          "_type": "span",
+          "marks": [],
+          "text": "Example: Text Classification"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "yepyrt5j",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "yepyrt5jc",
+          "_type": "span",
+          "marks": [],
+          "text": "For instance, suppose you're building a spam filter for emails. You need an AI model that can classify incoming emails as either spam or non-spam with high accuracy. In this case, you would choose an AI model optimized for simple high-frequency tasks."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "qq5xnrqx",
+      "_type": "image",
+      "alt": "Section image 2",
+      "asset": {
+        "_ref": "image-6ef10e2277813013fcdb5fbffff3cf9519e8d830-1344x768-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "icdq94so",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "icdq94soc",
+          "_type": "span",
+          "marks": [],
+          "text": "Long Content Output Tasks"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "ztc0ta2i",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "ztc0ta2ic",
+          "_type": "span",
+          "marks": [],
+          "text": "Long content output tasks involve generating text, such as article summaries or product descriptions. These tasks require AI models that can process and understand complex language patterns."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "dik6nas1",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "dik6nas1c",
+          "_type": "span",
+          "marks": [],
+          "text": "For example, suppose you're building a content generation platform for blog posts. You need an AI model that can write engaging and informative articles on various topics. In this case, you would choose an AI model optimized for long content output tasks."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "glofttg3",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "glofttg3c",
+          "_type": "span",
+          "marks": [],
+          "text": "Example: Article Summarization"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "lp5z5dj7",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "lp5z5dj7c",
+          "_type": "span",
+          "marks": [],
+          "text": "Let's say you want the AI to summarize a 500-word article into a concise 100-word summary. You would need an AI model that can understand complex language patterns and generate coherent text."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "1badr28a",
+      "_type": "image",
+      "alt": "Section image 3",
+      "asset": {
+        "_ref": "image-2b776ac6b6a23e9bac6618f67fb9a6bdcdfdc8b6-1344x768-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "kb4tw8ru",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "kb4tw8ruc",
+          "_type": "span",
+          "marks": [],
+          "text": "High-Reasoning Value Tasks"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "5x2szc35",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "5x2szc35c",
+          "_type": "span",
+          "marks": [],
+          "text": "High-reasoning value tasks involve complex decision-making, such as predicting stock prices or diagnosing medical conditions. These tasks require AI models that can analyze vast amounts of data and make informed decisions."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "s0crgohd",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "s0crgohdc",
+          "_type": "span",
+          "marks": [],
+          "text": "For instance, suppose you're building a predictive analytics platform for stock market predictions. You need an AI model that can analyze historical data and make accurate predictions about future market trends."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "wosn7iye",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "wosn7iyec",
+          "_type": "span",
+          "marks": [],
+          "text": "Example: Predictive Analytics"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "7fhp7n24",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "7fhp7n24c",
+          "_type": "span",
+          "marks": [],
+          "text": "In this case, you would choose an AI model optimized for high-reasoning value tasks, which can process and analyze large datasets to make informed decisions."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "ynky5tpn",
+      "_type": "image",
+      "alt": "Section image 4",
+      "asset": {
+        "_ref": "image-0b7919ff21337ada52e1059a072426206bb2e41b-1344x768-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "gp9deuua",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "gp9deuuac",
+          "_type": "span",
+          "marks": [],
+          "text": "Enterprise Workflow Tasks"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "nfj41jkr",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "nfj41jkrc",
+          "_type": "span",
+          "marks": [],
+          "text": "Enterprise workflow tasks involve complex processes, such as supply chain management or customer relationship management. These tasks require AI models that can integrate with existing systems and provide actionable insights."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "p2cghqva",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "p2cghqvac",
+          "_type": "span",
+          "marks": [],
+          "text": "For example, suppose you're building an enterprise resource planning (ERP) system for a manufacturing company. You need an AI model that can integrate with existing systems and provide real-time insights on production levels and inventory management."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "pj3bcg8s",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "pj3bcg8sc",
+          "_type": "span",
+          "marks": [],
+          "text": "Example: Supply Chain Management"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "xh7co7gr",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "xh7co7grc",
+          "_type": "span",
+          "marks": [],
+          "text": "In this case, you would choose an AI model optimized for enterprise workflow tasks, which can integrate with existing systems and provide actionable insights."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "h6ng1qmo",
+      "_type": "image",
+      "alt": "Section image 5",
+      "asset": {
+        "_ref": "image-ee3d4fa4003c621effe8f39835050fea73788b49-1344x768-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "pn9kqg3n",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "pn9kqg3nc",
+          "_type": "span",
+          "marks": [],
+          "text": "Conclusion"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "7hmfwodb",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "7hmfwodbc",
+          "_type": "span",
+          "marks": [],
+          "text": "Choosing the right AI model for your specific task or purpose is crucial in achieving accurate results and avoiding common mistakes. By understanding your task or purpose, using a 4-class categorization system, and selecting an AI model that fits your needs, you can ensure successful implementation and achieve your goals."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "j4ovhjze",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "j4ovhjzec",
+          "_type": "span",
+          "marks": [],
+          "text": "Remember to prioritize the accuracy-first approach, considering the specific requirements of your task or purpose. With this guide, you'll be well-equipped to make informed decisions when selecting AI models for various tasks and purposes."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    }
+  ],
+  "category": "fundamentals",
+  "coverImage": {
+    "_type": "image",
+    "alt": "Cómo elegir modelos de Inteligencia Artificial según su propósito",
+    "asset": {
+      "_ref": "image-e838d358ddd6d995aa3d55f870e418367b028567-1344x768-png",
+      "_type": "reference"
+    }
+  },
+  "difficultyLevel": "beginner",
+  "excerpt": "Descubre cómo evitar errores comunes al seleccionar modelos de IA para tareas específicas y mejora la precisión de tus proyectos.",
+  "focusKeyword": "choosing ai models for specific tasks",
+  "generatedByPipeline": true,
+  "language": "es",
+  "pipelineVersion": "v1.0",
+  "publishedAt": "2026-06-04T20:34:04.100Z",
+  "qaCheckedAt": "2026-06-04T21:00:58.530Z",
+  "qaFeedback": "metaDescription has 122 chars (needs 140-160)",
+  "qaRetryCount": 0,
+  "qaScore": 88,
+  "readTime": 10,
+  "secondaryKeywords": [
+    "ai token",
+    "model selection principles",
+    "accuracy-first approach"
+  ],
+  "seo": {
+    "seoDescription": "Consejos prácticos para elegir los mejores modelos de IA para tu proyecto, sin depender únicamente de su ranking o precio.",
+    "seoTitle": "Elegir modelos de Inteligencia Artificial según su propósito"
+  },
+  "slug": {
+    "_type": "slug",
+    "current": "elegir-modelos-de-inteligencia-artificial-segun-propurso"
+  },
+  "sourceUrl": "https://www.aitoken.com.tw/post/how-to-choose-model-by-ai-token-needs",
+  "tags": [
+    "ai token",
+    "model selection principles",
+    "accuracy-first approach"
+  ],
+  "title": "Cómo elegir modelos de Inteligencia Artificial según su propósito",
+  "translationKey": "00e43bf5-c43d-470a-a7ae-47d470af346b"
+}
