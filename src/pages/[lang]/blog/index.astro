@@ -4,7 +4,7 @@ import { getAllPosts } from '../../../lib/sanity';
 import { useTranslations, SUPPORTED_LANGS, LANG_META, isValidLang } from '../../../i18n/index';
 import type { Lang } from '../../../i18n/index';
 import type { SanityPost } from '../../../lib/sanity';
-import { MAILERLITE_SUBSCRIBE_ACTION } from '../../../lib/forms';
+import NewsletterBanner from '../../../components/NewsletterBanner.astro';
 
 export async function getStaticPaths() {
   return SUPPORTED_LANGS.map(lang => ({ params: { lang } }));
@@ -301,37 +301,7 @@ const pageOfTemplate  = t('blog.pageOf');
       <!-- ═══════════════════════════════ NEWSLETTER CTA ═══════════════════════════════ -->
       <section style="padding: 0 1.5rem 5rem;">
         <div style="max-width: 1200px; margin: 0 auto;">
-          <div class="newsletter-banner reveal">
-            <div class="newsletter-blob newsletter-blob-1"></div>
-            <div class="newsletter-blob newsletter-blob-2"></div>
-            <div class="newsletter-copy">
-              <div class="newsletter-title">{t('blog.newsletterTitle')}</div>
-              <p class="newsletter-sub">{t('blog.newsletterCopy')}</p>
-            </div>
-            <div class="newsletter-form-wrap" data-ml-wrap>
-              <form
-                class="newsletter-form"
-                data-ml-subscribe
-                data-ga-location="blog_banner"
-                action={MAILERLITE_SUBSCRIBE_ACTION}
-                method="POST">
-                <label for="blog-subscribe-email" class="sr-only">{t('subscribe.emailLabel')}</label>
-                <input id="blog-subscribe-email" type="email" name="fields[email]" required autocomplete="email" placeholder={t('blog.newsletterEmail')} />
-                <input type="hidden" name="fields[language]" value={lang} />
-                <input type="hidden" name="ml-submit" value="1" />
-                <input type="hidden" name="anticsrf" value="true" />
-                <button type="submit">{t('blog.newsletterSubscribe')}</button>
-              </form>
-              <p class="form-msg form-msg-success" role="status" aria-live="polite" hidden>
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                {t('subscribe.success')}
-              </p>
-              <p class="form-msg form-msg-error" role="alert" aria-live="assertive" hidden>
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/><path d="M12 8v4.5M12 16h.01" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
-                {t('subscribe.error')}
-              </p>
-            </div>
-          </div>
+          <NewsletterBanner lang={lang as Lang} inputId="blog-subscribe-email" gaLocation="blog_banner" />
         </div>
       </section>
     </>
@@ -695,92 +665,6 @@ const pageOfTemplate  = t('blog.pageOf');
     font-weight: 500;
   }
 
-  /* ── Newsletter banner ─────────────────────────────────────────────── */
-  .newsletter-banner {
-    background: linear-gradient(135deg, #6155F1 0%, #3E81E5 100%);
-    border-radius: 20px;
-    padding: 3rem 2.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 2rem;
-    flex-wrap: wrap;
-    position: relative;
-    overflow: hidden;
-  }
-  .newsletter-blob {
-    position: absolute;
-    border-radius: 50%;
-    pointer-events: none;
-  }
-  .newsletter-blob-1 {
-    top: -40px;
-    right: -40px;
-    width: 200px;
-    height: 200px;
-    background: rgba(255, 255, 255, 0.06);
-  }
-  .newsletter-blob-2 {
-    bottom: -60px;
-    left: 30%;
-    width: 160px;
-    height: 160px;
-    background: rgba(255, 255, 255, 0.04);
-  }
-  .newsletter-copy { position: relative; flex: 1; min-width: 260px; }
-  .newsletter-title {
-    font-family: 'Kanit', sans-serif;
-    font-size: clamp(1.25rem, 2.5vw, 1.625rem);
-    font-weight: 800;
-    color: #fff;
-    letter-spacing: -0.03em;
-    margin-bottom: 0.5rem;
-  }
-  .newsletter-sub {
-    font-size: 0.9rem;
-    color: rgba(255, 255, 255, 0.8);
-    line-height: 1.6;
-    max-width: 420px;
-    margin: 0;
-  }
-  .newsletter-form-wrap { position: relative; max-width: 420px; }
-  .newsletter-form {
-    display: flex;
-    gap: 0.75rem;
-    flex-wrap: wrap;
-    position: relative;
-  }
-  .newsletter-form input {
-    padding: 0.75rem 1.125rem;
-    border-radius: 10px;
-    border: none;
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    font-size: 0.875rem;
-    min-width: 220px;
-    outline: none;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-  }
-  .newsletter-form button {
-    padding: 0.75rem 1.5rem;
-    background: #fff;
-    color: #6155F1;
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    font-size: 0.875rem;
-    font-weight: 700;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    white-space: nowrap;
-    transition: transform 0.18s ease, box-shadow 0.18s ease;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-  }
-  .newsletter-form button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
-  }
-  .newsletter-form button:active { transform: translateY(0); }
-  .newsletter-form button:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
-
   /* ── Visibility helper ─────────────────────────────────────────────── */
   .hidden-post { display: none !important; }
 
@@ -796,9 +680,6 @@ const pageOfTemplate  = t('blog.pageOf');
     .cat-scroll { gap: 0.5rem !important; }
     .cat-tab { font-size: 0.78rem; padding: 0.4rem 0.875rem; }
     .results-bar { gap: 0.75rem; }
-    .newsletter-banner { padding: 2.25rem 1.75rem; }
-    .newsletter-form-wrap { width: 100%; max-width: none; }
-    .newsletter-form input { min-width: 0; flex: 1; }
   }
 </style>
 

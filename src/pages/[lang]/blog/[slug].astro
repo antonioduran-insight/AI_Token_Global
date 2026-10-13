@@ -7,6 +7,7 @@ import type { SanityPost } from '../../../lib/sanity';
 import { renderPortableText, repairSpanSpacing, countWords, headingAnchors, articleTypeComponents } from '../../../lib/portable-text';
 import { articleSchema } from '../../../lib/schema';
 import { postPath, postAlternates } from '../../../lib/blog-urls';
+import NewsletterBanner from '../../../components/NewsletterBanner.astro';
 
 export async function getStaticPaths() {
   const slugs = await getAllPostSlugs();
@@ -300,6 +301,13 @@ const coverTint = post.category ? CAT_TINT[post.category] ?? CAT_TINT.fundamenta
     </div>
   </section>
 
+
+  <!-- ═══════════════════════════════ NEWSLETTER ═══════════════════════════════ -->
+  <section class="post-newsletter">
+    <div class="related-wrap">
+      <NewsletterBanner lang={lang as Lang} inputId="post-subscribe-email" gaLocation="article_end" />
+    </div>
+  </section>
 
   <!-- ═══════════════════════════════ RELATED ARTICLES ═══════════════════════════════ -->
   {related.length > 0 && (
@@ -760,6 +768,7 @@ const coverTint = post.category ? CAT_TINT[post.category] ?? CAT_TINT.fundamenta
   }
 
   /* ── Related articles ──────────────────────────────────────────────── */
+  .post-newsletter { padding: 0 1.5rem 3.5rem; }
   .related-section { padding: 0 1.5rem 5rem; }
   .related-wrap { max-width: 1200px; margin: 0 auto; }
   .related-head {
