@@ -58,3 +58,6 @@ audits/*/content-corpus.json
 
 # dry-run logs from scripts/patch-price-corrections.mjs (the --apply log is committed)
 audits/*/price-corrections-dryrun.md
+
+# dry-run logs from scripts/patch-titles-meta.mjs (the --apply log is committed)
+audits/*/titles-meta-dryrun.md
