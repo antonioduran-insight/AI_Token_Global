@@ -1,0 +1,396 @@
+{
+  "_createdAt": "2026-06-04T19:58:34Z",
+  "_id": "dShP6JdGzwBHy3qr2AnXfe-vi",
+  "_rev": "7PTiuFKp5NOfYngu8aVow6",
+  "_type": "post",
+  "_updatedAt": "2026-06-22T14:54:01Z",
+  "articleNumber": 83,
+  "body": [
+    {
+      "_key": "4gq2c3vl",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "4gq2c3vlc",
+          "_type": "span",
+          "marks": [],
+          "text": "Sự phổ biến ngày càng tăng của trí tuệ nhân tạo (AI) đã thúc đẩy sự phát triển của nhiều loại token khác nhau, được dùng để đo lường và quản lý mức sử dụng các mô hình AI. Tuy nhiên, nắm bắt kiến thức cơ bản về token AI có thể là thách thức với người mới bắt đầu. Trong bài viết này, chúng ta cùng khám phá thế giới token AI — bao gồm định nghĩa, tầm quan trọng, bảng giá và các chiến lược kiểm soát chi phí."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "65mqsv3y",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "65mqsv3yc",
+          "_type": "span",
+          "marks": [],
+          "text": "Token AI Là Gì?"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "x8f8f52c",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "x8f8f52cc",
+          "_type": "span",
+          "marks": [],
+          "text": "Token AI là các đơn vị kỹ thuật số đại diện cho một lượng sức mạnh xử lý hoặc tài nguyên tính toán nhất định. Chúng được dùng để đo lường mức sử dụng các mô hình AI, giúp lập trình viên và doanh nghiệp theo dõi và kiểm soát chi phí liên quan đến các hoạt động dựa trên AI."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "nal15ql5",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "nal15ql5c",
+          "_type": "span",
+          "marks": [],
+          "text": "Mỗi token AI được gán một giá trị riêng dựa trên độ phức tạp, độ chính xác và yêu cầu tính toán của nó. Mô hình AI càng phức tạp hoặc chính xác, chi phí cho các token tương ứng càng cao."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "7wr9qjjw",
+      "_type": "image",
+      "alt": "Hình ảnh minh họa phần 1",
+      "asset": {
+        "_ref": "image-c38a0d08ca18e036c9122e4b3f49c30016fa04ea-1344x768-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "r7pz5emo",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "r7pz5emoc",
+          "_type": "span",
+          "marks": [],
+          "text": "Cách Tính Lượng Sử Dụng Token AI"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "obptc449",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "obptc449c",
+          "_type": "span",
+          "marks": [],
+          "text": "Để tính số lượng token cần thiết cho một tác vụ cụ thể, bạn cần hiểu định dạng đầu vào và đầu ra của mô hình AI. Định dạng đầu vào là loại dữ liệu được đưa vào mô hình, còn định dạng đầu ra là kết quả mà mô hình tạo ra."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "wu8wq55m",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "wu8wq55mc",
+          "_type": "span",
+          "marks": [],
+          "text": "Có bốn loại token: token đầu vào, token đầu ra, token được lưu cache và token suy luận/tư duy. Token đầu vào đại diện cho dữ liệu ban đầu đưa vào mô hình AI, còn token đầu ra phản ánh kết quả cuối cùng mà mô hình tạo ra."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "aq55mgy2",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "aq55mgy2c",
+          "_type": "span",
+          "marks": [],
+          "text": "Token cache được dùng khi một tác vụ lặp lại nhiều lần, cho phép hệ thống lưu trữ kết quả trung gian trong cache để xử lý nhanh hơn. Token suy luận/tư duy tính đến tài nguyên tính toán cần thiết cho các tác vụ phức tạp như xử lý ngôn ngữ tự nhiên hay học máy."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "r7954gwt",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "r7954gwtc",
+          "_type": "span",
+          "marks": [],
+          "text": "Ví Dụ Về Lượng Sử Dụng Token"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "h6p762td",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "h6p762tdc",
+          "_type": "span",
+          "marks": [],
+          "text": "Giả sử bạn đang xây dựng một mô hình phân loại hình ảnh bằng một AI framework phổ biến. Để đơn giản hóa, hãy giả sử đầu vào là hình ảnh 128x128 pixel và đầu ra là điểm xác suất cho từng lớp."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "4rb5xx9x",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "4rb5xx9xc",
+          "_type": "span",
+          "marks": [],
+          "text": "Dựa trên tài liệu của framework, token đầu vào cần thiết cho tác vụ này là khoảng 1000. Token đầu ra sẽ vào khoảng 500, vì mô hình xuất ra điểm xác suất cho từng lớp."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "xid5h6pq",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "xid5h6pqc",
+          "_type": "span",
+          "marks": [],
+          "text": "Hiểu Bảng Giá Token AI"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "tqliiyto",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "tqliiytoc",
+          "_type": "span",
+          "marks": [],
+          "text": "Bảng giá token AI cung cấp thông tin chi tiết về chi phí sử dụng các mô hình AI cụ thể. Những bảng này thường bao gồm các trường sau: tên mô hình, giá đầu vào, giá đầu ra, giá cache và token suy luận/tư duy."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "jggytkae",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "jggytkaec",
+          "_type": "span",
+          "marks": [],
+          "text": "Tên mô hình xác định mô hình AI đang được sử dụng. Giá đầu vào phản ánh chi phí mỗi token cho dữ liệu đầu vào, trong khi giá đầu ra cho biết chi phí mỗi token cho kết quả đầu ra. Giá cache tính đến chi phí lưu trữ kết quả trung gian, và token suy luận/tư duy đại diện cho tài nguyên tính toán cần thiết cho các tác vụ phức tạp."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "tt4l74t7",
+      "_type": "image",
+      "alt": "Hình ảnh minh họa phần 2",
+      "asset": {
+        "_ref": "image-fffbd21e8adf40935e4b39e6a0176b74bd012a3e-1344x768-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "khcsgwcu",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "khcsgwcuc",
+          "_type": "span",
+          "marks": [],
+          "text": "Chiến Lược Tiết Kiệm Chi Phí Cho Người Dùng Token AI"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "iqj0mu20",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "iqj0mu20c",
+          "_type": "span",
+          "marks": [],
+          "text": "Để tối ưu hóa chi phí liên quan đến token AI, bạn có thể áp dụng các chiến lược sau: tối ưu hóa định dạng đầu vào và đầu ra, tận dụng cơ chế cache và chọn đúng mô hình phù hợp với nhu cầu cụ thể của bạn."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "3dx6799q",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "3dx6799qc",
+          "_type": "span",
+          "marks": [],
+          "text": "Tối ưu hóa định dạng đầu vào và đầu ra có thể giảm đáng kể lượng token sử dụng. Ví dụ, nếu bạn đang làm việc với hình ảnh độ phân giải cao, hãy cân nhắc giảm độ phân giải để giảm token đầu vào cần thiết."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "l2tv7o0z",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "l2tv7o0zc",
+          "_type": "span",
+          "marks": [],
+          "text": "Ví Dụ Về Cơ Chế Cache"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "40gfvnme",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "40gfvnmec",
+          "_type": "span",
+          "marks": [],
+          "text": "Giả sử bạn có một mô hình học máy cần 1000 token suy luận/tư duy cho mỗi lần dự đoán. Bạn có thể lưu kết quả trung gian vào cache, giảm số token cần thiết xuống còn 500."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "alwol2tt",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "alwol2ttc",
+          "_type": "span",
+          "marks": [],
+          "text": "Kết Luận"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "u9ajf3nh",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "u9ajf3nhc",
+          "_type": "span",
+          "marks": [],
+          "text": "Tóm lại, hiểu về token AI và cách sử dụng chúng là điều thiết yếu để phát triển AI hiệu quả. Khi nắm vững kiến thức cơ bản về giá token AI và các chiến lược tối ưu hóa, bạn có thể giảm chi phí liên quan đến các hoạt động dựa trên AI."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "i99oxvs5",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "i99oxvs5c",
+          "_type": "span",
+          "marks": [],
+          "text": "Để bắt đầu, hãy tính lượng token AI bạn sử dụng dựa trên định dạng đầu vào và đầu ra, sau đó tối ưu hóa chi phí bằng cơ chế cache và lựa chọn đúng mô hình. Hãy nhớ liên tục theo dõi và điều chỉnh chiến lược khi dự án của bạn phát triển."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "xgumcvks",
+      "_type": "image",
+      "alt": "Hình ảnh minh họa phần 3",
+      "asset": {
+        "_ref": "image-b5aa3e19b53f6f1bfcf2ddd885afd9b866f59018-1344x768-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "52piy70b",
+      "_type": "image",
+      "alt": "Hình ảnh minh họa phần 4",
+      "asset": {
+        "_ref": "image-4c18574172104e7b1ef1ecad802a5775c080687b-1344x768-png",
+        "_type": "reference"
+      }
+    }
+  ],
+  "category": "fundamentals",
+  "coverImage": {
+    "_type": "image",
+    "alt": "Hiểu Về Token AI: Hướng Dẫn Cơ Bản Và Kiểm Soát Chi Phí Cho Người Mới",
+    "asset": {
+      "_ref": "image-f180f1c74f4b981166e3d2a6ed27b2e4092b942a-1344x768-png",
+      "_type": "reference"
+    }
+  },
+  "difficultyLevel": "beginner",
+  "excerpt": "Khám phá sức mạnh của token AI với hướng dẫn toàn diện của chúng tôi, bao gồm kiến thức cơ bản, bảng giá và các chiến lược kiểm soát chi phí.",
+  "focusKeyword": "AI Token basics cost control",
+  "generatedByPipeline": true,
+  "language": "vi",
+  "pipelineVersion": "v1.0",
+  "publishedAt": "2026-06-04T19:58:30.001Z",
+  "qaCheckedAt": "2026-06-04T20:25:38.323Z",
+  "qaFeedback": "metaDescription has 118 chars (needs 140-160)",
+  "qaRetryCount": 0,
+  "qaScore": 88,
+  "readTime": 10,
+  "secondaryKeywords": [
+    "tính toán token AI",
+    "giá token AI",
+    "chiến lược tối ưu hóa chi phí"
+  ],
+  "seo": {
+    "seoDescription": "Khám phá cách sử dụng token AI hiệu quả và giảm chi phí với hướng dẫn chuyên sâu về giá token AI và tối ưu hóa của chúng tôi.",
+    "seoTitle": "Hướng Dẫn Cơ Bản Về Token AI Và Kiểm Soát Chi Phí"
+  },
+  "slug": {
+    "_type": "slug",
+    "current": "understanding-ai-token-basics-and-cost-control"
+  },
+  "sourceUrl": "https://www.aitoken.com.tw/post/ai-token-beginner-guide-from-basics-to-cost-control",
+  "tags": [
+    "tính toán token AI",
+    "giá token AI",
+    "chiến lược tối ưu hóa chi phí"
+  ],
+  "title": "Hiểu Về Token AI: Hướng Dẫn Cơ Bản Và Kiểm Soát Chi Phí Cho Người Mới",
+  "translationKey": "2ac34391-5e51-4e7d-b0d9-2bb033e2b8bb"
+}

@@ -1,0 +1,368 @@
+{
+  "_createdAt": "2026-06-04T21:09:06Z",
+  "_id": "yOXF1XBkRH6Ae7xNfj2JEZ",
+  "_rev": "dShP6JdGzwBHy3qr2B0ssq",
+  "_type": "post",
+  "_updatedAt": "2026-06-04T21:33:46Z",
+  "articleNumber": 93,
+  "body": [
+    {
+      "_key": "qmbjo7um",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "qmbjo7umc",
+          "_type": "span",
+          "marks": [],
+          "text": "The AI hype machine has been in overdrive, promising breakthroughs that often fail to materialize. The term 'AI Hype' refers to the overhyped expectations surrounding AI development and adoption. With the rise of OpenClaw, a tool that allows users to create AI Agents, many are touting it as a revolutionary breakthrough. However, we need to separate fact from fiction and understand the reality behind this hype."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "xjarlpfg",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "xjarlpfgc",
+          "_type": "span",
+          "marks": [],
+          "text": "The Dark Side of AI Hype: Separating Fact from Fiction"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "a33weoa3",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "a33weoa3c",
+          "_type": "span",
+          "marks": [],
+          "text": "One of the main concerns with AI hype is that it creates unrealistic expectations about what AI can achieve. This can lead to overinvestment and underperformance in AI projects, ultimately hurting businesses."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "4pcb36eu",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "4pcb36euc",
+          "_type": "span",
+          "marks": [],
+          "text": "For instance, in 2025, a prominent AI research lab claimed to have achieved a breakthrough in developing an AI Agent that could learn at the speed of human intelligence. However, upon closer inspection, it became clear that the results were exaggerated and didn't hold up to scrutiny."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "0cc1v0zr",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "0cc1v0zrc",
+          "_type": "span",
+          "marks": [],
+          "text": "As AI adoption increases, businesses need to be cautious not to fall prey to hype. This requires a nuanced understanding of what AI can achieve and realistic expectations about its limitations."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "7aegatyr",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "7aegatyrc",
+          "_type": "span",
+          "marks": [],
+          "text": "The Case Against OpenClaw"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "1983h4hx",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "1983h4hxc",
+          "_type": "span",
+          "marks": [],
+          "text": "OpenClaw, the tool that allows users to create AI Agents, has been touted as a revolutionary breakthrough. However, a closer look reveals that it's more of an incremental improvement rather than a game-changer."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "44kvqmoi",
+      "_type": "image",
+      "alt": "Section image 1",
+      "asset": {
+        "_ref": "image-2132d11b89f896e312956ba8d87a8d8b010cb083-1344x768-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "yeg3wddz",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "yeg3wddzc",
+          "_type": "span",
+          "marks": [],
+          "text": "While OpenClaw does simplify the process of creating AI Agents, it doesn't fundamentally change the landscape. It's more of a refinement rather than a revolution."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "08u54ycv",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "08u54ycvc",
+          "_type": "span",
+          "marks": [],
+          "text": "The Anthropic Controversy: A Wake-Up Call for Transparency"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "j41ug4sp",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "j41ug4spc",
+          "_type": "span",
+          "marks": [],
+          "text": "The Anthropic controversy highlights the need for transparency in AI company operations and government partnerships. This scandal has far-reaching implications, not just for businesses but also for society as a whole."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "bk9l3gy2",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "bk9l3gy2c",
+          "_type": "span",
+          "marks": [],
+          "text": "The lack of transparency surrounding Anthropic's activities raises serious questions about accountability and governance. It serves as a wake-up call for both AI companies and governments to prioritize transparency and accountability in their dealings with each other."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "yogbqerw",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "yogbqerwc",
+          "_type": "span",
+          "marks": [],
+          "text": "For instance, the recent revelations about Anthropic's secret partnerships with government agencies have sparked outrage among experts and activists alike. This controversy underscores the need for greater transparency and accountability in AI development."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "rzikvxee",
+      "_type": "image",
+      "alt": "Section image 2",
+      "asset": {
+        "_ref": "image-8702de269daf70820b9512db21002995d499865a-1344x768-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "1oyy9jwz",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "1oyy9jwzc",
+          "_type": "span",
+          "marks": [],
+          "text": "The Critical Role of Data Centers: Building a Robust Infrastructure"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "0gfukyz6",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "0gfukyz6c",
+          "_type": "span",
+          "marks": [],
+          "text": "Data Center construction is crucial for AI infrastructure, but it requires careful planning and execution. The increasing demand for data storage and processing has led to a surge in Data Center development."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "z55hb78y",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "z55hb78yc",
+          "_type": "span",
+          "marks": [],
+          "text": "However, building a robust Data Center infrastructure is not just about throwing resources at the problem. It requires strategic planning, advanced engineering, and ongoing maintenance to ensure that it meets the demands of AI workloads."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "ts4q4w5s",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "ts4q4w5sc",
+          "_type": "span",
+          "marks": [],
+          "text": "For instance, according to a recent report, the average data center now consumes over 100 megawatts of power per hour. This staggering figure highlights the need for efficient cooling systems, renewable energy integration, and advanced thermal management solutions."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "gszttcg7",
+      "_type": "image",
+      "alt": "Section image 3",
+      "asset": {
+        "_ref": "image-32ec9a1a97f13c7c7abc6d152a37a586cd7ebdc2-1344x768-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "x7y03n1y",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "x7y03n1yc",
+          "_type": "span",
+          "marks": [],
+          "text": "Conclusion: Taking a Step Back to Separate Fact from Fiction"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "t9ydiueq",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "t9ydiueqc",
+          "_type": "span",
+          "marks": [],
+          "text": "As AI hype continues to build, it's essential for businesses to take a step back and reassess their expectations. This article has highlighted the importance of separating fact from fiction when it comes to AI development."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "io6j6nul",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "io6j6nulc",
+          "_type": "span",
+          "marks": [],
+          "text": "By understanding the reality behind AI hype and being cautious not to fall prey to exaggerated claims, businesses can make informed decisions that align with their goals and objectives."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "k7mdjsvk",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "k7mdjsvkc",
+          "_type": "span",
+          "marks": [],
+          "text": "In conclusion, it's time for a dose of skepticism when it comes to AI hype. By taking a step back and separating fact from fiction, we can build a more realistic understanding of what AI can achieve and make informed decisions that drive meaningful results."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "sgbsq3jm",
+      "_type": "image",
+      "alt": "Section image 4",
+      "asset": {
+        "_ref": "image-cc5b36a7bd666f6354807d98825bc7d263b876bd-1344x768-png",
+        "_type": "reference"
+      }
+    }
+  ],
+  "category": "fundamentals",
+  "coverImage": {
+    "_type": "image",
+    "alt": "Kenyataan di Balik Hype AI pada Tahun 2026",
+    "asset": {
+      "_ref": "image-cf7c020833fede4151aa6365557329bf84c44c33-1344x768-png",
+      "_type": "reference"
+    }
+  },
+  "difficultyLevel": "intermediate",
+  "excerpt": "Hype AI seringkali diidentikan dengan ekspektasi yang terlalu tinggi mengenai perkembangan dan adaptasi AI. Namun, apa sebenarnya yang terjadi?",
+  "focusKeyword": "AI Hype Reality in 2026",
+  "generatedByPipeline": true,
+  "language": "id",
+  "pipelineVersion": "v1.0",
+  "publishedAt": "2026-06-04T21:09:02.183Z",
+  "qaCheckedAt": "2026-06-04T21:33:46.613Z",
+  "qaFeedback": "metaDescription has 42 chars (needs 140-160)",
+  "qaRetryCount": 0,
+  "qaScore": 88,
+  "readTime": 15,
+  "secondaryKeywords": [
+    "AI Agent",
+    "Anthropic",
+    "Data Centers"
+  ],
+  "seo": {
+    "seoDescription": "Hype AI: Penyebab, Konsekuensi, dan Solusi",
+    "seoTitle": "Kenyataan di Balik Hype AI"
+  },
+  "slug": {
+    "_type": "slug",
+    "current": "kenyataan-di-balik-hype-ai-pada-tahun-2026"
+  },
+  "sourceUrl": "https://www.aitoken.com.tw/post/is-ai-hype-real-2026",
+  "tags": [
+    "AI Agent",
+    "Anthropic",
+    "Data Centers"
+  ],
+  "title": "Kenyataan di Balik Hype AI pada Tahun 2026",
+  "translationKey": "950b8619-6a75-4b89-9c41-fdaa2351475a"
+}

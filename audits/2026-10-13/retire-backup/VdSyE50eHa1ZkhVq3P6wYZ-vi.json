@@ -1,0 +1,377 @@
+{
+  "_createdAt": "2026-06-04T11:35:22Z",
+  "_id": "VdSyE50eHa1ZkhVq3P6wYZ-vi",
+  "_rev": "7PTiuFKp5NOfYngu8aY3dk",
+  "_type": "post",
+  "_updatedAt": "2026-06-22T15:05:08Z",
+  "articleNumber": 6,
+  "body": [
+    {
+      "_key": "6iab8wxk",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "6iab8wxkc",
+          "_type": "span",
+          "marks": [],
+          "text": "Khi làm việc với công nghệ Trí tuệ Nhân tạo (AI), có thể bạn đã từng gặp thuật ngữ 'token'. Nhưng token chính xác là gì, và tại sao các mô hình AI lại dùng đến chúng? Trong bài viết này, chúng ta sẽ cùng khám phá những kiến thức cơ bản về cách sử dụng token trong các mô hình AI, bao gồm cách tính token, ước tính chi phí và nhiều điều thú vị khác. Hiểu được những khái niệm này, bạn sẽ có thể đưa ra quyết định sáng suốt hơn cho các dự án AI của mình và đảm bảo mọi thứ vận hành trơn tru, hiệu quả."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "ia2xi4zn",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "ia2xi4znc",
+          "_type": "span",
+          "marks": [],
+          "text": "Token trong AI là gì?"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "jc79m6bd",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "jc79m6bdc",
+          "_type": "span",
+          "marks": [],
+          "text": "Token là những đơn vị cơ bản để xử lý ngôn ngữ trong các mô hình AI. Khác với từ hay ký tự thông thường, token đại diện cho từng đơn vị thông tin riêng lẻ dùng để hiểu và phân tích dữ liệu văn bản. Điều này có nghĩa là khi một mô hình AI xử lý một đoạn văn bản, nó sẽ tách đoạn văn đó thành các token riêng lẻ thay vì xem toàn bộ đoạn văn như một khối ký tự duy nhất."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "1ejvh5qb",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "1ejvh5qbc",
+          "_type": "span",
+          "marks": [],
+          "text": "Lý do dùng token thay vì từ hay ký tự là vì chúng cho phép xử lý ngôn ngữ chính xác và hiệu quả hơn. Bằng cách chia nhỏ văn bản thành từng đơn vị thông tin riêng lẻ, các mô hình AI có thể hiểu sâu hơn về những sắc thái của ngôn ngữ, từ đó đưa ra dự đoán và gợi ý chính xác hơn."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "wspxcz1s",
+      "_type": "image",
+      "alt": "Hình ảnh minh họa phần 1",
+      "asset": {
+        "_ref": "image-8d58070dac051a047bc2ed267728f83e0fa9ae82-1344x768-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "ljxtuwiv",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "ljxtuwivc",
+          "_type": "span",
+          "marks": [],
+          "text": "Token được tính như thế nào?"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "cq0c5867",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "cq0c5867c",
+          "_type": "span",
+          "marks": [],
+          "text": "Số lượng token trong một đoạn văn bản được xác định bởi thuật toán tokenization mà mô hình AI sử dụng. Các mô hình khác nhau có thể dùng các thuật toán khác nhau, dẫn đến số lượng token khác nhau cho cùng một đoạn văn bản đầu vào."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "zqfd1yl9",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "zqfd1yl9c",
+          "_type": "span",
+          "marks": [],
+          "text": "Cách tính token dựa trên cơ chế hoạt động bên trong của mô hình AI, bao gồm kiến trúc mô hình và các kỹ thuật cụ thể mà nó dùng để xử lý ngôn ngữ. Điều này có nghĩa là số lượng token có thể thay đổi tùy thuộc vào các yếu tố như thiết kế mô hình, dữ liệu huấn luyện và siêu tham số."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "n6qeccji",
+      "_type": "image",
+      "alt": "Hình ảnh minh họa phần 2",
+      "asset": {
+        "_ref": "image-ea3a3434615793d1a3986c6604709eb6e82fb413-1344x768-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "mjv245gy",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "mjv245gyc",
+          "_type": "span",
+          "marks": [],
+          "text": "Các loại tokenizer"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "fnk5a35k",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "fnk5a35kc",
+          "_type": "span",
+          "marks": [],
+          "text": "Có nhiều loại tokenizer được dùng trong các mô hình AI, mỗi loại có điểm mạnh và điểm yếu riêng. Một số loại phổ biến bao gồm wordpiece tokenization, subword tokenization và character-level tokenization."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "36q32bum",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "36q32bumc",
+          "_type": "span",
+          "marks": [],
+          "text": "Wordpiece tokenization là kỹ thuật chia từ thành các đơn vị nhỏ hơn gọi là 'subword'. Cách tiếp cận này cho phép biểu diễn ngôn ngữ chính xác hơn và xử lý tốt hơn các từ ngoài từ điển. Subword tokenization tương tự nhưng dùng thuật toán khác để chia từ thành các subword."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "1ug2zwd2",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "1ug2zwd2c",
+          "_type": "span",
+          "marks": [],
+          "text": "Character-level tokenization, ngược lại, chia văn bản thành từng ký tự đơn lẻ thay vì từ hay subword. Cách tiếp cận này có thể hữu ích cho một số tác vụ cụ thể như mô hình hóa ngôn ngữ và dịch máy."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "yhevlw1k",
+      "_type": "image",
+      "alt": "Hình ảnh minh họa phần 3",
+      "asset": {
+        "_ref": "image-32bf32bd25a8a9cacb1b7baa57c28d9b654b163f-1344x768-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "7jsguvlt",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "7jsguvltc",
+          "_type": "span",
+          "marks": [],
+          "text": "Token ảnh hưởng đến ước tính chi phí như thế nào?"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "h64n703w",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "h64n703wc",
+          "_type": "span",
+          "marks": [],
+          "text": "Token đóng vai trò quan trọng trong việc ước tính chi phí cho các dự án AI. Số lượng token mà một mô hình AI xử lý có thể tác động trực tiếp đến chi phí vận hành và duy trì hệ thống."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "aisyiag1",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "aisyiag1c",
+          "_type": "span",
+          "marks": [],
+          "text": "Lý do là vì nhiều mô hình AI được tính phí dựa trên số lượng token được xử lý, thay vì lượng dữ liệu mà chúng xử lý. Do đó, hiểu rõ cách sử dụng và tính toán token sẽ giúp bạn ước tính chi phí chính xác hơn và đưa ra quyết định sáng suốt hơn cho ngân sách dự án của mình."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "mz2fwvwv",
+      "_type": "image",
+      "alt": "Hình ảnh minh họa phần 4",
+      "asset": {
+        "_ref": "image-5f69613ff9bc9af3dacc47841a3b2fd2dd4cbdfd-1344x768-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "cw3vugs7",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "cw3vugs7c",
+          "_type": "span",
+          "marks": [],
+          "text": "Token ảnh hưởng đến thời gian phản hồi như thế nào?"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "dujq3x9t",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "dujq3x9tc",
+          "_type": "span",
+          "marks": [],
+          "text": "Ngoài ảnh hưởng đến ước tính chi phí, token còn có thể tác động đến thời gian phản hồi của các hệ thống AI. Số lượng token mà một mô hình AI xử lý có thể ảnh hưởng trực tiếp đến tốc độ phản hồi các truy vấn và yêu cầu."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "zmqgg6i3",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "zmqgg6i3c",
+          "_type": "span",
+          "marks": [],
+          "text": "Nguyên nhân là vì việc xử lý một lượng lớn token đòi hỏi tài nguyên tính toán đáng kể, điều này có thể làm chậm hiệu suất hệ thống. Hiểu rõ cách sử dụng và tính toán token sẽ giúp bạn tối ưu hóa hệ thống để có thời gian phản hồi nhanh hơn và nâng cao hiệu quả tổng thể."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "zvagmrvd",
+      "_type": "image",
+      "alt": "Hình ảnh minh họa phần 5",
+      "asset": {
+        "_ref": "image-1c4c25a1b90259d463e35ecefa469a015a6713c2-1344x768-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "r3nczduf",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "r3nczdufc",
+          "_type": "span",
+          "marks": [],
+          "text": "Kết luận"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "5k6gmh5j",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "5k6gmh5jc",
+          "_type": "span",
+          "marks": [],
+          "text": "Tóm lại, hiểu được những kiến thức cơ bản về cách sử dụng token trong các mô hình AI sẽ giúp bạn đưa ra những quyết định sáng suốt hơn cho các dự án công nghệ AI của mình. Khi nắm rõ cách token được tính toán và sử dụng bởi các mô hình khác nhau, bạn có thể ước tính chi phí tốt hơn, tối ưu hiệu suất hệ thống và đảm bảo các dự án của mình chạy trơn tru và hiệu quả."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "i0vytc6a",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "i0vytc6ac",
+          "_type": "span",
+          "marks": [],
+          "text": "Hy vọng bài viết này đã cung cấp cho bạn một giải thích đơn giản dễ hiểu về khái niệm token trong AI. Nếu bạn có bất kỳ câu hỏi nào hoặc cần làm rõ thêm về bất kỳ chủ đề nào được đề cập ở đây, đừng ngại liên hệ với chúng tôi. Cảm ơn bạn đã đọc!"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    }
+  ],
+  "category": "fundamentals",
+  "coverImage": {
+    "_type": "image",
+    "alt": "Tại Sao AI Dùng Token: Giải Thích Đơn Giản",
+    "asset": {
+      "_ref": "image-b700089409b00d929c154b0c6d9291f4ec20c76c-1344x768-png",
+      "_type": "reference"
+    }
+  },
+  "difficultyLevel": "beginner",
+  "excerpt": "Hiểu những kiến thức cơ bản về cách sử dụng token trong các mô hình AI sẽ giúp bạn đưa ra quyết định sáng suốt hơn cho các dự án công nghệ AI của mình. Trong bài viết này, chúng ta sẽ khám phá thế giới token và giải thích cách chúng được dùng trong quá trình xử lý AI.",
+  "focusKeyword": "giải thích token AI đơn giản",
+  "generatedByPipeline": true,
+  "language": "vi",
+  "pipelineVersion": "v1.0",
+  "publishedAt": "2026-06-04T11:35:21.989Z",
+  "qaCheckedAt": "2026-06-04T12:03:42.189Z",
+  "qaFeedback": "",
+  "qaRetryCount": 0,
+  "qaScore": 100,
+  "readTime": 10,
+  "secondaryKeywords": [
+    "tính token",
+    "xử lý ngôn ngữ",
+    "ước tính chi phí"
+  ],
+  "seo": {
+    "seoDescription": "Khám phá cách AI dùng token để xử lý ngôn ngữ và học từ dữ liệu. Tìm hiểu về cách tính token, ước tính chi phí và nhiều hơn nữa qua bài giải thích đơn giản của chúng tôi.",
+    "seoTitle": "Giải Thích Token AI"
+  },
+  "slug": {
+    "_type": "slug",
+    "current": "why-ai-uses-tokens-a-simplified-explanation"
+  },
+  "sourceUrl": "https://www.aitoken.com.tw/post/why-ai-uses-tokens",
+  "tags": [
+    "tính token",
+    "xử lý ngôn ngữ",
+    "ước tính chi phí"
+  ],
+  "title": "Tại Sao AI Dùng Token: Giải Thích Đơn Giản",
+  "translationKey": "72b20f32-ed32-4842-9683-87518522b082"
+}

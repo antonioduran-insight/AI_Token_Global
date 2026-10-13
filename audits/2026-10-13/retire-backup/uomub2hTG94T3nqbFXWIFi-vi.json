@@ -1,0 +1,358 @@
+{
+  "_createdAt": "2026-06-04T14:54:40Z",
+  "_id": "uomub2hTG94T3nqbFXWIFi-vi",
+  "_rev": "7PTiuFKp5NOfYngu8aWEMU",
+  "_type": "post",
+  "_updatedAt": "2026-06-22T14:56:43Z",
+  "articleNumber": 36,
+  "body": [
+    {
+      "_key": "y5v8db5j",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "y5v8db5jc",
+          "_type": "span",
+          "marks": [],
+          "text": "Hiểu cách sử dụng token AI là điều cần thiết với bất kỳ ai đang dùng các mô hình ngôn ngữ lớn như ChatGPT, Claude hay Gemini. Các mô hình này hoạt động theo hệ thống dựa trên token, trong đó mỗi yêu cầu sẽ được tính phí dựa trên số lượng token tiêu thụ. Chi phí có thể tăng nhanh, vì vậy việc theo dõi và tối ưu hóa lượng token sử dụng là rất quan trọng. Trong bài viết này, chúng tôi sẽ đi vào các khái niệm cơ bản về token AI, bao gồm token đầu vào, token đầu ra và tổng token, cũng như những sai lầm thường gặp cần tránh."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "ec67tyzl",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "ec67tyzlc",
+          "_type": "span",
+          "marks": [],
+          "text": "Kiến Thức Cơ Bản Về Token AI"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "my4d4kzs",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "my4d4kzsc",
+          "_type": "span",
+          "marks": [],
+          "text": "Về bản chất, việc sử dụng token AI là một khái niệm khá đơn giản. Mỗi lần bạn gửi yêu cầu đến một mô hình ngôn ngữ lớn, nó sẽ tiêu thụ một số lượng token nhất định. Chi phí mỗi token khác nhau tùy theo mô hình và nhà cung cấp, nhưng hiểu rõ cách token hoạt động là nền tảng để bạn theo dõi và tối ưu hóa lượng sử dụng."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "vgc4w2dx",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "vgc4w2dxc",
+          "_type": "span",
+          "marks": [],
+          "text": "Để phân tích cách sử dụng token AI, chúng ta có ba trường chính: token đầu vào, token đầu ra và tổng token. Token đầu vào là số lượng token mô hình tiêu thụ để xử lý yêu cầu của bạn. Token đầu ra là số lượng token được tạo ra như một phần của phản hồi. Còn tổng token thì bao gồm cả token đầu vào lẫn đầu ra."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "joqyjbv8",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "joqyjbv8c",
+          "_type": "span",
+          "marks": [],
+          "text": "Để minh họa khái niệm này, hãy cùng xem một ví dụ. Giả sử bạn đang dùng ChatGPT để tạo một bài viết 500 từ. Mô hình tiêu thụ 1.000 token đầu vào để xử lý yêu cầu và tạo ra 800 token đầu ra trong phản hồi. Tổng lượng token bạn sử dụng sẽ là 1.800 (1.000 đầu vào + 800 đầu ra)."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "pkq9u4p0",
+      "_type": "image",
+      "alt": "Hình ảnh minh họa phần 1",
+      "asset": {
+        "_ref": "image-85d116e700199ad787163d89806c812cafa74829-1344x768-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "x3sb7x45",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "x3sb7x45c",
+          "_type": "span",
+          "marks": [],
+          "text": "Những Sai Lầm Thường Gặp Khi Theo Dõi Lượng Token Sử Dụng"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "0qpsv5ey",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "0qpsv5eyc",
+          "_type": "span",
+          "marks": [],
+          "text": "Khi theo dõi lượng token sử dụng, điều quan trọng là phải nhận ra những sai lầm phổ biến có thể dẫn đến tính toán không chính xác. Một trong những lỗi nghiêm trọng nhất là nhầm lẫn giữa token đầu vào và token đầu ra, hoặc bỏ qua ngữ cảnh hoàn toàn."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "y1xpr6s5",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "y1xpr6s5c",
+          "_type": "span",
+          "marks": [],
+          "text": "Chẳng hạn, nếu bạn dùng một mô hình như Claude để tóm tắt nội dung, bạn có thể nghĩ rằng toàn bộ phản hồi đều là token đầu ra. Tuy nhiên, mô hình cũng tiêu thụ token đầu vào để xử lý yêu cầu của bạn. Nếu không tính đến các token đầu vào này, bạn sẽ đánh giá thấp tổng lượng token đã dùng."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "2kat9u7s",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "2kat9u7sc",
+          "_type": "span",
+          "marks": [],
+          "text": "Một sai lầm khác là bỏ qua ngữ cảnh hoàn toàn. Khi tạo văn bản, các mô hình thường cần thêm token để hiểu ngữ cảnh và sắc thái của một chủ đề hoặc câu hỏi cụ thể. Bỏ qua ngữ cảnh này có thể khiến lượng token tiêu thụ cao hơn dự kiến."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "xiypuclg",
+      "_type": "image",
+      "alt": "Hình ảnh minh họa phần 2",
+      "asset": {
+        "_ref": "image-8340d1c5830dae9b63a95cbb66102fd57d850f43-1344x768-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "8thu8ohp",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "8thu8ohpc",
+          "_type": "span",
+          "marks": [],
+          "text": "Dùng Chỉ Số 'Tổng' Để Ước Tính Kích Thước Yêu Cầu"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "pjhjrew5",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "pjhjrew5c",
+          "_type": "span",
+          "marks": [],
+          "text": "Để đánh giá kích thước yêu cầu tổng thể và phát hiện các vấn đề tiềm ẩn, bạn cần dùng chỉ số 'tổng'. Chỉ số này tính cả token đầu vào lẫn đầu ra, cho bạn cái nhìn chính xác hơn về lượng token thực sự sử dụng."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "h7dlrcev",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "h7dlrcevc",
+          "_type": "span",
+          "marks": [],
+          "text": "Giả sử bạn đang dùng Gemini để tạo một bài viết 1.000 từ. Bằng cách theo dõi tổng lượng token, bạn có thể ước tính chi phí mỗi yêu cầu và điều chỉnh chiến lược cho phù hợp. Cách tiếp cận này cũng giúp bạn phát hiện các vấn đề tiềm ẩn, chẳng hạn như lượng token đầu vào hoặc đầu ra quá cao."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "6gczk0kz",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "6gczk0kzc",
+          "_type": "span",
+          "marks": [],
+          "text": "Ví dụ, nếu tổng lượng token của bạn liên tục vượt quá 3.000 token, có thể bạn nên tìm cách tối ưu hóa yêu cầu — như chia nhỏ thành các phần ngắn hơn hoặc điều chỉnh cài đặt mô hình."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "99df0eed",
+      "_type": "image",
+      "alt": "Hình ảnh minh họa phần 3",
+      "asset": {
+        "_ref": "image-5044cdb8c821ab63202d173ede4a82906fbf868d-1344x768-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "mg37ahx0",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "mg37ahx0c",
+          "_type": "span",
+          "marks": [],
+          "text": "Mẹo Thực Tế Để Tối Ưu Hóa Lượng Token AI Sử Dụng"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "fnk7czi8",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "fnk7czi8c",
+          "_type": "span",
+          "marks": [],
+          "text": "Để tối ưu hóa lượng token AI bạn sử dụng, hãy áp dụng những mẹo thực tế sau: Chia nhỏ các yêu cầu lớn thành các phần nhỏ hơn để giảm lượng token đầu vào và đầu ra. Điều chỉnh cài đặt mô hình để giảm thiểu token sử dụng mà không làm giảm chất lượng."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "piyl1h9j",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "piyl1h9jc",
+          "_type": "span",
+          "marks": [],
+          "text": "Hãy cân nhắc dùng dịch vụ proxy hoặc API key để đơn giản hóa việc theo dõi và tối ưu hóa token. Thường xuyên xem lại lượng token sử dụng để tìm ra những điểm có thể cải thiện và điều chỉnh chiến lược cho phù hợp."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "h2oax6a3",
+      "_type": "image",
+      "alt": "Hình ảnh minh họa phần 4",
+      "asset": {
+        "_ref": "image-cec202f3a772db03274948c523dba7a5f8ae827b-1344x768-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "lz9fdmp0",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "lz9fdmp0c",
+          "_type": "span",
+          "marks": [],
+          "text": "Kết Luận: Làm Chủ Lượng Token AI Của Bạn"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "716tb1kq",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "716tb1kqc",
+          "_type": "span",
+          "marks": [],
+          "text": "Bằng cách nắm vững kiến thức cơ bản về token AI, nhận ra những sai lầm thường gặp và sử dụng chỉ số 'tổng' để ước tính kích thước yêu cầu, bạn hoàn toàn có thể làm chủ lượng token AI của mình. Hãy thường xuyên xem lại lượng sử dụng, điều chỉnh chiến lược khi cần và tìm cách tối ưu hóa yêu cầu của bạn."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "ity7d6qv",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "ity7d6qvc",
+          "_type": "span",
+          "marks": [],
+          "text": "Hãy bắt đầu theo dõi lượng token AI của bạn ngay hôm nay và khai thác toàn bộ tiềm năng của các mô hình ngôn ngữ lớn như ChatGPT, Claude và Gemini."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    }
+  ],
+  "category": "fundamentals",
+  "coverImage": {
+    "_type": "image",
+    "alt": "Hướng dẫn sử dụng token AI cho người mới bắt đầu",
+    "asset": {
+      "_ref": "image-8fb56a93fd5000af104604f31af1a10495126696-1344x768-png",
+      "_type": "reference"
+    }
+  },
+  "difficultyLevel": "beginner",
+  "excerpt": "Tìm hiểu cách theo dõi và tối ưu hóa lượng token AI của bạn với hướng dẫn toàn diện bao gồm kiến thức cơ bản về token đầu vào, đầu ra và tổng token.",
+  "focusKeyword": "theo dõi và tối ưu hóa token AI",
+  "generatedByPipeline": true,
+  "language": "vi",
+  "pipelineVersion": "v1.0",
+  "publishedAt": "2026-06-04T14:54:40.238Z",
+  "qaCheckedAt": "2026-06-04T15:22:47.351Z",
+  "qaFeedback": "metaDescription has 132 chars (needs 140-160)",
+  "qaRetryCount": 0,
+  "qaScore": 88,
+  "readTime": 10,
+  "secondaryKeywords": [
+    "ChatGPT",
+    "Claude",
+    "Gemini",
+    "OpenAI",
+    "Anthropic"
+  ],
+  "seo": {
+    "seoDescription": "Khám phá cách quản lý hiệu quả lượng token AI của bạn với các mẹo thực tế và kỹ thuật theo dõi, tối ưu hóa yêu cầu.",
+    "seoTitle": "Theo Dõi và Tối Ưu Hóa Token AI cho Người Mới Bắt Đầu"
+  },
+  "slug": {
+    "_type": "slug",
+    "current": "understanding-ai-token-usage-for-beginners"
+  },
+  "sourceUrl": "https://www.aitoken.com.tw/post/how-to-check-ai-token-usage",
+  "tags": [
+    "ChatGPT",
+    "Claude",
+    "Gemini",
+    "OpenAI",
+    "Anthropic"
+  ],
+  "title": "Hướng Dẫn Sử Dụng Token AI Cho Người Mới Bắt Đầu",
+  "translationKey": "99993abf-ea76-4202-8dba-889dff255c1e"
+}
