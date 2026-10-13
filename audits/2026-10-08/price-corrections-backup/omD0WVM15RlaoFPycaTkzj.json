@@ -1,0 +1,854 @@
+{
+  "_createdAt": "2026-08-27T07:57:00Z",
+  "_id": "omD0WVM15RlaoFPycaTkzj",
+  "_rev": "g6CM0a4Gd5vwTO1ZrXAvvc",
+  "_type": "post",
+  "_updatedAt": "2026-08-27T08:35:25Z",
+  "articleNumber": 175,
+  "body": [
+    {
+      "_key": "b0",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b0s1",
+          "_type": "span",
+          "marks": [],
+          "text": "OpenRouter is a unified API gateway for AI models: connect one API, and you can call hundreds of models from Anthropic, OpenAI, Google, DeepSeek, Meta, Mistral, xAI, and more — without applying for a separate key or writing a separate integration for every provider. Think of it as a "
+        },
+        {
+          "_key": "b0s2",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "relay station"
+        },
+        {
+          "_key": "b0s3",
+          "_type": "span",
+          "marks": [],
+          "text": ": it doesn't build models of its own, it packages many providers' models behind a single entry point."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b1",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b1s1",
+          "_type": "span",
+          "marks": [],
+          "text": "This article breaks down: whether OpenRouter is actually cheaper than going direct to a provider's own API, how the fees really work, whether your conversation data gets used for training, and when you should actually use it versus when calling the official API directly is the better call."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b2",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b2s1",
+          "_type": "span",
+          "marks": [],
+          "text": "What problem does OpenRouter actually solve?"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "b3",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b3s1",
+          "_type": "span",
+          "marks": [],
+          "text": "If your product needs to support Claude, GPT, and Gemini at the same time, going direct to each official API means: three sets of keys to manage, three different request formats, three separate bills — and if any one provider has an outage or gets overloaded, your service goes down with it. OpenRouter wraps that mess away: "
+        },
+        {
+          "_key": "b3s2",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "one API endpoint, one key, and switching models is just changing a parameter"
+        },
+        {
+          "_key": "b3s3",
+          "_type": "span",
+          "marks": [],
+          "text": ", not rewriting your call logic. That's where the \"relay station\" framing at the top of this article comes from — the real value isn't in the models themselves, it's in the \"unified interface\" and \"automatic failover\" it gives you."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b4",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b4s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Does OpenRouter mark up the official pricing?"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "b5",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b5s1",
+          "_type": "span",
+          "marks": [],
+          "text": "The answer that surprises most people: "
+        },
+        {
+          "_key": "b5s2",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "no, at least not on model inference itself"
+        },
+        {
+          "_key": "b5s3",
+          "_type": "span",
+          "marks": [],
+          "text": ". OpenRouter's own documentation states it plainly: \"We pass through the pricing of the underlying providers; there is no markup on inference pricing (however we do charge a fee when purchasing credits).\" In other words, the per-token price you pay to call Claude through OpenRouter is identical to going straight to Anthropic's own API — OpenRouter doesn't take a cut on that line item (but buying credits itself does carry a fee, covered next)."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b6",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b6s1",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "But buying credits does carry a fee"
+        },
+        {
+          "_key": "b6s2",
+          "_type": "span",
+          "marks": [],
+          "text": ": paying via Stripe costs \"5.5% (with an $0.80 minimum),\" and paying in crypto (USDC) costs \"5%.\" In other words, what costs extra isn't \"using a model\" — it's the act of \"turning money into credits\" itself."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b7",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b7s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Is OpenRouter always cheaper than going direct to the official API?"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "b8",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b8s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Not necessarily, and in most cases, no. Since inference pricing matches the official rate and buying credits adds a 5%–5.5% fee on top, OpenRouter will usually come out "
+        },
+        {
+          "_key": "b8s2",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "a little more expensive"
+        },
+        {
+          "_key": "b8s3",
+          "_type": "span",
+          "marks": [],
+          "text": ", not cheaper, if you just compare the raw bill. Its real value isn't in the unit price — it's in "
+        },
+        {
+          "_key": "b8s4",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "the integration and operations cost it saves you"
+        },
+        {
+          "_key": "b8s5",
+          "_type": "span",
+          "marks": [],
+          "text": ": no juggling three SDKs, no writing your own failover logic, no architecture changes when you switch models. If you only use one model and don't need failover, going direct to the official API is actually simpler and skips that extra fee layer."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b9",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b9s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Will my conversation data get used to train a model?"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "b10",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b10s1",
+          "_type": "span",
+          "marks": [],
+          "text": "This is often the first question teams ask before adopting any relay-style service — will your prompts and responses just get fed to some other model company for training? OpenRouter's own FAQ answer: \"Prompt and completion are not logged by default. We do zero logging of your prompts/completions, even if an error occurs, unless you opt-in.\" — by default, your prompts and responses aren't logged at all."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b11",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b11s1",
+          "_type": "span",
+          "marks": [],
+          "text": "But two details are worth flagging: first, "
+        },
+        {
+          "_key": "b11s2",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "by default OpenRouter actively excludes providers that do log, or whose policy it can't confirm"
+        },
+        {
+          "_key": "b11s3",
+          "_type": "span",
+          "marks": [],
+          "text": " — the documentation states it directly: \"Providers that do log, or where we have been unable to confirm their policy, will not be routed to unless the model training toggle is switched on.\" In other words, the default setting actually protects you — those providers simply won't receive your request, unless you yourself flip on the \"allow model training\" toggle in your privacy settings (say, to unlock access to more providers). That's not \"a provider secretly logging things behind your back\" — it's \"you choosing whether to loosen that protection.\" Second, if you separately choose to let OpenRouter log your prompts and completions, you can earn a \"1% discount on usage costs\" — a completely separate setting from the provider-training toggle, worth checking in your account privacy settings before you rely on either assumption."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b12",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b12s1",
+          "_type": "span",
+          "marks": [],
+          "text": "What happens when a provider goes down? How automatic failover actually works"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "b13",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b13s1",
+          "_type": "span",
+          "marks": [],
+          "text": "OpenRouter's own description: \"If a provider returns an error OpenRouter will automatically fall back to the next provider. This happens transparently to the user and allows production apps to be much more resilient.\" — when one provider returns an error, it automatically switches to the next one, and your service doesn't need to write any of that failover logic itself. OpenRouter describes the effect as \"pooling their uptime\": what you get is the combined availability across multiple providers, not something tied to any single provider's stability. Think of it like several power plants feeding into the same grid — if one goes down for maintenance, the lights in your house barely flicker, because the power is drawn from the whole grid, not from that one plant alone."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b14",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b14s1",
+          "_type": "span",
+          "marks": [],
+          "text": "When should you use OpenRouter, and when should you go direct to the official API?"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "b15",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b15s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Turning the facts above into a simple decision order:"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b16",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b16s1",
+          "_type": "span",
+          "marks": [],
+          "text": "1. "
+        },
+        {
+          "_key": "b16s2",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "You only use one model and don't need failover"
+        },
+        {
+          "_key": "b16s3",
+          "_type": "span",
+          "marks": [],
+          "text": ": go direct to the official API. Same unit price, one less fee layer, and a simpler architecture. 2. "
+        },
+        {
+          "_key": "b16s4",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "You need to support multiple models, or you need automatic failover"
+        },
+        {
+          "_key": "b16s5",
+          "_type": "span",
+          "marks": [],
+          "text": ": OpenRouter's integration value outweighs that fee — especially for a production product, where one provider going down means your service going down too. 3. "
+        },
+        {
+          "_key": "b16s6",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "You care whether your data gets logged"
+        },
+        {
+          "_key": "b16s7",
+          "_type": "span",
+          "marks": [],
+          "text": ": check your account's privacy settings for the current default state first. Don't assume \"not logged by default\" means \"no setting can ever change that\" — your own choices (whether to allow model training, whether to opt in for the logging discount) are what actually decide this; the provider-side policy is a separate layer. 4. "
+        },
+        {
+          "_key": "b16s8",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "You care how your monthly bill actually breaks down"
+        },
+        {
+          "_key": "b16s9",
+          "_type": "span",
+          "marks": [],
+          "text": ": either way, \"how much did model inference cost\" and \"how much did currency/credit-conversion fees cost\" are two different kinds of spending that easily get merged into one number on paper — breaking them apart is the only way to see where the money actually went. That's exactly the reason a usage dashboard like AI Token King exists."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b17",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b17s1",
+          "_type": "span",
+          "marks": [],
+          "text": "FAQ"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "b18",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b18s1",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "Q1: What is OpenRouter? It's often called an \"AI relay\" or \"API relay\" — is it the same thing as AI Token King?"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b19",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b19s1",
+          "_type": "span",
+          "marks": [],
+          "text": "\"Relay\" is the informal name people most often search for OpenRouter by — it wraps multiple providers' (Anthropic, OpenAI, Google, and others) model APIs behind one unified endpoint; your request passes through it first, then gets forwarded to the actual model provider, which is why it gets called a relay or API relay. Under the hood, it's actually in the same category as AI Token King: AI Token King is also one API key that reaches GPT, Claude, Gemini, and other models — that layer is the same unified-gateway mechanism as OpenRouter, not a case of \"OpenRouter does the unified entry point, AI Token King just tracks usage.\" So where's the difference? If your need is simply \"connect to multiple models without managing a pile of keys,\" there's more than one relay-style tool on the market for that. But if your situation is "
+        },
+        {
+          "_key": "b19s2",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "a team or company that needs to manage AI usage across multiple people and multiple projects"
+        },
+        {
+          "_key": "b19s3",
+          "_type": "span",
+          "marks": [],
+          "text": " — how sub-accounts get split, whether to alert someone who's over their limit, how each department's bill gets broken down at month-end — that enterprise usage-governance layer is what AI Token King adds on top of the same gateway mechanism, and it's the biggest difference from a plain relay tool. The two aren't mutually exclusive alternatives: you can start with a tool like OpenRouter to get model integration working, then layer AI Token King's governance on top once your team grows and you need to manage usage across multiple people."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b20",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b20s1",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "Q2: Is using OpenRouter more expensive than going direct to Anthropic's official API?"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b21",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b21s1",
+          "_type": "span",
+          "marks": [],
+          "text": "The official documentation states inference pricing carries no markup, so the two are identical there; but when you buy credits, OpenRouter charges a 5%–5.5% fee (depending on payment method) that you wouldn't pay going direct. Purely on the bill total, OpenRouter usually costs a little more."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b22",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b22s1",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "Q3: Will OpenRouter use my conversation content to train a model?"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b23",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b23s1",
+          "_type": "span",
+          "marks": [],
+          "text": "By default, prompts and responses aren't logged, and by default it also excludes providers that do log or whose policy is unconfirmed — unless you yourself turn on the \"allow model training\" toggle in privacy settings, which is what routes your requests to those providers. There's also a separate, independent \"opt in to logging for a 1% discount\" setting you can configure yourself. In other words, whether logging happens is currently \"your choice to turn on,\" not \"a provider quietly doing it\" — worth checking your account's privacy settings before relying on this."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b24",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b24s1",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "Q4: How does OpenRouter's automatic failover actually work?"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b25",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b25s1",
+          "_type": "span",
+          "marks": [],
+          "text": "When a provider returns an error, OpenRouter automatically switches to the next provider to keep handling your request, transparently to you — you don't need to write logic yourself to figure out which provider is down and which one to switch to."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b26",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b26s1",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "Q5: When would you not recommend using OpenRouter?"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b27",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b27s1",
+          "_type": "span",
+          "marks": [],
+          "text": "If you're locked into one model and don't need failover, going direct to the official API is simpler and saves you the credit-purchase fee."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b28",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b28s1",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "Q6: Will the 5.5%/5%/1% numbers mentioned in this article change?"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b29",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b29s1",
+          "_type": "span",
+          "marks": [],
+          "text": "These are the rates OpenRouter's own documentation currently publishes, and they're platform policy, which can be adjusted over time. Check openrouter.ai's official page directly for the current numbers before relying on this, rather than taking any single article's word for it — including this one."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b30",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b30s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Source note"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "b31",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b31s1",
+          "_type": "span",
+          "marks": [],
+          "text": "The facts in this article are based on OpenRouter's own documentation: "
+        },
+        {
+          "_key": "b31s2",
+          "_type": "span",
+          "marks": [
+            "b31mk2"
+          ],
+          "text": "Quickstart"
+        },
+        {
+          "_key": "b31s3",
+          "_type": "span",
+          "marks": [],
+          "text": " and "
+        },
+        {
+          "_key": "b31s4",
+          "_type": "span",
+          "marks": [
+            "b31mk4"
+          ],
+          "text": "FAQ"
+        },
+        {
+          "_key": "b31s5",
+          "_type": "span",
+          "marks": [],
+          "text": ". The pricing (no markup on inference, 5.5%/5% credit-purchase fees), data-logging policy (not logged by default, 1% discount for opting into logging), and automatic-failover mechanism described here are quoted directly or paraphrased closely from the official text — none of it is based on our own testing or third-party reporting. "
+        },
+        {
+          "_key": "b31s6",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "This article is not adapted from a YouTube video"
+        },
+        {
+          "_key": "b31s7",
+          "_type": "span",
+          "marks": [],
+          "text": ": our usual video-sourcing pipeline (Apify) hit a shared-account monthly usage cap while this piece was being written, and no backup YouTube API key was available either, so we used OpenRouter's official documentation as the sole factual source instead. Given how time-sensitive these numbers are, please verify the current figures on openrouter.ai directly."
+        }
+      ],
+      "markDefs": [
+        {
+          "_key": "b31mk2",
+          "_type": "link",
+          "href": "https://openrouter.ai/docs/quickstart"
+        },
+        {
+          "_key": "b31mk4",
+          "_type": "link",
+          "href": "https://openrouter.ai/docs/faq"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "b32",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b32s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Further reading"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "b33",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b33s1",
+          "_type": "span",
+          "marks": [
+            "b33mk1"
+          ],
+          "text": "Claude's Prompt Caching: When Does It Actually Raise Your AI Bill Instead of Lowering It?"
+        }
+      ],
+      "markDefs": [
+        {
+          "_key": "b33mk1",
+          "_type": "link",
+          "href": "https://aitoken.global/en/blog/why-prompt-caching-can-increase-your-ai-bill/"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "b34",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b34s1",
+          "_type": "span",
+          "marks": [
+            "b34mk1"
+          ],
+          "text": "GPT-5.6 Prices Just Dropped Across the Board: Sol Down 20%+, Terra Down 20%, Luna Down 80% — Is It Now Cheaper Than Claude Opus 5?"
+        }
+      ],
+      "markDefs": [
+        {
+          "_key": "b34mk1",
+          "_type": "link",
+          "href": "https://aitoken.global/en/blog/gpt-5-6-sol-price-cut-2026-vs-claude-opus-5/"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "b35",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b35s1",
+          "_type": "span",
+          "marks": [
+            "b35mk1"
+          ],
+          "text": "Someone Set $1,486 on Fire in AI Tokens to Find Out Where the Money Really Goes"
+        }
+      ],
+      "markDefs": [
+        {
+          "_key": "b35mk1",
+          "_type": "link",
+          "href": "https://aitoken.global/en/blog/how-to-reduce-ai-token-costs-lessons-from-1486-experiment/"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "b36",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b36s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Want a clearer picture of what you're actually spending across different model providers?"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "b37",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b37s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Whether you're connecting directly to an official API or routing multiple models through a relay like OpenRouter, AI Token King pulls the usage and cost data scattered across your providers into one dashboard you can actually read and track — separating out exactly what's model inference cost and what's platform credit fees."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b38",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b38s1",
+          "_type": "span",
+          "marks": [
+            "b38mk1"
+          ],
+          "text": "Try it free →"
+        }
+      ],
+      "markDefs": [
+        {
+          "_key": "b38mk1",
+          "_type": "link",
+          "href": "https://aitokenking.com.tw/home"
+        }
+      ],
+      "style": "normal"
+    }
+  ],
+  "category": "platform",
+  "coverImage": {
+    "_type": "image",
+    "asset": {
+      "_ref": "image-d0acb13185d903063fe32b5729c9582cb8cb30bb-1376x768-jpg",
+      "_type": "reference"
+    }
+  },
+  "difficultyLevel": "intermediate",
+  "excerpt": "OpenRouter doesn't mark up model inference pricing, but buying credits carries a 5%-5.5% fee — so it's usually a little pricier than going direct, not cheaper. Here's what it actually solves, and when to use it instead.",
+  "focusKeyword": "what is OpenRouter AI gateway",
+  "generatedByPipeline": false,
+  "language": "en",
+  "publishedAt": "2026-08-27T08:15:00.000Z",
+  "readTime": 7,
+  "secondaryKeywords": [
+    "OpenRouter pricing",
+    "OpenRouter vs official API",
+    "AI relay station",
+    "OpenRouter fallback routing",
+    "OpenRouter data logging"
+  ],
+  "seo": {
+    "seoDescription": "OpenRouter passes through provider pricing with no markup on inference, but credit purchases carry a 5%-5.5% fee. A breakdown of the real costs, data logging policy, and when to use it over a direct API.",
+    "seoTitle": "What Is OpenRouter? Pricing, Fees, and Data Logging Explained"
+  },
+  "slug": {
+    "_type": "slug",
+    "current": "what-is-openrouter-ai-gateway"
+  },
+  "sourceUrl": "https://www.aitoken.com.tw/post/what-is-openrouter-ai-gateway",
+  "tags": [
+    "OpenRouter",
+    "AI API Gateway",
+    "AI Token Cost",
+    "LLM Pricing"
+  ],
+  "title": "What Is OpenRouter? How Is It Different From Going Direct to Anthropic or OpenAI's Official API?",
+  "translationKey": "88ea981a-8ebe-4d40-8a1a-4f5761210d7e"
+}

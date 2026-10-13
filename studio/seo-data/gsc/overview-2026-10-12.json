@@ -1,0 +1,18 @@
+{
+  "siteUrl": "aitoken.global",
+  "snapshotDate": "2026-10-12",
+  "rangeDays": 30,
+  "dataSource": "gsc",
+  "current": {
+    "clicks": 116,
+    "impressions": 5798,
+    "ctr": 0.020006898930665748,
+    "avgPosition": 10.42152466367713
+  },
+  "previous": {
+    "clicks": 5,
+    "impressions": 120,
+    "ctr": 0.041666666666666664,
+    "avgPosition": 29.866666666666667
+  }
+}

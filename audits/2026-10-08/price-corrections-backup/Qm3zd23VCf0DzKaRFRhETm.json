@@ -1,0 +1,1000 @@
+{
+  "_createdAt": "2026-08-26T05:55:24Z",
+  "_id": "Qm3zd23VCf0DzKaRFRhETm",
+  "_rev": "WrDyrcpEcKzVA0WNZV4kWP",
+  "_type": "post",
+  "_updatedAt": "2026-08-26T06:22:59Z",
+  "articleNumber": 174,
+  "body": [
+    {
+      "_key": "b0",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b0s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Prompt caching adalah mekanisme penetapan harga yang ditawarkan sejumlah penyedia AI: konten yang berulang kali kamu kirim (system prompt, definisi tool, deskripsi latar belakang proyek) disimpan sementara, jadi saat konten yang sama persis muncul lagi, kamu hanya dikenakan tarif \"cache read\" yang lebih murah, bukan tarif \"input\" penuh. "
+        },
+        {
+          "_key": "b0s2",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "Namun menulis ke cache juga tidak gratis — jika prefiks kontenmu kurang stabil atau hit rate-nya terlalu rendah, biaya penulisan bisa lebih besar dari penghematan pembacaan, dan totalnya malah membuat tagihanmu naik, bukan turun."
+        },
+        {
+          "_key": "b0s3",
+          "_type": "span",
+          "marks": [],
+          "text": " Inilah temuan yang berlawanan dengan intuisi dari pengujian sistematis 5 strategi manajemen konteks oleh kanal YouTube Atef Ataya."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b1",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b1s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Artikel ini akan membahas: apa yang sebenarnya dihemat oleh caching, dalam kondisi apa caching justru menjadi beban, dan — di luar caching — urutan penghematan yang lebih mendasar yang layak dipertimbangkan lebih dulu."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b2",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b2s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Sebenarnya apa yang di-cache oleh prompt caching?"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "b3",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b3s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Kebanyakan API LLM memecah satu panggilan menjadi \"input token\" dan \"output token\" dengan harga terpisah, dan caching lebih jauh memecah sisi input menjadi dua kondisi: "
+        },
+        {
+          "_key": "b3s2",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "cache write (cache creation)"
+        },
+        {
+          "_key": "b3s3",
+          "_type": "span",
+          "marks": [],
+          "text": " dan "
+        },
+        {
+          "_key": "b3s4",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "cache read"
+        },
+        {
+          "_key": "b3s5",
+          "_type": "span",
+          "marks": [],
+          "text": ". Saat suatu konten tetap dikirim untuk pertama kali, sistem harus menyimpannya, dan biaya ini biasanya sama atau lebih tinggi dari harga input normal. Setelah itu, setiap kali konten yang sama persis muncul lagi di bagian paling depan permintaan, sistem langsung mengenai cache dan mengenakan tarif \"read\" yang jauh lebih rendah."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b4",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b4s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Dengan kata lain, caching bukan menghemat \"konten itu sendiri\" — yang dihemat adalah \"pengulangan\". Jika suatu konten selalu berbeda di setiap panggilan, cache tidak akan pernah kena, dan kamu sudah membayar biaya penulisan untuk diskon yang tidak akan pernah kamu dapat."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b5",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b5s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Cache sebaiknya ditaruh di mana? Prefiks stabil vs. data tugas"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "b6",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b6s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Pengujian ini secara khusus menekankan satu aturan urutan: taruh "
+        },
+        {
+          "_key": "b6s2",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "konten yang tidak pernah berubah di bagian paling depan permintaan"
+        },
+        {
+          "_key": "b6s3",
+          "_type": "span",
+          "marks": [],
+          "text": " — seperti aturan sistem, definisi tool, deskripsi tetap proyek atau codebase — lalu taruh "
+        },
+        {
+          "_key": "b6s4",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "data yang berubah di setiap panggilan"
+        },
+        {
+          "_key": "b6s5",
+          "_type": "span",
+          "marks": [],
+          "text": " setelahnya. Logikanya sederhana: caching bekerja dengan mencocokkan apakah prefiks sama persis karakter demi karakter. Begitu ada satu karakter di depan yang berbeda, bagian setelahnya tidak bisa diselamatkan meskipun isinya sama. Mencampur konten yang mudah berubah di depan konten stabil sama saja dengan sengaja memutus rantai cache-mu sendiri."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b7",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b7s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Sebaliknya, jika suatu proyek memang sedikit definisi tool-nya dan deskripsi latar belakangnya sering ditulis ulang setiap tugas, \"prefiks stabil\" yang bisa dipegang cache akan pendek dari awal — dan manfaat mengaktifkan caching pun sudah terbatas sejak awal."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b8",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b8s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Kenapa volume cache read turun tapi tagihan malah naik?"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "b9",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b9s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Ini bagian paling berlawanan dengan intuisi dari seluruh pengujian. Dalam eksperimen di mana caching ditambahkan secara manual, volume \"input yang di-cache\" memang turun sekitar 15%—kedengarannya seharusnya menghemat—tapi biaya total justru naik sekitar 7%. Alasannya: penghematan dari lebih sedikit pembacaan "
+        },
+        {
+          "_key": "b9s2",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "habis dimakan oleh overhead yang ditimbulkan oleh cache read itu sendiri"
+        },
+        {
+          "_key": "b9s3",
+          "_type": "span",
+          "marks": [],
+          "text": ". Saat hit rate tidak stabil dan prefiks terus-menerus terputus, sistem terpaksa terus menulis ulang cache dan terus memicu permintaan pembacaan, dan pembacaan-pembacaan kecil yang tercecer ini menumpuk hingga melebihi apa yang seharusnya dihemat."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b10",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b10s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Ini juga menjelaskan mengapa caching bukan fitur yang \"begitu diaktifkan pasti hemat\" — melainkan "
+        },
+        {
+          "_key": "b10s2",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "soal harga yang sangat bergantung pada pola penggunaanmu"
+        },
+        {
+          "_key": "b10s3",
+          "_type": "span",
+          "marks": [],
+          "text": ": hit rate yang tinggi dan stabil membuat biaya penulisan layak dibayar demi diskon pembacaan; hit rate yang rendah membuat biaya penulisan yang sama berubah menjadi beban tambahan semata."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b11",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b11s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Bagaimana memilih waktu penyimpanan cache (TTL)?"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "b12",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b12s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Kebanyakan API yang menawarkan prompt caching membiarkan pengguna memilih berapa lama cache disimpan—makin lama disimpan, biasanya kamu membayar biaya penulisan dengan kelipatan yang lebih tinggi, sebagai gantinya kamu punya jendela waktu lebih lama untuk terus mendapat diskon. Ini pada dasarnya pertukaran risiko: jika kamu yakin akan sering memanggil prefiks yang sama berulang kali dalam waktu dekat, TTL yang lebih panjang akan menguntungkan; tapi jika frekuensi panggilanmu tidak cukup tinggi, atau prefiksnya bisa berubah di tengah jalan, biaya penulisan ekstra yang kamu bayar mungkin tidak pernah balik modal."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b13",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b13s1",
+          "_type": "span",
+          "marks": [],
+          "text": "⚠️ Perlu dijelaskan secara khusus: video ini menyebutkan bahwa API Claude saat ini mengungkap penggunaan cache melalui dua kolom terpisah — \"cache write token\" dan \"cache read token\" — dan menawarkan dua tingkat TTL untuk dipilih (tingkat yang lebih singkat memakai harga cache standar, tingkat yang lebih panjang dikenakan kelipatan). "
+        },
+        {
+          "_key": "b13s2",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "Ini menggambarkan cara video aslinya menjelaskan mekanismenya; durasi tingkat yang sebenarnya dan kelipatan tarifnya sebaiknya diverifikasi terhadap halaman harga resmi Anthropic saat ini"
+        },
+        {
+          "_key": "b13s3",
+          "_type": "span",
+          "marks": [],
+          "text": ", bukan hanya bergantung pada penjelasan satu video saja."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b14",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b14s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Langkah yang lebih perlu dilakukan sebelum caching: bukan memuat lebih pintar, tapi sejak awal tidak memuat sama sekali"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "b15",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b15s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Pengujian ini membandingkan 5 cara menurunkan biaya konteks, dan yang menempati posisi pertama—efeknya paling besar dan paling konsisten—bukanlah bentuk caching apa pun atau teknik pencarian yang lebih pintar, melainkan langkah paling sederhana: "
+        },
+        {
+          "_key": "b15s2",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "sebelum menangani tugas, tentukan secara eksplisit file atau data mana saja yang benar-benar \"dibutuhkan\", dan jangan baca yang lain sama sekali."
+        },
+        {
+          "_key": "b15s3",
+          "_type": "span",
+          "marks": [],
+          "text": " Cara ini menurunkan volume data yang dikirim ke model cukup besar, sehingga biaya total sekitar 30% lebih rendah dari skenario dasar tanpa melakukan apa-apa, dan menjadi satu-satunya strategi yang konsisten menghemat biaya di setiap putaran pengujian berulang."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b16",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b16s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Logika di baliknya sederhana: caching dan pengindeksan terstruktur pada dasarnya membuat \"pemuatan\" jadi lebih efisien, tapi model tetap dikenakan biaya untuk setiap token yang dimuat; sementara menyaring dan mengecualikan data yang tidak relevan lebih dulu berarti sebagian token memang tidak pernah dikirim sama sekali—uang ini benar-benar tidak pernah dikeluarkan. "
+        },
+        {
+          "_key": "b16s2",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "Token paling murah adalah token yang sejak awal tidak pernah dikirim ke dalam permintaan."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b17",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b17s1",
+          "_type": "span",
+          "marks": [],
+          "text": "\"Muat hanya saat dibutuhkan\" kedengarannya paling masuk akal—kenapa pengujian justru menunjukkan ini strategi paling mahal?"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "b18",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b18s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Intuisi umum lainnya adalah mulai dengan konteks paling minim, ambil apa yang dibutuhkan saat diperlukan, dan buang setelah dipakai—kedengarannya seperti pendekatan paling hemat sumber daya, tapi dalam pengujian ini justru menjadi strategi dengan biaya tertinggi, hampir 45% lebih mahal dari skenario dasar."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b19",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b19s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Masalahnya ada pada mekanisme penagihan: kebanyakan API LLM "
+        },
+        {
+          "_key": "b19s2",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "mengenakan biaya per permintaan penuh, dan setiap permintaan harus mengirim ulang seluruh riwayat percakapan yang terakumulasi sampai saat itu."
+        },
+        {
+          "_key": "b19s3",
+          "_type": "span",
+          "marks": [],
+          "text": " \"Buang setelah dipakai\" hanya membuat model \"melupakan\" isi suatu file—tidak membuat file itu hilang dari tagihan. Jika suatu tugas perlu memeriksa puluhan file satu per satu, itu berarti puluhan permintaan bolak-balik, dan setiap bolak-balik harus menyertakan ulang seluruh isi percakapan sebelumnya. Strategi yang dirancang untuk \"meringkas\" konteks justru berujung menjadi strategi yang paling banyak mengirim ulang konteks yang sama. Ini juga peringatan khusus yang disebutkan dalam pengujian: "
+        },
+        {
+          "_key": "b19s4",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "arah optimasi manajemen konteks harus melihat total token yang dikirim di seluruh tugas, bukan seberapa \"bersih\" satu permintaan terlihat."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b20",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b20s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Kenapa menumpuk semua trik penghematan sekaligus justru lebih mahal daripada tidak melakukan apa-apa?"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "b21",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b21s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Menggabungkan berbagai strategi manajemen konteks di atas secara bersamaan adalah yang biasanya disarankan secara default oleh banyak panduan, tapi hasil pengujian menunjukkan biaya total dari kombinasi penuh ini sekitar 23% lebih tinggi dari skenario dasar tanpa melakukan apa-apa—lebih buruk daripada memakai satu strategi saja secara terpisah."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b22",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b22s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Alasannya: berbagai strategi saling bertabrakan, bukan saling menambah. Misalnya, melakukan dua jenis analisis struktural berbeda secara bersamaan menghasilkan overhead analisis ganda; sementara caching dan \"muat hanya saat dibutuhkan\" dibangun di atas asumsi penggunaan yang saling bertentangan (satu mengasumsikan prefiks stabil dan berulang, yang lain mengasumsikan konten tercecer dan sering berubah). Mengaktifkan keduanya sekaligus hanya menumpuk biaya setup tambahan tanpa penghematan yang setara. "
+        },
+        {
+          "_key": "b22s2",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "Melakukan lebih banyak tidak sama dengan lebih hemat—setiap strategi punya biaya aktivasi sendiri, dan menumpuk lebih banyak strategi hanya menaikkan ambang batas yang harus dilewati sebelum semuanya benar-benar terbayar."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b23",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b23s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Dalam situasi apa mengaktifkan caching benar-benar layak? Satu urutan keputusan"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "b24",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b24s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Merangkum semua temuan di atas, berikut urutan prioritas kasar untuk mengevaluasi situasi penggunaanmu sendiri:"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b25",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b25s1",
+          "_type": "span",
+          "marks": [],
+          "text": "1. "
+        },
+        {
+          "_key": "b25s2",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "Saring dulu, baru cache"
+        },
+        {
+          "_key": "b25s3",
+          "_type": "span",
+          "marks": [],
+          "text": "—sebelum menangani tugas, tentukan dengan jelas data apa saja yang benar-benar dibutuhkan tugas ini, dan langsung kecualikan bagian yang tidak relevan dari permintaan. Ini adalah langkah dengan efek terbesar dan paling konsisten. 2. "
+        },
+        {
+          "_key": "b25s4",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "Kedua, beri model peta struktur yang ringan"
+        },
+        {
+          "_key": "b25s5",
+          "_type": "span",
+          "marks": [],
+          "text": "—gunakan direktori ringkas atau deskripsi hubungan dependensi, agar model tidak perlu mengandalkan pembacaan coba-coba untuk menemukan konten yang dibutuhkan. 3. "
+        },
+        {
+          "_key": "b25s6",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "Caching ditempatkan setelah keputusan arsitektur, diperlakukan murni sebagai soal harga"
+        },
+        {
+          "_key": "b25s7",
+          "_type": "span",
+          "marks": [],
+          "text": "—konfirmasi dulu apakah pola penggunaanmu memang punya prefiks yang \"stabil dan dipanggil berulang\", jika ada, baru layak mengaktifkan caching untuk itu; jika konten sering berubah dan frekuensi panggilan tidak tinggi, mengaktifkan caching bisa jadi hanya menambah satu biaya penulisan. 4. "
+        },
+        {
+          "_key": "b25s8",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "Pendekatan pencarian \"muat hanya saat dibutuhkan\" ditempatkan paling akhir"
+        },
+        {
+          "_key": "b25s9",
+          "_type": "span",
+          "marks": [],
+          "text": "—hanya layak dipertimbangkan saat volume data kandidat sangat besar dan bagian yang benar-benar dibutuhkan hanya sebagian kecil saja; selain itu, sifat penagihan per permintaan dan pengiriman ulang riwayat percakapan membuatnya sangat mudah menjadi opsi paling mahal."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b26",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b26s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Logika bersama di balik urutan ini: selesaikan dulu \"apakah data ini perlu dikirim sama sekali\", baru selesaikan \"apakah pengirimannya bisa dibuat lebih murah\". Caching menyelesaikan yang kedua—jika yang pertama belum ditangani dengan baik, ruang yang bisa dimanfaatkan caching pun sudah terbatas dari awal."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b27",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b27s1",
+          "_type": "span",
+          "marks": [],
+          "text": "FAQ"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "b28",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b28s1",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "T1: Apa itu prompt caching, dan apa bedanya dengan harga panggilan API biasa?"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b29",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b29s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Harga biasa hanya membagi token menjadi \"input\" dan \"output\". Setelah caching diaktifkan, sisi input dipecah lagi menjadi kondisi \"cache write\" dan \"cache read\"; konten tetap yang muncul pertama kali dikenakan biaya penulisan, dan saat konten yang sama persis muncul lagi tanpa berubah, dikenakan tarif pembacaan yang lebih rendah."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b30",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b30s1",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "T2: Kalau saya mengaktifkan prompt caching, apakah tagihan pasti jadi lebih murah?"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b31",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b31s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Belum tentu. Jika prefiks konten yang dikirim kurang stabil, atau jumlah hit berulangnya tidak cukup banyak, biaya penulisan cache yang kamu bayar bisa melebihi penghematan dari diskon pembacaan—pengujian ini sendiri menemukan kasus di mana volume cache read menurun tapi biaya total malah naik."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b32",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b32s1",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "T3: Konten tugas saya sering berubah-ubah, apakah cocok mengaktifkan caching?"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b33",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b33s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Jika data tugas selalu berbeda setiap kali, tanpa prefiks tetap yang tidak berubah, caching hampir tidak punya apa pun yang stabil untuk dipegang, dan manfaatnya dalam situasi seperti ini biasanya terbatas. Urutan prioritas sebaiknya diletakkan pada menyaring dulu data mana yang benar-benar dibutuhkan, bukan langsung terburu-buru mengaktifkan caching."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b34",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b34s1",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "T4: Sebaiknya pilih TTL yang pendek atau panjang?"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b35",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b35s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Bergantung pada seberapa tinggi frekuensi kamu akan memanggil ulang prefiks yang sama dalam waktu dekat. TTL yang lebih panjang biasanya berarti kelipatan biaya penulisan yang lebih tinggi juga, jadi hanya layak jika kamu memperkirakan akan ada banyak hit berulang dalam jendela waktu singkat; periksa tingkatan dan kelipatan tarif sebenarnya pada halaman harga resmi penyedia yang berlaku saat itu."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b36",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b36s1",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "T5: Selain caching, apa saja cara lain untuk menurunkan biaya token AI Agent?"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b37",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b37s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Pengujian menunjukkan bahwa menyaring secara eksplisit \"data apa yang benar-benar dibutuhkan tugas ini\" sebelum mulai adalah langkah dengan efek terbesar dan paling konsisten; kedua adalah menyediakan peta struktur ringan untuk model agar tidak banyak melakukan pembacaan coba-coba. Keduanya ditempatkan sebelum caching, karena keduanya mengurangi \"apakah data itu dikirim sama sekali\"—sementara caching hanya bisa mengoptimalkan \"seberapa murah pengirimannya\"."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b38",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b38s1",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "T6: Apakah data pengujian di artikel ini dijalankan menggunakan Claude?"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b39",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b39s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Pengujian aslinya menjalankan lima putaran berulang menggunakan tarif publik dari penyedia model lain (DeepSeek), khusus untuk memastikan perbandingan berfokus pada \"rasio biaya antar strategi konteks yang berbeda\", bukan angka absolut dari satu penyedia tertentu. Video ini secara terpisah menjelaskan cara kerja umum mekanisme caching pada API Claude (token cache write/read serta tingkatan TTL). "
+        },
+        {
+          "_key": "b39s2",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "Kesimpulan metodologisnya—bahwa manfaat caching bergantung pada hit rate dan stabilitas prefiks, serta bahwa menyaring dulu lebih baik daripada langsung caching—tidak spesifik untuk satu penyedia tertentu, tapi untuk angka pasti harga resmi Claude, tetap perlu diperiksa langsung pada pengumuman resmi Anthropic yang berlaku saat ini."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b40",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b40s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Catatan sumber"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "b41",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b41s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Artikel ini merujuk pada video *\"I Tested Claude's Prompt Cache. It Cost Me More.\"* dari kanal "
+        },
+        {
+          "_key": "b41s2",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "Atef Ataya"
+        },
+        {
+          "_key": "b41s3",
+          "_type": "span",
+          "marks": [],
+          "text": ", tautan asli: https://www.youtube.com/watch?v=DyzDuiwISa8. Angka perubahan biaya untuk setiap strategi manajemen konteks yang dibahas di sini (caching, peta struktur, grafik dependensi, penyaringan data, pencarian sesuai kebutuhan, dan sebagainya) disusun berdasarkan metodologi pengujian dan kesimpulan yang dijelaskan dalam video tersebut. Pengujian itu sendiri menggunakan tarif publik dari penyedia model lain sebagai basis perbandingan yang seragam, dan video secara eksplisit menyatakan bahwa fokus perbandingannya adalah rasio biaya antar strategi, bukan angka absolut dari penyedia tertentu. Untuk bagian yang menyangkut detail mekanisme cache pada API Claude secara spesifik (tingkatan TTL, kelipatan tarif), pembaca disarankan memeriksa secara mandiri dokumentasi harga resmi Anthropic yang berlaku saat ini untuk mendapatkan angka yang akurat dan terkini."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b42",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b42s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Baca juga"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "b43",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b43s1",
+          "_type": "span",
+          "marks": [
+            "b43mk1"
+          ],
+          "text": "Tagihan AI yang Menakutkan Itu Ternyata Sebuah Cermin"
+        }
+      ],
+      "markDefs": [
+        {
+          "_key": "b43mk1",
+          "_type": "link",
+          "href": "https://aitoken.global/id/blog/the-ai-bill-that-scared-him-turned-out-to-be-a-mirror/"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "b44",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b44s1",
+          "_type": "span",
+          "marks": [
+            "b44mk1"
+          ],
+          "text": "Harga GPT-5.6 Turun di Semua Lini: Sol Turun 20%+, Terra Turun 20%, Luna Turun 80% — Apakah Sekarang Lebih Murah dari Claude Opus 5?"
+        }
+      ],
+      "markDefs": [
+        {
+          "_key": "b44mk1",
+          "_type": "link",
+          "href": "https://aitoken.global/id/blog/gpt-5-6-sol-price-cut-2026-vs-claude-opus-5/"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "b45",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b45s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Ingin lebih memahami biaya token AI kamu secara lebih jelas?"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "b46",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b46s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Baik kamu sedang memutuskan apakah prompt caching layak diaktifkan, atau hanya ingin tahu berapa banyak token yang benar-benar terbakar dari alur kerja Agent-mu setiap bulan, AI Token King membantu merangkum data pemakaian dan biaya yang tercecer di berbagai penyedia model ke dalam satu dashboard yang mudah dibaca dan dilacak."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b47",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b47s1",
+          "_type": "span",
+          "marks": [
+            "b47mk1"
+          ],
+          "text": "Coba gratis sekarang →"
+        }
+      ],
+      "markDefs": [
+        {
+          "_key": "b47mk1",
+          "_type": "link",
+          "href": "https://aitokenking.com.tw/home"
+        }
+      ],
+      "style": "normal"
+    }
+  ],
+  "category": "pricing",
+  "coverImage": {
+    "_type": "image",
+    "alt": "Diagram penulisan dan pembacaan cache prompt Claude",
+    "asset": {
+      "_ref": "image-aabae453f03828c7e97079dee23e6958bf904516-1376x768-jpg",
+      "_type": "reference"
+    }
+  },
+  "difficultyLevel": "intermediate",
+  "excerpt": "Prompt caching kedengarannya cara langsung untuk memangkas biaya API LLM, tapi pengujian sistematis 5 strategi menemukan hal ini justru bisa menaikkan tagihanmu — dan menyaring konteks sebelum dikirim hampir selalu lebih unggul dari caching.",
+  "focusKeyword": "prompt caching menaikkan tagihan AI",
+  "generatedByPipeline": false,
+  "language": "id",
+  "publishedAt": "2026-08-26T06:00:00.000Z",
+  "readTime": 8,
+  "secondaryKeywords": [
+    "prompt caching Claude",
+    "cache write vs cache read",
+    "biaya konteks LLM",
+    "menurunkan biaya token AI agent",
+    "TTL prompt caching"
+  ],
+  "seo": {
+    "seoDescription": "Pengujian 5 strategi menemukan prompt caching bisa menaikkan tagihan LLM-mu, bukan menurunkannya. Kapan caching gagal, cara memilih TTL, dan kenapa menyaring konteks lebih dulu hampir selalu lebih baik dari caching.",
+    "seoTitle": "Kapan Prompt Caching Menaikkan (Bukan Menurunkan) Tagihan AI-mu"
+  },
+  "slug": {
+    "_type": "slug",
+    "current": "why-prompt-caching-can-increase-your-ai-bill"
+  },
+  "sourceUrl": "https://www.aitoken.com.tw/post/why-prompt-caching-can-increase-your-ai-bill",
+  "tags": [
+    "Prompt Caching",
+    "API Claude",
+    "Biaya Token AI",
+    "Harga LLM"
+  ],
+  "title": "Kapan Prompt Caching Claude Justru Membuat Tagihan AI-mu Naik, Bukan Turun?",
+  "translationKey": "f967c910-9b43-41ba-813d-fe55b906a0d3"
+}

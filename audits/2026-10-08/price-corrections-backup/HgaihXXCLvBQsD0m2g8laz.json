@@ -1,0 +1,898 @@
+{
+  "_createdAt": "2026-08-25T07:19:10Z",
+  "_id": "HgaihXXCLvBQsD0m2g8laz",
+  "_rev": "lQ9B2UJ9DPgrVbnXguNTWs",
+  "_type": "post",
+  "_updatedAt": "2026-08-25T07:41:21Z",
+  "articleNumber": 173,
+  "body": [
+    {
+      "_key": "b0",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b0s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Ngày 21 tháng 8 năm 2026, OpenAI chính thức cắt giảm giá API của GPT-5.6 Sol thêm một lần nữa: giá đầu vào giảm từ 5 xuống 4 USD mỗi triệu token, giá đầu ra giảm từ 30 xuống 20 USD, mức giảm hơn 20%, khuyến mãi kéo dài ít nhất đến ngày 21 tháng 11. Đây là bước tiếp theo sau lần giảm giá Terra (giảm 20%) và Luna (giảm 80%) vào ngày 30 tháng 7 — vòng giảm giá chính thức thứ hai của GPT-5.6 trong vòng hai tháng. Sau lần giảm giá này, giá niêm yết của Sol đã thấp hơn Claude Opus 5 (5 USD đầu vào / 25 USD đầu ra), nhưng điều đó không có nghĩa Sol tự động trở thành \"lựa chọn rẻ hơn\" — bạn vẫn cần xem xét Fast Mode, cache, giá ngữ cảnh dài và xử lý theo lô (Batch) mới tính được số tiền thực tế phải trả."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b1",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b1s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Bảng giá đầy đủ hiện tại của GPT-5.6: Sol, Terra và Luna"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "b2",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b2s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Dưới đây là giá chính thức mới nhất tính đến tháng 8 năm 2026 (mỗi triệu token, đơn vị USD, chế độ Standard):"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b3",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b3s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Ngữ cảnh ngắn (Short context):"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b4",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b4s1",
+          "_type": "span",
+          "marks": [],
+          "text": "GPT-5.6 Sol: đầu vào $4.00, đầu vào cache $0.40, ghi cache $5.00, đầu ra $20.00"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b5",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b5s1",
+          "_type": "span",
+          "marks": [],
+          "text": "GPT-5.6 Terra: đầu vào $2.00, đầu vào cache $0.20, ghi cache $2.50, đầu ra $12.00"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b6",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b6s1",
+          "_type": "span",
+          "marks": [],
+          "text": "GPT-5.6 Luna: đầu vào $0.20, đầu vào cache $0.02, ghi cache $0.25, đầu ra $1.20"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b7",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b7s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Ngữ cảnh dài (Long context, thường là các yêu cầu vượt một ngưỡng token nhất định):"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b8",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b8s1",
+          "_type": "span",
+          "marks": [],
+          "text": "GPT-5.6 Sol: đầu vào $8.00, đầu vào cache $0.80, ghi cache $10.00, đầu ra $30.00"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b9",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b9s1",
+          "_type": "span",
+          "marks": [],
+          "text": "GPT-5.6 Terra: đầu vào $4.00, đầu vào cache $0.40, ghi cache $5.00, đầu ra $18.00"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b10",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b10s1",
+          "_type": "span",
+          "marks": [],
+          "text": "GPT-5.6 Luna: đầu vào $0.40, đầu vào cache $0.04, ghi cache $0.50, đầu ra $1.80"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b11",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b11s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Bạn sẽ thấy giá đầu vào ở ngữ cảnh dài đúng bằng gấp đôi ngữ cảnh ngắn, nhưng đầu ra thì không tăng theo tỷ lệ tương ứng (ví dụ đầu ra của Sol chỉ tăng từ 20 lên 30, không phải 40). Điều này cho thấy OpenAI áp dụng logic tăng giá khác nhau giữa \"đầu ra dài hơn\" và \"đầu vào dài hơn\", vì vậy khi ước tính chi phí cho tài liệu dài hoặc cuộc hội thoại dài, bạn không thể chỉ đơn giản nhân hai."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b12",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b12s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Không phải lần giảm giá đầu tiên: Trong hai tháng, OpenAI đã hạ giá GPT-5.6 theo hai giai đoạn"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "b13",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b13s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Lần giảm giá này thực chất là hành động tiếp nối, không phải diễn ra một cách đơn lẻ:"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b14",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b14s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Ngày 30 tháng 7, OpenAI thông báo trên cộng đồng nhà phát triển rằng nhóm phát triển GPT-5.6 đã giao cho chính mô hình này tự tối ưu hiệu suất vận hành của mình, và đạt được hai kết quả: giảm 20% chi phí vận hành nhờ cải tiến GPU kernel trong môi trường sản xuất, và tăng hiệu suất sinh token hơn 15% nhờ cải tiến kỹ thuật giải mã dự đoán (speculative decoding). OpenAI đã trực tiếp chuyển những cải tiến hiệu suất này vào giá: Luna giảm 80%, Terra giảm 20%, đồng thời Sol có thêm Fast Mode (tốc độ tối đa gấp 2,5 lần Standard, với giá gấp đôi)."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b15",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b15s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Ngày 21 tháng 8, OpenAI tiếp tục thông báo rằng chính Sol sẽ giảm hơn 20% (đầu vào giảm 20%, đầu ra giảm 33%), và nêu rõ mức giảm này \"áp dụng cho Fast Mode, các yêu cầu ngữ cảnh dài, cũng như xử lý Batch và Flex\" — nghĩa là lần giảm giá này không chỉ cắt một mức giá đầu vào, mà là điều chỉnh toàn bộ đường cong giá cùng lúc. OpenAI cũng giải thích rằng việc điều chỉnh giá lần này \"bao gồm API, tín dụng Codex, và đang được mở rộng dần sang các gói ChatGPT Work đủ điều kiện\", nhưng giá của các gói đăng ký Pro, Plus và Business không thay đổi — điều này nhắc bạn rằng tính phí API và tính phí đăng ký tiêu dùng là hai hệ thống giá hoàn toàn độc lập; việc giảm giá ở một bên không tự động phản ánh sang bên còn lại."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b16",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b16s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Fast Mode (trước đây gọi là Priority): Đắt hơn Standard bao nhiêu, khi nào nên dùng"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "b17",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b17s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Fast Mode là tên gọi chính thức mới của \"xử lý Priority\" từ ngày 30 tháng 7 năm 2026. Trong các yêu cầu API, bạn vẫn có thể dùng `service_tier: \"priority\"`, hoặc đổi sang tên mới `service_tier: \"fast\"` — cả hai đều tương đương. Giá Fast Mode sau khi giảm (ngữ cảnh ngắn):"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b18",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b18s1",
+          "_type": "span",
+          "marks": [],
+          "text": "GPT-5.6 Sol: đầu vào $8.00, đầu vào cache $0.80, ghi cache $10.00, đầu ra $40.00"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b19",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b19s1",
+          "_type": "span",
+          "marks": [],
+          "text": "GPT-5.6 Terra: đầu vào $4.00, đầu vào cache $0.40, ghi cache $5.00, đầu ra $24.00"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b20",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b20s1",
+          "_type": "span",
+          "marks": [],
+          "text": "GPT-5.6 Luna: đầu vào $0.40, đầu vào cache $0.04, ghi cache $0.50, đầu ra $2.40"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b21",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b21s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Nói ngắn gọn: Fast Mode có giá gấp đôi Standard một cách đồng nhất, đổi lại bạn có tốc độ xử lý tối đa gấp 2,5 lần, mức độ thông minh của mô hình không thay đổi. Nếu ứng dụng của bạn là chăm sóc khách hàng theo thời gian thực hoặc tương tác giọng nói — nơi người dùng đang chờ đợi — thì trả thêm gấp đôi tiền để có độ trễ thấp hơn thường là đáng giá. Nếu là nhiệm vụ xử lý theo lô ở hậu trường, hoặc chạy báo cáo vào giờ thấp điểm, thì việc trả tiền để mua tốc độ sẽ không có ý nghĩa gì, lúc này nên chuyển sang Batch/Flex ở phần tiếp theo."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b22",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b22s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Batch và Flex: Giảm nửa giá, đổi lại phải chờ"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "b23",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b23s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Hai chế độ xử lý Batch và Flex có mức giá hoàn toàn giống nhau, đều giảm 50% so với Standard (ngữ cảnh ngắn):"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b24",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b24s1",
+          "_type": "span",
+          "marks": [],
+          "text": "GPT-5.6 Sol: đầu vào $2.00, đầu vào cache $0.20, ghi cache $2.50, đầu ra $10.00"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b25",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b25s1",
+          "_type": "span",
+          "marks": [],
+          "text": "GPT-5.6 Terra: đầu vào $1.00, đầu vào cache $0.10, ghi cache $1.25, đầu ra $6.00"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b26",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b26s1",
+          "_type": "span",
+          "marks": [],
+          "text": "GPT-5.6 Luna: đầu vào $0.10, đầu vào cache $0.01, ghi cache $0.125, đầu ra $0.60"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b27",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b27s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Sự khác biệt là Batch gửi một loạt yêu cầu không đồng bộ và chờ hoàn thành, phù hợp với các công việc như tổng hợp báo cáo, tóm tắt số lượng lớn tài liệu — những việc không cần thấy kết quả ngay lập tức. Flex là một chế độ xử lý linh hoạt chính thức khác của OpenAI, có giá giống Batch nhưng cách sử dụng khác. Cả hai đều không phù hợp với các tình huống cần phản hồi ngay lập tức cho người dùng."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b28",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b28s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Mô hình Cyber (Daybreak): Một bảng giá riêng, không phải ai cũng cần dùng đến"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "b29",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b29s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Họ mô hình GPT-5.6 còn có một nhánh độc lập gọi là mô hình Cyber, tương ứng với chương trình Daybreak của OpenAI, hiện chỉ có giá cho ngữ cảnh ngắn: GPT-5.6 Sol vẫn giữ ở mức $4.00 / $0.40 / $5.00 / $20.00 (giống Sol thông thường), còn GPT-5.6 Cyber có giá $12.50 đầu vào / $1.25 đầu vào cache / $15.625 ghi cache / $75.00 đầu ra — cao hơn rõ rệt, gấp nhiều lần. Tài liệu chính thức cũng chỉ ra rằng hai tên gọi thay thế (alias) `daybreak-blue-latest` và `daybreak-red-latest` hiện đang trỏ tới `gpt-5.6-sol` và `gpt-5.6-cyber` tương ứng, và sẽ được cập nhật — kèm theo giá được điều chỉnh — khi chương trình Daybreak cho ra mắt các mô hình mới. Nếu ứng dụng của bạn không liên quan đến đánh giá an ninh mạng, diễn tập red team hoặc các trường hợp sử dụng mục tiêu tương tự của chương trình Daybreak, thông thường bạn sẽ không cần đụng đến bảng giá của mô hình Cyber."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b30",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b30s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Khuyến mãi kéo dài đến ngày 21 tháng 11 năm 2026: Sau đó giá có tăng lại không"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "b31",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b31s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Tài liệu chính thức ghi rõ \"giá khuyến mãi của GPT-5.6 Sol sẽ được duy trì ít nhất đến ngày 21 tháng 11 năm 2026\" — chú ý cách dùng từ \"ít nhất\" ở đây, nghĩa là OpenAI không cam kết giá sẽ chắc chắn trở lại mức $5/$30 ban đầu sau khi khuyến mãi kết thúc, cũng không cam kết sẽ tiếp tục duy trì ở mức $4/$20. Trong các chuỗi thảo luận của cộng đồng nhà phát triển chính thức của OpenAI, các kỹ sư và nhà phát triển cũng có hai luồng ý kiến khác nhau: có người cho rằng áp lực cạnh tranh — đặc biệt từ các mô hình mã nguồn mở và cuộc chiến giá giữa các nhà cung cấp — sẽ khiến mức giảm giá này tiếp tục kéo dài; cũng có người cho rằng rất có thể trong 3 tháng nữa sẽ có một thế hệ mô hình mới ra mắt, và khi đó chiến lược giá của mô hình cũ tự nó cũng sẽ bị thay thế. Hiện tại chưa có thông báo chính thức nào để xác minh điều này, đây chỉ là suy đoán của cộng đồng, chứ không phải sự thật đã được xác nhận. Khi lập kế hoạch ngân sách cho giai đoạn sau tháng 11, bạn nên tính đến cả hai tình huống — \"giảm giá tiếp tục duy trì\" và \"giá trở lại như cũ\" — không nên chỉ đặt cược vào một khả năng duy nhất."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b32",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b32s1",
+          "_type": "span",
+          "marks": [],
+          "text": "GPT-5.6 Sol hiện tại có thực sự rẻ hơn Claude Opus 5 không"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "b33",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b33s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Đặt hai bảng giá chính thức cạnh nhau để so sánh: GPT-5.6 Sol (Standard, ngữ cảnh ngắn) có giá $4.00 đầu vào / $20.00 đầu ra; Claude Opus 5 (Standard) có giá $5 đầu vào / $25 đầu ra. Nếu chỉ nhìn vào giá niêm yết, Sol thực sự thấp hơn Opus 5 ở cả hai chiều đầu vào và đầu ra. Nhưng sự so sánh này có hai giới hạn bạn cần lưu ý: thứ nhất, hai bên sử dụng tokenizer khác nhau, cùng một đoạn văn bản sẽ không tạo ra số lượng token giống nhau trên Sol và Opus 5, giá niêm yết rẻ hơn không đảm bảo hóa đơn thực tế cho cùng một công việc sẽ thấp hơn. Thứ hai, Claude Opus 5 cung cấp mức giảm giá Batch 50% ($2.50 / $12.50) và giảm giá cache prompt lên đến 90%, trong khi mức giảm giá Batch của GPT-5.6 Sol cũng là 50% ($2.00 / $10.00), nhưng cấu trúc cache lại khác nhau (đầu vào cache của Sol bằng một phần mười giá chuẩn, còn việc đọc cache của Opus 5 bằng 0,1 lần giá đầu vào, và việc ghi cache thì bằng 1,25 lần hoặc 2 lần tùy theo là ghi trong 5 phút hay 1 giờ). Điều thực sự nên so sánh không phải là con số nổi bật trong thông báo chính thức, mà là hóa đơn thực tế phát sinh từ khối lượng công việc cụ thể của bạn."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b34",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b34s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Quyết định mua sắm doanh nghiệp: Tin giảm giá không có nghĩa bạn nên đổi mô hình ngay"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "b35",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b35s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Thấy tin giảm giá là muốn ngay lập tức đổi toàn bộ pipeline sang mô hình mới — đây là phản ứng dễ khiến bạn tốn nhiều tiền hơn nhất. Trước khi chuyển đổi, hãy xác nhận ba điều sau: khối lượng sử dụng hiện tại của bạn đang phân bố ở chế độ nào (Standard / Fast Mode / Batch), và liệu lần giảm giá này có thực sự bao gồm chế độ bạn đang dùng hay không; mức độ nhạy cảm của công việc bạn đối với độ trễ — nếu vốn là công việc chạy ở hậu trường, thì việc giảm giá Fast Mode thực ra không liên quan đến bạn; và liệu bạn có đang sử dụng tùy chọn Data Residency (lưu trữ dữ liệu theo khu vực) hay không. Tài liệu chính thức ghi rõ rằng các điểm cuối (endpoint) xử lý theo khu vực sẽ bị tính phụ phí 10% đối với các mô hình đủ điều kiện được phát hành từ ngày 5 tháng 3 năm 2026 trở đi, và họ mô hình GPT-5.6 nằm trong phạm vi này — vì vậy giá sau khi giảm cần nhân thêm 1,1 mới ra chi phí xử lý theo khu vực thực tế của bạn. Hãy tính rõ ba điều này trước khi quyết định có nên chuyển đổi pipeline hay không."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b36",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b36s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Câu hỏi thường gặp"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "b37",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b37s1",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "Câu 1: Sau lần giảm giá này, tín dụng ChatGPT Work hoặc Codex mà tôi đã mua trước đó có tự động rẻ hơn không?"
+        },
+        {
+          "_key": "b37s2",
+          "_type": "span",
+          "marks": [],
+          "text": " Thông báo chính thức ghi rằng lần giảm giá này \"bao gồm API, tín dụng Codex, và đang được mở rộng dần sang các gói ChatGPT Work đủ điều kiện\", nhưng giá của các gói đăng ký Pro, Plus và Business không thay đổi. Nghĩa là, nếu bạn dùng API hoặc tín dụng Codex, mức giảm giá thường sẽ tự động được áp dụng; nhưng nếu bạn là người dùng đăng ký, lần giảm giá này không ảnh hưởng đến chi phí đăng ký của bạn."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b38",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b38s1",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "Câu 2: Sau khi khuyến mãi kết thúc (ngày 21 tháng 11 năm 2026), giá có chắc chắn tăng lại lên $5/$30 không?"
+        },
+        {
+          "_key": "b38s2",
+          "_type": "span",
+          "marks": [],
+          "text": " Hiện tại OpenAI chưa công bố cách xử lý sau khi khuyến mãi kết thúc, chỉ nói rằng khuyến mãi sẽ duy trì \"ít nhất\" đến ngày đó. Đây là một sự kiện trong tương lai chưa được xác nhận, bạn có thể tham khảo nhưng không nên coi đó là sự thật chắc chắn để lập kế hoạch ngân sách dài hạn."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b39",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b39s1",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "Câu 3: Fast Mode có phải là cùng một thứ với xử lý Priority trước đây không?"
+        },
+        {
+          "_key": "b39s2",
+          "_type": "span",
+          "marks": [],
+          "text": " Đúng vậy. Tài liệu chính thức ghi rõ \"Priority processing was renamed Fast mode on July 30, 2026\" (xử lý Priority được đổi tên chính thức thành Fast Mode vào ngày 30 tháng 7 năm 2026). Tham số API `service_tier` vẫn có thể dùng `\"priority\"`, hoặc đổi sang tên mới `\"fast\"` — hiệu quả giống nhau."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b40",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b40s1",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "Câu 4: Lần giảm giá này có áp dụng cho Batch và ngữ cảnh dài không?"
+        },
+        {
+          "_key": "b40s2",
+          "_type": "span",
+          "marks": [],
+          "text": " Có áp dụng. Thông báo chính thức ngày 21 tháng 8 nêu rõ \"việc giảm giá cũng áp dụng cho Fast Mode, các yêu cầu ngữ cảnh dài, cũng như xử lý Batch và Flex\". Các mức giá của từng chế độ được liệt kê trong bài viết này đều đã là số liệu chính thức mới nhất sau khi giảm giá."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b41",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b41s1",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "Câu 5: GPT-5.6 Sol hiện tại có thực sự rẻ hơn Claude Opus 5 không?"
+        },
+        {
+          "_key": "b41s2",
+          "_type": "span",
+          "marks": [],
+          "text": " So sánh theo giá niêm yết chính thức, giá đầu vào và đầu ra của Sol đều thấp hơn Opus 5. Nhưng vì tokenizer của hai bên khác nhau, cấu trúc giảm giá cache và Batch cũng khác nhau, nên tổng chi phí thực tế cần dựa trên việc chạy thử với khối lượng công việc của riêng bạn, không thể chỉ nhìn vào đơn giá nổi bật trong tiêu đề."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b42",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b42s1",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "Câu 6: GPT-5.6 Cyber khác gì so với Sol thông thường, tôi có cần lưu ý không?"
+        },
+        {
+          "_key": "b42s2",
+          "_type": "span",
+          "marks": [],
+          "text": " Cyber là một nhánh mô hình độc lập tương ứng với chương trình Daybreak (liên quan đến đánh giá an ninh mạng), có giá cao hơn rõ rệt so với Sol thông thường (đầu ra lên đến $75), và hiện chỉ có giá cho ngữ cảnh ngắn. Nếu ứng dụng của bạn không liên quan đến đánh giá an ninh hoặc diễn tập red team, thông thường bạn sẽ không dùng đến và cũng không cần đặc biệt lưu ý đến mức giá này."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b43",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b43s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Công bố nguồn dữ liệu"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "b44",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b44s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Các số liệu trong bài viết này được xác minh tính đến ngày 25 tháng 8 năm 2026, dựa trên các nguồn chính thức sau:"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b45",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b45s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Trang giá chính thức của OpenAI, "
+        },
+        {
+          "_key": "b45s2",
+          "_type": "span",
+          "marks": [
+            "b45mk2"
+          ],
+          "text": "Pricing | OpenAI API"
+        },
+        {
+          "_key": "b45s3",
+          "_type": "span",
+          "marks": [],
+          "text": " (xác minh ngày 2026-08-25)"
+        }
+      ],
+      "markDefs": [
+        {
+          "_key": "b45mk2",
+          "_type": "link",
+          "href": "https://developers.openai.com/api/docs/pricing"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "b46",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b46s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Thông báo chính thức từ cộng đồng nhà phát triển OpenAI, \""
+        },
+        {
+          "_key": "b46s2",
+          "_type": "span",
+          "marks": [
+            "b46mk2"
+          ],
+          "text": "20% price reduction for GPT 5.6 Sol: API, Codex credits and ChatGPT Work"
+        },
+        {
+          "_key": "b46s3",
+          "_type": "span",
+          "marks": [],
+          "text": "\", công bố ngày 21 tháng 8 năm 2026 (xác minh ngày 2026-08-25)"
+        }
+      ],
+      "markDefs": [
+        {
+          "_key": "b46mk2",
+          "_type": "link",
+          "href": "https://community.openai.com/t/20-price-reduction-for-gpt-5-6-sol-api-codex-credits-and-chatgpt-work/1391726"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "b47",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b47s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Thông báo chính thức từ cộng đồng nhà phát triển OpenAI, \""
+        },
+        {
+          "_key": "b47s2",
+          "_type": "span",
+          "marks": [
+            "b47mk2"
+          ],
+          "text": "Announcing a major Price drop for 5.6 Terra and Luna and Fast mode for 5.6-Sol"
+        },
+        {
+          "_key": "b47s3",
+          "_type": "span",
+          "marks": [],
+          "text": "\", công bố ngày 30 tháng 7 năm 2026 (xác minh ngày 2026-08-25)"
+        }
+      ],
+      "markDefs": [
+        {
+          "_key": "b47mk2",
+          "_type": "link",
+          "href": "https://community.openai.com/t/announcing-a-major-price-drop-for-5-6-terra-and-luna-and-fast-mode-for-5-6-sol/1388484"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "b48",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b48s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Trang giá chính thức của Anthropic, "
+        },
+        {
+          "_key": "b48s2",
+          "_type": "span",
+          "marks": [
+            "b48mk2"
+          ],
+          "text": "Pricing - Claude Platform Docs"
+        },
+        {
+          "_key": "b48s3",
+          "_type": "span",
+          "marks": [],
+          "text": " (xác minh ngày 2026-08-25), được dùng làm cơ sở cho các số liệu so sánh với Claude Opus 5"
+        }
+      ],
+      "markDefs": [
+        {
+          "_key": "b48mk2",
+          "_type": "link",
+          "href": "https://platform.claude.com/docs/en/about-claude/pricing"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "b49",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b49s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Nếu bạn đang đánh giá xem lần giảm giá này có đủ để điều chỉnh tổ hợp mô hình của mình hay không, hoặc muốn hiểu rõ chính xác lượng token bạn đang dùng đã đi vào đâu, hãy truy cập "
+        },
+        {
+          "_key": "b49s2",
+          "_type": "span",
+          "marks": [
+            "b49mk2"
+          ],
+          "text": "Ai Token"
+        },
+        {
+          "_key": "b49s3",
+          "_type": "span",
+          "marks": [],
+          "text": " để dùng thử miễn phí — hiểu rõ hóa đơn của bạn trước, rồi mới quyết định có nên chuyển đổi hay không."
+        }
+      ],
+      "markDefs": [
+        {
+          "_key": "b49mk2",
+          "_type": "link",
+          "href": "https://www.aitokenking.com.tw/home"
+        }
+      ],
+      "style": "normal"
+    }
+  ],
+  "category": "pricing",
+  "coverImage": {
+    "_type": "image",
+    "alt": "Hình minh họa isometric về mạng AI kết nối với lưu trữ dữ liệu, cán cân và biểu đồ giá — thể hiện việc so sánh chi phí giữa các mô hình AI.",
+    "asset": {
+      "_ref": "image-c05eb2464fcbb0d8c109d2502c28ab890d57c0d0-1376x768-jpg",
+      "_type": "reference"
+    }
+  },
+  "difficultyLevel": "intermediate",
+  "excerpt": "Ngày 21/8, OpenAI tiếp tục giảm giá API của GPT-5.6 Sol — vòng giảm giá thứ hai trong hai tháng. Giá niêm yết của Sol hiện đã thấp hơn Claude Opus 5, nhưng Fast Mode, cache và Batch mới quyết định số tiền bạn thực sự phải trả.",
+  "focusKeyword": "giá GPT-5.6 so với Claude Opus 5",
+  "generatedByPipeline": false,
+  "language": "vi",
+  "publishedAt": "2026-08-25T07:00:00.000Z",
+  "readTime": 9,
+  "secondaryKeywords": [
+    "giá GPT-5.6 Sol",
+    "giá Claude Opus 5",
+    "so sánh chi phí API AI",
+    "giảm giá OpenAI 2026",
+    "giá Fast Mode và Batch"
+  ],
+  "seo": {
+    "seoDescription": "OpenAI tiếp tục giảm giá GPT-5.6 Sol vào 21/8/2026. Bảng giá đầy đủ Sol/Terra/Luna, Fast Mode, Batch, và so sánh thực tế với Claude Opus 5.",
+    "seoTitle": "Giảm giá GPT-5.6 2026 so với Claude Opus 5: Bảng giá đầy đủ"
+  },
+  "slug": {
+    "_type": "slug",
+    "current": "gpt-5-6-sol-price-cut-2026-vs-claude-opus-5"
+  },
+  "sourceUrl": "https://community.openai.com/t/20-price-reduction-for-gpt-5-6-sol-api-codex-credits-and-chatgpt-work/1391726",
+  "tags": [
+    "giá GPT-5.6",
+    "Claude Opus 5",
+    "so sánh chi phí AI",
+    "giảm giá OpenAI"
+  ],
+  "title": "GPT-5.6 giảm giá toàn diện: Sol giảm hơn 20%, Terra giảm 20%, Luna giảm 80% — Liệu đã rẻ hơn Claude Opus 5 chưa?",
+  "translationKey": "fafa6a9b-de6b-4f03-8278-a230e528b773"
+}

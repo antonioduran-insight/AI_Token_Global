@@ -322,7 +322,7 @@ function sideIn(slice, fromEnd) {
  * $12.00 to output, not to the Input that starts the next row.
  */
 function sideOf(text, start, end) {
-  const right = text.slice(end, end + 30).split(/[$,;:\n.()]/)[0];
+  const right = text.slice(end, end + 40).split(/[$,;:\n.()]/)[0];
   const left = text.slice(Math.max(0, start - 25), start).split(/[$,;:\n.()]/).pop();
   return sideIn(right, false) ?? sideIn(left, true);
 }
