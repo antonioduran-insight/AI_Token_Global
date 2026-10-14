@@ -513,4 +513,6 @@ body::before {
   .faq-answer.open { animation: none; }
   .mobile-nav-panel { transition: none; }
   .blob-1, .blob-2, .blob-3, .blob-4, .blob-5 { animation: none; }
+  .post-tools .tool-card, .post-tools .tool-arrow, .newsletter-banner .newsletter-form button { transition: none; }
+  .post-tools .tool-card:hover, .post-tools .tool-card:hover .tool-arrow, .newsletter-banner .newsletter-form button:hover { transform: none; }
 }

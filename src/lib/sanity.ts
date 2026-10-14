@@ -1,4 +1,5 @@
 import { createClient } from '@sanity/client';
+import { planRelated, type RelatedPlan, type RelatedSource } from './related-posts';
 
 export interface SeoData {
   seoTitle?: string;
@@ -113,30 +114,42 @@ export async function getPostBySlug(slug: string, lang: string): Promise<SanityP
   );
 }
 
-export async function getRelatedPosts(currentSlug: string, lang: string, category: string | undefined, limit = 3): Promise<SanityPost[]> {
-  const client = getClient();
-  if (!client) return [];
-  // Prefer same-category posts; fall back to other recent posts in the same language.
-  const sameCat = category
-    ? await client.fetch(
-        `*[_type == "post" && language == $lang && category == $category && slug.current != $currentSlug] | order(publishedAt desc, articleNumber asc) [0...$limit] {
-          _id, title, slug, publishedAt, excerpt, tags, category, articleNumber, language,
-          coverImage { asset -> { url } }
-        }`,
-        { lang, category, currentSlug, limit }
-      )
-    : [];
-  if (sameCat.length >= limit) return sameCat;
-  const remaining = limit - sameCat.length;
-  const fillerSlugs = [currentSlug, ...sameCat.map((p: SanityPost) => p.slug.current)];
-  const fillers = await client.fetch(
-    `*[_type == "post" && language == $lang && !(slug.current in $excluded)] | order(publishedAt desc, articleNumber asc) [0...$limit] {
-      _id, title, slug, publishedAt, excerpt, tags, category, articleNumber, language,
-      coverImage { asset -> { url } }
-    }`,
-    { lang, excluded: fillerSlugs, limit: remaining }
-  );
-  return [...sameCat, ...fillers];
+// One related-posts plan per locale per build (see lib/related-posts.ts): every
+// page of the locale reads its row, so slots can be spread across the locale.
+const relatedPlans = new Map<string, Promise<RelatedPlan>>();
+
+function relatedPlanFor(lang: string): Promise<RelatedPlan> {
+  if (!relatedPlans.has(lang)) {
+    relatedPlans.set(lang, (async () => {
+      const client = getClient();
+      const posts: RelatedSource[] = client
+        ? await client.fetch(
+            `*[_type == "post" && language == $lang] {
+              _id, title, slug, publishedAt, excerpt, tags, category, articleNumber, language,
+              coverImage { asset -> { url } },
+              "text": pt::text(body),
+              "hrefs": body[].markDefs[].href
+            }`,
+            { lang }
+          )
+        : [];
+      const plan = planRelated(lang, posts);
+      console.log(plan.stats);
+      return plan;
+    })());
+  }
+  return relatedPlans.get(lang)!;
+}
+
+/**
+ * The related articles for one post: same locale, same category first, then
+ * topic overlap; thin and wrong-language posts never picked; slots spread so
+ * no post is shown everywhere. `category` is unused now (the plan knows each
+ * post's category) and kept so callers do not change.
+ */
+export async function getRelatedPosts(currentSlug: string, lang: string, _category: string | undefined, limit = 3): Promise<SanityPost[]> {
+  const plan = await relatedPlanFor(lang);
+  return (plan.bySlug.get(currentSlug) ?? []).slice(0, limit) as unknown as SanityPost[];
 }
 
 export async function getAllPostSlugs(): Promise<{ slug: string; lang: string }[]> {

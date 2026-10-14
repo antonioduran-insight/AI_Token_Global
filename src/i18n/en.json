@@ -86,7 +86,11 @@
       "models": "Model Comparisons",
       "platform": "AI Platforms & Tools",
       "tutorials": "Tutorials"
-    }
+    },
+    "toolsHeading": "Useful tools",
+    "toolCalculatorDesc": "Estimate what a prompt costs",
+    "toolCompareDesc": "Current prices, model by model",
+    "toolGuideDesc": "Start here if tokens are new to you"
   },
   "lang": {
     "selectLanguage": "Select language",
