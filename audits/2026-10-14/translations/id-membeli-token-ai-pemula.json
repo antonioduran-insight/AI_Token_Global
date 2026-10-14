@@ -1,0 +1,76 @@
+{
+  "_id": "yOXF1XBkRH6Ae7xNfilhJt",
+  "locale": "id",
+  "slug": "membeli-token-ai-pemula",
+  "sourceRev": "5bTmGH4csQ2ze7LA781WG3",
+  "note": "Translated from this post's own live body at sourceRev; the patch refuses to write if the post has changed since.",
+  "spans": {
+    "5wvlvfsj": {
+      "5wvlvfsjc": "Membeli token AI bisa terasa membingungkan, terutama bagi kamu yang baru mengenal teknologi kecerdasan buatan (AI). Konsep token mungkin masih asing, sehingga muncul kebingungan tentang cara kerjanya dan manfaat yang ditawarkannya. Dalam artikel ini, kita akan menjelajahi dunia token AI, mulai dari model harga, penagihan API, hingga penggunaan token. Di akhir panduan ini, kamu akan memahami dengan baik cara membeli dan menggunakan token AI secara efektif untuk keperluan pribadi."
+    },
+    "rp2qmg1x": {
+      "rp2qmg1xc": "Memahami Token AI"
+    },
+    "mynv1su2": {
+      "mynv1su2c": "Token AI bukanlah produk yang dibeli; token adalah metode pembayaran untuk mengakses layanan API. Anggap saja token sebagai mata uang yang memungkinkan kamu memakai berbagai model dan alat AI yang disediakan oleh platform. Setiap platform punya sistem penagihan dan kredit yang berbeda, sehingga pemula sering bingung memahami cara kerja harga berbasis token."
+    },
+    "f9ai9hem": {
+      "f9ai9hemc": "Untuk memperjelas konsepnya, bayangkan kamu berlangganan layanan streaming. Kamu membayar biaya bulanan, lalu mendapat akses ke koleksi konten. Begitu juga dengan token AI: token menjadi mata uangmu saat berinteraksi dengan platform AI. Saat membeli token, pada dasarnya kamu membayar hak untuk menggunakan layanan AI tertentu di platform tersebut."
+    },
+    "q25dcuc2": {
+      "q25dcuc2c": "Token vs. Kunci API"
+    },
+    "sv528p7u": {
+      "sv528p7uc": "Penting untuk membedakan token AI dan kunci API. Keduanya sama-sama dipakai untuk mengakses layanan AI, tetapi fungsinya berbeda. Token adalah bentuk pembayaran, sedangkan kunci API memberikan akses ke API tertentu tanpa memerlukan pembayaran tambahan."
+    },
+    "gf6ye960": {
+      "gf6ye960c": "Model Harga Token AI"
+    },
+    "rrfl7wx8": {
+      "rrfl7wx8c": "Platform menggunakan berbagai model harga untuk token AI, termasuk tarif tetap, sistem bertingkat, dan bayar sesuai pemakaian (pay-as-you-go). Setiap model punya kelebihan dan kekurangan, jadi penting untuk memahami detailnya sebelum memilih platform."
+    },
+    "cmow8c1d": {
+      "cmow8c1dc": "Mari kita lihat sebuah contoh. Misalnya kamu ingin menggunakan model text-to-image. Platform tersebut menawarkan dua pilihan harga: $10 untuk 100 token atau $50 untuk 500 token. Jika kamu berencana memakai layanan ini secara intensif, membeli 500 token di muka mungkin lebih hemat."
+    },
+    "ujwgen9n": {
+      "ujwgen9nc": "Namun, jika kamu belum yakin seberapa sering akan memakainya, model pay-as-you-go lebih cocok. Dengan begitu, kamu hanya membayar token yang benar-benar kamu butuhkan dan terhindar dari pengeluaran yang tidak perlu."
+    },
+    "hcqzkoab": {
+      "hcqzkoabc": "Sistem Penagihan dan Kredit API"
+    },
+    "kcpy7ea0": {
+      "kcpy7ea0c": "Setiap platform punya sistem penagihan dan kredit yang unik, yang bisa terasa membingungkan bagi pemula. Beberapa platform menawarkan sistem berbasis kredit, di mana kamu membeli token atau kredit di muka. Platform lain memakai sistem berbasis token, di mana kamu membayar setiap permintaan secara terpisah."
+    },
+    "94vhyrzk": {
+      "94vhyrzkc": "Untuk menggambarkan konsep ini, bayangkan sebuah platform yang mengenakan biaya $0.10 per token. Jika kamu perlu membuat 100 permintaan dengan model text-to-image, total biayanya adalah $10 (100 token x $0.10/token)."
+    },
+    "mi6nf6wt": {
+      "mi6nf6wtc": "Memilih Platform yang Tepat"
+    },
+    "wl7slhso": {
+      "wl7slhsoc": "Dengan banyaknya platform yang menawarkan harga berbasis token AI, memilih yang tepat bisa jadi tantangan. Pertimbangkan faktor-faktor seperti model harga, sistem penagihan API, dan alat yang tersedia saat mengambil keputusan."
+    },
+    "u2gx7sq9": {
+      "u2gx7sq9c": "Beberapa platform memang ditujukan untuk pemula dan menawarkan pendekatan harga berbasis token yang lebih sederhana. Carilah platform dengan dokumentasi yang jelas, antarmuka yang intuitif, dan sumber dukungan yang lengkap."
+    },
+    "neakjqcy": {
+      "neakjqcyc": "Membandingkan Pilihan Platform"
+    },
+    "cvx3nxea": {
+      "cvx3nxeac": "Mari bandingkan dua platform populer: Opsi A menawarkan tarif tetap $10 untuk 100 token, sedangkan Opsi B memakai sistem bertingkat dengan harga yang naik seiring makin banyak token yang kamu gunakan. Jika kamu memperkirakan akan sering memakai layanan ini, Opsi A mungkin pilihan yang lebih baik."
+    },
+    "kpw67wgl": {
+      "kpw67wglc": "Kesimpulan dan Langkah Selanjutnya"
+    },
+    "gt3idvo1": {
+      "gt3idvo1c": "Membeli token AI untuk keperluan pribadi menuntut pemahaman dasar tentang harga berbasis token, sistem penagihan API, dan platform yang tersedia. Dengan mengikuti panduan ini, kamu akan siap menjelajahi dunia token AI dan membuat keputusan yang tepat tentang pemakaianmu."
+    },
+    "aynxh0e0": {
+      "aynxh0e0c": "Untuk memulai, pelajari berbagai platform beserta model harganya. Pertimbangkan kebutuhanmu dan pilih platform yang sesuai dengan harapanmu. Ingat, penting untuk memahami konsep dasarnya sebelum melakukan investasi yang besar."
+    },
+    "qba6atr1": {
+      "qba6atr1c": "Pada akhirnya, membeli token AI tidak serumit kelihatannya. Dengan memahami dasar-dasar harga berbasis token dan sistem penagihan API, kamu bisa memanfaatkan kekuatan teknologi AI untuk keperluan pribadi. Mulailah perjalananmu hari ini!"
+    }
+  },
+  "reviewNotes": "Informal \"kamu\", the register of the site UI and of 29 of 37 id posts that use one. \"API key\" → \"kunci API\", as in the id titles. \"pay-as-you-go\" and \"text-to-image\" kept as English terms. The price figures are unchanged, including the three that imply $0.10 per token (see the price table)."
+}

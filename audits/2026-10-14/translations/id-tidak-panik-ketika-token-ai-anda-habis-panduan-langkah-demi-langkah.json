@@ -1,0 +1,70 @@
+{
+  "_id": "5bTmGH4csQ2ze7LA77op7J",
+  "locale": "id",
+  "slug": "tidak-panik-ketika-token-ai-anda-habis-panduan-langkah-demi-langkah",
+  "sourceRev": "yOXF1XBkRH6Ae7xNfigsm5",
+  "note": "Translated from this post's own live body at sourceRev; the patch refuses to write if the post has changed since.",
+  "spans": {
+    "tkncaafy": {
+      "tkncaafyc": "Sebagai kreator konten atau pengguna baru teknologi AI, memahami seluk-beluk token AI bisa terasa membingungkan. Salah satu masalah yang sering muncul adalah token AI yang tiba-tiba habis. Daripada panik, yang penting adalah memahami dan mengelola batas pemakaianmu dengan baik."
+    },
+    "ka7wq4z1": {
+      "ka7wq4z1c": "Mengenali Jenis Batas Penyebab Masalah"
+    },
+    "die5ufgf": {
+      "die5ufgfc": "Sebelum mulai mencari solusi, penting untuk mengenali jenis batas yang menyebabkan masalah. Bisa berupa kuota, rate limit, tingkatan penagihan (billing tier), atau masalah izin model."
+    },
+    "m55wh5kx": {
+      "m55wh5kxc": "Misalnya, batas kuota biasanya ditetapkan pada jumlah total token yang bisa kamu pakai dalam jangka waktu tertentu, sedangkan rate limit membatasi jumlah permintaan yang bisa kamu kirim per detik. Dengan memahami jenis batasnya, kamu bisa menangani masalah dengan lebih efisien."
+    },
+    "w06j02kh": {
+      "w06j02khc": "Memeriksa Batas Kuota"
+    },
+    "uuh492ut": {
+      "uuh492utc": "Batas kuota sering kali membingungkan. Untuk memeriksa kuotamu saat ini, masuk ke akun platform AI-mu lalu buka bagian pemakaian (usage) atau penagihan (billing)."
+    },
+    "t9qdaf81": {
+      "t9qdaf81c": "Di sana kamu akan menemukan informasi tentang total pemakaian token, sisa token, serta peringatan atau notifikasi terkait batas kuota. Pastikan kamu rutin memeriksa detail ini agar token tidak habis secara tiba-tiba."
+    },
+    "nq0wf6n8": {
+      "nq0wf6n8c": "Memahami Rate Limit"
+    },
+    "vteto917": {
+      "vteto917c": "Rate limit dirancang untuk mencegah penyalahgunaan dan memastikan sumber daya AI dipakai secara adil. Saat menyiapkan model AI, kamu perlu mengatur rate limit sesuai kebutuhanmu."
+    },
+    "9aqypug0": {
+      "9aqypug0c": "Misalnya, jika kamu membangun aplikasi dengan lalu lintas tinggi, kamu mungkin butuh rate limit yang lebih tinggi untuk menampung permintaan yang meningkat. Sebaliknya, untuk proyek kecil atau pemakaian rendah, rate limit yang lebih rendah sudah cukup."
+    },
+    "ar6913sy": {
+      "ar6913syc": "Masalah Tingkatan Penagihan dan Izin Model"
+    },
+    "0f8y5tdg": {
+      "0f8y5tdgc": "Aspek penting lain yang perlu diperhatikan adalah tingkatan penagihanmu. Tergantung platform AI-nya, setiap tingkatan menawarkan jatah token, kapasitas penyimpanan, atau sumber daya lain yang berbeda-beda."
+    },
+    "pspm4drf": {
+      "pspm4drfc": "Masalah izin model juga bisa memengaruhi pemakaian tokenmu. Pastikan kamu memeriksa pengaturan model dan memiliki izin yang diperlukan untuk mengakses dan menggunakan token yang dibutuhkan."
+    },
+    "fzeaxf05": {
+      "fzeaxf05c": "Membedakan Kredit, Spend Cap, dan Batas Pengeluaran Bulanan"
+    },
+    "n6gussf0": {
+      "n6gussf0c": "Agar tidak bingung, penting untuk memahami perbedaan antara kredit, spend cap, dan batas pengeluaran bulanan."
+    },
+    "c502t06g": {
+      "c502t06gc": "Kredit adalah jatah token tertentu dalam siklus penagihanmu, sedangkan spend cap adalah jumlah maksimum yang bisa kamu belanjakan untuk sumber daya AI per bulan. Sementara itu, batas pengeluaran bulanan menentukan jumlah total token yang bisa kamu pakai dalam satu bulan kalender."
+    },
+    "3fojjijb": {
+      "3fojjijbc": "Kesimpulan Praktis: Langkah Selanjutnya Mengatasi Masalah Token AI"
+    },
+    "oewpok2b": {
+      "oewpok2bc": "Dengan mengikuti langkah-langkah dalam panduan ini, kamu akan siap mengatasi masalah dan mengelola batas pemakaian token AI-mu secara efektif."
+    },
+    "qslnximj": {
+      "qslnximjc": "Singkatnya: kenali jenis batas yang menyebabkan masalah, periksa batas kuota, pahami rate limit, dan pastikan kamu berada di tingkatan penagihan yang tepat dengan izin model yang diperlukan. Membedakan kredit, spend cap, dan batas pengeluaran bulanan juga akan membantu mencegah masalah terkait token."
+    },
+    "9rykfhdm": {
+      "9rykfhdmc": "Ingat, sedikit perencanaan dan pengelolaan yang proaktif sangat membantu untuk menghindari masalah token AI. Jangan panik saat token AI-mu habis — kendalikan batas pemakaianmu mulai hari ini!"
+    }
+  },
+  "reviewNotes": "Body uses \"kamu\"; the existing title keeps formal \"Anda\" (titles are not touched). \"rate limit\" and \"spend cap\" kept as the English platform terms, with \"billing tier\" glossed once as \"tingkatan penagihan\"."
+}

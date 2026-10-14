@@ -1,0 +1,70 @@
+{
+  "_id": "g3jTIj9ubDWnGQfo9PiaNE",
+  "locale": "id",
+  "slug": "mendapatkan-kunci-api-chatgpt-panduan-langkah-demi-langkah",
+  "sourceRev": "yOXF1XBkRH6Ae7xNfhrdul",
+  "note": "Translated from this post's own live body at sourceRev; the patch refuses to write if the post has changed since.",
+  "spans": {
+    "tfzek00h": {
+      "tfzek00hc": "Mendapatkan kunci API ChatGPT adalah langkah penting untuk memaksimalkan potensi model bahasa canggih dari OpenAI. Namun, banyak pengembang kesulitan memahami proses pengajuan dan persyaratannya. Dalam artikel ini, kami menyajikan panduan langkah demi langkah yang jelas dan ringkas tentang cara mendapatkan kunci API ChatGPT, sekaligus meluruskan salah paham dan kebingungan yang sering muncul."
+    },
+    "reqm7e9z": {
+      "reqm7e9zc": "Memahami Dasar-Dasar Kunci API ChatGPT"
+    },
+    "qsik9u1z": {
+      "qsik9u1zc": "Sebelum masuk ke proses pengajuan, penting untuk dipahami bahwa akun ChatGPT tidak otomatis memberikan akses ke API. Kunci API ChatGPT adalah hal terpisah yang harus dibuat di OpenAI API Platform."
+    },
+    "a2ro3yc6": {
+      "a2ro3yc6c": "Untuk membuat kunci API, kamu perlu membuka dashboard OpenAI lalu mengikuti petunjuk untuk membuat kunci baru. Proses ini biasanya meliputi pengisian beberapa informasi dasar tentang proyekmu dan persetujuan terhadap ketentuan layanan OpenAI."
+    },
+    "wnpult1r": {
+      "wnpult1rc": "Persyaratan Kunci API"
+    },
+    "au6lwna0": {
+      "au6lwna0c": "Saat mengajukan kunci API ChatGPT, kamu perlu memberikan beberapa detail penting. Di antaranya nama dan deskripsi proyekmu, serta informasi tentang rencana penggunaan API."
+    },
+    "c5583jft": {
+      "c5583jftc": "Membuat Kunci API ChatGPT"
+    },
+    "oa75zd4o": {
+      "oa75zd4oc": "Setelah kamu memberikan informasi yang diperlukan, OpenAI akan meninjau pengajuanmu dan memberimu kunci API yang unik. Kunci ini penting untuk mengautentikasi permintaan ke ChatGPT API."
+    },
+    "kv8vrqax": {
+      "kv8vrqaxc": "Saat membuat kunci API, kamu bisa memilih di antara beberapa tingkatan harga. Biaya penggunaan ChatGPT API bervariasi tergantung jumlah token yang diminta per bulan, jadi penting untuk memahami kebutuhan proyekmu sebelum memilih paket."
+    },
+    "l1vj8x87": {
+      "l1vj8x87c": "Memahami Harga Berbasis Token"
+    },
+    "9bsas1eq": {
+      "9bsas1eqc": "ChatGPT API menggunakan model harga berbasis token. Artinya, kamu dikenakan biaya berdasarkan jumlah token yang diminta, bukan per jam atau per bulan."
+    },
+    "i8dlt3bn": {
+      "i8dlt3bnc": "Mengelola Kunci API ChatGPT"
+    },
+    "ba6uhjqh": {
+      "ba6uhjqhc": "Setelah memiliki kunci API ChatGPT, penting untuk mengelola akses dan pemakaiannya. Ini termasuk mengatur izin dan batas di tingkat proyek agar kunci API-mu hanya dipakai untuk tujuan yang disetujui."
+    },
+    "ccpdj32v": {
+      "ccpdj32vc": "Saat mengelola kunci API, kamu perlu memperhatikan hal-hal seperti perhitungan token, caching, dan layanan proxy. Dengan memahami konsep-konsep ini, kamu bisa mengoptimalkan pemakaian API dan menghindari tagihan yang tidak terduga."
+    },
+    "0gwgp2u9": {
+      "0gwgp2u9c": "Layanan Proxy"
+    },
+    "89d4jwh6": {
+      "89d4jwh6c": "Salah satu masalah yang sering muncul saat bekerja dengan ChatGPT API adalah penggunaan layanan proxy. Server proxy berperan sebagai perantara antara aplikasimu dan OpenAI API, membantu mengatur lalu lintas dan permintaan."
+    },
+    "3sqgcvvs": {
+      "3sqgcvvsc": "Kesimpulan dan Langkah Selanjutnya"
+    },
+    "66y0ho8b": {
+      "66y0ho8bc": "Sebagai kesimpulan, mendapatkan kunci API ChatGPT adalah proses yang sederhana, asalkan kamu memahami persyaratan pengajuannya serta mengelola akses dan pemakaiannya."
+    },
+    "wv9mqne4": {
+      "wv9mqne4c": "Dengan mengikuti panduan langkah demi langkah ini, kamu bisa memaksimalkan potensi model bahasa dari OpenAI dan mengintegrasikannya ke dalam aplikasi atau proyekmu. Jangan lupa untuk rutin meninjau pengaturan pengelolaan kunci API agar proyekmu tetap sesuai dengan ketentuan layanan OpenAI."
+    },
+    "v9ee7cnx": {
+      "v9ee7cnxc": "Jika kamu baru mulai bekerja dengan API, kami sarankan memulai dengan paket dasar lalu meningkatkannya secara bertahap sesuai kebutuhan. Selain itu, pastikan kamu membaca dokumentasi OpenAI tentang perhitungan token dan caching untuk mengoptimalkan pemakaian API."
+    }
+  },
+  "reviewNotes": "\"kunci API\" as in the title. \"dashboard\" and \"OpenAI API Platform\" kept as UI or product names."
+}

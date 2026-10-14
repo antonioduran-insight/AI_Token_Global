@@ -1,0 +1,73 @@
+{
+  "_id": "g3jTIj9ubDWnGQfo9P3OxI",
+  "locale": "id",
+  "slug": "harga-token-claude-antropik-api",
+  "sourceRev": "lT0MJhwbFtcMofmR8I78GR",
+  "note": "Translated from this post's own live body at sourceRev; the patch refuses to write if the post has changed since.",
+  "spans": {
+    "kz6pht8m": {
+      "kz6pht8mc": "Saat mulai menjelajahi teknologi AI dengan Claude API dari Anthropic, ada satu aspek penting yang langsung menonjol: harga token. Namun, memahami harga token Claude bukan sekadar menghitung angka; kamu perlu mendalami seluk-beluk token input, token output, dan prompt caching. Dalam panduan lengkap ini, kita akan mengurai halaman harga resminya, melihat penerapannya di dunia nyata, dan memberikan tips praktis untuk membantumu memaksimalkan efisiensi model AI."
+    },
+    "9mh6uaf3": {
+      "9mh6uaf3c": "Mengurai Harga Token Claude"
+    },
+    "gg0kx2ek": {
+      "gg0kx2ekc": "Halaman harga Anthropic membagi biaya ke dalam empat kategori utama: Base Input Tokens, Cache Writes, Cache Hits & Refreshes, dan Output Tokens. Setiap kategori mewakili aspek yang berbeda dari interaksimu dengan API."
+    },
+    "ypfzlmkv": {
+      "ypfzlmkvc": "Mari mulai dari dasarnya. Saat kamu berinteraksi dengan Claude API, setiap token input terkait dengan satu prompt atau kueri. Semakin rumit atau detail prompt-mu, semakin banyak token yang dibutuhkan. Sementara itu, token output berkaitan dengan jumlah teks hasil olahan yang dikembalikan oleh model."
+    },
+    "156uihfy": {
+      "156uihfyc": "Perhitungan Token"
+    },
+    "u0iww5yn": {
+      "u0iww5ync": "Agar lebih jelas, mari lihat sebuah contoh. Misalnya model AI-mu memproses 1,000 token per menit, dan setiap token berharga $0.05. Jika kamu menjalankan model selama 10 menit, total biayanya sekitar $50."
+    },
+    "3zahpe0q": {
+      "3zahpe0qc": "Kekuatan Prompt Caching"
+    },
+    "fjcj7mf9": {
+      "fjcj7mf9c": "Salah satu keuntungan terbesar menggunakan Claude API adalah kemampuannya menyimpan prompt dalam cache. Fitur ini memungkinkan kamu menyimpan prompt yang sering dipakai, sehingga kebutuhan token input baru berkurang dan biayamu pun turun."
+    },
+    "37kylkse": {
+      "37kylksec": "Mari lihat lebih dekat cara kerja prompt caching. Misalnya kamu punya tugas yang memerlukan beberapa kali pengulangan prompt yang sama. Alih-alih membuat instance baru setiap kali, kamu bisa menyimpan prompt aslinya di cache. Cara ini mengurangi jumlah token input yang dibutuhkan dan menekan biayamu."
+    },
+    "2ujxsolw": {
+      "2ujxsolwc": "Untuk menggambarkan konsep ini lebih jauh, bayangkan seorang penulis konten yang menggunakan Claude API untuk membuat deskripsi produk. Model menerima satu prompt untuk setiap deskripsi, tetapi karena prompt-nya tersimpan di cache, biaya per token turun cukup signifikan seiring penulis terus membuat deskripsi."
+    },
+    "43ffhrek": {
+      "43ffhrekc": "Memilih Paket Harga yang Tepat"
+    },
+    "st2gozbl": {
+      "st2gozblc": "Setelah memahami harga token Claude dengan baik, saatnya memilih paket yang sesuai dengan kebutuhanmu. Perhatikan pola pemakaianmu dan jumlah token yang dibutuhkan per tugas. Jika kamu menjalankan tugas dengan input besar dan prompt yang rumit, carilah paket yang menawarkan tarif diskon untuk pembelian token dalam jumlah besar."
+    },
+    "zmx0jb33": {
+      "zmx0jb33c": "Faktor penting lainnya adalah token output. Pikirkan berapa banyak teks yang dihasilkan modelmu. Jika jumlahnya besar, bersiaplah untuk membayar lebih. Carilah paket dengan tingkatan harga fleksibel berdasarkan volume output, atau sesuaikan dengan kebutuhan spesifikmu."
+    },
+    "ap1f1lnf": {
+      "ap1f1lnfc": "API vs Proxy"
+    },
+    "02iwcvv0": {
+      "02iwcvv0c": "Saat bekerja dengan Claude API, kamu mungkin dihadapkan pada pilihan antara menggunakan API secara langsung atau memakai layanan proxy. Proxy memang bisa menambah lapisan keamanan atau menyederhanakan interaksi, tetapi juga menambah biaya."
+    },
+    "841s1g3r": {
+      "841s1g3rc": "Claude API untuk Tugas Berskala Besar"
+    },
+    "dbthhepy": {
+      "dbthhepyc": "Claude API sangat cocok untuk tugas berskala besar, seperti pemrosesan batch atau pembuatan konten panjang. Dalam skenario seperti ini, prompt caching menjadi semakin penting untuk menekan biaya."
+    },
+    "z0xuw5k3": {
+      "z0xuw5k3c": "Sebagai contoh, bayangkan tim pemasaran yang menggunakan Claude API untuk membuat ribuan deskripsi produk setiap hari. Dengan memanfaatkan prompt caching dan memilih paket harga yang tepat, mereka bisa mengoptimalkan efisiensi model AI dan tetap sesuai anggaran."
+    },
+    "e3dexthw": {
+      "e3dexthwc": "Kesimpulan"
+    },
+    "sa83q7pq": {
+      "sa83q7pqc": "Memahami harga token Claude adalah langkah penting untuk memaksimalkan potensi model AI-mu. Dengan mengurai halaman harga resmi ke dalam komponen utamanya—token input, token output, dan prompt caching—serta mempertimbangkan penerapannya di dunia nyata, kamu bisa membuat keputusan yang tepat tentang interaksimu dengan API."
+    },
+    "pbmdlsbi": {
+      "pbmdlsbic": "Ingatlah untuk menimbang pola pemakaianmu terhadap struktur biaya berbagai paket. Pertimbangkan layanan proxy untuk keamanan atau kemudahan tambahan jika diperlukan, tetapi tetap perhatikan dampaknya terhadap biaya."
+    }
+  },
+  "reviewNotes": "S7d row 10: this script does not touch its title, excerpt, SEO title or meta description; they stay as they are until row 10 is un-held. The four pricing-page category names (Base Input Tokens, Cache Writes, Cache Hits & Refreshes, Output Tokens) are kept in English, as Anthropic names them. The existing excerpt uses formal \"Anda\"; the body uses \"kamu\" like the rest of the batch."
+}
