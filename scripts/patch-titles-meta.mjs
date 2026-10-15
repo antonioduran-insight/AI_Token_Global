@@ -12,9 +12,10 @@
  *     the "before" value below. Anything else is skipped and reported.
  *   - All writes go in ONE transaction, so Sanity fires one rebuild, not ten.
  *     Each patch is pinned to the revision that was read.
- *   - --apply backs up every document first (audits/2026-10-08/titles-backup/),
+ *   - --apply backs up every document first (audits/2026-10-08/titles-backup-<stamp>/),
  *     then re-reads each one and checks the new values landed.
- *   - Logs: titles-meta-log.md for --apply, titles-meta-dryrun.md otherwise.
+ *   - Logs: titles-meta-log-<stamp>.md for --apply, titles-meta-dryrun-<stamp>.md
+ *     otherwise. Date-stamped so a run never overwrites an earlier apply record.
  *
  * Usage:
  *   node scripts/patch-titles-meta.mjs
@@ -30,6 +31,7 @@ import { join } from 'node:path';
 const APPLY = process.argv.includes('--apply');
 const TOKEN = process.env.SANITY_TOKEN;
 const OUT_DIR = 'audits/2026-10-08';
+const STAMP = new Date().toISOString().replace(/:/g, '').slice(0, 17); // 2026-10-15T081233
 
 if (APPLY && !TOKEN) {
   console.error('--apply needs SANITY_TOKEN (an Editor token from sanity.io/manage → API → Tokens).');
@@ -176,7 +178,7 @@ for (const row of ROWS) {
 say(`## ${APPLY ? 'Writing' : 'Would write'} ${ready.length} document(s) in one transaction`);
 say('');
 if (APPLY && ready.length) {
-  const backupDir = join(OUT_DIR, 'titles-backup');
+  const backupDir = join(OUT_DIR, `titles-backup-${STAMP}`);
   mkdirSync(backupDir, { recursive: true });
   for (const { doc } of ready) {
     const full = await client.fetch('*[_id == $id][0]', { id: doc._id });
@@ -202,7 +204,7 @@ if (APPLY && ready.length) {
 }
 
 mkdirSync(OUT_DIR, { recursive: true });
-const logPath = join(OUT_DIR, APPLY ? 'titles-meta-log.md' : 'titles-meta-dryrun.md');
+const logPath = join(OUT_DIR, `${APPLY ? 'titles-meta-log' : 'titles-meta-dryrun'}-${STAMP}.md`);
 writeFileSync(logPath, log.join('\n') + '\n');
 console.log(`Log → ${logPath}${problems ? `\n${problems} problem(s); see above.` : ''}`);
 process.exit(problems ? 1 : 0);

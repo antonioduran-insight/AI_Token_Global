@@ -60,7 +60,7 @@ audits/*/content-corpus.json
 audits/*/price-corrections-dryrun.md
 
 # dry-run logs from scripts/patch-titles-meta.mjs (the --apply log is committed)
-audits/*/titles-meta-dryrun.md
+audits/*/titles-meta-dryrun*.md
 
 # dry-run logs from scripts/patch-per-token-phase1.mjs (the --apply log is committed)
 audits/*/per-token-phase1-dryrun.md
