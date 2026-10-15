@@ -94,10 +94,9 @@ const ROWS = [
     // tasks, not file processing.
     description: "Learn when to use Claude's API and when the chat app is enough, covering automation, structured output, high-volume tasks and cost." },
   { n: 10, kind: 'post', lang: 'id', slug: 'harga-token-claude-antropik-api',
-    // HELD 2026-10-08: the body is an untranslated copy of the en pricing guide,
-    // so an Indonesian title and description would promise a page that is not
-    // there. Translate the body first, then remove `hold`.
-    hold: 'body is untranslated English (copy of en/claude-token-pricing-guide-for-beginners); translate first',
+    // Held 2026-10-08 while the body was an untranslated copy of the en pricing
+    // guide. Un-held 2026-10-15: the body was translated by S9 batch 1 (#43,
+    // applied 14 Oct).
     before: 'Mengerti Harga Token Claude',
     title: 'Harga Token Claude API: Input, Output & Cara Menghitungnya',
     description: 'Panduan harga token Claude untuk pemula: beda token input dan output, cara menghitung biaya, dan tips menghemat pemakaian API.' },
