@@ -25,7 +25,7 @@
     "94vhyrzk": {
       "94vhyrzkc": {
         "before": "Untuk menggambarkan konsep ini, bayangkan sebuah platform yang mengenakan biaya $0.10 per token. Jika kamu perlu membuat 100 permintaan dengan model text-to-image, total biayanya adalah $10 (100 token x $0.10/token).",
-        "after": "Untuk menggambarkan konsep ini, bayangkan sebuah platform yang mengenakan biaya, misalnya $10 per 1 juta token. Jika kamu perlu membuat 100 permintaan dengan model text-to-image, dan setiap permintaan memakai 2,000 token, total biayanya adalah $2 (200,000 token x $10 per 1 juta token).",
+        "after": "Untuk menggambarkan konsep ini, bayangkan sebuah platform yang mengenakan biaya, misalnya $10 per 1 juta token. Jika kamu perlu membuat 100 permintaan dengan model text-to-image, dan setiap permintaan memakai 2.000 token, total biayanya adalah $2 (200.000 token x $10 per 1 juta token).",
         "reason": "\"$0.10 per token\" is invented (~1,000x real rates) and \"100 requests = 100 tokens\" assumes one token per request. Illustrative rate per 1M tokens, with a token count per request so the total checks out."
       }
     },

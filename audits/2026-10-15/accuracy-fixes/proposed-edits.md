@@ -78,7 +78,7 @@ S10 accuracy fixes, item 1/2 (winner). Illustrative rate only ($10 per 1M tokens
 **`94vhyrzk`/`94vhyrzkc`** — "$0.10 per token" is invented (~1,000x real rates) and "100 requests = 100 tokens" assumes one token per request. Illustrative rate per 1M tokens, with a token count per request so the total checks out.
 
 - before: Untuk menggambarkan konsep ini, bayangkan sebuah platform yang mengenakan biaya $0.10 per token. Jika kamu perlu membuat 100 permintaan dengan model text-to-image, total biayanya adalah $10 (100 token x $0.10/token).
-- after: Untuk menggambarkan konsep ini, bayangkan sebuah platform yang mengenakan biaya, misalnya $10 per 1 juta token. Jika kamu perlu membuat 100 permintaan dengan model text-to-image, dan setiap permintaan memakai 2,000 token, total biayanya adalah $2 (200,000 token x $10 per 1 juta token).
+- after: Untuk menggambarkan konsep ini, bayangkan sebuah platform yang mengenakan biaya, misalnya $10 per 1 juta token. Jika kamu perlu membuat 100 permintaan dengan model text-to-image, dan setiap permintaan memakai 2.000 token, total biayanya adalah $2 (200.000 token x $10 per 1 juta token).
 
 **`cvx3nxea`/`cvx3nxeac`** — "$10 for 100 tokens" = $0.10 per token (invented). Same illustrative rate as the bundle example above.
 
@@ -172,7 +172,7 @@ S10 accuracy fixes, item 3. Illustrative rate only, labelled as not Anthropic's 
 **`u0iww5yn`/`u0iww5ync`** — 1,000 tokens/min x 10 min x $0.05 = $500, not $50; and $0.05 per token is ~5,000x a typical rate. Labelled illustrative rate (not presented as Anthropic's price) with the working shown.
 
 - before: Agar lebih jelas, mari lihat sebuah contoh. Misalnya model AI-mu memproses 1,000 token per menit, dan setiap token berharga $0.05. Jika kamu menjalankan model selama 10 menit, total biayanya sekitar $50.
-- after: Agar lebih jelas, mari lihat sebuah contoh. Misalnya model AI-mu memproses 1,000 token per menit, dan harganya $10 per 1 juta token (angka ilustrasi, bukan harga resmi Anthropic). Jika kamu menjalankan model selama 10 menit, total biayanya $0.10 (10,000 token x $10 per 1 juta token).
+- after: Agar lebih jelas, mari lihat sebuah contoh. Misalnya model AI-mu memproses 1,000 token per menit, dan harganya $10 per 1 juta token (angka ilustrasi, bukan harga resmi Anthropic). Jika kamu menjalankan model selama 10 menit, total biayanya $0.10 (10.000 token x $10 per 1 juta token).
 
 ## [rest] Item 3 · vi `/vi/blog/claude-token-pricing-guide-for-beginners/` · `PXBreekz6ug9jLuKVwZTV9-vi`
 
@@ -221,7 +221,7 @@ S10 accuracy fixes, item 4. Sources checked 15 Oct: OpenAI help "What are tokens
 **`24i9nfn2`/`24i9nfn2c`** — Mixes a per-word price with tokens, "10 tokens per word" is ~8x too high (OpenAI: 100 tokens ≈ 75 words), and "10 x $0.001" prices 10 tokens, not 1,000 words. Illustrative per-token rate, OpenAI's published rule of thumb, arithmetic shown; output tokens noted.
 
 - before: Agar kamu lebih memahami harga token AI, mari lihat sebuah contoh. Misalnya kamu menggunakan model bahasa untuk menerjemahkan 1,000 kata dari bahasa Inggris ke bahasa Spanyol. Penyedia mungkin mengenakan biaya $0.001 per kata untuk layanan ini. Jika model membutuhkan 10 token per kata, total biayamu adalah 10 x $0.001 = $0.01.
-- after: Agar kamu lebih memahami harga token AI, mari lihat sebuah contoh. Misalnya kamu menggunakan model bahasa untuk menerjemahkan 1,000 kata dari bahasa Inggris ke bahasa Spanyol. Penyedia mungkin mengenakan biaya $10 per 1 juta token untuk layanan ini. Teks bahasa Inggris rata-rata sekitar 1.3 token per kata, jadi 1,000 kata yang kamu kirim menjadi sekitar 1,300 token input, dengan biaya sekitar 1,300 x $10 / 1,000,000 = $0.013. Teks terjemahan yang kamu terima ditagih sebagai token output di luar biaya itu.
+- after: Agar kamu lebih memahami harga token AI, mari lihat sebuah contoh. Misalnya kamu menggunakan model bahasa untuk menerjemahkan 1,000 kata dari bahasa Inggris ke bahasa Spanyol. Penyedia mungkin mengenakan biaya $10 per 1 juta token untuk layanan ini. Teks bahasa Inggris rata-rata sekitar 1,3 token per kata, jadi 1,000 kata yang kamu kirim menjadi sekitar 1.300 token input, dengan biaya sekitar 1.300 x $10 / 1.000.000 = $0.013. Teks terjemahan yang kamu terima ditagih sebagai token output di luar biaya itu.
 
 ## [rest] Item 4 · vi `/vi/blog/ai-tokens-api-keys-for-beginners/` · `VdSyE50eHa1ZkhVq3P8OHS-vi`
 

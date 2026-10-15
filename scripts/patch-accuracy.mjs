@@ -100,8 +100,8 @@ const PER_MILLION = /\$\s?(\d[\d.,]*)\s*(?:,\s*)?(?:per|cho mỗi|untuk setiap)\
 const perMillionRates = t => [...t.matchAll(PER_MILLION)].map(m => Number(m[1].replace(/,/g, '')));
 
 // Worked calculations, re-computed here. Each must appear in the new text of
-// that span in every locale (en/id write 200,000; vi writes 200.000).
-const fmt = (n, lang) => lang === 'vi' ? n.toLocaleString('de-DE') : n.toLocaleString('en-US');
+// that span in every locale (English bodies write 200,000; translated id/es/vi bodies write 200.000).
+const fmt = (n, lang) => ['vi', 'id', 'es'].includes(lang) ? n.toLocaleString('de-DE') : n.toLocaleString('en-US');
 const CHECKS = {
   '94vhyrzk': lang => { const tokens = 100 * 2000, cost = tokens / 1e6 * 10; return [
     { label: '100 requests × 2,000 tokens', value: tokens, expect: [fmt(tokens, lang)] },
