@@ -1,0 +1,61 @@
+{
+  "_id": "lT0MJhwbFtcMofmR8IsomJ",
+  "locale": "es",
+  "slug": "obtener-clave-api-chatgpt-paso-a-paso",
+  "sourceRev": "5bTmGH4csQ2ze7LA77fKvt",
+  "bodyLanguage": "en",
+  "item": "5",
+  "winner": false,
+  "group": "rest",
+  "snapshot": {
+    "title": "Cómo obtener una clave API de ChatGPT: Una guía paso a paso para principiantes",
+    "excerpt": "Descubre cómo aplicar por una clave API de ChatGPT y aprovechar al máximo la potencia del procesamiento de lenguaje natural. Aprende sobre los requisitos, el proceso de solicitud y la gestión de claves.",
+    "seoTitle": "Obtener una clave API de ChatGPT",
+    "seoDescription": "Una guía paso a paso para obtener una clave API de ChatGPT y comenzar a utilizar su potencia en sus proyectos y aplicaciones. Aprende sobre los requisitos, el proceso y la gestión de claves."
+  },
+  "reviewNotes": "S10 accuracy fixes, item 5. Source checked 15 Oct: OpenAI quickstart developers.openai.com/api/docs/quickstart (\"create an API key in the dashboard\"; no application, review or tier step). Body language: en (untranslated English copy; edits are in English, translate later). Only the listed spans change.",
+  "spans": {
+    "tfzek00h": {
+      "tfzek00hc": {
+        "before": "Obtaining a ChatGPT API key is a crucial step in unlocking the full potential of OpenAI's powerful language model. However, many developers struggle with understanding the application process and requirements. In this article, we'll provide a clear and concise step-by-step guide on how to get a ChatGPT API key, addressing common misconceptions and confusion along the way.",
+        "after": "Obtaining a ChatGPT API key is a crucial step in unlocking the full potential of OpenAI's powerful language model. However, many developers struggle with understanding the setup process and requirements. In this article, we'll provide a clear and concise step-by-step guide on how to get a ChatGPT API key, addressing common misconceptions and confusion along the way.",
+        "reason": "Frames key creation as an \"application process\"; there is none (OpenAI quickstart: create the key in the dashboard)."
+      }
+    },
+    "au6lwna0": {
+      "au6lwna0c": {
+        "before": "When applying for a ChatGPT API key, you'll need to provide some essential details. These include the name and description of your project, as well as information about how you plan to use the API.",
+        "after": "Creating a ChatGPT API key is a self-service step in the OpenAI dashboard; there is no application to submit.",
+        "reason": "False: no application, project description or usage plan is required to create a key. Replaced with what the OpenAI quickstart says."
+      }
+    },
+    "oa75zd4o": {
+      "oa75zd4oc": {
+        "before": "Once you've provided the necessary information, OpenAI will review your application and provide you with a unique API key. This key is essential for authenticating requests to the ChatGPT API.",
+        "after": "Once you create it, OpenAI gives you a unique API key. This key is essential for authenticating requests to the ChatGPT API.",
+        "reason": "False: OpenAI does not review an application before issuing a key. Second sentence kept."
+      }
+    },
+    "kv8vrqax": {
+      "kv8vrqaxc": {
+        "before": "When creating an API key, you'll have the option to choose between different pricing tiers. The cost of using the ChatGPT API varies depending on the number of tokens requested per month, so it's essential to understand your project's requirements before selecting a plan.",
+        "after": "Creating an API key does not involve choosing a pricing tier or plan. The cost of using the ChatGPT API depends on the number of tokens you use, so it's essential to understand your project's requirements before you start.",
+        "reason": "False: no pricing tier or plan is chosen when creating a key, and cost is per token used, not \"tokens requested per month\"."
+      }
+    },
+    "9bsas1eq": {
+      "9bsas1eqc": {
+        "before": "The ChatGPT API uses a token-based pricing model. This means that you'll be charged based on the number of tokens requested, rather than by the hour or month.",
+        "after": "The ChatGPT API uses a token-based pricing model. This means that you'll be charged based on the number of tokens processed (input and output), rather than by the hour or month.",
+        "reason": "Billing counts tokens processed (input and output), not tokens \"requested\"."
+      }
+    },
+    "v9ee7cnx": {
+      "v9ee7cnxc": {
+        "before": "If you're new to working with APIs, we recommend starting with a basic plan and gradually scaling up as needed. Additionally, be sure to read OpenAI's documentation on token calculation and caching to optimize your API usage.",
+        "after": "If you're new to working with APIs, we recommend starting small and gradually scaling up as needed. Additionally, be sure to read OpenAI's documentation on token calculation and caching to optimize your API usage.",
+        "reason": "There is no \"basic plan\" for the API; usage is pay-as-you-go."
+      }
+    }
+  }
+}

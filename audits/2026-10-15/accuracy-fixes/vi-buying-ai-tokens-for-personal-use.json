@@ -1,0 +1,54 @@
+{
+  "_id": "dShP6JdGzwBHy3qr2At6aO-vi",
+  "locale": "vi",
+  "slug": "buying-ai-tokens-for-personal-use",
+  "sourceRev": "7PTiuFKp5NOfYngu8ZUyPi",
+  "bodyLanguage": "vi",
+  "item": "1/2 (winner)",
+  "winner": true,
+  "group": "winner",
+  "snapshot": {
+    "title": "Cách Mua Token AI cho Người Mới",
+    "excerpt": "Tìm hiểu cách mua và sử dụng token AI hiệu quả, bao gồm các mô hình định giá, thanh toán API và mô hình định giá dựa trên token.",
+    "seoTitle": "Mua Token AI cho Mục Đích Cá Nhân: Hướng Dẫn cho Người Mới",
+    "seoDescription": "Tìm hiểu những kiến thức cơ bản về mua token AI, bao gồm các mô hình định giá, thanh toán API và cách sử dụng token. Lý tưởng cho người mới bắt đầu với công nghệ AI."
+  },
+  "reviewNotes": "S10 accuracy fixes, item 1/2 (winner). Illustrative rate only ($10 per 1M tokens, labelled as an example); no provider price stated. Body language: vi. Only the listed spans change.",
+  "spans": {
+    "cmow8c1d": {
+      "cmow8c1dc": {
+        "before": "Hãy xem một ví dụ cụ thể. Giả sử bạn muốn dùng mô hình chuyển văn bản thành hình ảnh (text-to-image). Nền tảng đưa ra hai lựa chọn: $10 cho 100 token hoặc $50 cho 500 token. Nếu bạn dùng dịch vụ nhiều, mua trước 500 token có thể tiết kiệm chi phí hơn.",
+        "after": "Hãy xem một ví dụ cụ thể. Giả sử bạn muốn dùng mô hình chuyển văn bản thành hình ảnh (text-to-image). Nền tảng có thể tính phí, ví dụ $10 cho mỗi 1 triệu token, và bán lượng sử dụng đó theo các gói có kích thước khác nhau. Nếu bạn dùng dịch vụ nhiều, hãy so sánh giá cho mỗi 1 triệu token, chứ không phải kích thước gói.",
+        "reason": "\"$10 for 100 tokens / $50 for 500 tokens\" = $0.10 per token (invented, ~1,000x real rates), and both options are the same rate, so \"buying 500 upfront is more cost-effective\" was false. One illustrative rate, written as an example; the advice becomes \"compare price per million tokens, not bundle size\". No invented discount."
+      }
+    },
+    "94vhyrzk": {
+      "94vhyrzkc": {
+        "before": "Để minh họa, hãy tưởng tượng một nền tảng tính phí $0.10 mỗi token. Nếu bạn cần thực hiện 100 yêu cầu bằng mô hình text-to-image, tổng chi phí sẽ là $10 (100 token x $0.10/token).",
+        "after": "Để minh họa, hãy tưởng tượng một nền tảng tính phí, ví dụ $10 cho mỗi 1 triệu token. Nếu bạn cần thực hiện 100 yêu cầu bằng mô hình text-to-image, và mỗi yêu cầu dùng 2.000 token, tổng chi phí sẽ là $2 (200.000 token x $10 cho mỗi 1 triệu token).",
+        "reason": "\"$0.10 per token\" is invented (~1,000x real rates) and \"100 requests = 100 tokens\" assumes one token per request. Illustrative rate per 1M tokens, with a token count per request so the total checks out."
+      }
+    },
+    "cvx3nxea": {
+      "cvx3nxeac": {
+        "before": "Hãy so sánh hai nền tảng phổ biến: Lựa chọn A áp dụng giá cố định $10 cho 100 token, trong khi Lựa chọn B dùng hệ thống theo bậc với giá tăng dần khi bạn dùng nhiều token hơn. Nếu bạn dự kiến dùng dịch vụ thường xuyên, Lựa chọn A có thể là lựa chọn tốt hơn.",
+        "after": "Hãy so sánh hai nền tảng phổ biến: Lựa chọn A áp dụng giá cố định, ví dụ $10 cho mỗi 1 triệu token, trong khi Lựa chọn B dùng hệ thống theo bậc với giá tăng dần khi bạn dùng nhiều token hơn. Nếu bạn dự kiến dùng dịch vụ thường xuyên, Lựa chọn A có thể là lựa chọn tốt hơn.",
+        "reason": "\"$10 for 100 tokens\" = $0.10 per token (invented). Same illustrative rate as the bundle example above."
+      }
+    },
+    "mynv1su2": {
+      "mynv1su2c": {
+        "before": "Token AI không phải là sản phẩm để mua; đúng hơn, chúng là phương thức thanh toán để truy cập các dịch vụ API. Hãy xem chúng như một loại tiền tệ cho phép bạn sử dụng nhiều mô hình AI và công cụ khác nhau do các nền tảng cung cấp. Mỗi nền tảng có hệ thống thanh toán và tín dụng riêng, khiến người mới dễ nhầm lẫn về cách định giá dựa trên token hoạt động.",
+        "after": "Token AI là những mẩu văn bản nhỏ mà mô hình AI đọc và viết, và các dịch vụ API tính phí theo số lượng token bạn dùng. Hãy xem chúng như một loại tiền tệ cho phép bạn sử dụng nhiều mô hình AI và công cụ khác nhau do các nền tảng cung cấp. Mỗi nền tảng có hệ thống thanh toán và tín dụng riêng, khiến người mới dễ nhầm lẫn về cách định giá dựa trên token hoạt động.",
+        "reason": "Plainly false first sentence: tokens are not a payment method; they are the units of text a model reads and writes, and API usage is billed by how many are used. Only that sentence changes; the \"think of them as a currency\" analogy stays."
+      }
+    },
+    "sv528p7u": {
+      "sv528p7uc": {
+        "before": "Điều quan trọng là phân biệt được token AI và API key. Dù cả hai đều dùng để truy cập dịch vụ AI, chúng phục vụ mục đích khác nhau. Token là hình thức thanh toán, còn API key cấp quyền truy cập vào các API cụ thể mà không yêu cầu khoản thanh toán bổ sung.",
+        "after": "Điều quan trọng là phân biệt được token AI và API key. Dù cả hai đều dùng để truy cập dịch vụ AI, chúng phục vụ mục đích khác nhau. Token là đơn vị dùng để đo và tính phí mức sử dụng của bạn, còn API key dùng để định danh và xác thực các yêu cầu của bạn; mức sử dụng qua key đó được tính vào tài khoản của bạn.",
+        "reason": "False: API keys do not give access \"without requiring an additional payment\"; requests made with a key are billed to the account, per token. First two sentences kept."
+      }
+    }
+  }
+}

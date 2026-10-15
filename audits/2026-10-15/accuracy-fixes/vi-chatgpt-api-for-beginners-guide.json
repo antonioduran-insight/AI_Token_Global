@@ -1,0 +1,61 @@
+{
+  "_id": "lT0MJhwbFtcMofmR8Ij34l-vi",
+  "locale": "vi",
+  "slug": "chatgpt-api-for-beginners-guide",
+  "sourceRev": "7PTiuFKp5NOfYngu8ZWd90",
+  "bodyLanguage": "vi",
+  "item": "6",
+  "winner": false,
+  "group": "rest",
+  "snapshot": {
+    "title": "Cách Sử Dụng ChatGPT API Cho Người Mới Bắt Đầu",
+    "excerpt": "Tìm hiểu cách sử dụng ChatGPT API dành cho người mới bắt đầu, bao gồm các khái niệm thiết yếu và các bước để tận dụng các mô hình ngôn ngữ mạnh mẽ của OpenAI trong dự án của bạn.",
+    "seoTitle": "Hướng Dẫn ChatGPT API Cho Người Mới Bắt Đầu",
+    "seoDescription": "Bắt đầu với ChatGPT API: Hiểu sự khác biệt giữa ChatGPT và OpenAI API, tạo tài khoản, cấu hình thanh toán và tối ưu hóa lựa chọn mô hình."
+  },
+  "reviewNotes": "S10 accuracy fixes, item 6. Source checked 15 Oct: OpenAI quickstart (key created in the dashboard). No prices stated; points to OpenAI's pricing page. Body language: vi. Only the listed spans change.",
+  "spans": {
+    "7odxyr2w": {
+      "7odxyr2wc": {
+        "before": "Hiểu Sự Khác Biệt Giữa ChatGPT API và OpenAI API",
+        "after": "Hiểu Mối Quan Hệ Giữa ChatGPT API và OpenAI API",
+        "reason": "Heading (h2) premise is wrong: the ChatGPT API is part of the OpenAI API, not a separate product. Minimal rewording, keywords kept."
+      }
+    },
+    "aeovpdme": {
+      "aeovpdmec": {
+        "before": "Mục tiêu chính của bài viết này là giúp người mới hiểu được những điểm khác biệt này và xác định API nào phù hợp nhất với nhu cầu của họ. Chúng tôi sẽ khám phá các đặc điểm chính của từng API, bao gồm điểm mạnh, điểm yếu và các trường hợp sử dụng.",
+        "after": "Mục tiêu chính của bài viết này là giúp người mới hiểu mối quan hệ giữa hai khái niệm này và xác định mô hình nào phù hợp nhất với nhu cầu của họ. Chúng tôi sẽ khám phá các đặc điểm chính của từng khái niệm, bao gồm điểm mạnh, điểm yếu và các trường hợp sử dụng.",
+        "reason": "Follows from the same false premise (\"which API best suits\"); reworded to how the two relate and which models fit."
+      }
+    },
+    "zutlvsjx": {
+      "zutlvsjxc": {
+        "before": "Những Điểm Khác Biệt Chính Giữa ChatGPT API và OpenAI API",
+        "after": "ChatGPT API và OpenAI API: Điểm Khác và Điểm Giống",
+        "reason": "Heading (h3) premise is wrong: the section now says pricing is not a difference. Minimal rewording, keywords kept."
+      }
+    },
+    "ghjz86u3": {
+      "ghjz86u3c": {
+        "before": "Trước khi đi sâu vào ChatGPT API, điều cần thiết là phải hiểu mối quan hệ của nó với OpenAI API. Mô hình ChatGPT là một triển khai cụ thể của kiến trúc GPT-3.5, trong khi OpenAI API cung cấp nhiều mô hình và tính năng đa dạng hơn. Mặc dù cả hai API có một số điểm tương đồng, chúng có những khác biệt rõ ràng về chức năng, giá cả và cách sử dụng.",
+        "after": "Trước khi đi sâu vào ChatGPT API, điều cần thiết là phải hiểu mối quan hệ của nó với OpenAI API. \"ChatGPT API\" là cách gọi phổ biến cho việc sử dụng các mô hình chat của OpenAI, vốn là một phần của OpenAI API; còn OpenAI API nói chung cung cấp nhiều mô hình và tính năng đa dạng hơn. Cả hai dùng chung tài khoản OpenAI, API key và cách thanh toán.",
+        "reason": "\"ChatGPT model is a specific implementation of GPT-3.5\" is outdated and version-specific, and there is no separate ChatGPT API with its own pricing: it is the OpenAI API. First sentence kept."
+      }
+    },
+    "a7zs6xic": {
+      "a7zs6xicc": {
+        "before": "Một điểm khác biệt quan trọng nữa nằm ở cách tính phí. ChatGPT API hoạt động theo hệ thống dựa trên token, trong đó mỗi lệnh gọi API được tính phí dựa trên số lượng token được xử lý. Ngược lại, OpenAI API sử dụng mô hình trả theo lượng dùng với các gói giá theo bậc.",
+        "after": "Giá cả không phải là điểm khác biệt: OpenAI API, bao gồm cả các mô hình chat, tính phí theo lượng dùng, và mỗi lệnh gọi API được tính phí dựa trên số lượng token được xử lý. Mức giá khác nhau tùy mô hình, vì vậy hãy xem trang giá của OpenAI để biết giá hiện tại.",
+        "reason": "Token-based vs pay-as-you-go is a false contrast: the API is pay-as-you-go AND charged per token; there are no \"tiered pricing plans\". No prices given; points to OpenAI's pricing page."
+      }
+    },
+    "c4nggetw": {
+      "c4nggetwc": {
+        "before": "Sau khi tài khoản được kích hoạt, hãy vào bảng điều khiển và nhấp vào 'API keys'. Bạn sẽ nhận được một API key duy nhất, dùng để xác thực các yêu cầu gửi đến ChatGPT API.",
+        "after": "Sau khi tài khoản được kích hoạt, hãy vào bảng điều khiển và nhấp vào 'API keys'. Tại đó bạn có thể tạo một API key duy nhất, dùng để xác thực các yêu cầu gửi đến ChatGPT API.",
+        "reason": "The dashboard does not present a ready-made key; you create one (OpenAI quickstart)."
+      }
+    }
+  }
+}

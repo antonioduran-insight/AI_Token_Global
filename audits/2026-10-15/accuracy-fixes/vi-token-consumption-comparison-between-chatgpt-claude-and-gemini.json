@@ -1,0 +1,68 @@
+{
+  "_id": "VdSyE50eHa1ZkhVq3R39TM-vi",
+  "locale": "vi",
+  "slug": "token-consumption-comparison-between-chatgpt-claude-and-gemini",
+  "sourceRev": "7PTiuFKp5NOfYngu8aV6OM",
+  "bodyLanguage": "vi",
+  "item": "7",
+  "winner": false,
+  "group": "rest",
+  "snapshot": {
+    "title": "So Sánh Mức Tiêu Thụ Token Giữa ChatGPT, Claude và Gemini",
+    "excerpt": "Tối ưu hóa mức tiêu thụ token trên các nền tảng AI khác nhau đòi hỏi phải hiểu các yếu tố chính ảnh hưởng đến số lượng token. Bài viết này cung cấp so sánh toàn diện về mức tiêu thụ token giữa ChatGPT, Claude và Gemini.",
+    "seoTitle": "So Sánh Mức Tiêu Thụ Token",
+    "seoDescription": "Tìm hiểu mức tiêu thụ token thay đổi như thế nào giữa ChatGPT, Claude và Gemini để tối ưu hóa việc sử dụng mô hình AI và quản lý chi phí của bạn."
+  },
+  "reviewNotes": "S10 accuracy fixes, item 7. Sources checked 15 Oct: (1) tiktoken/model.py on github.com/openai/tiktoken maps \"gpt-4\" to cl100k_base and \"gpt-4o\" to o200k_base; (2) platform.claude.com/docs/en/build-with-claude/token-counting: \"Claude 4.7 and later models ... use a newer tokenizer. The same input text produces approximately 30 percent more tokens than on earlier models\", and the count_tokens endpoint; (3) ai.google.dev/gemini-api/docs/tokens: count_tokens / countTokens; (4) github.com/openai/tiktoken README: encoding_for_model. Architecture claims (RNN, GNN) and science/arts variants deleted, not replaced. Body language: vi. Only the listed spans change.",
+  "spans": {
+    "meufro3e": {
+      "meufro3ec": {
+        "before": "Mức tiêu thụ token là thước đo số lượng token cần thiết để xử lý một tác vụ hoặc yêu cầu cụ thể. Token thường được đếm dựa trên độ phức tạp của đầu vào — đầu vào càng phức tạp thì cần càng nhiều token. Tuy nhiên, số lượng token có thể khác nhau đáng kể giữa các nền tảng do sự khác biệt về kiến trúc mô hình, dữ liệu huấn luyện và các phương pháp thuật toán.",
+        "after": "Mức tiêu thụ token là thước đo số lượng token cần thiết để xử lý một tác vụ hoặc yêu cầu cụ thể. Token được đếm từ chính văn bản đầu vào — đầu vào càng dài thì cần càng nhiều token. Tuy nhiên, số lượng token có thể khác nhau đáng kể giữa các nền tảng vì mỗi nền tảng dùng tokenizer riêng, tức cách chia văn bản thành token.",
+        "reason": "Tokens are counted from the text (length), not its \"complexity\"; counts differ across platforms because of tokenizers, not \"architecture, training data and algorithmic approaches\". First sentence kept."
+      }
+    },
+    "zr8k2wit": {
+      "zr8k2witc": {
+        "before": "Ví dụ, ChatGPT sử dụng kiến trúc dựa trên transformer, được tối ưu hóa để xử lý tuần tự dữ liệu văn bản. Trong khi đó, Claude áp dụng phương pháp kết hợp giữa kiến trúc transformer và mạng nơ-ron hồi quy (RNN) để đáp ứng cả nhu cầu xử lý tuần tự lẫn song song. Còn Gemini thì dựa trên kiến trúc mạng nơ-ron đồ thị (GNN) để mô hình hóa các mối quan hệ phức tạp giữa các thực thể.",
+        "after": "Ví dụ, ChatGPT, Claude và Gemini đều dùng tokenizer riêng, nên cùng một đoạn văn bản có thể tạo ra số lượng token khác nhau trên mỗi nền tảng.",
+        "reason": "DELETED claims: Claude as transformer+RNN hybrid and Gemini as a GNN are false. Kept only the verifiable point (different tokenizers, different counts)."
+      }
+    },
+    "cjw2qr4u": {
+      "cjw2qr4uc": {
+        "before": "Một trong những yếu tố chính dẫn đến sự chênh lệch về số lượng token là sự khác biệt về kiến trúc mô hình, dữ liệu huấn luyện và phương pháp thuật toán giữa các nền tảng. Ví dụ, kiến trúc transformer của ChatGPT có thể hiệu quả hơn trong việc xử lý các phụ thuộc tầm xa trong văn bản, nhưng lại gặp khó khăn với các tác vụ yêu cầu khả năng xử lý song song, chẳng hạn như xử lý nhiều yêu cầu cùng lúc.",
+        "after": "Một trong những yếu tố chính dẫn đến sự chênh lệch về số lượng token là tokenizer mà mỗi nền tảng sử dụng. Ví dụ, một tokenizer xử lý tốt một ngôn ngữ hoặc mã nguồn cụ thể có thể cần ít token hơn cho cùng một văn bản so với tokenizer chia nhỏ văn bản đó thành nhiều mảnh hơn.",
+        "reason": "DELETED claim that ChatGPT's transformer \"struggles with parallel processing such as handling multiple requests\" (false, and unrelated to token counts). Replaced with the tokenizer point."
+      }
+    },
+    "gwnoz1xv": {
+      "gwnoz1xvc": {
+        "before": "Một yếu tố quan trọng khác ảnh hưởng đến số lượng token là biến thể mô hình cụ thể đang được sử dụng. Các biến thể mô hình được tối ưu hóa cho những tác vụ hoặc lĩnh vực nhất định, điều này có thể dẫn đến sự khác biệt về mức tiêu thụ token. Chẳng hạn, mô hình 'general' của ChatGPT có thể có đặc điểm tiêu thụ token khác so với các biến thể 'science' hay 'arts' của nó.",
+        "after": "Một yếu tố quan trọng khác ảnh hưởng đến số lượng token là biến thể mô hình cụ thể đang được sử dụng. Các biến thể mô hình được tối ưu hóa cho những tác vụ hoặc lĩnh vực nhất định, điều này có thể dẫn đến sự khác biệt về mức tiêu thụ token. Chẳng hạn, các mô hình mới và cũ của cùng một nhà cung cấp có thể dùng tokenizer khác nhau, nên cùng một văn bản có thể không tạo ra cùng số lượng token trên mỗi mô hình.",
+        "reason": "DELETED invented ChatGPT \"general/science/arts\" variants. Replaced the example with one verified 15 Oct on official sources: tiktoken model.py maps gpt-4 to cl100k_base and gpt-4o to o200k_base; Anthropic token-counting docs: Claude 4.7 and later use a newer tokenizer, ~30% more tokens for the same text. First two sentences kept."
+      }
+    },
+    "0zmqsh7v": {
+      "0zmqsh7vc": {
+        "before": "Để tối ưu hóa mức tiêu thụ token, các nhà phát triển cần chọn đúng biến thể mô hình phù hợp với ứng dụng và yêu cầu tác vụ cụ thể của mình. Tuy nhiên, điều này có thể khá khó khăn do thiếu thông tin rõ ràng về số lượng token tương ứng với từng biến thể mô hình.",
+        "after": "Để tối ưu hóa mức tiêu thụ token, các nhà phát triển cần chọn đúng biến thể mô hình phù hợp với ứng dụng và yêu cầu tác vụ cụ thể của mình. Công cụ đếm token chính thức của mỗi nền tảng có thể cho biết văn bản của bạn dùng bao nhiêu token trên một mô hình cụ thể.",
+        "reason": "False: providers publish token counting tools (Anthropic count_tokens endpoint, Gemini countTokens, OpenAI tiktoken). First sentence kept."
+      }
+    },
+    "c2vo591t": {
+      "c2vo591tc": {
+        "before": "So sánh mô hình tiêu thụ token của ba nền tảng cho thấy một số điểm thú vị. Chẳng hạn, ChatGPT thường cần nhiều token hơn cho các tác vụ xử lý tuần tự nhưng lại ít hơn cho các tác vụ xử lý song song.",
+        "after": "So sánh ba nền tảng không đơn giản như vẻ ngoài. Vì mỗi nền tảng dùng tokenizer riêng, cách so sánh đáng tin cậy là đếm cùng một đoạn văn bản bằng công cụ đếm token chính thức của từng nền tảng.",
+        "reason": "DELETED unsupported claim (ChatGPT uses more tokens for \"sequential\" and fewer for \"parallel\" tasks). Replaced with how to compare reliably. Counting tools verified 15 Oct: Anthropic POST /v1/messages/count_tokens (platform.claude.com/docs/en/build-with-claude/token-counting), Gemini count_tokens / :countTokens (ai.google.dev/gemini-api/docs/tokens), OpenAI tiktoken (github.com/openai/tiktoken)."
+      }
+    },
+    "7rxjlh7i": {
+      "7rxjlh7ic": {
+        "before": "Ngược lại, Claude lại thể hiện một mô hình khác — mức tiêu thụ token tăng cao hơn với các tác vụ phức tạp liên quan đến nhiều yêu cầu, trong khi lại tiêu thụ ít hơn với các truy vấn văn bản đơn giản.",
+        "after": "Kết quả cũng phụ thuộc vào mô hình bạn chọn và mọi thứ được gửi kèm văn bản, chẳng hạn như system prompt và lịch sử hội thoại.",
+        "reason": "DELETED unsupported claim about Claude's token pattern. Replaced with a true, generic point already made elsewhere in the article."
+      }
+    }
+  }
+}

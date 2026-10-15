@@ -1,0 +1,33 @@
+{
+  "_id": "g3jTIj9ubDWnGQfo9P3OxI",
+  "locale": "id",
+  "slug": "harga-token-claude-antropik-api",
+  "sourceRev": "36TK9CDo7y3YWN6AkxPLhP",
+  "bodyLanguage": "id",
+  "item": "3",
+  "winner": false,
+  "group": "rest",
+  "snapshot": {
+    "title": "Mengerti Harga Token Claude: Panduan Lengkap",
+    "excerpt": "Dalam artikel ini, kita akan membahas mengenai harga token Claude yang tidak hanya tentang input token saja, tetapi juga output token dan cache. Anda dapat memahami bagaimana Anthropic's official pricing page membagi biaya menjadi empat kategori utama: Token Input Dasar, Cache Menulis, Cache Hit & Refreshes, dan Token Output.",
+    "seoTitle": "Harga Token Claude API: Input, Output & Cara Menghitungnya",
+    "seoDescription": "Panduan harga token Claude untuk pemula: beda token input dan output, cara menghitung biaya, dan tips menghemat pemakaian API."
+  },
+  "reviewNotes": "S10 accuracy fixes, item 3. Illustrative rate only, labelled as not Anthropic's price. Body language: id. Only the listed spans change.",
+  "spans": {
+    "ypfzlmkv": {
+      "ypfzlmkvc": {
+        "before": "Mari mulai dari dasarnya. Saat kamu berinteraksi dengan Claude API, setiap token input terkait dengan satu prompt atau kueri. Semakin rumit atau detail prompt-mu, semakin banyak token yang dibutuhkan. Sementara itu, token output berkaitan dengan jumlah teks hasil olahan yang dikembalikan oleh model.",
+        "after": "Mari mulai dari dasarnya. Saat kamu berinteraksi dengan Claude API, setiap prompt atau kueri yang kamu kirim dipecah menjadi token input. Semakin rumit atau detail prompt-mu, semakin banyak token yang dibutuhkan. Sementara itu, token output berkaitan dengan jumlah teks hasil olahan yang dikembalikan oleh model.",
+        "reason": "OUTSIDE THE BRIEF (drop if you prefer): \"each input token corresponds to a single prompt\" is false; a prompt is split into many tokens. This sits right above the calculation the new id title promises."
+      }
+    },
+    "u0iww5yn": {
+      "u0iww5ync": {
+        "before": "Agar lebih jelas, mari lihat sebuah contoh. Misalnya model AI-mu memproses 1,000 token per menit, dan setiap token berharga $0.05. Jika kamu menjalankan model selama 10 menit, total biayanya sekitar $50.",
+        "after": "Agar lebih jelas, mari lihat sebuah contoh. Misalnya model AI-mu memproses 1,000 token per menit, dan harganya $10 per 1 juta token (angka ilustrasi, bukan harga resmi Anthropic). Jika kamu menjalankan model selama 10 menit, total biayanya $0.10 (10.000 token x $10 per 1 juta token).",
+        "reason": "1,000 tokens/min x 10 min x $0.05 = $500, not $50; and $0.05 per token is ~5,000x a typical rate. Labelled illustrative rate (not presented as Anthropic's price) with the working shown."
+      }
+    }
+  }
+}

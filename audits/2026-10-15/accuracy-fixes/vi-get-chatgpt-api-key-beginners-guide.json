@@ -1,0 +1,61 @@
+{
+  "_id": "g3jTIj9ubDWnGQfo9PiZT6-vi",
+  "locale": "vi",
+  "slug": "get-chatgpt-api-key-beginners-guide",
+  "sourceRev": "7PTiuFKp5NOfYngu8aGVGw",
+  "bodyLanguage": "vi",
+  "item": "5",
+  "winner": false,
+  "group": "rest",
+  "snapshot": {
+    "title": "Cách Lấy Khóa API ChatGPT: Hướng Dẫn Từng Bước Dành Cho Người Mới",
+    "excerpt": "Tìm hiểu cách lấy khóa API ChatGPT và tích hợp mô hình ngôn ngữ mạnh mẽ của OpenAI vào ứng dụng hoặc dự án của bạn. Hướng dẫn từng bước này bao gồm quy trình đăng ký, các yêu cầu và quản lý khóa.",
+    "seoTitle": "Lấy Khóa API ChatGPT",
+    "seoDescription": "Hướng dẫn toàn diện về cách đăng ký khóa API ChatGPT, bao gồm các yêu cầu, quản lý khóa và tích hợp mô hình ngôn ngữ của OpenAI vào ứng dụng hoặc dự án của bạn."
+  },
+  "reviewNotes": "S10 accuracy fixes, item 5. Source checked 15 Oct: OpenAI quickstart developers.openai.com/api/docs/quickstart (\"create an API key in the dashboard\"; no application, review or tier step). Body language: vi. Only the listed spans change.",
+  "spans": {
+    "tfzek00h": {
+      "tfzek00hc": {
+        "before": "Lấy khóa API ChatGPT là bước quan trọng để khai thác toàn bộ tiềm năng của mô hình ngôn ngữ mạnh mẽ từ OpenAI. Tuy nhiên, nhiều lập trình viên gặp khó khăn trong việc hiểu quy trình đăng ký và các yêu cầu liên quan. Trong bài viết này, chúng tôi sẽ cung cấp hướng dẫn từng bước rõ ràng và súc tích về cách lấy khóa API ChatGPT, đồng thời giải đáp những hiểu lầm và nhầm lẫn phổ biến trên con đường đó.",
+        "after": "Lấy khóa API ChatGPT là bước quan trọng để khai thác toàn bộ tiềm năng của mô hình ngôn ngữ mạnh mẽ từ OpenAI. Tuy nhiên, nhiều lập trình viên gặp khó khăn trong việc hiểu quy trình tạo khóa và các yêu cầu liên quan. Trong bài viết này, chúng tôi sẽ cung cấp hướng dẫn từng bước rõ ràng và súc tích về cách lấy khóa API ChatGPT, đồng thời giải đáp những hiểu lầm và nhầm lẫn phổ biến trên con đường đó.",
+        "reason": "Frames key creation as an \"application process\"; there is none (OpenAI quickstart: create the key in the dashboard)."
+      }
+    },
+    "au6lwna0": {
+      "au6lwna0c": {
+        "before": "Khi đăng ký khóa API ChatGPT, bạn cần cung cấp một số thông tin thiết yếu. Bao gồm tên và mô tả dự án của bạn, cũng như thông tin về cách bạn dự định sử dụng API.",
+        "after": "Tạo khóa API ChatGPT là thao tác tự thực hiện trong bảng điều khiển OpenAI; không cần nộp đơn đăng ký.",
+        "reason": "False: no application, project description or usage plan is required to create a key. Replaced with what the OpenAI quickstart says."
+      }
+    },
+    "oa75zd4o": {
+      "oa75zd4oc": {
+        "before": "Sau khi bạn đã cung cấp đầy đủ thông tin cần thiết, OpenAI sẽ xem xét đơn đăng ký và cấp cho bạn một khóa API duy nhất. Khóa này rất quan trọng để xác thực các yêu cầu gửi đến API ChatGPT.",
+        "after": "Sau khi bạn tạo, OpenAI sẽ cấp cho bạn một khóa API duy nhất. Khóa này rất quan trọng để xác thực các yêu cầu gửi đến API ChatGPT.",
+        "reason": "False: OpenAI does not review an application before issuing a key. Second sentence kept."
+      }
+    },
+    "kv8vrqax": {
+      "kv8vrqaxc": {
+        "before": "Khi tạo khóa API, bạn sẽ có tùy chọn lựa chọn giữa các gói giá khác nhau. Chi phí sử dụng API ChatGPT thay đổi tùy theo số lượng token yêu cầu mỗi tháng, vì vậy điều cần thiết là phải hiểu rõ yêu cầu dự án của bạn trước khi chọn gói.",
+        "after": "Việc tạo khóa API không bao gồm bước chọn gói hay mức giá. Chi phí sử dụng API ChatGPT phụ thuộc vào số lượng token bạn dùng, vì vậy điều cần thiết là phải hiểu rõ yêu cầu dự án của bạn trước khi bắt đầu.",
+        "reason": "False: no pricing tier or plan is chosen when creating a key, and cost is per token used, not \"tokens requested per month\"."
+      }
+    },
+    "9bsas1eq": {
+      "9bsas1eqc": {
+        "before": "API ChatGPT sử dụng mô hình định giá dựa trên token. Điều này có nghĩa là bạn sẽ bị tính phí dựa trên số lượng token yêu cầu, thay vì tính theo giờ hoặc theo tháng.",
+        "after": "API ChatGPT sử dụng mô hình định giá dựa trên token. Điều này có nghĩa là bạn sẽ bị tính phí dựa trên số lượng token được xử lý (đầu vào và đầu ra), thay vì tính theo giờ hoặc theo tháng.",
+        "reason": "Billing counts tokens processed (input and output), not tokens \"requested\"."
+      }
+    },
+    "v9ee7cnx": {
+      "v9ee7cnxc": {
+        "before": "Nếu bạn mới bắt đầu làm việc với API, chúng tôi khuyên bạn nên bắt đầu với gói cơ bản và dần dần mở rộng theo nhu cầu. Ngoài ra, hãy chắc chắn đọc tài liệu của OpenAI về tính toán token và caching để tối ưu hóa việc sử dụng API.",
+        "after": "Nếu bạn mới bắt đầu làm việc với API, chúng tôi khuyên bạn nên bắt đầu với quy mô nhỏ và dần dần mở rộng theo nhu cầu. Ngoài ra, hãy chắc chắn đọc tài liệu của OpenAI về tính toán token và caching để tối ưu hóa việc sử dụng API.",
+        "reason": "There is no \"basic plan\" for the API; usage is pay-as-you-go."
+      }
+    }
+  }
+}

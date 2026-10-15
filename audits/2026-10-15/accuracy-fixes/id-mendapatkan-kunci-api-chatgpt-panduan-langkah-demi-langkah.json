@@ -1,0 +1,61 @@
+{
+  "_id": "g3jTIj9ubDWnGQfo9PiaNE",
+  "locale": "id",
+  "slug": "mendapatkan-kunci-api-chatgpt-panduan-langkah-demi-langkah",
+  "sourceRev": "S5EFnJjn0OdXSc45Ql7dwI",
+  "bodyLanguage": "id",
+  "item": "5",
+  "winner": false,
+  "group": "rest",
+  "snapshot": {
+    "title": "Cara Mendapatkan Kunci API ChatGPT: Panduan Langkah-demi-Langkah untuk Pemula",
+    "excerpt": "Pelajari bagaimana mendapatkan kunci API ChatGPT dengan mudah dan cepat. Dalam artikel ini, kami akan menjelaskan langkah-langkah yang harus diikuti untuk mendapatkan kunci API ChatGPT.",
+    "seoTitle": "Mendapatkan Kunci API ChatGPT",
+    "seoDescription": "Cara mendapatkan kunci API ChatGPT dengan mudah dan cepat. Pelajari langkah-langkahnya sekarang juga!"
+  },
+  "reviewNotes": "S10 accuracy fixes, item 5. Source checked 15 Oct: OpenAI quickstart developers.openai.com/api/docs/quickstart (\"create an API key in the dashboard\"; no application, review or tier step). Body language: id. Only the listed spans change.",
+  "spans": {
+    "tfzek00h": {
+      "tfzek00hc": {
+        "before": "Mendapatkan kunci API ChatGPT adalah langkah penting untuk memaksimalkan potensi model bahasa canggih dari OpenAI. Namun, banyak pengembang kesulitan memahami proses pengajuan dan persyaratannya. Dalam artikel ini, kami menyajikan panduan langkah demi langkah yang jelas dan ringkas tentang cara mendapatkan kunci API ChatGPT, sekaligus meluruskan salah paham dan kebingungan yang sering muncul.",
+        "after": "Mendapatkan kunci API ChatGPT adalah langkah penting untuk memaksimalkan potensi model bahasa canggih dari OpenAI. Namun, banyak pengembang kesulitan memahami proses pembuatan dan persyaratannya. Dalam artikel ini, kami menyajikan panduan langkah demi langkah yang jelas dan ringkas tentang cara mendapatkan kunci API ChatGPT, sekaligus meluruskan salah paham dan kebingungan yang sering muncul.",
+        "reason": "Frames key creation as an \"application process\"; there is none (OpenAI quickstart: create the key in the dashboard)."
+      }
+    },
+    "au6lwna0": {
+      "au6lwna0c": {
+        "before": "Saat mengajukan kunci API ChatGPT, kamu perlu memberikan beberapa detail penting. Di antaranya nama dan deskripsi proyekmu, serta informasi tentang rencana penggunaan API.",
+        "after": "Membuat kunci API ChatGPT adalah langkah swalayan di dashboard OpenAI; tidak ada pengajuan yang perlu dikirim.",
+        "reason": "False: no application, project description or usage plan is required to create a key. Replaced with what the OpenAI quickstart says."
+      }
+    },
+    "oa75zd4o": {
+      "oa75zd4oc": {
+        "before": "Setelah kamu memberikan informasi yang diperlukan, OpenAI akan meninjau pengajuanmu dan memberimu kunci API yang unik. Kunci ini penting untuk mengautentikasi permintaan ke ChatGPT API.",
+        "after": "Setelah kamu membuatnya, OpenAI memberimu kunci API yang unik. Kunci ini penting untuk mengautentikasi permintaan ke ChatGPT API.",
+        "reason": "False: OpenAI does not review an application before issuing a key. Second sentence kept."
+      }
+    },
+    "kv8vrqax": {
+      "kv8vrqaxc": {
+        "before": "Saat membuat kunci API, kamu bisa memilih di antara beberapa tingkatan harga. Biaya penggunaan ChatGPT API bervariasi tergantung jumlah token yang diminta per bulan, jadi penting untuk memahami kebutuhan proyekmu sebelum memilih paket.",
+        "after": "Membuat kunci API tidak melibatkan pemilihan tingkatan harga atau paket. Biaya penggunaan ChatGPT API tergantung jumlah token yang kamu gunakan, jadi penting untuk memahami kebutuhan proyekmu sebelum mulai.",
+        "reason": "False: no pricing tier or plan is chosen when creating a key, and cost is per token used, not \"tokens requested per month\"."
+      }
+    },
+    "9bsas1eq": {
+      "9bsas1eqc": {
+        "before": "ChatGPT API menggunakan model harga berbasis token. Artinya, kamu dikenakan biaya berdasarkan jumlah token yang diminta, bukan per jam atau per bulan.",
+        "after": "ChatGPT API menggunakan model harga berbasis token. Artinya, kamu dikenakan biaya berdasarkan jumlah token yang diproses (input dan output), bukan per jam atau per bulan.",
+        "reason": "Billing counts tokens processed (input and output), not tokens \"requested\"."
+      }
+    },
+    "v9ee7cnx": {
+      "v9ee7cnxc": {
+        "before": "Jika kamu baru mulai bekerja dengan API, kami sarankan memulai dengan paket dasar lalu meningkatkannya secara bertahap sesuai kebutuhan. Selain itu, pastikan kamu membaca dokumentasi OpenAI tentang perhitungan token dan caching untuk mengoptimalkan pemakaian API.",
+        "after": "Jika kamu baru mulai bekerja dengan API, kami sarankan memulai dari skala kecil lalu meningkatkannya secara bertahap sesuai kebutuhan. Selain itu, pastikan kamu membaca dokumentasi OpenAI tentang perhitungan token dan caching untuk mengoptimalkan pemakaian API.",
+        "reason": "There is no \"basic plan\" for the API; usage is pay-as-you-go."
+      }
+    }
+  }
+}
