@@ -1,0 +1,91 @@
+{
+  "_id": "g3jTIj9ubDWnGQfo9Papei",
+  "locale": "es",
+  "slug": "utilizando-chatgpt-api-para-principiantes",
+  "sourceRev": "g3jTIj9ubDWnGQfo9PgyY4",
+  "note": "Translated from this post's own live body at sourceRev; the patch refuses to write if the post has changed since.",
+  "spans": {
+    "p0he0fki": {
+      "p0he0fkic": "El auge de los grandes modelos de lenguaje abrió la puerta a nuevas posibilidades en el desarrollo de inteligencia artificial. Entre los modelos más populares y potentes está ChatGPT, desarrollado por OpenAI. Sin embargo, tanto poder trae consigo complejidad, y a quienes recién empiezan les puede costar orientarse en la API de ChatGPT. En esta guía te explicamos los conceptos y pasos esenciales para empezar a usar la API de ChatGPT."
+    },
+    "7odxyr2w": {
+      "7odxyr2wc": "La diferencia entre la API de ChatGPT y la API de OpenAI"
+    },
+    "ghjz86u3": {
+      "ghjz86u3c": "Antes de meterte de lleno en la API de ChatGPT, es importante entender su relación con la API de OpenAI. El modelo ChatGPT es una implementación específica de la arquitectura GPT-3.5, mientras que la API de OpenAI ofrece una gama más amplia de modelos y funciones. Aunque ambas API tienen similitudes, se diferencian claramente en funcionalidad, precios y uso."
+    },
+    "aeovpdme": {
+      "aeovpdmec": "El objetivo principal de este artículo es ayudar a los principiantes a entender estas diferencias y decidir qué API se adapta mejor a sus necesidades. Veremos las características clave de cada API, incluidos sus puntos fuertes, sus limitaciones y sus casos de uso."
+    },
+    "zutlvsjx": {
+      "zutlvsjxc": "Diferencias clave entre la API de ChatGPT y la API de OpenAI"
+    },
+    "pp8gua52": {
+      "pp8gua52c": "Una de las diferencias más importantes entre las dos API es el tipo de modelos disponibles. El modelo ChatGPT está diseñado específicamente para tareas de IA conversacional, mientras que la API de OpenAI ofrece una gama más amplia de modelos para distintas aplicaciones, como generación de texto, traducción y más."
+    },
+    "a7zs6xic": {
+      "a7zs6xicc": "Otra diferencia fundamental está en los precios. La API de ChatGPT funciona con un sistema basado en tokens, en el que cada llamada a la API se cobra según la cantidad de tokens procesados. En cambio, la API de OpenAI usa un modelo de pago por uso con planes de precios escalonados."
+    },
+    "5gpyh267": {
+      "5gpyh267c": "Crear una cuenta de OpenAI y obtener una clave de API"
+    },
+    "frqjahgp": {
+      "frqjahgpc": "Para empezar a usar la API de ChatGPT, necesitas crear una cuenta en la plataforma de OpenAI. El registro es sencillo y solo pide datos básicos, como tu correo electrónico y una contraseña."
+    },
+    "c4nggetw": {
+      "c4nggetwc": "Una vez activada tu cuenta, ve al panel y haz clic en 'API keys.' Ahí verás una clave de API única, que puedes usar para autenticar tus solicitudes a la API de ChatGPT."
+    },
+    "dcjcwubo": {
+      "dcjcwuboc": "Recuerda que las claves de API son información sensible y deben mantenerse seguras. Usar mal o exponer tu clave de API puede provocar la suspensión o el cierre de tu cuenta."
+    },
+    "ixrlnqhh": {
+      "ixrlnqhhc": "Configurar la facturación para el uso de la API"
+    },
+    "tnlhnwuh": {
+      "tnlhnwuhc": "Como mencionamos antes, la API de ChatGPT funciona con un sistema basado en tokens. Para que la facturación sea precisa y evitar cargos inesperados, configura tus ajustes de facturación según tus patrones de uso."
+    },
+    "ixs6xht0": {
+      "ixs6xht0c": "Revisa tu consumo de tokens con regularidad y ajusta la configuración cuando haga falta para no salirte del presupuesto."
+    },
+    "gairbidj": {
+      "gairbidjc": "La Responses API como interfaz principal para interactuar con los modelos"
+    },
+    "7qifqs1y": {
+      "7qifqs1yc": "La Responses API es la interfaz principal para interactuar con los modelos: te permite enviar solicitudes y recibir respuestas en distintos formatos. Familiarízate con los endpoints y parámetros disponibles para sacarles el máximo provecho a tus interacciones."
+    },
+    "52i5zxit": {
+      "52i5zxitc": "Al armar tus solicitudes, asegúrate de usar el endpoint correcto, enviar los parámetros pertinentes y manejar bien los errores."
+    },
+    "hqvc2mf6": {
+      "hqvc2mf6c": "Para simplificar tu flujo de trabajo, explora los SDKs de OpenAI para los lenguajes de programación más populares, que incluyen funciones listas para interactuar con los modelos."
+    },
+    "r40b6fxs": {
+      "r40b6fxsc": "Elegir bien el modelo y controlar los costos"
+    },
+    "ss63a3xe": {
+      "ss63a3xec": "Elegir el modelo adecuado es clave para reducir costos sin dejar de lograr los resultados que buscas. Ten en cuenta factores como el tamaño, la complejidad y el rendimiento del modelo al elegir una opción."
+    },
+    "n8na3mj1": {
+      "n8na3mj1c": "Además, aplica estrategias de ahorro como el uso de caché, la compresión de modelos o el uso de modelos más pequeños para tareas más ligeras."
+    },
+    "gs0flrxu": {
+      "gs0flrxuc": "Servicios proxy y enrutamiento de solicitudes a la API"
+    },
+    "s92rx4xc": {
+      "s92rx4xcc": "Si usas la API de ChatGPT directamente, puedes encontrarte con problemas de latencia o de capacidad de procesamiento. En esos casos, considera implementar servicios proxy para enrutar las solicitudes a través de un intermediario."
+    },
+    "g1s38avd": {
+      "g1s38avdc": "Los servidores proxy pueden funcionar como un amortiguador entre tu aplicación y la API, ayudando a repartir la carga y a mejorar el rendimiento general."
+    },
+    "8hro8ofg": {
+      "8hro8ofgc": "Conclusión y próximos pasos"
+    },
+    "r5p93vsz": {
+      "r5p93vszc": "¡Felicidades por completar esta guía para principiantes sobre la API de ChatGPT! Ya tienes una base sólida en conceptos esenciales como la elección del modelo, los precios y los servicios proxy."
+    },
+    "2udsfzkj": {
+      "2udsfzkjc": "Ahora que cuentas con estos conocimientos, empieza a crear tus aplicaciones con IA usando la API de ChatGPT. Recuerda revisar tus patrones de uso, optimizar tu configuración y adaptarte a los nuevos requisitos a medida que avances en tu camino como desarrollador."
+    }
+  },
+  "reviewNotes": "Latin American Spanish, \"tú\". The dashboard button label 'API keys.' is kept in English, as it appears in the OpenAI UI. \"Responses API\", \"SDKs\" and \"endpoint\" kept as product or technical terms."
+}

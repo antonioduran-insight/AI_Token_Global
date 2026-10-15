@@ -1,0 +1,82 @@
+{
+  "_id": "VdSyE50eHa1ZkhVq3P8PAd",
+  "locale": "id",
+  "slug": "token-ai-vs-api-key-pemula",
+  "sourceRev": "VKNTFpWe8NfJwy5gVWSRmv",
+  "note": "Translated from this post's own live body at sourceRev; the patch refuses to write if the post has changed since.",
+  "spans": {
+    "es9vbz4d": {
+      "es9vbz4dc": "Seiring bidang kecerdasan buatan (AI) terus berkembang, salah satu tantangan yang sering dihadapi pendatang baru adalah memahami dasar-dasar token AI dan kunci API. Meski sering dianggap sama, kedua konsep ini punya fungsi yang berbeda dalam pengembangan AI. Dalam artikel ini, kita akan membahas perbedaan antara token AI dan kunci API, mulai dari definisi, cara penggunaan, hingga penerapannya dalam praktik."
+    },
+    "n9fsywbu": {
+      "n9fsywbuc": "Apa Itu Kunci API?"
+    },
+    "1free9y1": {
+      "1free9y1c": "Kunci API adalah tanda pengenal unik yang diberikan penyedia API kepada pengembang untuk memverifikasi identitas mereka saat mengirim permintaan. Anggap saja sebagai tanda tangan digital yang membuktikan bahwa kamu berwenang mengakses API atau layanan tertentu. Pada dasarnya, kunci API berfungsi sebagai penjaga gerbang yang memastikan hanya pengguna berwenang yang bisa berinteraksi dengan API."
+    },
+    "lnty2bah": {
+      "lnty2bahc": "Kunci API biasanya diberikan oleh penyedia API, seperti Google Cloud atau AWS, dan digunakan untuk mengautentikasi permintaan dari aplikasimu. Artinya, saat kamu melakukan panggilan API, kunci API-mu ikut dikirim di header permintaan, sehingga penyedia API bisa memverifikasi identitasmu."
+    },
+    "sa9lz4ci": {
+      "sa9lz4cic": "Salah satu manfaat utama kunci API adalah menyediakan cara yang aman untuk mengautentikasi pengguna dan mengontrol akses ke API. Dengan membatasi akses berdasarkan kunci API, penyedia bisa memastikan hanya pengembang yang sah yang berinteraksi dengan layanan mereka."
+    },
+    "jmfqg37c": {
+      "jmfqg37cc": "Keamanan Kunci API"
+    },
+    "fuv99vuz": {
+      "fuv99vuzc": "Perlu diingat bahwa kunci API harus disimpan dengan aman dan tidak boleh dipublikasikan. Membocorkan kunci API bisa menyebabkan akses tanpa izin, kebocoran data, atau bahkan serangan terhadap aplikasimu. Untuk mengurangi risiko ini, pertimbangkan penggunaan environment variable atau alat pengelola rahasia seperti Vault dari HashiCorp."
+    },
+    "ct1ovwl2": {
+      "ct1ovwl2c": "Apa Itu Token AI?"
+    },
+    "ouehhgsc": {
+      "ouehhgscc": "Sementara itu, token AI adalah satuan ukur untuk pemrosesan model. Anggap saja sebagai mata uang yang memungkinkan kamu 'membeli' akses ke model atau layanan AI tertentu. Pada dasarnya, saat kamu meminta layanan dari penyedia API, mereka akan menghitung berapa banyak token yang dibutuhkan untuk memproses permintaanmu."
+    },
+    "5vwvpwt6": {
+      "5vwvpwt6c": "Token AI bisa dipahami sebagai cara membayar sumber daya komputasi yang dipakai oleh model AI. Artinya, semakin rumit atau berat suatu tugas, semakin banyak token yang kamu perlukan untuk menutup biayanya."
+    },
+    "trpethk3": {
+      "trpethk3c": "Salah satu manfaat utama token AI adalah model harganya yang transparan. Dengan mengetahui persis berapa token yang dibutuhkan untuk setiap layanan, pengembang bisa merencanakan dan menganggarkan proyek mereka dengan lebih baik."
+    },
+    "69rybkht": {
+      "69rybkhtc": "Harga Token AI"
+    },
+    "6y9i69e2": {
+      "6y9i69e2c": "Soal harga token AI, ada banyak faktor yang berpengaruh. Biaya token sering kali bergantung pada layanan atau model yang digunakan, serta volume input dan output. Misalnya, jika kamu memakai generator text-to-image, biayanya mungkin dihitung berdasarkan jumlah gambar yang dihasilkan."
+    },
+    "24i9nfn2": {
+      "24i9nfn2c": "Agar kamu lebih memahami harga token AI, mari lihat sebuah contoh. Misalnya kamu menggunakan model bahasa untuk menerjemahkan 1,000 kata dari bahasa Inggris ke bahasa Spanyol. Penyedia mungkin mengenakan biaya $0.001 per kata untuk layanan ini. Jika model membutuhkan 10 token per kata, total biayamu adalah 10 x $0.001 = $0.01."
+    },
+    "ch8tcle0": {
+      "ch8tcle0c": "Kunci API vs Token AI: Apa Bedanya?"
+    },
+    "xejtha2i": {
+      "xejtha2ic": "Salah satu perbedaan utama antara kunci API dan token AI adalah tujuannya. Kunci API dipakai untuk mengautentikasi pengguna, sedangkan token AI adalah satuan ukur untuk pemrosesan model."
+    },
+    "swogcfkg": {
+      "swogcfkgc": "Perbedaan penting lainnya ada pada cara penggunaannya. Kunci API biasanya bersifat tetap, sedangkan token AI bisa berubah-ubah tergantung layanan atau model yang digunakan. Selain itu, kunci API tidak dibatasi oleh pemakaian, tetapi token AI bisa dipengaruhi oleh volume input dan output."
+    },
+    "hjs0epw5": {
+      "hjs0epw5c": "Perbandingan Kunci API dan Token AI"
+    },
+    "l4i5va9c": {
+      "l4i5va9cc": "Untuk menggambarkan perbedaan antara kunci API dan token AI, perhatikan contoh berikut. Misalnya kamu sedang membangun chatbot yang memerlukan autentikasi sekaligus akses ke model bahasa."
+    },
+    "vej5ji7x": {
+      "vej5ji7xc": "Dalam skenario ini, kamu akan memakai kunci API untuk keperluan autentikasi, sehingga hanya pengguna berwenang yang bisa berinteraksi dengan aplikasimu. Namun, saat meminta layanan dari model bahasa, kamu memerlukan token AI untuk menutup biaya pemrosesan model."
+    },
+    "mihvqw5k": {
+      "mihvqw5kc": "Kesimpulan dan Langkah Selanjutnya"
+    },
+    "sla4nz5u": {
+      "sla4nz5uc": "Sebagai kesimpulan, memahami perbedaan antara token AI dan kunci API sangat penting bagi siapa pun yang baru terjun ke AI atau machine learning. Dengan tahu cara menggunakan kedua konsep ini secara efektif, kamu bisa memaksimalkan potensi proyekmu."
+    },
+    "8md9k65b": {
+      "8md9k65bc": "Untuk mempraktikkan pengetahuan ini, pertimbangkan langkah-langkah berikut: pertama, pelajari dokumentasi penyedia API pilihanmu tentang kunci API dan token AI. Selanjutnya, coba berbagai layanan dan model untuk memahami cara kerja harga token AI dalam situasi nyata."
+    },
+    "ui7ft6uk": {
+      "ui7ft6ukc": "Terakhir, ingatlah bahwa kunci API dan token AI sama-sama alat penting dalam setiap proyek pengembangan AI. Dengan menguasai kedua konsep ini, kamu akan selangkah lebih dekat untuk membangun aplikasi yang lebih efisien, hemat biaya, dan inovatif."
+    }
+  },
+  "reviewNotes": "\"API key\" → \"kunci API\", matching the post title \"Memahami Token AI dan Kunci API untuk Pemula\". \"environment variable\" kept in English (developer term); \"Vault dari HashiCorp\" for \"HashiCorp's Vault\"."
+}
