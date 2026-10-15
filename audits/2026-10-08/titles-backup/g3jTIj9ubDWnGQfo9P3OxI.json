@@ -1,0 +1,382 @@
+{
+  "_createdAt": "2026-06-04T16:07:18Z",
+  "_id": "g3jTIj9ubDWnGQfo9P3OxI",
+  "_rev": "36TK9CDo7y3YWN6Akep4Nb",
+  "_type": "post",
+  "_updatedAt": "2026-10-14T08:51:00Z",
+  "articleNumber": 47,
+  "body": [
+    {
+      "_key": "kz6pht8m",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "kz6pht8mc",
+          "_type": "span",
+          "marks": [],
+          "text": "Saat mulai menjelajahi teknologi AI dengan Claude API dari Anthropic, ada satu aspek penting yang langsung menonjol: harga token. Namun, memahami harga token Claude bukan sekadar menghitung angka; kamu perlu mendalami seluk-beluk token input, token output, dan prompt caching. Dalam panduan lengkap ini, kita akan mengurai halaman harga resminya, melihat penerapannya di dunia nyata, dan memberikan tips praktis untuk membantumu memaksimalkan efisiensi model AI."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "9mh6uaf3",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "9mh6uaf3c",
+          "_type": "span",
+          "marks": [],
+          "text": "Mengurai Harga Token Claude"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "gg0kx2ek",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "gg0kx2ekc",
+          "_type": "span",
+          "marks": [],
+          "text": "Halaman harga Anthropic membagi biaya ke dalam empat kategori utama: Base Input Tokens, Cache Writes, Cache Hits & Refreshes, dan Output Tokens. Setiap kategori mewakili aspek yang berbeda dari interaksimu dengan API."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "ypfzlmkv",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "ypfzlmkvc",
+          "_type": "span",
+          "marks": [],
+          "text": "Mari mulai dari dasarnya. Saat kamu berinteraksi dengan Claude API, setiap token input terkait dengan satu prompt atau kueri. Semakin rumit atau detail prompt-mu, semakin banyak token yang dibutuhkan. Sementara itu, token output berkaitan dengan jumlah teks hasil olahan yang dikembalikan oleh model."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "156uihfy",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "156uihfyc",
+          "_type": "span",
+          "marks": [],
+          "text": "Perhitungan Token"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "u0iww5yn",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "u0iww5ync",
+          "_type": "span",
+          "marks": [],
+          "text": "Agar lebih jelas, mari lihat sebuah contoh. Misalnya model AI-mu memproses 1,000 token per menit, dan setiap token berharga $0.05. Jika kamu menjalankan model selama 10 menit, total biayanya sekitar $50."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "p73xs7jm",
+      "_type": "image",
+      "alt": "Section image 1",
+      "asset": {
+        "_ref": "image-978a83d2e0b1af65b635cabdf3320f304a23e21f-1344x768-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "3zahpe0q",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "3zahpe0qc",
+          "_type": "span",
+          "marks": [],
+          "text": "Kekuatan Prompt Caching"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "fjcj7mf9",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "fjcj7mf9c",
+          "_type": "span",
+          "marks": [],
+          "text": "Salah satu keuntungan terbesar menggunakan Claude API adalah kemampuannya menyimpan prompt dalam cache. Fitur ini memungkinkan kamu menyimpan prompt yang sering dipakai, sehingga kebutuhan token input baru berkurang dan biayamu pun turun."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "37kylkse",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "37kylksec",
+          "_type": "span",
+          "marks": [],
+          "text": "Mari lihat lebih dekat cara kerja prompt caching. Misalnya kamu punya tugas yang memerlukan beberapa kali pengulangan prompt yang sama. Alih-alih membuat instance baru setiap kali, kamu bisa menyimpan prompt aslinya di cache. Cara ini mengurangi jumlah token input yang dibutuhkan dan menekan biayamu."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "2ujxsolw",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "2ujxsolwc",
+          "_type": "span",
+          "marks": [],
+          "text": "Untuk menggambarkan konsep ini lebih jauh, bayangkan seorang penulis konten yang menggunakan Claude API untuk membuat deskripsi produk. Model menerima satu prompt untuk setiap deskripsi, tetapi karena prompt-nya tersimpan di cache, biaya per token turun cukup signifikan seiring penulis terus membuat deskripsi."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "7w94nb3x",
+      "_type": "image",
+      "alt": "Section image 2",
+      "asset": {
+        "_ref": "image-5967215cd16e3e426c14fba0c5d5997484aaf98d-1344x768-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "43ffhrek",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "43ffhrekc",
+          "_type": "span",
+          "marks": [],
+          "text": "Memilih Paket Harga yang Tepat"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "st2gozbl",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "st2gozblc",
+          "_type": "span",
+          "marks": [],
+          "text": "Setelah memahami harga token Claude dengan baik, saatnya memilih paket yang sesuai dengan kebutuhanmu. Perhatikan pola pemakaianmu dan jumlah token yang dibutuhkan per tugas. Jika kamu menjalankan tugas dengan input besar dan prompt yang rumit, carilah paket yang menawarkan tarif diskon untuk pembelian token dalam jumlah besar."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "zmx0jb33",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "zmx0jb33c",
+          "_type": "span",
+          "marks": [],
+          "text": "Faktor penting lainnya adalah token output. Pikirkan berapa banyak teks yang dihasilkan modelmu. Jika jumlahnya besar, bersiaplah untuk membayar lebih. Carilah paket dengan tingkatan harga fleksibel berdasarkan volume output, atau sesuaikan dengan kebutuhan spesifikmu."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "ap1f1lnf",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "ap1f1lnfc",
+          "_type": "span",
+          "marks": [],
+          "text": "API vs Proxy"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "02iwcvv0",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "02iwcvv0c",
+          "_type": "span",
+          "marks": [],
+          "text": "Saat bekerja dengan Claude API, kamu mungkin dihadapkan pada pilihan antara menggunakan API secara langsung atau memakai layanan proxy. Proxy memang bisa menambah lapisan keamanan atau menyederhanakan interaksi, tetapi juga menambah biaya."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "g3tzf33j",
+      "_type": "image",
+      "alt": "Section image 3",
+      "asset": {
+        "_ref": "image-5015b100d3da015fe0b25b5774731f756ffa3c34-1344x768-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "841s1g3r",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "841s1g3rc",
+          "_type": "span",
+          "marks": [],
+          "text": "Claude API untuk Tugas Berskala Besar"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "dbthhepy",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "dbthhepyc",
+          "_type": "span",
+          "marks": [],
+          "text": "Claude API sangat cocok untuk tugas berskala besar, seperti pemrosesan batch atau pembuatan konten panjang. Dalam skenario seperti ini, prompt caching menjadi semakin penting untuk menekan biaya."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "z0xuw5k3",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "z0xuw5k3c",
+          "_type": "span",
+          "marks": [],
+          "text": "Sebagai contoh, bayangkan tim pemasaran yang menggunakan Claude API untuk membuat ribuan deskripsi produk setiap hari. Dengan memanfaatkan prompt caching dan memilih paket harga yang tepat, mereka bisa mengoptimalkan efisiensi model AI dan tetap sesuai anggaran."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "wiyfymyy",
+      "_type": "image",
+      "alt": "Section image 4",
+      "asset": {
+        "_ref": "image-60237a7b2e88fdcfd8da44461733c13b35a4efbf-1344x768-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "e3dexthw",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "e3dexthwc",
+          "_type": "span",
+          "marks": [],
+          "text": "Kesimpulan"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "sa83q7pq",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "sa83q7pqc",
+          "_type": "span",
+          "marks": [],
+          "text": "Memahami harga token Claude adalah langkah penting untuk memaksimalkan potensi model AI-mu. Dengan mengurai halaman harga resmi ke dalam komponen utamanya—token input, token output, dan prompt caching—serta mempertimbangkan penerapannya di dunia nyata, kamu bisa membuat keputusan yang tepat tentang interaksimu dengan API."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "pbmdlsbi",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "pbmdlsbic",
+          "_type": "span",
+          "marks": [],
+          "text": "Ingatlah untuk menimbang pola pemakaianmu terhadap struktur biaya berbagai paket. Pertimbangkan layanan proxy untuk keamanan atau kemudahan tambahan jika diperlukan, tetapi tetap perhatikan dampaknya terhadap biaya."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    }
+  ],
+  "category": "fundamentals",
+  "coverImage": {
+    "_type": "image",
+    "alt": "Mengerti Harga Token Claude: Panduan Lengkap",
+    "asset": {
+      "_ref": "image-fafbe2ac158b540e8c65827e32cb39975d109433-1344x768-png",
+      "_type": "reference"
+    }
+  },
+  "difficultyLevel": "beginner",
+  "excerpt": "Dalam artikel ini, kita akan membahas mengenai harga token Claude yang tidak hanya tentang input token saja, tetapi juga output token dan cache. Anda dapat memahami bagaimana Anthropic's official pricing page membagi biaya menjadi empat kategori utama: Token Input Dasar, Cache Menulis, Cache Hit & Refreshes, dan Token Output.",
+  "focusKeyword": "Claude Token Pricing Guide for Beginners",
+  "generatedByPipeline": true,
+  "language": "id",
+  "pipelineVersion": "v1.0",
+  "publishedAt": "2026-06-04T16:07:18.529Z",
+  "qaCheckedAt": "2026-06-04T16:35:25.699Z",
+  "qaFeedback": "excerpt has 327 chars (needs < 300)",
+  "qaRetryCount": 0,
+  "qaScore": 94,
+  "readTime": 12,
+  "secondaryKeywords": [
+    "Anthropic",
+    "AI Technology",
+    "Model Pricing"
+  ],
+  "seo": {
+    "seoDescription": "Panduan lengkap tentang harga token Claude untuk pemula. Dalam artikel ini, kita akan membahas mengenai harga token Claude dan bagaimana memahaminya.",
+    "seoTitle": "Mengerti Harga Token Claude"
+  },
+  "slug": {
+    "_type": "slug",
+    "current": "harga-token-claude-antropik-api"
+  },
+  "sourceUrl": "https://www.aitoken.com.tw/post/claude-token-pricing-guide",
+  "tags": [
+    "Anthropic",
+    "AI Technology",
+    "Model Pricing"
+  ],
+  "title": "Mengerti Harga Token Claude: Panduan Lengkap",
+  "translationKey": "cecca986-a529-42bc-8c43-ff59a2e83150"
+}
