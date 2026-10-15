@@ -1,0 +1,54 @@
+{
+  "_id": "dShP6JdGzwBHy3qr2At6pH",
+  "locale": "es",
+  "slug": "compre-tokens-de-ia-para-iniciados",
+  "sourceRev": "5bTmGH4csQ2ze7LA781SoL",
+  "bodyLanguage": "en",
+  "item": "1/2 (winner)",
+  "winner": true,
+  "group": "winner",
+  "snapshot": {
+    "title": "Compre tokens de IA para iniciados",
+    "excerpt": "Si estás empezando a explorar la tecnología de inteligencia artificial, es probable que hayas oído hablar de tokens de IA. Pero ¿qué son exactamente y cómo comprarlos?",
+    "seoTitle": "¿Qué son los tokens de IA?",
+    "seoDescription": "Descubre cómo comprar tokens de IA para su uso personal y comprende mejor el mundo de la inteligencia artificial."
+  },
+  "reviewNotes": "S10 accuracy fixes, item 1/2 (winner). Illustrative rate only ($10 per 1M tokens, labelled as an example); no provider price stated. Body language: en (untranslated English copy; edits are in English, translate later). Only the listed spans change.",
+  "spans": {
+    "cmow8c1d": {
+      "cmow8c1dc": {
+        "before": "Let's consider an example. Suppose you're interested in using a text-to-image model. The platform offers two pricing options: $10 for 100 tokens or $50 for 500 tokens. If you plan to use the service extensively, purchasing 500 tokens upfront might be more cost-effective.",
+        "after": "Let's consider an example. Suppose you're interested in using a text-to-image model. The platform might charge, for example, $10 per 1 million tokens, and sell that usage in bundles of different sizes. If you plan to use the service extensively, compare the price per million tokens, not the bundle size.",
+        "reason": "\"$10 for 100 tokens / $50 for 500 tokens\" = $0.10 per token (invented, ~1,000x real rates), and both options are the same rate, so \"buying 500 upfront is more cost-effective\" was false. One illustrative rate, written as an example; the advice becomes \"compare price per million tokens, not bundle size\". No invented discount."
+      }
+    },
+    "94vhyrzk": {
+      "94vhyrzkc": {
+        "before": "To illustrate this concept, imagine a platform that charges $0.10 per token. If you need to make 100 requests using the text-to-image model, your total cost would be $10 (100 tokens x $0.10/token).",
+        "after": "To illustrate this concept, imagine a platform that charges, for example, $10 per 1 million tokens. If you need to make 100 requests using the text-to-image model, and each request uses 2,000 tokens, your total cost would be $2 (200,000 tokens x $10 per 1 million tokens).",
+        "reason": "\"$0.10 per token\" is invented (~1,000x real rates) and \"100 requests = 100 tokens\" assumes one token per request. Illustrative rate per 1M tokens, with a token count per request so the total checks out."
+      }
+    },
+    "cvx3nxea": {
+      "cvx3nxeac": {
+        "before": "Let's compare two popular platforms: Option A offers a flat rate of $10 for 100 tokens, while Option B uses a tiered system with increasing prices as you consume more tokens. If you expect to use the service frequently, Option A might be the better choice.",
+        "after": "Let's compare two popular platforms: Option A offers a flat rate of, for example, $10 per 1 million tokens, while Option B uses a tiered system with increasing prices as you consume more tokens. If you expect to use the service frequently, Option A might be the better choice.",
+        "reason": "\"$10 for 100 tokens\" = $0.10 per token (invented). Same illustrative rate as the bundle example above."
+      }
+    },
+    "mynv1su2": {
+      "mynv1su2c": {
+        "before": "AI tokens are not a product to buy; rather, they're a payment method for accessing API services. Think of them as a currency that allows you to use various AI models and tools provided by platforms. Platforms have different billing and credits systems, making it confusing for beginners to understand how token-based pricing works.",
+        "after": "AI tokens are the small pieces of text that AI models read and write, and API services bill you by how many you use. Think of them as a currency that allows you to use various AI models and tools provided by platforms. Platforms have different billing and credits systems, making it confusing for beginners to understand how token-based pricing works.",
+        "reason": "Plainly false first sentence: tokens are not a payment method; they are the units of text a model reads and writes, and API usage is billed by how many are used. Only that sentence changes; the \"think of them as a currency\" analogy stays."
+      }
+    },
+    "sv528p7u": {
+      "sv528p7uc": {
+        "before": "It's essential to differentiate between AI tokens and API keys. While both are used to access AI services, they serve different purposes. Tokens are a form of payment, whereas API keys grant access to specific APIs without requiring an additional payment.",
+        "after": "It's essential to differentiate between AI tokens and API keys. While both are used to access AI services, they serve different purposes. Tokens are the units your usage is measured and billed in, whereas API keys identify and authenticate your requests; usage made with a key is billed to your account.",
+        "reason": "False: API keys do not give access \"without requiring an additional payment\"; requests made with a key are billed to the account, per token. First two sentences kept."
+      }
+    }
+  }
+}

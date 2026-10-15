@@ -1,0 +1,61 @@
+{
+  "_id": "g3jTIj9ubDWnGQfo9Papei",
+  "locale": "es",
+  "slug": "utilizando-chatgpt-api-para-principiantes",
+  "sourceRev": "S5EFnJjn0OdXSc45Ql76oa",
+  "bodyLanguage": "es",
+  "item": "6",
+  "winner": false,
+  "group": "rest",
+  "snapshot": {
+    "title": "Cómo Utilizar la API de ChatGPT para Principiantes",
+    "excerpt": "Descubre cómo utilizar la API de ChatGPT para principiantes y superar los desafíos de la programación de inteligencia artificial.",
+    "seoTitle": "Guía de inicio rápido con la API de ChatGPT",
+    "seoDescription": "Aprende a utilizar la API de ChatGPT para crear aplicaciones de inteligencia artificial sin experiencia previa. Con esta guía, superarás los desafíos más comunes y aprovecharás al máximo el poder de la IA."
+  },
+  "reviewNotes": "S10 accuracy fixes, item 6. Source checked 15 Oct: OpenAI quickstart (key created in the dashboard). No prices stated; points to OpenAI's pricing page. Body language: es. Only the listed spans change.",
+  "spans": {
+    "7odxyr2w": {
+      "7odxyr2wc": {
+        "before": "La diferencia entre la API de ChatGPT y la API de OpenAI",
+        "after": "La relación entre la API de ChatGPT y la API de OpenAI",
+        "reason": "Heading (h2) premise is wrong: the ChatGPT API is part of the OpenAI API, not a separate product. Minimal rewording, keywords kept."
+      }
+    },
+    "aeovpdme": {
+      "aeovpdmec": {
+        "before": "El objetivo principal de este artículo es ayudar a los principiantes a entender estas diferencias y decidir qué API se adapta mejor a sus necesidades. Veremos las características clave de cada API, incluidos sus puntos fuertes, sus limitaciones y sus casos de uso.",
+        "after": "El objetivo principal de este artículo es ayudar a los principiantes a entender cómo se relacionan ambas y qué modelos se adaptan mejor a sus necesidades. Veremos las características clave de cada una, incluidos sus puntos fuertes, sus limitaciones y sus casos de uso.",
+        "reason": "Follows from the same false premise (\"which API best suits\"); reworded to how the two relate and which models fit."
+      }
+    },
+    "zutlvsjx": {
+      "zutlvsjxc": {
+        "before": "Diferencias clave entre la API de ChatGPT y la API de OpenAI",
+        "after": "API de ChatGPT vs API de OpenAI: qué cambia y qué no",
+        "reason": "Heading (h3) premise is wrong: the section now says pricing is not a difference. Minimal rewording, keywords kept."
+      }
+    },
+    "ghjz86u3": {
+      "ghjz86u3c": {
+        "before": "Antes de meterte de lleno en la API de ChatGPT, es importante entender su relación con la API de OpenAI. El modelo ChatGPT es una implementación específica de la arquitectura GPT-3.5, mientras que la API de OpenAI ofrece una gama más amplia de modelos y funciones. Aunque ambas API tienen similitudes, se diferencian claramente en funcionalidad, precios y uso.",
+        "after": "Antes de meterte de lleno en la API de ChatGPT, es importante entender su relación con la API de OpenAI. \"API de ChatGPT\" es el nombre común para usar los modelos de chat de OpenAI, que forman parte de la API de OpenAI; la API de OpenAI en su conjunto ofrece una gama más amplia de modelos y funciones. Ambas usan la misma cuenta de OpenAI, las mismas claves de API y la misma facturación.",
+        "reason": "\"ChatGPT model is a specific implementation of GPT-3.5\" is outdated and version-specific, and there is no separate ChatGPT API with its own pricing: it is the OpenAI API. First sentence kept."
+      }
+    },
+    "a7zs6xic": {
+      "a7zs6xicc": {
+        "before": "Otra diferencia fundamental está en los precios. La API de ChatGPT funciona con un sistema basado en tokens, en el que cada llamada a la API se cobra según la cantidad de tokens procesados. En cambio, la API de OpenAI usa un modelo de pago por uso con planes de precios escalonados.",
+        "after": "Los precios no son una de las diferencias: la API de OpenAI, incluidos sus modelos de chat, es de pago por uso, y cada llamada a la API se cobra según la cantidad de tokens procesados. Las tarifas varían según el modelo, así que consulta la página de precios de OpenAI para ver los precios actuales.",
+        "reason": "Token-based vs pay-as-you-go is a false contrast: the API is pay-as-you-go AND charged per token; there are no \"tiered pricing plans\". No prices given; points to OpenAI's pricing page."
+      }
+    },
+    "c4nggetw": {
+      "c4nggetwc": {
+        "before": "Una vez activada tu cuenta, ve al panel y haz clic en 'API keys.' Ahí verás una clave de API única, que puedes usar para autenticar tus solicitudes a la API de ChatGPT.",
+        "after": "Una vez activada tu cuenta, ve al panel y haz clic en 'API keys.' Ahí puedes crear una clave de API única, que puedes usar para autenticar tus solicitudes a la API de ChatGPT.",
+        "reason": "The dashboard does not present a ready-made key; you create one (OpenAI quickstart)."
+      }
+    }
+  }
+}

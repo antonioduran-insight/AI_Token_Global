@@ -1,0 +1,68 @@
+{
+  "_id": "VdSyE50eHa1ZkhVq3R3Agb",
+  "locale": "id",
+  "slug": "perbandingan-konsumsi-token-chatgpt-claude-gemini",
+  "sourceRev": "OMoPJs3TO454YnQUSQ8wzf",
+  "bodyLanguage": "en",
+  "item": "7",
+  "winner": false,
+  "group": "rest",
+  "snapshot": {
+    "title": "Perbandingan Konsumsi Token Antara ChatGPT, Claude, dan Gemini",
+    "excerpt": "Mengerti perbedaan konsumsi token antara AI model yang berbeda membantu Anda mengoptimalkan penggunaan dan biaya",
+    "seoTitle": "Perbandingan Konsumsi Token AI ChatGPT, Claude, dan Gemini",
+    "seoDescription": "Perbedaan konsumsi token antara ChatGPT, Claude, dan Gemini yang harus Anda ketahui sebelum memilih model yang tepat"
+  },
+  "reviewNotes": "S10 accuracy fixes, item 7. Sources checked 15 Oct: (1) tiktoken/model.py on github.com/openai/tiktoken maps \"gpt-4\" to cl100k_base and \"gpt-4o\" to o200k_base; (2) platform.claude.com/docs/en/build-with-claude/token-counting: \"Claude 4.7 and later models ... use a newer tokenizer. The same input text produces approximately 30 percent more tokens than on earlier models\", and the count_tokens endpoint; (3) ai.google.dev/gemini-api/docs/tokens: count_tokens / countTokens; (4) github.com/openai/tiktoken README: encoding_for_model. Architecture claims (RNN, GNN) and science/arts variants deleted, not replaced. Body language: en (untranslated English copy; edits are in English, translate later). Only the listed spans change.",
+  "spans": {
+    "meufro3e": {
+      "meufro3ec": {
+        "before": "Token consumption is a measure of the number of tokens required to process a specific task or request. Tokens are usually counted based on the complexity of the input, with more complex inputs requiring more tokens. However, token counts can vary significantly across different platforms due to differences in model architecture, training data, and algorithmic approaches.",
+        "after": "Token consumption is a measure of the number of tokens required to process a specific task or request. Tokens are counted from the text itself, so longer inputs require more tokens. However, token counts can vary significantly across different platforms because each one uses its own tokenizer, the method that splits text into tokens.",
+        "reason": "Tokens are counted from the text (length), not its \"complexity\"; counts differ across platforms because of tokenizers, not \"architecture, training data and algorithmic approaches\". First sentence kept."
+      }
+    },
+    "zr8k2wit": {
+      "zr8k2witc": {
+        "before": "For instance, ChatGPT uses a transformer-based architecture, which is optimized for sequential processing of text data. In contrast, Claude employs a hybrid approach combining transformer and recurrent neural network (RNN) architectures to accommodate both sequential and parallel processing needs. Gemini, on the other hand, relies on a graph neural network (GNN) architecture to model complex relationships between entities.",
+        "after": "For instance, ChatGPT, Claude and Gemini each use their own tokenizer, so the same text can produce a different number of tokens on each platform.",
+        "reason": "DELETED claims: Claude as transformer+RNN hybrid and Gemini as a GNN are false. Kept only the verifiable point (different tokenizers, different counts)."
+      }
+    },
+    "cjw2qr4u": {
+      "cjw2qr4uc": {
+        "before": "One of the primary factors contributing to varying token counts is the platform's differences in model architecture, training data, and algorithmic approaches. For example, ChatGPT's transformer-based architecture may be more efficient for processing long-range dependencies in text, but it may struggle with tasks requiring parallel processing capabilities, such as handling multiple requests simultaneously.",
+        "after": "One of the primary factors contributing to varying token counts is the tokenizer each platform uses. For example, a tokenizer that handles a particular language or code well may need fewer tokens for the same text than one that splits it into smaller pieces.",
+        "reason": "DELETED claim that ChatGPT's transformer \"struggles with parallel processing such as handling multiple requests\" (false, and unrelated to token counts). Replaced with the tokenizer point."
+      }
+    },
+    "gwnoz1xv": {
+      "gwnoz1xvc": {
+        "before": "Another significant factor influencing token counts is the specific model variant being used. Model variants are optimized for particular tasks or domains, which can lead to variations in token consumption. For example, ChatGPT's 'general' model may have different token consumption characteristics compared to its 'science' or 'arts' variants.",
+        "after": "Another significant factor influencing token counts is the specific model variant being used. Model variants are optimized for particular tasks or domains, which can lead to variations in token consumption. For example, newer and older models from the same provider can use different tokenizers, so the same text may not produce the same number of tokens on each.",
+        "reason": "DELETED invented ChatGPT \"general/science/arts\" variants. Replaced the example with one verified 15 Oct on official sources: tiktoken model.py maps gpt-4 to cl100k_base and gpt-4o to o200k_base; Anthropic token-counting docs: Claude 4.7 and later use a newer tokenizer, ~30% more tokens for the same text. First two sentences kept."
+      }
+    },
+    "0zmqsh7v": {
+      "0zmqsh7vc": {
+        "before": "To optimize token consumption, developers must choose the correct model variant for their specific application and task requirements. However, this can be challenging due to the lack of explicit information on token counts associated with each model variant.",
+        "after": "To optimize token consumption, developers must choose the correct model variant for their specific application and task requirements. Each platform's official token counting tools can show how many tokens your text uses on a given model.",
+        "reason": "False: providers publish token counting tools (Anthropic count_tokens endpoint, Gemini countTokens, OpenAI tiktoken). First sentence kept."
+      }
+    },
+    "c2vo591t": {
+      "c2vo591tc": {
+        "before": "A comparison of the three platforms' token consumption patterns reveals some interesting insights. For instance, ChatGPT tends to require more tokens for sequential processing tasks but less for parallel processing tasks.",
+        "after": "Comparing the three platforms is less straightforward than it looks. Because each uses its own tokenizer, the reliable way to compare is to count the same text with each platform's official token counting tools.",
+        "reason": "DELETED unsupported claim (ChatGPT uses more tokens for \"sequential\" and fewer for \"parallel\" tasks). Replaced with how to compare reliably. Counting tools verified 15 Oct: Anthropic POST /v1/messages/count_tokens (platform.claude.com/docs/en/build-with-claude/token-counting), Gemini count_tokens / :countTokens (ai.google.dev/gemini-api/docs/tokens), OpenAI tiktoken (github.com/openai/tiktoken)."
+      }
+    },
+    "7rxjlh7i": {
+      "7rxjlh7ic": {
+        "before": "On the other hand, Claude exhibits a different pattern with increased token consumption for complex tasks involving multiple requests and reduced consumption for simpler text-based queries.",
+        "after": "The result also depends on the model you choose and on everything sent with your text, such as system prompts and conversation history.",
+        "reason": "DELETED unsupported claim about Claude's token pattern. Replaced with a true, generic point already made elsewhere in the article."
+      }
+    }
+  }
+}

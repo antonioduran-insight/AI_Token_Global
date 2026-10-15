@@ -1,0 +1,33 @@
+{
+  "_id": "lT0MJhwbFtcMofmR8HwUAJ",
+  "locale": "es",
+  "slug": "claudetokenprecioguia",
+  "sourceRev": "lT0MJhwbFtcMofmR8I743x",
+  "bodyLanguage": "en",
+  "item": "3",
+  "winner": false,
+  "group": "rest",
+  "snapshot": {
+    "title": "Guía de Precios del Token Claude: Un Punto de Partida para Principiantes",
+    "excerpt": "Descubre cómo funcionan los precios del token Claude y cómo ahorrar en tus solicitudes a la API Anthropic.",
+    "seoTitle": "Guía de Precios del Token Claude: Un Punto de Partida para Principiantes",
+    "seoDescription": "Aprende sobre el cálculo de precios del token Claude y cómo reducir costos en tus solicitudes a la API Anthropic."
+  },
+  "reviewNotes": "S10 accuracy fixes, item 3. Illustrative rate only, labelled as not Anthropic's price. Body language: en (untranslated English copy; edits are in English, translate later). Only the listed spans change.",
+  "spans": {
+    "ypfzlmkv": {
+      "ypfzlmkvc": {
+        "before": "Let's start with the basics. When you interact with the Claude API, each input token corresponds to a single prompt or query. The more complex or nuanced your prompts are, the higher the number of tokens required. Output tokens, on the other hand, relate to the amount of processed text returned by the model.",
+        "after": "Let's start with the basics. When you interact with the Claude API, each prompt or query you send is split into input tokens. The more complex or nuanced your prompts are, the higher the number of tokens required. Output tokens, on the other hand, relate to the amount of processed text returned by the model.",
+        "reason": "OUTSIDE THE BRIEF (drop if you prefer): \"each input token corresponds to a single prompt\" is false; a prompt is split into many tokens. This sits right above the calculation the new id title promises."
+      }
+    },
+    "u0iww5yn": {
+      "u0iww5ync": {
+        "before": "To give you a better understanding, let's consider an example. Suppose your AI model processes 1,000 tokens per minute, and each token costs $0.05. If you run the model for 10 minutes, your total cost would be approximately $50.",
+        "after": "To give you a better understanding, let's consider an example. Suppose your AI model processes 1,000 tokens per minute, and the price is $10 per 1 million tokens (an illustrative rate, not Anthropic's actual price). If you run the model for 10 minutes, your total cost would be $0.10 (10,000 tokens x $10 per 1 million tokens).",
+        "reason": "1,000 tokens/min x 10 min x $0.05 = $500, not $50; and $0.05 per token is ~5,000x a typical rate. Labelled illustrative rate (not presented as Anthropic's price) with the working shown."
+      }
+    }
+  }
+}

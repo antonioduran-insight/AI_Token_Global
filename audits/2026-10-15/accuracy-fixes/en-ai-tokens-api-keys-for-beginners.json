@@ -1,0 +1,26 @@
+{
+  "_id": "VdSyE50eHa1ZkhVq3P8OHS",
+  "locale": "en",
+  "slug": "ai-tokens-api-keys-for-beginners",
+  "sourceRev": "VKNTFpWe8NfJwy5gVWSPKO",
+  "bodyLanguage": "en",
+  "item": "4",
+  "winner": false,
+  "group": "rest",
+  "snapshot": {
+    "title": "Understanding AI Tokens and API Keys for Beginners",
+    "excerpt": "Unlocking the mysteries of AI tokens and API keys: a comprehensive guide for newcomers to AI and machine learning.",
+    "seoTitle": "AI Token vs API Key: A Beginner's Guide",
+    "seoDescription": "Learn how AI tokens and API keys work, their differences, and practical applications in AI development."
+  },
+  "reviewNotes": "S10 accuracy fixes, item 4. Sources checked 15 Oct: OpenAI help \"What are tokens and how to count them\" (100 tokens ≈ 75 words, i.e. ~1.33 tokens per English word; via search, page returned 403 to fetch); Gemini docs ai.google.dev/gemini-api/docs/tokens (\"100 tokens is equal to about 60-80 English words\"). Body language: en. Only the listed spans change.",
+  "spans": {
+    "24i9nfn2": {
+      "24i9nfn2c": {
+        "before": "To give you a better understanding of AI token pricing, let's consider an example. Suppose you're using a language model to translate 1,000 words from English to Spanish. The provider might charge $0.001 per word for this service. If the model requires 10 tokens per word, your total cost would be 10 x $0.001 = $0.01.",
+        "after": "To give you a better understanding of AI token pricing, let's consider an example. Suppose you're using a language model to translate 1,000 words from English to Spanish. The provider might charge $10 per 1 million tokens for this service. English text averages about 1.3 tokens per word, so the 1,000 words you send come to about 1,300 input tokens, costing about 1,300 x $10 / 1,000,000 = $0.013. The translated text you get back is billed as output tokens on top of that.",
+        "reason": "Mixes a per-word price with tokens, \"10 tokens per word\" is ~8x too high (OpenAI: 100 tokens ≈ 75 words), and \"10 x $0.001\" prices 10 tokens, not 1,000 words. Illustrative per-token rate, OpenAI's published rule of thumb, arithmetic shown; output tokens noted."
+      }
+    }
+  }
+}
