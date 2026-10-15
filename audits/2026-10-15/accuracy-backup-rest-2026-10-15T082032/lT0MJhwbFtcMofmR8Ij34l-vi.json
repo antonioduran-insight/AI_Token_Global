@@ -1,0 +1,466 @@
+{
+  "_createdAt": "2026-06-04T18:22:50Z",
+  "_id": "lT0MJhwbFtcMofmR8Ij34l-vi",
+  "_rev": "7PTiuFKp5NOfYngu8ZWd90",
+  "_type": "post",
+  "_updatedAt": "2026-06-22T10:18:28Z",
+  "articleNumber": 68,
+  "body": [
+    {
+      "_key": "p0he0fki",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "p0he0fkic",
+          "_type": "span",
+          "marks": [],
+          "text": "Sự phát triển của các mô hình ngôn ngữ lớn đã mở ra nhiều khả năng mới trong lĩnh vực phát triển AI. Một trong những mô hình phổ biến và mạnh mẽ nhất là ChatGPT, được phát triển bởi OpenAI. Tuy nhiên, sức mạnh lớn đi kèm với sự phức tạp, khiến người mới khó tiếp cận ChatGPT API. Trong hướng dẫn này, chúng tôi sẽ đưa bạn qua các khái niệm cơ bản và các bước để bắt đầu sử dụng ChatGPT API."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "7odxyr2w",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "7odxyr2wc",
+          "_type": "span",
+          "marks": [],
+          "text": "Hiểu Sự Khác Biệt Giữa ChatGPT API và OpenAI API"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "ghjz86u3",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "ghjz86u3c",
+          "_type": "span",
+          "marks": [],
+          "text": "Trước khi đi sâu vào ChatGPT API, điều cần thiết là phải hiểu mối quan hệ của nó với OpenAI API. Mô hình ChatGPT là một triển khai cụ thể của kiến trúc GPT-3.5, trong khi OpenAI API cung cấp nhiều mô hình và tính năng đa dạng hơn. Mặc dù cả hai API có một số điểm tương đồng, chúng có những khác biệt rõ ràng về chức năng, giá cả và cách sử dụng."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "aeovpdme",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "aeovpdmec",
+          "_type": "span",
+          "marks": [],
+          "text": "Mục tiêu chính của bài viết này là giúp người mới hiểu được những điểm khác biệt này và xác định API nào phù hợp nhất với nhu cầu của họ. Chúng tôi sẽ khám phá các đặc điểm chính của từng API, bao gồm điểm mạnh, điểm yếu và các trường hợp sử dụng."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "zutlvsjx",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "zutlvsjxc",
+          "_type": "span",
+          "marks": [],
+          "text": "Những Điểm Khác Biệt Chính Giữa ChatGPT API và OpenAI API"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "pp8gua52",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "pp8gua52c",
+          "_type": "span",
+          "marks": [],
+          "text": "Một trong những điểm khác biệt đáng kể nhất giữa hai API là loại mô hình có sẵn. Mô hình ChatGPT được thiết kế đặc biệt cho các tác vụ AI hội thoại, trong khi OpenAI API cung cấp nhiều mô hình phù hợp với các ứng dụng khác nhau, bao gồm tạo văn bản, dịch thuật và nhiều hơn nữa."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "a7zs6xic",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "a7zs6xicc",
+          "_type": "span",
+          "marks": [],
+          "text": "Một điểm khác biệt quan trọng nữa nằm ở cách tính phí. ChatGPT API hoạt động theo hệ thống dựa trên token, trong đó mỗi lệnh gọi API được tính phí dựa trên số lượng token được xử lý. Ngược lại, OpenAI API sử dụng mô hình trả theo lượng dùng với các gói giá theo bậc."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "txr8flpd",
+      "_type": "image",
+      "alt": "Hình ảnh minh họa phần 1",
+      "asset": {
+        "_ref": "image-21032150199982a9db3df0bbb4c420e2d11c495a-1344x768-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "5gpyh267",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "5gpyh267c",
+          "_type": "span",
+          "marks": [],
+          "text": "Tạo Tài Khoản OpenAI và Lấy API Key"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "frqjahgp",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "frqjahgpc",
+          "_type": "span",
+          "marks": [],
+          "text": "Để bắt đầu sử dụng ChatGPT API, bạn cần tạo một tài khoản trên nền tảng OpenAI. Quá trình đăng ký khá đơn giản, chỉ cần cung cấp các thông tin cơ bản như địa chỉ email và mật khẩu."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "c4nggetw",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "c4nggetwc",
+          "_type": "span",
+          "marks": [],
+          "text": "Sau khi tài khoản được kích hoạt, hãy vào bảng điều khiển và nhấp vào 'API keys'. Bạn sẽ nhận được một API key duy nhất, dùng để xác thực các yêu cầu gửi đến ChatGPT API."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "dcjcwubo",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "dcjcwuboc",
+          "_type": "span",
+          "marks": [],
+          "text": "Hãy nhớ rằng API key là thông tin nhạy cảm và cần được bảo mật. Việc sử dụng sai hoặc để lộ API key có thể dẫn đến việc tài khoản bị tạm ngưng hoặc chấm dứt."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "ixrlnqhh",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "ixrlnqhhc",
+          "_type": "span",
+          "marks": [],
+          "text": "Cấu Hình Cài Đặt Thanh Toán Cho Việc Sử Dụng API"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "tnlhnwuh",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "tnlhnwuhc",
+          "_type": "span",
+          "marks": [],
+          "text": "Như đã đề cập, ChatGPT API hoạt động theo hệ thống dựa trên token. Để đảm bảo thanh toán chính xác và tránh các khoản phí bất ngờ, hãy cấu hình cài đặt thanh toán phù hợp với mô hình sử dụng của bạn."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "ixs6xht0",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "ixs6xht0c",
+          "_type": "span",
+          "marks": [],
+          "text": "Hãy thường xuyên theo dõi lượng token tiêu thụ và điều chỉnh cấu hình khi cần thiết để giữ trong ngân sách."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "5tuf8w90",
+      "_type": "image",
+      "alt": "Hình ảnh minh họa phần 2",
+      "asset": {
+        "_ref": "image-568f8cdb1434bc2b9b44a613b6fed43907016bb7-1344x768-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "gairbidj",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "gairbidjc",
+          "_type": "span",
+          "marks": [],
+          "text": "Sử Dụng Responses API Làm Giao Diện Chính Để Tương Tác Với Các Mô Hình"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "7qifqs1y",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "7qifqs1yc",
+          "_type": "span",
+          "marks": [],
+          "text": "Responses API là giao diện chính để tương tác với các mô hình, cho phép bạn gửi yêu cầu và nhận phản hồi ở nhiều định dạng khác nhau. Hãy làm quen với các endpoint và tham số có sẵn để tối ưu hóa tương tác của bạn."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "52i5zxit",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "52i5zxitc",
+          "_type": "span",
+          "marks": [],
+          "text": "Khi soạn thảo yêu cầu, hãy đảm bảo bạn đang sử dụng đúng endpoint, truyền đúng tham số và xử lý lỗi một cách hợp lý."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "hqvc2mf6",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "hqvc2mf6c",
+          "_type": "span",
+          "marks": [],
+          "text": "Để đơn giản hóa quy trình làm việc, hãy khám phá các SDK của OpenAI dành cho các ngôn ngữ lập trình phổ biến, vốn cung cấp các hàm dựng sẵn để tương tác với các mô hình."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "r40b6fxs",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "r40b6fxsc",
+          "_type": "span",
+          "marks": [],
+          "text": "Tối Ưu Hóa Lựa Chọn Mô Hình và Quản Lý Chi Phí"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "ss63a3xe",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "ss63a3xec",
+          "_type": "span",
+          "marks": [],
+          "text": "Chọn đúng mô hình là điều quan trọng để giảm thiểu chi phí trong khi vẫn đạt được kết quả mong muốn. Hãy cân nhắc các yếu tố như kích thước mô hình, độ phức tạp và hiệu suất khi lựa chọn phương án phù hợp."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "n8na3mj1",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "n8na3mj1c",
+          "_type": "span",
+          "marks": [],
+          "text": "Ngoài ra, hãy áp dụng các chiến lược tiết kiệm chi phí như caching, nén mô hình, hoặc sử dụng các mô hình nhỏ hơn cho các tác vụ nhẹ hơn."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "li0ljo3k",
+      "_type": "image",
+      "alt": "Hình ảnh minh họa phần 3",
+      "asset": {
+        "_ref": "image-63dbf6af75d6e253c003c6ae3b5a12ec796fba43-1344x768-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "gs0flrxu",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "gs0flrxuc",
+          "_type": "span",
+          "marks": [],
+          "text": "Dịch Vụ Proxy và Định Tuyến Yêu Cầu API"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "s92rx4xc",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "s92rx4xcc",
+          "_type": "span",
+          "marks": [],
+          "text": "Khi sử dụng trực tiếp ChatGPT API, bạn có thể gặp phải các vấn đề về độ trễ hoặc thông lượng. Trong những trường hợp như vậy, hãy cân nhắc triển khai dịch vụ proxy để định tuyến yêu cầu qua một trung gian."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "g1s38avd",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "g1s38avdc",
+          "_type": "span",
+          "marks": [],
+          "text": "Máy chủ proxy có thể hoạt động như một bộ đệm giữa ứng dụng của bạn và API, giúp phân phối tải và cải thiện hiệu suất tổng thể."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "3paex6t1",
+      "_type": "image",
+      "alt": "Hình ảnh minh họa phần 4",
+      "asset": {
+        "_ref": "image-3e512277eeab2902a841298b542d1c05a0d2e8ca-1344x768-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "8hro8ofg",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "8hro8ofgc",
+          "_type": "span",
+          "marks": [],
+          "text": "Kết Luận và Các Bước Tiếp Theo"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "r5p93vsz",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "r5p93vszc",
+          "_type": "span",
+          "marks": [],
+          "text": "Chúc mừng bạn đã hoàn thành hướng dẫn dành cho người mới về ChatGPT API! Bạn đã có nền tảng vững chắc về các khái niệm thiết yếu, bao gồm lựa chọn mô hình, cách tính phí và dịch vụ proxy."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "2udsfzkj",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "2udsfzkjc",
+          "_type": "span",
+          "marks": [],
+          "text": "Giờ đây khi đã có kiến thức này, hãy bắt đầu xây dựng các ứng dụng được hỗ trợ bởi AI sử dụng ChatGPT API. Hãy nhớ theo dõi mô hình sử dụng, tối ưu hóa cấu hình và thích nghi với các yêu cầu thay đổi khi bạn tiến bộ trong hành trình phát triển của mình."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    }
+  ],
+  "category": "fundamentals",
+  "coverImage": {
+    "_type": "image",
+    "alt": "Cách Sử Dụng ChatGPT API Cho Người Mới Bắt Đầu",
+    "asset": {
+      "_ref": "image-d923da14821195468fcdc106d49f3e12059037b3-1344x768-png",
+      "_type": "reference"
+    }
+  },
+  "difficultyLevel": "beginner",
+  "excerpt": "Tìm hiểu cách sử dụng ChatGPT API dành cho người mới bắt đầu, bao gồm các khái niệm thiết yếu và các bước để tận dụng các mô hình ngôn ngữ mạnh mẽ của OpenAI trong dự án của bạn.",
+  "focusKeyword": "hướng dẫn ChatGPT API cho người mới",
+  "generatedByPipeline": true,
+  "language": "vi",
+  "pipelineVersion": "v1.0",
+  "publishedAt": "2026-06-04T18:22:50.185Z",
+  "qaCheckedAt": "2026-06-04T18:46:16.209Z",
+  "qaFeedback": "",
+  "qaRetryCount": 0,
+  "qaScore": 100,
+  "readTime": 10,
+  "secondaryKeywords": [
+    "hướng dẫn OpenAI API",
+    "Responses API cho người mới",
+    "hướng dẫn sử dụng ChatGPT API"
+  ],
+  "seo": {
+    "seoDescription": "Bắt đầu với ChatGPT API: Hiểu sự khác biệt giữa ChatGPT và OpenAI API, tạo tài khoản, cấu hình thanh toán và tối ưu hóa lựa chọn mô hình.",
+    "seoTitle": "Hướng Dẫn ChatGPT API Cho Người Mới Bắt Đầu"
+  },
+  "slug": {
+    "_type": "slug",
+    "current": "chatgpt-api-for-beginners-guide"
+  },
+  "sourceUrl": "https://www.aitoken.com.tw/post/how-to-use-chatgpt-api-for-beginners",
+  "tags": [
+    "hướng dẫn OpenAI API",
+    "Responses API cho người mới",
+    "hướng dẫn sử dụng ChatGPT API"
+  ],
+  "title": "Cách Sử Dụng ChatGPT API Cho Người Mới Bắt Đầu",
+  "translationKey": "4b5799af-b6e3-40aa-b61c-d2f31eb67b71"
+}

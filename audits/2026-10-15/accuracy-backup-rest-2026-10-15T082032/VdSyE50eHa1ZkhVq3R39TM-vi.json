@@ -1,0 +1,432 @@
+{
+  "_createdAt": "2026-06-04T13:55:38Z",
+  "_id": "VdSyE50eHa1ZkhVq3R39TM-vi",
+  "_rev": "7PTiuFKp5NOfYngu8aV6OM",
+  "_type": "post",
+  "_updatedAt": "2026-06-22T14:49:37Z",
+  "articleNumber": 30,
+  "body": [
+    {
+      "_key": "j9zkxevd",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "j9zkxevdc",
+          "_type": "span",
+          "marks": [],
+          "text": "Mức tiêu thụ token là một khía cạnh quan trọng khi làm việc với các mô hình AI, vì nó ảnh hưởng trực tiếp đến chi phí và hiệu quả của ứng dụng của bạn. Tuy nhiên, mức tiêu thụ token có thể khác nhau đáng kể giữa các nền tảng, vì vậy việc hiểu các yếu tố chính ảnh hưởng đến số lượng token là điều không thể bỏ qua. Trong bài viết này, chúng ta sẽ cùng khám phá so sánh mức tiêu thụ token giữa ChatGPT, Claude và Gemini, từ đó rút ra những hiểu biết hữu ích để tối ưu hóa việc sử dụng mô hình AI và quản lý chi phí của bạn."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "6jopli0y",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "6jopli0yc",
+          "_type": "span",
+          "marks": [],
+          "text": "Hiểu về Mức Tiêu Thụ Token"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "meufro3e",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "meufro3ec",
+          "_type": "span",
+          "marks": [],
+          "text": "Mức tiêu thụ token là thước đo số lượng token cần thiết để xử lý một tác vụ hoặc yêu cầu cụ thể. Token thường được đếm dựa trên độ phức tạp của đầu vào — đầu vào càng phức tạp thì cần càng nhiều token. Tuy nhiên, số lượng token có thể khác nhau đáng kể giữa các nền tảng do sự khác biệt về kiến trúc mô hình, dữ liệu huấn luyện và các phương pháp thuật toán."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "zr8k2wit",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "zr8k2witc",
+          "_type": "span",
+          "marks": [],
+          "text": "Ví dụ, ChatGPT sử dụng kiến trúc dựa trên transformer, được tối ưu hóa để xử lý tuần tự dữ liệu văn bản. Trong khi đó, Claude áp dụng phương pháp kết hợp giữa kiến trúc transformer và mạng nơ-ron hồi quy (RNN) để đáp ứng cả nhu cầu xử lý tuần tự lẫn song song. Còn Gemini thì dựa trên kiến trúc mạng nơ-ron đồ thị (GNN) để mô hình hóa các mối quan hệ phức tạp giữa các thực thể."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "c2qu32fg",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "c2qu32fgc",
+          "_type": "span",
+          "marks": [],
+          "text": "Sự Khác Biệt Giữa Các Nền Tảng"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "cjw2qr4u",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "cjw2qr4uc",
+          "_type": "span",
+          "marks": [],
+          "text": "Một trong những yếu tố chính dẫn đến sự chênh lệch về số lượng token là sự khác biệt về kiến trúc mô hình, dữ liệu huấn luyện và phương pháp thuật toán giữa các nền tảng. Ví dụ, kiến trúc transformer của ChatGPT có thể hiệu quả hơn trong việc xử lý các phụ thuộc tầm xa trong văn bản, nhưng lại gặp khó khăn với các tác vụ yêu cầu khả năng xử lý song song, chẳng hạn như xử lý nhiều yêu cầu cùng lúc."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "wninnc7l",
+      "_type": "image",
+      "alt": "Hình ảnh minh họa phần 1",
+      "asset": {
+        "_ref": "image-f43cf924bab002e067a2ed385209ba0b4473e104-1344x768-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "ue3wy11j",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "ue3wy11jc",
+          "_type": "span",
+          "marks": [],
+          "text": "Các Biến Thể Mô Hình"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "gwnoz1xv",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "gwnoz1xvc",
+          "_type": "span",
+          "marks": [],
+          "text": "Một yếu tố quan trọng khác ảnh hưởng đến số lượng token là biến thể mô hình cụ thể đang được sử dụng. Các biến thể mô hình được tối ưu hóa cho những tác vụ hoặc lĩnh vực nhất định, điều này có thể dẫn đến sự khác biệt về mức tiêu thụ token. Chẳng hạn, mô hình 'general' của ChatGPT có thể có đặc điểm tiêu thụ token khác so với các biến thể 'science' hay 'arts' của nó."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "0zmqsh7v",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "0zmqsh7vc",
+          "_type": "span",
+          "marks": [],
+          "text": "Để tối ưu hóa mức tiêu thụ token, các nhà phát triển cần chọn đúng biến thể mô hình phù hợp với ứng dụng và yêu cầu tác vụ cụ thể của mình. Tuy nhiên, điều này có thể khá khó khăn do thiếu thông tin rõ ràng về số lượng token tương ứng với từng biến thể mô hình."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "1rgonq7m",
+      "_type": "image",
+      "alt": "Hình ảnh minh họa phần 2",
+      "asset": {
+        "_ref": "image-54dd6a795b439090b818ae46a956faadee26abdc-1344x768-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "6lk8flx4",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "6lk8flx4c",
+          "_type": "span",
+          "marks": [],
+          "text": "Định Dạng Yêu Cầu và Mức Tiêu Thụ Token"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "hwfr9k8v",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "hwfr9k8vc",
+          "_type": "span",
+          "marks": [],
+          "text": "Định dạng của yêu cầu đầu vào cũng đóng vai trò quan trọng trong việc xác định số lượng token. Chẳng hạn, một truy vấn văn bản ngắn đơn lẻ có thể cần ít token hơn so với một bài luận dài hoặc một cuộc hội thoại nhiều lượt phức tạp."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "5vh6qqac",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "5vh6qqacc",
+          "_type": "span",
+          "marks": [],
+          "text": "Điều này cho thấy tầm quan trọng của việc hiểu các định dạng đầu vào khác nhau ảnh hưởng đến mức tiêu thụ token như thế nào, từ đó điều chỉnh thiết kế ứng dụng của bạn cho phù hợp để giảm thiểu việc sử dụng token không cần thiết."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "vfyrb5ae",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "vfyrb5aec",
+          "_type": "span",
+          "marks": [],
+          "text": "API Chính Thức để Đếm Token"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "7iy9k371",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "7iy9k371c",
+          "_type": "span",
+          "marks": [],
+          "text": "Để ước tính chính xác số lượng token, các nhà phát triển có thể sử dụng các API chính thức do mỗi nền tảng cung cấp. Các API này thường cung cấp thông tin chi tiết hơn về mức tiêu thụ token dựa trên dữ liệu đầu vào và biến thể mô hình được sử dụng."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "c0qyk6sn",
+      "_type": "image",
+      "alt": "Hình ảnh minh họa phần 3",
+      "asset": {
+        "_ref": "image-3a774d9fe0840e1d923dc6f78192b94f23269893-1344x768-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "c7wubmjp",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "c7wubmjpc",
+          "_type": "span",
+          "marks": [],
+          "text": "Các Cấu Trúc Bổ Sung Ảnh Hưởng đến Mức Tiêu Thụ Token"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "9d0wwa16",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "9d0wwa16c",
+          "_type": "span",
+          "marks": [],
+          "text": "Ngoài sự khác biệt giữa các nền tảng và các biến thể mô hình, còn có những yếu tố khác như system prompt, lịch sử hội thoại, công cụ và schema cũng có thể ảnh hưởng đáng kể đến mức tiêu thụ token."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "uwdqwumw",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "uwdqwumwc",
+          "_type": "span",
+          "marks": [],
+          "text": "Ví dụ, việc sử dụng các system prompt cụ thể hoặc thiết lập lịch sử hội thoại có thể ảnh hưởng đến cách token được phân bổ cho mỗi lần tương tác. Hiểu rõ các cấu trúc bổ sung này là điều cần thiết để tối ưu hóa hiệu suất ứng dụng và giảm thiểu việc sử dụng token không cần thiết."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "00rzltd2",
+      "_type": "image",
+      "alt": "Hình ảnh minh họa phần 4",
+      "asset": {
+        "_ref": "image-2b2e25f414e9a2dc588380b1d8ae2b3295a84251-1344x768-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "216jl7h1",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "216jl7h1c",
+          "_type": "span",
+          "marks": [],
+          "text": "So Sánh Mức Tiêu Thụ Token: ChatGPT vs Claude vs Gemini"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "c2vo591t",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "c2vo591tc",
+          "_type": "span",
+          "marks": [],
+          "text": "So sánh mô hình tiêu thụ token của ba nền tảng cho thấy một số điểm thú vị. Chẳng hạn, ChatGPT thường cần nhiều token hơn cho các tác vụ xử lý tuần tự nhưng lại ít hơn cho các tác vụ xử lý song song."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "7rxjlh7i",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "7rxjlh7ic",
+          "_type": "span",
+          "marks": [],
+          "text": "Ngược lại, Claude lại thể hiện một mô hình khác — mức tiêu thụ token tăng cao hơn với các tác vụ phức tạp liên quan đến nhiều yêu cầu, trong khi lại tiêu thụ ít hơn với các truy vấn văn bản đơn giản."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "bffg3x9v",
+      "_type": "image",
+      "alt": "Hình ảnh minh họa phần 5",
+      "asset": {
+        "_ref": "image-0864e8131fe9b315595d20b1021902c0952ee182-1344x768-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "t0k3zu7b",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "t0k3zu7bc",
+          "_type": "span",
+          "marks": [],
+          "text": "Kết Luận: Tối Ưu Hóa Mức Tiêu Thụ Token Trên Các Nền Tảng"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "dtgu6252",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "dtgu6252c",
+          "_type": "span",
+          "marks": [],
+          "text": "Tóm lại, việc hiểu các yếu tố ảnh hưởng đến số lượng token là điều then chốt để tối ưu hóa việc sử dụng mô hình AI và quản lý chi phí. Bằng cách xem xét sự khác biệt giữa các nền tảng, các biến thể mô hình, định dạng yêu cầu và các cấu trúc bổ sung ảnh hưởng đến mức tiêu thụ token, các nhà phát triển có thể đưa ra quyết định sáng suốt để giảm thiểu việc sử dụng token không cần thiết."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "k5bjfbnn",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "k5bjfbnnc",
+          "_type": "span",
+          "marks": [],
+          "text": "Để áp dụng kiến thức này vào thực tế, chúng tôi khuyến nghị sử dụng các API chính thức để đếm token chính xác, chọn đúng biến thể mô hình dựa trên yêu cầu tác vụ và điều chỉnh định dạng đầu vào để tối ưu hóa mức tiêu thụ token. Bằng cách làm theo các hướng dẫn này, bạn có thể đảm bảo các ứng dụng AI của mình hoạt động hiệu quả trong khi giảm thiểu chi phí không cần thiết."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "755khi1v",
+      "_type": "image",
+      "alt": "Hình ảnh minh họa phần 6",
+      "asset": {
+        "_ref": "image-8bbb97b84fa387713203811d451901b9ca78f703-1344x768-png",
+        "_type": "reference"
+      }
+    }
+  ],
+  "category": "fundamentals",
+  "coverImage": {
+    "_type": "image",
+    "alt": "So Sánh Mức Tiêu Thụ Token Giữa ChatGPT, Claude và Gemini",
+    "asset": {
+      "_ref": "image-5545e48a358ba386fd15cc1cce287e688fb7d136-1344x768-png",
+      "_type": "reference"
+    }
+  },
+  "difficultyLevel": "intermediate",
+  "excerpt": "Tối ưu hóa mức tiêu thụ token trên các nền tảng AI khác nhau đòi hỏi phải hiểu các yếu tố chính ảnh hưởng đến số lượng token. Bài viết này cung cấp so sánh toàn diện về mức tiêu thụ token giữa ChatGPT, Claude và Gemini.",
+  "focusKeyword": "so sánh mức tiêu thụ token giữa các mô hình AI",
+  "generatedByPipeline": true,
+  "language": "vi",
+  "pipelineVersion": "v1.0",
+  "publishedAt": "2026-06-04T13:55:38.619Z",
+  "qaCheckedAt": "2026-06-04T14:19:13.107Z",
+  "qaFeedback": "metaDescription has 127 chars (needs 140-160)",
+  "qaRetryCount": 0,
+  "qaScore": 88,
+  "readTime": 12,
+  "secondaryKeywords": [
+    "ChatGPT",
+    "Claude",
+    "Gemini",
+    "tính toán token AI",
+    "sự khác biệt giữa các mô hình"
+  ],
+  "seo": {
+    "seoDescription": "Tìm hiểu mức tiêu thụ token thay đổi như thế nào giữa ChatGPT, Claude và Gemini để tối ưu hóa việc sử dụng mô hình AI và quản lý chi phí của bạn.",
+    "seoTitle": "So Sánh Mức Tiêu Thụ Token"
+  },
+  "slug": {
+    "_type": "slug",
+    "current": "token-consumption-comparison-between-chatgpt-claude-and-gemini"
+  },
+  "sourceUrl": "https://www.aitoken.com.tw/post/chatgpt-claude-gemini-token-usage-comparison",
+  "tags": [
+    "ChatGPT",
+    "Claude",
+    "Gemini",
+    "tính toán token AI",
+    "sự khác biệt giữa các mô hình"
+  ],
+  "title": "So Sánh Mức Tiêu Thụ Token Giữa ChatGPT, Claude và Gemini",
+  "translationKey": "7ddb32e6-f930-4c5d-aa05-a005477fe0cf"
+}

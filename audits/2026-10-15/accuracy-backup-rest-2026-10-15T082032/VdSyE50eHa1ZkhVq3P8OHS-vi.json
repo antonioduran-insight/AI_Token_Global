@@ -1,0 +1,424 @@
+{
+  "_createdAt": "2026-06-04T11:37:22Z",
+  "_id": "VdSyE50eHa1ZkhVq3P8OHS-vi",
+  "_rev": "HGC0i0hV3qn3DmfUOXsGIB",
+  "_type": "post",
+  "_updatedAt": "2026-06-23T00:31:42Z",
+  "articleNumber": 8,
+  "body": [
+    {
+      "_key": "es9vbz4d",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "es9vbz4dc",
+          "_type": "span",
+          "marks": [],
+          "text": "Khi lĩnh vực Trí tuệ Nhân tạo (AI) tiếp tục phát triển, một thách thức phổ biến mà người mới thường gặp là hiểu được kiến thức cơ bản về token AI và API key. Dù thường được dùng thay thế cho nhau, hai khái niệm này phục vụ những mục đích hoàn toàn khác nhau trong phát triển AI. Trong bài viết này, chúng ta sẽ cùng tìm hiểu sự khác biệt giữa token AI và API key, khám phá định nghĩa, cách sử dụng và ứng dụng thực tế của từng khái niệm."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "n9fsywbu",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "n9fsywbuc",
+          "_type": "span",
+          "marks": [],
+          "text": "API Key là gì?"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "1free9y1",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "1free9y1c",
+          "_type": "span",
+          "marks": [],
+          "text": "API key là một mã định danh duy nhất do nhà cung cấp API cấp cho lập trình viên để xác minh danh tính khi thực hiện các yêu cầu. Hãy nghĩ về nó như một chữ ký số xác nhận quyền truy cập của bạn vào các API hoặc dịch vụ cụ thể. Về bản chất, API key đóng vai trò như một người gác cổng, đảm bảo chỉ những người dùng được ủy quyền mới có thể tương tác với API."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "lnty2bah",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "lnty2bahc",
+          "_type": "span",
+          "marks": [],
+          "text": "API key thường được cung cấp bởi các nhà cung cấp API như Google Cloud hoặc AWS, và được dùng để xác thực các yêu cầu từ ứng dụng của bạn. Điều này có nghĩa là khi bạn thực hiện một lệnh gọi API, API key của bạn sẽ được gửi kèm trong phần header của yêu cầu, cho phép nhà cung cấp API xác minh danh tính của bạn."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "sa9lz4ci",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "sa9lz4cic",
+          "_type": "span",
+          "marks": [],
+          "text": "Một trong những lợi ích chính của việc sử dụng API key là chúng cung cấp cách xác thực người dùng và kiểm soát quyền truy cập vào các API một cách bảo mật. Bằng cách giới hạn quyền truy cập dựa trên API key, nhà cung cấp có thể đảm bảo chỉ những lập trình viên hợp lệ mới được tương tác với dịch vụ của họ."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "jmfqg37c",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "jmfqg37cc",
+          "_type": "span",
+          "marks": [],
+          "text": "Bảo mật API Key"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "fuv99vuz",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "fuv99vuzc",
+          "_type": "span",
+          "marks": [],
+          "text": "Điều quan trọng cần lưu ý là API key phải được giữ bí mật và không được công khai. Việc để lộ API key có thể dẫn đến truy cập trái phép, rò rỉ dữ liệu, hoặc thậm chí các cuộc tấn công vào ứng dụng của bạn. Để giảm thiểu rủi ro này, hãy cân nhắc sử dụng biến môi trường hoặc các công cụ quản lý bí mật như HashiCorp Vault."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "5u79ekr0",
+      "_type": "image",
+      "alt": "Hình ảnh phần 1",
+      "asset": {
+        "_ref": "image-6d4455fc37c8608cbd739044be8b82a8de35defc-1344x768-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "ct1ovwl2",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "ct1ovwl2c",
+          "_type": "span",
+          "marks": [],
+          "text": "Token AI là gì?"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "ouehhgsc",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "ouehhgscc",
+          "_type": "span",
+          "marks": [],
+          "text": "Ngược lại, token AI đại diện cho đơn vị đo lường xử lý của mô hình. Hãy coi nó như một loại tiền tệ cho phép bạn 'mua' quyền truy cập vào các mô hình hoặc dịch vụ AI cụ thể. Về bản chất, khi bạn yêu cầu một dịch vụ từ nhà cung cấp API, họ sẽ tính toán số token cần thiết để xử lý yêu cầu của bạn."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "5vwvpwt6",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "5vwvpwt6c",
+          "_type": "span",
+          "marks": [],
+          "text": "Token AI có thể được hiểu như một cách để thanh toán cho tài nguyên tính toán mà các mô hình AI sử dụng. Điều này có nghĩa là tác vụ càng phức tạp hoặc tiêu tốn nhiều tài nguyên, bạn sẽ cần càng nhiều token để chi trả chi phí."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "trpethk3",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "trpethk3c",
+          "_type": "span",
+          "marks": [],
+          "text": "Một trong những lợi ích chính của việc sử dụng token AI là chúng cung cấp mô hình định giá minh bạch. Bằng cách biết chính xác số token cần thiết cho mỗi dịch vụ, lập trình viên có thể lên kế hoạch và ngân sách tốt hơn cho dự án của mình."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "69rybkht",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "69rybkhtc",
+          "_type": "span",
+          "marks": [],
+          "text": "Giá Token AI"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "6y9i69e2",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "6y9i69e2c",
+          "_type": "span",
+          "marks": [],
+          "text": "Khi nói đến giá token AI, có nhiều yếu tố ảnh hưởng. Chi phí token thường phụ thuộc vào dịch vụ hoặc mô hình cụ thể được sử dụng, cũng như khối lượng đầu vào và đầu ra. Ví dụ, nếu bạn đang dùng một trình tạo ảnh từ văn bản, chi phí có thể được tính dựa trên số lượng ảnh được tạo ra."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "24i9nfn2",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "24i9nfn2c",
+          "_type": "span",
+          "marks": [],
+          "text": "Để giúp bạn hiểu rõ hơn về giá token AI, hãy cùng xem xét một ví dụ. Giả sử bạn đang dùng một mô hình ngôn ngữ để dịch 1.000 từ từ tiếng Anh sang tiếng Tây Ban Nha. Nhà cung cấp có thể tính $0.001 mỗi từ cho dịch vụ này. Nếu mô hình yêu cầu 10 token mỗi từ, tổng chi phí của bạn sẽ là 10 x $0.001 = $0.01."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "9xvto96x",
+      "_type": "image",
+      "alt": "Hình ảnh phần 2",
+      "asset": {
+        "_ref": "image-4bb20e460b12b9d4515289ae76d639a0e9382a54-1344x768-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "ch8tcle0",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "ch8tcle0c",
+          "_type": "span",
+          "marks": [],
+          "text": "API Key vs Token AI: Điểm Khác Biệt Là Gì?"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "xejtha2i",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "xejtha2ic",
+          "_type": "span",
+          "marks": [],
+          "text": "Một trong những khác biệt chính giữa API key và token AI là mục đích sử dụng. API key dùng để xác thực người dùng, trong khi token AI đại diện cho đơn vị đo lường xử lý của mô hình."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "swogcfkg",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "swogcfkgc",
+          "_type": "span",
+          "marks": [],
+          "text": "Một điểm khác biệt quan trọng khác nằm ở cách sử dụng. API key thường là tĩnh, trong khi token AI có thể thay đổi tùy theo dịch vụ hoặc mô hình cụ thể được dùng. Ngoài ra, API key không bị giới hạn bởi mức sử dụng, nhưng token AI có thể bị ảnh hưởng bởi khối lượng đầu vào và đầu ra."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "hjs0epw5",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "hjs0epw5c",
+          "_type": "span",
+          "marks": [],
+          "text": "So Sánh API Key với Token AI"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "l4i5va9c",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "l4i5va9cc",
+          "_type": "span",
+          "marks": [],
+          "text": "Để minh họa sự khác biệt giữa API key và token AI, hãy xem xét ví dụ sau. Giả sử bạn đang xây dựng một chatbot cần cả xác thực lẫn quyền truy cập vào các mô hình ngôn ngữ."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "vej5ji7x",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "vej5ji7xc",
+          "_type": "span",
+          "marks": [],
+          "text": "Trong tình huống này, bạn sẽ dùng API key cho mục đích xác thực, đảm bảo chỉ những người dùng được ủy quyền mới có thể tương tác với ứng dụng của bạn. Tuy nhiên, khi yêu cầu dịch vụ từ các mô hình ngôn ngữ, bạn sẽ cần token AI để chi trả chi phí xử lý của mô hình."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "edmv2jzn",
+      "_type": "image",
+      "alt": "Hình ảnh phần 3",
+      "asset": {
+        "_ref": "image-94f7cd9b15b9a41dbe829d998f803444337cd77d-1344x768-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "mihvqw5k",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "mihvqw5kc",
+          "_type": "span",
+          "marks": [],
+          "text": "Kết Luận và Bước Tiếp Theo"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "sla4nz5u",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "sla4nz5uc",
+          "_type": "span",
+          "marks": [],
+          "text": "Tóm lại, hiểu được sự khác biệt giữa token AI và API key là điều cần thiết với bất kỳ người mới nào trong lĩnh vực AI hoặc học máy. Bằng cách nắm rõ cách sử dụng hiệu quả những khái niệm này, bạn có thể khai thác toàn bộ tiềm năng của dự án mình."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "8md9k65b",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "8md9k65bc",
+          "_type": "span",
+          "marks": [],
+          "text": "Để áp dụng kiến thức này vào thực tế, hãy xem xét các bước tiếp theo sau: đầu tiên, hãy làm quen với tài liệu về API key và token AI của nhà cung cấp API bạn đã chọn. Tiếp theo, hãy thử nghiệm với các dịch vụ và mô hình khác nhau để hiểu cách giá token AI hoạt động trong các tình huống thực tế."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "ui7ft6uk",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "ui7ft6ukc",
+          "_type": "span",
+          "marks": [],
+          "text": "Cuối cùng, hãy nhớ rằng cả API key lẫn token AI đều là những công cụ thiết yếu cho bất kỳ dự án phát triển AI nào. Khi đã thành thạo những khái niệm này, bạn sẽ sẵn sàng tạo ra các ứng dụng hiệu quả hơn, tiết kiệm chi phí hơn và đổi mới hơn."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "di3r8xld",
+      "_type": "image",
+      "alt": "Hình ảnh phần 4",
+      "asset": {
+        "_ref": "image-7145d1e9fab55596f4b3ee480904a0ecd1bb2985-1344x768-png",
+        "_type": "reference"
+      }
+    }
+  ],
+  "category": "fundamentals",
+  "coverImage": {
+    "_type": "image",
+    "alt": "Hiểu về Token AI và API Key cho Người Mới Bắt Đầu",
+    "asset": {
+      "_ref": "image-ccea6b9dd4704018e178aadd7b8e98e4408be01e-1344x768-png",
+      "_type": "reference"
+    }
+  },
+  "difficultyLevel": "beginner",
+  "excerpt": "Giải mã những bí ẩn về token AI và API key: hướng dẫn toàn diện cho người mới đến với AI và học máy.",
+  "focusKeyword": "Token AI vs API Key giải thích cho người mới",
+  "generatedByPipeline": true,
+  "language": "vi",
+  "pipelineVersion": "v1.0",
+  "publishedAt": "2026-06-04T11:37:22.469Z",
+  "qaCheckedAt": "2026-06-04T12:04:30.113Z",
+  "qaFeedback": "metaDescription has 103 chars (needs 140-160)",
+  "qaRetryCount": 0,
+  "qaScore": 88,
+  "readTime": 12,
+  "secondaryKeywords": [
+    "token AI là gì",
+    "cách sử dụng token AI",
+    "API key vs token AI"
+  ],
+  "seo": {
+    "seoDescription": "Tìm hiểu cách token AI và API key hoạt động, sự khác biệt giữa chúng và ứng dụng thực tế trong phát triển AI.",
+    "seoTitle": "Token AI vs API Key: Hướng Dẫn Cho Người Mới"
+  },
+  "slug": {
+    "_type": "slug",
+    "current": "ai-tokens-api-keys-for-beginners"
+  },
+  "sourceUrl": "https://www.aitoken.com.tw/post/ai-token-vs-api-key",
+  "tags": [
+    "token AI là gì",
+    "cách sử dụng token AI",
+    "API key vs token AI"
+  ],
+  "title": "Hiểu về Token AI và API Key cho Người Mới Bắt Đầu",
+  "translationKey": "4b133e65-f326-4937-bf72-0c29eb46744f"
+}

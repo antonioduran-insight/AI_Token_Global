@@ -1,0 +1,382 @@
+{
+  "_createdAt": "2026-06-04T16:07:16Z",
+  "_id": "PXBreekz6ug9jLuKVwZTV9-vi",
+  "_rev": "97luqmnzEkVELN5ugC3rLi",
+  "_type": "post",
+  "_updatedAt": "2026-06-22T15:14:46Z",
+  "articleNumber": 47,
+  "body": [
+    {
+      "_key": "kz6pht8m",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "kz6pht8mc",
+          "_type": "span",
+          "marks": [],
+          "text": "Khi bạn bắt đầu khám phá thế giới công nghệ AI với Claude API của Anthropic, một khía cạnh quan trọng nổi bật ngay: giá token. Nhưng hiểu về giá token Claude không chỉ đơn giản là nhẩm tính con số — bạn cần đi sâu vào các chi tiết của token đầu vào, token đầu ra và prompt caching. Trong hướng dẫn toàn diện này, chúng ta sẽ phân tích trang giá chính thức, khám phá các ứng dụng thực tế và cung cấp những mẹo thiết thực để giúp bạn tối ưu hóa hiệu quả của mô hình AI."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "9mh6uaf3",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "9mh6uaf3c",
+          "_type": "span",
+          "marks": [],
+          "text": "Phân Tích Giá Token Claude"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "gg0kx2ek",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "gg0kx2ekc",
+          "_type": "span",
+          "marks": [],
+          "text": "Trang giá của Anthropic phân loại chi phí thành bốn khu vực chính: Base Input Tokens (Token đầu vào cơ bản), Cache Writes (Ghi cache), Cache Hits & Refreshes (Truy cập & làm mới cache) và Output Tokens (Token đầu ra). Mỗi danh mục đại diện cho một khía cạnh riêng biệt trong các tương tác API của bạn."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "ypfzlmkv",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "ypfzlmkvc",
+          "_type": "span",
+          "marks": [],
+          "text": "Hãy bắt đầu với những điều cơ bản. Khi bạn tương tác với Claude API, mỗi token đầu vào tương ứng với một prompt hoặc truy vấn. Prompt của bạn càng phức tạp hay tinh tế, số lượng token cần thiết càng cao. Ngược lại, token đầu ra liên quan đến lượng văn bản đã xử lý mà mô hình trả về."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "156uihfy",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "156uihfyc",
+          "_type": "span",
+          "marks": [],
+          "text": "Tính Toán Token"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "u0iww5yn",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "u0iww5ync",
+          "_type": "span",
+          "marks": [],
+          "text": "Để bạn dễ hình dung hơn, hãy xem một ví dụ. Giả sử mô hình AI của bạn xử lý 1.000 token mỗi phút và mỗi token có giá $0.05. Nếu bạn chạy mô hình trong 10 phút, tổng chi phí sẽ vào khoảng $50."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "p73xs7jm",
+      "_type": "image",
+      "alt": "Hình ảnh minh họa 1",
+      "asset": {
+        "_ref": "image-978a83d2e0b1af65b635cabdf3320f304a23e21f-1344x768-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "3zahpe0q",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "3zahpe0qc",
+          "_type": "span",
+          "marks": [],
+          "text": "Sức Mạnh Của Prompt Caching"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "fjcj7mf9",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "fjcj7mf9c",
+          "_type": "span",
+          "marks": [],
+          "text": "Một trong những lợi ích đáng kể nhất khi dùng Claude API là khả năng lưu cache các prompt. Tính năng này cho phép bạn lưu trữ các prompt được dùng thường xuyên, giảm nhu cầu dùng token đầu vào mới và qua đó tiết kiệm chi phí."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "37kylkse",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "37kylksec",
+          "_type": "span",
+          "marks": [],
+          "text": "Hãy xem kỹ hơn cách prompt caching hoạt động. Giả sử bạn có một tác vụ cần lặp đi lặp lại cùng một prompt nhiều lần. Thay vì tạo một phiên bản mới mỗi lần, bạn có thể lưu prompt gốc vào cache. Cách này giảm số lượng token đầu vào cần thiết và tối thiểu hóa chi phí."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "2ujxsolw",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "2ujxsolwc",
+          "_type": "span",
+          "marks": [],
+          "text": "Để minh họa rõ hơn, hãy tưởng tượng một người viết nội dung dùng Claude API để tạo mô tả sản phẩm. Mô hình được cung cấp một prompt cho mỗi mô tả, nhưng vì các prompt được lưu cache, chi phí mỗi token giảm đáng kể khi người viết tiếp tục tạo thêm mô tả."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "7w94nb3x",
+      "_type": "image",
+      "alt": "Hình ảnh minh họa 2",
+      "asset": {
+        "_ref": "image-5967215cd16e3e426c14fba0c5d5997484aaf98d-1344x768-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "43ffhrek",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "43ffhrekc",
+          "_type": "span",
+          "marks": [],
+          "text": "Chọn Gói Giá Phù Hợp"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "st2gozbl",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "st2gozblc",
+          "_type": "span",
+          "marks": [],
+          "text": "Với nền tảng hiểu biết vững chắc về giá token Claude, đã đến lúc chọn gói phù hợp với nhu cầu của bạn. Hãy xem xét mô hình sử dụng của bạn và số lượng token cần thiết cho mỗi tác vụ. Nếu bạn đang chạy các tác vụ đầu vào nhiều với prompt phức tạp, hãy tìm các gói cung cấp mức giá ưu đãi khi mua token số lượng lớn."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "zmx0jb33",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "zmx0jb33c",
+          "_type": "span",
+          "marks": [],
+          "text": "Một yếu tố quan trọng khác là token đầu ra. Hãy nghĩ xem mô hình của bạn tạo ra bao nhiêu văn bản. Nếu số lượng lớn, bạn cần chuẩn bị chi trả nhiều hơn. Hãy tìm các gói cung cấp mức giá linh hoạt theo khối lượng đầu ra hoặc điều chỉnh phù hợp với yêu cầu cụ thể của bạn."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "ap1f1lnf",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "ap1f1lnfc",
+          "_type": "span",
+          "marks": [],
+          "text": "API vs Proxy"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "02iwcvv0",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "02iwcvv0c",
+          "_type": "span",
+          "marks": [],
+          "text": "Khi làm việc với Claude API, bạn có thể gặp phải lựa chọn giữa việc dùng API trực tiếp và sử dụng các dịch vụ proxy. Mặc dù proxy có thể thêm một lớp bảo mật hoặc đơn giản hóa các tương tác, chúng cũng phát sinh thêm chi phí."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "g3tzf33j",
+      "_type": "image",
+      "alt": "Hình ảnh minh họa 3",
+      "asset": {
+        "_ref": "image-5015b100d3da015fe0b25b5774731f756ffa3c34-1344x768-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "841s1g3r",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "841s1g3rc",
+          "_type": "span",
+          "marks": [],
+          "text": "Claude API Cho Các Tác Vụ Quy Mô Lớn"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "dbthhepy",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "dbthhepyc",
+          "_type": "span",
+          "marks": [],
+          "text": "Claude API đặc biệt phù hợp cho các tác vụ quy mô lớn, chẳng hạn như xử lý hàng loạt hoặc tạo nội dung dài. Trong những tình huống này, prompt caching càng trở nên quan trọng hơn trong việc giảm chi phí."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "z0xuw5k3",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "z0xuw5k3c",
+          "_type": "span",
+          "marks": [],
+          "text": "Ví dụ, hãy tưởng tượng một nhóm marketing dùng Claude API để tạo hàng nghìn mô tả sản phẩm mỗi ngày. Bằng cách tận dụng prompt caching và chọn gói giá phù hợp, họ có thể tối ưu hóa hiệu quả của mô hình AI và giữ trong ngân sách."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "wiyfymyy",
+      "_type": "image",
+      "alt": "Hình ảnh minh họa 4",
+      "asset": {
+        "_ref": "image-60237a7b2e88fdcfd8da44461733c13b35a4efbf-1344x768-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "e3dexthw",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "e3dexthwc",
+          "_type": "span",
+          "marks": [],
+          "text": "Kết Luận"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "sa83q7pq",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "sa83q7pqc",
+          "_type": "span",
+          "marks": [],
+          "text": "Hiểu về giá token Claude là bước quan trọng để tối đa hóa tiềm năng của mô hình AI của bạn. Bằng cách phân tích trang giá chính thức thành các thành phần cốt lõi — token đầu vào, token đầu ra và prompt caching — và xem xét các ứng dụng thực tế, bạn có thể đưa ra quyết định sáng suốt về các tương tác API của mình."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "pbmdlsbi",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "pbmdlsbic",
+          "_type": "span",
+          "marks": [],
+          "text": "Hãy nhớ cân nhắc mô hình sử dụng của bạn với cấu trúc chi phí của các gói khác nhau. Cân nhắc dùng dịch vụ proxy để tăng cường bảo mật hoặc đơn giản hóa khi cần, nhưng hãy lưu ý tác động của chúng đến chi phí."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    }
+  ],
+  "category": "fundamentals",
+  "coverImage": {
+    "_type": "image",
+    "alt": "Hướng Dẫn Giá Token Claude",
+    "asset": {
+      "_ref": "image-fafbe2ac158b540e8c65827e32cb39975d109433-1344x768-png",
+      "_type": "reference"
+    }
+  },
+  "difficultyLevel": "beginner",
+  "excerpt": "Khám phá cách điều hướng trang giá chính thức của Anthropic và tận dụng tối đa trải nghiệm Claude API của bạn.",
+  "focusKeyword": "Claude Token Pricing Guide for Beginners",
+  "generatedByPipeline": true,
+  "language": "vi",
+  "pipelineVersion": "v1.0",
+  "publishedAt": "2026-06-04T16:07:16.440Z",
+  "qaCheckedAt": "2026-06-04T16:35:09.612Z",
+  "qaFeedback": "metaDescription has 98 chars (needs 140-160)",
+  "qaRetryCount": 0,
+  "qaScore": 88,
+  "readTime": 10,
+  "secondaryKeywords": [
+    "Anthropic",
+    "AI Technology",
+    "Model Pricing"
+  ],
+  "seo": {
+    "seoDescription": "Tìm hiểu về token đầu vào, token đầu ra, prompt caching và nhiều hơn nữa để tối ưu hóa chi phí mô hình AI của bạn.",
+    "seoTitle": "Hướng Dẫn Giá Token Claude Cho Người Mới"
+  },
+  "slug": {
+    "_type": "slug",
+    "current": "claude-token-pricing-guide-for-beginners"
+  },
+  "sourceUrl": "https://www.aitoken.com.tw/post/claude-token-pricing-guide",
+  "tags": [
+    "Anthropic",
+    "AI Technology",
+    "Model Pricing"
+  ],
+  "title": "Hướng Dẫn Giá Token Claude Cho Người Mới",
+  "translationKey": "cecca986-a529-42bc-8c43-ff59a2e83150"
+}
