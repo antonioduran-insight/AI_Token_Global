@@ -1,0 +1,368 @@
+{
+  "_createdAt": "2026-06-04T18:51:58Z",
+  "_id": "g3jTIj9ubDWnGQfo9PiZT6-vi",
+  "_rev": "7PTiuFKp5NOfYngu8aGVGw",
+  "_type": "post",
+  "_updatedAt": "2026-06-22T13:41:27Z",
+  "articleNumber": 71,
+  "body": [
+    {
+      "_key": "tfzek00h",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "tfzek00hc",
+          "_type": "span",
+          "marks": [],
+          "text": "Lấy khóa API ChatGPT là bước quan trọng để khai thác toàn bộ tiềm năng của mô hình ngôn ngữ mạnh mẽ từ OpenAI. Tuy nhiên, nhiều lập trình viên gặp khó khăn trong việc hiểu quy trình đăng ký và các yêu cầu liên quan. Trong bài viết này, chúng tôi sẽ cung cấp hướng dẫn từng bước rõ ràng và súc tích về cách lấy khóa API ChatGPT, đồng thời giải đáp những hiểu lầm và nhầm lẫn phổ biến trên con đường đó."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "reqm7e9z",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "reqm7e9zc",
+          "_type": "span",
+          "marks": [],
+          "text": "Hiểu Cơ Bản về Khóa API ChatGPT"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "qsik9u1z",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "qsik9u1zc",
+          "_type": "span",
+          "marks": [],
+          "text": "Trước khi đi vào quy trình đăng ký, điều quan trọng cần hiểu là tài khoản ChatGPT không tự động cấp quyền truy cập vào API. Khóa API ChatGPT là một thực thể riêng biệt phải được tạo trong OpenAI API Platform."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "a2ro3yc6",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "a2ro3yc6c",
+          "_type": "span",
+          "marks": [],
+          "text": "Để tạo khóa API, bạn cần điều hướng đến trang tổng quan OpenAI và làm theo các hướng dẫn để tạo khóa mới. Quá trình này thường bao gồm việc cung cấp một số thông tin cơ bản về dự án của bạn và đồng ý với các điều khoản dịch vụ của OpenAI."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "wnpult1r",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "wnpult1rc",
+          "_type": "span",
+          "marks": [],
+          "text": "Yêu Cầu cho Khóa API"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "au6lwna0",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "au6lwna0c",
+          "_type": "span",
+          "marks": [],
+          "text": "Khi đăng ký khóa API ChatGPT, bạn cần cung cấp một số thông tin thiết yếu. Bao gồm tên và mô tả dự án của bạn, cũng như thông tin về cách bạn dự định sử dụng API."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "7kh6nfxt",
+      "_type": "image",
+      "alt": "Hình ảnh minh họa phần 1",
+      "asset": {
+        "_ref": "image-5f4ea66356256676bd2f82f103570d6847271642-1344x768-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "c5583jft",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "c5583jftc",
+          "_type": "span",
+          "marks": [],
+          "text": "Tạo Khóa API ChatGPT"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "oa75zd4o",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "oa75zd4oc",
+          "_type": "span",
+          "marks": [],
+          "text": "Sau khi bạn đã cung cấp đầy đủ thông tin cần thiết, OpenAI sẽ xem xét đơn đăng ký và cấp cho bạn một khóa API duy nhất. Khóa này rất quan trọng để xác thực các yêu cầu gửi đến API ChatGPT."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "kv8vrqax",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "kv8vrqaxc",
+          "_type": "span",
+          "marks": [],
+          "text": "Khi tạo khóa API, bạn sẽ có tùy chọn lựa chọn giữa các gói giá khác nhau. Chi phí sử dụng API ChatGPT thay đổi tùy theo số lượng token yêu cầu mỗi tháng, vì vậy điều cần thiết là phải hiểu rõ yêu cầu dự án của bạn trước khi chọn gói."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "l1vj8x87",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "l1vj8x87c",
+          "_type": "span",
+          "marks": [],
+          "text": "Hiểu Về Định Giá Dựa Trên Token"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "9bsas1eq",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "9bsas1eqc",
+          "_type": "span",
+          "marks": [],
+          "text": "API ChatGPT sử dụng mô hình định giá dựa trên token. Điều này có nghĩa là bạn sẽ bị tính phí dựa trên số lượng token yêu cầu, thay vì tính theo giờ hoặc theo tháng."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "g6ms6xl4",
+      "_type": "image",
+      "alt": "Hình ảnh minh họa phần 2",
+      "asset": {
+        "_ref": "image-4e4bf272035e3f3705a8e2a9c124ee3309baa551-1344x768-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "i8dlt3bn",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "i8dlt3bnc",
+          "_type": "span",
+          "marks": [],
+          "text": "Quản Lý Khóa API ChatGPT Của Bạn"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "ba6uhjqh",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "ba6uhjqhc",
+          "_type": "span",
+          "marks": [],
+          "text": "Sau khi có khóa API ChatGPT, điều quan trọng là phải quản lý quyền truy cập và mức sử dụng của bạn. Điều này bao gồm việc thiết lập quyền và giới hạn ở cấp dự án để đảm bảo khóa API chỉ được dùng cho các mục đích đã được phê duyệt."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "ccpdj32v",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "ccpdj32vc",
+          "_type": "span",
+          "marks": [],
+          "text": "Khi quản lý khóa API, bạn cần cân nhắc các vấn đề như tính toán token, caching và các dịch vụ proxy. Bằng cách hiểu những khái niệm này, bạn có thể tối ưu hóa việc sử dụng API và tránh các khoản phí bất ngờ."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "0gwgp2u9",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "0gwgp2u9c",
+          "_type": "span",
+          "marks": [],
+          "text": "Dịch Vụ Proxy"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "89d4jwh6",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "89d4jwh6c",
+          "_type": "span",
+          "marks": [],
+          "text": "Một vấn đề phổ biến khi làm việc với API ChatGPT là xử lý các dịch vụ proxy. Máy chủ proxy đóng vai trò trung gian giữa ứng dụng của bạn và OpenAI API, giúp quản lý lưu lượng và các yêu cầu."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "u9h56yr5",
+      "_type": "image",
+      "alt": "Hình ảnh minh họa phần 3",
+      "asset": {
+        "_ref": "image-9d6020b32522cc7bead6a7ad447f46f4a9358f70-1344x768-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "3sqgcvvs",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "3sqgcvvsc",
+          "_type": "span",
+          "marks": [],
+          "text": "Kết Luận và Các Bước Tiếp Theo"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "66y0ho8b",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "66y0ho8bc",
+          "_type": "span",
+          "marks": [],
+          "text": "Tóm lại, việc lấy khóa API ChatGPT là một quy trình đơn giản, chỉ cần hiểu các yêu cầu đăng ký và quản lý quyền truy cập cũng như mức sử dụng của bạn."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "wv9mqne4",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "wv9mqne4c",
+          "_type": "span",
+          "marks": [],
+          "text": "Bằng cách làm theo hướng dẫn từng bước này, bạn có thể khai thác toàn bộ tiềm năng của mô hình ngôn ngữ OpenAI và tích hợp nó vào ứng dụng hoặc dự án của bạn. Hãy nhớ thường xuyên xem xét lại cài đặt quản lý khóa API để đảm bảo dự án của bạn luôn tuân thủ các điều khoản dịch vụ của OpenAI."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "v9ee7cnx",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "v9ee7cnxc",
+          "_type": "span",
+          "marks": [],
+          "text": "Nếu bạn mới bắt đầu làm việc với API, chúng tôi khuyên bạn nên bắt đầu với gói cơ bản và dần dần mở rộng theo nhu cầu. Ngoài ra, hãy chắc chắn đọc tài liệu của OpenAI về tính toán token và caching để tối ưu hóa việc sử dụng API."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "zksdwvog",
+      "_type": "image",
+      "alt": "Hình ảnh minh họa phần 4",
+      "asset": {
+        "_ref": "image-71e086d1e0c16a5dab515e2ada20f3d655660573-1344x768-png",
+        "_type": "reference"
+      }
+    }
+  ],
+  "category": "tutorial",
+  "coverImage": {
+    "_type": "image",
+    "alt": "Cách Lấy Khóa API ChatGPT: Hướng Dẫn Từng Bước Dành Cho Người Mới",
+    "asset": {
+      "_ref": "image-9f418e512de07b883bb6e98b988b2c361280392c-1344x768-png",
+      "_type": "reference"
+    }
+  },
+  "difficultyLevel": "beginner",
+  "excerpt": "Tìm hiểu cách lấy khóa API ChatGPT và tích hợp mô hình ngôn ngữ mạnh mẽ của OpenAI vào ứng dụng hoặc dự án của bạn. Hướng dẫn từng bước này bao gồm quy trình đăng ký, các yêu cầu và quản lý khóa.",
+  "focusKeyword": "ChatGPT API Key Application Process",
+  "generatedByPipeline": true,
+  "language": "vi",
+  "pipelineVersion": "v1.0",
+  "publishedAt": "2026-06-04T18:51:58.151Z",
+  "qaCheckedAt": "2026-06-04T19:17:49.763Z",
+  "qaFeedback": "metaDescription has 169 chars (needs 140-160)",
+  "qaRetryCount": 0,
+  "qaScore": 88,
+  "readTime": 15,
+  "secondaryKeywords": [
+    "OpenAI API Platform",
+    "ChatGPT API Key Requirements",
+    "API Key Management"
+  ],
+  "seo": {
+    "seoDescription": "Hướng dẫn toàn diện về cách đăng ký khóa API ChatGPT, bao gồm các yêu cầu, quản lý khóa và tích hợp mô hình ngôn ngữ của OpenAI vào ứng dụng hoặc dự án của bạn.",
+    "seoTitle": "Lấy Khóa API ChatGPT"
+  },
+  "slug": {
+    "_type": "slug",
+    "current": "get-chatgpt-api-key-beginners-guide"
+  },
+  "sourceUrl": "https://www.aitoken.com.tw/post/how-to-get-chatgpt-api-key",
+  "tags": [
+    "OpenAI API Platform",
+    "ChatGPT API Key Requirements",
+    "API Key Management"
+  ],
+  "title": "Cách Lấy Khóa API ChatGPT: Hướng Dẫn Từng Bước Dành Cho Người Mới",
+  "translationKey": "45e7aa1e-5856-4b1c-8cd4-536af78c3ab5"
+}
