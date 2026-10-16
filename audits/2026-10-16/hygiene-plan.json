@@ -1,0 +1,364 @@
+{
+  "created": "2026-10-16T09:38:03.829Z",
+  "links": [
+    {
+      "_id": "7SW94EhaHt1Vi1g1Lxzzu8",
+      "locale": "es",
+      "slug": "la-factura-de-ia-que-lo-asusto-resulto-ser-un-espejo",
+      "sourceRev": "lQ9B2UJ9DPgrVbnXguNTWs",
+      "edits": [
+        {
+          "blockKey": "b39",
+          "markKey": "l1",
+          "before": "https://aitoken.global/es/blog/optimizacion-de-costos-de-tokens-para-pequenas-empresas",
+          "after": "https://www.aitoken.global/es/blog/optimizacion-de-costos-de-tokens-para-pequenas-empresas/",
+          "targetPath": "/es/blog/optimizacion-de-costos-de-tokens-para-pequenas-empresas/"
+        },
+        {
+          "blockKey": "b40",
+          "markKey": "l2",
+          "before": "https://aitoken.global/es/blog/nuevo-modelo-ia-54-por-ciento-mas-eficiente-en-tokens-que-significa-para-el-costo",
+          "after": "https://www.aitoken.global/es/blog/nuevo-modelo-ia-54-por-ciento-mas-eficiente-en-tokens-que-significa-para-el-costo/",
+          "targetPath": "/es/blog/nuevo-modelo-ia-54-por-ciento-mas-eficiente-en-tokens-que-significa-para-el-costo/"
+        }
+      ]
+    },
+    {
+      "_id": "HgaihXXCLvBQsD0m2XZoFY",
+      "locale": "vi",
+      "slug": "the-ai-bill-that-scared-him-turned-out-to-be-a-mirror",
+      "sourceRev": "Zp6AkUkGK4usgMriprDFdv",
+      "edits": [
+        {
+          "blockKey": "b40",
+          "markKey": "l2",
+          "before": "https://aitoken.global/vi/blog/how-new-ai-model-is-54-percent-more-token-efficient-what-it-means-for-cost",
+          "after": "https://www.aitoken.global/vi/blog/how-new-ai-model-is-54-percent-more-token-efficient-what-it-means-for-cost/",
+          "targetPath": "/vi/blog/how-new-ai-model-is-54-percent-more-token-efficient-what-it-means-for-cost/"
+        }
+      ]
+    },
+    {
+      "_id": "Qm3zd23VCf0DzKaRFRhETm",
+      "locale": "id",
+      "slug": "why-prompt-caching-can-increase-your-ai-bill",
+      "sourceRev": "eQCR1n23HeACrbntg5FRJn",
+      "edits": [
+        {
+          "blockKey": "b43",
+          "markKey": "b43mk1",
+          "before": "https://aitoken.global/id/blog/the-ai-bill-that-scared-him-turned-out-to-be-a-mirror/",
+          "after": "https://www.aitoken.global/id/blog/the-ai-bill-that-scared-him-turned-out-to-be-a-mirror/",
+          "targetPath": "/id/blog/the-ai-bill-that-scared-him-turned-out-to-be-a-mirror/"
+        }
+      ]
+    },
+    {
+      "_id": "Qm3zd23VCf0DzKaRFRhEnW",
+      "locale": "vi",
+      "slug": "why-prompt-caching-can-increase-your-ai-bill",
+      "sourceRev": "eQCR1n23HeACrbntg5FUOW",
+      "edits": [
+        {
+          "blockKey": "b43",
+          "markKey": "b43mk1",
+          "before": "https://aitoken.global/vi/blog/the-ai-bill-that-scared-him-turned-out-to-be-a-mirror/",
+          "after": "https://www.aitoken.global/vi/blog/the-ai-bill-that-scared-him-turned-out-to-be-a-mirror/",
+          "targetPath": "/vi/blog/the-ai-bill-that-scared-him-turned-out-to-be-a-mirror/"
+        }
+      ]
+    },
+    {
+      "_id": "WrDyrcpEcKzVA0WNZUlVBJ",
+      "locale": "en",
+      "slug": "why-prompt-caching-can-increase-your-ai-bill",
+      "sourceRev": "38Qyv59QpLLajTC6r9j7wA",
+      "edits": [
+        {
+          "blockKey": "b43",
+          "markKey": "b43mk1",
+          "before": "https://aitoken.global/en/blog/how-to-reduce-ai-token-costs-lessons-from-1486-experiment/",
+          "after": "https://www.aitoken.global/en/blog/how-to-reduce-ai-token-costs-lessons-from-1486-experiment/",
+          "targetPath": "/en/blog/how-to-reduce-ai-token-costs-lessons-from-1486-experiment/"
+        }
+      ]
+    },
+    {
+      "_id": "YDnwDiutEyNP1AlOwAvv2u",
+      "locale": "en",
+      "slug": "the-ai-bill-that-scared-him-turned-out-to-be-a-mirror",
+      "sourceRev": "lQ9B2UJ9DPgrVbnXguNTWs",
+      "edits": [
+        {
+          "blockKey": "b39",
+          "markKey": "l1",
+          "before": "https://aitoken.global/en/blog/how-to-reduce-ai-token-costs-lessons-from-1486-experiment",
+          "after": "https://www.aitoken.global/en/blog/how-to-reduce-ai-token-costs-lessons-from-1486-experiment/",
+          "targetPath": "/en/blog/how-to-reduce-ai-token-costs-lessons-from-1486-experiment/"
+        },
+        {
+          "blockKey": "b40",
+          "markKey": "l2",
+          "before": "https://aitoken.global/en/blog/optimizing-ai-token-costs-for-small-businesses",
+          "after": "https://www.aitoken.global/en/blog/optimizing-ai-token-costs-for-small-businesses/",
+          "targetPath": "/en/blog/optimizing-ai-token-costs-for-small-businesses/"
+        },
+        {
+          "blockKey": "b41",
+          "markKey": "l3",
+          "before": "https://aitoken.global/en/blog/how-new-ai-model-is-54-percent-more-token-efficient-what-it-means-for-cost",
+          "after": "https://www.aitoken.global/en/blog/how-new-ai-model-is-54-percent-more-token-efficient-what-it-means-for-cost/",
+          "targetPath": "/en/blog/how-new-ai-model-is-54-percent-more-token-efficient-what-it-means-for-cost/"
+        }
+      ]
+    },
+    {
+      "_id": "YDnwDiutEyNP1AlOwB4V1v",
+      "locale": "id",
+      "slug": "the-ai-bill-that-scared-him-turned-out-to-be-a-mirror",
+      "sourceRev": "Zp6AkUkGK4usgMriprDFdv",
+      "edits": [
+        {
+          "blockKey": "b40",
+          "markKey": "l2",
+          "before": "https://aitoken.global/id/blog/how-new-ai-model-is-54-percent-more-token-efficient-what-it-means-for-cost",
+          "after": "https://www.aitoken.global/id/blog/how-new-ai-model-is-54-percent-more-token-efficient-what-it-means-for-cost/",
+          "targetPath": "/id/blog/how-new-ai-model-is-54-percent-more-token-efficient-what-it-means-for-cost/"
+        }
+      ]
+    },
+    {
+      "_id": "omD0WVM15RlaoFPycaTkzj",
+      "locale": "en",
+      "slug": "what-is-openrouter-ai-gateway",
+      "sourceRev": "DM744ce4vQ3L6hEoHbcsyG",
+      "edits": [
+        {
+          "blockKey": "b33",
+          "markKey": "b33mk1",
+          "before": "https://aitoken.global/en/blog/why-prompt-caching-can-increase-your-ai-bill/",
+          "after": "https://www.aitoken.global/en/blog/why-prompt-caching-can-increase-your-ai-bill/",
+          "targetPath": "/en/blog/why-prompt-caching-can-increase-your-ai-bill/"
+        },
+        {
+          "blockKey": "b35",
+          "markKey": "b35mk1",
+          "before": "https://aitoken.global/en/blog/how-to-reduce-ai-token-costs-lessons-from-1486-experiment/",
+          "after": "https://www.aitoken.global/en/blog/how-to-reduce-ai-token-costs-lessons-from-1486-experiment/",
+          "targetPath": "/en/blog/how-to-reduce-ai-token-costs-lessons-from-1486-experiment/"
+        }
+      ]
+    },
+    {
+      "_id": "pqZUkO11VFO6GURruenJiC",
+      "locale": "es",
+      "slug": "por-que-el-prompt-caching-puede-subir-tu-factura-de-ia",
+      "sourceRev": "eQCR1n23HeACrbntg5FNgO",
+      "edits": [
+        {
+          "blockKey": "b43",
+          "markKey": "b43mk1",
+          "before": "https://aitoken.global/es/blog/la-factura-de-ia-que-lo-asusto-resulto-ser-un-espejo/",
+          "after": "https://www.aitoken.global/es/blog/la-factura-de-ia-que-lo-asusto-resulto-ser-un-espejo/",
+          "targetPath": "/es/blog/la-factura-de-ia-que-lo-asusto-resulto-ser-un-espejo/"
+        }
+      ]
+    }
+  ],
+  "unpublish": [
+    {
+      "_id": "cxG6WGqtby4sD0hmXNirH1",
+      "locale": "en",
+      "slug": "ai-token-pricing-models-comparison",
+      "title": "Understanding AI Token Pricing Models: A Comparison Guide",
+      "articleNumber": 103,
+      "sourceRev": "McooxrjsKk45w4o42TBW8W",
+      "sharesUrlWith": [
+        "NzB7IaLHdyz2K2TRSs0NQp",
+        "lT0MJhwbFtcMofmR8I8IU1"
+      ]
+    },
+    {
+      "_id": "lT0MJhwbFtcMofmR8I8IU1",
+      "locale": "en",
+      "slug": "ai-token-pricing-models-comparison",
+      "title": "Understanding AI Token Pricing Models",
+      "articleNumber": 51,
+      "sourceRev": "lT0MJhwbFtcMofmR8IIoJP",
+      "sharesUrlWith": [
+        "NzB7IaLHdyz2K2TRSs0NQp",
+        "cxG6WGqtby4sD0hmXNirH1"
+      ]
+    },
+    {
+      "_id": "GWcybyvSzKo1HK4vzSXwsk",
+      "locale": "id",
+      "slug": "memahami-mekanisme-token-ai",
+      "title": "Memahami Mekanisme Token AI: Cara Token Memperkuat Model AI dan Mempengaruhi Biaya",
+      "articleNumber": 130,
+      "sourceRev": "GQkez7cCtvonp9ixg6Fn8v",
+      "sharesUrlWith": [
+        "7Ahi24M7FaSDiVrQoaHKUG"
+      ]
+    }
+  ],
+  "reachable": {
+    "/en/blog/ai-token-pricing-models-comparison/": [
+      {
+        "_id": "NzB7IaLHdyz2K2TRSs0NQp",
+        "title": "Understanding AI Token Pricing Models: A Beginner's Guide"
+      }
+    ],
+    "/id/blog/memahami-mekanisme-token-ai/": [
+      {
+        "_id": "7Ahi24M7FaSDiVrQoaHKUG",
+        "title": "Memahami Mekanisme Token AI: Panduan Lengkap untuk Pengembang dan Bisnis"
+      }
+    ]
+  },
+  "expectAlternates": {
+    "/en/blog/ai-token-mechanics-guide/": {
+      "before": [
+        "/en/blog/ai-token-mechanics-guide/",
+        "/es/blog/entendiendo-los-tokens-de-ia-guia-completa-para-desarrolladores-y-empresas/",
+        "/id/blog/memahami-mekanisme-token-ai/"
+      ],
+      "after": [
+        "/en/blog/ai-token-mechanics-guide/",
+        "/es/blog/entendiendo-los-tokens-de-ia-guia-completa-para-desarrolladores-y-empresas/",
+        "/id/blog/memahami-mekanisme-token-ai/"
+      ]
+    },
+    "/en/blog/ai-token-pricing-models-comparison/": {
+      "before": [
+        "/en/blog/ai-token-pricing-models-comparison/",
+        "/es/blog/entendiendo-modelos-precios-tokens-inteligencia-artificial/"
+      ],
+      "after": [
+        "/en/blog/ai-token-pricing-models-comparison/",
+        "/es/blog/entendiendo-los-modelos-de-precios-de-tokens-ai/",
+        "/id/blog/mengerti-model-harga-token-ai-panduan-dasar/",
+        "/vi/blog/ai-token-pricing-models-comparison/"
+      ]
+    },
+    "/en/blog/understanding-ai-token-mechanics/": {
+      "before": [
+        "/en/blog/understanding-ai-token-mechanics/",
+        "/es/blog/mecanica-de-tokens-en-ia-como-los-tokens-alimentan-modelos-de-ia-y-afectan-los-costos/",
+        "/id/blog/memahami-mekanisme-token-ai/"
+      ],
+      "after": [
+        "/en/blog/understanding-ai-token-mechanics/",
+        "/es/blog/mecanica-de-tokens-en-ia-como-los-tokens-alimentan-modelos-de-ia-y-afectan-los-costos/"
+      ]
+    },
+    "/es/blog/entendiendo-los-modelos-de-precios-de-tokens-ai/": {
+      "before": [
+        "/en/blog/ai-token-pricing-models-comparison/",
+        "/es/blog/entendiendo-los-modelos-de-precios-de-tokens-ai/",
+        "/id/blog/mengerti-model-harga-token-ai-panduan-dasar/",
+        "/vi/blog/ai-token-pricing-models-comparison/"
+      ],
+      "after": [
+        "/en/blog/ai-token-pricing-models-comparison/",
+        "/es/blog/entendiendo-los-modelos-de-precios-de-tokens-ai/",
+        "/id/blog/mengerti-model-harga-token-ai-panduan-dasar/",
+        "/vi/blog/ai-token-pricing-models-comparison/"
+      ]
+    },
+    "/es/blog/entendiendo-los-modelos-de-precios-de-tokens-de-inteligencia-artificial-comparacion/": {
+      "before": [
+        "/en/blog/ai-token-pricing-models-comparison/",
+        "/es/blog/entendiendo-los-modelos-de-precios-de-tokens-de-inteligencia-artificial-comparacion/",
+        "/id/blog/mengerti-model-harga-token-ai-panduan-perbandingan/"
+      ],
+      "after": [
+        "/es/blog/entendiendo-los-modelos-de-precios-de-tokens-de-inteligencia-artificial-comparacion/",
+        "/id/blog/mengerti-model-harga-token-ai-panduan-perbandingan/"
+      ]
+    },
+    "/es/blog/entendiendo-los-tokens-de-ia-guia-completa-para-desarrolladores-y-empresas/": {
+      "before": [
+        "/en/blog/ai-token-mechanics-guide/",
+        "/es/blog/entendiendo-los-tokens-de-ia-guia-completa-para-desarrolladores-y-empresas/",
+        "/id/blog/memahami-mekanisme-token-ai/"
+      ],
+      "after": [
+        "/en/blog/ai-token-mechanics-guide/",
+        "/es/blog/entendiendo-los-tokens-de-ia-guia-completa-para-desarrolladores-y-empresas/",
+        "/id/blog/memahami-mekanisme-token-ai/"
+      ]
+    },
+    "/es/blog/entendiendo-modelos-precios-tokens-inteligencia-artificial/": {
+      "before": [
+        "/en/blog/ai-token-pricing-models-comparison/",
+        "/es/blog/entendiendo-modelos-precios-tokens-inteligencia-artificial/"
+      ],
+      "after": [
+        "/es/blog/entendiendo-modelos-precios-tokens-inteligencia-artificial/"
+      ]
+    },
+    "/es/blog/mecanica-de-tokens-en-ia-como-los-tokens-alimentan-modelos-de-ia-y-afectan-los-costos/": {
+      "before": [
+        "/en/blog/understanding-ai-token-mechanics/",
+        "/es/blog/mecanica-de-tokens-en-ia-como-los-tokens-alimentan-modelos-de-ia-y-afectan-los-costos/",
+        "/id/blog/memahami-mekanisme-token-ai/"
+      ],
+      "after": [
+        "/en/blog/understanding-ai-token-mechanics/",
+        "/es/blog/mecanica-de-tokens-en-ia-como-los-tokens-alimentan-modelos-de-ia-y-afectan-los-costos/"
+      ]
+    },
+    "/id/blog/memahami-mekanisme-token-ai/": {
+      "before": [
+        "/en/blog/understanding-ai-token-mechanics/",
+        "/es/blog/mecanica-de-tokens-en-ia-como-los-tokens-alimentan-modelos-de-ia-y-afectan-los-costos/",
+        "/id/blog/memahami-mekanisme-token-ai/"
+      ],
+      "after": [
+        "/en/blog/ai-token-mechanics-guide/",
+        "/es/blog/entendiendo-los-tokens-de-ia-guia-completa-para-desarrolladores-y-empresas/",
+        "/id/blog/memahami-mekanisme-token-ai/"
+      ]
+    },
+    "/id/blog/mengerti-model-harga-token-ai-panduan-dasar/": {
+      "before": [
+        "/en/blog/ai-token-pricing-models-comparison/",
+        "/es/blog/entendiendo-los-modelos-de-precios-de-tokens-ai/",
+        "/id/blog/mengerti-model-harga-token-ai-panduan-dasar/",
+        "/vi/blog/ai-token-pricing-models-comparison/"
+      ],
+      "after": [
+        "/en/blog/ai-token-pricing-models-comparison/",
+        "/es/blog/entendiendo-los-modelos-de-precios-de-tokens-ai/",
+        "/id/blog/mengerti-model-harga-token-ai-panduan-dasar/",
+        "/vi/blog/ai-token-pricing-models-comparison/"
+      ]
+    },
+    "/id/blog/mengerti-model-harga-token-ai-panduan-perbandingan/": {
+      "before": [
+        "/en/blog/ai-token-pricing-models-comparison/",
+        "/es/blog/entendiendo-los-modelos-de-precios-de-tokens-de-inteligencia-artificial-comparacion/",
+        "/id/blog/mengerti-model-harga-token-ai-panduan-perbandingan/"
+      ],
+      "after": [
+        "/es/blog/entendiendo-los-modelos-de-precios-de-tokens-de-inteligencia-artificial-comparacion/",
+        "/id/blog/mengerti-model-harga-token-ai-panduan-perbandingan/"
+      ]
+    },
+    "/vi/blog/ai-token-pricing-models-comparison/": {
+      "before": [
+        "/en/blog/ai-token-pricing-models-comparison/",
+        "/es/blog/entendiendo-los-modelos-de-precios-de-tokens-ai/",
+        "/id/blog/mengerti-model-harga-token-ai-panduan-dasar/",
+        "/vi/blog/ai-token-pricing-models-comparison/"
+      ],
+      "after": [
+        "/en/blog/ai-token-pricing-models-comparison/",
+        "/es/blog/entendiendo-los-modelos-de-precios-de-tokens-ai/",
+        "/id/blog/mengerti-model-harga-token-ai-panduan-dasar/",
+        "/vi/blog/ai-token-pricing-models-comparison/"
+      ]
+    }
+  }
+}
