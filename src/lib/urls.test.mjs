@@ -8,7 +8,7 @@
  */
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { postAlternates, postPath } from './blog-urls.ts';
+import { duplicateSlugs, postAlternates, postPath } from './blog-urls.ts';
 import { LOCALIZED_ROUTES, localizedRouteKey, staticPageAlternates } from './hreflang.ts';
 
 // ── Blog paths ────────────────────────────────────────────────────────────
@@ -69,4 +69,25 @@ test('staticPageAlternates covers every locale for a static page', () => {
 test('staticPageAlternates emits nothing for a page it cannot vouch for', () => {
   assert.deepEqual(staticPageAlternates('/404', 'en', LANGS), []);
   assert.deepEqual(staticPageAlternates('/en/blog/a-post/', 'en', LANGS), []);
+});
+
+// ── Duplicate slugs ───────────────────────────────────────────────────────
+
+test('duplicateSlugs finds posts that share one URL, and only those', () => {
+  const posts = [
+    { _id: 'b', lang: 'en', slug: 'pricing' },
+    { _id: 'a', lang: 'en', slug: 'pricing' },
+    { _id: 'c', lang: 'vi', slug: 'pricing' },   // same slug, other locale: its own URL
+    { _id: 'd', lang: 'id', slug: 'mekanisme' },
+    { _id: 'e', lang: 'id', slug: 'mekanisme' },
+    { _id: 'f', lang: 'es', slug: 'unico' },
+  ];
+  assert.deepEqual(duplicateSlugs(posts), [
+    { path: '/en/blog/pricing/', ids: ['a', 'b'] },
+    { path: '/id/blog/mekanisme/', ids: ['d', 'e'] },
+  ]);
+});
+
+test('duplicateSlugs is empty when every URL has one post', () => {
+  assert.deepEqual(duplicateSlugs([{ _id: 'a', lang: 'en', slug: 'x' }, { _id: 'b', lang: 'es', slug: 'x' }]), []);
 });
