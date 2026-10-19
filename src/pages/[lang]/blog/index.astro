@@ -51,7 +51,36 @@ function catLabel(value?: string) {
 
 const totalPosts = posts.length;
 const totalPages = Math.max(1, Math.ceil(Math.max(0, totalPosts - 1) / POSTS_PER_PAGE));
-const initialShowing = Math.min(POSTS_PER_PAGE, totalPosts);
+const initialShowing = Math.min(POSTS_PER_PAGE, Math.max(0, totalPosts - 1));
+
+// Server-render the exact state the script's first render() produces (filter
+// "all", sort "latest", page 1): post 0 is featured and left out of the grid, the
+// rest sorted newest first, only the first page visible. When the script ran this
+// after load instead, every card shown during streaming was reordered or hidden —
+// the blog index's layout shift. Same comparator as sortMatching() below.
+const gridOrder = new Map(
+  posts
+    .map((post, idx) => ({ idx, published: post.publishedAt ?? '' }))
+    .filter(({ idx }) => idx !== 0)
+    .sort((a, b) => b.published.localeCompare(a.published))
+    .map(({ idx }, order) => [idx, order] as const)
+);
+
+/** Page links as buildPageNumbers() draws them: 1 2 3 … last. */
+function initialPageItems(total: number, current: number): (number | 'gap')[] {
+  if (total <= 7) return Array.from({ length: total }, (_, i) => i + 1);
+  const shown = [...new Set([1, 2, 3, total, current - 1, current, current + 1])]
+    .filter(n => n >= 1 && n <= total)
+    .sort((a, b) => a - b);
+  const items: (number | 'gap')[] = [];
+  let prev = 0;
+  for (const n of shown) {
+    if (n - prev > 1) items.push('gap');
+    items.push(n);
+    prev = n;
+  }
+  return items;
+}
 
 const showingTemplate = t('blog.showingPosts');
 const pageOfTemplate  = t('blog.pageOf');
@@ -235,10 +264,12 @@ const pageOfTemplate  = t('blog.pageOf');
                     : pillClass === 'amber'
                       ? 'linear-gradient(135deg, #B07D2E, #4A2B0F)'
                       : 'linear-gradient(135deg, #6155F1, #2A1F5C)';
+              const order = gridOrder.get(idx);
               return (
                 <a
                   href={`/${lang}/blog/${post.slug.current}/`}
-                  class="post-card"
+                  class={`post-card${order !== undefined && order < POSTS_PER_PAGE ? '' : ' hidden-post'}`}
+                  style={order !== undefined ? `order: ${order};` : undefined}
                   data-category={post.category ?? 'uncategorized'}
                   data-idx={idx}
                   data-published={post.publishedAt}
@@ -286,7 +317,12 @@ const pageOfTemplate  = t('blog.pageOf');
               <a href="#" class="page-btn page-prev" aria-disabled="true" aria-label={t('common.aria.previousPage')}>
                 <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M11 4L5 8l6 4" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
               </a>
-              <div class="page-numbers" id="page-numbers"></div>
+              <div class="page-numbers" id="page-numbers">
+                {initialPageItems(totalPages, 1).map(n => n === 'gap'
+                  ? <span class="page-ellipsis" aria-hidden="true">···</span>
+                  : <a href="#" class={`page-btn${n === 1 ? ' active' : ''}`} data-page={n}>{n}</a>
+                )}
+              </div>
               <a href="#" class="page-btn page-next" aria-label={t('common.aria.nextPage')}>
                 <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M5 4l6 4-6 4" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
               </a>

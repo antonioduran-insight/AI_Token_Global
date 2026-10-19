@@ -12,8 +12,9 @@ import { repairSpanSpacing } from './portable-text.ts';
  * runs its output through `pruneJsonLd`, so an absent input disappears rather
  * than emitting `null`, `""` or an empty array.
  *
- * That is why `Article` carries no `author`: the site has no author records yet.
- * When it has them, add the field — until then the omission is the honest answer.
+ * That is why `Article`'s `author` is the Organization, not a person: the site has
+ * no author records yet, and the brand is who actually publishes every post. When
+ * per-person bylines exist, switch to them — never invent one.
  */
 
 // ── Brand facts ───────────────────────────────────────────────────────────
@@ -53,11 +54,26 @@ export interface ArticleSchemaInput {
   description?: string;
   /** ISO 8601. */
   datePublished?: string;
-  /** ISO 8601 — Sanity's `_updatedAt`. */
+  /** ISO 8601 — Sanity's `_updatedAt`. Never emitted earlier than `datePublished`. */
   dateModified?: string;
+  /** Cover image; the site's OG image stands in when the post has none. */
   imageUrl?: string;
   /** BCP-47 tag, e.g. `en-US`. */
   inLanguage: string;
+}
+
+/** Same image the page's og:image falls back to, so the two never disagree. */
+export const ARTICLE_FALLBACK_IMAGE_PATH = '/og-image.png';
+
+/**
+ * Later of two ISO 8601 timestamps. `publishedAt` is editable in Sanity and can sit
+ * after the last write (`_updatedAt`), and a dateModified earlier than
+ * datePublished is a contradiction search engines flag.
+ */
+function latestIso(a?: string, b?: string): string | undefined {
+  if (!a) return b;
+  if (!b) return a;
+  return Date.parse(a) >= Date.parse(b) ? a : b;
 }
 
 export function articleSchema(input: ArticleSchemaInput): Record<string, unknown> {
@@ -66,12 +82,19 @@ export function articleSchema(input: ArticleSchemaInput): Record<string, unknown
     '@type': 'Article',
     '@id': `${input.url}#article`,
     url: input.url,
+    mainEntityOfPage: { '@type': 'WebPage', '@id': input.url },
     headline: input.headline,
     description: input.description,
     datePublished: input.datePublished,
-    dateModified: input.dateModified,
-    image: input.imageUrl,
+    dateModified: latestIso(input.dateModified, input.datePublished),
+    image: input.imageUrl ?? `${input.siteOrigin}${ARTICLE_FALLBACK_IMAGE_PATH}`,
     inLanguage: input.inLanguage,
+    author: {
+      '@type': 'Organization',
+      '@id': organizationId(input.siteOrigin),
+      name: ORGANIZATION_NAME,
+      url: `${input.siteOrigin}/`,
+    },
     publisher: { '@id': organizationId(input.siteOrigin) },
   });
 }

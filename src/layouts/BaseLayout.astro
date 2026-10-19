@@ -62,7 +62,10 @@ const hreflangs = resolvedAlternates.map(alternate => ({
   lang: alternate.lang,
   url: new URL(alternate.path, siteOrigin).href,
 }));
-const xDefaultUrl = hreflangs.find(h => h.lang === 'en')?.url;
+// English is the fallback locale. A page that exists in one language only — a lone
+// post — has no other version to fall back to, so it is its own x-default.
+const xDefaultUrl = hreflangs.find(h => h.lang === 'en')?.url
+  ?? (hreflangs.length === 1 ? hreflangs[0].url : undefined);
 
 // Organization sitewide, plus a breadcrumb trail derived from the URL and named
 // with the nav labels. Blocks the page supplies (Article, FAQPage) come last.
