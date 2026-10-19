@@ -94,21 +94,33 @@ const article = overrides => articleSchema({
   ...overrides,
 });
 
-test('articleSchema never emits an author, because there is no author data', () => {
-  assert.equal('author' in article(), false);
+test('articleSchema credits the Organization as author, never a person', () => {
+  assert.deepEqual(article().author, {
+    '@type': 'Organization',
+    '@id': `${ORIGIN}/#organization`,
+    name: 'AI Token King',
+    url: `${ORIGIN}/`,
+  });
 });
 
-test('articleSchema omits image and description when the post has neither', () => {
+test('articleSchema points mainEntityOfPage at the post URL', () => {
+  assert.deepEqual(article().mainEntityOfPage, { '@type': 'WebPage', '@id': `${ORIGIN}/en/blog/a-post/` });
+});
+
+test('articleSchema falls back to the OG image and omits description when the post has neither', () => {
   const built = article({ imageUrl: undefined, description: undefined });
-  assert.equal('image' in built, false);
+  assert.equal(built.image, `${ORIGIN}/og-image.png`);
   assert.equal('description' in built, false);
   // The dates and the publisher reference still stand.
   assert.equal(built.datePublished, '2026-06-03T09:00:00Z');
   assert.deepEqual(built.publisher, { '@id': `${ORIGIN}/#organization` });
 });
 
-test('articleSchema omits dateModified when Sanity has no _updatedAt', () => {
-  assert.equal('dateModified' in article({ dateModified: undefined }), false);
+test('articleSchema dateModified is the later of _updatedAt and publishedAt', () => {
+  assert.equal(article().dateModified, '2026-07-11T14:20:00Z');
+  // publishedAt edited forward past the last write
+  assert.equal(article({ dateModified: '2026-05-01T00:00:00Z' }).dateModified, '2026-06-03T09:00:00Z');
+  assert.equal(article({ dateModified: undefined }).dateModified, '2026-06-03T09:00:00Z');
 });
 
 // ── BreadcrumbList ────────────────────────────────────────────────────────
