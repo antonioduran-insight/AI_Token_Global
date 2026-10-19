@@ -146,6 +146,20 @@ for (const row of readCsv(GSC_3M)) {
 }
 
 const triage = readCsv('audits/2026-10-13/not-indexed-triage.csv');
+
+// S7e phase 1 (13 Oct) unpublished 16 posts. The triage CSV lists the ones GSC
+// had seen as ALREADY RETIRED, without an _id; this fills the _id back in.
+const S7E_DIR = 'audits/2026-10-13/per-token-phase1-backup';
+const s7eIds = new Set(
+  [...readFileSync('audits/2026-10-13/per-token-phase1-log.md', 'utf8').matchAll(/^- `([^`]+)`: published=false/gm)].map(m => m[1]),
+);
+const s7eByPath = new Map();
+for (const id of s7eIds) {
+  const file = join(S7E_DIR, `${id}.json`);
+  if (!existsSync(file)) continue;
+  const doc = JSON.parse(readFileSync(file, 'utf8'));
+  if (doc.language && doc.slug?.current) s7eByPath.set(`/${doc.language}/blog/${doc.slug.current}/`, doc._id ?? id);
+}
 const hygiene = JSON.parse(readFileSync('audits/2026-10-16/hygiene-plan.json', 'utf8'));
 
 // Non-post CMS documents, so page rows carry the _id that renders them.
@@ -222,19 +236,26 @@ for (const path of livePaths) {
 }
 
 const live = new Set(livePaths);
-const triageReason = {
-  RETIRE: 'S8 retire (13 Oct): crawled, not indexed, no traffic',
-  MERGE: 'S8 retire (13 Oct): near-duplicate, unpublished without redirect',
-  'ALREADY RETIRED': 'already unpublished when S8 ran (S7e per-token, 13 Oct)',
-};
+function retiredReason(action, s7eId) {
+  if (action === 'RETIRE') return 'S8 retire (13 Oct): crawled, not indexed, no traffic';
+  if (action === 'MERGE') return 'S8 retire (13 Oct): near-duplicate, unpublished without redirect';
+  if (action === 'ALREADY RETIRED') {
+    return s7eId
+      ? 'already unpublished when S8 ran: S7e per-token phase 1 (13 Oct)'
+      : 'already unpublished when S8 ran: before 13 Oct, not by S7e or S8';
+  }
+  return null;
+}
 for (const t of triage) {
-  if (!triageReason[t.action]) continue;
   const path = normPath(t.url);
+  const s7eId = s7eByPath.get(path);
+  const reason = retiredReason(t.action, s7eId);
+  if (!reason) continue;
   rows.push({
-    url: SITE + path, locale: t.locale, doc_type: t.type || 'post', doc_id: t._id, words: t.word_count,
+    url: SITE + path, locale: t.locale, doc_type: t.type || 'post', doc_id: t._id || s7eId || '', words: t.word_count,
     body_language: '', gsc_clicks_28d: gsc.get(path)?.clicks ?? 0, gsc_impr_28d: gsc.get(path)?.impressions ?? 0,
     action: 'RETIRED_S8',
-    reason: triageReason[t.action] + (live.has(path) ? ' — WARNING: URL is back in the sitemap' : ''),
+    reason: reason + (live.has(path) ? ' — WARNING: URL is back in the sitemap' : ''),
   });
 }
 for (const h of hygiene.unpublish) {
