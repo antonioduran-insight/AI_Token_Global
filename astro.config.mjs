@@ -74,6 +74,14 @@ function lastCommitISO(files) {
   }
 }
 
+/**
+ * Paths whose Sanity document has `seo.noindex` set. A sitemap that lists a page
+ * the page itself tells crawlers not to index is a contradiction Search Console
+ * reports, so these are left out. Filled by buildLastmodMap, which already reads
+ * every document the sitemap covers.
+ */
+const NOINDEX = new Set();
+
 async function buildLastmodMap() {
   /** @type {Map<string, string>} */
   const map = new Map();
@@ -103,11 +111,11 @@ async function buildLastmodMap() {
     const [posts, docs] = await Promise.all([
       client.fetch(
         `*[_type == "post" && defined(slug.current) && !(_id in path("drafts.**"))] {
-          "slug": slug.current, language, _updatedAt
+          "slug": slug.current, language, _updatedAt, "noindex": seo.noindex
         }`
       ),
       client.fetch(
-        `*[_type in $types && !(_id in path("drafts.**"))] { _type, language, modelSlug, docType, _updatedAt }`,
+        `*[_type in $types && !(_id in path("drafts.**"))] { _type, language, modelSlug, docType, _updatedAt, "noindex": seo.noindex }`,
         { types: Object.keys(DOC_ROUTE) }
       ),
     ]);
@@ -115,6 +123,7 @@ async function buildLastmodMap() {
     for (const post of posts) {
       if (!post.language) continue;
       set(`/${post.language}/blog/${post.slug}/`, post._updatedAt);
+      if (post.noindex === true) NOINDEX.add(`/${post.language}/blog/${post.slug}/`);
       // The index lists the posts, so its freshest post is its own last change.
       set(`/${post.language}/blog/`, post._updatedAt);
     }
@@ -123,6 +132,7 @@ async function buildLastmodMap() {
       const route = DOC_ROUTE[doc._type]?.(doc);
       if (!route || !doc.language) continue;
       set(`/${doc.language}${route}`, doc._updatedAt);
+      if (doc.noindex === true) NOINDEX.add(`/${doc.language}${route}`);
     }
 
     // Legal pages fall back to the English document when a locale has none, so the
@@ -149,7 +159,11 @@ export default defineConfig({
   integrations: [
     sitemap({
       // `/` is only a meta-refresh hop to /en/ (canonical /en/), not a page of its own.
-      filter: page => new URL(page).pathname !== '/',
+      // noindex pages are left out: listing them contradicts their robots meta.
+      filter: page => {
+        const { pathname } = new URL(page);
+        return pathname !== '/' && !NOINDEX.has(pathname);
+      },
       serialize(item) {
         const { pathname } = new URL(item.url);
         const lastmod = LASTMOD.get(pathname);
