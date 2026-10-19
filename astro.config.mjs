@@ -148,6 +148,8 @@ export default defineConfig({
   site: 'https://www.aitoken.global',
   integrations: [
     sitemap({
+      // `/` is only a meta-refresh hop to /en/ (canonical /en/), not a page of its own.
+      filter: page => new URL(page).pathname !== '/',
       serialize(item) {
         const { pathname } = new URL(item.url);
         const lastmod = LASTMOD.get(pathname);
