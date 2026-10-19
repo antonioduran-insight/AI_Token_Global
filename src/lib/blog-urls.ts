@@ -28,3 +28,22 @@ export function postAlternates(alternates: PostAlternate[]): Alternate[] {
     path: postPath(alternate.lang, alternate.slug),
   }));
 }
+
+/**
+ * Posts that share one URL (same language and slug). A static build can only
+ * write one page per path, so all but one of them are unreachable, and the
+ * page silently mixes documents: the body comes from whichever post the slug
+ * query returns, the hreflang from whichever cluster is processed last. Each
+ * entry lists the colliding _ids, sorted, so the message is stable.
+ */
+export function duplicateSlugs(posts: { _id: string; slug: string; lang: string }[]): { path: string; ids: string[] }[] {
+  const byPath = new Map<string, string[]>();
+  for (const p of posts) {
+    const path = postPath(p.lang, p.slug);
+    byPath.set(path, [...(byPath.get(path) ?? []), p._id]);
+  }
+  return [...byPath]
+    .filter(([, ids]) => ids.length > 1)
+    .map(([path, ids]) => ({ path, ids: ids.sort() }))
+    .sort((a, b) => a.path.localeCompare(b.path));
+}

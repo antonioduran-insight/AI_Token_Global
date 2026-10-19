@@ -1,5 +1,6 @@
 import { createClient } from '@sanity/client';
 import { planRelated, type RelatedPlan, type RelatedSource } from './related-posts';
+import { duplicateSlugs } from './blog-urls';
 
 export interface SeoData {
   seoTitle?: string;
@@ -98,7 +99,9 @@ export async function getPostBySlug(slug: string, lang: string): Promise<SanityP
   const client = getClient();
   if (!client) return null;
   return client.fetch(
-    `*[_type == "post" && slug.current == $slug && language == $lang][0] {
+    // Ordered so the result never depends on index order; getAllPostSlugs
+    // fails the build if two posts ever share this slug.
+    `*[_type == "post" && slug.current == $slug && language == $lang] | order(_id asc)[0] {
       _id, _updatedAt, title, slug, publishedAt, excerpt, tags, category, articleNumber, language,
       coverImage { asset -> { url } },
       seo { seoTitle, seoDescription, ogImage { asset -> { url } }, noindex },
@@ -156,9 +159,21 @@ export async function getAllPostSlugs(): Promise<{ slug: string; lang: string }[
   const client = getClient();
   if (!client) return [];
   const posts = await client.fetch(
-    `*[_type == "post"] { "slug": slug.current, language }`
+    `*[_type == "post"] { _id, "slug": slug.current, language }`
   );
-  return posts.map((p: any) => ({ slug: p.slug, lang: p.language ?? 'en' }));
+  const paths = posts.map((p: any) => ({ _id: p._id, slug: p.slug, lang: p.language ?? 'en' }));
+  // Two published posts on one URL is never intended: one of them can't be
+  // reached and the page mixes their body and hreflang. Stop the build so it is
+  // fixed in Sanity (unpublish one, or give it its own slug) instead of shipping.
+  const dupes = duplicateSlugs(paths);
+  if (dupes.length) {
+    throw new Error(
+      `[slugs] ${dupes.length} URL(s) carried by more than one published post:\n` +
+      dupes.map(d => `  ${d.path} ← ${d.ids.join(', ')}`).join('\n') +
+      '\nUnpublish the unreachable post(s) or give each its own slug in Sanity.'
+    );
+  }
+  return paths.map(({ slug, lang }: { slug: string; lang: string }) => ({ slug, lang }));
 }
 
 // ── Blog post translations (hreflang) ─────────────────────────────────────
