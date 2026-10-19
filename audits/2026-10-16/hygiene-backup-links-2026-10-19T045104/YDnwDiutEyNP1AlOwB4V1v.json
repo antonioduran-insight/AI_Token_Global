@@ -1,0 +1,743 @@
+{
+  "_createdAt": "2026-08-24T09:07:44Z",
+  "_id": "YDnwDiutEyNP1AlOwB4V1v",
+  "_rev": "Zp6AkUkGK4usgMriprDFdv",
+  "_system": {
+    "base": {
+      "id": "YDnwDiutEyNP1AlOwB4V1v",
+      "rev": "lQ9B2UJ9DPgrVbnXguNTWs"
+    }
+  },
+  "_type": "post",
+  "_updatedAt": "2026-10-13T07:57:23Z",
+  "articleNumber": 172,
+  "body": [
+    {
+      "_key": "b1",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b1s0",
+          "_type": "span",
+          "marks": [],
+          "text": "A-Che pertama kali melihat tagihan itu di sebuah kantor kecil yang lampunya belum sempat dinyalakan."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b2",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b2s0",
+          "_type": "span",
+          "marks": [],
+          "text": "Saat itu pukul enam pagi. Ia selalu datang lebih awal dari karyawannya, menyeduh kopi, lalu menyalakan komputer. Angka yang muncul di layar hari itu membuat gelas kertas di tangannya berhenti di udara — bulan lalu, alat AI yang “membalas pesan pelanggan, menulis teks produk, dan mengatur pesanan” untuknya menghabiskan hampir $2.000."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b3",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b3s0",
+          "_type": "span",
+          "marks": [],
+          "text": "Ia menjalankan bisnis belanja bareng pakaian wanita, sebuah toko dengan lima orang karyawan. Jumlah itu setara dengan hampir dua bulan gaji salah satu staf layanan pelanggan seniornya."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b4",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b4s0",
+          "_type": "span",
+          "marks": [],
+          "text": "A-Che bukan orang yang buta soal AI. Justru sebaliknya. Enam bulan sebelumnya ia masih membanggakan di sebuah grup Facebook bahwa perusahaannya sudah “serba-AI”. Ia memilih model paling pintar dan paling mahal di pasaran — karena ia percaya satu hal: pakai alat terbaik untuk pekerjaan. Ia melemparkan semua hal, besar maupun kecil, ke AI itu. Menjawab “stoknya masih ada?” — pakai AI. Mengubah format spreadsheet — pakai AI. Tidak bisa memikirkan judul di tengah malam — tanya AI."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b5",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b5s0",
+          "_type": "span",
+          "marks": [],
+          "text": "Ia mengira ia membeli efisiensi. Butuh tagihan ini untuk akhirnya membuatnya duduk dan benar-benar melihat ke mana uangnya mengalir."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b6",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b6s0",
+          "_type": "span",
+          "marks": [],
+          "text": "Ia membuka halaman yang tak pernah berani ia klik"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "b7",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b7s0",
+          "_type": "span",
+          "marks": [],
+          "text": "Tagihan itu memiliki tautan bernama “rincian penggunaan” yang belum pernah diklik A-Che sebelumnya. Hari itu, ia mengkliknya."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b8",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b8s0",
+          "_type": "span",
+          "marks": [],
+          "text": "Hal pertama yang ia lihat membuatnya terpaku. Biaya terbesar bukan berasal dari tugas-tugas “sulit” — bukan tugas yang benar-benar memerlukan pemikiran, seperti analisis penjualan atau menulis teks panjang. Biaya terbesar adalah sesuatu yang tidak pernah ia sadari — "
+        },
+        {
+          "_key": "b8s1",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "pengulangan"
+        },
+        {
+          "_key": "b8s2",
+          "_type": "span",
+          "marks": [],
+          "text": "."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b9",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b9s0",
+          "_type": "span",
+          "marks": [],
+          "text": "Setiap kali AI-nya membalas pesan pelanggan, sistem selalu menyisipkan seluruh katalog produk, aturan pengembalian barang, dan ketentuan promosi — berulang kali. Pelanggan hanya bertanya “baju ini ada ukuran M tidak?”, tapi model harus membaca tiga ribu kata aturan toko dulu, hanya untuk menjawab “ada”. Ratusan pesan pelanggan sehari berarti ratusan kali membayar ulang, membaca ulang, tumpukan informasi yang persis sama."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b10",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b10s0",
+          "_type": "span",
+          "marks": [],
+          "text": "Sembilan puluh persen dari yang ia bayar bukan untuk menjawab pertanyaan. Melainkan untuk membayar, berulang-ulang, mengulang sesuatu yang sudah diketahui model itu."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b11",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b11s0",
+          "_type": "span",
+          "marks": [],
+          "text": "Lalu ia melihat kebiasaan buruknya sendiri"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "b12",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b12s0",
+          "_type": "span",
+          "marks": [],
+          "text": "A-Che terus menggulir ke bawah, dan menemukan hal kedua yang membuatnya tersipu malu."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b13",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b13s0",
+          "_type": "span",
+          "marks": [],
+          "text": "Ia teringat cara ia menulis instruksi. Ia selalu sopan — “Halo, boleh tolong lihat ini sebentar? terima kasih banyak, saya sangat menghargainya” — ia bahkan percaya bahwa bersikap sopan pada AI akan membuatnya menjawab lebih baik. Tapi bagi mesin, kata-kata itu tidak memiliki bobot apa pun — namun setiap kata, setiap panggilan, tetap dikenai biaya."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b14",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b14s0",
+          "_type": "span",
+          "marks": [],
+          "text": "Lebih buruk lagi, ia menyadari ia menjalankan tujuh atau delapan “asisten” berbeda secara bersamaan. Satu untuk layanan pelanggan, satu untuk teks, satu untuk stok barang — masing-masing diam-diam membawa paket instruksinya sendiri, membakar uang di latar belakang, dan sering saling bertentangan: pertanyaan yang sama, dua asisten, dua jawaban berbeda, dan ia mengira itu karena AI-nya tidak stabil."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b15",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b15s0",
+          "_type": "span",
+          "marks": [],
+          "text": "Pada saat itu ia tiba-tiba menyadari sesuatu yang tidak ada hubungannya dengan menghemat uang, tapi lebih penting:"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b16",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b16s0",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "Tagihannya tidak pernah mencerminkan seberapa pintar AI itu. Tagihannya mencerminkan seberapa banyak barang yang ia jejalkan ke dalam ruangan setiap kali ia berbicara dengannya — barang yang sebenarnya tidak pernah ia perlukan."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b17",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b17s0",
+          "_type": "span",
+          "marks": [],
+          "text": "Hal yang tidak ia lakukan"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "b18",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b18s0",
+          "_type": "span",
+          "marks": [],
+          "text": "Apa yang akan dilakukan A-Che tiga bulan lalu? Ia tahu persis. Ia akan membatalkan model mahal itu dan beralih ke yang lebih murah dan lebih “bodoh”. Tagihan terlalu tinggi? Beli versi diskon — itu hampir menjadi refleks setiap pemilik usaha. Turun kelas, mengalah, mengecilkan ambisi."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b19",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b19s0",
+          "_type": "span",
+          "marks": [],
+          "text": "Tapi kali ini, ia tidak melakukannya."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b20",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b20s0",
+          "_type": "span",
+          "marks": [],
+          "text": "Ia tetap mempertahankan model yang pintar itu. Yang ia ubah adalah "
+        },
+        {
+          "_key": "b20s1",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "sampah"
+        },
+        {
+          "_key": "b20s2",
+          "_type": "span",
+          "marks": [],
+          "text": " yang terus-menerus ia berikan padanya. Ia memadatkan aturan toko menjadi tiga poin penting, dan hanya dilampirkan saat benar-benar diperlukan; ia menghapus semua basa-basi dan membuat instruksinya langsung ke intinya; ia mematikan tujuh atau delapan asisten yang saling bertentangan itu hingga tersisa dua, masing-masing dengan tugas yang jelas."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b21",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b21s0",
+          "_type": "span",
+          "marks": [],
+          "text": "Sebulan kemudian, tagihan baru muncul. Turun hampir tujuh puluh persen. Dan yang benar-benar mengejutkannya — jawaban AI menjadi "
+        },
+        {
+          "_key": "b21s1",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "lebih akurat"
+        },
+        {
+          "_key": "b21s2",
+          "_type": "span",
+          "marks": [],
+          "text": ". Karena AI tidak perlu lagi mencari pertanyaan sebenarnya di antara tumpukan basa-basi."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b22",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b22s0",
+          "_type": "span",
+          "marks": [],
+          "text": "Ini sebenarnya bukan cerita tentang AI"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "b23",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b23s0",
+          "_type": "span",
+          "marks": [],
+          "text": "Ketika A-Che menceritakan ini padaku kemudian, yang terus melekat di pikiranku bukan token, bukan model, dan bukan uangnya."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b24",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b24s0",
+          "_type": "span",
+          "marks": [],
+          "text": "Yang terus melekat adalah betapa banyak dari kita, setiap hari, di berapa banyak tempat, melakukan hal yang sama persis seperti dirinya."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b25",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b25s0",
+          "_type": "span",
+          "marks": [],
+          "text": "Berapa banyak dari yang kita keluarkan — uang, waktu, atau perhatian — benar-benar mengarah pada “hal-hal sulit dan penting”? Dan berapa banyak yang hanya kebocoran tak terlihat itu: laporan yang tak pernah dibaca siapa pun, tiga baris basa-basi di awal setiap email, belasan tab peramban yang terbuka dan terlupakan, data lama yang sudah tidak diperlukan tapi masih terus dibawa-bawa — diam-diam menghabiskan uang kita, diam-diam membuat kita lupa apa yang sebenarnya ingin kita lakukan."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b26",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b26s0",
+          "_type": "span",
+          "marks": [],
+          "text": "A-Che menghabiskan hampir $2.000 hanya untuk memahami satu hal: "
+        },
+        {
+          "_key": "b26s1",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "biayamu tidak ditentukan oleh label harganya. Biayamu ditentukan oleh apa yang kamu masukkan ke dalam ruangan itu."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b27",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b27s0",
+          "_type": "span",
+          "marks": [],
+          "text": "Ia tidak berpindah dari alat pintar itu. Ia hanya, akhirnya, mulai memperhatikan apa yang ia kirimkan."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b28",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b28s0",
+          "_type": "span",
+          "marks": [],
+          "text": "Jadi aku ingin meninggalkan pertanyaannya untukmu — pertanyaan yang sebenarnya tidak ada hubungannya dengan AI:"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b29",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b29s0",
+          "_type": "span",
+          "marks": [],
+          "text": "Apa hal yang kamu kirimkan, berulang-ulang, setiap hari, yang sebenarnya tidak pernah perlu diucapkan?"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b30",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b30s0",
+          "_type": "span",
+          "marks": [],
+          "text": "Jika hari ini kamu akhirnya berhenti dan melihatnya sejenak, apa yang akan berubah?"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b31",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b31s0",
+          "_type": "span",
+          "marks": [],
+          "text": "Tanya Jawab"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "b32",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b32s0",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "Mengapa tagihan AI bisa tiba-tiba melonjak? "
+        },
+        {
+          "_key": "b32s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Sebagian besar lonjakan bukan disebabkan oleh tugas yang lebih sulit — melainkan karena konteks yang sama (aturan toko, ketentuan promosi) dimasukkan dan dikenai biaya ulang di setiap percakapan. Semakin tinggi penggunaannya, semakin besar biaya pengulangan itu."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b33",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b33s0",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "Apakah bersikap sopan pada AI memengaruhi tagihan? "
+        },
+        {
+          "_key": "b33s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Ya. Mesin tidak memerlukan kesopanan — setiap kata basa-basi tetap dikenai biaya, jadi semakin langsung instruksinya, semakin hemat."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b34",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b34s0",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "Apakah menjalankan beberapa asisten AI sekaligus lebih efisien? "
+        },
+        {
+          "_key": "b34s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Tidak selalu. Setiap asisten membawa set instruksinya sendiri yang berjalan di latar belakang, dan terlalu banyak asisten cenderung menyebabkan penggunaan ganda dan jawaban yang bertentangan. Persempit dulu ke jumlah yang benar-benar diperlukan sebelum membahas efisiensi."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b35",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b35s0",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "Jika tagihan naik, haruskah saya beralih ke model yang lebih murah? "
+        },
+        {
+          "_key": "b35s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Tidak selalu. Periksa dulu apakah yang kamu berikan ke model itu ada yang terbuang — memangkas konteks dan instruksi biasanya lebih menghemat dibanding menurunkan kelas model, tanpa mengorbankan kualitas jawaban."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b36",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b36s0",
+          "_type": "span",
+          "marks": [],
+          "text": "Catatan Sumber"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "b37",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b37s0",
+          "_type": "span",
+          "marks": [],
+          "text": "Artikel ini adalah cerita pemasaran konten ilustratif dari AI Token King. “A-Che” adalah tokoh ilustratif untuk tujuan penjelasan, bukan kasus pelanggan nyata; jumlah yang disebutkan adalah contoh representatif, dan biaya penggunaan AI yang sebenarnya bervariasi tergantung model, volume penggunaan, dan paket penyedia layanan. Gagasan utamanya — bahwa biaya berasal dari konteks yang kamu kirim ke model, bukan dari seberapa pintar model itu sendiri — berlaku di berbagai platform AI utama."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b38",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b38s0",
+          "_type": "span",
+          "marks": [],
+          "text": "Baca Selanjutnya"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "b40",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b40s0",
+          "_type": "span",
+          "marks": [
+            "l2"
+          ],
+          "text": "Hari Sam Altman Bilang Model Baru “Hemat 54% Token”, A-Jie Hampir Ganti Model Lagi"
+        }
+      ],
+      "markDefs": [
+        {
+          "_key": "l2",
+          "_type": "link",
+          "href": "https://aitoken.global/id/blog/how-new-ai-model-is-54-percent-more-token-efficient-what-it-means-for-cost"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "b41",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b41s0",
+          "_type": "span",
+          "marks": [],
+          "text": "Ambil Tindakan"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "b42",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b42s0",
+          "_type": "span",
+          "marks": [],
+          "text": "Ingin tahu berapa banyak kebocoran tak terlihat yang tersembunyi di tagihan AI-mu sendiri? "
+        },
+        {
+          "_key": "b42s1",
+          "_type": "span",
+          "marks": [
+            "l3"
+          ],
+          "text": "Coba AI Token King gratis"
+        },
+        {
+          "_key": "b42s2",
+          "_type": "span",
+          "marks": [],
+          "text": "."
+        }
+      ],
+      "markDefs": [
+        {
+          "_key": "l3",
+          "_type": "link",
+          "href": "https://aitokenking.com.tw/home"
+        }
+      ],
+      "style": "normal"
+    }
+  ],
+  "category": "pricing",
+  "coverImage": {
+    "_type": "image",
+    "alt": "Seseorang menatap pantulan dirinya sendiri di cermin — menggambarkan bahwa tagihan AI sebenarnya adalah cermin",
+    "asset": {
+      "_ref": "image-029b48733aaef6db783ffb0b4db941da46de35fb-1376x768-jpg",
+      "_type": "reference"
+    }
+  },
+  "difficultyLevel": "beginner",
+  "excerpt": "Tagihan AI seorang pemilik usaha kecil hampir mencapai $2.000 dalam sebulan. Ia tidak beralih ke model yang lebih murah. Ia menemukan bahwa sembilan puluh persen dari tagihan itu bukan untuk menjawab pertanyaan — melainkan untuk mengulang konteks yang sama, berulang-ulang.",
+  "focusKeyword": "pemborosan token AI",
+  "generatedByPipeline": true,
+  "language": "id",
+  "pipelineVersion": "v1.0",
+  "publishedAt": "2026-08-24T09:00:00.000Z",
+  "readTime": 5,
+  "secondaryKeywords": [
+    "optimasi biaya AI",
+    "mengurangi tagihan AI",
+    "pemborosan konteks AI",
+    "tips penggunaan token",
+    "rincian tagihan AI"
+  ],
+  "seo": {
+    "seoDescription": "Tagihan AI seorang pemilik usaha kecil hampir mencapai $2.000 dalam sebulan. Penyebab sebenarnya bukan model AI-nya, tapi konteks yang berulang. Ini yang ia ubah, dan apa artinya bagi pemborosan token AI.",
+    "seoTitle": "Tagihan AI yang Menakutkan Itu Ternyata Sebuah Cermin"
+  },
+  "slug": {
+    "_type": "slug",
+    "current": "the-ai-bill-that-scared-him-turned-out-to-be-a-mirror"
+  },
+  "sourceUrl": "https://www.aitoken.com.tw/post/ai-zhangdan-jingzi-taichung-story",
+  "tags": [
+    "biaya token AI",
+    "optimasi biaya AI",
+    "AI untuk usaha kecil",
+    "pemborosan penggunaan token"
+  ],
+  "title": "Tagihan AI yang Menakutkan Itu Ternyata Sebuah Cermin",
+  "translationKey": "6225e951-5110-4a1e-a566-3183e640e4f8"
+}
