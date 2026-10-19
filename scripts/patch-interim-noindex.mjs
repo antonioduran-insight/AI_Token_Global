@@ -115,7 +115,8 @@ if (CHECK_DIST) {
   report('NOINDEX_INTERIM URLs in a sitemap', fails.inSitemap);
   report('hreflang links pointing at a NOINDEX_INTERIM URL', fails.inHreflang);
   if (fails.noindexMissing.length === rows.length && rows.length) {
-    console.log('\nEvery NOINDEX_INTERIM page lacks the meta: expected until --apply has run and the site is rebuilt.');
+    console.log('\nEvery NOINDEX_INTERIM page lacks the meta: --apply has not run yet (or the site was not rebuilt after it).');
+    console.log('Until then the sitemap and hreflang failures are expected too: both read seo.noindex from Sanity at build time.');
   }
   process.exit(Object.values(fails).some(l => l.length) ? 1 : 0);
 }
