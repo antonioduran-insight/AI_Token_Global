@@ -11,14 +11,18 @@
  *
  * Usage (run after `npm run build`, so dist/ matches what is live):
  *   node scripts/build-content-corpus.mjs /tmp/corpus.json
- *   node scripts/build-index-diet.mjs --corpus /tmp/corpus.json --gsc <Pages.csv>
+ *   node scripts/build-index-diet.mjs --corpus /tmp/corpus.json --gsc <Pages.csv> \
+ *     --gsc-3m "Claude outputs/gsc-traffic-by-page-2026-10-07.csv"
  *
  * --gsc is the Pages.csv from a Search Console "Performance → Export" zip with
- * the date filter set to "Last 28 days".
+ * the date filter set to "Last 28 days". --gsc-3m is the 3-month per-path table
+ * (columns path, clicks, impressions). A page is protected when either window
+ * shows traffic: 28 days alone missed pages that earned impressions in summer.
  *
  * ── Actions ──
  *   NOINDEX_INTERIM            es/id post whose body is English, no search traffic
  *   PROTECTED_TRANSLATE_FIRST  same, but clicks > 0 or impressions >= 10 in 28 days
+ *                              OR in the 3-month window
  *   KEEP                       everything else in the sitemap
  *   RETIRED_S8                 unpublished by S8, or already gone when S8 ran
  *   UNPUBLISHED_HYGIENE        duplicate-slug docs unpublished by H1 (#47)
@@ -39,9 +43,10 @@ const arg = name => {
 };
 const CORPUS = arg('--corpus');
 const GSC = arg('--gsc');
+const GSC_3M = arg('--gsc-3m');
 const OUT = arg('--out') ?? 'audits/2026-10-19/index-diet.csv';
-if (!CORPUS || !GSC) {
-  console.error('Usage: node scripts/build-index-diet.mjs --corpus <corpus.json> --gsc <Pages.csv> [--out <csv>]');
+if (!CORPUS || !GSC || !GSC_3M) {
+  console.error('Usage: node scripts/build-index-diet.mjs --corpus <corpus.json> --gsc <Pages.csv> --gsc-3m <paths.csv> [--out <csv>]');
   process.exit(1);
 }
 
@@ -134,6 +139,12 @@ for (const row of readCsv(GSC)) {
   });
 }
 
+const gsc3m = new Map();
+for (const row of readCsv(GSC_3M)) {
+  const path = row.path && normPath(row.path);
+  if (path) gsc3m.set(path, { clicks: Number(row.clicks ?? 0), impressions: Number(row.impressions ?? 0) });
+}
+
 const triage = readCsv('audits/2026-10-13/not-indexed-triage.csv');
 const hygiene = JSON.parse(readFileSync('audits/2026-10-16/hygiene-plan.json', 'utf8'));
 
@@ -199,11 +210,13 @@ for (const path of livePaths) {
   }
 
   if (SCOPE_LOCALES.has(locale) && row.doc_type === 'post' && row.body_language === 'en') {
-    const earns = traffic.clicks >= PROTECT.clicks || traffic.impressions >= PROTECT.impressions;
-    row.action = earns ? 'PROTECTED_TRANSLATE_FIRST' : 'NOINDEX_INTERIM';
-    row.reason = earns
-      ? `English body, but ${traffic.clicks} click(s) / ${traffic.impressions} impression(s) in 28 days — translate, do not noindex`
-      : 'English body on an es/id URL, no search traffic in 28 days';
+    const t3 = gsc3m.get(path) ?? { clicks: 0, impressions: 0 };
+    const earns = t => t.clicks >= PROTECT.clicks || t.impressions >= PROTECT.impressions;
+    const window = earns(traffic) ? '28 days' : earns(t3) ? '3 months to 7 Oct' : null;
+    row.action = window ? 'PROTECTED_TRANSLATE_FIRST' : 'NOINDEX_INTERIM';
+    row.reason = window
+      ? `English body, but traffic in ${window} (28d ${traffic.clicks}/${traffic.impressions}, 3m ${t3.clicks}/${t3.impressions} clicks/impr) — translate, do not noindex`
+      : `English body on an es/id URL, no search traffic (28d ${traffic.clicks}/${traffic.impressions}, 3m ${t3.clicks}/${t3.impressions} clicks/impr)`;
   }
   rows.push(row);
 }
