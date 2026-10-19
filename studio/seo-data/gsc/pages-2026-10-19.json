@@ -1,0 +1,2856 @@
+{
+  "siteUrl": "aitoken.global",
+  "snapshotDate": "2026-10-19",
+  "rangeDays": 30,
+  "dataSource": "gsc",
+  "rows": [
+    {
+      "page": "/en/",
+      "locale": "en",
+      "clicks": 16,
+      "impressions": 405,
+      "ctr": 0.03950617283950617,
+      "position": 9.688888888888888
+    },
+    {
+      "page": "/en/blog/why-does-claude-keep-cutting-off-mid-conversation/",
+      "locale": "en",
+      "clicks": 1,
+      "impressions": 377,
+      "ctr": 0.002652519893899204,
+      "position": 8.745358090185675
+    },
+    {
+      "page": "/en/blog/buying-ai-tokens-for-personal-use/",
+      "locale": "en",
+      "clicks": 4,
+      "impressions": 330,
+      "ctr": 0.012121212121212121,
+      "position": 6.863636363636363
+    },
+    {
+      "page": "/id/blog/harga-token-claude-antropik-api/",
+      "locale": "id",
+      "clicks": 4,
+      "impressions": 279,
+      "ctr": 0.014336917562724014,
+      "position": 8.759856630824373
+    },
+    {
+      "page": "/en/blog/claude-token-pricing-guide-for-beginners/",
+      "locale": "en",
+      "clicks": 1,
+      "impressions": 269,
+      "ctr": 0.0037174721189591076,
+      "position": 9.438661710037175
+    },
+    {
+      "page": "/en/blog/understanding-ai-token-usage-for-beginners/",
+      "locale": "en",
+      "clicks": 3,
+      "impressions": 258,
+      "ctr": 0.011627906976744186,
+      "position": 13.786821705426357
+    },
+    {
+      "page": "/id/blog/membeli-token-ai-pemula/",
+      "locale": "id",
+      "clicks": 33,
+      "impressions": 251,
+      "ctr": 0.13147410358565736,
+      "position": 5.52589641434263
+    },
+    {
+      "page": "/en/blog/understanding-ai-token/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 246,
+      "ctr": 0,
+      "position": 42.451219512195124
+    },
+    {
+      "page": "/es/blog/por-que-claude-sigue-interrumpiendo-la-conversacion-a-mitad-de-camino/",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 223,
+      "ctr": 0,
+      "position": 8.08968609865471
+    },
+    {
+      "page": "/en/blog/how-to-use-chatgpt-work-agents-md-guide/",
+      "locale": "en",
+      "clicks": 6,
+      "impressions": 220,
+      "ctr": 0.02727272727272727,
+      "position": 5.759090909090909
+    },
+    {
+      "page": "/en/blog/ai-token-vs-quota-explained/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 203,
+      "ctr": 0,
+      "position": 5.886699507389163
+    },
+    {
+      "page": "/en/token-calculator/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 199,
+      "ctr": 0,
+      "position": 13.587939698492463
+    },
+    {
+      "page": "/en/blog/ai-token-input-output-explanation/",
+      "locale": "en",
+      "clicks": 1,
+      "impressions": 188,
+      "ctr": 0.005319148936170213,
+      "position": 8.696808510638299
+    },
+    {
+      "page": "/en/blog/how-to-automate-business-workflow-with-codex/",
+      "locale": "en",
+      "clicks": 1,
+      "impressions": 185,
+      "ctr": 0.005405405405405406,
+      "position": 8.902702702702703
+    },
+    {
+      "page": "/es/claude-api/",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 160,
+      "ctr": 0,
+      "position": 12.10625
+    },
+    {
+      "page": "/en/blog/token-consumption-comparison-between-chatgpt-claude-and-gemini/",
+      "locale": "en",
+      "clicks": 3,
+      "impressions": 146,
+      "ctr": 0.02054794520547945,
+      "position": 8.904109589041095
+    },
+    {
+      "page": "/en/blog/geminiapi-vs-gemina-apps-for-beginners/",
+      "locale": "en",
+      "clicks": 1,
+      "impressions": 142,
+      "ctr": 0.007042253521126761,
+      "position": 6.908450704225352
+    },
+    {
+      "page": "/vi/blog/understanding-ai-tokens-a-beginners-guide/",
+      "locale": "en",
+      "clicks": 1,
+      "impressions": 138,
+      "ctr": 0.007246376811594203,
+      "position": 19.985507246376812
+    },
+    {
+      "page": "/id/blog/membeli-token-ai-pemula/",
+      "locale": "id",
+      "clicks": 0,
+      "impressions": 135,
+      "ctr": 0,
+      "position": 4.777777777777778
+    },
+    {
+      "page": "/id/blog/membeli-token-ai-pemula/",
+      "locale": "id",
+      "clicks": 0,
+      "impressions": 134,
+      "ctr": 0,
+      "position": 4.746268656716418
+    },
+    {
+      "page": "/en/blog/ai-api-platforms-vs-chat-tools-for-businesses-and-developers/",
+      "locale": "en",
+      "clicks": 1,
+      "impressions": 115,
+      "ctr": 0.008695652173913044,
+      "position": 24.94782608695652
+    },
+    {
+      "page": "/id/token-calculator/",
+      "locale": "id",
+      "clicks": 3,
+      "impressions": 93,
+      "ctr": 0.03225806451612903,
+      "position": 7.032258064516129
+    },
+    {
+      "page": "/id/blog/token-ai-vs-api-key-pemula/",
+      "locale": "id",
+      "clicks": 3,
+      "impressions": 89,
+      "ctr": 0.033707865168539325,
+      "position": 10.640449438202246
+    },
+    {
+      "page": "/en/blog/ai-tokens-api-keys-for-beginners/",
+      "locale": "en",
+      "clicks": 5,
+      "impressions": 87,
+      "ctr": 0.05747126436781609,
+      "position": 5.195402298850575
+    },
+    {
+      "page": "/en/gemini-api/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 86,
+      "ctr": 0,
+      "position": 15.755813953488373
+    },
+    {
+      "page": "/en/blog/geminia-api-vs-gemini/",
+      "locale": "en",
+      "clicks": 4,
+      "impressions": 75,
+      "ctr": 0.05333333333333334,
+      "position": 5.16
+    },
+    {
+      "page": "/es/blog/utilizando-chatgpt-api-para-principiantes/",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 72,
+      "ctr": 0,
+      "position": 11.76388888888889
+    },
+    {
+      "page": "/en/blog/ai-token-pricing-for-beginners/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 66,
+      "ctr": 0,
+      "position": 12.151515151515152
+    },
+    {
+      "page": "/en/blog/local-ai-vs-cloud-ai-same-job-comparison/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 65,
+      "ctr": 0,
+      "position": 6.046153846153846
+    },
+    {
+      "page": "/vi/blog/ai-token-consumption-per-chat-session/",
+      "locale": "en",
+      "clicks": 1,
+      "impressions": 62,
+      "ctr": 0.016129032258064516,
+      "position": 6.483870967741935
+    },
+    {
+      "page": "/es/blog/comparacion-del-consumo-de-tokens-entre-chatgpt-claude-y-gemini/",
+      "locale": "es",
+      "clicks": 3,
+      "impressions": 60,
+      "ctr": 0.05,
+      "position": 6.383333333333334
+    },
+    {
+      "page": "/id/blog/mendapatkan-kunci-api-chatgpt-panduan-langkah-demi-langkah/",
+      "locale": "id",
+      "clicks": 0,
+      "impressions": 60,
+      "ctr": 0,
+      "position": 8.966666666666667
+    },
+    {
+      "page": "/en/blog/claud-api-vs-chat-version-use-cases/",
+      "locale": "en",
+      "clicks": 3,
+      "impressions": 58,
+      "ctr": 0.05172413793103448,
+      "position": 5.5
+    },
+    {
+      "page": "/id/blog/membeli-token-ai-pemula/",
+      "locale": "id",
+      "clicks": 0,
+      "impressions": 57,
+      "ctr": 0,
+      "position": 4.824561403508772
+    },
+    {
+      "page": "/vi/blog/ai-token-usage-guide-for-beginners/",
+      "locale": "en",
+      "clicks": 4,
+      "impressions": 53,
+      "ctr": 0.07547169811320754,
+      "position": 5.773584905660377
+    },
+    {
+      "page": "/en/blog/ai-api-tokens-explained-for-beginners/",
+      "locale": "en",
+      "clicks": 1,
+      "impressions": 53,
+      "ctr": 0.018867924528301886,
+      "position": 6.245283018867925
+    },
+    {
+      "page": "/en/blog/ai-token-pricing-models-comparison/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 53,
+      "ctr": 0,
+      "position": 37.320754716981135
+    },
+    {
+      "page": "/en/use-cases/",
+      "locale": "en",
+      "clicks": 3,
+      "impressions": 52,
+      "ctr": 0.057692307692307696,
+      "position": 6.019230769230769
+    },
+    {
+      "page": "/es/token-calculator/",
+      "locale": "es",
+      "clicks": 1,
+      "impressions": 52,
+      "ctr": 0.019230769230769232,
+      "position": 11.692307692307692
+    },
+    {
+      "page": "/id/blog/kenapa-claude-terpotong-tengah-jalan/",
+      "locale": "id",
+      "clicks": 1,
+      "impressions": 50,
+      "ctr": 0.02,
+      "position": 6.18
+    },
+    {
+      "page": "/en/blog/chatgpt-api-vs-chatgpt/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 49,
+      "ctr": 0,
+      "position": 8.10204081632653
+    },
+    {
+      "page": "/es/blog/comprendiendo-tokens-de-inteligencia-artificial/",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 49,
+      "ctr": 0,
+      "position": 11.306122448979592
+    },
+    {
+      "page": "/es/blog/how-to-use-chatgpt-work-agents-md-guide/",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 49,
+      "ctr": 0,
+      "position": 7.408163265306122
+    },
+    {
+      "page": "/id/blog/what-is-gpt-image-2-5-sunburst-flare/",
+      "locale": "id",
+      "clicks": 1,
+      "impressions": 45,
+      "ctr": 0.022222222222222223,
+      "position": 4.6
+    },
+    {
+      "page": "/en/blog/ai-tokens-english-chinese-differences/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 44,
+      "ctr": 0,
+      "position": 7.795454545454546
+    },
+    {
+      "page": "/id/",
+      "locale": "id",
+      "clicks": 0,
+      "impressions": 44,
+      "ctr": 0,
+      "position": 7.454545454545454
+    },
+    {
+      "page": "/id/blog/tidak-panik-ketika-token-ai-anda-habis-panduan-langkah-demi-langkah/",
+      "locale": "id",
+      "clicks": 2,
+      "impressions": 43,
+      "ctr": 0.046511627906976744,
+      "position": 5.465116279069767
+    },
+    {
+      "page": "/en/beginners-guide/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 43,
+      "ctr": 0,
+      "position": 7.069767441860465
+    },
+    {
+      "page": "/vi/blog/calculate-ai-token-costs-business-2024/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 41,
+      "ctr": 0,
+      "position": 20.170731707317074
+    },
+    {
+      "page": "/en/blog/understanding-ai-token-basics-for-a-smarter-future/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 40,
+      "ctr": 0,
+      "position": 31
+    },
+    {
+      "page": "/vi/blog/ai-token-usage-limits/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 40,
+      "ctr": 0,
+      "position": 6.1
+    },
+    {
+      "page": "/vi/blog/get-chatgpt-api-key-beginners-guide/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 39,
+      "ctr": 0,
+      "position": 8.641025641025642
+    },
+    {
+      "page": "/en/blog/ai-token-usage-limits/",
+      "locale": "en",
+      "clicks": 2,
+      "impressions": 34,
+      "ctr": 0.058823529411764705,
+      "position": 8
+    },
+    {
+      "page": "/en/blog/calculating-ai-token-costs-made-easy/",
+      "locale": "en",
+      "clicks": 1,
+      "impressions": 34,
+      "ctr": 0.029411764705882353,
+      "position": 6.0588235294117645
+    },
+    {
+      "page": "/es/blog/que-es-el-token-de-inteligencia-artificial/",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 34,
+      "ctr": 0,
+      "position": 16.941176470588236
+    },
+    {
+      "page": "/es/blog/chatgpt-api-precio-suscripcion-comparacion/",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 33,
+      "ctr": 0,
+      "position": 7.96969696969697
+    },
+    {
+      "page": "/es/blog/tokens-de-api-para-la-inteligencia-artificial/",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 31,
+      "ctr": 0,
+      "position": 8.387096774193548
+    },
+    {
+      "page": "/vi/blog/calculating-ai-token-costs/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 30,
+      "ctr": 0,
+      "position": 34.733333333333334
+    },
+    {
+      "page": "/vi/token-calculator/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 30,
+      "ctr": 0,
+      "position": 31.633333333333333
+    },
+    {
+      "page": "/es/chatgpt-api/",
+      "locale": "es",
+      "clicks": 1,
+      "impressions": 29,
+      "ctr": 0.034482758620689655,
+      "position": 10.310344827586206
+    },
+    {
+      "page": "/en/blog/ai-model-comparison-2026-price-speed-use-cases/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 29,
+      "ctr": 0,
+      "position": 9.724137931034482
+    },
+    {
+      "page": "/en/blog/choosing-ai-token-platform-guide-for-beginners/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 28,
+      "ctr": 0,
+      "position": 7.714285714285714
+    },
+    {
+      "page": "/vi/blog/calculating-ai-token-costs-made-easy/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 27,
+      "ctr": 0,
+      "position": 6.296296296296297
+    },
+    {
+      "page": "/vi/blog/chatgpt-api-pricing-vs-subscription-cost-difference/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 27,
+      "ctr": 0,
+      "position": 14
+    },
+    {
+      "page": "/vi/blog/prompt-writing-and-ai-token-costs/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 27,
+      "ctr": 0,
+      "position": 6.407407407407407
+    },
+    {
+      "page": "/vi/gemini-api/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 27,
+      "ctr": 0,
+      "position": 8.555555555555555
+    },
+    {
+      "page": "/en/blog/chatgpt-api-pricing-vs-subscription-cost-difference/",
+      "locale": "en",
+      "clicks": 1,
+      "impressions": 26,
+      "ctr": 0.038461538461538464,
+      "position": 10.5
+    },
+    {
+      "page": "/vi/chatgpt-api/",
+      "locale": "en",
+      "clicks": 1,
+      "impressions": 26,
+      "ctr": 0.038461538461538464,
+      "position": 8.923076923076923
+    },
+    {
+      "page": "/id/blog/menghitung-penggunaan-token-ai/",
+      "locale": "id",
+      "clicks": 0,
+      "impressions": 26,
+      "ctr": 0,
+      "position": 6.846153846153846
+    },
+    {
+      "page": "/en/blog/ai-token-usage-guide-for-beginners/",
+      "locale": "en",
+      "clicks": 1,
+      "impressions": 25,
+      "ctr": 0.04,
+      "position": 6.12
+    },
+    {
+      "page": "/id/blog/mengerti-penggunaan-token-ai/",
+      "locale": "id",
+      "clicks": 1,
+      "impressions": 25,
+      "ctr": 0.04,
+      "position": 5.24
+    },
+    {
+      "page": "/en/blog/tokenization-in-ai-comparison-of-chatgpt-claude-and-gemini/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 25,
+      "ctr": 0,
+      "position": 6.68
+    },
+    {
+      "page": "/es/beginners-guide/",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 25,
+      "ctr": 0,
+      "position": 9.4
+    },
+    {
+      "page": "/vi/blog/ai-tokens-api-keys-for-beginners/",
+      "locale": "en",
+      "clicks": 1,
+      "impressions": 24,
+      "ctr": 0.041666666666666664,
+      "position": 6.541666666666667
+    },
+    {
+      "page": "/en/api-compare/",
+      "locale": "en",
+      "clicks": 1,
+      "impressions": 24,
+      "ctr": 0.041666666666666664,
+      "position": 19.875
+    },
+    {
+      "page": "/id/blog/kenapa-claude-terpotong-tengah-jalan/",
+      "locale": "id",
+      "clicks": 0,
+      "impressions": 24,
+      "ctr": 0,
+      "position": 7
+    },
+    {
+      "page": "/vi/blog/ai-token-vs-quota-explained/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 24,
+      "ctr": 0,
+      "position": 3.25
+    },
+    {
+      "page": "/en/blog/ai-token-price-comparison/",
+      "locale": "en",
+      "clicks": 1,
+      "impressions": 23,
+      "ctr": 0.043478260869565216,
+      "position": 13.782608695652174
+    },
+    {
+      "page": "/es/",
+      "locale": "es",
+      "clicks": 2,
+      "impressions": 22,
+      "ctr": 0.09090909090909091,
+      "position": 4.5
+    },
+    {
+      "page": "/en/blog/ai-token-impact-answer-quality/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 22,
+      "ctr": 0,
+      "position": 5.136363636363637
+    },
+    {
+      "page": "/en/blog/multi-model-platform-benefits-applications/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 22,
+      "ctr": 0,
+      "position": 12.909090909090908
+    },
+    {
+      "page": "/vi/blog/ai-token-pricing-for-beginners/",
+      "locale": "en",
+      "clicks": 1,
+      "impressions": 21,
+      "ctr": 0.047619047619047616,
+      "position": 8.333333333333332
+    },
+    {
+      "page": "/en/blog/understanding-ai-tokens-beginners-guide-tokenization-ai-apis/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 21,
+      "ctr": 0,
+      "position": 7.238095238095238
+    },
+    {
+      "page": "/es/blog/entendiendo-gemini-api-y-gemini-apps/",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 21,
+      "ctr": 0,
+      "position": 7.285714285714286
+    },
+    {
+      "page": "/id/blog/perbandingan-konsumsi-token-chatgpt-claude-gemini/",
+      "locale": "id",
+      "clicks": 3,
+      "impressions": 20,
+      "ctr": 0.15,
+      "position": 6.55
+    },
+    {
+      "page": "/en/blog/why-long-conversations-use-more-ai-tokens/",
+      "locale": "en",
+      "clicks": 1,
+      "impressions": 20,
+      "ctr": 0.05,
+      "position": 7
+    },
+    {
+      "page": "/id/blog/local-ai-vs-cloud-ai-same-job-comparison/",
+      "locale": "id",
+      "clicks": 1,
+      "impressions": 20,
+      "ctr": 0.05,
+      "position": 5.5
+    },
+    {
+      "page": "/vi/blog/chatgpt-api-vs-chatgpt/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 20,
+      "ctr": 0,
+      "position": 5.55
+    },
+    {
+      "page": "/vi/blog/saving-ai-token-costs-beginners-guide/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 20,
+      "ctr": 0,
+      "position": 24.35
+    },
+    {
+      "page": "/en/blog/operrouter-vs-direct-api-comparison/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 19,
+      "ctr": 0,
+      "position": 6.368421052631579
+    },
+    {
+      "page": "/id/blog/chatgpt-api-vs-chatgpt/",
+      "locale": "id",
+      "clicks": 0,
+      "impressions": 19,
+      "ctr": 0,
+      "position": 6.842105263157895
+    },
+    {
+      "page": "/en/blog/calculating-ai-token-costs-for-small-businesses/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 18,
+      "ctr": 0,
+      "position": 10.777777777777779
+    },
+    {
+      "page": "/es/blog/entendiendo-tokens-vs-cuotas-para-principiantes/",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 18,
+      "ctr": 0,
+      "position": 6.722222222222222
+    },
+    {
+      "page": "/en/blog/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 17,
+      "ctr": 0,
+      "position": 6
+    },
+    {
+      "page": "/en/blog/ai-api-pricing-token-fees-vs-functionality-costs/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 17,
+      "ctr": 0,
+      "position": 58.94117647058823
+    },
+    {
+      "page": "/en/blog/prompt-writing-and-ai-token-costs/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 17,
+      "ctr": 0,
+      "position": 7.529411764705882
+    },
+    {
+      "page": "/en/blog/understanding-tokenization-in-finance/",
+      "locale": "en",
+      "clicks": 1,
+      "impressions": 16,
+      "ctr": 0.0625,
+      "position": 26.9375
+    },
+    {
+      "page": "/en/blog/calculating-ai-token-costs/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 16,
+      "ctr": 0,
+      "position": 27.125
+    },
+    {
+      "page": "/en/blog/software-factories-ai-agent-platform-comparison-2026/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 16,
+      "ctr": 0,
+      "position": 5.5
+    },
+    {
+      "page": "/id/blog/mengenal-token-ai-untuk-pemula-panduan-lengkap/",
+      "locale": "id",
+      "clicks": 1,
+      "impressions": 15,
+      "ctr": 0.06666666666666667,
+      "position": 7.2
+    },
+    {
+      "page": "/en/blog/understanding-ai-tokens-a-beginners-guide/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 15,
+      "ctr": 0,
+      "position": 42.46666666666667
+    },
+    {
+      "page": "/es/user-guide/",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 15,
+      "ctr": 0,
+      "position": 5.066666666666666
+    },
+    {
+      "page": "/id/blog/chatgpt-api-pricing-vs-subscription-cost-difference/",
+      "locale": "id",
+      "clicks": 0,
+      "impressions": 15,
+      "ctr": 0,
+      "position": 8.133333333333333
+    },
+    {
+      "page": "/en/blog/ai-token-conversion-guide-for-beginners/",
+      "locale": "en",
+      "clicks": 1,
+      "impressions": 14,
+      "ctr": 0.07142857142857142,
+      "position": 5.928571428571429
+    },
+    {
+      "page": "/vi/blog/token-consumption-comparison-between-chatgpt-claude-and-gemini/",
+      "locale": "en",
+      "clicks": 1,
+      "impressions": 14,
+      "ctr": 0.07142857142857142,
+      "position": 4.928571428571429
+    },
+    {
+      "page": "/es/blog/entendiendo-input-token-vs-output-token/",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 14,
+      "ctr": 0,
+      "position": 5.928571428571429
+    },
+    {
+      "page": "/es/blog/entendiendo-los-modelos-de-precios-de-tokens-ai/",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 14,
+      "ctr": 0,
+      "position": 8.928571428571429
+    },
+    {
+      "page": "/id/gemini-api/",
+      "locale": "id",
+      "clicks": 1,
+      "impressions": 13,
+      "ctr": 0.07692307692307693,
+      "position": 9.23076923076923
+    },
+    {
+      "page": "/es/blog/openrouter-vs-api-directo-comparacion/",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 13,
+      "ctr": 0,
+      "position": 13.76923076923077
+    },
+    {
+      "page": "/vi/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 13,
+      "ctr": 0,
+      "position": 13.846153846153847
+    },
+    {
+      "page": "/vi/blog/ai-token-provider-comparison-prices-features-use-cases/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 13,
+      "ctr": 0,
+      "position": 11.76923076923077
+    },
+    {
+      "page": "/vi/blog/estimating-ai-token-usage-easily/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 13,
+      "ctr": 0,
+      "position": 6
+    },
+    {
+      "page": "/en/ai-trends/",
+      "locale": "en",
+      "clicks": 1,
+      "impressions": 12,
+      "ctr": 0.08333333333333333,
+      "position": 6.083333333333333
+    },
+    {
+      "page": "/en/blog/what-is-the-price-of-ai-token-newbies-should-first-understand-where-the-fees-come-from/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 12,
+      "ctr": 0,
+      "position": 81.33333333333333
+    },
+    {
+      "page": "/es/blog/tokenizacion-en-ai-comparacion-de-chatgpt-claude-y-gemini/",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 12,
+      "ctr": 0,
+      "position": 7.083333333333333
+    },
+    {
+      "page": "/es/blog/geminia-api-vs-gemini/",
+      "locale": "es",
+      "clicks": 1,
+      "impressions": 11,
+      "ctr": 0.09090909090909091,
+      "position": 7.454545454545454
+    },
+    {
+      "page": "/es/blog/comparativa-proveedores-tokens-inteligencia-artificial/",
+      "locale": "es",
+      "clicks": 1,
+      "impressions": 11,
+      "ctr": 0.09090909090909091,
+      "position": 7.181818181818182
+    },
+    {
+      "page": "/en/blog/estimating-ai-token-usage-easily/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 11,
+      "ctr": 0,
+      "position": 5.090909090909091
+    },
+    {
+      "page": "/en/blog/how-to-build-your-first-ai-agent/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 11,
+      "ctr": 0,
+      "position": 7.454545454545454
+    },
+    {
+      "page": "/en/blog/saving-ai-token-costs-for-beginners/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 11,
+      "ctr": 0,
+      "position": 29.454545454545453
+    },
+    {
+      "page": "/en/contact/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 11,
+      "ctr": 0,
+      "position": 6.454545454545454
+    },
+    {
+      "page": "/es/blog/",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 11,
+      "ctr": 0,
+      "position": 9.909090909090908
+    },
+    {
+      "page": "/es/blog/chatgpt-api-vs-chatgpt/",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 11,
+      "ctr": 0,
+      "position": 8.545454545454547
+    },
+    {
+      "page": "/es/blog/como-dejar-de-desperdiciar-creditos-de-ia-ingenieria-de-prompts/",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 11,
+      "ctr": 0,
+      "position": 6.545454545454546
+    },
+    {
+      "page": "/es/blog/geminia-api-vs-gemini/",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 11,
+      "ctr": 0,
+      "position": 5.7272727272727275
+    },
+    {
+      "page": "/id/blog/how-to-avoid-hitting-ai-token-usage-limits/",
+      "locale": "id",
+      "clicks": 0,
+      "impressions": 11,
+      "ctr": 0,
+      "position": 6.181818181818182
+    },
+    {
+      "page": "/vi/blog/why-claude-code-cline-codex-bill-so-differently-for-the-same-task/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 11,
+      "ctr": 0,
+      "position": 6.7272727272727275
+    },
+    {
+      "page": "/en/blog/token-estimation-comparison-chatgpt-claude-gemini/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 10,
+      "ctr": 0,
+      "position": 6.8
+    },
+    {
+      "page": "/es/blog/elegir-plataforma-tokens-ia/",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 10,
+      "ctr": 0,
+      "position": 10.2
+    },
+    {
+      "page": "/id/blog/mengerti-token-api-ai-panduan-untuk-pemula/",
+      "locale": "id",
+      "clicks": 0,
+      "impressions": 10,
+      "ctr": 0,
+      "position": 4.4
+    },
+    {
+      "page": "/id/blog/menghemat-biaya-token-ai-panduan-dasar/",
+      "locale": "id",
+      "clicks": 0,
+      "impressions": 10,
+      "ctr": 0,
+      "position": 8.8
+    },
+    {
+      "page": "/vi/blog/ai-token-cost-for-1000-word-article/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 10,
+      "ctr": 0,
+      "position": 3.1
+    },
+    {
+      "page": "/vi/blog/ai-token-pricing-models-comparison/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 10,
+      "ctr": 0,
+      "position": 40.2
+    },
+    {
+      "page": "/vi/blog/claude-token-pricing-guide-for-beginners/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 10,
+      "ctr": 0,
+      "position": 8.3
+    },
+    {
+      "page": "/en/blog/understanding-ai-token-mechanics/",
+      "locale": "en",
+      "clicks": 1,
+      "impressions": 9,
+      "ctr": 0.1111111111111111,
+      "position": 8
+    },
+    {
+      "page": "/vi/blog/how-to-build-reliable-ai-agent-skills/",
+      "locale": "en",
+      "clicks": 1,
+      "impressions": 9,
+      "ctr": 0.1111111111111111,
+      "position": 8
+    },
+    {
+      "page": "/en/blog/ai-api-data-retention-explained/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 9,
+      "ctr": 0,
+      "position": 5.111111111111111
+    },
+    {
+      "page": "/en/blog/ai-token-basics-for-beginners/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 9,
+      "ctr": 0,
+      "position": 7.888888888888889
+    },
+    {
+      "page": "/en/blog/chatgpt-vs-claude-vs-gemini-ai-models-comparison/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 9,
+      "ctr": 0,
+      "position": 9.444444444444445
+    },
+    {
+      "page": "/es/api-compare/",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 9,
+      "ctr": 0,
+      "position": 11.444444444444445
+    },
+    {
+      "page": "/es/blog/calculando-costos-de-tokens-para-ia/",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 9,
+      "ctr": 0,
+      "position": 19.22222222222222
+    },
+    {
+      "page": "/es/blog/comparar-precio-token-ai-con-precision/",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 9,
+      "ctr": 0,
+      "position": 7.555555555555555
+    },
+    {
+      "page": "/id/blog/mengerti-biaya-model-dan-izin-sebelum-menggunakan-claude-api/",
+      "locale": "id",
+      "clicks": 0,
+      "impressions": 9,
+      "ctr": 0,
+      "position": 10.444444444444445
+    },
+    {
+      "page": "/id/blog/perbandingan-model-ai-harga-kecepatan-aplikasi/",
+      "locale": "id",
+      "clicks": 0,
+      "impressions": 9,
+      "ctr": 0,
+      "position": 7
+    },
+    {
+      "page": "/vi/blog/choosing-affordable-ai-apis-for-new-users/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 9,
+      "ctr": 0,
+      "position": 46.666666666666664
+    },
+    {
+      "page": "/vi/blog/claude-api-usage-and-cost-metrics-explained/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 9,
+      "ctr": 0,
+      "position": 10.777777777777779
+    },
+    {
+      "page": "/en/blog/why-long-conversations-use-more-ai-tokens/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 8,
+      "ctr": 0,
+      "position": 8
+    },
+    {
+      "page": "/en/blog/ai-token-counting-system-prompt/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 8,
+      "ctr": 0,
+      "position": 6.875
+    },
+    {
+      "page": "/es/blog/ai-infrastructure-investment-by-tech-giants/",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 8,
+      "ctr": 0,
+      "position": 52.375
+    },
+    {
+      "page": "/es/blog/claudio-api-para-principiantes/",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 8,
+      "ctr": 0,
+      "position": 9.125
+    },
+    {
+      "page": "/es/blog/local-ai-vs-cloud-ai-same-job-comparison/",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 8,
+      "ctr": 0,
+      "position": 7.25
+    },
+    {
+      "page": "/es/gemini-api/",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 8,
+      "ctr": 0,
+      "position": 21.875
+    },
+    {
+      "page": "/id/blog/claude-code-token-cost-optimization/",
+      "locale": "id",
+      "clicks": 0,
+      "impressions": 8,
+      "ctr": 0,
+      "position": 7.625
+    },
+    {
+      "page": "/id/blog/mengerti-harga-token-gpt-untuk-pemula/",
+      "locale": "id",
+      "clicks": 0,
+      "impressions": 8,
+      "ctr": 0,
+      "position": 9
+    },
+    {
+      "page": "/vi/blog/affordable-ai-token-plans-for-business/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 8,
+      "ctr": 0,
+      "position": 54.75
+    },
+    {
+      "page": "/vi/blog/chatgpt-api-for-beginners-guide/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 8,
+      "ctr": 0,
+      "position": 7.125
+    },
+    {
+      "page": "/en/blog/ai-token-cost-for-1000-word-article/",
+      "locale": "en",
+      "clicks": 1,
+      "impressions": 7,
+      "ctr": 0.14285714285714285,
+      "position": 7.142857142857143
+    },
+    {
+      "page": "/en/blog/ai-token-provider-comparison-prices-features-use-cases/",
+      "locale": "en",
+      "clicks": 1,
+      "impressions": 7,
+      "ctr": 0.14285714285714285,
+      "position": 4
+    },
+    {
+      "page": "/en/blog/understanding-ai-tokens-a-beginners-guide/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 7,
+      "ctr": 0,
+      "position": 7.285714285714286
+    },
+    {
+      "page": "/en/blog/ai-token-provider-comparison-prices/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 7,
+      "ctr": 0,
+      "position": 7.571428571428571
+    },
+    {
+      "page": "/en/blog/calculate-ai-token-costs-2026-guide/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 7,
+      "ctr": 0,
+      "position": 7
+    },
+    {
+      "page": "/en/blog/google-io-2026-ai-updates-webmcp-client-side-models-skills-api-token-costs/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 7,
+      "ctr": 0,
+      "position": 8.285714285714285
+    },
+    {
+      "page": "/es/blog/ai-token-Consumption-per-chat-session/",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 7,
+      "ctr": 0,
+      "position": 9.285714285714286
+    },
+    {
+      "page": "/es/blog/compre-tokens-de-ia-para-iniciados/",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 7,
+      "ctr": 0,
+      "position": 10.142857142857142
+    },
+    {
+      "page": "/id/blog/bagaimana-penulisan-prompt-mempengaruhi-biaya-token-ai/",
+      "locale": "id",
+      "clicks": 0,
+      "impressions": 7,
+      "ctr": 0,
+      "position": 7.428571428571429
+    },
+    {
+      "page": "/id/blog/memahami-token-ai-dasar-pemula/",
+      "locale": "id",
+      "clicks": 0,
+      "impressions": 7,
+      "ctr": 0,
+      "position": 7.571428571428571
+    },
+    {
+      "page": "/id/blog/why-ai-compute-is-so-expensive-gpu-economy-explained/",
+      "locale": "id",
+      "clicks": 0,
+      "impressions": 7,
+      "ctr": 0,
+      "position": 6
+    },
+    {
+      "page": "/vi/blog/ai-api-tokens-explained-for-beginners/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 7,
+      "ctr": 0,
+      "position": 4.857142857142858
+    },
+    {
+      "page": "/vi/blog/buying-ai-tokens-for-personal-use/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 7,
+      "ctr": 0,
+      "position": 3.857142857142857
+    },
+    {
+      "page": "/vi/blog/estimating-ai-token-costs-for-personal-users/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 7,
+      "ctr": 0,
+      "position": 23
+    },
+    {
+      "page": "/vi/blog/understanding-ai-token/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 7,
+      "ctr": 0,
+      "position": 7
+    },
+    {
+      "page": "/vi/blog/claude-api-vs-claude/",
+      "locale": "en",
+      "clicks": 1,
+      "impressions": 6,
+      "ctr": 0.16666666666666666,
+      "position": 6.5
+    },
+    {
+      "page": "/en/blog/finding-high-value-ai-models-selection-criteria/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 6,
+      "ctr": 0,
+      "position": 11.333333333333334
+    },
+    {
+      "page": "/en/blog/how-to-avoid-hitting-ai-token-usage-limits/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 6,
+      "ctr": 0,
+      "position": 6.5
+    },
+    {
+      "page": "/en/blog/how-to-build-reliable-ai-agent-skills/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 6,
+      "ctr": 0,
+      "position": 6.333333333333333
+    },
+    {
+      "page": "/en/blog/how-to-cut-llm-api-costs-cheaper-model-strategy/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 6,
+      "ctr": 0,
+      "position": 33.333333333333336
+    },
+    {
+      "page": "/en/blog/what-altmans-token-forecast-means-for-your-ai-startup/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 6,
+      "ctr": 0,
+      "position": 7.333333333333333
+    },
+    {
+      "page": "/es/blog/contratos-agencia-en-la-nube-para-riesgos-api-ai/",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 6,
+      "ctr": 0,
+      "position": 7.666666666666667
+    },
+    {
+      "page": "/es/blog/guiadeuso-de-tokens-ia/",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 6,
+      "ctr": 0,
+      "position": 7.5
+    },
+    {
+      "page": "/es/blog/obtener-clave-api-chatgpt-paso-a-paso/",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 6,
+      "ctr": 0,
+      "position": 12
+    },
+    {
+      "page": "/id/blog/cara-menghitung-biaya-token-ai-untuk-bisnis/",
+      "locale": "id",
+      "clicks": 0,
+      "impressions": 6,
+      "ctr": 0,
+      "position": 8
+    },
+    {
+      "page": "/id/blog/cara-menghitung-biaya-token-ai-untuk-proyek-anda-tahun-2026/",
+      "locale": "id",
+      "clicks": 0,
+      "impressions": 6,
+      "ctr": 0,
+      "position": 6
+    },
+    {
+      "page": "/id/blog/gemin-api-vs-gemini/",
+      "locale": "id",
+      "clicks": 0,
+      "impressions": 6,
+      "ctr": 0,
+      "position": 6
+    },
+    {
+      "page": "/vi/blog/ai-token-beginner-guide/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 6,
+      "ctr": 0,
+      "position": 7
+    },
+    {
+      "page": "/vi/blog/confidential-documents-ai-apis-risks-precautions/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 6,
+      "ctr": 0,
+      "position": 5.333333333333333
+    },
+    {
+      "page": "/vi/blog/operrouter-vs-direct-api-comparison/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 6,
+      "ctr": 0,
+      "position": 5.666666666666667
+    },
+    {
+      "page": "/en/claude-api/",
+      "locale": "en",
+      "clicks": 1,
+      "impressions": 5,
+      "ctr": 0.2,
+      "position": 7.4
+    },
+    {
+      "page": "/es/ai-trends/",
+      "locale": "es",
+      "clicks": 1,
+      "impressions": 5,
+      "ctr": 0.2,
+      "position": 26.4
+    },
+    {
+      "page": "/es/blog/como-dejar-de-desperdiciar-creditos-de-ia-ingenieria-de-prompts/",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 5,
+      "ctr": 0,
+      "position": 6.6
+    },
+    {
+      "page": "/en/blog/adopting-ai-api-for-business/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 5,
+      "ctr": 0,
+      "position": 11
+    },
+    {
+      "page": "/en/blog/ai-token-management-for-enterprises/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 5,
+      "ctr": 0,
+      "position": 6.6
+    },
+    {
+      "page": "/en/blog/ai-token-prepayment-postpayment/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 5,
+      "ctr": 0,
+      "position": 3.8
+    },
+    {
+      "page": "/en/blog/enterprise-ai-vendor-checklist-for-compliant-data-usage/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 5,
+      "ctr": 0,
+      "position": 12.4
+    },
+    {
+      "page": "/en/blog/why-ai-compute-is-so-expensive-gpu-economy-explained/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 5,
+      "ctr": 0,
+      "position": 5.2
+    },
+    {
+      "page": "/es/blog/como-calcular-costos-de-tokens-de-ia-para-enterprise-workloads/",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 5,
+      "ctr": 0,
+      "position": 7
+    },
+    {
+      "page": "/es/blog/comprendiendo-la-interfaz-de-pantalla-para-uso-de-tokens-ai/",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 5,
+      "ctr": 0,
+      "position": 7.2
+    },
+    {
+      "page": "/es/blog/entendiendo-los-metodos-de-calculo-del-uso-y-el-costo-en-la-api-claude/",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 5,
+      "ctr": 0,
+      "position": 7.8
+    },
+    {
+      "page": "/es/blog/guia-basica-de-tokens-de-ia-como-funcionan-y-por-que-importan/",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 5,
+      "ctr": 0,
+      "position": 10.2
+    },
+    {
+      "page": "/es/blog/plataformas-de-multiples-modelos-ventajas-y-aplicaciones/",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 5,
+      "ctr": 0,
+      "position": 8.2
+    },
+    {
+      "page": "/es/contact/",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 5,
+      "ctr": 0,
+      "position": 6.8
+    },
+    {
+      "page": "/vi/blog/how-to-avoid-hitting-ai-token-usage-limits/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 5,
+      "ctr": 0,
+      "position": 7.4
+    },
+    {
+      "page": "/vi/blog/tranh-luan-software-factories-nen-tang-ai-2026/",
+      "locale": "en",
+      "clicks": 2,
+      "impressions": 4,
+      "ctr": 0.5,
+      "position": 2
+    },
+    {
+      "page": "/vi/blog/ai-tokens-english-chinese-differences/",
+      "locale": "en",
+      "clicks": 2,
+      "impressions": 4,
+      "ctr": 0.5,
+      "position": 3.75
+    },
+    {
+      "page": "/id/blog/why-claude-code-cline-codex-bill-so-differently-for-the-same-task/",
+      "locale": "id",
+      "clicks": 1,
+      "impressions": 4,
+      "ctr": 0.25,
+      "position": 4.5
+    },
+    {
+      "page": "/en/blog/chrome-devtools-agents-ai-api-cost-comparison/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 6
+    },
+    {
+      "page": "/en/blog/claude-api-costs-models-permissions/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 11
+    },
+    {
+      "page": "/en/blog/understanding-ai-tokens-developers-guide-managing-api-costs/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 3.25
+    },
+    {
+      "page": "/en/blog/why-prompt-caching-can-increase-your-ai-bill/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 7.25
+    },
+    {
+      "page": "/es/blog/conversacion-de-tokens-ai-guia-integral/",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 8.5
+    },
+    {
+      "page": "/es/blog/guardar-costos-de-tokens-ai-guia-para-principiantes/",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 9.25
+    },
+    {
+      "page": "/es/blog/por-que-el-prompt-caching-puede-subir-tu-factura-de-ia/",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 5.5
+    },
+    {
+      "page": "/es/blog/precio-apis-inteligencia-artificial/",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 5.25
+    },
+    {
+      "page": "/es/blog/usando-documentos-confidenciales-en-apis-de-ia/",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 7
+    },
+    {
+      "page": "/es/compliance/",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 7.25
+    },
+    {
+      "page": "/id/blog/harga-token-gemini-panduan-pemula/",
+      "locale": "id",
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 10.5
+    },
+    {
+      "page": "/id/blog/menggunakan-api-chatgpt-untuk-pemula/",
+      "locale": "id",
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 9.25
+    },
+    {
+      "page": "/id/blog/perbandingan-biaya-token-ai-openai-anthropic-google/",
+      "locale": "id",
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 4.75
+    },
+    {
+      "page": "/id/blog/perbandingan-chatgpt-claude-gemini-pemula-ai/",
+      "locale": "id",
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 7
+    },
+    {
+      "page": "/vi/blog/ai-api-data-retention-explained/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 6
+    },
+    {
+      "page": "/vi/blog/ai-token-management-for-enterprises/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 11.25
+    },
+    {
+      "page": "/vi/blog/claud-api-vs-chat-version-use-cases/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 4.25
+    },
+    {
+      "page": "/vi/blog/why-prompt-caching-can-increase-your-ai-bill/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 9
+    },
+    {
+      "page": "/en/blog/chatgpt-api-for-beginners-guide/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 9.666666666666666
+    },
+    {
+      "page": "/en/blog/get-chatgpt-api-key-beginners-guide/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 9.333333333333334
+    },
+    {
+      "page": "/en/blog/optimizing-ai-driven-web-development-lowering-costs-modern-web-guidance/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 8.666666666666668
+    },
+    {
+      "page": "/en/blog/optimizing-ai-token-costs-chrome-devtools-148-150/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 8.333333333333332
+    },
+    {
+      "page": "/en/blog/taiwan-pdpa-ai-api-integration-compliance/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 5.333333333333333
+    },
+    {
+      "page": "/en/blog/understanding-ai-token-basics-and-cost-control/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 9.333333333333334
+    },
+    {
+      "page": "/es/blog/claudetokenprecioguia/",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 9.333333333333334
+    },
+    {
+      "page": "/es/blog/como-crear-ai-agent-skills-confiables/",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 9.333333333333334
+    },
+    {
+      "page": "/es/blog/entendiendo-tokens-de-ia-y-claves-api/",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 9.666666666666666
+    },
+    {
+      "page": "/es/blog/token-usage-control-en-ia/",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 10
+    },
+    {
+      "page": "/es/blog/tokens-de-ia-baratos-costo-total/",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 9.666666666666666
+    },
+    {
+      "page": "/es/blog/tokens-de-ia-para-articulos/",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 6.666666666666667
+    },
+    {
+      "page": "/id/blog/ai-token-per-chat-session/",
+      "locale": "id",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 4.333333333333334
+    },
+    {
+      "page": "/id/blog/cara-menghitung-biaya-token-ai-untuk-aplikasi-multibahasa/",
+      "locale": "id",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 9.333333333333334
+    },
+    {
+      "page": "/id/blog/claude-api-capabilities-document-processing-customer-support-content-generation/",
+      "locale": "id",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 7.666666666666667
+    },
+    {
+      "page": "/id/blog/mengapa-percakapan-panjang-menggunakan-token-ai-lebih-banyak/",
+      "locale": "id",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 5.666666666666667
+    },
+    {
+      "page": "/id/blog/mengerti-penggunaan-biaya-metrik-api-claude/",
+      "locale": "id",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 8
+    },
+    {
+      "page": "/id/blog/menghitung-biaya-token-ai-dijelaskan-dengan-sederhana/",
+      "locale": "id",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 4.666666666666666
+    },
+    {
+      "page": "/id/blog/mengilih-platform-token-ai-panduan/",
+      "locale": "id",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 5.333333333333333
+    },
+    {
+      "page": "/id/blog/openrouter-vs-integrasi-api-langsung/",
+      "locale": "id",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 8.333333333333332
+    },
+    {
+      "page": "/id/blog/perbandingan-penyedia-token-ai-harga-fitur-dan-kasus-penggunaan/",
+      "locale": "id",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 6.666666666666667
+    },
+    {
+      "page": "/id/blog/why-prompt-caching-can-increase-your-ai-bill/",
+      "locale": "id",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 9
+    },
+    {
+      "page": "/id/chatgpt-api/",
+      "locale": "id",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 8.333333333333332
+    },
+    {
+      "page": "/id/claude-api/",
+      "locale": "id",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 16.333333333333336
+    },
+    {
+      "page": "/vi/beginners-guide/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 5.666666666666667
+    },
+    {
+      "page": "/vi/blog/ai-api-pricing-token-fees-vs-functionality-costs/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 58.666666666666664
+    },
+    {
+      "page": "/vi/blog/ai-model-comparison-2026-price-speed-use-cases/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 74.66666666666667
+    },
+    {
+      "page": "/vi/blog/ai-token-counting-system-prompt/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 7
+    },
+    {
+      "page": "/vi/blog/gpt-token-pricing-for-ai-beginners/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 7.666666666666667
+    },
+    {
+      "page": "/vi/blog/how-to-stop-wasting-ai-credits-prompt-engineering-tips/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 6.333333333333333
+    },
+    {
+      "page": "/vi/blog/lowering-ai-token-expenses-strategies-for-cost-optimization/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 23.333333333333332
+    },
+    {
+      "page": "/id/blog/mengapa-token-ai-sering-kosong/",
+      "locale": "id",
+      "clicks": 1,
+      "impressions": 2,
+      "ctr": 0.5,
+      "position": 7
+    },
+    {
+      "page": "/id/user-guide/",
+      "locale": "id",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 5
+    },
+    {
+      "page": "/vi/blog/determining-ai-token-budget-for-content-marketing/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 10
+    },
+    {
+      "page": "/en/blog/ai-agent-autonomous-cyberattack-huggingface/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 3.5
+    },
+    {
+      "page": "/en/blog/ai-token-vs-points-pricing-comparison/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 1
+    },
+    {
+      "page": "/en/blog/financial-data-ai-api-security/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 2
+    },
+    {
+      "page": "/en/blog/how-to-reduce-ai-token-costs-lessons-from-1486-experiment/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 19.5
+    },
+    {
+      "page": "/en/blog/how-to-stop-wasting-ai-credits-prompt-engineering-tips/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 8
+    },
+    {
+      "page": "/en/blog/navigating-legal-risks-compliance-ai-token-usage/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 4
+    },
+    {
+      "page": "/en/blog/what-is-meta-muse-personal-agent-vs-openclaw/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 3
+    },
+    {
+      "page": "/en/blog/why-claude-code-cline-codex-bill-so-differently-for-the-same-task/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 6
+    },
+    {
+      "page": "/es/blog/ai-api-plataformas-vs-herramientas-de-chat/",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 5.5
+    },
+    {
+      "page": "/es/blog/api-ia-asequible/",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 9.5
+    },
+    {
+      "page": "/es/blog/bajar-gastos-token-ia-metodos-eficientes/",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 8
+    },
+    {
+      "page": "/es/blog/calculando-costos-de-token-ai-guia-para-principiantes/",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 7.5
+    },
+    {
+      "page": "/es/blog/como-calcular-costos-tokens-ia-proyecto-2026/",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 8.5
+    },
+    {
+      "page": "/es/blog/entendiendo-modelos-precios-tokens-inteligencia-artificial/",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 7.5
+    },
+    {
+      "page": "/es/blog/gpt-token-precio-guia-comienzos/",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 9.5
+    },
+    {
+      "page": "/es/blog/por-que-claude-code-cline-codex-cobran-tan-diferente-misma-tarea/",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 4
+    },
+    {
+      "page": "/es/blog/retencion-de-datos-en-apis-de-inteligencia-artificial/",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 29
+    },
+    {
+      "page": "/es/blog/token-estimacion-chatgpt-claude-gemini/",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 3
+    },
+    {
+      "page": "/id/blog/fuzzing-model-robustness-kinerja-lebih-baik/",
+      "locale": "id",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 3.5
+    },
+    {
+      "page": "/id/blog/konversi-token-ai-panduan-lengkap/",
+      "locale": "id",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 48
+    },
+    {
+      "page": "/id/blog/mengadopsi-api-ai-bisnis-panduan-terlengkap/",
+      "locale": "id",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 6
+    },
+    {
+      "page": "/id/blog/mengerti-harga-token-ai/",
+      "locale": "id",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 4
+    },
+    {
+      "page": "/id/blog/menghitung-biaya-token-ai-panduan-pengantar/",
+      "locale": "id",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 7.5
+    },
+    {
+      "page": "/id/blog/mengoptimalkan-pengembangan-web-berbasis-ai-mengurangi-biaya-melalui-panduan-web-modern/",
+      "locale": "id",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 9
+    },
+    {
+      "page": "/id/blog/pemahaman-token-ai-panduan-dasar-tokenisasi-api-ai/",
+      "locale": "id",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 9.5
+    },
+    {
+      "page": "/id/blog/tanggung-jawab-hukum-penjual-api-ai-bisnis/",
+      "locale": "id",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 3
+    },
+    {
+      "page": "/id/use-cases/",
+      "locale": "id",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 49
+    },
+    {
+      "page": "/vi/blog/ai-token-provider-comparison-prices/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 5
+    },
+    {
+      "page": "/vi/blog/ai-token-usage-dashboard-interpreter/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 8
+    },
+    {
+      "page": "/vi/blog/fuzzing-ai-models-for-robustness/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 5.5
+    },
+    {
+      "page": "/vi/blog/token-estimation-comparison-chatgpt-claude-gemini/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 5.5
+    },
+    {
+      "page": "/vi/blog/tokenization-in-ai-comparison-of-chatgpt-claude-and-gemini/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 9.5
+    },
+    {
+      "page": "/vi/blog/tranh-luan-software-factories-nen-tang-ai-2026/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 2
+    },
+    {
+      "page": "/en/blog/ai-api-reseller-legal-responsibility/",
+      "locale": "en",
+      "clicks": 1,
+      "impressions": 1,
+      "ctr": 1,
+      "position": 2
+    },
+    {
+      "page": "/en/blog/claud-api-vs-chat-version-use-cases/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 4
+    },
+    {
+      "page": "/en/blog/claude-api-usage-and-cost-metrics-explained/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 8
+    },
+    {
+      "page": "/en/blog/taiwan-companies-ai-api-legal-risks-and-responsibilities/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 5
+    },
+    {
+      "page": "/vi/blog/how-to-avoid-hitting-ai-token-usage-limits/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 2
+    },
+    {
+      "page": "/en/blog/ai-infrastructure-investment-by-tech-giants/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 36
+    },
+    {
+      "page": "/en/blog/ai-token-usage-control/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 9
+    },
+    {
+      "page": "/en/blog/ai-token-usage-dashboard-interpreter/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 2
+    },
+    {
+      "page": "/en/blog/chrome-devtools-agents-ai-api-cost-comparison/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 10
+    },
+    {
+      "page": "/en/blog/declarative-partial-updates-and-ai-api-costs/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 7
+    },
+    {
+      "page": "/en/blog/determining-ai-token-budget-for-content-marketing/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 7
+    },
+    {
+      "page": "/en/blog/lowering-ai-token-expenses-strategies-for-cost-optimization/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 17
+    },
+    {
+      "page": "/en/blog/optimize-ai-api-costs-chrome-devtools-automation/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 10
+    },
+    {
+      "page": "/en/blog/sending-customer-data-to-ai-api/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 11
+    },
+    {
+      "page": "/en/blog/taiwan-companies-ai-api-legal-risks-and-responsibilities/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 1
+    },
+    {
+      "page": "/en/blog/understanding-ai-tokens-beginners-guide-api-token-mechanics/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 2
+    },
+    {
+      "page": "/en/blog/why-ai-agent-trends-all-lead-back-to-token-budget/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 6
+    },
+    {
+      "page": "/es/blog/ai-token-counting-sistema-instruccion/",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 3
+    },
+    {
+      "page": "/es/blog/claude-api-costos-modelos-permisos/",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 6
+    },
+    {
+      "page": "/es/blog/comparacion-de-modelos-de-inteligencia-artificial-para-2026/",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 2
+    },
+    {
+      "page": "/es/blog/cuanto-cuesta-alojar-uno-mismo-un-modelo-de-ia-de-frontera/",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 10
+    },
+    {
+      "page": "/es/blog/debate-software-factories-plataformas-ia-2026/",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 3
+    },
+    {
+      "page": "/es/blog/entendiendo-los-modelos-de-precios-de-tokens-de-inteligencia-artificial-comparacion/",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 7
+    },
+    {
+      "page": "/es/blog/entendiendo-los-tokens-de-ia-guia-completa-para-desarrolladores-y-empresas/",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 11
+    },
+    {
+      "page": "/es/blog/entendiendo-precios-token-gemini/",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 10
+    },
+    {
+      "page": "/es/blog/gestion-de-tokens-ai-para-empresas/",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 2
+    },
+    {
+      "page": "/es/blog/guiapractica-token-inteligencia-artificial-20-preguntas-fundamentales/",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 8
+    },
+    {
+      "page": "/es/blog/long-conversations-ai-tokens/",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 2
+    },
+    {
+      "page": "/es/blog/optimizacion-costos-ia-chrome-devtools-google-io/",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 9
+    },
+    {
+      "page": "/es/blog/optimizar-costo-tokens-ia-ahorro-calidad/",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 6
+    },
+    {
+      "page": "/es/blog/token-de-ai-no-te-desanques/",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 9
+    },
+    {
+      "page": "/es/use-cases/",
+      "locale": "es",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 7
+    },
+    {
+      "page": "/id/blog/ai-api-platform-vs-chat-tools/",
+      "locale": "id",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 7
+    },
+    {
+      "page": "/id/blog/ai-token-basics-dasar-tokenisasi-dan-biaya-api/",
+      "locale": "id",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 10
+    },
+    {
+      "page": "/id/blog/cara-membuat-situs-web-siap-agen-sambil-mengoptimalkan-biaya-token-ai/",
+      "locale": "id",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 11
+    },
+    {
+      "page": "/id/blog/cara-menggunakan-token-ai-pemula/",
+      "locale": "id",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 4
+    },
+    {
+      "page": "/id/blog/comparasi-token-ai-harga/",
+      "locale": "id",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 3
+    },
+    {
+      "page": "/id/blog/geminia-api-vs-geminia-apps-pemula/",
+      "locale": "id",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 2
+    },
+    {
+      "page": "/id/blog/memilih-model-ai-yang-tepat/",
+      "locale": "id",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 2
+    },
+    {
+      "page": "/id/blog/mengenal-kebijakan-penggunaan-data-api-ai/",
+      "locale": "id",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 6
+    },
+    {
+      "page": "/id/blog/mengerti-model-harga-token-ai-panduan-dasar/",
+      "locale": "id",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 5
+    },
+    {
+      "page": "/id/blog/mengerti-pembayaran-token-ai-prapembayaran-vs-pasca-pembayaran/",
+      "locale": "id",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 7
+    },
+    {
+      "page": "/id/blog/mengerti-token-ai-perbedaan-inggris-tiongkok/",
+      "locale": "id",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 11
+    },
+    {
+      "page": "/id/blog/mengerti-token-masukan-vs-token-keluaran-ai-model-api/",
+      "locale": "id",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 10
+    },
+    {
+      "page": "/id/blog/mengilih-model-ai-sesuai-tujuan/",
+      "locale": "id",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 9
+    },
+    {
+      "page": "/id/blog/optimalkan-biaya-ai-api-dengan-otomatisasi-chrome-devtools/",
+      "locale": "id",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 7
+    },
+    {
+      "page": "/id/blog/optimisasi-biaya-token-ai-chrome-devtools-google-io-connect-berlin/",
+      "locale": "id",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 6
+    },
+    {
+      "page": "/id/blog/pemahaman-dasar-token-ai/",
+      "locale": "id",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 8
+    },
+    {
+      "page": "/id/blog/token-ai-basik/",
+      "locale": "id",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 4
+    },
+    {
+      "page": "/id/blog/tokenisasi-dalam-teknologi-ai-perbandingan-chatgpt-claudedan-gemini/",
+      "locale": "id",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 11
+    },
+    {
+      "page": "/id/blog/tokenisasi-dan-dampaknya-pada-pasar-keuangan/",
+      "locale": "id",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 9
+    },
+    {
+      "page": "/id/blog/why-ai-agent-trends-all-lead-back-to-token-budget/",
+      "locale": "id",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 11
+    },
+    {
+      "page": "/id/compliance/",
+      "locale": "id",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 8
+    },
+    {
+      "page": "/vi/blog/ai-api-platforms-vs-chat-tools-for-businesses-and-developers/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 2
+    },
+    {
+      "page": "/vi/blog/ai-api-reseller-legal-responsibility/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 9
+    },
+    {
+      "page": "/vi/blog/ai-token-price-comparison/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 2
+    },
+    {
+      "page": "/vi/blog/ai-token-pricing-structures-comparison/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 3
+    },
+    {
+      "page": "/vi/blog/ai-token-usage-control/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 5
+    },
+    {
+      "page": "/vi/blog/calculating-ai-token-costs-for-small-businesses/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 8
+    },
+    {
+      "page": "/vi/blog/chatgpt-vs-claude-vs-gemini-ai-models-comparison/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 11
+    },
+    {
+      "page": "/vi/blog/claude-api-costs-models-permissions/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 11
+    },
+    {
+      "page": "/vi/blog/claude-api-use-cases-customer-support-content-generation/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 8
+    },
+    {
+      "page": "/vi/blog/saving-ai-token-costs-for-beginners/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 10
+    },
+    {
+      "page": "/vi/blog/understanding-ai-token-usage-for-beginners/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 4
+    },
+    {
+      "page": "/vi/blog/why-ai-agent-trends-all-lead-back-to-token-budget/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 15
+    },
+    {
+      "page": "/vi/claude-api/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 10
+    },
+    {
+      "page": "/vi/use-cases/",
+      "locale": "en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 6
+    }
+  ]
+}

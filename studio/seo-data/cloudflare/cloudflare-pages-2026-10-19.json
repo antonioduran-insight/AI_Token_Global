@@ -1,0 +1,58 @@
+{
+  "meta": {
+    "siteUrl": "aitoken.global",
+    "snapshotDate": "2026-10-19",
+    "rangeDays": 30,
+    "dataSource": "cloudflare"
+  },
+  "rows": [
+    {
+      "page": "/en/use-cases/",
+      "locale": "en",
+      "visits": 200,
+      "pageViews": 200
+    },
+    {
+      "page": "/en/beginners-guide/",
+      "locale": "en",
+      "visits": 100,
+      "pageViews": 100
+    },
+    {
+      "page": "/en/",
+      "locale": "en",
+      "visits": 100,
+      "pageViews": 200
+    },
+    {
+      "page": "/en/blog/ai-token-impact-answer-quality/",
+      "locale": "en",
+      "visits": 100,
+      "pageViews": 100
+    },
+    {
+      "page": "/id/",
+      "locale": "id",
+      "visits": 100,
+      "pageViews": 100
+    },
+    {
+      "page": "/en/blog/understanding-ai-token-basics-for-a-smarter-future/",
+      "locale": "en",
+      "visits": 100,
+      "pageViews": 100
+    },
+    {
+      "page": "/en/chatgpt-api/",
+      "locale": "en",
+      "visits": 100,
+      "pageViews": 100
+    },
+    {
+      "page": "/en/contact/",
+      "locale": "en",
+      "visits": 100,
+      "pageViews": 100
+    }
+  ]
+}

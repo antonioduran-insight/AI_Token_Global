@@ -1,0 +1,26 @@
+{
+  "meta": {
+    "siteUrl": "aitoken.global",
+    "snapshotDate": "2026-10-19",
+    "rangeDays": 30,
+    "dataSource": "cloudflare"
+  },
+  "rows": [
+    {
+      "referrer": "Direct / none",
+      "visits": 630
+    },
+    {
+      "referrer": "www.google.com",
+      "visits": 170
+    },
+    {
+      "referrer": "www.facebook.com",
+      "visits": 20
+    },
+    {
+      "referrer": "www.aitoken.global",
+      "visits": 0
+    }
+  ]
+}
