@@ -56,8 +56,12 @@ const shouldNoindex = seo?.noindex ?? noindex;
 // caller knows for blog posts (translated slugs); the route registry knows for
 // every other page. Neither derives a URL by rewriting the current path, which is
 // how the site came to advertise 1,511 alternates that 404. An empty list — /404
-// and the locale-less root — emits no alternates at all.
-const resolvedAlternates = alternates ?? staticPageAlternates(Astro.url.pathname, lang, SUPPORTED_LANGS);
+// and the locale-less root — emits no alternates at all. Neither does a noindex
+// page: it has left the index, so it has no cluster to declare (its siblings
+// already drop it — getPostAlternates skips noindex posts).
+const resolvedAlternates = shouldNoindex
+  ? []
+  : alternates ?? staticPageAlternates(Astro.url.pathname, lang, SUPPORTED_LANGS);
 const hreflangs = resolvedAlternates.map(alternate => ({
   lang: alternate.lang,
   url: new URL(alternate.path, siteOrigin).href,

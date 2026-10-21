@@ -220,7 +220,10 @@ async function buildPostAlternates(): Promise<Map<string, PostAlternate[]>> {
   if (!client) return map;
 
   const posts: PostIdentity[] = await client.fetch(
-    `*[_type == "post" && defined(slug.current) && !(_id in path("drafts.**"))] {
+    // noindex posts are out of the index, so they are nobody's alternate. Their
+    // siblings stop naming them; a cluster left with one post is a lone post and
+    // gets itself as x-default (BaseLayout).
+    `*[_type == "post" && defined(slug.current) && !(_id in path("drafts.**")) && seo.noindex != true] {
       "slug": slug.current, language, articleNumber
     }`
   );
