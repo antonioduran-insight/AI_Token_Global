@@ -1,0 +1,410 @@
+{
+  "_createdAt": "2026-06-04T17:50:49Z",
+  "_id": "lT0MJhwbFtcMofmR8IWx9l",
+  "_rev": "PXBreekz6ug9jLuKVxGO4e",
+  "_type": "post",
+  "_updatedAt": "2026-06-04T18:14:49Z",
+  "articleNumber": 62,
+  "body": [
+    {
+      "_key": "pyo0m8jr",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "pyo0m8jrc",
+          "_type": "span",
+          "marks": [],
+          "text": "If you're new to AI development, getting started with the Claude API can be overwhelming. With its vast range of applications and complex features, it's essential to understand the basics before diving in. In this article, we'll provide a step-by-step guide to help beginners navigate the Claude API and start using it for various projects."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "hgzzsdam",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "hgzzsdamc",
+          "_type": "span",
+          "marks": [],
+          "text": "Understanding the Differences Between Chatbot Mode and API Mode"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "dat25pta",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "dat25ptac",
+          "_type": "span",
+          "marks": [],
+          "text": "The Claude API offers two primary modes: chatbot mode and API mode. While both modes share similar functionality, they cater to different use cases. In chatbot mode, the API is designed for human-computer interaction, allowing users to engage with AI-powered chatbots. On the other hand, API mode enables developers to integrate the Claude API into their applications, providing a programmatic interface for natural language processing and NLP tasks."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "352btuoq",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "352btuoqc",
+          "_type": "span",
+          "marks": [],
+          "text": "To determine which mode is best suited for your project, consider the type of interaction you want to facilitate. If you're building a conversational AI, chatbot mode might be the better choice. However, if you need to integrate NLP capabilities into your application, API mode is the way to go."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "kf9hq0gh",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "kf9hq0ghc",
+          "_type": "span",
+          "marks": [],
+          "text": "In the next section, we'll explore how to set up a Console account and obtain an API key, which is essential for accessing the Claude API in either mode."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "3n8nd3ec",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "3n8nd3ecc",
+          "_type": "span",
+          "marks": [],
+          "text": "Setting Up a Console Account and Obtaining an API Key"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "0s7ccelv",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "0s7ccelvc",
+          "_type": "span",
+          "marks": [],
+          "text": "To begin using the Claude API, you'll need to create a Console account and obtain an API key. This process is straightforward and can be completed in a few minutes."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "8ubsmwex",
+      "_type": "image",
+      "alt": "Section image 1",
+      "asset": {
+        "_ref": "image-af19ddc1bcf4dca403a2baf17d5eb1dae21a4ae2-1344x768-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "xu5d5ov3",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "xu5d5ov3c",
+          "_type": "span",
+          "marks": [],
+          "text": "First, navigate to the Claude Console website and sign up for an account. Fill out the registration form with your email address and password."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "r5zs5bni",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "r5zs5bnic",
+          "_type": "span",
+          "marks": [],
+          "text": "Once you've created your account, navigate to the API keys section and click on the 'Create API Key' button. This will generate a unique API key associated with your account."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "6lqb66tg",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "6lqb66tgc",
+          "_type": "span",
+          "marks": [],
+          "text": "Choosing a Suitable Model and Making a Successful Request"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "ivfvxton",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "ivfvxtonc",
+          "_type": "span",
+          "marks": [],
+          "text": "With your API key in hand, it's time to choose a suitable model for your project. The Claude API offers various models tailored to specific use cases, such as language translation, text generation, and sentiment analysis."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "4raf0e0q",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "4raf0e0qc",
+          "_type": "span",
+          "marks": [],
+          "text": "When selecting a model, consider the requirements of your application and the type of data you'll be processing. For example, if you need to translate text from one language to another, choose a model designed for translation tasks."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "5l05ay2z",
+      "_type": "image",
+      "alt": "Section image 2",
+      "asset": {
+        "_ref": "image-77ddf0e87dcb3a69dbd802fe0c53003e321ac108-1344x768-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "z44sonfl",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "z44sonflc",
+          "_type": "span",
+          "marks": [],
+          "text": "Once you've selected a model, make a successful request by including your API key in the request headers. This will authenticate your request and enable the Claude API to process your data."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "8o8hhw4o",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "8o8hhw4oc",
+          "_type": "span",
+          "marks": [],
+          "text": "Understanding Messages API and Its Importance"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "z65pmyej",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "z65pmyejc",
+          "_type": "span",
+          "marks": [],
+          "text": "The Messages API is a crucial component of the Claude API, allowing you to send and receive messages from the API. This feature is essential for applications that require human-computer interaction."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b55r9ws7",
+      "_type": "image",
+      "alt": "Section image 3",
+      "asset": {
+        "_ref": "image-6ac18190dbede8b2bd5266e38ec6dbd6572f11f4-1344x768-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "erfyics0",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "erfyics0c",
+          "_type": "span",
+          "marks": [],
+          "text": "When using the Messages API, ensure you're sending the correct message format and receiving the expected response. This will help you troubleshoot any issues and optimize your application's performance."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "bspys0vr",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "bspys0vrc",
+          "_type": "span",
+          "marks": [],
+          "text": "Handling Tokens, Context Window, Rate Limits, and Spend Limits"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "78t3ymz9",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "78t3ymz9c",
+          "_type": "span",
+          "marks": [],
+          "text": "The Claude API uses tokens to track usage and billing. Understanding how tokens work is essential for optimizing your application's performance and avoiding unexpected charges."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "wot75ru2",
+      "_type": "image",
+      "alt": "Section image 4",
+      "asset": {
+        "_ref": "image-b54bc6733775b932d9ea2f32a59ad04e1a22abbd-1344x768-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "9m76ka1o",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "9m76ka1oc",
+          "_type": "span",
+          "marks": [],
+          "text": "Tokens are calculated based on the number of characters processed by the API. Be mindful of your token usage, as excessive consumption can lead to rate limits and increased spend."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "ifmhepen",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "ifmhepenc",
+          "_type": "span",
+          "marks": [],
+          "text": "Conclusion and Next Steps"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "cpyled9e",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "cpyled9ec",
+          "_type": "span",
+          "marks": [],
+          "text": "In conclusion, this article has provided a step-by-step guide to getting started with the Claude API. By understanding the differences between chatbot mode and API mode, setting up a Console account, choosing a suitable model, and handling tokens, context window, rate limits, and spend limits, you're well on your way to leveraging the power of AI in your applications."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "76bihmtp",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "76bihmtpc",
+          "_type": "span",
+          "marks": [],
+          "text": "To take your project to the next level, consider experimenting with different models, exploring advanced features, and optimizing your token usage. With practice and patience, you'll become proficient in using the Claude API for various applications."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "adwwecnk",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "adwwecnkc",
+          "_type": "span",
+          "marks": [],
+          "text": "Start building your AI-powered application today by following these steps and leveraging the capabilities of the Claude API!"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    }
+  ],
+  "category": "fundamentals",
+  "coverImage": {
+    "_type": "image",
+    "alt": "Mengenal Claude API untuk Pemula: Panduan Langkah demi Langkah",
+    "asset": {
+      "_ref": "image-eee5ec579d9fd264be03c4710cda4b0e3842bd94-1344x768-png",
+      "_type": "reference"
+    }
+  },
+  "difficultyLevel": "beginner",
+  "excerpt": "Panduan lengkap tentang menggunakan Claude API, termasuk cara mengatasi masalah token, konteks jendela, batasan harga, dan lain-lain.",
+  "focusKeyword": "Claude API for beginners",
+  "generatedByPipeline": true,
+  "language": "id",
+  "pipelineVersion": "v1.0",
+  "publishedAt": "2026-06-04T17:50:49.315Z",
+  "qaCheckedAt": "2026-06-04T18:14:49.324Z",
+  "qaFeedback": "metaDescription has 73 chars (needs 140-160)",
+  "qaRetryCount": 0,
+  "qaScore": 88,
+  "readTime": 12,
+  "secondaryKeywords": [
+    "AI API",
+    "natural language processing",
+    "NLP"
+  ],
+  "seo": {
+    "seoDescription": "Mengenal Cara Menggunakan Claude API dengan Benar untuk Berbagai Aplikasi",
+    "seoTitle": "Claude API untuk Pemula: Panduan Langkah demi Langkah"
+  },
+  "slug": {
+    "_type": "slug",
+    "current": "mengenal-claude-api-pemula"
+  },
+  "sourceUrl": "https://www.aitoken.com.tw/post/claude-api-for-beginners",
+  "tags": [
+    "AI API",
+    "natural language processing",
+    "NLP"
+  ],
+  "title": "Mengenal Claude API untuk Pemula: Panduan Langkah demi Langkah",
+  "translationKey": "157cfae7-5c28-4be0-a048-5de2efab1055"
+}

@@ -1,0 +1,368 @@
+{
+  "_createdAt": "2026-06-04T13:54:42Z",
+  "_id": "VKNTFpWe8NfJwy5gVXObjd",
+  "_rev": "VKNTFpWe8NfJwy5gVXYABt",
+  "_type": "post",
+  "_updatedAt": "2026-06-04T14:19:04Z",
+  "articleNumber": 29,
+  "body": [
+    {
+      "_key": "p1e32wsb",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "p1e32wsbc",
+          "_type": "span",
+          "marks": [],
+          "text": "Tokenization in AI refers to the process of splitting input text into individual tokens, which are then used to compute the cost of processing that text. This concept is essential for developers and business owners interested in optimizing their AI performance, as it directly affects the pricing and scalability of their applications. However, tokenization can be complex, especially when comparing different AI platforms like ChatGPT, Claude, and Gemini."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "3bt137fi",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "3bt137fic",
+          "_type": "span",
+          "marks": [],
+          "text": "Tokenization Methods Across AI Platforms"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "wq6hojye",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "wq6hojyec",
+          "_type": "span",
+          "marks": [],
+          "text": "ChatGPT, a popular conversational AI platform developed by OpenAI, uses a variable token-to-character ratio. This means that the number of tokens generated for a given piece of text can vary depending on its complexity and length. For instance, if you input the sentence 'Hello, how are you?', ChatGPT might generate 5-6 tokens."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "324emn42",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "324emn42c",
+          "_type": "span",
+          "marks": [],
+          "text": "In contrast, Claude AI platform, developed by Anthropic, has a more straightforward approach to tokenization. They use a Count Tokens API that provides an accurate count of tokens in the input text. This means that developers can rely on predictable and reliable token counts."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "iveqdqi9",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "iveqdqi9c",
+          "_type": "span",
+          "marks": [],
+          "text": "Gemini AI model, also from Google, takes a different approach to tokenization. It uses a 1:4 character ratio, where one character is equivalent to four tokens. While this method simplifies the process of counting tokens, it may not accurately reflect the actual cost of processing text."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "kr9mxb7y",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "kr9mxb7yc",
+          "_type": "span",
+          "marks": [],
+          "text": "Comparison of Tokenization Methods"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "qnzad8yg",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "qnzad8ygc",
+          "_type": "span",
+          "marks": [],
+          "text": "While all three platforms have their unique approaches to tokenization, there are some key differences that set them apart. For instance, ChatGPT's variable token-to-character ratio can lead to unpredictable costs and scalability issues. In contrast, Claude's Count Tokens API provides a more accurate count of tokens."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "8mmlx2zd",
+      "_type": "image",
+      "alt": "Section image 1",
+      "asset": {
+        "_ref": "image-905f4709bdff6f07729ce5337719a9c555aa9409-1344x768-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "dvy4qcjh",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "dvy4qcjhc",
+          "_type": "span",
+          "marks": [],
+          "text": "Token Pricing and Scalability"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "5zflca2o",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "5zflca2oc",
+          "_type": "span",
+          "marks": [],
+          "text": "When it comes to pricing, the differences in tokenization methods can have significant implications for developers and business owners. For instance, ChatGPT's variable token-to-character ratio can lead to high costs for applications that process large amounts of text."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "q2301ruv",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "q2301ruvc",
+          "_type": "span",
+          "marks": [],
+          "text": "In contrast, Claude's Count Tokens API provides a more accurate count of tokens, which can help developers optimize their costs and scalability. Additionally, Gemini AI model's 1:4 character ratio can lead to underestimation of costs, as it may not accurately reflect the actual cost of processing text."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "lvfbvvva",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "lvfbvvvac",
+          "_type": "span",
+          "marks": [],
+          "text": "To illustrate this point, let's consider an example. Suppose we have a chatbot application that processes 1000 user inputs per day. If we use ChatGPT with its variable token-to-character ratio, our costs might be unpredictable and high. In contrast, if we use Claude AI platform with its Count Tokens API, we can accurately estimate our costs and optimize our scalability."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "zocn6zlc",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "zocn6zlcc",
+          "_type": "span",
+          "marks": [],
+          "text": "Formal Pricing"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "9o7u0kth",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "9o7u0kthc",
+          "_type": "span",
+          "marks": [],
+          "text": "To avoid underestimating or overestimating costs due to tokenization differences, formal pricing should use the Count Tokens API from Claude AI platform. This ensures that costs are accurately estimated and scalability is optimized."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "8e3zzv3h",
+      "_type": "image",
+      "alt": "Section image 2",
+      "asset": {
+        "_ref": "image-2e49151e2e50ef32180be1bf3eef6c990277948b-1344x768-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "a4rjf9qs",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "a4rjf9qsc",
+          "_type": "span",
+          "marks": [],
+          "text": "Proxy Services and Tokenization"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "k86bi5zd",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "k86bi5zdc",
+          "_type": "span",
+          "marks": [],
+          "text": "In some cases, developers may use proxy services to optimize their tokenization costs. These services can help mask the actual number of tokens used by an application, making it harder for AI platforms to accurately estimate costs."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "nhrlt0au",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "nhrlt0auc",
+          "_type": "span",
+          "marks": [],
+          "text": "However, using proxy services can be complex and may lead to penalties or restrictions from AI platforms. It's essential to carefully evaluate the risks and benefits before opting for a proxy service."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "3nw2dwnz",
+      "_type": "image",
+      "alt": "Section image 3",
+      "asset": {
+        "_ref": "image-c16dc46a9cb8a5bd0340433e2f715ab7a7a8afd0-1344x768-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "92bu9k5h",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "92bu9k5hc",
+          "_type": "span",
+          "marks": [],
+          "text": "Conclusion: Optimizing Tokenization in AI Platforms"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "cxjk5lb9",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "cxjk5lb9c",
+          "_type": "span",
+          "marks": [],
+          "text": "Tokenization is a critical aspect of AI performance, and understanding its complexities can help developers and business owners optimize their costs and scalability. By comparing different tokenization methods across ChatGPT, Claude, and Gemini AI platforms, we can see that each has its unique strengths and weaknesses."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "yjq9hir0",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "yjq9hir0c",
+          "_type": "span",
+          "marks": [],
+          "text": "To ensure accurate estimation of costs and optimal scalability, it's essential to use the Count Tokens API from Claude AI platform. Additionally, formal pricing should always use this API to avoid underestimating or overestimating costs due to tokenization differences."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "5mlnnqtm",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "5mlnnqtmc",
+          "_type": "span",
+          "marks": [],
+          "text": "In conclusion, optimizing tokenization in AI platforms requires careful consideration of their unique approaches to tokenization. By choosing the right platform and using the Count Tokens API from Claude, developers and business owners can ensure accurate estimation of costs and optimal scalability for their applications."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "c7kyvdpp",
+      "_type": "image",
+      "alt": "Section image 4",
+      "asset": {
+        "_ref": "image-bd3fc143c9ea96caf2982c8b4e989801282ccfbd-1344x768-png",
+        "_type": "reference"
+      }
+    }
+  ],
+  "category": "models",
+  "coverImage": {
+    "_type": "image",
+    "alt": "Tokenisasi dalam Teknologi AI: Perbandingan ChatGPT, Claude, dan Gemini",
+    "asset": {
+      "_ref": "image-4e3f314d96f5c9d0d381ade2ca9896384222e433-1344x768-png",
+      "_type": "reference"
+    }
+  },
+  "difficultyLevel": "intermediate",
+  "excerpt": "Menguraikan kompleksitas tokenisasi pada platform-platform AI terkenal.",
+  "focusKeyword": "tokenization in AI platforms comparison",
+  "generatedByPipeline": true,
+  "language": "id",
+  "pipelineVersion": "v1.0",
+  "publishedAt": "2026-06-04T13:54:42.037Z",
+  "qaCheckedAt": "2026-06-04T14:19:03.991Z",
+  "qaFeedback": "metaDescription has 91 chars (needs 140-160)",
+  "qaRetryCount": 0,
+  "qaScore": 88,
+  "readTime": 12,
+  "secondaryKeywords": [
+    "ChatGPT token pricing",
+    "Claude AI platform",
+    "Gemini Google model"
+  ],
+  "seo": {
+    "seoDescription": "Perbedaan tokenisasi pada ChatGPT, Claude, dan Gemini, serta implikasinya pada harga token.",
+    "seoTitle": "Tokenisasi dalam Teknologi AI: Perbandingan"
+  },
+  "slug": {
+    "_type": "slug",
+    "current": "tokenisasi-dalam-teknologi-ai-perbandingan-chatgpt-claudedan-gemini"
+  },
+  "sourceUrl": "https://www.aitoken.com.tw/post/how-many-tokens-per-chinese-character-chatgpt-claude-gemini",
+  "tags": [
+    "ChatGPT token pricing",
+    "Claude AI platform",
+    "Gemini Google model"
+  ],
+  "title": "Tokenisasi dalam Teknologi AI: Perbandingan ChatGPT, Claude, dan Gemini",
+  "translationKey": "4af6d366-663b-4da9-948f-1094ba260f6b"
+}

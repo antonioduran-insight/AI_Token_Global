@@ -1,0 +1,433 @@
+{
+  "_createdAt": "2026-06-04T13:53:32Z",
+  "_id": "VdSyE50eHa1ZkhVq3R1Jsi",
+  "_rev": "P0pM1bLjlHI0JJkmDrd9tC",
+  "_type": "post",
+  "_updatedAt": "2026-06-04T14:18:32Z",
+  "articleNumber": 28,
+  "body": [
+    {
+      "_key": "6u0q2nom",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "6u0q2nomc",
+          "_type": "span",
+          "marks": [],
+          "text": "Token estimation for English words is a crucial aspect of content creation, especially when working with large language models like ChatGPT, Claude, and Gemini. These platforms use various methods to estimate token counts, which can significantly impact the cost and efficiency of content generation. In this article, we'll delve into the token estimation techniques employed by each platform, highlighting their strengths and weaknesses. By understanding these differences, you'll be better equipped to choose the most suitable platform for your specific needs."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "t5qn1m1q",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "t5qn1m1qc",
+          "_type": "span",
+          "marks": [],
+          "text": "Token Estimation Methods on ChatGPT"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "2uxxpjyh",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "2uxxpjyhc",
+          "_type": "span",
+          "marks": [],
+          "text": "ChatGPT uses a fixed ratio of 1 token ≈ 0.75 words to estimate token counts. This method is simple and efficient but may not accurately reflect the complexity of certain text types, such as technical documentation or creative writing. For example, consider the following sentence: \"The sun was shining brightly in the clear blue sky.\" Using ChatGPT's fixed ratio, we can estimate this sentence to contain approximately 7-8 tokens."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "mwautxjv",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "mwautxjvc",
+          "_type": "span",
+          "marks": [],
+          "text": "However, if we were to analyze the same sentence using a more nuanced approach, such as character-based tokenization, we might arrive at a different conclusion. This highlights the limitations of ChatGPT's fixed ratio method and underscores the importance of choosing the right platform for your specific needs."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "c83e53c3",
+      "_type": "image",
+      "alt": "Section image 1",
+      "asset": {
+        "_ref": "image-b17c7d53d094b90c9fd763dfd0483e789429ba76-1344x768-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "gotldxb8",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "gotldxb8c",
+          "_type": "span",
+          "marks": [],
+          "text": "Token Estimation on Claude"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "6paj9m9l",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "6paj9m9lc",
+          "_type": "span",
+          "marks": [],
+          "text": "Claude, on the other hand, does not provide a direct formula for token estimation. Instead, it offers a count_tokens API that allows developers to estimate token counts based on their specific requirements. This approach provides more flexibility than ChatGPT's fixed ratio method but can be more complex and time-consuming to implement."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "r226lt5n",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "r226lt5nc",
+          "_type": "span",
+          "marks": [],
+          "text": "To demonstrate the effectiveness of Claude's count_tokens API, let's consider a real-world example. Suppose we want to generate a 500-word article on a specific topic using Claude. By utilizing the count_tokens API, we can estimate the required token budget and optimize our content creation process accordingly."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "79w16n0o",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "79w16n0oc",
+          "_type": "span",
+          "marks": [],
+          "text": "One of the key advantages of Claude's approach is its ability to adapt to different text types and styles. This flexibility makes it an attractive option for developers who need to handle a wide range of content creation tasks."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "7sbw4rn8",
+      "_type": "image",
+      "alt": "Section image 2",
+      "asset": {
+        "_ref": "image-e86c0fec44ae38037b9f41cd638f412986daa43b-1344x768-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "zli30ym1",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "zli30ym1c",
+          "_type": "span",
+          "marks": [],
+          "text": "Token Estimation on Gemini"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "68h51oz7",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "68h51oz7c",
+          "_type": "span",
+          "marks": [],
+          "text": "Gemini uses a character-based approach to estimate token counts, with 100 tokens ≈ 60-80 English words. This method provides a more accurate representation of text complexity than ChatGPT's fixed ratio but can be less efficient for very short texts."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "euhhbimp",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "euhhbimpc",
+          "_type": "span",
+          "marks": [],
+          "text": "To illustrate the effectiveness of Gemini's character-based approach, let's consider another example. Suppose we want to generate a 100-word summary of a lengthy article using Gemini. By utilizing its character-based token estimation method, we can accurately estimate the required token budget and optimize our content creation process."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "hvi9dlwl",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "hvi9dlwlc",
+          "_type": "span",
+          "marks": [],
+          "text": "One of the key benefits of Gemini's approach is its ability to handle text with complex formatting and syntax. This makes it an excellent option for developers who need to work with texts that contain a high degree of complexity, such as technical documentation or academic papers."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "mpbqlkm0",
+      "_type": "image",
+      "alt": "Section image 3",
+      "asset": {
+        "_ref": "image-2e86a7d2fc8ade33d9627940144a5322b0dc5780-1344x768-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "lpdq81pb",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "lpdq81pbc",
+          "_type": "span",
+          "marks": [],
+          "text": "Token Estimation Comparison: ChatGPT vs Claude vs Gemini"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "liyjj2g0",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "liyjj2g0c",
+          "_type": "span",
+          "marks": [],
+          "text": "In this section, we'll provide a detailed comparison of the three platforms' token estimation methods. We'll highlight their strengths and weaknesses, as well as their respective advantages and disadvantages."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "2xgseno1",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "2xgseno1c",
+          "_type": "span",
+          "marks": [],
+          "text": "ChatGPT's fixed ratio method is simple and efficient but may not accurately reflect text complexity. Claude's count_tokens API provides flexibility but can be more complex to implement. Gemini's character-based approach offers a high degree of accuracy but may be less efficient for very short texts."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "iv5zl1fo",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "iv5zl1foc",
+          "_type": "span",
+          "marks": [],
+          "text": "The choice of platform ultimately depends on your specific needs and requirements. If you prioritize simplicity and efficiency, ChatGPT might be the best option. However, if you need more flexibility or are working with complex text types, Claude or Gemini may be a better fit."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "oyvmrlkn",
+      "_type": "image",
+      "alt": "Section image 4",
+      "asset": {
+        "_ref": "image-d19beecb1a80de9f47a9fce55b8b7fb204eabe8f-1344x768-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "b2jmesm6",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b2jmesm6c",
+          "_type": "span",
+          "marks": [],
+          "text": "Practical Application: Choosing the Right Platform"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "lse2krrt",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "lse2krrtc",
+          "_type": "span",
+          "marks": [],
+          "text": "To ensure you choose the right platform, consider the following factors: text type and complexity, content creation requirements, and available resources. By weighing these factors against the strengths and weaknesses of each platform, you'll be able to select the most suitable option for your needs."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b9gdoa7z",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b9gdoa7zc",
+          "_type": "span",
+          "marks": [],
+          "text": "For example, suppose you're working on a large-scale content creation project that involves generating hundreds of articles per day. In this scenario, Gemini's character-based approach would likely be the most efficient choice due to its high degree of accuracy and ability to handle complex text types."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "js5qbc7z",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "js5qbc7zc",
+          "_type": "span",
+          "marks": [],
+          "text": "On the other hand, if you're working on a small-scale project with relatively simple content creation requirements, ChatGPT's fixed ratio method might be sufficient. Ultimately, it's essential to choose a platform that aligns with your specific needs and goals."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "azfzugcj",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "azfzugcjc",
+          "_type": "span",
+          "marks": [],
+          "text": "Conclusion"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "6o84a3d9",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "6o84a3d9c",
+          "_type": "span",
+          "marks": [],
+          "text": "Token estimation for English words is a critical aspect of content creation on popular AI platforms like ChatGPT, Claude, and Gemini. By understanding the strengths and weaknesses of each platform's token estimation method, you'll be better equipped to choose the most suitable option for your needs."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "29kl9ttj",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "29kl9ttjc",
+          "_type": "span",
+          "marks": [],
+          "text": "In this article, we've provided a comprehensive comparison of the three platforms' token estimation methods, highlighting their respective advantages and disadvantages. We've also offered practical advice on choosing the right platform based on your specific requirements."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "x4l5utdy",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "x4l5utdyc",
+          "_type": "span",
+          "marks": [],
+          "text": "By following the guidance outlined in this article, you'll be able to optimize your content creation process, reduce costs, and improve overall efficiency. Remember, the key to successful AI-powered content creation lies in selecting the right platform for your needs."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "7q7hqzd7",
+      "_type": "image",
+      "alt": "Section image 5",
+      "asset": {
+        "_ref": "image-88919de7271fa9f5f5305e5f1ac4fa33095d1ccb-1344x768-png",
+        "_type": "reference"
+      }
+    }
+  ],
+  "category": "models",
+  "coverImage": {
+    "_type": "image",
+    "alt": "Token Estimación para Palabras en Inglés: Un Comparativo de ChatGPT, Claude y Gemini",
+    "asset": {
+      "_ref": "image-b18d800b5feada0f4ec616d4a1dc63b758050dba-1344x768-png",
+      "_type": "reference"
+    }
+  },
+  "difficultyLevel": "intermediate",
+  "excerpt": "En este artículo exploraremos cómo los tres modelos de inteligencia artificial más populares estima tokens para palabras en inglés. Aprenderás sobre sus métodos de estimación y las diferencias entre ellos.",
+  "focusKeyword": "token estimation english words chatgpt claud gemini",
+  "generatedByPipeline": true,
+  "language": "es",
+  "pipelineVersion": "v1.0",
+  "publishedAt": "2026-06-04T13:53:31.941Z",
+  "qaCheckedAt": "2026-06-04T14:18:32.001Z",
+  "qaFeedback": "metaDescription has 97 chars (needs 140-160)",
+  "qaRetryCount": 0,
+  "qaScore": 88,
+  "readTime": 10,
+  "secondaryKeywords": [
+    "ai token calculation",
+    "english word token conversion",
+    "chatgpt vs claude vs gemini"
+  ],
+  "seo": {
+    "seoDescription": "Comparativo de token estimación en inglés de los modelos de inteligencia artificial más populares",
+    "seoTitle": "Token Estimación Inglés: ChatGPT, Claude y Gemini"
+  },
+  "slug": {
+    "_type": "slug",
+    "current": "token-estimacion-chatgpt-claude-gemini"
+  },
+  "sourceUrl": "https://www.aitoken.com.tw/post/how-many-tokens-per-english-word-chatgpt-claude-gemini",
+  "tags": [
+    "ai token calculation",
+    "english word token conversion",
+    "chatgpt vs claude vs gemini"
+  ],
+  "title": "Token Estimación para Palabras en Inglés: Un Comparativo de ChatGPT, Claude y Gemini",
+  "translationKey": "e6cce7a4-2a67-4b2f-a785-5aa57dda8731"
+}

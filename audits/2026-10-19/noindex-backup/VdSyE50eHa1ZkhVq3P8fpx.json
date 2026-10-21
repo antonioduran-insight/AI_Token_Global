@@ -1,0 +1,414 @@
+{
+  "_createdAt": "2026-06-04T11:38:31Z",
+  "_id": "VdSyE50eHa1ZkhVq3P8fpx",
+  "_rev": "BjCDeJneVtv6zbH6ufbfpI",
+  "_type": "post",
+  "_updatedAt": "2026-06-04T12:05:15Z",
+  "articleNumber": 9,
+  "body": [
+    {
+      "_key": "y4p7dg61",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "y4p7dg61c",
+          "_type": "span",
+          "marks": [],
+          "text": "When working with artificial intelligence (AI) technology, one term you'll encounter frequently is the 'AI token.' But what exactly is an AI token, and why does it matter for your projects? In this article, we'll delve into the basics of AI tokens, covering everything from token counting to pricing and usage management. By the end of this guide, you'll have a solid understanding of how AI tokens work and be able to apply this knowledge in your own projects."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "w2qxsnus",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "w2qxsnusc",
+          "_type": "span",
+          "marks": [],
+          "text": "What is an AI Token?"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "k3jm5a9b",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "k3jm5a9bc",
+          "_type": "span",
+          "marks": [],
+          "text": "An AI token is the unit of measurement for language models to process text. It's a fundamental concept that underlies how many AI applications work, from chatbots and virtual assistants to language translation services."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "hmkofp1g",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "hmkofp1gc",
+          "_type": "span",
+          "marks": [],
+          "text": "In essence, an AI token represents a single piece of information that the model can understand and process. This could be a word, a character, or even a subword (a smaller unit of text that's part of a larger word)."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "m61f94mo",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "m61f94moc",
+          "_type": "span",
+          "marks": [],
+          "text": "Token Counts vs Word/Character Count"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "bfh8gi5b",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "bfh8gi5bc",
+          "_type": "span",
+          "marks": [],
+          "text": "One common misconception about AI tokens is that they're always equal to the number of words or characters in a piece of text. However, this isn't necessarily true."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "z90r7g87",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "z90r7g87c",
+          "_type": "span",
+          "marks": [],
+          "text": "Token counting is a complex process that takes into account the specific language model being used and its requirements for processing text. In some cases, a single word might be counted as multiple tokens, while in others, a character might be split across multiple tokens."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "y33ru2m6",
+      "_type": "image",
+      "alt": "Section image 1",
+      "asset": {
+        "_ref": "image-59dbd4cd498135b5be5374b348ba3df436304785-1344x768-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "uq3fmz3b",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "uq3fmz3bc",
+          "_type": "span",
+          "marks": [],
+          "text": "Understanding Token Costs"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "dz0ek8zv",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "dz0ek8zvc",
+          "_type": "span",
+          "marks": [],
+          "text": "AI token costs can vary widely depending on the model and service you're using. Some models charge a fixed rate per token, while others use tiered pricing structures or offer discounts for bulk usage."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "wzjxcr8y",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "wzjxcr8yc",
+          "_type": "span",
+          "marks": [],
+          "text": "To manage your AI expenses effectively, it's essential to understand how token costs work and plan accordingly. This might involve setting budget limits, selecting cost-effective models, or optimizing your text processing workflows."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "fwhy85ih",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "fwhy85ihc",
+          "_type": "span",
+          "marks": [],
+          "text": "Pricing Tiers and Discounts"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "70i2mnvt",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "70i2mnvtc",
+          "_type": "span",
+          "marks": [],
+          "text": "When evaluating AI services for token costs, look out for pricing tiers that offer discounts for bulk usage. These can be an excellent way to reduce your expenses over time."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "me88cz3p",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "me88cz3pc",
+          "_type": "span",
+          "marks": [],
+          "text": "For example, let's say you're using a language translation service with the following pricing tiers:"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "bgy4aea5",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "bgy4aea5c",
+          "_type": "span",
+          "marks": [],
+          "text": [
+            "Tier 1: 10 tokens/second ($0.01/token)",
+            "Tier 2: 100 tokens/second ($0.005/token)",
+            "Tier 3: 1,000 tokens/second ($0.001/token)"
+          ]
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "ip8bn0bm",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "ip8bn0bmc",
+          "_type": "span",
+          "marks": [],
+          "text": "If you plan to process a large volume of text regularly, selecting Tier 3 might save you money in the long run."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "ghwyajqj",
+      "_type": "image",
+      "alt": "Section image 2",
+      "asset": {
+        "_ref": "image-876f241b3773c10449adddf2236a1cd97b60ea56-1344x768-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "n1rw57jh",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "n1rw57jhc",
+          "_type": "span",
+          "marks": [],
+          "text": "Managing Token Usage and Costs"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "38e54exq",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "38e54exqc",
+          "_type": "span",
+          "marks": [],
+          "text": "To optimize your AI expenses, it's crucial to monitor your token usage closely. This might involve tracking your real-time usage, setting budget alerts, or implementing usage caps."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "dr7jfp8s",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "dr7jfp8sc",
+          "_type": "span",
+          "marks": [],
+          "text": "Real-Time Usage Tracking"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "flyoly46",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "flyoly46c",
+          "_type": "span",
+          "marks": [],
+          "text": "Some AI services provide real-time usage tracking features that allow you to monitor your token consumption as it happens."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "ytzjtyy1",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "ytzjtyy1c",
+          "_type": "span",
+          "marks": [],
+          "text": "By keeping an eye on your current usage, you can adjust your workflows and optimize your costs accordingly."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "a7u34j9d",
+      "_type": "image",
+      "alt": "Section image 3",
+      "asset": {
+        "_ref": "image-14642b70269c4011a72b147fd86f457138b21f31-1344x768-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "2vfchn78",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "2vfchn78c",
+          "_type": "span",
+          "marks": [],
+          "text": "Conclusion and Next Steps"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "srkzcase",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "srkzcasec",
+          "_type": "span",
+          "marks": [],
+          "text": "In conclusion, understanding AI tokens is essential for managing your AI expenses effectively. By grasping the basics of token counting, pricing, and usage management, you can make informed decisions about your AI projects and optimize your costs."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "8be9ycxg",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "8be9ycxgc",
+          "_type": "span",
+          "marks": [],
+          "text": "Next steps might include exploring different AI services to compare their pricing tiers and features, or optimizing your text processing workflows to reduce your token consumption."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "wzseresu",
+      "_type": "image",
+      "alt": "Section image 4",
+      "asset": {
+        "_ref": "image-fe00ac81ff502eabbc74cf118ed293dd1db77487-1344x768-png",
+        "_type": "reference"
+      }
+    }
+  ],
+  "category": "fundamentals",
+  "coverImage": {
+    "_type": "image",
+    "alt": "Memahami Token AI untuk Pemula",
+    "asset": {
+      "_ref": "image-e2ab6c775d7bfd79bdc61c48ffac1eedd464d3aa-1344x768-png",
+      "_type": "reference"
+    }
+  },
+  "difficultyLevel": "beginner",
+  "excerpt": "Memahami konsep dasar token AI, cara menghitungnya, dan perbedaannya dengan API Key.",
+  "focusKeyword": "AI Token Basics",
+  "generatedByPipeline": true,
+  "language": "id",
+  "pipelineVersion": "v1.0",
+  "publishedAt": "2026-06-04T11:38:30.904Z",
+  "qaCheckedAt": "2026-06-04T12:05:15.043Z",
+  "qaFeedback": "metaDescription has 78 chars (needs 140-160)",
+  "qaRetryCount": 0,
+  "qaScore": 88,
+  "readTime": 12,
+  "secondaryKeywords": [
+    "What is AI Token",
+    "How to calculate AI Token",
+    "AI Token vs API Key"
+  ],
+  "seo": {
+    "seoDescription": "Pelajari bagaimana Token AI bekerja dan caranya menghemat biaya penggunaan AI.",
+    "seoTitle": "Token AI Basik untuk Awal Mula"
+  },
+  "slug": {
+    "_type": "slug",
+    "current": "token-ai-basik"
+  },
+  "sourceUrl": "https://www.aitoken.com.tw/post/what-is-ai-token",
+  "tags": [
+    "What is AI Token",
+    "How to calculate AI Token",
+    "AI Token vs API Key"
+  ],
+  "title": "Memahami Token AI untuk Pemula",
+  "translationKey": "096b23cb-0c8b-47e3-9503-82fc9ec62d29"
+}

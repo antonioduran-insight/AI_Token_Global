@@ -1,0 +1,382 @@
+{
+  "_createdAt": "2026-06-04T18:53:56Z",
+  "_id": "PXBreekz6ug9jLuKVxUBfT",
+  "_rev": "dShP6JdGzwBHy3qr2AhW4T",
+  "_type": "post",
+  "_updatedAt": "2026-06-04T19:18:47Z",
+  "articleNumber": 73,
+  "body": [
+    {
+      "_key": "hi2ey2ji",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "hi2ey2jic",
+          "_type": "span",
+          "marks": [],
+          "text": "When it comes to leveraging the power of AI, two terms often come up: Claude and Claude API. While they share a common foundation in Anthropic's cutting-edge language model, their approaches and use cases diverge significantly. In this article, we will delve into the essential differences between using Claude as a direct-to-use chat interface for humans and integrating it into your system through the Claude API."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "6cc7bv4c",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "6cc7bv4cc",
+          "_type": "span",
+          "marks": [],
+          "text": "What is Claude?"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "zf5fkz5k",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "zf5fkz5kc",
+          "_type": "span",
+          "marks": [],
+          "text": "Claude is an AI model designed specifically for human interaction. It offers a direct, intuitive interface that enables users to engage in conversations with the AI without needing extensive technical knowledge or setup. The primary purpose of Claude is to provide a user-friendly gateway to the power of language models, making it accessible to individuals who want to explore the possibilities of AI-assisted communication."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "cl23xlxq",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "cl23xlxqc",
+          "_type": "span",
+          "marks": [],
+          "text": "One of the key strengths of Claude lies in its ability to adapt to various conversational scenarios. Whether you're looking to discuss a topic with the AI or seek guidance on a particular issue, Claude is designed to provide helpful responses. However, it's essential to note that while Claude can handle complex conversations, its primary focus remains on direct human interaction rather than system-level integration."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "j20w5179",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "j20w5179c",
+          "_type": "span",
+          "marks": [],
+          "text": "For instance, imagine you're planning a trip and want to get recommendations for destinations based on your interests. With Claude, you could engage in a conversation where the AI suggests places tailored to your preferences. This example highlights how Claude can be used as a tool for personal exploration and decision-making."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "bvxsyo2y",
+      "_type": "image",
+      "alt": "Section image 1",
+      "asset": {
+        "_ref": "image-b51575d68aaa8f53cd4f6ef7e26ed7e36523bf0c-1344x768-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "g4mk4kih",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "g4mk4kihc",
+          "_type": "span",
+          "marks": [],
+          "text": "What is Claude API?"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "jdwi5onz",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "jdwi5onzc",
+          "_type": "span",
+          "marks": [],
+          "text": "On the other hand, Claude API provides a structured interface for developers to integrate the power of Anthropic's language model into their own systems. This means that instead of interacting with Claude directly as a user, you can embed its capabilities within your application or website using an API (Application Programming Interface). The main advantage of using Claude API lies in its potential to automate and enhance various processes by incorporating AI-driven insights."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "qbh0mb1q",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "qbh0mb1qc",
+          "_type": "span",
+          "marks": [],
+          "text": "For example, consider a company looking to improve customer support through AI-powered chatbots. By integrating the Claude API into their website or mobile app, they can create an automated system that provides personalized assistance based on user queries. This integration requires a certain level of technical expertise but opens up vast possibilities for streamlining operations and enhancing user experience."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "ej0qyblz",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "ej0qyblzc",
+          "_type": "span",
+          "marks": [],
+          "text": "To illustrate this point further, let's consider the numbers: suppose integrating Claude API into your application results in a 30% increase in user engagement rates. With such significant benefits at stake, it becomes clear why many businesses are turning to Claude API for system-level integration."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "z660cddt",
+      "_type": "image",
+      "alt": "Section image 2",
+      "asset": {
+        "_ref": "image-90076ab8974ec7b9da9bdd92c1c5c94e48861345-1344x768-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "x6hbiqe5",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "x6hbiqe5c",
+          "_type": "span",
+          "marks": [],
+          "text": "Key Differences Between Claude and Claude API"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "jsyjvbi3",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "jsyjvbi3c",
+          "_type": "span",
+          "marks": [],
+          "text": "While both Claude and Claude API share the same foundational technology in Anthropic's language model, their primary use cases diverge significantly. The main difference lies not in technical capabilities but rather in how these models are utilized."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "qeka151w",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "qeka151wc",
+          "_type": "span",
+          "marks": [],
+          "text": "Claude is best suited for individual users who want to engage directly with AI technology for personal or educational purposes. In contrast, Claude API is more geared towards developers and businesses looking to integrate AI-driven insights into their systems for enhanced functionality and automation."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "pyo5wtsz",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "pyo5wtszc",
+          "_type": "span",
+          "marks": [],
+          "text": "Furthermore, integrating the Claude API requires a level of technical expertise that may not be necessary when using Claude as a direct chat interface. This highlights the importance of understanding your project's requirements before choosing between these two options."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "98xki3xq",
+      "_type": "image",
+      "alt": "Section image 3",
+      "asset": {
+        "_ref": "image-7213b1b3020eb6064be963c72f3af610daf2597a-1344x768-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "kxmxwneb",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "kxmxwnebc",
+          "_type": "span",
+          "marks": [],
+          "text": "Choosing Between Claude and Claude API"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "mcq65wmp",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "mcq65wmpc",
+          "_type": "span",
+          "marks": [],
+          "text": "In conclusion, the choice between using Claude as a chat tool and integrating it into your system through Claude API depends on your specific project needs. If you're looking for a user-friendly interface to explore AI capabilities, Claude is an excellent choice."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "vcjp7y7l",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "vcjp7y7lc",
+          "_type": "span",
+          "marks": [],
+          "text": "However, if you're planning to integrate AI-driven insights into your application or website, the Claude API offers greater potential for automation and enhancement. Consider your technical expertise level and project requirements when deciding which path to take."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "m2s8ty2a",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "m2s8ty2ac",
+          "_type": "span",
+          "marks": [],
+          "text": "Assessing Technical Readiness"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "8hrifvc9",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "8hrifvc9c",
+          "_type": "span",
+          "marks": [],
+          "text": "Before making a decision, it's crucial to assess your team's technical readiness for integrating the Claude API. This includes evaluating your expertise in areas like API management, data integration, and system architecture."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "c5bumd7o",
+      "_type": "image",
+      "alt": "Section image 4",
+      "asset": {
+        "_ref": "image-8ae46437a0556ddb07180400eb25a0ece96dc8d0-1344x768-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "1qu51gfx",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "1qu51gfxc",
+          "_type": "span",
+          "marks": [],
+          "text": "Practical Conclusion"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "mbvmnqme",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "mbvmnqmec",
+          "_type": "span",
+          "marks": [],
+          "text": "In summary, Claude and Claude API represent two distinct approaches to harnessing the power of AI. By understanding their differences and requirements, you can make an informed decision about which option best suits your project's needs."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "w9aaz3i7",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "w9aaz3i7c",
+          "_type": "span",
+          "marks": [],
+          "text": "Take a moment to reflect on your goals: are you looking for a user-friendly interface or system-level integration? Assess your team's technical capabilities and consider seeking guidance if needed. With this clarity, you'll be better equipped to leverage the strengths of both Claude and Claude API."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    }
+  ],
+  "category": "models",
+  "coverImage": {
+    "_type": "image",
+    "alt": "¿Qué es Claude API y cómo se diferencia de Claude?",
+    "asset": {
+      "_ref": "image-298e818eae7da8734cafddfa77d4ff348535382c-1344x768-png",
+      "_type": "reference"
+    }
+  },
+  "difficultyLevel": "intermediate",
+  "excerpt": "Entiende la diferencia clave entre Claude como herramienta de chat y Claude API para integraciones en sitios web o aplicaciones.",
+  "focusKeyword": "Claude API vs Claude",
+  "generatedByPipeline": true,
+  "language": "es",
+  "pipelineVersion": "v1.0",
+  "publishedAt": "2026-06-04T18:53:56.299Z",
+  "qaCheckedAt": "2026-06-04T19:18:47.204Z",
+  "qaFeedback": "metaDescription has 108 chars (needs 140-160)",
+  "qaRetryCount": 0,
+  "qaScore": 88,
+  "readTime": 10,
+  "secondaryKeywords": [
+    "AI technology",
+    "Anthropic model",
+    "integration with website or app"
+  ],
+  "seo": {
+    "seoDescription": "Diferencias clave entre Claude y Claude API para desarrolladores, empresarios e interesados en tecnología AI",
+    "seoTitle": "Claude vs. Claude API: ¿Cuál es la mejor opción?"
+  },
+  "slug": {
+    "_type": "slug",
+    "current": "claudef-api-vs-claude"
+  },
+  "sourceUrl": "https://www.aitoken.com.tw/post/what-is-claude-api-and-how-is-it-different-from-claude",
+  "tags": [
+    "AI technology",
+    "Anthropic model",
+    "integration with website or app"
+  ],
+  "title": "¿Qué es Claude API y cómo se diferencia de Claude?",
+  "translationKey": "a038f814-00f4-4ed1-8998-71bb3a4da11d"
+}

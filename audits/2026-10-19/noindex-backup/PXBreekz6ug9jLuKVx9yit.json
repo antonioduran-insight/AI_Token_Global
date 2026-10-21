@@ -1,0 +1,286 @@
+{
+  "_createdAt": "2026-06-04T17:51:42Z",
+  "_id": "PXBreekz6ug9jLuKVx9yit",
+  "_rev": "g3jTIj9ubDWnGQfo9PYT1g",
+  "_type": "post",
+  "_updatedAt": "2026-06-04T18:15:13Z",
+  "articleNumber": 63,
+  "body": [
+    {
+      "_key": "cq8vfzrp",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "cq8vfzrpc",
+          "_type": "span",
+          "marks": [],
+          "text": "When it comes to implementing Artificial Intelligence (AI) technology in your small business, one of the most common recommendations is to invest in an AI platform. However, this approach can often lead to costly mistakes and missed opportunities for growth. In reality, not all small businesses are ready for a full-fledged AI platform yet, and investing too early can be detrimental to their success."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "hdzpj5ra",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "hdzpj5rac",
+          "_type": "span",
+          "marks": [],
+          "text": "Not All Small Businesses Are Ready for an AI Platform"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "4jjknlfu",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "4jjknlfuc",
+          "_type": "span",
+          "marks": [],
+          "text": "Before diving headfirst into an AI platform, it's essential to assess your company's current state and capabilities. This includes evaluating your data management, infrastructure, and personnel. Not all small businesses have the necessary resources or expertise to effectively utilize a complex AI platform."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "z8wcv991",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "z8wcv991c",
+          "_type": "span",
+          "marks": [],
+          "text": "For instance, let's consider a hypothetical scenario where a marketing agency with limited staff and budget attempts to implement an AI-powered content generation tool. Without proper training and support, this can lead to frustration and wasted resources."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "679npz20",
+      "_type": "image",
+      "alt": "Section image 1",
+      "asset": {
+        "_ref": "image-998f4255cab271e0125fa677baf99a9223c5ce40-1344x768-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "x1fkalqk",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "x1fkalqkc",
+          "_type": "span",
+          "marks": [],
+          "text": "Platforms Often Solve Governance Issues, But May Not Address Core Business Problems"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "38cf5pdn",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "38cf5pdnc",
+          "_type": "span",
+          "marks": [],
+          "text": "Another critical aspect to consider is that AI platforms often focus on governance and regulatory compliance rather than addressing the core business problems. While this might seem like a minor issue at first glance, it can significantly impact your company's bottom line."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "tq7wp81g",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "tq7wp81gc",
+          "_type": "span",
+          "marks": [],
+          "text": "To illustrate this point, let's take a look at the example of an e-commerce company trying to implement an AI-powered chatbot. Instead of focusing on improving customer experience and conversion rates, they end up spending more time configuring and customizing the platform, which ultimately delays their ROI."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "07orooga",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "07oroogac",
+          "_type": "span",
+          "marks": [],
+          "text": "In contrast, a tool specifically designed for small businesses would allow them to validate their ROI and prove value before investing in a full-fledged AI platform."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "3z8sebud",
+      "_type": "image",
+      "alt": "Section image 2",
+      "asset": {
+        "_ref": "image-c25c42504b4a71c9905a96592ff520fc543d4ebb-1344x768-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "7o3a05kw",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "7o3a05kwc",
+          "_type": "span",
+          "marks": [],
+          "text": "The Desire to Appear Formal Can Lead to Unnecessary Expenses"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "uwsjcnye",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "uwsjcnyec",
+          "_type": "span",
+          "marks": [],
+          "text": "It's essential to acknowledge that some small businesses invest in AI platforms solely because they want to appear formal and cutting-edge, rather than addressing genuine business needs."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "4dplf82n",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "4dplf82nc",
+          "_type": "span",
+          "marks": [],
+          "text": "For instance, a startup might choose an expensive AI platform over a more affordable alternative simply because it sounds 'cool' or impressive. This decision can lead to financial strain and divert resources away from actual growth initiatives."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "cz7qouq9",
+      "_type": "image",
+      "alt": "Section image 3",
+      "asset": {
+        "_ref": "image-35b0151cbd13348eccc4bd39f1e56aeed7394194-1344x768-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "v8zgtvip",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "v8zgtvipc",
+          "_type": "span",
+          "marks": [],
+          "text": "Conclusion: Prioritize Your AI Adoption Journey"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "obnpt2fn",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "obnpt2fnc",
+          "_type": "span",
+          "marks": [],
+          "text": "In conclusion, investing in an AI platform might not be the best starting point for your small business. Instead, consider focusing on smaller, ROI-driven tools that allow you to validate value before making a larger investment."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "ivameviq",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "ivameviqc",
+          "_type": "span",
+          "marks": [],
+          "text": "By prioritizing your AI adoption journey and addressing genuine business needs, you'll be better equipped to make informed decisions and achieve success in the long run."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "qq31izql",
+      "_type": "image",
+      "alt": "Section image 4",
+      "asset": {
+        "_ref": "image-b02922f3568b5890bbea950860df090a817ffaf3-1344x768-png",
+        "_type": "reference"
+      }
+    }
+  ],
+  "category": "platform",
+  "coverImage": {
+    "_type": "image",
+    "alt": "Mengapa Perusahaan Kecil Tidak Harus Membeli Platform AI",
+    "asset": {
+      "_ref": "image-696d979331f8ef529552bfa7f63193b99016aed2-1344x768-png",
+      "_type": "reference"
+    }
+  },
+  "difficultyLevel": "intermediate",
+  "excerpt": "Mengapa banyak perusahaan kecil dan menengah salah saat memilih platform AI. Apakah Anda siap untuk mengadopsi teknologi AI?",
+  "focusKeyword": "AI Platform for Small Businesses",
+  "generatedByPipeline": true,
+  "language": "id",
+  "pipelineVersion": "v1.0",
+  "publishedAt": "2026-06-04T17:51:42.345Z",
+  "qaCheckedAt": "2026-06-04T18:15:13.585Z",
+  "qaFeedback": "metaDescription has 89 chars (needs 140-160)",
+  "qaRetryCount": 0,
+  "qaScore": 88,
+  "readTime": 10,
+  "secondaryKeywords": [
+    "AI adoption",
+    "small business",
+    "platform",
+    "tool"
+  ],
+  "seo": {
+    "seoDescription": "Jangan terburu-buru membeli platform AI tanpa mempertimbangkan kebutuhan perusahaan Anda.",
+    "seoTitle": "Platform AI untuk Perusahaan Kecil"
+  },
+  "slug": {
+    "_type": "slug",
+    "current": "platform-ai-untuk-perusahaan-kecil"
+  },
+  "sourceUrl": "https://www.aitoken.com.tw/post/why-smb-should-not-buy-ai-platform-first",
+  "tags": [
+    "AI adoption",
+    "small business",
+    "platform",
+    "tool"
+  ],
+  "title": "Mengapa Perusahaan Kecil Tidak Harus Membeli Platform AI",
+  "translationKey": "c7fd5a69-4228-435c-ad88-8f3674a726a7"
+}

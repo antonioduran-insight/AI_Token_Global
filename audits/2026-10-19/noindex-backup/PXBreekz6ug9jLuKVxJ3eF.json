@@ -1,0 +1,396 @@
+{
+  "_createdAt": "2026-06-04T18:21:45Z",
+  "_id": "PXBreekz6ug9jLuKVxJ3eF",
+  "_rev": "PXBreekz6ug9jLuKVxRb2o",
+  "_type": "post",
+  "_updatedAt": "2026-06-04T18:46:08Z",
+  "articleNumber": 67,
+  "body": [
+    {
+      "_key": "42e092d9",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "42e092d9c",
+          "_type": "span",
+          "marks": [],
+          "text": "When it comes to integrating artificial intelligence (AI) into your business or project, one of the most critical decisions you'll make is selecting the right API. Claude AI API, developed by Anthropic, has gained popularity for its advanced language capabilities and flexible pricing model. However, before diving in, it's essential to understand the costs associated with using Claude API, as well as the models and permissions that come into play."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "lh9dh6y6",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "lh9dh6y6c",
+          "_type": "span",
+          "marks": [],
+          "text": "Understanding the Cost Structure of Claude API"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "99nwr4hk",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "99nwr4hkc",
+          "_type": "span",
+          "marks": [],
+          "text": "Claude API operates on a token-based pricing model, where each request is charged based on its complexity. The cost structure consists of input, output, cache, batch, and extra tool fees."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "pmqnza2f",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "pmqnza2fc",
+          "_type": "span",
+          "marks": [],
+          "text": "Input fees are charged for the text you provide to the model, while output fees cover the generated text's length. Cache fees apply if you enable caching to store frequently accessed models or data. Batch fees are charged when processing multiple requests simultaneously, and extra tool fees may be incurred for additional services like tokenization."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "mzfat06m",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "mzfat06mc",
+          "_type": "span",
+          "marks": [],
+          "text": "For instance, let's consider a scenario where you're using Claude API to generate 1,000 words of text with an average complexity of 10 tokens per character. Assuming an input fee of $0.0015 per token and an output fee of $0.0025 per token, the total cost would be approximately $15.75."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "t378srwq",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "t378srwqc",
+          "_type": "span",
+          "marks": [],
+          "text": "Token Calculation"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "s8e4tfm0",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "s8e4tfm0c",
+          "_type": "span",
+          "marks": [],
+          "text": "To accurately estimate costs, it's crucial to understand how tokens are calculated. Tokens represent individual units of text, taking into account punctuation, capitalization, and special characters."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "0s7xv8la",
+      "_type": "image",
+      "alt": "Section image 1",
+      "asset": {
+        "_ref": "image-06d498645efde967df48854858320dd5186f24b8-1344x768-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "rziz1hyz",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "rziz1hyzc",
+          "_type": "span",
+          "marks": [],
+          "text": "Selecting the Right Model for Your Task Requirements"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "4o5t33ii",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "4o5t33iic",
+          "_type": "span",
+          "marks": [],
+          "text": "Claude API offers a range of models designed for various tasks, from general-purpose language understanding to specialized applications like text classification and sentiment analysis."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "c4do9sey",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "c4do9seyc",
+          "_type": "span",
+          "marks": [],
+          "text": "When choosing a model, consider the task's complexity and your budget. For high-level complex tasks or applications requiring advanced capabilities, you may need to opt for more expensive models with higher token limits and better performance."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "rtdrt7u3",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "rtdrt7u3c",
+          "_type": "span",
+          "marks": [],
+          "text": "Conversely, if you're working on simpler tasks or require lower-cost options, Claude API's basic models can provide sufficient performance while keeping costs in check."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "j54awdvv",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "j54awdvvc",
+          "_type": "span",
+          "marks": [],
+          "text": "Model Comparison"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "salc425l",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "salc425lc",
+          "_type": "span",
+          "marks": [],
+          "text": "To illustrate the trade-off between model quality and cost, let's compare two popular models: 'Base' and 'Large.' The Base model is a more affordable option with 32k tokens, suitable for general-purpose tasks."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "fahfbewz",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "fahfbewzc",
+          "_type": "span",
+          "marks": [],
+          "text": "In contrast, the Large model offers advanced capabilities but comes at a higher price point (4x more expensive than Base) due to its larger token limit and improved performance on complex tasks."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "punfd834",
+      "_type": "image",
+      "alt": "Section image 2",
+      "asset": {
+        "_ref": "image-736a7c4ad097e8dcd18d3a2a4104b526016dd3c6-1344x768-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "c6b83gtp",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "c6b83gtpc",
+          "_type": "span",
+          "marks": [],
+          "text": "Confirming Permissions and Limits"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "7u92jonx",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "7u92jonxc",
+          "_type": "span",
+          "marks": [],
+          "text": "Before proceeding with Claude API, it's essential to confirm your permissions and limits, including API key, workspace, account balance, rate limits, and usage tier."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "axferhfp",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "axferhfpc",
+          "_type": "span",
+          "marks": [],
+          "text": "This includes checking the validity of your API key, ensuring you have sufficient credits in your account, and verifying that your request is within the allowed rate limit to avoid being throttled or blocked."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "r9h80q7n",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "r9h80q7nc",
+          "_type": "span",
+          "marks": [],
+          "text": "API Key Authentication"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "msp83oki",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "msp83okic",
+          "_type": "span",
+          "marks": [],
+          "text": "To authenticate with Claude API, you'll need an API key, which grants access to specific features and models within your workspace. Make sure your API key is correctly set up and linked to the correct account."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "mt5c8wlk",
+      "_type": "image",
+      "alt": "Section image 3",
+      "asset": {
+        "_ref": "image-cecc6a2b4c56cffdde5aad351b5b43f0d7fcb2e8-1344x768-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "l0g3g6ds",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "l0g3g6dsc",
+          "_type": "span",
+          "marks": [],
+          "text": "Conclusion and Next Steps"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "2hy3p89p",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "2hy3p89pc",
+          "_type": "span",
+          "marks": [],
+          "text": "Now that you've gained a deeper understanding of Claude API costs, models, and permissions, it's time to get started. Begin by reviewing the pricing model, selecting an appropriate model for your task requirements, and confirming your account settings."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "8b29hv3c",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "8b29hv3cc",
+          "_type": "span",
+          "marks": [],
+          "text": "To ensure smooth integration and efficient use of Claude API, remember to monitor your token consumption, manage cache and batch requests strategically, and stay informed about updates to models and pricing structures."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "js180417",
+      "_type": "image",
+      "alt": "Section image 4",
+      "asset": {
+        "_ref": "image-c3eaa7c5e484d4e7a6b0bdfc1c2697d7c0329286-1344x768-png",
+        "_type": "reference"
+      }
+    }
+  ],
+  "category": "fundamentals",
+  "coverImage": {
+    "_type": "image",
+    "alt": "Mengerti Biaya, Model, dan Izin Sebelum Menggunakan Claude API",
+    "asset": {
+      "_ref": "image-cf627ee5fdcf44819577883d85c921e798422583-1344x768-png",
+      "_type": "reference"
+    }
+  },
+  "difficultyLevel": "intermediate",
+  "excerpt": "Mengerti biaya, model, dan izin sebelum menggunakan Claude API dapat membantu Anda menghemat waktu dan sumber daya.",
+  "focusKeyword": "Claude AI API costs models permissions",
+  "generatedByPipeline": true,
+  "language": "id",
+  "pipelineVersion": "v1.0",
+  "publishedAt": "2026-06-04T18:21:44.686Z",
+  "qaCheckedAt": "2026-06-04T18:46:08.187Z",
+  "qaFeedback": "metaDescription has 112 chars (needs 140-160)",
+  "qaRetryCount": 0,
+  "qaScore": 88,
+  "readTime": 12,
+  "secondaryKeywords": [
+    "Anthropic pricing",
+    "Claude API features",
+    "AI token usage"
+  ],
+  "seo": {
+    "seoDescription": "Mengerti biaya, model, dan izin sebelum menggunakan Claude API dapat membantu Anda membuat keputusan yang tepat.",
+    "seoTitle": "Claude AI API: Mengerti Biaya, Model, dan Izin"
+  },
+  "slug": {
+    "_type": "slug",
+    "current": "mengerti-biaya-model-dan-izin-sebelum-menggunakan-claude-api"
+  },
+  "sourceUrl": "https://www.aitoken.com.tw/post/what-to-check-before-using-claude-api",
+  "tags": [
+    "Anthropic pricing",
+    "Claude API features",
+    "AI token usage"
+  ],
+  "title": "Mengerti Biaya, Model, dan Izin Sebelum Menggunakan Claude API",
+  "translationKey": "e1383fc4-a558-41b1-bee2-1d24e7cebadd"
+}

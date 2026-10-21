@@ -1,0 +1,328 @@
+{
+  "_createdAt": "2026-06-04T14:25:08Z",
+  "_id": "uomub2hTG94T3nqbFXNuAt",
+  "_rev": "VKNTFpWe8NfJwy5gVXmRrV",
+  "_type": "post",
+  "_updatedAt": "2026-06-04T14:48:53Z",
+  "articleNumber": 32,
+  "body": [
+    {
+      "_key": "11h37p6y",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "11h37p6yc",
+          "_type": "span",
+          "marks": [],
+          "text": "When it comes to AI token counting, one of the most critical questions developers and users ask is whether system prompts are included in the count. The answer is not straightforward, as it depends on various factors such as input tokens, context window, and cost. In this article, we'll delve into the intricacies of AI token counting, exploring how system prompts affect the overall cost and what you can do to optimize your usage."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "xj6pvcgm",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "xj6pvcgmc",
+          "_type": "span",
+          "marks": [],
+          "text": "Understanding AI Token Counting"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "oi6h5cs6",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "oi6h5cs6c",
+          "_type": "span",
+          "marks": [],
+          "text": "At its core, AI token counting is a method of measuring the computational resources required for a given task. This includes processing tokens, such as text input, which are then passed through an AI model to produce a response. The number of tokens processed directly impacts the cost, with more complex tasks requiring more tokens and therefore increasing the cost."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "27sinai1",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "27sinai1c",
+          "_type": "span",
+          "marks": [],
+          "text": "However, there's a nuance to this process - system prompts are often included in the token count. System prompts refer to the instructions or context provided to the AI model, which helps it understand the task at hand. These prompts can be explicit (e.g., 'Translate this sentence from English to Spanish') or implicit (e.g., 'The user wants a summary of the article'). The question then becomes - how do system prompts affect the overall cost?"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "7vxcszww",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "7vxcszwwc",
+          "_type": "span",
+          "marks": [],
+          "text": "To illustrate this, let's consider an example. Suppose you're building an AI chatbot that can translate text from English to Spanish. You provide the model with a system prompt like 'Translate this sentence.' The AI then processes the input tokens (the sentence itself), and the system prompt is also included in the count. This means that for each translation task, the cost will be higher due to the inclusion of both the input tokens and the system prompt."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "7cfr508r",
+      "_type": "image",
+      "alt": "Section image 1",
+      "asset": {
+        "_ref": "image-8e7fb72bfa4db8029e4d496b438bd77ce794f300-1344x768-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "gop55j44",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "gop55j44c",
+          "_type": "span",
+          "marks": [],
+          "text": "The Impact of System Prompts on Cost"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "7og3vf5i",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "7og3vf5ic",
+          "_type": "span",
+          "marks": [],
+          "text": "While system prompts can significantly affect the cost, there are cases where they're not included in the count. For instance, when using a caching mechanism, the AI model can store frequently accessed data and reuse it to avoid re-processing. This means that for tasks with cached tokens, the cost might be lower due to reduced token processing."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "c1izt20u",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "c1izt20uc",
+          "_type": "span",
+          "marks": [],
+          "text": "However, it's essential to note that not all caching mechanisms work in the same way. Some may have different calculation methods or limitations on the number of tokens stored. Therefore, understanding the specific caching mechanism used by your AI platform is crucial for accurate cost estimation."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "uzfiltmf",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "uzfiltmfc",
+          "_type": "span",
+          "marks": [],
+          "text": "To further illustrate this, let's consider another example. Suppose you're using an AI model that caches frequently accessed data, such as user profiles or product information. In this scenario, the system prompt 'Retrieve user profile' might be included in the count for initial requests but excluded for subsequent requests if the data is cached."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "n207u78o",
+      "_type": "image",
+      "alt": "Section image 2",
+      "asset": {
+        "_ref": "image-02e83134c5757f7c574cebcfecd83bf4c32c633e-1344x768-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "pcfhsowo",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "pcfhsowoc",
+          "_type": "span",
+          "marks": [],
+          "text": "Optimizing AI Token Counting"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "tp1vwzzo",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "tp1vwzzoc",
+          "_type": "span",
+          "marks": [],
+          "text": "So, what can you do to optimize your AI token counting and minimize costs? First, it's essential to understand the specific cost model used by your AI platform. This will help you identify areas where system prompts are included or excluded from the count."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "d2vwhnpw",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "d2vwhnpwc",
+          "_type": "span",
+          "marks": [],
+          "text": "Secondly, consider using caching mechanisms that can store frequently accessed data and reduce token processing. However, be aware of the limitations and calculation methods used by these mechanisms to avoid overestimating costs."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "67k2np9k",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "67k2np9kc",
+          "_type": "span",
+          "marks": [],
+          "text": "Finally, monitor your AI model's performance closely and adjust system prompts as needed to optimize token counting and cost efficiency."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "vzybmsm9",
+      "_type": "image",
+      "alt": "Section image 3",
+      "asset": {
+        "_ref": "image-ed3b000c3e5ee7740ba7ef14cff31a16a255a237-1344x768-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "j3qe7scq",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "j3qe7scqc",
+          "_type": "span",
+          "marks": [],
+          "text": "Conclusion: Understanding the Importance of System Prompts in AI Token Counting"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "waxcmox5",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "waxcmox5c",
+          "_type": "span",
+          "marks": [],
+          "text": "In conclusion, understanding how system prompts affect AI token counting is crucial for developers and users alike. By recognizing the factors that influence cost - including input tokens, context window, and caching mechanisms - you can optimize your usage and minimize costs."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "z9c4jkh6",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "z9c4jkh6c",
+          "_type": "span",
+          "marks": [],
+          "text": "Remember to carefully review your AI platform's cost model and adjust system prompts accordingly. With this knowledge, you'll be better equipped to navigate the complexities of AI token counting and make informed decisions about your project's scalability and budget."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "smb22q4b",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "smb22q4bc",
+          "_type": "span",
+          "marks": [],
+          "text": "Next Steps"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "z2u4qlkq",
+      "_type": "image",
+      "alt": "Section image 4",
+      "asset": {
+        "_ref": "image-d561ebb37715a3821c4173b5982d70dfbb39911d-1344x768-png",
+        "_type": "reference"
+      }
+    }
+  ],
+  "category": "fundamentals",
+  "coverImage": {
+    "_type": "image",
+    "alt": "Apakah Token AI Termasuk Prompt Sistem dalam Penghitungan?",
+    "asset": {
+      "_ref": "image-e565c654917ea6086c5925566a0478a86335b3f6-1344x768-png",
+      "_type": "reference"
+    }
+  },
+  "difficultyLevel": "intermediate",
+  "excerpt": "Mengerti cara penghitungan token AI sangat penting untuk menghindari kesalahan biaya. Artikel ini membahas apakah prompt sistem termasuk dalam hitungannya.",
+  "focusKeyword": "AI token counting system prompt",
+  "generatedByPipeline": true,
+  "language": "id",
+  "pipelineVersion": "v1.0",
+  "publishedAt": "2026-06-04T14:25:07.780Z",
+  "qaCheckedAt": "2026-06-04T14:48:53.349Z",
+  "qaFeedback": "metaDescription has 84 chars (needs 140-160)",
+  "qaRetryCount": 0,
+  "qaScore": 88,
+  "readTime": 12,
+  "secondaryKeywords": [
+    "system instructions",
+    "input tokens",
+    "context window",
+    "cost"
+  ],
+  "seo": {
+    "seoDescription": "Mengerti cara penghitungan token AI sangat penting untuk menghindari kesalahan biaya",
+    "seoTitle": "Penghitungan Token AI: Apakah Prompt Sistem Termasuk?"
+  },
+  "slug": {
+    "_type": "slug",
+    "current": "apakah-token-ai-termasuk-prompt-sistem-dalam-penghitungan"
+  },
+  "sourceUrl": "https://www.aitoken.com.tw/post/does-ai-token-count-system-prompt",
+  "tags": [
+    "system instructions",
+    "input tokens",
+    "context window",
+    "cost"
+  ],
+  "title": "Apakah Token AI Termasuk Prompt Sistem dalam Penghitungan?",
+  "translationKey": "e58e4afe-c88d-4307-878d-ad71e1e227f0"
+}

@@ -1,0 +1,379 @@
+{
+  "_createdAt": "2026-06-04T19:59:34Z",
+  "_id": "yOXF1XBkRH6Ae7xNfiKQot",
+  "_rev": "dShP6JdGzwBHy3qr2AsOe3",
+  "_type": "post",
+  "_updatedAt": "2026-06-04T20:26:16Z",
+  "articleNumber": 84,
+  "body": [
+    {
+      "_key": "tkncaafy",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "tkncaafyc",
+          "_type": "span",
+          "marks": [],
+          "text": "As a content creator or new user of AI technology, navigating the world of AI tokens can be overwhelming. One common issue that arises is when your AI token runs out unexpectedly. Instead of panicking, it's essential to understand and manage your usage limits effectively."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "ka7wq4z1",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "ka7wq4z1c",
+          "_type": "span",
+          "marks": [],
+          "text": "Identifying the Type of Limit Causing the Issue"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "die5ufgf",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "die5ufgfc",
+          "_type": "span",
+          "marks": [],
+          "text": "Before diving into troubleshooting, it's crucial to identify the type of limit causing the issue. This can include quota, rate limits, billing tier, or model permission issues."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "m55wh5kx",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "m55wh5kxc",
+          "_type": "span",
+          "marks": [],
+          "text": "For instance, a quota limit is typically set on the total number of tokens you can use within a specific timeframe, whereas a rate limit restricts the number of requests you can make per second. Understanding the type of limit will help you address the issue more efficiently."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "v7rudhhy",
+      "_type": "image",
+      "alt": "Section image 1",
+      "asset": {
+        "_ref": "image-96cecc0f08181873ede77fa195fc746a7a3790b1-1344x768-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "w06j02kh",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "w06j02khc",
+          "_type": "span",
+          "marks": [],
+          "text": "Checking for Quota Limits"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "uuh492ut",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "uuh492utc",
+          "_type": "span",
+          "marks": [],
+          "text": "Quota limits are a common source of confusion. To check your current quota, log in to your AI platform account and navigate to the usage or billing section."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "t9qdaf81",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "t9qdaf81c",
+          "_type": "span",
+          "marks": [],
+          "text": "Here, you'll find information on your total token usage, remaining tokens, and any alerts or notifications related to quota limits. Be sure to review these details regularly to avoid running out of tokens unexpectedly."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "tfjuq936",
+      "_type": "image",
+      "alt": "Section image 2",
+      "asset": {
+        "_ref": "image-d4b2efea3ea96a530d4b6ca6526e9cbf090f6f1c-1344x768-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "nq0wf6n8",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "nq0wf6n8c",
+          "_type": "span",
+          "marks": [],
+          "text": "Understanding Rate Limits"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "vteto917",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "vteto917c",
+          "_type": "span",
+          "marks": [],
+          "text": "Rate limits are designed to prevent abuse and ensure fair usage of AI resources. When setting up your AI model, you'll need to configure rate limits according to your specific needs."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "9aqypug0",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "9aqypug0c",
+          "_type": "span",
+          "marks": [],
+          "text": "For example, if you're building a high-traffic application, you may require a higher rate limit to accommodate the increased demand. Conversely, for smaller projects or low-usage scenarios, a lower rate limit will suffice."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "wcbewcxo",
+      "_type": "image",
+      "alt": "Section image 3",
+      "asset": {
+        "_ref": "image-b0c14ad0c8dda444226899ee98e3bbf018bacbf9-1344x768-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "ar6913sy",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "ar6913syc",
+          "_type": "span",
+          "marks": [],
+          "text": "Billing Tier and Model Permission Issues"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "0f8y5tdg",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "0f8y5tdgc",
+          "_type": "span",
+          "marks": [],
+          "text": "Another crucial aspect to consider is your billing tier. Depending on the AI platform, different tiers offer varying levels of token allocation, storage capacity, or other resources."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "pspm4drf",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "pspm4drfc",
+          "_type": "span",
+          "marks": [],
+          "text": "Model permission issues can also impact your token usage. Be sure to check your model settings and ensure that you have the necessary permissions to access and use the required tokens."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "edrsswcg",
+      "_type": "image",
+      "alt": "Section image 4",
+      "asset": {
+        "_ref": "image-38a1908bb7400c30e93855d60d80e0dcce713f88-1344x768-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "fzeaxf05",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "fzeaxf05c",
+          "_type": "span",
+          "marks": [],
+          "text": "Distinguishing Between Credits, Spend Cap, and Monthly Spending Limits"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "n6gussf0",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "n6gussf0c",
+          "_type": "span",
+          "marks": [],
+          "text": "To avoid confusion, it's essential to understand the difference between credits, spend cap, and monthly spending limits."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "c502t06g",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "c502t06gc",
+          "_type": "span",
+          "marks": [],
+          "text": "Credits are a specific allocation of tokens within your billing cycle, whereas a spend cap represents the maximum amount you can spend on AI resources per month. Monthly spending limits, on the other hand, determine the total number of tokens you can use within a calendar month."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "p5xlmnq5",
+      "_type": "image",
+      "alt": "Section image 5",
+      "asset": {
+        "_ref": "image-7ab7de80f48c84fc9c123163ee1a2be6f716aaed-1344x768-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "3fojjijb",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "3fojjijbc",
+          "_type": "span",
+          "marks": [],
+          "text": "Practical Conclusion: Next Steps for Troubleshooting AI Token Issues"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "oewpok2b",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "oewpok2bc",
+          "_type": "span",
+          "marks": [],
+          "text": "By following the steps outlined in this guide, you'll be well-equipped to troubleshoot and manage your AI token usage limits effectively."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "qslnximj",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "qslnximjc",
+          "_type": "span",
+          "marks": [],
+          "text": "To summarize, identify the type of limit causing the issue, check for quota limits, understand rate limits, and ensure you're on the correct billing tier with necessary model permissions. Distinguishing between credits, spend cap, and monthly spending limits will also help prevent token-related issues."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "9rykfhdm",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "9rykfhdmc",
+          "_type": "span",
+          "marks": [],
+          "text": "Remember, a little planning and proactive management can go a long way in avoiding AI token woes. Don't panic when your AI token runs out — take control of your usage limits today!"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    }
+  ],
+  "category": "tutorial",
+  "coverImage": {
+    "_type": "image",
+    "alt": "No te desanques cuando agotas tu token de AI: un guía paso a paso",
+    "asset": {
+      "_ref": "image-634e8d6a51f2e965c85a38325fbecc41b3520fbe-1344x768-png",
+      "_type": "reference"
+    }
+  },
+  "difficultyLevel": "beginner",
+  "excerpt": "¿Qué hacer cuando se acaba el token de tu modelo de inteligencia artificial? Descubre cómo evitar el pánico y encontrar soluciones efectivas.",
+  "focusKeyword": "AI token usage limits",
+  "generatedByPipeline": true,
+  "language": "es",
+  "pipelineVersion": "v1.0",
+  "publishedAt": "2026-06-04T19:59:29.910Z",
+  "qaCheckedAt": "2026-06-04T20:26:12.356Z",
+  "qaFeedback": "metaDescription has 86 chars (needs 140-160)",
+  "qaRetryCount": 0,
+  "qaScore": 88,
+  "readTime": 10,
+  "secondaryKeywords": [
+    "quota",
+    "rate limit",
+    "billing tier",
+    "model permission"
+  ],
+  "seo": {
+    "seoDescription": "No te desanques: aprende a identificar y resolver problemas de tokens de AI en minutos",
+    "seoTitle": "Guía para superar problemas con tokens de AI"
+  },
+  "slug": {
+    "_type": "slug",
+    "current": "token-de-ai-no-te-desanques"
+  },
+  "sourceUrl": "https://www.aitoken.com.tw/post/what-to-do-when-ai-token-runs-out",
+  "tags": [
+    "quota",
+    "rate limit",
+    "billing tier",
+    "model permission"
+  ],
+  "title": "No te desanques cuando agotas tu token de AI: un guía paso a paso",
+  "translationKey": "d0a506df-bbef-4780-b540-484455a7e72f"
+}

@@ -1,0 +1,354 @@
+{
+  "_createdAt": "2026-06-04T19:56:31Z",
+  "_id": "yOXF1XBkRH6Ae7xNfiIYnp",
+  "_rev": "dShP6JdGzwBHy3qr2AsE8S",
+  "_type": "post",
+  "_updatedAt": "2026-06-04T20:25:09Z",
+  "articleNumber": 81,
+  "body": [
+    {
+      "_key": "q8krhvdr",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "q8krhvdrc",
+          "_type": "span",
+          "marks": [],
+          "text": "Developers and data scientists using Claude Code for AI coding tasks often face the challenge of optimizing their token usage to achieve efficient development. With the increasing complexity of AI projects, managing tokens effectively has become crucial to avoid unexpected costs. In this article, we'll explore how to optimize Claude Code's AI token costs by leveraging slash commands, adjusting effort and models, understanding input and output token differences, and maintaining a clean repository."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "y9o5ar81",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "y9o5ar81c",
+          "_type": "span",
+          "marks": [],
+          "text": "Effectively Managing Context with Slash Commands"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "iq3s48sj",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "iq3s48sjc",
+          "_type": "span",
+          "marks": [],
+          "text": "To begin optimizing your token usage, it's essential to understand the role of slash commands in managing context. The /clear, /compact, and /btw slash commands enable you to efficiently manage your AI token consumption by adjusting the context in which they're used."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "650rrpy8",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "650rrpy8c",
+          "_type": "span",
+          "marks": [],
+          "text": "The /clear command allows you to reset the current conversation context, ensuring that tokens are not wasted on unnecessary interactions. The /compact command condenses the conversation history, reducing the number of tokens required for subsequent interactions."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "ajhf4pr2",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "ajhf4pr2c",
+          "_type": "span",
+          "marks": [],
+          "text": "Finally, the /btw command provides a way to quickly switch between different conversations or contexts without consuming excessive tokens."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "d9e1gp1g",
+      "_type": "image",
+      "alt": "Section image 1",
+      "asset": {
+        "_ref": "image-1744db4dcb2f1b2ef01e76963fc414755d63864e-1344x768-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "br7ydsk0",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "br7ydsk0c",
+          "_type": "span",
+          "marks": [],
+          "text": "Adjusting Effort and Models According to Task Complexity"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "i81cfl8m",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "i81cfl8mc",
+          "_type": "span",
+          "marks": [],
+          "text": "Another critical aspect of optimizing token usage is adjusting the effort and model according to task complexity. Claude Code's AI tokens can be used for a wide range of tasks, from simple text generation to complex data analysis."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "wcymavcr",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "wcymavcrc",
+          "_type": "span",
+          "marks": [],
+          "text": "To optimize costs, it's essential to select the appropriate effort level and model based on the specific requirements of your project. The /effort low command allows you to adjust the token consumption for simpler tasks, while the /model command enables you to switch between different models tailored to your task's complexity."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "c9zto6cl",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "c9zto6clc",
+          "_type": "span",
+          "marks": [],
+          "text": "For instance, if you're working on a simple text generation task, using the /effort low command can help reduce token costs without compromising on quality. Conversely, for complex data analysis tasks, adjusting the model using the /model command ensures optimal performance and cost-effectiveness."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "fq1u7mh7",
+      "_type": "image",
+      "alt": "Section image 2",
+      "asset": {
+        "_ref": "image-81f6be4fb09cac7082372bd126fcc1dceed7804c-1344x768-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "p2elcmy1",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "p2elcmy1c",
+          "_type": "span",
+          "marks": [],
+          "text": "Understanding Input Token and Output Token Differences and Costs"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "63usrhmk",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "63usrhmkc",
+          "_type": "span",
+          "marks": [],
+          "text": "To truly optimize your token usage, it's crucial to understand the differences between input tokens and output tokens. Input tokens refer to the AI tokens consumed during the interaction with Claude Code, while output tokens are the tokens generated by the AI model as a result of the input."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "svdw7qag",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "svdw7qagc",
+          "_type": "span",
+          "marks": [],
+          "text": "The cost of input tokens is typically higher than that of output tokens. To minimize costs, it's essential to optimize your input token usage by reducing unnecessary interactions and leveraging slash commands for context management."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "qaddrcer",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "qaddrcerc",
+          "_type": "span",
+          "marks": [],
+          "text": "Conversely, focusing on optimizing the model's performance will result in lower output token costs without compromising on quality. By understanding these differences, you can make informed decisions about your token usage and optimize your workflow accordingly."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "uaz14002",
+      "_type": "image",
+      "alt": "Section image 3",
+      "asset": {
+        "_ref": "image-1f5ba8422a4bf9335c164de1e5cd0b5076bff2bb-1344x768-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "2bla73db",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "2bla73dbc",
+          "_type": "span",
+          "marks": [],
+          "text": "Maintaining a Clean and Organized Repository for Efficient Development"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "61jx38dw",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "61jx38dwc",
+          "_type": "span",
+          "marks": [],
+          "text": "Finally, maintaining a clean and organized repository is essential for efficient development. A cluttered repository can lead to confusion, errors, and increased token usage."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "z3opn23r",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "z3opn23rc",
+          "_type": "span",
+          "marks": [],
+          "text": "To maintain a well-organized repository, establish clear naming conventions, use version control systems, and regularly purge unused or redundant files. This will help reduce the cognitive load on developers, minimize errors, and optimize token usage."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "3d4i3vgq",
+      "_type": "image",
+      "alt": "Section image 4",
+      "asset": {
+        "_ref": "image-e8e59869517db5ded98b80ba0d3697b4604e69fb-1344x768-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "8thendbi",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "8thendbic",
+          "_type": "span",
+          "marks": [],
+          "text": "Conclusion: Actionable Strategies for Claude Code AI Token Cost Optimization"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "8czuybbh",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "8czuybbhc",
+          "_type": "span",
+          "marks": [],
+          "text": "In conclusion, optimizing Claude Code's AI token costs requires a combination of effective context management using slash commands, adjusting effort and models according to task complexity, understanding input and output token differences and costs, and maintaining a clean repository."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "byshbv78",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "byshbv78c",
+          "_type": "span",
+          "marks": [],
+          "text": "By implementing these strategies in your workflow, you'll be able to maximize efficiency, reduce costs, and achieve optimal performance with Claude Code's AI tokens. Remember to regularly review and adjust your approach as your project evolves to ensure continued cost-effectiveness."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    }
+  ],
+  "category": "tutorial",
+  "coverImage": {
+    "_type": "image",
+    "alt": "Mengoptimalkan Biaya Token Claude Code",
+    "asset": {
+      "_ref": "image-e4cc4763f17e0fe41fb2c9de39d21739c3819965-1344x768-png",
+      "_type": "reference"
+    }
+  },
+  "difficultyLevel": "intermediate",
+  "excerpt": "Dalam artikel ini, kita akan membahas cara mengoptimalkan biaya token Claude Code untuk pengembangan AI yang lebih efisien.",
+  "focusKeyword": "Claude Code AI Token Cost Optimization",
+  "generatedByPipeline": true,
+  "language": "id",
+  "pipelineVersion": "v1.0",
+  "publishedAt": "2026-06-04T19:56:26.596Z",
+  "qaCheckedAt": "2026-06-04T20:25:04.903Z",
+  "qaFeedback": "metaDescription has 74 chars (needs 140-160)",
+  "qaRetryCount": 0,
+  "qaScore": 88,
+  "readTime": 10,
+  "secondaryKeywords": [
+    "AI Coding Tools",
+    "Token Management",
+    "Effort and Model Adjustment"
+  ],
+  "seo": {
+    "seoDescription": "Cara efektif untuk menghemat biaya token Claude Code dalam pengembangan AI",
+    "seoTitle": "Optimalkan Biaya Token Claude Code"
+  },
+  "slug": {
+    "_type": "slug",
+    "current": "claude-code-token-cost-optimization"
+  },
+  "sourceUrl": "https://www.aitoken.com.tw/post/claude-code-token-saving-guide",
+  "tags": [
+    "AI Coding Tools",
+    "Token Management",
+    "Effort and Model Adjustment"
+  ],
+  "title": "Mengoptimalkan Biaya Token Claude Code",
+  "translationKey": "f91c345e-e7d1-4294-96bf-e39985feda23"
+}
