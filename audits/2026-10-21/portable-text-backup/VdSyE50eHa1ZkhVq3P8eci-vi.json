@@ -1,0 +1,414 @@
+{
+  "_createdAt": "2026-06-04T11:38:27Z",
+  "_id": "VdSyE50eHa1ZkhVq3P8eci-vi",
+  "_rev": "97luqmnzEkVELN5ug6AhJG",
+  "_type": "post",
+  "_updatedAt": "2026-06-22T09:46:35Z",
+  "articleNumber": 9,
+  "body": [
+    {
+      "_key": "y4p7dg61",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "y4p7dg61c",
+          "_type": "span",
+          "marks": [],
+          "text": "Khi làm việc với công nghệ trí tuệ nhân tạo (AI), một thuật ngữ bạn sẽ thường xuyên gặp là 'token AI'. Nhưng token AI chính xác là gì, và tại sao nó lại quan trọng với các dự án của bạn? Trong bài viết này, chúng ta sẽ đi vào những kiến thức cơ bản về token AI, bao gồm mọi thứ từ cách đếm token đến giá cả và quản lý mức sử dụng. Sau khi đọc hướng dẫn này, bạn sẽ hiểu rõ cách token AI hoạt động và có thể áp dụng kiến thức đó vào dự án của mình."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "w2qxsnus",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "w2qxsnusc",
+          "_type": "span",
+          "marks": [],
+          "text": "Token AI Là Gì?"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "k3jm5a9b",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "k3jm5a9bc",
+          "_type": "span",
+          "marks": [],
+          "text": "Token AI là đơn vị đo lường mà các mô hình ngôn ngữ dùng để xử lý văn bản. Đây là một khái niệm nền tảng làm cơ sở cho cách nhiều ứng dụng AI hoạt động, từ chatbot và trợ lý ảo đến dịch vụ dịch thuật ngôn ngữ."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "hmkofp1g",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "hmkofp1gc",
+          "_type": "span",
+          "marks": [],
+          "text": "Về bản chất, một token AI đại diện cho một đơn vị thông tin mà mô hình có thể hiểu và xử lý. Đó có thể là một từ, một ký tự, hoặc thậm chí là một đơn vị con (một phần nhỏ hơn của một từ lớn hơn)."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "m61f94mo",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "m61f94moc",
+          "_type": "span",
+          "marks": [],
+          "text": "Số Token so với Số Từ/Ký Tự"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "bfh8gi5b",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "bfh8gi5bc",
+          "_type": "span",
+          "marks": [],
+          "text": "Một quan niệm sai lầm phổ biến về token AI là chúng luôn bằng số từ hoặc số ký tự trong một đoạn văn bản. Tuy nhiên, điều đó không hẳn là đúng."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "z90r7g87",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "z90r7g87c",
+          "_type": "span",
+          "marks": [],
+          "text": "Việc đếm token là một quá trình phức tạp, phụ thuộc vào mô hình ngôn ngữ cụ thể đang được dùng và các yêu cầu xử lý văn bản của nó. Trong một số trường hợp, một từ có thể được tính là nhiều token, trong khi ở trường hợp khác, một ký tự có thể bị chia thành nhiều token."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "y33ru2m6",
+      "_type": "image",
+      "alt": "Hình ảnh minh họa phần 1",
+      "asset": {
+        "_ref": "image-59dbd4cd498135b5be5374b348ba3df436304785-1344x768-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "uq3fmz3b",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "uq3fmz3bc",
+          "_type": "span",
+          "marks": [],
+          "text": "Hiểu Chi Phí Token"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "dz0ek8zv",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "dz0ek8zvc",
+          "_type": "span",
+          "marks": [],
+          "text": "Chi phí token AI có thể dao động đáng kể tùy thuộc vào mô hình và dịch vụ bạn đang dùng. Một số mô hình tính phí cố định theo từng token, trong khi những mô hình khác sử dụng cấu trúc giá theo bậc hoặc giảm giá khi dùng số lượng lớn."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "wzjxcr8y",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "wzjxcr8yc",
+          "_type": "span",
+          "marks": [],
+          "text": "Để quản lý chi phí AI hiệu quả, điều cần thiết là phải hiểu cách tính phí token hoạt động và lên kế hoạch phù hợp. Điều này có thể bao gồm việc đặt giới hạn ngân sách, chọn các mô hình tiết kiệm chi phí, hoặc tối ưu hóa quy trình xử lý văn bản của bạn."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "fwhy85ih",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "fwhy85ihc",
+          "_type": "span",
+          "marks": [],
+          "text": "Các Bậc Giá và Chiết Khấu"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "70i2mnvt",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "70i2mnvtc",
+          "_type": "span",
+          "marks": [],
+          "text": "Khi đánh giá các dịch vụ AI về chi phí token, hãy chú ý đến các bậc giá có chiết khấu khi dùng số lượng lớn. Đây là cách tuyệt vời để giảm chi phí theo thời gian."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "me88cz3p",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "me88cz3pc",
+          "_type": "span",
+          "marks": [],
+          "text": "Ví dụ, giả sử bạn đang dùng một dịch vụ dịch thuật ngôn ngữ với các bậc giá sau:"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "bgy4aea5",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "bgy4aea5c",
+          "_type": "span",
+          "marks": [],
+          "text": [
+            "Bậc 1: 10 token/giây ($0.01/token)",
+            "Bậc 2: 100 token/giây ($0.005/token)",
+            "Bậc 3: 1.000 token/giây ($0.001/token)"
+          ]
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "ip8bn0bm",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "ip8bn0bmc",
+          "_type": "span",
+          "marks": [],
+          "text": "Nếu bạn dự định xử lý khối lượng văn bản lớn một cách thường xuyên, việc chọn Bậc 3 có thể giúp bạn tiết kiệm tiền về lâu dài."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "ghwyajqj",
+      "_type": "image",
+      "alt": "Hình ảnh minh họa phần 2",
+      "asset": {
+        "_ref": "image-876f241b3773c10449adddf2236a1cd97b60ea56-1344x768-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "n1rw57jh",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "n1rw57jhc",
+          "_type": "span",
+          "marks": [],
+          "text": "Quản Lý Mức Sử Dụng và Chi Phí Token"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "38e54exq",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "38e54exqc",
+          "_type": "span",
+          "marks": [],
+          "text": "Để tối ưu hóa chi phí AI, điều quan trọng là phải theo dõi sát mức sử dụng token của bạn. Điều này có thể bao gồm việc theo dõi mức sử dụng theo thời gian thực, đặt cảnh báo ngân sách, hoặc áp dụng giới hạn sử dụng."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "dr7jfp8s",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "dr7jfp8sc",
+          "_type": "span",
+          "marks": [],
+          "text": "Theo Dõi Mức Sử Dụng Theo Thời Gian Thực"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "flyoly46",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "flyoly46c",
+          "_type": "span",
+          "marks": [],
+          "text": "Một số dịch vụ AI cung cấp tính năng theo dõi mức sử dụng theo thời gian thực, cho phép bạn giám sát lượng token tiêu thụ ngay khi nó xảy ra."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "ytzjtyy1",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "ytzjtyy1c",
+          "_type": "span",
+          "marks": [],
+          "text": "Bằng cách nắm bắt mức sử dụng hiện tại, bạn có thể điều chỉnh quy trình làm việc và tối ưu hóa chi phí cho phù hợp."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "a7u34j9d",
+      "_type": "image",
+      "alt": "Hình ảnh minh họa phần 3",
+      "asset": {
+        "_ref": "image-14642b70269c4011a72b147fd86f457138b21f31-1344x768-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "2vfchn78",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "2vfchn78c",
+          "_type": "span",
+          "marks": [],
+          "text": "Kết Luận và Các Bước Tiếp Theo"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "srkzcase",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "srkzcasec",
+          "_type": "span",
+          "marks": [],
+          "text": "Tóm lại, việc hiểu về token AI là điều cần thiết để quản lý chi phí AI hiệu quả. Bằng cách nắm vững những kiến thức cơ bản về đếm token, giá cả và quản lý mức sử dụng, bạn có thể đưa ra các quyết định sáng suốt cho các dự án AI và tối ưu hóa chi phí."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "8be9ycxg",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "8be9ycxgc",
+          "_type": "span",
+          "marks": [],
+          "text": "Các bước tiếp theo có thể bao gồm khám phá các dịch vụ AI khác nhau để so sánh các bậc giá và tính năng của chúng, hoặc tối ưu hóa quy trình xử lý văn bản của bạn để giảm mức tiêu thụ token."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "wzseresu",
+      "_type": "image",
+      "alt": "Hình ảnh minh họa phần 4",
+      "asset": {
+        "_ref": "image-fe00ac81ff502eabbc74cf118ed293dd1db77487-1344x768-png",
+        "_type": "reference"
+      }
+    }
+  ],
+  "category": "fundamentals",
+  "coverImage": {
+    "_type": "image",
+    "alt": "Hiểu Kiến Thức Cơ Bản Về Token AI Dành Cho Người Mới",
+    "asset": {
+      "_ref": "image-e2ab6c775d7bfd79bdc61c48ffac1eedd464d3aa-1344x768-png",
+      "_type": "reference"
+    }
+  },
+  "difficultyLevel": "beginner",
+  "excerpt": "Hiểu rõ về token AI và cách chúng hoạt động, bao gồm cách đếm token, giá cả và quản lý mức sử dụng.",
+  "focusKeyword": "Kiến thức cơ bản về token AI",
+  "generatedByPipeline": true,
+  "language": "vi",
+  "pipelineVersion": "v1.0",
+  "publishedAt": "2026-06-04T11:38:26.914Z",
+  "qaCheckedAt": "2026-06-04T12:04:57.056Z",
+  "qaFeedback": "metaDescription has 121 chars (needs 140-160)",
+  "qaRetryCount": 0,
+  "qaScore": 88,
+  "readTime": 10,
+  "secondaryKeywords": [
+    "Token AI Là Gì",
+    "Cách Tính Token AI",
+    "Token AI so với API Key"
+  ],
+  "seo": {
+    "seoDescription": "Tìm hiểu những kiến thức cơ bản về token AI, bao gồm chúng là gì, cách tính toán và cách quản lý chi phí hiệu quả.",
+    "seoTitle": "Token AI: Hướng Dẫn Dành Cho Người Mới Bắt Đầu"
+  },
+  "slug": {
+    "_type": "slug",
+    "current": "ai-token-basics-for-beginners"
+  },
+  "sourceUrl": "https://www.aitoken.com.tw/post/what-is-ai-token",
+  "tags": [
+    "Token AI Là Gì",
+    "Cách Tính Token AI",
+    "Token AI so với API Key"
+  ],
+  "title": "Hiểu Kiến Thức Cơ Bản Về Token AI Dành Cho Người Mới",
+  "translationKey": "096b23cb-0c8b-47e3-9503-82fc9ec62d29"
+}
