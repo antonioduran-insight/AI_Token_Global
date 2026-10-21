@@ -67,3 +67,6 @@ audits/*/per-token-phase1-dryrun.md
 
 # dry-run logs from scripts/patch-retire-not-indexed.mjs (the --apply log is committed)
 audits/*/retire-dryrun.md
+
+# saved build output for scripts/patch-portable-text.mjs --check-dist
+build.log
