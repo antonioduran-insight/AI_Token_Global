@@ -1,0 +1,470 @@
+{
+  "_createdAt": "2026-06-04T12:48:36Z",
+  "_id": "uomub2hTG94T3nqbFWwbsJ",
+  "_rev": "uomub2hTG94T3nqbFX3ySe",
+  "_type": "post",
+  "_updatedAt": "2026-06-04T13:14:27Z",
+  "articleNumber": 19,
+  "body": [
+    {
+      "_key": "ws956ia7",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "ws956ia7c",
+          "_type": "span",
+          "marks": [],
+          "text": "Sending customer data to Artificial Intelligence (AI) Application Programming Interfaces (APIs) has become increasingly common as businesses look for ways to leverage AI-driven insights. However, this practice raises critical questions about compliance with data protection regulations and AI API usage policies. The focus keyword in this article is sending customer data to AI API."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "599wlixj",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "599wlixjc",
+          "_type": "span",
+          "marks": [],
+          "text": "Can Customer Data Be Sent Directly to AI APIs?"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "lupsxsxy",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "lupsxsxyc",
+          "_type": "span",
+          "marks": [],
+          "text": "Customer data can be sent to AI APIs, but there are strict conditions and regulations that must be adhered to. This includes ensuring the original personal data is not directly sent without de-identification, obtaining agreement confirmation, and establishing internal governance mechanisms."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "5tjfsjxd",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "5tjfsjxdc",
+          "_type": "span",
+          "marks": [],
+          "text": "The process of sending customer data to AI APIs involves considering several factors, including the type of customer data being processed, the purpose for which it will be used, and whether this aligns with the legal basis provided under regulations like GDPR or Taiwan's Personal Data Protection Law."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "2jh8eoiq",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "2jh8eoiqc",
+          "_type": "span",
+          "marks": [],
+          "text": "AI API providers often have varying policies regarding data usage, retention, and sharing. These differences highlight the importance of scrutinizing these terms before initiating any project involving sending customer data to AI APIs."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "w9xgmdpc",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "w9xgmdpcc",
+          "_type": "span",
+          "marks": [],
+          "text": "Regulatory Framework"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "0ubqcbzv",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "0ubqcbzvc",
+          "_type": "span",
+          "marks": [],
+          "text": "Regulations like GDPR (General Data Protection Regulation) and Taiwan's Personal Data Protection Law dictate that for the processing of personal data, a legitimate basis must be established. This involves demonstrating a specific purpose for which the data is processed."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "ylg0qp9z",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "ylg0qp9zc",
+          "_type": "span",
+          "marks": [],
+          "text": "The scope of the data collection must also be necessary to achieve this purpose. Furthermore, obtaining informed consent from customers is crucial before any personal data can be used or stored by AI APIs."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "27x1udhs",
+      "_type": "image",
+      "alt": "Section image 1",
+      "asset": {
+        "_ref": "image-78736e9f39b15ca979d00d36c4d32146ac73c1b3-1344x768-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "2i90r420",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "2i90r420c",
+          "_type": "span",
+          "marks": [],
+          "text": "De-identification and Data Masking"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "mgs3agbm",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "mgs3agbmc",
+          "_type": "span",
+          "marks": [],
+          "text": "To ensure compliance, de-identification or data masking techniques can be employed to render personal identifiable information anonymous. This process involves transforming data so it no longer directly identifies an individual."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "ih6fpvrw",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "ih6fpvrwc",
+          "_type": "span",
+          "marks": [],
+          "text": "The choice between de-identification and masking depends on the type of data being processed and the level of anonymity required for compliance with AI API usage policies and regulations."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "4mlcyl9o",
+      "_type": "image",
+      "alt": "Section image 2",
+      "asset": {
+        "_ref": "image-55c9f03820428a44cea003a378e3cf5e899fcb61-1344x768-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "nl6jpox7",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "nl6jpox7c",
+          "_type": "span",
+          "marks": [],
+          "text": "Contractual Agreements with AI API Providers"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "uphj3dq3",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "uphj3dq3c",
+          "_type": "span",
+          "marks": [],
+          "text": "Before sending customer data to an AI API, businesses must understand the contractual agreements in place with their chosen provider. This includes the terms of data usage, retention, and sharing."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "6zag2r7t",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "6zag2r7tc",
+          "_type": "span",
+          "marks": [],
+          "text": "Each AI API provider has its own set of policies regarding how customer data is handled after it leaves a business's premises. It is crucial to evaluate these terms carefully before initiating any project involving AI APIs."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "98r66rqv",
+      "_type": "image",
+      "alt": "Section image 3",
+      "asset": {
+        "_ref": "image-462149077784b5dcd219181550f05e938ed7e8ad-1344x768-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "mmpzzpuo",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "mmpzzpuoc",
+          "_type": "span",
+          "marks": [],
+          "text": "Implementation and Governance"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "0hg1tmbp",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "0hg1tmbpc",
+          "_type": "span",
+          "marks": [],
+          "text": "The process of sending customer data to AI APIs involves not just technical considerations but also governance and compliance. Businesses must establish clear policies on how customer data is handled."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "o0og9po0",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "o0og9po0c",
+          "_type": "span",
+          "marks": [],
+          "text": "This includes defining roles and responsibilities within the organization for ensuring that data protection regulations are met at all times, especially when interacting with third-party AI API providers."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "v598gqnd",
+      "_type": "image",
+      "alt": "Section image 4",
+      "asset": {
+        "_ref": "image-d761fd5d0bd6a2cd066d2774ff252d58322c5625-1344x768-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "3dmx098z",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "3dmx098zc",
+          "_type": "span",
+          "marks": [],
+          "text": "Comparison: Direct vs. Indirect Sending of Customer Data"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "42h6omaa",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "42h6omaac",
+          "_type": "span",
+          "marks": [],
+          "text": "When considering how to send customer data to AI APIs, businesses face a choice between direct and indirect methods. The direct method involves sending the data directly from one system to another."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "h1aixc6s",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "h1aixc6sc",
+          "_type": "span",
+          "marks": [],
+          "text": "In contrast, the indirect method requires first processing or transforming the data in some way before it reaches the API. This transformation may be de-identification, masking, or a similar technique designed to protect sensitive information."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "g8jmkb1i",
+      "_type": "image",
+      "alt": "Section image 5",
+      "asset": {
+        "_ref": "image-7af441bc48c1a9e214415db3edd987ecc2346bee-1344x768-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "qblxsuk6",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "qblxsuk6c",
+          "_type": "span",
+          "marks": [],
+          "text": "Conclusion: Sending Customer Data to AI APIs in Compliance with Regulations"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "mnwraazc",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "mnwraazcc",
+          "_type": "span",
+          "marks": [],
+          "text": "Sending customer data to AI APIs is a complex process that requires careful adherence to regulations like GDPR and Taiwan's Personal Data Protection Law. The core principle is ensuring that the original personal data, identifiable information, and contract-restricted content cannot be directly sent without de-identification, agreement confirmation, and internal governance."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "7xj3wo2h",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "7xj3wo2hc",
+          "_type": "span",
+          "marks": [],
+          "text": "Each AI API provider has its unique set of policies regarding data usage, retention, and sharing. Businesses must evaluate these terms before initiating any project involving sending customer data to AI APIs."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "s5l4xbyj",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "s5l4xbyjc",
+          "_type": "span",
+          "marks": [],
+          "text": "Actionable Steps for Compliance"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "962eqa3p",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "962eqa3pc",
+          "_type": "span",
+          "marks": [],
+          "text": "To ensure compliance with regulations when sending customer data to AI APIs, businesses should take the following steps: Review and understand the data usage, retention, and sharing policies of the chosen AI API provider."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "t68l8x8m",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "t68l8x8mc",
+          "_type": "span",
+          "marks": [],
+          "text": "Establish clear policies within the organization for handling customer data, including de-identification and masking techniques as necessary. Ensure informed consent from customers before processing any personal identifiable information."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "zxvq6iy9",
+      "_type": "image",
+      "alt": "Section image 6",
+      "asset": {
+        "_ref": "image-c5696364e415afc3f4f0f40852249ba43338988a-1344x768-png",
+        "_type": "reference"
+      }
+    }
+  ],
+  "category": "compliance",
+  "coverImage": {
+    "_type": "image",
+    "alt": "Mengirimkan Data Konsumen ke API AI",
+    "asset": {
+      "_ref": "image-ad207db644d8e15407668e919b2d34d2a4ab176b-1344x768-png",
+      "_type": "reference"
+    }
+  },
+  "difficultyLevel": "intermediate",
+  "excerpt": "Pentingnya memahami regulasi dan teknologi yang terkait dengan pengiriman data konsumen ke API AI untuk kepentingan bisnis.",
+  "focusKeyword": "sending customer data to AI API",
+  "generatedByPipeline": true,
+  "language": "id",
+  "pipelineVersion": "v1.0",
+  "publishedAt": "2026-06-04T12:48:36.015Z",
+  "qaCheckedAt": "2026-06-04T13:14:27.727Z",
+  "qaFeedback": "metaDescription has 74 chars (needs 140-160)",
+  "qaRetryCount": 0,
+  "qaScore": 88,
+  "readTime": 10,
+  "secondaryKeywords": [
+    "AI API compliance",
+    "customer data protection",
+    "data processing regulations"
+  ],
+  "seo": {
+    "seoDescription": "Jelajahi kompleksitas hukum dan teknis mengirimkan data konsumen ke API AI",
+    "seoTitle": "Mengirim Data Konsumen ke API AI"
+  },
+  "slug": {
+    "_type": "slug",
+    "current": "mengirim-data-konsumen-ke-api-ai"
+  },
+  "sourceUrl": "https://www.aitoken.com.tw/post/can-customer-data-be-sent-to-ai-api",
+  "tags": [
+    "AI API compliance",
+    "customer data protection",
+    "data processing regulations"
+  ],
+  "title": "Mengirimkan Data Konsumen ke API AI",
+  "translationKey": "6449ad9e-3461-4e2a-85ad-33524aa79e9f"
+}

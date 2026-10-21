@@ -1,4 +1,4 @@
-# Interim noindex DRY RUN: 2026-10-19T06:44:43.892Z
+# Interim noindex DRY RUN: 2026-10-21T09:08:58.348Z
 
 Table: `audits/2026-10-19/index-diet.csv` — 773 rows, 169 NOINDEX_INTERIM. Only those rows are read below.
 
@@ -11,7 +11,7 @@ Table: `audits/2026-10-19/index-diet.csv` — 773 rows, 169 NOINDEX_INTERIM. Onl
 
 Untouched: KEEP 449 · PROTECTED_TRANSLATE_FIRST 34 · RETIRED_S8 118 · UNPUBLISHED_HYGIENE 3
 
-## Guard skips: 0 (not checked: no token in this dry run; --apply always checks)
+## Guard skips: 0
 
 <details><summary>Documents</summary>
 

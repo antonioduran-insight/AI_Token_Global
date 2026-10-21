@@ -1,0 +1,377 @@
+{
+  "_createdAt": "2026-06-04T11:35:24Z",
+  "_id": "uomub2hTG94T3nqbFWaNo7",
+  "_rev": "QwjpRT3YT3z0ob7KMXM7Mp",
+  "_type": "post",
+  "_updatedAt": "2026-06-04T12:03:58Z",
+  "articleNumber": 6,
+  "body": [
+    {
+      "_key": "6iab8wxk",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "6iab8wxkc",
+          "_type": "span",
+          "marks": [],
+          "text": "When working with Artificial Intelligence (AI) technology, you may have come across the term 'tokens.' But what exactly are tokens, and why do AI models use them? In this article, we'll explore the basics of token usage in AI models, including token calculation, cost estimation, and more. By understanding these concepts, you can make informed decisions about your AI technology implementations and ensure that your projects run smoothly and efficiently."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "ia2xi4zn",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "ia2xi4znc",
+          "_type": "span",
+          "marks": [],
+          "text": "What Are Tokens in AI?"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "jc79m6bd",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "jc79m6bdc",
+          "_type": "span",
+          "marks": [],
+          "text": "Tokens are the building blocks of language processing in AI models. Unlike words or characters, tokens represent individual units of information that can be used to understand and analyze text data. This means that when an AI model processes a piece of text, it breaks down the text into individual tokens rather than treating it as a single block of characters."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "1ejvh5qb",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "1ejvh5qbc",
+          "_type": "span",
+          "marks": [],
+          "text": "The reason for using tokens instead of words or characters is that they allow for more precise and efficient processing of language. By breaking down text into individual units of information, AI models can better understand the nuances of language and make more accurate predictions and recommendations."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "wspxcz1s",
+      "_type": "image",
+      "alt": "Section image 1",
+      "asset": {
+        "_ref": "image-8d58070dac051a047bc2ed267728f83e0fa9ae82-1344x768-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "ljxtuwiv",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "ljxtuwivc",
+          "_type": "span",
+          "marks": [],
+          "text": "How Are Tokens Calculated?"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "cq0c5867",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "cq0c5867c",
+          "_type": "span",
+          "marks": [],
+          "text": "The number of tokens in a given piece of text is determined by the tokenization algorithm used by the AI model. Different models may use different algorithms, which can result in varying numbers of tokens for the same input text."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "zqfd1yl9",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "zqfd1yl9c",
+          "_type": "span",
+          "marks": [],
+          "text": "Token calculation is based on the internal workings of the AI model, including its architecture and the specific techniques it uses to process language. This means that token counts can vary depending on factors such as the model's design, training data, and hyperparameters."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "n6qeccji",
+      "_type": "image",
+      "alt": "Section image 2",
+      "asset": {
+        "_ref": "image-ea3a3434615793d1a3986c6604709eb6e82fb413-1344x768-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "mjv245gy",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "mjv245gyc",
+          "_type": "span",
+          "marks": [],
+          "text": "Types of Tokenizers"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "fnk5a35k",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "fnk5a35kc",
+          "_type": "span",
+          "marks": [],
+          "text": "There are several types of tokenizers used in AI models, each with its own strengths and weaknesses. Some common types include wordpiece tokenization, subword tokenization, and character-level tokenization."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "36q32bum",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "36q32bumc",
+          "_type": "span",
+          "marks": [],
+          "text": "Wordpiece tokenization is a technique that divides words into smaller units called 'subwords.' This approach allows for more precise representation of language and better handling of out-of-vocabulary words. Subword tokenization is similar but uses a different algorithm to divide words into subwords."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "1ug2zwd2",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "1ug2zwd2c",
+          "_type": "span",
+          "marks": [],
+          "text": "Character-level tokenization, on the other hand, divides text into individual characters rather than words or subwords. This approach can be useful for certain tasks such as language modeling and machine translation."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "yhevlw1k",
+      "_type": "image",
+      "alt": "Section image 3",
+      "asset": {
+        "_ref": "image-32bf32bd25a8a9cacb1b7baa57c28d9b654b163f-1344x768-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "7jsguvlt",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "7jsguvltc",
+          "_type": "span",
+          "marks": [],
+          "text": "How Do Tokens Affect Cost Estimation?"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "h64n703w",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "h64n703wc",
+          "_type": "span",
+          "marks": [],
+          "text": "Tokens play a significant role in cost estimation for AI projects. The number of tokens processed by an AI model can directly impact the costs associated with running and maintaining the system."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "aisyiag1",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "aisyiag1c",
+          "_type": "span",
+          "marks": [],
+          "text": "This is because many AI models are priced based on the number of tokens they process, rather than the amount of data they handle. As a result, understanding token usage and calculation can help you estimate costs more accurately and make informed decisions about your project's budget."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "mz2fwvwv",
+      "_type": "image",
+      "alt": "Section image 4",
+      "asset": {
+        "_ref": "image-5f69613ff9bc9af3dacc47841a3b2fd2dd4cbdfd-1344x768-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "cw3vugs7",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "cw3vugs7c",
+          "_type": "span",
+          "marks": [],
+          "text": "How Do Tokens Affect Response Time?"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "dujq3x9t",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "dujq3x9tc",
+          "_type": "span",
+          "marks": [],
+          "text": "In addition to affecting cost estimation, tokens can also impact response time in AI systems. The number of tokens processed by an AI model can directly affect the speed at which it responds to queries and requests."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "zmqgg6i3",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "zmqgg6i3c",
+          "_type": "span",
+          "marks": [],
+          "text": "This is because processing large numbers of tokens requires significant computational resources, which can slow down system performance. Understanding token usage and calculation can help you optimize your system for faster response times and improved overall efficiency."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "zvagmrvd",
+      "_type": "image",
+      "alt": "Section image 5",
+      "asset": {
+        "_ref": "image-1c4c25a1b90259d463e35ecefa469a015a6713c2-1344x768-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "r3nczduf",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "r3nczdufc",
+          "_type": "span",
+          "marks": [],
+          "text": "Conclusion"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "5k6gmh5j",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "5k6gmh5jc",
+          "_type": "span",
+          "marks": [],
+          "text": "In conclusion, understanding the basics of token usage in AI models can help you make informed decisions about your AI technology implementations. By grasping how tokens are calculated and used by different models, you can better estimate costs, optimize system performance, and ensure that your projects run smoothly and efficiently."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "i0vytc6a",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "i0vytc6ac",
+          "_type": "span",
+          "marks": [],
+          "text": "We hope this article has provided a simplified explanation of the concept of tokens in AI. If you have any questions or need further clarification on any of the topics discussed here, please don't hesitate to reach out. Thank you for reading!"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    }
+  ],
+  "category": "fundamentals",
+  "coverImage": {
+    "_type": "image",
+    "alt": "Mengapa AI Menggunakan Token: Penjelasan yang Sederhana",
+    "asset": {
+      "_ref": "image-b700089409b00d929c154b0c6d9291f4ec20c76c-1344x768-png",
+      "_type": "reference"
+    }
+  },
+  "difficultyLevel": "beginner",
+  "excerpt": "Mengerti cara kerja token dalam model AI, termasuk perhitungan dan penggunaannya",
+  "focusKeyword": "AI tokens explanation simplified",
+  "generatedByPipeline": true,
+  "language": "id",
+  "pipelineVersion": "v1.0",
+  "publishedAt": "2026-06-04T11:35:24.461Z",
+  "qaCheckedAt": "2026-06-04T12:03:58.056Z",
+  "qaFeedback": "metaDescription has 65 chars (needs 140-160)",
+  "qaRetryCount": 0,
+  "qaScore": 88,
+  "readTime": 12,
+  "secondaryKeywords": [
+    "token calculation",
+    "language processing",
+    "cost estimation"
+  ],
+  "seo": {
+    "seoDescription": "Mengapa AI menggunakan token? Bagaimana proses perhitungan token?",
+    "seoTitle": "Token AI: Pengertian dan Cara Kerja"
+  },
+  "slug": {
+    "_type": "slug",
+    "current": "token-ai-penjelasan-sederhana"
+  },
+  "sourceUrl": "https://www.aitoken.com.tw/post/why-ai-uses-tokens",
+  "tags": [
+    "token calculation",
+    "language processing",
+    "cost estimation"
+  ],
+  "title": "Mengapa AI Menggunakan Token: Penjelasan yang Sederhana",
+  "translationKey": "72b20f32-ed32-4842-9683-87518522b082"
+}

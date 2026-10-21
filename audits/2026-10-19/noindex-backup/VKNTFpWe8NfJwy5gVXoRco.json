@@ -1,0 +1,358 @@
+{
+  "_createdAt": "2026-06-04T14:54:42Z",
+  "_id": "VKNTFpWe8NfJwy5gVXoRco",
+  "_rev": "Lu5cRtKnjW1G8cWSaZc2WI",
+  "_type": "post",
+  "_updatedAt": "2026-06-04T15:22:55Z",
+  "articleNumber": 36,
+  "body": [
+    {
+      "_key": "y5v8db5j",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "y5v8db5jc",
+          "_type": "span",
+          "marks": [],
+          "text": "Understanding AI token usage is crucial for anyone utilizing large language models like ChatGPT, Claude, or Gemini. These models operate on a token-based system, where each request is charged based on the number of tokens consumed. The cost can quickly add up, making it essential to track and optimize your token usage. In this article, we'll delve into the basics of AI token usage, covering input tokens, output tokens, and total tokens, as well as common mistakes to avoid."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "ec67tyzl",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "ec67tyzlc",
+          "_type": "span",
+          "marks": [],
+          "text": "The Fundamentals of AI Token Usage"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "my4d4kzs",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "my4d4kzsc",
+          "_type": "span",
+          "marks": [],
+          "text": "At its core, AI token usage is a simple concept. Each time you send a request to a large language model, it consumes a certain number of tokens. The cost per token varies depending on the model and provider, but understanding how tokens work is essential for tracking and optimizing your usage."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "vgc4w2dx",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "vgc4w2dxc",
+          "_type": "span",
+          "marks": [],
+          "text": "To break down AI token usage, we have three key fields: input tokens, output tokens, and total tokens. Input tokens refer to the number of tokens consumed by the model to process a request. Output tokens represent the number of tokens generated as part of the response. Total tokens, on the other hand, account for both input and output tokens."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "joqyjbv8",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "joqyjbv8c",
+          "_type": "span",
+          "marks": [],
+          "text": "To illustrate this concept, let's consider an example. Suppose you're using ChatGPT to generate a 500-word article. The model consumes 1,000 input tokens to process your request and generates 800 output tokens as part of the response. Your total token usage would be 1,800 (1,000 input + 800 output)."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "pkq9u4p0",
+      "_type": "image",
+      "alt": "Section image 1",
+      "asset": {
+        "_ref": "image-85d116e700199ad787163d89806c812cafa74829-1344x768-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "x3sb7x45",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "x3sb7x45c",
+          "_type": "span",
+          "marks": [],
+          "text": "Common Mistakes in Tracking Token Usage"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "0qpsv5ey",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "0qpsv5eyc",
+          "_type": "span",
+          "marks": [],
+          "text": "When tracking token usage, it's essential to recognize common mistakes that can lead to inaccurate calculations. One of the most significant errors is confusing input with output tokens or ignoring context altogether."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "y1xpr6s5",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "y1xpr6s5c",
+          "_type": "span",
+          "marks": [],
+          "text": "For instance, if you're using a model like Claude to generate a summary, you might assume the entire response is an output token. However, the model also consumes input tokens to process your request. Failing to account for these input tokens can lead to underestimating your total token usage."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "2kat9u7s",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "2kat9u7sc",
+          "_type": "span",
+          "marks": [],
+          "text": "Another mistake is ignoring context altogether. When generating text, models often require additional tokens to understand the context and nuances of a particular topic or question. Ignoring this context can result in higher-than-expected token consumption."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "xiypuclg",
+      "_type": "image",
+      "alt": "Section image 2",
+      "asset": {
+        "_ref": "image-8340d1c5830dae9b63a95cbb66102fd57d850f43-1344x768-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "8thu8ohp",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "8thu8ohpc",
+          "_type": "span",
+          "marks": [],
+          "text": "Using the 'Total' Metric for Request Size Estimation"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "pjhjrew5",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "pjhjrew5c",
+          "_type": "span",
+          "marks": [],
+          "text": "To gauge overall request size and identify potential issues, it's essential to use the 'total' metric. This metric accounts for both input and output tokens, providing a more accurate representation of your token usage."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "h7dlrcev",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "h7dlrcevc",
+          "_type": "span",
+          "marks": [],
+          "text": "Suppose you're using Gemini to generate a 1,000-word article. By tracking your total token usage, you can estimate the cost per request and adjust your strategy accordingly. This approach also helps you identify potential issues, such as high input or output token consumption."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "6gczk0kz",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "6gczk0kzc",
+          "_type": "span",
+          "marks": [],
+          "text": "For example, if your total token usage is consistently above 3,000 tokens, it may be worth exploring ways to optimize your requests, such as breaking them down into smaller chunks or adjusting your model settings."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "99df0eed",
+      "_type": "image",
+      "alt": "Section image 3",
+      "asset": {
+        "_ref": "image-5044cdb8c821ab63202d173ede4a82906fbf868d-1344x768-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "mg37ahx0",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "mg37ahx0c",
+          "_type": "span",
+          "marks": [],
+          "text": "Practical Tips for Optimizing AI Token Usage"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "fnk7czi8",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "fnk7czi8c",
+          "_type": "span",
+          "marks": [],
+          "text": "To optimize your AI token usage, follow these practical tips: Break down large requests into smaller chunks to reduce input and output token consumption. Adjust your model settings to minimize token usage without compromising quality."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "piyl1h9j",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "piyl1h9jc",
+          "_type": "span",
+          "marks": [],
+          "text": "Consider using proxy services or API keys to simplify token tracking and optimization. Regularly review your token usage to identify areas for improvement and adjust your strategy accordingly."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "h2oax6a3",
+      "_type": "image",
+      "alt": "Section image 4",
+      "asset": {
+        "_ref": "image-cec202f3a772db03274948c523dba7a5f8ae827b-1344x768-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "lz9fdmp0",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "lz9fdmp0c",
+          "_type": "span",
+          "marks": [],
+          "text": "Conclusion: Taking Control of Your AI Token Usage"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "716tb1kq",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "716tb1kqc",
+          "_type": "span",
+          "marks": [],
+          "text": "By understanding the basics of AI token usage, recognizing common mistakes, and using the 'total' metric for request size estimation, you can take control of your AI token usage. Remember to regularly review your usage, adjust your strategy as needed, and explore ways to optimize your requests."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "ity7d6qv",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "ity7d6qvc",
+          "_type": "span",
+          "marks": [],
+          "text": "Start tracking your AI token usage today and unlock the full potential of large language models like ChatGPT, Claude, and Gemini."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    }
+  ],
+  "category": "fundamentals",
+  "coverImage": {
+    "_type": "image",
+    "alt": "Entendiendo el uso de tokens en inteligencia artificial para principiantes",
+    "asset": {
+      "_ref": "image-8fb56a93fd5000af104604f31af1a10495126696-1344x768-png",
+      "_type": "reference"
+    }
+  },
+  "difficultyLevel": "beginner",
+  "excerpt": "Aprende a rastrear y optimizar el uso de tokens en servicios de IA como ChatGPT, Claude y Gemini. Entender las tres principales categorías de tokens: tokens de entrada, tokens de salida y tokens totales.",
+  "focusKeyword": "AI Token usage tracking and optimization",
+  "generatedByPipeline": true,
+  "language": "es",
+  "pipelineVersion": "v1.0",
+  "publishedAt": "2026-06-04T14:54:42.030Z",
+  "qaCheckedAt": "2026-06-04T15:22:55.068Z",
+  "qaFeedback": "metaDescription has 163 chars (needs 140-160)",
+  "qaRetryCount": 0,
+  "qaScore": 88,
+  "readTime": 10,
+  "secondaryKeywords": [
+    "ChatGPT",
+    "Claude",
+    "Gemini",
+    "OpenAI",
+    "Anthropic"
+  ],
+  "seo": {
+    "seoDescription": "Entendiendo el uso de tokens en inteligencia artificial para principiantes. Rastrear y optimizar el uso de tokens en servicios de IA como ChatGPT, Claude y Gemini.",
+    "seoTitle": "Tokens de inteligencia artificial"
+  },
+  "slug": {
+    "_type": "slug",
+    "current": "uso-de-tokens-en-inteligencia-artificial"
+  },
+  "sourceUrl": "https://www.aitoken.com.tw/post/how-to-check-ai-token-usage",
+  "tags": [
+    "ChatGPT",
+    "Claude",
+    "Gemini",
+    "OpenAI",
+    "Anthropic"
+  ],
+  "title": "Entendiendo el uso de tokens en inteligencia artificial para principiantes",
+  "translationKey": "99993abf-ea76-4202-8dba-889dff255c1e"
+}

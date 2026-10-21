@@ -1,0 +1,396 @@
+{
+  "_createdAt": "2026-06-04T19:58:37Z",
+  "_id": "5bTmGH4csQ2ze7LA77oirD",
+  "_rev": "5bTmGH4csQ2ze7LA77vhNV",
+  "_type": "post",
+  "_updatedAt": "2026-06-04T20:25:59Z",
+  "articleNumber": 83,
+  "body": [
+    {
+      "_key": "4gq2c3vl",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "4gq2c3vlc",
+          "_type": "span",
+          "marks": [],
+          "text": "The increasing adoption of artificial intelligence (AI) has led to the development of various types of tokens, which are used to measure and manage the usage of AI models. However, understanding the basics of AI tokens can be daunting for beginners. In this article, we'll delve into the world of AI tokens, covering their definition, importance, pricing, and cost control strategies."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "65mqsv3y",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "65mqsv3yc",
+          "_type": "span",
+          "marks": [],
+          "text": "What are AI Tokens?"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "x8f8f52c",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "x8f8f52cc",
+          "_type": "span",
+          "marks": [],
+          "text": "AI tokens are digital units that represent a specific amount of processing power or computational resources. They are used to measure the usage of AI models, allowing developers and businesses to track and control costs associated with AI-based operations."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "nal15ql5",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "nal15ql5c",
+          "_type": "span",
+          "marks": [],
+          "text": "Each AI token is assigned a unique value based on its complexity, accuracy, and computational requirements. The more complex or accurate an AI model is, the higher the cost of its corresponding tokens."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "7wr9qjjw",
+      "_type": "image",
+      "alt": "Section image 1",
+      "asset": {
+        "_ref": "image-c38a0d08ca18e036c9122e4b3f49c30016fa04ea-1344x768-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "r7pz5emo",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "r7pz5emoc",
+          "_type": "span",
+          "marks": [],
+          "text": "Calculating AI Token Usage"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "obptc449",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "obptc449c",
+          "_type": "span",
+          "marks": [],
+          "text": "To calculate the number of tokens required for a specific task, you need to understand the input and output formats of your AI model. The input format refers to the type of data used as input for the model, while the output format represents the expected output."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "wu8wq55m",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "wu8wq55mc",
+          "_type": "span",
+          "marks": [],
+          "text": "There are four types of token usage: input tokens, output tokens, cached tokens, and reasoning/thinking tokens. Input tokens represent the initial data fed into the AI model, while output tokens reflect the final results obtained from the model."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "aq55mgy2",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "aq55mgy2c",
+          "_type": "span",
+          "marks": [],
+          "text": "Cached tokens are used when a task is repeated multiple times, allowing the system to store intermediate results in a cache for faster processing. Reasoning/thinking tokens account for the computational resources required for complex tasks such as natural language processing or machine learning."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "r7954gwt",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "r7954gwtc",
+          "_type": "span",
+          "marks": [],
+          "text": "Token Usage Example"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "h6p762td",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "h6p762tdc",
+          "_type": "span",
+          "marks": [],
+          "text": "Suppose you're building an image classification model using a popular AI framework. For simplicity, let's assume the input is 128x128 pixel images and the output is a probability score for each class."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "4rb5xx9x",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "4rb5xx9xc",
+          "_type": "span",
+          "marks": [],
+          "text": "Based on the framework's documentation, the input tokens required for this task are approximately 1000. The output tokens would be around 500, considering the model outputs a probability score for each class."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "xid5h6pq",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "xid5h6pqc",
+          "_type": "span",
+          "marks": [],
+          "text": "Understanding AI Token Pricing Tables"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "tqliiyto",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "tqliiytoc",
+          "_type": "span",
+          "marks": [],
+          "text": "AI token pricing tables provide detailed information about the cost of using specific AI models. These tables typically include the following fields: model name, input price, output price, cache price, and reasoning/thinking tokens."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "jggytkae",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "jggytkaec",
+          "_type": "span",
+          "marks": [],
+          "text": "The model name represents the specific AI model being used. The input price reflects the cost per token for input data, while the output price indicates the cost per token for output results. Cache price accounts for the cost of storing intermediate results in a cache, and reasoning/thinking tokens represent the computational resources required for complex tasks."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "tt4l74t7",
+      "_type": "image",
+      "alt": "Section image 2",
+      "asset": {
+        "_ref": "image-fffbd21e8adf40935e4b39e6a0176b74bd012a3e-1344x768-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "khcsgwcu",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "khcsgwcuc",
+          "_type": "span",
+          "marks": [],
+          "text": "Cost-Saving Strategies for AI Token Users"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "iqj0mu20",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "iqj0mu20c",
+          "_type": "span",
+          "marks": [],
+          "text": "To optimize costs associated with AI tokens, follow these strategies: optimize input and output formats, utilize caching mechanisms, and select the right model based on your specific needs."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "3dx6799q",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "3dx6799qc",
+          "_type": "span",
+          "marks": [],
+          "text": "Optimizing input and output formats can significantly reduce token usage. For example, if you're working with high-resolution images, consider reducing the resolution to decrease input tokens required."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "l2tv7o0z",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "l2tv7o0zc",
+          "_type": "span",
+          "marks": [],
+          "text": "Caching Mechanisms Example"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "40gfvnme",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "40gfvnmec",
+          "_type": "span",
+          "marks": [],
+          "text": "Suppose you have a machine learning model that requires 1000 reasoning/thinking tokens for each prediction. You can store the intermediate results in a cache, reducing the number of tokens required to 500."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "alwol2tt",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "alwol2ttc",
+          "_type": "span",
+          "marks": [],
+          "text": "Conclusion"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "u9ajf3nh",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "u9ajf3nhc",
+          "_type": "span",
+          "marks": [],
+          "text": "In conclusion, understanding AI tokens and their usage is crucial for efficient AI development. By grasping the basics of AI token pricing and optimization strategies, you can reduce costs associated with AI-based operations."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "i99oxvs5",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "i99oxvs5c",
+          "_type": "span",
+          "marks": [],
+          "text": "To get started, calculate your AI token usage based on input and output formats, then optimize costs using caching mechanisms and selecting the right model. Remember to continually monitor and adjust your strategy as your project evolves."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "xgumcvks",
+      "_type": "image",
+      "alt": "Section image 3",
+      "asset": {
+        "_ref": "image-b5aa3e19b53f6f1bfcf2ddd885afd9b866f59018-1344x768-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "52piy70b",
+      "_type": "image",
+      "alt": "Section image 4",
+      "asset": {
+        "_ref": "image-4c18574172104e7b1ef1ecad802a5775c080687b-1344x768-png",
+        "_type": "reference"
+      }
+    }
+  ],
+  "category": "fundamentals",
+  "coverImage": {
+    "_type": "image",
+    "alt": "Memahami Token AI: Panduan Awal untuk Dasar-dasar dan Pengendalian Biaya",
+    "asset": {
+      "_ref": "image-f180f1c74f4b981166e3d2a6ed27b2e4092b942a-1344x768-png",
+      "_type": "reference"
+    }
+  },
+  "difficultyLevel": "beginner",
+  "excerpt": "Mengenal dasar-dasar token AI dan strategi penghematan biaya untuk pemula",
+  "focusKeyword": "AI Token basics cost control",
+  "generatedByPipeline": true,
+  "language": "id",
+  "pipelineVersion": "v1.0",
+  "publishedAt": "2026-06-04T19:58:32.839Z",
+  "qaCheckedAt": "2026-06-04T20:25:54.674Z",
+  "qaFeedback": "metaDescription has 67 chars (needs 140-160)",
+  "qaRetryCount": 0,
+  "qaScore": 88,
+  "readTime": 10,
+  "secondaryKeywords": [
+    "AI token calculation",
+    "AI token pricing",
+    "cost optimization strategies"
+  ],
+  "seo": {
+    "seoDescription": "Memahami dasar-dasar token AI dan mengoptimalkan biaya dengan mudah",
+    "seoTitle": "Panduan Awal Token AI"
+  },
+  "slug": {
+    "_type": "slug",
+    "current": "memahami-token-ai-pengendalian-biaya"
+  },
+  "sourceUrl": "https://www.aitoken.com.tw/post/ai-token-beginner-guide-from-basics-to-cost-control",
+  "tags": [
+    "AI token calculation",
+    "AI token pricing",
+    "cost optimization strategies"
+  ],
+  "title": "Memahami Token AI: Panduan Awal untuk Dasar-dasar dan Pengendalian Biaya",
+  "translationKey": "2ac34391-5e51-4e7d-b0d9-2bb033e2b8bb"
+}

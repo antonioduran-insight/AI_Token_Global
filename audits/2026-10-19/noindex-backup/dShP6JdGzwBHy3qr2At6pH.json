@@ -1,0 +1,396 @@
+{
+  "_createdAt": "2026-06-04T20:35:05Z",
+  "_id": "dShP6JdGzwBHy3qr2At6pH",
+  "_rev": "nWdHZ1zqJ7jFG6zlWdra4r",
+  "_type": "post",
+  "_updatedAt": "2026-10-15T08:37:06Z",
+  "articleNumber": 89,
+  "body": [
+    {
+      "_key": "5wvlvfsj",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "5wvlvfsjc",
+          "_type": "span",
+          "marks": [],
+          "text": "Buying AI tokens can seem daunting, especially for those new to artificial intelligence (AI) technology. The concept of tokens might be unfamiliar, leading to confusion about how they work and what benefits they offer. In this article, we'll explore the world of AI tokens, including pricing models, API billing, and token usage. By the end of this guide, you'll have a solid understanding of how to buy and use AI tokens effectively for personal use."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "rp2qmg1x",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "rp2qmg1xc",
+          "_type": "span",
+          "marks": [],
+          "text": "Understanding AI Tokens"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "mynv1su2",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "mynv1su2c",
+          "_type": "span",
+          "marks": [],
+          "text": "AI tokens are the small pieces of text that AI models read and write, and API services bill you by how many you use. Think of them as a currency that allows you to use various AI models and tools provided by platforms. Platforms have different billing and credits systems, making it confusing for beginners to understand how token-based pricing works."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "f9ai9hem",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "f9ai9hemc",
+          "_type": "span",
+          "marks": [],
+          "text": "To clarify the concept, imagine buying a subscription to a streaming service. You pay a monthly fee, which grants you access to a library of content. Similarly, AI tokens serve as your currency when interacting with AI platforms. When you purchase tokens, you're essentially paying for the right to use specific AI services within that platform."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "q25dcuc2",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "q25dcuc2c",
+          "_type": "span",
+          "marks": [],
+          "text": "Tokens vs. API Keys"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "sv528p7u",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "sv528p7uc",
+          "_type": "span",
+          "marks": [],
+          "text": "It's essential to differentiate between AI tokens and API keys. While both are used to access AI services, they serve different purposes. Tokens are the units your usage is measured and billed in, whereas API keys identify and authenticate your requests; usage made with a key is billed to your account."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "cia0mzfk",
+      "_type": "image",
+      "alt": "Section image 1",
+      "asset": {
+        "_ref": "image-620cef8789ddd3efd50d32322e3cb7e32cd86bef-1344x768-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "gf6ye960",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "gf6ye960c",
+          "_type": "span",
+          "marks": [],
+          "text": "Pricing Models for AI Tokens"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "rrfl7wx8",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "rrfl7wx8c",
+          "_type": "span",
+          "marks": [],
+          "text": "Platforms use various pricing models for AI tokens, including flat rates, tiered systems, and pay-as-you-go. Each model has its pros and cons, making it crucial to understand the specifics before choosing a platform."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "cmow8c1d",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "cmow8c1dc",
+          "_type": "span",
+          "marks": [],
+          "text": "Let's consider an example. Suppose you're interested in using a text-to-image model. The platform might charge, for example, $10 per 1 million tokens, and sell that usage in bundles of different sizes. If you plan to use the service extensively, compare the price per million tokens, not the bundle size."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "ujwgen9n",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "ujwgen9nc",
+          "_type": "span",
+          "marks": [],
+          "text": "However, if you're unsure about the frequency of your usage, a pay-as-you-go model would be more suitable. This way, you only pay for the tokens you need, eliminating unnecessary expenses."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "4hkoi5ew",
+      "_type": "image",
+      "alt": "Section image 2",
+      "asset": {
+        "_ref": "image-ea1c18b58051940c18e0488695b1310fcddbf30b-1344x768-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "hcqzkoab",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "hcqzkoabc",
+          "_type": "span",
+          "marks": [],
+          "text": "API Billing and Credits Systems"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "kcpy7ea0",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "kcpy7ea0c",
+          "_type": "span",
+          "marks": [],
+          "text": "Platforms have unique billing and credits systems, which can be overwhelming for beginners. Some platforms offer a credit-based system, where you purchase tokens or credits in advance. Others use a token-based system, where you pay for each request separately."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "94vhyrzk",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "94vhyrzkc",
+          "_type": "span",
+          "marks": [],
+          "text": "To illustrate this concept, imagine a platform that charges, for example, $10 per 1 million tokens. If you need to make 100 requests using the text-to-image model, and each request uses 2,000 tokens, your total cost would be $2 (200,000 tokens x $10 per 1 million tokens)."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "lq8wnara",
+      "_type": "image",
+      "alt": "Section image 3",
+      "asset": {
+        "_ref": "image-29d6acc440780b05bdee78beac1017b4b5f249bd-1344x768-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "mi6nf6wt",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "mi6nf6wtc",
+          "_type": "span",
+          "marks": [],
+          "text": "Choosing the Right Platform"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "wl7slhso",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "wl7slhsoc",
+          "_type": "span",
+          "marks": [],
+          "text": "With so many platforms offering AI token-based pricing, selecting the right one can be challenging. Consider factors such as pricing models, API billing systems, and available tools when making your decision."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "u2gx7sq9",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "u2gx7sq9c",
+          "_type": "span",
+          "marks": [],
+          "text": "Some platforms cater to beginners, offering a more straightforward approach to token-based pricing. Look for platforms with clear documentation, intuitive interfaces, and comprehensive support resources."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "neakjqcy",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "neakjqcyc",
+          "_type": "span",
+          "marks": [],
+          "text": "Comparing Platform Options"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "cvx3nxea",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "cvx3nxeac",
+          "_type": "span",
+          "marks": [],
+          "text": "Let's compare two popular platforms: Option A offers a flat rate of, for example, $10 per 1 million tokens, while Option B uses a tiered system with increasing prices as you consume more tokens. If you expect to use the service frequently, Option A might be the better choice."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "m8jb4ufi",
+      "_type": "image",
+      "alt": "Section image 4",
+      "asset": {
+        "_ref": "image-cc45423470e63b55a5de3bb4004e61b59cd298fb-1344x768-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "kpw67wgl",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "kpw67wglc",
+          "_type": "span",
+          "marks": [],
+          "text": "Conclusion and Next Steps"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "gt3idvo1",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "gt3idvo1c",
+          "_type": "span",
+          "marks": [],
+          "text": "Buying AI tokens for personal use requires understanding the basics of token-based pricing, API billing systems, and available platforms. By following this guide, you'll be well-equipped to navigate the world of AI tokens and make informed decisions about your usage."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "aynxh0e0",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "aynxh0e0c",
+          "_type": "span",
+          "marks": [],
+          "text": "To get started, research different platforms and their pricing models. Consider your specific needs and choose a platform that aligns with your expectations. Remember, it's essential to comprehend the underlying concepts before making any significant investments."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "qba6atr1",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "qba6atr1c",
+          "_type": "span",
+          "marks": [],
+          "text": "In conclusion, buying AI tokens is not as daunting as it seems. By grasping the fundamentals of token-based pricing and API billing systems, you'll be able to harness the power of AI technology for personal use. Start your journey today!"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    }
+  ],
+  "category": "fundamentals",
+  "coverImage": {
+    "_type": "image",
+    "alt": "Compre tokens de IA para iniciados",
+    "asset": {
+      "_ref": "image-0401f4e3695c2057b886219370dd7daacc84da7a-1344x768-png",
+      "_type": "reference"
+    }
+  },
+  "difficultyLevel": "beginner",
+  "excerpt": "Si estás empezando a explorar la tecnología de inteligencia artificial, es probable que hayas oído hablar de tokens de IA. Pero ¿qué son exactamente y cómo comprarlos?",
+  "focusKeyword": "buying ai tokens for personal use",
+  "generatedByPipeline": true,
+  "language": "es",
+  "pipelineVersion": "v1.0",
+  "publishedAt": "2026-06-04T20:35:01.140Z",
+  "qaCheckedAt": "2026-06-04T21:01:23.401Z",
+  "qaFeedback": "metaDescription has 113 chars (needs 140-160)",
+  "qaRetryCount": 0,
+  "qaScore": 88,
+  "readTime": 12,
+  "secondaryKeywords": [
+    "AI Token pricing",
+    "API billing and credits",
+    "token-based pricing"
+  ],
+  "seo": {
+    "seoDescription": "Descubre cómo comprar tokens de IA para su uso personal y comprende mejor el mundo de la inteligencia artificial.",
+    "seoTitle": "¿Qué son los tokens de IA?"
+  },
+  "slug": {
+    "_type": "slug",
+    "current": "compre-tokens-de-ia-para-iniciados"
+  },
+  "sourceUrl": "https://www.aitoken.com.tw/post/how-to-buy-ai-token",
+  "tags": [
+    "AI Token pricing",
+    "API billing and credits",
+    "token-based pricing"
+  ],
+  "title": "Compre tokens de IA para iniciados",
+  "translationKey": "8f70c2d8-0d37-4c9e-a6a9-7731857733e7"
+}

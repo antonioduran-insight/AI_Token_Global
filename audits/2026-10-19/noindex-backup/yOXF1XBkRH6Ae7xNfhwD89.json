@@ -1,0 +1,419 @@
+{
+  "_createdAt": "2026-06-04T19:28:44Z",
+  "_id": "yOXF1XBkRH6Ae7xNfhwD89",
+  "_rev": "5bTmGH4csQ2ze7LA77nlb7",
+  "_type": "post",
+  "_updatedAt": "2026-06-04T19:51:40Z",
+  "articleNumber": 80,
+  "body": [
+    {
+      "_key": "jujtgbfj",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "jujtgbfjc",
+          "_type": "span",
+          "marks": [],
+          "text": "Understanding Claude API usage and cost metrics is crucial for developers who want to harness the power of this cutting-edge language model. But with so many variables at play, it can be overwhelming to navigate the platform's pricing structure and accurately track your usage. In this article, we'll break down the key concepts you need to know and provide actionable insights on how to optimize your usage for maximum efficiency. By the end of this guide, you'll have a clear understanding of Claude API pricing and be able to make informed decisions about your project's resource allocation."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "6gbyth29",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "6gbyth29c",
+          "_type": "span",
+          "marks": [],
+          "text": "Claude API Pricing Basics"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "4qrn3zji",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "4qrn3zjic",
+          "_type": "span",
+          "marks": [],
+          "text": "The first thing you need to know is that Claude API usage is measured in credits, not tokens. This might seem counterintuitive at first, but it's essential for understanding the pricing structure and optimizing your usage. Each credit represents a unit of computation, and the cost per credit varies depending on the specific model and tier you're using."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "n4ali1hl",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "n4ali1hlc",
+          "_type": "span",
+          "marks": [],
+          "text": "To give you a better idea, let's say you're using the Large Language Model (LLM) tier, which costs $0.006 per credit. If your usage metrics show that you've consumed 10,000 credits in a month, your total cost would be $60."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "imigb9mb",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "imigb9mbc",
+          "_type": "span",
+          "marks": [],
+          "text": "Now that we've covered the basics of Claude API pricing, let's dive deeper into the four key fields that make up your usage metrics: input tokens, output tokens, cache creation, and cache read. These fields are essential for understanding how your project is consuming credits and making informed decisions about resource allocation."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "k09marcj",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "k09marcjc",
+          "_type": "span",
+          "marks": [],
+          "text": "Input Tokens"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "uy5cugyc",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "uy5cugycc",
+          "_type": "span",
+          "marks": [],
+          "text": "Input tokens refer to the number of characters or bytes that are sent to the Claude API for processing. This includes text inputs, audio inputs, and other forms of data that are used to generate responses."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "phfurn1a",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "phfurn1ac",
+          "_type": "span",
+          "marks": [],
+          "text": "For example, let's say you're using the Claude API to generate a 1,000-word article based on user input. The number of input tokens would be equivalent to the total characters or bytes sent to the API for processing."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "bbxu7rmn",
+      "_type": "image",
+      "alt": "Section image 1",
+      "asset": {
+        "_ref": "image-af6055cfbc6a50932eecc19e69877f146edd9485-1344x768-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "6efuyekh",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "6efuyekhc",
+          "_type": "span",
+          "marks": [],
+          "text": "Understanding Your Usage Metrics"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "92z18z8x",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "92z18z8xc",
+          "_type": "span",
+          "marks": [],
+          "text": "To get a clear picture of your usage metrics, you'll need to access the Claude API dashboard and navigate to the billing page. Here, you'll find a breakdown of your prepaid credits, auto-reload settings, and credit balance."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "d61zdoav",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "d61zdoavc",
+          "_type": "span",
+          "marks": [],
+          "text": "The billing page also provides detailed information about your usage by model, date, and API key. This allows you to track your usage over time and make adjustments as needed to stay within budget."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "epoyb3si",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "epoyb3sic",
+          "_type": "span",
+          "marks": [],
+          "text": "Let's take a closer look at the Usage page, which provides a detailed breakdown of your API usage by model, date, and API key. This is where you can really get into the nitty-gritty details of your usage metrics and identify areas for optimization."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "t2mege7r",
+      "_type": "image",
+      "alt": "Section image 2",
+      "asset": {
+        "_ref": "image-fd158c82e66af4b67dacfff07d20ec5dac143b7b-1344x768-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "4h2idb4z",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "4h2idb4zc",
+          "_type": "span",
+          "marks": [],
+          "text": "Pricing Tiers and Options"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "jmys5a9v",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "jmys5a9vc",
+          "_type": "span",
+          "marks": [],
+          "text": "Claude API offers several pricing tiers, each with its own set of features and limitations. The Free tier is perfect for small-scale projects or prototyping, while the Standard and Enterprise tiers offer more advanced features and higher credit limits."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "s7jtzbdz",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "s7jtzbdzc",
+          "_type": "span",
+          "marks": [],
+          "text": "To give you a better idea of the pricing options, let's compare the Standard and Enterprise tiers. The Standard tier costs $0.006 per credit, while the Enterprise tier costs $0.005 per credit. However, the Enterprise tier also comes with additional features like priority support and dedicated account management."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "210svd26",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "210svd26c",
+          "_type": "span",
+          "marks": [],
+          "text": "Pricing Tier Comparison"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "jzgx0h4z",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "jzgx0h4zc",
+          "_type": "span",
+          "marks": [],
+          "text": "Here's a breakdown of the pricing tiers and their corresponding costs: Free ($0.00 per credit), Standard ($0.006 per credit), Enterprise ($0.005 per credit)."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "f54o2lj3",
+      "_type": "image",
+      "alt": "Section image 3",
+      "asset": {
+        "_ref": "image-e2ada2a34f79556a8d94b317290159a4a6f02479-1344x768-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "k14w8r2z",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "k14w8r2zc",
+          "_type": "span",
+          "marks": [],
+          "text": "Best Practices for Optimizing Usage"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "23nqmtjv",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "23nqmtjvc",
+          "_type": "span",
+          "marks": [],
+          "text": "Now that you have a solid understanding of Claude API pricing and usage metrics, it's time to implement some best practices for optimizing your usage. Here are a few tips to get you started: monitor your usage regularly, adjust your resource allocation as needed, and take advantage of the free tier for small-scale projects or prototyping."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "h0fb7dzn",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "h0fb7dznc",
+          "_type": "span",
+          "marks": [],
+          "text": "By following these best practices, you can ensure that your project stays within budget while maximizing its potential. Remember to always keep an eye on your usage metrics and adjust your resource allocation accordingly."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "g513icm8",
+      "_type": "image",
+      "alt": "Section image 4",
+      "asset": {
+        "_ref": "image-8b430feda4cd3effd8a041f59f827616539c9f82-1344x768-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "28f04gqc",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "28f04gqcc",
+          "_type": "span",
+          "marks": [],
+          "text": "Conclusion"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "ll1qu42h",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "ll1qu42hc",
+          "_type": "span",
+          "marks": [],
+          "text": "In conclusion, understanding Claude API pricing and usage metrics is a crucial step in harnessing the power of this cutting-edge language model. By following the best practices outlined above and staying on top of your usage metrics, you can ensure that your project stays within budget while maximizing its potential."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "zsyd0r1q",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "zsyd0r1qc",
+          "_type": "span",
+          "marks": [],
+          "text": "Remember to always monitor your usage regularly and adjust your resource allocation as needed. With these insights, you'll be well on your way to optimizing your Claude API usage and achieving your goals."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "gnox69kq",
+      "_type": "image",
+      "alt": "Section image 5",
+      "asset": {
+        "_ref": "image-9c606618a9126c80a764a582b91249978a781705-1344x768-png",
+        "_type": "reference"
+      }
+    }
+  ],
+  "category": "fundamentals",
+  "coverImage": {
+    "_type": "image",
+    "alt": "Mengerti Penggunaan dan Biaya Metrik API Claude",
+    "asset": {
+      "_ref": "image-7ec799dc52fb36bb06244d5903575eb2d62f7f2f-1344x768-png",
+      "_type": "reference"
+    }
+  },
+  "difficultyLevel": "intermediate",
+  "excerpt": "Pahami cara menghitung biaya penggunaan API Claude dengan mudah. Pelajari tentang metrik penggunaan dan biaya, serta bagaimana membaca hasilnya.",
+  "focusKeyword": "Claude API usage and cost metrics explained for beginners",
+  "generatedByPipeline": true,
+  "language": "id",
+  "pipelineVersion": "v1.0",
+  "publishedAt": "2026-06-04T19:28:44.317Z",
+  "qaCheckedAt": "2026-06-04T19:51:36.209Z",
+  "qaFeedback": "metaDescription has 107 chars (needs 140-160)",
+  "qaRetryCount": 0,
+  "qaScore": 88,
+  "readTime": 12,
+  "secondaryKeywords": [
+    "Claude API pricing",
+    "AI token counting",
+    "Anthropic official documentation"
+  ],
+  "seo": {
+    "seoDescription": "Pelajari cara menghitung biaya penggunaan API Claude untuk memaksimalkan efisiensi pengembangan aplikasi AI",
+    "seoTitle": "Mengerti Biaya Penggunaan API Claude"
+  },
+  "slug": {
+    "_type": "slug",
+    "current": "mengerti-penggunaan-biaya-metrik-api-claude"
+  },
+  "sourceUrl": "https://www.aitoken.com.tw/post/how-to-read-claude-api-usage-dashboard-and-cost-metrics",
+  "tags": [
+    "Claude API pricing",
+    "AI token counting",
+    "Anthropic official documentation"
+  ],
+  "title": "Mengerti Penggunaan dan Biaya Metrik API Claude",
+  "translationKey": "407fbd4f-887d-445a-8cd2-b1037a0fe133"
+}

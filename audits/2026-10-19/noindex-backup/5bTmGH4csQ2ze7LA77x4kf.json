@@ -1,0 +1,421 @@
+{
+  "_createdAt": "2026-06-04T20:33:03Z",
+  "_id": "5bTmGH4csQ2ze7LA77x4kf",
+  "_rev": "dShP6JdGzwBHy3qr2Aw0nj",
+  "_type": "post",
+  "_updatedAt": "2026-06-04T21:00:46Z",
+  "articleNumber": 87,
+  "body": [
+    {
+      "_key": "5ix5r7mg",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "5ix5r7mgc",
+          "_type": "span",
+          "marks": [],
+          "text": "As the use of artificial intelligence (AI) continues to grow, understanding how to effectively utilize AI tokens is becoming increasingly important. With the ability to process vast amounts of data and provide insights that were previously unimaginable, AI has become an essential tool for businesses and individuals alike. However, navigating the complex world of AI token usage can be daunting, especially for those new to the field. In this article, we will provide a comprehensive guide on how to use AI tokens effectively, including establishing API keys, sending requests, calculating input and output tokens, and analyzing pricing for AI token cost estimation."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "uuvylh0v",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "uuvylh0vc",
+          "_type": "span",
+          "marks": [],
+          "text": "Establishing an API Key"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "9sjdr58q",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "9sjdr58qc",
+          "_type": "span",
+          "marks": [],
+          "text": "To begin using AI tokens, you will need to establish an API key. An API key is a unique identifier that allows you to access the AI platform and send requests for processing. To obtain an API key, you will typically need to create an account on the AI platform's website or through their mobile app."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "uyb9pr0i",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "uyb9pr0ic",
+          "_type": "span",
+          "marks": [],
+          "text": "Once you have created your account and obtained your API key, you can begin sending requests to the AI platform. This process is typically straightforward, but it's essential to note that some platforms may require additional setup or configuration before you can start using their services."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "hdrmilvb",
+      "_type": "image",
+      "alt": "Section image 1",
+      "asset": {
+        "_ref": "image-0954f9ee2c0484d6b91747d8a2d7af1fbc22c687-1344x768-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "kg90t4rl",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "kg90t4rlc",
+          "_type": "span",
+          "marks": [],
+          "text": "Sending Requests and Calculating Input Tokens"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "7vaomfd9",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "7vaomfd9c",
+          "_type": "span",
+          "marks": [],
+          "text": "Once you have established your API key, you can begin sending requests to the AI platform. This typically involves sending a JSON object containing the input data to be processed, along with any relevant parameters or settings."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "1toti37z",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "1toti37zc",
+          "_type": "span",
+          "marks": [],
+          "text": "The AI platform will then process the input data and return a result in the form of an output token. The output token contains the processed information, which can be used for various purposes such as analysis, prediction, or decision-making."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "bd8zanvo",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "bd8zanvoc",
+          "_type": "span",
+          "marks": [],
+          "text": "When calculating input tokens, it's essential to consider the size and complexity of the data being sent. This will help ensure that you are sending the correct amount of data and avoiding any potential errors or issues with processing."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "f0dl7fck",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "f0dl7fckc",
+          "_type": "span",
+          "marks": [],
+          "text": "Understanding Input Token Size"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "qvd7a5xf",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "qvd7a5xfc",
+          "_type": "span",
+          "marks": [],
+          "text": "When it comes to input token size, there are a few things to consider. First, the size of the data being sent should be proportional to the complexity of the task being performed. For example, if you're sending a large dataset for processing, it's essential to ensure that your API key has sufficient tokens available."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "jdfhb8ib",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "jdfhb8ibc",
+          "_type": "span",
+          "marks": [],
+          "text": "To calculate input token size, you can use the following formula: Input Token Size = (Data Size x Complexity) / Speed. By understanding and applying this formula, you can ensure that you're sending the correct amount of data and avoiding any potential errors or issues with processing."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "8u1lz8oh",
+      "_type": "image",
+      "alt": "Section image 2",
+      "asset": {
+        "_ref": "image-e3c9c8895b26b37344b1fec2f00c407f33b70b50-1344x768-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "idhafupa",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "idhafupac",
+          "_type": "span",
+          "marks": [],
+          "text": "Calculating Output Tokens"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "hsw5kiy2",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "hsw5kiy2c",
+          "_type": "span",
+          "marks": [],
+          "text": "When calculating output tokens, it's essential to consider the size and complexity of the data being processed. This will help ensure that you're receiving the correct amount of data and avoiding any potential errors or issues with processing."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "kuyfz6fj",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "kuyfz6fjc",
+          "_type": "span",
+          "marks": [],
+          "text": "To calculate output tokens, you can use the following formula: Output Token Size = (Data Size x Complexity) / Speed. By understanding and applying this formula, you can ensure that you're receiving the correct amount of data and avoiding any potential errors or issues with processing."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "4ui6pq1e",
+      "_type": "image",
+      "alt": "Section image 3",
+      "asset": {
+        "_ref": "image-e46459ca107c877ddc78c4c4c2bcd9f4194423a2-1344x768-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "fbhgcfp7",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "fbhgcfp7c",
+          "_type": "span",
+          "marks": [],
+          "text": "Analyzing Pricing for AI Token Cost Estimation"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "elpbeu8k",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "elpbeu8kc",
+          "_type": "span",
+          "marks": [],
+          "text": "When it comes to analyzing pricing for AI token cost estimation, there are a few things to consider. First, you'll need to understand the pricing structure of the AI platform you're using."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "7yrp4ox1",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "7yrp4ox1c",
+          "_type": "span",
+          "marks": [],
+          "text": "Most AI platforms charge based on the number of tokens used, with prices varying depending on the complexity and size of the data being processed."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "4lqnj2ku",
+      "_type": "image",
+      "alt": "Section image 4",
+      "asset": {
+        "_ref": "image-f694776e6727e6766ef8d79d673390e171f699ba-1344x768-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "l05xthbz",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "l05xthbzc",
+          "_type": "span",
+          "marks": [],
+          "text": "Best Practices for AI Token Usage"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "f44cixzr",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "f44cixzrc",
+          "_type": "span",
+          "marks": [],
+          "text": "To get the most out of your AI tokens, there are a few best practices to keep in mind. First, it's essential to understand the pricing structure and calculate your costs accurately."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "xzgni57s",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "xzgni57sc",
+          "_type": "span",
+          "marks": [],
+          "text": "Secondly, ensure that you're sending the correct amount of data and avoiding any potential errors or issues with processing."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "8pobrj6u",
+      "_type": "image",
+      "alt": "Section image 5",
+      "asset": {
+        "_ref": "image-e951e02f8c23ac7c92bf2c67c9d186aa86d0a9c0-1344x768-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "xlxck9cx",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "xlxck9cxc",
+          "_type": "span",
+          "marks": [],
+          "text": "Conclusion"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "ovnr0eq8",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "ovnr0eq8c",
+          "_type": "span",
+          "marks": [],
+          "text": "In conclusion, understanding how to use AI tokens effectively is crucial for businesses and individuals looking to harness the power of artificial intelligence. By following the steps outlined in this article and applying the best practices, you can ensure that you're getting the most out of your AI tokens and avoiding any potential errors or issues with processing."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "1fhd9c66",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "1fhd9c66c",
+          "_type": "span",
+          "marks": [],
+          "text": "Remember, accurate token usage is essential for maximizing the benefits of AI. With the right approach and tools, you can unlock the full potential of artificial intelligence and take your business to the next level."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    }
+  ],
+  "category": "fundamentals",
+  "coverImage": {
+    "_type": "image",
+    "alt": "Cara Menggunakan Token AI untuk Pemula",
+    "asset": {
+      "_ref": "image-11dd824d524d9ff447b15b8757dfdc650c2c2792-1344x768-png",
+      "_type": "reference"
+    }
+  },
+  "difficultyLevel": "beginner",
+  "excerpt": "Pelajari cara menggunakan token AI dengan efektif dan efisien untuk memecahkan masalah pengolahan data.",
+  "focusKeyword": "AI token usage guide for beginners",
+  "generatedByPipeline": true,
+  "language": "id",
+  "pipelineVersion": "v1.0",
+  "publishedAt": "2026-06-04T20:32:59.046Z",
+  "qaCheckedAt": "2026-06-04T21:00:42.187Z",
+  "qaFeedback": "metaDescription has 68 chars (needs 140-160)",
+  "qaRetryCount": 0,
+  "qaScore": 88,
+  "readTime": 10,
+  "secondaryKeywords": [
+    "AI token",
+    "API key",
+    "input token",
+    "output token"
+  ],
+  "seo": {
+    "seoDescription": "Cara menghitung, menggunakan, dan menganalisis token AI untuk pemula",
+    "seoTitle": "Menggunakan Token AI dengan Baik dan Benar"
+  },
+  "slug": {
+    "_type": "slug",
+    "current": "cara-menggunakan-token-ai-pemula"
+  },
+  "sourceUrl": "https://www.aitoken.com.tw/post/how-to-use-ai-token",
+  "tags": [
+    "AI token",
+    "API key",
+    "input token",
+    "output token"
+  ],
+  "title": "Cara Menggunakan Token AI untuk Pemula",
+  "translationKey": "b3061fd5-efa4-4438-8fb1-590f17d1a55d"
+}

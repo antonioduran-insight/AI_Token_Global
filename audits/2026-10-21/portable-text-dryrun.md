@@ -1,6 +1,6 @@
-# Portable-text fixes DRY RUN: 2026-10-21T09:57:31.503Z
+# Portable-text fixes DRY RUN: 2026-10-21T10:11:53.071Z
 
-Exported 51 imagePrompt block(s) to `audits/2026-10-21/image-prompts.csv`.
+Export `audits/2026-10-21/image-prompts.csv` already exists; kept as is.
 
 ## Plan: 51 imagePrompt deletion(s) in 12 doc(s) · 3 block split(s)
 
@@ -20,7 +20,7 @@ Exported 51 imagePrompt block(s) to `audits/2026-10-21/image-prompts.csv`.
 - B `VdSyE50eHa1ZkhVq3P8fQs` /es/blog/tokens-de-inteligencia-artificial-basico/: block `bgy4aea5` → 3 bullets: "Tier 1: 10 tokens/second ($0.01/token)" · "Tier 2: 100 tokens/second ($0.005/token)" · "Tier 3: 1,000 tokens/second ($0.001/token)"
 - B `VdSyE50eHa1ZkhVq3P8fpx` /id/blog/token-ai-basik/: block `bgy4aea5` → 3 bullets: "Tier 1: 10 tokens/second ($0.01/token)" · "Tier 2: 100 tokens/second ($0.005/token)" · "Tier 3: 1,000 tokens/second ($0.001/token)"
 
-## Guard skips: 0 (drafts not checked: no token in this dry run; --apply always checks)
+## Guard skips: 0
 
 ## Would write: 15 patch(es) in ONE transaction, each pinned to the _rev read now
 

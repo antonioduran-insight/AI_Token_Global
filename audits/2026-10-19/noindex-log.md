@@ -1,0 +1,383 @@
+# Interim noindex APPLY: 2026-10-21T09:09:08.220Z
+
+Table: `audits/2026-10-19/index-diet.csv` — 773 rows, 169 NOINDEX_INTERIM. Only those rows are read below.
+
+## Plan: set seo.noindex = true on the published document
+
+| | es | id | Total | 28d impressions | 28d clicks |
+|---|---:|---:|---:|---:|---:|
+| NOINDEX_INTERIM rows | 80 | 89 | 169 | | |
+| **Would write** | 80 | 89 | 169 | 207 | 0 |
+
+Untouched: KEEP 449 · PROTECTED_TRANSLATE_FIRST 34 · RETIRED_S8 118 · UNPUBLISHED_HYGIENE 3
+
+## Guard skips: 0
+
+<details><summary>Documents</summary>
+
+- `5bTmGH4csQ2ze7LA77fvwH` /es/blog/ai-api-plataformas-vs-herramientas-de-chat/ — seo.noindex unset → true
+- `VdSyE50eHa1ZkhVq3Q27kK` /es/blog/ai-api-risks-human-resources-data-management/ — seo.noindex unset → true
+- `VKNTFpWe8NfJwy5gVX5yCA` /es/blog/ai-apis-data-usage-policies/ — seo.noindex unset → true
+- `dShP6JdGzwBHy3qr2B1mkx` /es/blog/ai-industria-tendencias-infrastructure-competition/ — seo.noindex unset → true
+- `uomub2hTG94T3nqbFXNtvn` /es/blog/ai-token-counting-sistema-instruccion/ — seo.noindex unset → true
+- `VdSyE50eHa1ZkhVq3P7bjm` /es/blog/ai-token-vs-puntos-precio-comparacion/ — seo.noindex unset → true
+- `VdSyE50eHa1ZkhVq3P6xWl` /es/blog/ai-tokens-explicacion-simplificada/ — seo.noindex unset → true
+- `7Ahi24M7FaSDiVrQpbdwuX` /es/blog/angular-17-actualizaciones-impacto-optimizacion-costos-api-ia/ — seo.noindex unset → true
+- `cxG6WGqtby4sD0hmX2vFZU` /es/blog/calculando-costos-de-token-ai-guia-para-principiantes/ — seo.noindex unset → true
+- `8VP0t1uN4XaL0VxggMGLy6` /es/blog/chrome-ai-api-costos/ — seo.noindex unset → true
+- `GWcybyvSzKo1HK4vzi7fxo` /es/blog/chrome-extension-ai-costs/ — seo.noindex unset → true
+- `5bTmGH4csQ2ze7LA77oT6z` /es/blog/claud-code-token-cost-optimizacion/ — seo.noindex unset → true
+- `PXBreekz6ug9jLuKVxJ39Y` /es/blog/claude-api-costos-modelos-permisos/ — seo.noindex unset → true
+- `lT0MJhwbFtcMofmR8IiIHn` /es/blog/claude-api-usos-cliente-soporte-contenido/ — seo.noindex unset → true
+- `PXBreekz6ug9jLuKVxUBfT` /es/blog/claudef-api-vs-claude/ — seo.noindex unset → true
+- `PXBreekz6ug9jLuKVxJfdH` /es/blog/claudes-api-vs-chat-version-uso/ — seo.noindex unset → true
+- `lT0MJhwbFtcMofmR8HwUAJ` /es/blog/claudetokenprecioguia/ — seo.noindex unset → true
+- `PqAgSgFWPa4GzheZzHUyEP` /es/blog/como-calcular-costo-tokens-ia-empresa-2024/ — seo.noindex unset → true
+- `WIrqVdh8YnAMs0gkxTYHGR` /es/blog/como-calcular-costos-tokens-ia-proyecto-2026/ — seo.noindex unset → true
+- `PXBreekz6ug9jLuKVwyblH` /es/blog/como-comparar-precios-de-modelos-de-inteligencia-artificial/ — seo.noindex unset → true
+- `WIrqVdh8YnAMs0gkxUGTLE` /es/blog/como-devtools-para-agentes-reduce-el-costo-de-tokens-api-para-desarrolladores/ — seo.noindex unset → true
+- `dShP6JdGzwBHy3qr2At6pH` /es/blog/compre-tokens-de-ia-para-iniciados/ — seo.noindex unset → true
+- `g3jTIj9ubDWnGQfo9P3cRc` /es/blog/comprendiendo-estructuras-de-precios-de-tokens-de-inteligencia-artificial/ — seo.noindex unset → true
+- `GWcybyvSzKo1HK4vzsmtdK` /es/blog/comprendiendo-las-bases-de-los-tokens-de-ia/ — seo.noindex unset → true
+- `7Ahi24M7FaSDiVrQoZpybk` /es/blog/comprendiendo-los-tokens-en-ia-guia-basica-para-principiantes-sobre-tokenizacion-en-apis-de-ia/ — seo.noindex unset → true
+- `y3xIw7bvDoAsaDECeZ7yBP` /es/blog/contrato-legal-tokenizacion/ — seo.noindex unset → true
+- `uomub2hTG94T3nqbFXOFTr` /es/blog/conversacion-de-tokens-ai-guia-integral/ — seo.noindex unset → true
+- `Lu5cRtKnjW1G8cWSaZJFfF` /es/blog/costos-de-tokens-ia-prompt-writing/ — seo.noindex unset → true
+- `8VP0t1uN4XaL0Vxgggzb0I` /es/blog/economia-de-tokens-en-ia-como-los-tokens-impulsan-los-costos-y-la-eficiencia-de-las-apis/ — seo.noindex unset → true
+- `lR0qt56tv2bdxAETnkzRwj` /es/blog/efecto-clever-hans-costos-de-tokens-ia/ — seo.noindex unset → true
+- `PXBreekz6ug9jLuKVwysm1` /es/blog/elegir-modelo-ia-necesidades/ — seo.noindex unset → true
+- `yOXF1XBkRH6Ae7xNfhwCNP` /es/blog/entendiendo-los-metodos-de-calculo-del-uso-y-el-costo-en-la-api-claude/ — seo.noindex unset → true
+- `cxG6WGqtby4sD0hmXNjER8` /es/blog/entendiendo-los-modelos-de-precios-de-tokens-de-inteligencia-artificial-comparacion/ — seo.noindex unset → true
+- `Phhizq6FvxEdUvDkf25s6A` /es/blog/entendiendo-los-tokens-de-ia-guia-completa-para-desarrolladores-y-empresas/ — seo.noindex unset → true
+- `g3jTIj9ubDWnGQfo9PCCuq` /es/blog/entendiendo-modelos-precios-tokens-inteligencia-artificial/ — seo.noindex unset → true
+- `VdSyE50eHa1ZkhVq3RjoVf` /es/blog/entendiendo-moneda-ia-diferencia-ingl-chino/ — seo.noindex unset → true
+- `PXBreekz6ug9jLuKVwyIll` /es/blog/entendiendo-precios-token-gemini/ — seo.noindex unset → true
+- `g3jTIj9ubDWnGQfo9PCKjQ` /es/blog/entendiendo-precios-tokens-inteligencia-artificial/ — seo.noindex unset → true
+- `VKNTFpWe8NfJwy5gVWGfiC` /es/blog/entendiendo-tokens-de-ia-y-claves-api/ — seo.noindex unset → true
+- `5bTmGH4csQ2ze7LA789oZF` /es/blog/entendimiento-de-la-tokenizacion-en-finanzas/ — seo.noindex unset → true
+- `uomub2hTG94T3nqbFWwbf6` /es/blog/enviar-datos-clientes-api-ai/ — seo.noindex unset → true
+- `VdSyE50eHa1ZkhVq3R0eDP` /es/blog/estimar-uso-tokens-ia/ — seo.noindex unset → true
+- `VKNTFpWe8NfJwy5gVWpuid` /es/blog/evaluacion-vendedores-ia/ — seo.noindex unset → true
+- `cxG6WGqtby4sD0hmXPyJkD` /es/blog/fuzzing-ai-models-para-robustez/ — seo.noindex unset → true
+- `5bTmGH4csQ2ze7LA77gCx9` /es/blog/gestion-de-tokens-ai-para-empresas/ — seo.noindex unset → true
+- `GmY8EMdQcEdG09jOJFaUNw` /es/blog/google-io-2026-optimizacion-de-costos-de-tokens/ — seo.noindex unset → true
+- `PXBreekz6ug9jLuKVwySiQ` /es/blog/gpt-token-precio-guia-comienzos/ — seo.noindex unset → true
+- `yOXF1XBkRH6Ae7xNfimHL7` /es/blog/guardar-costos-de-tokens-ai-guia-para-principiantes/ — seo.noindex unset → true
+- `5bTmGH4csQ2ze7LA77x4Yh` /es/blog/guiadeuso-de-tokens-ia/ — seo.noindex unset → true
+- `yOXF1XBkRH6Ae7xNfiJME1` /es/blog/guiapractica-token-inteligencia-artificial-20-preguntas-fundamentales/ — seo.noindex unset → true
+- `yOXF1XBkRH6Ae7xNfjOHhd` /es/blog/la-relacion-entre-la-inteligencia-artificial-agente-y-el-crypto-explicada/ — seo.noindex unset → true
+- `ozCyOlBi58GE7eckjjHJZd` /es/blog/lecciones-del-imperio-bizantino-para-la-estrategia-de-costos-de-tokens-en-api-de-ia/ — seo.noindex unset → true
+- `YEaJFZBkMtBgFLtVlVGTsv` /es/blog/mecanica-de-tokens-en-ia-como-los-tokens-alimentan-modelos-de-ia-y-afectan-los-costos/ — seo.noindex unset → true
+- `PqAgSgFWPa4GzheZzD9wZJ` /es/blog/navegando-los-riesgos-legales-y-cumplimiento-para-el-uso-de-tokens-en-ia/ — seo.noindex unset → true
+- `lT0MJhwbFtcMofmR8IsomJ` /es/blog/obtener-clave-api-chatgpt-paso-a-paso/ — seo.noindex unset → true
+- `pjtqkCzFbh025WYKFQSeb0` /es/blog/optimiza-costos-ai-api-testing-con-chrome-devtools/ — seo.noindex unset → true
+- `YNVQhbTzP0HGGIRSW6ShGq` /es/blog/optimizacion-costos-ia-chrome-devtools-google-io/ — seo.noindex unset → true
+- `nzjzlDLqhMCXtFoRYZ4Iwr` /es/blog/optimizacion-de-costos-de-tokens-para-pequenas-empresas/ — seo.noindex unset → true
+- `8VP0t1uN4XaL0VxggWBIVJ` /es/blog/optimizando-costos-de-ia-con-guia-web-moderna/ — seo.noindex unset → true
+- `GmY8EMdQcEdG09jOJ7Lubm` /es/blog/optimizar-costo-tokens-ia-ahorro-calidad/ — seo.noindex unset → true
+- `VKNTFpWe8NfJwy5gVWovuu` /es/blog/pdp-taiwan-api-ia-compliance/ — seo.noindex unset → true
+- `PXBreekz6ug9jLuKVx9yS9` /es/blog/pequenas-empresas-no-deben-comprar-plataformas-de-inteligencia-artificial/ — seo.noindex unset → true
+- `Lu5cRtKnjW1G8cWSaZl1MK` /es/blog/planes-de-tokens-ia-asequibles/ — seo.noindex unset → true
+- `YNVQhbTzP0HGGIRSVncst4` /es/blog/preparar-sitio-web-agentes-ia-optimizar-costos-tokens/ — seo.noindex unset → true
+- `HLxHi2QldCxbKZLLJj54W5` /es/blog/proveedores-de-tokens-de-ia/ — seo.noindex unset → true
+- `uomub2hTG94T3nqbFWiakG` /es/blog/responsabilidad-legal-resellador-api-empresas/ — seo.noindex unset → true
+- `VKNTFpWe8NfJwy5gVWnUnV` /es/blog/retencion-de-datos-en-apis-de-inteligencia-artificial/ — seo.noindex unset → true
+- `mACxmAYrp9y1lKOrSbwXic` /es/blog/revolucionando-experiencias-web-con-actualizaciones-paciales-declarativas/ — seo.noindex unset → true
+- `uomub2hTG94T3nqbFX6avy` /es/blog/risgos-legalizacion-de-apis-de-inteligencia-artificial-en-taiwan/ — seo.noindex unset → true
+- `g3jTIj9ubDWnGQfo9PTM4u` /es/blog/seleccion-de-plataformas-proxy-api/ — seo.noindex unset → true
+- `5bTmGH4csQ2ze7LA782pqz` /es/blog/tendencias-de-adopcion-de-inteligencia-artificial-en-2026/ — seo.noindex unset → true
+- `HyTAXLIxObVx8j47ghIF32` /es/blog/token-ai-cualidad-respuesta/ — seo.noindex unset → true
+- `yOXF1XBkRH6Ae7xNfiKQot` /es/blog/token-de-ai-no-te-desanques/ — seo.noindex unset → true
+- `VdSyE50eHa1ZkhVq3R1Jsi` /es/blog/token-estimacion-chatgpt-claude-gemini/ — seo.noindex unset → true
+- `5bTmGH4csQ2ze7LA782O5L` /es/blog/token-usage-control-en-ia/ — seo.noindex unset → true
+- `5MPUfQyvJw6C2uz7jDZEdj` /es/blog/tokens-de-ia-baratos-costo-total/ — seo.noindex unset → true
+- `VKNTFpWe8NfJwy5gVXaxxe` /es/blog/tokens-de-ia-para-articulos/ — seo.noindex unset → true
+- `VdSyE50eHa1ZkhVq3P8fQs` /es/blog/tokens-de-inteligencia-artificial-basico/ — seo.noindex unset → true
+- `VdSyE50eHa1ZkhVq3Qbbnv` /es/blog/using-ai-apis-with-internal-data/ — seo.noindex unset → true
+- `VKNTFpWe8NfJwy5gVXoRco` /es/blog/uso-de-tokens-en-inteligencia-artificial/ — seo.noindex unset → true
+- `YNVQhbTzP0HGGIRSVgjQkG` /id/blog/agen-pemrograman-ai-pengembangan-ekstensi-chrome-biaya-token-api/ — seo.noindex unset → true
+- `yOXF1XBkRH6Ae7xNfhuRtl` /id/blog/ai-api-platform-vs-chat-tools/ — seo.noindex unset → true
+- `uomub2hTG94T3nqbFWuMI5` /id/blog/ai-api-risk-management-hr-data/ — seo.noindex unset → true
+- `uomub2hTG94T3nqbFX7agt` /id/blog/ai-token-per-chat-session/ — seo.noindex unset → true
+- `VdSyE50eHa1ZkhVq3P7cNu` /id/blog/ai-token-vs-points-pricing-comparison/ — seo.noindex unset → true
+- `uomub2hTG94T3nqbFXNuAt` /id/blog/apakah-token-ai-termasuk-prompt-sistem-dalam-penghitungan/ — seo.noindex unset → true
+- `Lu5cRtKnjW1G8cWSaZJG8l` /id/blog/bagaimana-penulisan-prompt-mempengaruhi-biaya-token-ai/ — seo.noindex unset → true
+- `uomub2hTG94T3nqbFWjb8o` /id/blog/bisaakah-data-keuangan-digunakan-dalam-api-ai/ — seo.noindex unset → true
+- `kTrgGaax2rhYCPgdw3nB0V` /id/blog/cara-chrome-devtools-untuk-agen-mengurangi-biaya-token-api-ai-bagi-pengembang/ — seo.noindex unset → true
+- `5bTmGH4csQ2ze7LA77x4kf` /id/blog/cara-menggunakan-token-ai-pemula/ — seo.noindex unset → true
+- `7Ahi24M7FaSDiVrQpZcVR4` /id/blog/cara-menghitung-biaya-token-ai-untuk-bisnis/ — seo.noindex unset → true
+- `kTrgGaax2rhYCPgdw2zTfP` /id/blog/cara-menghitung-biaya-token-ai-untuk-proyek-anda-tahun-2026/ — seo.noindex unset → true
+- `lT0MJhwbFtcMofmR8IiIwv` /id/blog/claude-api-capabilities-document-processing-customer-support-content-generation/ — seo.noindex unset → true
+- `PXBreekz6ug9jLuKVxUBwD` /id/blog/claude-api-vs-claude/ — seo.noindex unset → true
+- `yOXF1XBkRH6Ae7xNfiIYnp` /id/blog/claude-code-token-cost-optimization/ — seo.noindex unset → true
+- `lT0MJhwbFtcMofmR8IjGD7` /id/blog/clauede-api-vs-chat-version/ — seo.noindex unset → true
+- `Lu5cRtKnjW1G8cWSaZhHat` /id/blog/comparasi-token-ai-harga/ — seo.noindex unset → true
+- `Phhizq6FvxEdUvDkfCe6Iq` /id/blog/dampak-angular-17-terhadap-optimisasi-biaya-api-ai/ — seo.noindex unset → true
+- `8VP0t1uN4XaL0VxggLSgkK` /id/blog/dampak-biaya-token-ai-pada-analisis-kontrak-hukum-panduan-untuk-perusahaan/ — seo.noindex unset → true
+- `Phhizq6FvxEdUvDkfI9QeJ` /id/blog/dampak-google-io-2026-pada-biaya-token-ai/ — seo.noindex unset → true
+- `lR0qt56tv2bdxAETnkzSI1` /id/blog/efek-clever-hans-dan-optimisasi-biaya-token-ai/ — seo.noindex unset → true
+- `uomub2hTG94T3nqbFXGpwT` /id/blog/estimasi-token-bahasa-inggris-chatgpt-claude-gemini/ — seo.noindex unset → true
+- `cxG6WGqtby4sD0hmXPyKgw` /id/blog/fuzzing-model-robustness-kinerja-lebih-baik/ — seo.noindex unset → true
+- `g3jTIj9ubDWnGQfo9PTUE4` /id/blog/geminia-api-vs-geminia-apps-pemula/ — seo.noindex unset → true
+- `yOXF1XBkRH6Ae7xNfjNlhh` /id/blog/infrastructure-ai-investasi-dan-teknologi-besar/ — seo.noindex unset → true
+- `yOXF1XBkRH6Ae7xNfjOISN` /id/blog/keterhubungan-agentic-ai-dan-crypto/ — seo.noindex unset → true
+- `VKNTFpWe8NfJwy5gVXNFKq` /id/blog/kontrak-hukum-token-usage-guide/ — seo.noindex unset → true
+- `VKNTFpWe8NfJwy5gVXbLew` /id/blog/konversi-token-ai-panduan-lengkap/ — seo.noindex unset → true
+- `dShP6JdGzwBHy3qr2AiDH0` /id/blog/manajemen-token-ai-bisnis/ — seo.noindex unset → true
+- `7Ahi24M7FaSDiVrQohC49t` /id/blog/memahami-ai-token-panduan-praktis-manajemen-biaya-api/ — seo.noindex unset → true
+- `PqAgSgFWPa4GzheZzNwbsr` /id/blog/memahami-token-ai-dasar-pemula/ — seo.noindex unset → true
+- `5bTmGH4csQ2ze7LA77oirD` /id/blog/memahami-token-ai-pengendalian-biaya/ — seo.noindex unset → true
+- `lT0MJhwbFtcMofmR8IjQTF` /id/blog/memilih-alat-ai-platform-api-bisnis-anda/ — seo.noindex unset → true
+- `lT0MJhwbFtcMofmR8IMpAH` /id/blog/memilih-model-ai-yang-tepat/ — seo.noindex unset → true
+- `Lu5cRtKnjW1G8cWSaZjZwD` /id/blog/menentukan-anggaran-token-ai-untuk-pemasaran-konten/ — seo.noindex unset → true
+- `VKNTFpWe8NfJwy5gVWUZKj` /id/blog/mengadopsi-api-ai-bisnis-panduan-terlengkap/ — seo.noindex unset → true
+- `PXBreekz6ug9jLuKVxA6uj` /id/blog/mengapa-pemilihan-platform-proxy-api-yang-tepat/ — seo.noindex unset → true
+- `VdSyE50eHa1ZkhVq3RLfCA` /id/blog/mengapa-percakapan-panjang-menggunakan-token-ai-lebih-banyak/ — seo.noindex unset → true
+- `lT0MJhwbFtcMofmR8IWx9l` /id/blog/mengenal-claude-api-pemula/ — seo.noindex unset → true
+- `uomub2hTG94T3nqbFX6Bdn` /id/blog/mengenal-kebijakan-penggunaan-data-api-ai/ — seo.noindex unset → true
+- `PXBreekz6ug9jLuKVxJ3eF` /id/blog/mengerti-biaya-model-dan-izin-sebelum-menggunakan-claude-api/ — seo.noindex unset → true
+- `8VP0t1uN4XaL0Vxgggzefc` /id/blog/mengerti-ekonomi-token-ai-bagaimana-token-membentuk-biaya-api-dan-efisiensi/ — seo.noindex unset → true
+- `g3jTIj9ubDWnGQfo9PCL40` /id/blog/mengerti-harga-token-ai/ — seo.noindex unset → true
+- `PXBreekz6ug9jLuKVwySwN` /id/blog/mengerti-harga-token-gpt-untuk-pemula/ — seo.noindex unset → true
+- `oFY3rD6v1CzF83vekEuEXd` /id/blog/mengerti-konsep-ai-token-definisi-dan-signifikannya/ — seo.noindex unset → true
+- `cxG6WGqtby4sD0hmX3uF6G` /id/blog/mengerti-model-harga-token-ai-panduan-dasar/ — seo.noindex unset → true
+- `McooxrjsKk45w4o42TAnuK` /id/blog/mengerti-model-harga-token-ai-panduan-perbandingan/ — seo.noindex unset → true
+- `dShP6JdGzwBHy3qr2AiAId` /id/blog/mengerti-pembayaran-token-ai-prapembayaran-vs-pasca-pembayaran/ — seo.noindex unset → true
+- `yOXF1XBkRH6Ae7xNfhwD89` /id/blog/mengerti-penggunaan-biaya-metrik-api-claude/ — seo.noindex unset → true
+- `lT0MJhwbFtcMofmR8Hwd0h` /id/blog/mengerti-struktur-harga-token-ai/ — seo.noindex unset → true
+- `VdSyE50eHa1ZkhVq3RjpOq` /id/blog/mengerti-token-ai-perbedaan-inggris-tiongkok/ — seo.noindex unset → true
+- `VdSyE50eHa1ZkhVq3OnH9T` /id/blog/mengerti-token-api-ai-panduan-untuk-pemula/ — seo.noindex unset → true
+- `VdSyE50eHa1ZkhVq3RNxaY` /id/blog/mengerti-token-masukan-vs-token-keluaran-ai-model-api/ — seo.noindex unset → true
+- `cxG6WGqtby4sD0hmWobUVY` /id/blog/mengerti-tokenisasi-dalam-platform-ai-panduan-untuk-pemula/ — seo.noindex unset → true
+- `5bTmGH4csQ2ze7LA789MpJ` /id/blog/mengerti-trend-industri-ai-dari-kompetisi-model-ke-kompetisi-infrastruktur/ — seo.noindex unset → true
+- `g3jTIj9ubDWnGQfo9PCbmW` /id/blog/menggali-model-ai-berkualitas-tinggi/ — seo.noindex unset → true
+- `lT0MJhwbFtcMofmR8Ij3WB` /id/blog/menggunakan-api-chatgpt-untuk-pemula/ — seo.noindex unset → true
+- `dShP6JdGzwBHy3qr2AtAlC` /id/blog/menghemat-biaya-token-ai-panduan-dasar/ — seo.noindex unset → true
+- `PXBreekz6ug9jLuKVwa7mU` /id/blog/menghitung-biaya-token-ai-dijelaskan-dengan-sederhana/ — seo.noindex unset → true
+- `McooxrjsKk45w4o42Q8iu8` /id/blog/menghitung-biaya-token-ai-panduan-pengantar/ — seo.noindex unset → true
+- `g3jTIj9ubDWnGQfo9P3jM4` /id/blog/menghitung-biaya-token-ai-pengguna-pribadi/ — seo.noindex unset → true
+- `dShP6JdGzwBHy3qr2At3U0` /id/blog/mengilih-model-ai-sesuai-tujuan/ — seo.noindex unset → true
+- `5bTmGH4csQ2ze7LA77gPij` /id/blog/mengilih-platform-token-ai-panduan/ — seo.noindex unset → true
+- `uomub2hTG94T3nqbFWwbsJ` /id/blog/mengirim-data-konsumen-ke-api-ai/ — seo.noindex unset → true
+- `GWcybyvSzKo1HK4w03dk1Y` /id/blog/mengoptimalkan-biaya-chrome-ai-api/ — seo.noindex unset → true
+- `GWcybyvSzKo1HK4w0Dad4Y` /id/blog/mengoptimalkan-pengembangan-web-berbasis-ai-mengurangi-biaya-melalui-panduan-web-modern/ — seo.noindex unset → true
+- `cxG6WGqtby4sD0hmX84PaK` /id/blog/mengungkapkan-efisiensi-ai-pembaruan-google-io-dan-dampaknya-terhadap-biaya-pengembangan/ — seo.noindex unset → true
+- `g3jTIj9ubDWnGQfo9PLkXA` /id/blog/openrouter-vs-integrasi-api-langsung/ — seo.noindex unset → true
+- `fjqsbhIR5S1GoUWorRKTJZ` /id/blog/optimalkan-biaya-ai-api-dengan-otomatisasi-chrome-devtools/ — seo.noindex unset → true
+- `s0pK37w11MVxHdEjoWiGnI` /id/blog/optimalkan-biaya-token-ai-dengan-chrome-devtools-148-150/ — seo.noindex unset → true
+- `R4ugbcAV6zqTaKrvgVIwSo` /id/blog/optimasi-biaya-token-ai-pemula/ — seo.noindex unset → true
+- `8VP0t1uN4XaL0Vxgghu9R4` /id/blog/optimisasi-biaya-token-ai-chrome-devtools-google-io-connect-berlin/ — seo.noindex unset → true
+- `5bTmGH4csQ2ze7LA77obiP` /id/blog/panduan-token-ai-pertanyaan-pokoj/ — seo.noindex unset → true
+- `hW5DV1JXtq90EFbs5iOEQu` /id/blog/pelajaran-kekaisaran-bizantium-strategi-biaya-token-api-ai/ — seo.noindex unset → true
+- `Phhizq6FvxEdUvDkf21fSD` /id/blog/pemahaman-token-ai-panduan-dasar-tokenisasi-api-ai/ — seo.noindex unset → true
+- `VdSyE50eHa1ZkhVq3Q8NMb` /id/blog/pemilihan-vendor-ai-perusahaan/ — seo.noindex unset → true
+- `g3jTIj9ubDWnGQfo9PSqxw` /id/blog/perbandingan-chatgpt-claude-gemini-pemula-ai/ — seo.noindex unset → true
+- `lT0MJhwbFtcMofmR8IADGr` /id/blog/perbandingan-model-ai-harga-kecepatan-aplikasi/ — seo.noindex unset → true
+- `McooxrjsKk45w4o42Q9ufI` /id/blog/perbandingan-penyedia-token-ai-harga-fitur-dan-kasus-penggunaan/ — seo.noindex unset → true
+- `VdSyE50eHa1ZkhVq3QYtqR` /id/blog/perusahaan-taiwan-menggunakan-api-ai-risiko-dan-tanggung-jawab-hukum/ — seo.noindex unset → true
+- `PXBreekz6ug9jLuKVx9yit` /id/blog/platform-ai-untuk-perusahaan-kecil/ — seo.noindex unset → true
+- `VKNTFpWe8NfJwy5gVWox7c` /id/blog/taiwan-pdpa-dan-api-ai-compliance/ — seo.noindex unset → true
+- `VdSyE50eHa1ZkhVq3PW5MK` /id/blog/tanggung-jawab-hukum-penjual-api-ai-bisnis/ — seo.noindex unset → true
+- `VdSyE50eHa1ZkhVq3P8fpx` /id/blog/token-ai-basik/ — seo.noindex unset → true
+- `uomub2hTG94T3nqbFWaNo7` /id/blog/token-ai-penjelasan-sederhana/ — seo.noindex unset → true
+- `uomub2hTG94T3nqbFWRWGa` /id/blog/token-ai-vs-kuota-dalam-bisnis-inteligensia-artificial/ — seo.noindex unset → true
+- `VKNTFpWe8NfJwy5gVXObjd` /id/blog/tokenisasi-dalam-teknologi-ai-perbandingan-chatgpt-claudedan-gemini/ — seo.noindex unset → true
+- `yOXF1XBkRH6Ae7xNfjOTvt` /id/blog/tokenisasi-dan-dampaknya-pada-pasar-keuangan/ — seo.noindex unset → true
+- `yOXF1XBkRH6Ae7xNfj1LqL` /id/blog/tren-investasi-kripto-2026-dibahas/ — seo.noindex unset → true
+
+</details>
+
+## Not in table: 10 S7e posts (unpublished 13 Oct, never seen by GSC)
+
+- `8VP0t1uN4XaL0VxggVJdz1` /en/blog/ai-token-cost-comparison-openai-anthropic-google/
+- `YNVQhbTzP0HGGIRSVz1sqF` /es/blog/como-openai-anthropic-google-calculan-costos-tokens-ia/
+- `GWcybyvSzKo1HK4w0CkeUw` /id/blog/perbandingan-biaya-token-ai-openai-anthropic-google/
+- `mVT55Z3iQ03m4XFlyzTUfb` /en/blog/ai-token-cost-compliance-social-media-api-strategies/
+- `mVT55Z3iQ03m4XFlyzTUwp` /es/blog/restricciones-edad-redes-sociales-gestion-costos-api-ia/
+- `mVT55Z3iQ03m4XFlyzTVIM` /id/blog/bagaimana-pembatasan-umur-media-sosial-menentukan-manajemen-biaya-api-ai-untuk-pengembang/
+- `jIwg3X3cZFUaTrI3KDkAAn` /en/blog/calculate-ai-token-costs-multilingual-applications/
+- `hW5DV1JXtq90EFbs5cckt0` /es/blog/como-calcular-costos-tokens-ia-aplicaciones-multilingues/
+- `ozCyOlBi58GE7eckjdqeYz` /id/blog/cara-menghitung-biaya-token-ai-untuk-aplikasi-multibahasa/
+- `lR0qt56tv2bdxAETnUZSBT` /en/blog/ai-token-basics-guide-tokenization-api-costs/
+
+## Writing: 169 patch(es) in ONE transaction, each pinned to its _rev
+
+Backed up 169 document(s) to audits/2026-10-19/noindex-backup/.
+
+### Re-read
+- `5bTmGH4csQ2ze7LA77fvwH` /es/blog/ai-api-plataformas-vs-herramientas-de-chat/: seo.noindex=true draft=false
+- `VdSyE50eHa1ZkhVq3Q27kK` /es/blog/ai-api-risks-human-resources-data-management/: seo.noindex=true draft=false
+- `VKNTFpWe8NfJwy5gVX5yCA` /es/blog/ai-apis-data-usage-policies/: seo.noindex=true draft=false
+- `dShP6JdGzwBHy3qr2B1mkx` /es/blog/ai-industria-tendencias-infrastructure-competition/: seo.noindex=true draft=false
+- `uomub2hTG94T3nqbFXNtvn` /es/blog/ai-token-counting-sistema-instruccion/: seo.noindex=true draft=false
+- `VdSyE50eHa1ZkhVq3P7bjm` /es/blog/ai-token-vs-puntos-precio-comparacion/: seo.noindex=true draft=false
+- `VdSyE50eHa1ZkhVq3P6xWl` /es/blog/ai-tokens-explicacion-simplificada/: seo.noindex=true draft=false
+- `7Ahi24M7FaSDiVrQpbdwuX` /es/blog/angular-17-actualizaciones-impacto-optimizacion-costos-api-ia/: seo.noindex=true draft=false
+- `cxG6WGqtby4sD0hmX2vFZU` /es/blog/calculando-costos-de-token-ai-guia-para-principiantes/: seo.noindex=true draft=false
+- `8VP0t1uN4XaL0VxggMGLy6` /es/blog/chrome-ai-api-costos/: seo.noindex=true draft=false
+- `GWcybyvSzKo1HK4vzi7fxo` /es/blog/chrome-extension-ai-costs/: seo.noindex=true draft=false
+- `5bTmGH4csQ2ze7LA77oT6z` /es/blog/claud-code-token-cost-optimizacion/: seo.noindex=true draft=false
+- `PXBreekz6ug9jLuKVxJ39Y` /es/blog/claude-api-costos-modelos-permisos/: seo.noindex=true draft=false
+- `lT0MJhwbFtcMofmR8IiIHn` /es/blog/claude-api-usos-cliente-soporte-contenido/: seo.noindex=true draft=false
+- `PXBreekz6ug9jLuKVxUBfT` /es/blog/claudef-api-vs-claude/: seo.noindex=true draft=false
+- `PXBreekz6ug9jLuKVxJfdH` /es/blog/claudes-api-vs-chat-version-uso/: seo.noindex=true draft=false
+- `lT0MJhwbFtcMofmR8HwUAJ` /es/blog/claudetokenprecioguia/: seo.noindex=true draft=false
+- `PqAgSgFWPa4GzheZzHUyEP` /es/blog/como-calcular-costo-tokens-ia-empresa-2024/: seo.noindex=true draft=false
+- `WIrqVdh8YnAMs0gkxTYHGR` /es/blog/como-calcular-costos-tokens-ia-proyecto-2026/: seo.noindex=true draft=false
+- `PXBreekz6ug9jLuKVwyblH` /es/blog/como-comparar-precios-de-modelos-de-inteligencia-artificial/: seo.noindex=true draft=false
+- `WIrqVdh8YnAMs0gkxUGTLE` /es/blog/como-devtools-para-agentes-reduce-el-costo-de-tokens-api-para-desarrolladores/: seo.noindex=true draft=false
+- `dShP6JdGzwBHy3qr2At6pH` /es/blog/compre-tokens-de-ia-para-iniciados/: seo.noindex=true draft=false
+- `g3jTIj9ubDWnGQfo9P3cRc` /es/blog/comprendiendo-estructuras-de-precios-de-tokens-de-inteligencia-artificial/: seo.noindex=true draft=false
+- `GWcybyvSzKo1HK4vzsmtdK` /es/blog/comprendiendo-las-bases-de-los-tokens-de-ia/: seo.noindex=true draft=false
+- `7Ahi24M7FaSDiVrQoZpybk` /es/blog/comprendiendo-los-tokens-en-ia-guia-basica-para-principiantes-sobre-tokenizacion-en-apis-de-ia/: seo.noindex=true draft=false
+- `y3xIw7bvDoAsaDECeZ7yBP` /es/blog/contrato-legal-tokenizacion/: seo.noindex=true draft=false
+- `uomub2hTG94T3nqbFXOFTr` /es/blog/conversacion-de-tokens-ai-guia-integral/: seo.noindex=true draft=false
+- `Lu5cRtKnjW1G8cWSaZJFfF` /es/blog/costos-de-tokens-ia-prompt-writing/: seo.noindex=true draft=false
+- `8VP0t1uN4XaL0Vxgggzb0I` /es/blog/economia-de-tokens-en-ia-como-los-tokens-impulsan-los-costos-y-la-eficiencia-de-las-apis/: seo.noindex=true draft=false
+- `lR0qt56tv2bdxAETnkzRwj` /es/blog/efecto-clever-hans-costos-de-tokens-ia/: seo.noindex=true draft=false
+- `PXBreekz6ug9jLuKVwysm1` /es/blog/elegir-modelo-ia-necesidades/: seo.noindex=true draft=false
+- `yOXF1XBkRH6Ae7xNfhwCNP` /es/blog/entendiendo-los-metodos-de-calculo-del-uso-y-el-costo-en-la-api-claude/: seo.noindex=true draft=false
+- `cxG6WGqtby4sD0hmXNjER8` /es/blog/entendiendo-los-modelos-de-precios-de-tokens-de-inteligencia-artificial-comparacion/: seo.noindex=true draft=false
+- `Phhizq6FvxEdUvDkf25s6A` /es/blog/entendiendo-los-tokens-de-ia-guia-completa-para-desarrolladores-y-empresas/: seo.noindex=true draft=false
+- `g3jTIj9ubDWnGQfo9PCCuq` /es/blog/entendiendo-modelos-precios-tokens-inteligencia-artificial/: seo.noindex=true draft=false
+- `VdSyE50eHa1ZkhVq3RjoVf` /es/blog/entendiendo-moneda-ia-diferencia-ingl-chino/: seo.noindex=true draft=false
+- `PXBreekz6ug9jLuKVwyIll` /es/blog/entendiendo-precios-token-gemini/: seo.noindex=true draft=false
+- `g3jTIj9ubDWnGQfo9PCKjQ` /es/blog/entendiendo-precios-tokens-inteligencia-artificial/: seo.noindex=true draft=false
+- `VKNTFpWe8NfJwy5gVWGfiC` /es/blog/entendiendo-tokens-de-ia-y-claves-api/: seo.noindex=true draft=false
+- `5bTmGH4csQ2ze7LA789oZF` /es/blog/entendimiento-de-la-tokenizacion-en-finanzas/: seo.noindex=true draft=false
+- `uomub2hTG94T3nqbFWwbf6` /es/blog/enviar-datos-clientes-api-ai/: seo.noindex=true draft=false
+- `VdSyE50eHa1ZkhVq3R0eDP` /es/blog/estimar-uso-tokens-ia/: seo.noindex=true draft=false
+- `VKNTFpWe8NfJwy5gVWpuid` /es/blog/evaluacion-vendedores-ia/: seo.noindex=true draft=false
+- `cxG6WGqtby4sD0hmXPyJkD` /es/blog/fuzzing-ai-models-para-robustez/: seo.noindex=true draft=false
+- `5bTmGH4csQ2ze7LA77gCx9` /es/blog/gestion-de-tokens-ai-para-empresas/: seo.noindex=true draft=false
+- `GmY8EMdQcEdG09jOJFaUNw` /es/blog/google-io-2026-optimizacion-de-costos-de-tokens/: seo.noindex=true draft=false
+- `PXBreekz6ug9jLuKVwySiQ` /es/blog/gpt-token-precio-guia-comienzos/: seo.noindex=true draft=false
+- `yOXF1XBkRH6Ae7xNfimHL7` /es/blog/guardar-costos-de-tokens-ai-guia-para-principiantes/: seo.noindex=true draft=false
+- `5bTmGH4csQ2ze7LA77x4Yh` /es/blog/guiadeuso-de-tokens-ia/: seo.noindex=true draft=false
+- `yOXF1XBkRH6Ae7xNfiJME1` /es/blog/guiapractica-token-inteligencia-artificial-20-preguntas-fundamentales/: seo.noindex=true draft=false
+- `yOXF1XBkRH6Ae7xNfjOHhd` /es/blog/la-relacion-entre-la-inteligencia-artificial-agente-y-el-crypto-explicada/: seo.noindex=true draft=false
+- `ozCyOlBi58GE7eckjjHJZd` /es/blog/lecciones-del-imperio-bizantino-para-la-estrategia-de-costos-de-tokens-en-api-de-ia/: seo.noindex=true draft=false
+- `YEaJFZBkMtBgFLtVlVGTsv` /es/blog/mecanica-de-tokens-en-ia-como-los-tokens-alimentan-modelos-de-ia-y-afectan-los-costos/: seo.noindex=true draft=false
+- `PqAgSgFWPa4GzheZzD9wZJ` /es/blog/navegando-los-riesgos-legales-y-cumplimiento-para-el-uso-de-tokens-en-ia/: seo.noindex=true draft=false
+- `lT0MJhwbFtcMofmR8IsomJ` /es/blog/obtener-clave-api-chatgpt-paso-a-paso/: seo.noindex=true draft=false
+- `pjtqkCzFbh025WYKFQSeb0` /es/blog/optimiza-costos-ai-api-testing-con-chrome-devtools/: seo.noindex=true draft=false
+- `YNVQhbTzP0HGGIRSW6ShGq` /es/blog/optimizacion-costos-ia-chrome-devtools-google-io/: seo.noindex=true draft=false
+- `nzjzlDLqhMCXtFoRYZ4Iwr` /es/blog/optimizacion-de-costos-de-tokens-para-pequenas-empresas/: seo.noindex=true draft=false
+- `8VP0t1uN4XaL0VxggWBIVJ` /es/blog/optimizando-costos-de-ia-con-guia-web-moderna/: seo.noindex=true draft=false
+- `GmY8EMdQcEdG09jOJ7Lubm` /es/blog/optimizar-costo-tokens-ia-ahorro-calidad/: seo.noindex=true draft=false
+- `VKNTFpWe8NfJwy5gVWovuu` /es/blog/pdp-taiwan-api-ia-compliance/: seo.noindex=true draft=false
+- `PXBreekz6ug9jLuKVx9yS9` /es/blog/pequenas-empresas-no-deben-comprar-plataformas-de-inteligencia-artificial/: seo.noindex=true draft=false
+- `Lu5cRtKnjW1G8cWSaZl1MK` /es/blog/planes-de-tokens-ia-asequibles/: seo.noindex=true draft=false
+- `YNVQhbTzP0HGGIRSVncst4` /es/blog/preparar-sitio-web-agentes-ia-optimizar-costos-tokens/: seo.noindex=true draft=false
+- `HLxHi2QldCxbKZLLJj54W5` /es/blog/proveedores-de-tokens-de-ia/: seo.noindex=true draft=false
+- `uomub2hTG94T3nqbFWiakG` /es/blog/responsabilidad-legal-resellador-api-empresas/: seo.noindex=true draft=false
+- `VKNTFpWe8NfJwy5gVWnUnV` /es/blog/retencion-de-datos-en-apis-de-inteligencia-artificial/: seo.noindex=true draft=false
+- `mACxmAYrp9y1lKOrSbwXic` /es/blog/revolucionando-experiencias-web-con-actualizaciones-paciales-declarativas/: seo.noindex=true draft=false
+- `uomub2hTG94T3nqbFX6avy` /es/blog/risgos-legalizacion-de-apis-de-inteligencia-artificial-en-taiwan/: seo.noindex=true draft=false
+- `g3jTIj9ubDWnGQfo9PTM4u` /es/blog/seleccion-de-plataformas-proxy-api/: seo.noindex=true draft=false
+- `5bTmGH4csQ2ze7LA782pqz` /es/blog/tendencias-de-adopcion-de-inteligencia-artificial-en-2026/: seo.noindex=true draft=false
+- `HyTAXLIxObVx8j47ghIF32` /es/blog/token-ai-cualidad-respuesta/: seo.noindex=true draft=false
+- `yOXF1XBkRH6Ae7xNfiKQot` /es/blog/token-de-ai-no-te-desanques/: seo.noindex=true draft=false
+- `VdSyE50eHa1ZkhVq3R1Jsi` /es/blog/token-estimacion-chatgpt-claude-gemini/: seo.noindex=true draft=false
+- `5bTmGH4csQ2ze7LA782O5L` /es/blog/token-usage-control-en-ia/: seo.noindex=true draft=false
+- `5MPUfQyvJw6C2uz7jDZEdj` /es/blog/tokens-de-ia-baratos-costo-total/: seo.noindex=true draft=false
+- `VKNTFpWe8NfJwy5gVXaxxe` /es/blog/tokens-de-ia-para-articulos/: seo.noindex=true draft=false
+- `VdSyE50eHa1ZkhVq3P8fQs` /es/blog/tokens-de-inteligencia-artificial-basico/: seo.noindex=true draft=false
+- `VdSyE50eHa1ZkhVq3Qbbnv` /es/blog/using-ai-apis-with-internal-data/: seo.noindex=true draft=false
+- `VKNTFpWe8NfJwy5gVXoRco` /es/blog/uso-de-tokens-en-inteligencia-artificial/: seo.noindex=true draft=false
+- `YNVQhbTzP0HGGIRSVgjQkG` /id/blog/agen-pemrograman-ai-pengembangan-ekstensi-chrome-biaya-token-api/: seo.noindex=true draft=false
+- `yOXF1XBkRH6Ae7xNfhuRtl` /id/blog/ai-api-platform-vs-chat-tools/: seo.noindex=true draft=false
+- `uomub2hTG94T3nqbFWuMI5` /id/blog/ai-api-risk-management-hr-data/: seo.noindex=true draft=false
+- `uomub2hTG94T3nqbFX7agt` /id/blog/ai-token-per-chat-session/: seo.noindex=true draft=false
+- `VdSyE50eHa1ZkhVq3P7cNu` /id/blog/ai-token-vs-points-pricing-comparison/: seo.noindex=true draft=false
+- `uomub2hTG94T3nqbFXNuAt` /id/blog/apakah-token-ai-termasuk-prompt-sistem-dalam-penghitungan/: seo.noindex=true draft=false
+- `Lu5cRtKnjW1G8cWSaZJG8l` /id/blog/bagaimana-penulisan-prompt-mempengaruhi-biaya-token-ai/: seo.noindex=true draft=false
+- `uomub2hTG94T3nqbFWjb8o` /id/blog/bisaakah-data-keuangan-digunakan-dalam-api-ai/: seo.noindex=true draft=false
+- `kTrgGaax2rhYCPgdw3nB0V` /id/blog/cara-chrome-devtools-untuk-agen-mengurangi-biaya-token-api-ai-bagi-pengembang/: seo.noindex=true draft=false
+- `5bTmGH4csQ2ze7LA77x4kf` /id/blog/cara-menggunakan-token-ai-pemula/: seo.noindex=true draft=false
+- `7Ahi24M7FaSDiVrQpZcVR4` /id/blog/cara-menghitung-biaya-token-ai-untuk-bisnis/: seo.noindex=true draft=false
+- `kTrgGaax2rhYCPgdw2zTfP` /id/blog/cara-menghitung-biaya-token-ai-untuk-proyek-anda-tahun-2026/: seo.noindex=true draft=false
+- `lT0MJhwbFtcMofmR8IiIwv` /id/blog/claude-api-capabilities-document-processing-customer-support-content-generation/: seo.noindex=true draft=false
+- `PXBreekz6ug9jLuKVxUBwD` /id/blog/claude-api-vs-claude/: seo.noindex=true draft=false
+- `yOXF1XBkRH6Ae7xNfiIYnp` /id/blog/claude-code-token-cost-optimization/: seo.noindex=true draft=false
+- `lT0MJhwbFtcMofmR8IjGD7` /id/blog/clauede-api-vs-chat-version/: seo.noindex=true draft=false
+- `Lu5cRtKnjW1G8cWSaZhHat` /id/blog/comparasi-token-ai-harga/: seo.noindex=true draft=false
+- `Phhizq6FvxEdUvDkfCe6Iq` /id/blog/dampak-angular-17-terhadap-optimisasi-biaya-api-ai/: seo.noindex=true draft=false
+- `8VP0t1uN4XaL0VxggLSgkK` /id/blog/dampak-biaya-token-ai-pada-analisis-kontrak-hukum-panduan-untuk-perusahaan/: seo.noindex=true draft=false
+- `Phhizq6FvxEdUvDkfI9QeJ` /id/blog/dampak-google-io-2026-pada-biaya-token-ai/: seo.noindex=true draft=false
+- `lR0qt56tv2bdxAETnkzSI1` /id/blog/efek-clever-hans-dan-optimisasi-biaya-token-ai/: seo.noindex=true draft=false
+- `uomub2hTG94T3nqbFXGpwT` /id/blog/estimasi-token-bahasa-inggris-chatgpt-claude-gemini/: seo.noindex=true draft=false
+- `cxG6WGqtby4sD0hmXPyKgw` /id/blog/fuzzing-model-robustness-kinerja-lebih-baik/: seo.noindex=true draft=false
+- `g3jTIj9ubDWnGQfo9PTUE4` /id/blog/geminia-api-vs-geminia-apps-pemula/: seo.noindex=true draft=false
+- `yOXF1XBkRH6Ae7xNfjNlhh` /id/blog/infrastructure-ai-investasi-dan-teknologi-besar/: seo.noindex=true draft=false
+- `yOXF1XBkRH6Ae7xNfjOISN` /id/blog/keterhubungan-agentic-ai-dan-crypto/: seo.noindex=true draft=false
+- `VKNTFpWe8NfJwy5gVXNFKq` /id/blog/kontrak-hukum-token-usage-guide/: seo.noindex=true draft=false
+- `VKNTFpWe8NfJwy5gVXbLew` /id/blog/konversi-token-ai-panduan-lengkap/: seo.noindex=true draft=false
+- `dShP6JdGzwBHy3qr2AiDH0` /id/blog/manajemen-token-ai-bisnis/: seo.noindex=true draft=false
+- `7Ahi24M7FaSDiVrQohC49t` /id/blog/memahami-ai-token-panduan-praktis-manajemen-biaya-api/: seo.noindex=true draft=false
+- `PqAgSgFWPa4GzheZzNwbsr` /id/blog/memahami-token-ai-dasar-pemula/: seo.noindex=true draft=false
+- `5bTmGH4csQ2ze7LA77oirD` /id/blog/memahami-token-ai-pengendalian-biaya/: seo.noindex=true draft=false
+- `lT0MJhwbFtcMofmR8IjQTF` /id/blog/memilih-alat-ai-platform-api-bisnis-anda/: seo.noindex=true draft=false
+- `lT0MJhwbFtcMofmR8IMpAH` /id/blog/memilih-model-ai-yang-tepat/: seo.noindex=true draft=false
+- `Lu5cRtKnjW1G8cWSaZjZwD` /id/blog/menentukan-anggaran-token-ai-untuk-pemasaran-konten/: seo.noindex=true draft=false
+- `VKNTFpWe8NfJwy5gVWUZKj` /id/blog/mengadopsi-api-ai-bisnis-panduan-terlengkap/: seo.noindex=true draft=false
+- `PXBreekz6ug9jLuKVxA6uj` /id/blog/mengapa-pemilihan-platform-proxy-api-yang-tepat/: seo.noindex=true draft=false
+- `VdSyE50eHa1ZkhVq3RLfCA` /id/blog/mengapa-percakapan-panjang-menggunakan-token-ai-lebih-banyak/: seo.noindex=true draft=false
+- `lT0MJhwbFtcMofmR8IWx9l` /id/blog/mengenal-claude-api-pemula/: seo.noindex=true draft=false
+- `uomub2hTG94T3nqbFX6Bdn` /id/blog/mengenal-kebijakan-penggunaan-data-api-ai/: seo.noindex=true draft=false
+- `PXBreekz6ug9jLuKVxJ3eF` /id/blog/mengerti-biaya-model-dan-izin-sebelum-menggunakan-claude-api/: seo.noindex=true draft=false
+- `8VP0t1uN4XaL0Vxgggzefc` /id/blog/mengerti-ekonomi-token-ai-bagaimana-token-membentuk-biaya-api-dan-efisiensi/: seo.noindex=true draft=false
+- `g3jTIj9ubDWnGQfo9PCL40` /id/blog/mengerti-harga-token-ai/: seo.noindex=true draft=false
+- `PXBreekz6ug9jLuKVwySwN` /id/blog/mengerti-harga-token-gpt-untuk-pemula/: seo.noindex=true draft=false
+- `oFY3rD6v1CzF83vekEuEXd` /id/blog/mengerti-konsep-ai-token-definisi-dan-signifikannya/: seo.noindex=true draft=false
+- `cxG6WGqtby4sD0hmX3uF6G` /id/blog/mengerti-model-harga-token-ai-panduan-dasar/: seo.noindex=true draft=false
+- `McooxrjsKk45w4o42TAnuK` /id/blog/mengerti-model-harga-token-ai-panduan-perbandingan/: seo.noindex=true draft=false
+- `dShP6JdGzwBHy3qr2AiAId` /id/blog/mengerti-pembayaran-token-ai-prapembayaran-vs-pasca-pembayaran/: seo.noindex=true draft=false
+- `yOXF1XBkRH6Ae7xNfhwD89` /id/blog/mengerti-penggunaan-biaya-metrik-api-claude/: seo.noindex=true draft=false
+- `lT0MJhwbFtcMofmR8Hwd0h` /id/blog/mengerti-struktur-harga-token-ai/: seo.noindex=true draft=false
+- `VdSyE50eHa1ZkhVq3RjpOq` /id/blog/mengerti-token-ai-perbedaan-inggris-tiongkok/: seo.noindex=true draft=false
+- `VdSyE50eHa1ZkhVq3OnH9T` /id/blog/mengerti-token-api-ai-panduan-untuk-pemula/: seo.noindex=true draft=false
+- `VdSyE50eHa1ZkhVq3RNxaY` /id/blog/mengerti-token-masukan-vs-token-keluaran-ai-model-api/: seo.noindex=true draft=false
+- `cxG6WGqtby4sD0hmWobUVY` /id/blog/mengerti-tokenisasi-dalam-platform-ai-panduan-untuk-pemula/: seo.noindex=true draft=false
+- `5bTmGH4csQ2ze7LA789MpJ` /id/blog/mengerti-trend-industri-ai-dari-kompetisi-model-ke-kompetisi-infrastruktur/: seo.noindex=true draft=false
+- `g3jTIj9ubDWnGQfo9PCbmW` /id/blog/menggali-model-ai-berkualitas-tinggi/: seo.noindex=true draft=false
+- `lT0MJhwbFtcMofmR8Ij3WB` /id/blog/menggunakan-api-chatgpt-untuk-pemula/: seo.noindex=true draft=false
+- `dShP6JdGzwBHy3qr2AtAlC` /id/blog/menghemat-biaya-token-ai-panduan-dasar/: seo.noindex=true draft=false
+- `PXBreekz6ug9jLuKVwa7mU` /id/blog/menghitung-biaya-token-ai-dijelaskan-dengan-sederhana/: seo.noindex=true draft=false
+- `McooxrjsKk45w4o42Q8iu8` /id/blog/menghitung-biaya-token-ai-panduan-pengantar/: seo.noindex=true draft=false
+- `g3jTIj9ubDWnGQfo9P3jM4` /id/blog/menghitung-biaya-token-ai-pengguna-pribadi/: seo.noindex=true draft=false
+- `dShP6JdGzwBHy3qr2At3U0` /id/blog/mengilih-model-ai-sesuai-tujuan/: seo.noindex=true draft=false
+- `5bTmGH4csQ2ze7LA77gPij` /id/blog/mengilih-platform-token-ai-panduan/: seo.noindex=true draft=false
+- `uomub2hTG94T3nqbFWwbsJ` /id/blog/mengirim-data-konsumen-ke-api-ai/: seo.noindex=true draft=false
+- `GWcybyvSzKo1HK4w03dk1Y` /id/blog/mengoptimalkan-biaya-chrome-ai-api/: seo.noindex=true draft=false
+- `GWcybyvSzKo1HK4w0Dad4Y` /id/blog/mengoptimalkan-pengembangan-web-berbasis-ai-mengurangi-biaya-melalui-panduan-web-modern/: seo.noindex=true draft=false
+- `cxG6WGqtby4sD0hmX84PaK` /id/blog/mengungkapkan-efisiensi-ai-pembaruan-google-io-dan-dampaknya-terhadap-biaya-pengembangan/: seo.noindex=true draft=false
+- `g3jTIj9ubDWnGQfo9PLkXA` /id/blog/openrouter-vs-integrasi-api-langsung/: seo.noindex=true draft=false
+- `fjqsbhIR5S1GoUWorRKTJZ` /id/blog/optimalkan-biaya-ai-api-dengan-otomatisasi-chrome-devtools/: seo.noindex=true draft=false
+- `s0pK37w11MVxHdEjoWiGnI` /id/blog/optimalkan-biaya-token-ai-dengan-chrome-devtools-148-150/: seo.noindex=true draft=false
+- `R4ugbcAV6zqTaKrvgVIwSo` /id/blog/optimasi-biaya-token-ai-pemula/: seo.noindex=true draft=false
+- `8VP0t1uN4XaL0Vxgghu9R4` /id/blog/optimisasi-biaya-token-ai-chrome-devtools-google-io-connect-berlin/: seo.noindex=true draft=false
+- `5bTmGH4csQ2ze7LA77obiP` /id/blog/panduan-token-ai-pertanyaan-pokoj/: seo.noindex=true draft=false
+- `hW5DV1JXtq90EFbs5iOEQu` /id/blog/pelajaran-kekaisaran-bizantium-strategi-biaya-token-api-ai/: seo.noindex=true draft=false
+- `Phhizq6FvxEdUvDkf21fSD` /id/blog/pemahaman-token-ai-panduan-dasar-tokenisasi-api-ai/: seo.noindex=true draft=false
+- `VdSyE50eHa1ZkhVq3Q8NMb` /id/blog/pemilihan-vendor-ai-perusahaan/: seo.noindex=true draft=false
+- `g3jTIj9ubDWnGQfo9PSqxw` /id/blog/perbandingan-chatgpt-claude-gemini-pemula-ai/: seo.noindex=true draft=false
+- `lT0MJhwbFtcMofmR8IADGr` /id/blog/perbandingan-model-ai-harga-kecepatan-aplikasi/: seo.noindex=true draft=false
+- `McooxrjsKk45w4o42Q9ufI` /id/blog/perbandingan-penyedia-token-ai-harga-fitur-dan-kasus-penggunaan/: seo.noindex=true draft=false
+- `VdSyE50eHa1ZkhVq3QYtqR` /id/blog/perusahaan-taiwan-menggunakan-api-ai-risiko-dan-tanggung-jawab-hukum/: seo.noindex=true draft=false
+- `PXBreekz6ug9jLuKVx9yit` /id/blog/platform-ai-untuk-perusahaan-kecil/: seo.noindex=true draft=false
+- `VKNTFpWe8NfJwy5gVWox7c` /id/blog/taiwan-pdpa-dan-api-ai-compliance/: seo.noindex=true draft=false
+- `VdSyE50eHa1ZkhVq3PW5MK` /id/blog/tanggung-jawab-hukum-penjual-api-ai-bisnis/: seo.noindex=true draft=false
+- `VdSyE50eHa1ZkhVq3P8fpx` /id/blog/token-ai-basik/: seo.noindex=true draft=false
+- `uomub2hTG94T3nqbFWaNo7` /id/blog/token-ai-penjelasan-sederhana/: seo.noindex=true draft=false
+- `uomub2hTG94T3nqbFWRWGa` /id/blog/token-ai-vs-kuota-dalam-bisnis-inteligensia-artificial/: seo.noindex=true draft=false
+- `VKNTFpWe8NfJwy5gVXObjd` /id/blog/tokenisasi-dalam-teknologi-ai-perbandingan-chatgpt-claudedan-gemini/: seo.noindex=true draft=false
+- `yOXF1XBkRH6Ae7xNfjOTvt` /id/blog/tokenisasi-dan-dampaknya-pada-pasar-keuangan/: seo.noindex=true draft=false
+- `yOXF1XBkRH6Ae7xNfj1LqL` /id/blog/tren-investasi-kripto-2026-dibahas/: seo.noindex=true draft=false
+
+## After the next build
+
+`npm run build && node scripts/patch-interim-noindex.mjs --check-dist`: every NOINDEX_INTERIM page carries the robots noindex meta, no KEEP/PROTECTED page does, and no sitemap or hreflang link names a NOINDEX_INTERIM URL.
+
+Undo: `node scripts/patch-interim-noindex.mjs --revert` (dry run), then with `SANITY_TOKEN=… --revert --apply`.
+

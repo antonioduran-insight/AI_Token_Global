@@ -1,0 +1,414 @@
+{
+  "_createdAt": "2026-06-04T11:36:25Z",
+  "_id": "VdSyE50eHa1ZkhVq3P7bjm",
+  "_rev": "BjCDeJneVtv6zbH6ufbW0u",
+  "_type": "post",
+  "_updatedAt": "2026-06-04T12:04:14Z",
+  "articleNumber": 7,
+  "body": [
+    {
+      "_key": "ygcw4dt5",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "ygcw4dt5c",
+          "_type": "span",
+          "marks": [],
+          "text": "When it comes to AI technology, understanding the distinction between AI token and points is crucial. The term 'AI Token' refers to a specific unit of measurement used in various AI models and platforms. On the other hand, 'points' or 'credits' are commercial representations used by platforms to package their pricing. This article aims to provide a comprehensive comparison of these two concepts, exploring their technical and commercial implications for AI pricing."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "j240x1ig",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "j240x1igc",
+          "_type": "span",
+          "marks": [],
+          "text": "Understanding AI Tokens"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "c05zd14x",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "c05zd14xc",
+          "_type": "span",
+          "marks": [],
+          "text": "AI tokens are a bottom-layer technical measure used in various AI models. They represent the fundamental unit of computation or processing power within an AI system. The tokenization process involves breaking down complex tasks into smaller, manageable units that can be executed by the AI model. This approach allows for more efficient and accurate processing of large datasets."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "y6est13k",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "y6est13kc",
+          "_type": "span",
+          "marks": [],
+          "text": "For instance, consider a language translation model that uses tokens to represent words or phrases in a sentence. The model processes each token sequentially, generating a translated output based on its internal workings. AI tokens are essential for understanding how AI models operate at a fundamental level."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "a7ou6mce",
+      "_type": "image",
+      "alt": "Section image 1",
+      "asset": {
+        "_ref": "image-62331a6e6369151ad377004cdd63984e1ab3f31e-1344x768-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "ahsx976c",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "ahsx976cc",
+          "_type": "span",
+          "marks": [],
+          "text": "Points and Credits: Commercial Representations"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "jmg4qilp",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "jmg4qilpc",
+          "_type": "span",
+          "marks": [],
+          "text": "In contrast, points or credits are commercial representations used by platforms to package their pricing. These units are often used to simplify the billing process for users and provide more flexibility in pricing plans. Points can be redeemed for specific services or features within a platform."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "u74lkogz",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "u74lkogzc",
+          "_type": "span",
+          "marks": [],
+          "text": "For example, consider a cloud-based AI platform that offers a tiered pricing system based on points. Users can purchase points upfront and use them to access various AI models and services within the platform. The points system provides a more user-friendly approach to pricing, making it easier for developers to estimate costs."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "ymf6uzm2",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "ymf6uzm2c",
+          "_type": "span",
+          "marks": [],
+          "text": "However, it's essential to note that points or credits are often tied to specific commercial agreements between the platform provider and the customer. This means that users may not have complete control over how their points are allocated or redeemed."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "fcl0u72f",
+      "_type": "image",
+      "alt": "Section image 2",
+      "asset": {
+        "_ref": "image-aa8fafc83947afa42b1023e38d969598e77516c7-1344x768-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "zymbvhsk",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "zymbvhskc",
+          "_type": "span",
+          "marks": [],
+          "text": "Tokenization: A Platform-Agnostic Approach"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "s5q1596x",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "s5q1596xc",
+          "_type": "span",
+          "marks": [],
+          "text": "One of the key differences between AI tokens and points is the approach to tokenization. Platforms that use points or credits often employ a proprietary tokenization scheme, which can limit flexibility and portability across different platforms."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "ok9ld14n",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "ok9ld14nc",
+          "_type": "span",
+          "marks": [],
+          "text": "In contrast, AI tokens are often platform-agnostic, allowing for greater interoperability between different models and platforms. This enables users to move their projects and data more seamlessly across various platforms, without being tied to a specific commercial agreement."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "hwr4rb5c",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "hwr4rb5cc",
+          "_type": "span",
+          "marks": [],
+          "text": "Tokenization Variations Across Platforms"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "5jyzu2b4",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "5jyzu2b4c",
+          "_type": "span",
+          "marks": [],
+          "text": "It's essential to note that tokenization can vary significantly across different AI models and platforms. Some platforms may use custom tokens or proprietary schemes, while others may adopt standard tokenization protocols."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "chue0cdt",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "chue0cdtc",
+          "_type": "span",
+          "marks": [],
+          "text": "For instance, consider a language translation model that uses a custom tokenization scheme based on its internal architecture. This approach can provide faster processing times but limits the portability of data across other platforms."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "4a9e9th8",
+      "_type": "image",
+      "alt": "Section image 3",
+      "asset": {
+        "_ref": "image-ffc5f6ac9ecf5301a311ae5f7993d8c1bed4d802-1344x768-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "yzsz91vn",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "yzsz91vnc",
+          "_type": "span",
+          "marks": [],
+          "text": "Transparency and Predictability in Pricing"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "cysr108y",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "cysr108yc",
+          "_type": "span",
+          "marks": [],
+          "text": "Another critical aspect to consider is transparency and predictability in pricing. Platforms that use points or credits often provide a more opaque view of their pricing structure, making it challenging for users to estimate costs."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "0upwlv4h",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "0upwlv4hc",
+          "_type": "span",
+          "marks": [],
+          "text": "In contrast, AI tokens offer greater transparency and predictability in pricing. Users can better understand the underlying technical costs associated with processing large datasets and optimize their projects accordingly."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "wmkifzil",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "wmkifzilc",
+          "_type": "span",
+          "marks": [],
+          "text": "Choosing the Right Pricing Model"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "urd197dr",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "urd197drc",
+          "_type": "span",
+          "marks": [],
+          "text": "Ultimately, the choice between AI tokens and points depends on user needs and technical expertise. Platforms that offer both options should carefully consider their pricing structure to ensure that it aligns with user expectations."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "ughn4j3v",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "ughn4j3vc",
+          "_type": "span",
+          "marks": [],
+          "text": "For instance, consider a developer who requires greater control over their project's costs and data portability. In this case, an AI token-based platform may be more suitable due to its transparency and predictability in pricing."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "x0kx4x7r",
+      "_type": "image",
+      "alt": "Section image 4",
+      "asset": {
+        "_ref": "image-ba1acfe11bc9a95c4a53d1ece78b1bd2b6db0425-1344x768-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "7sw70qb0",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "7sw70qb0c",
+          "_type": "span",
+          "marks": [],
+          "text": "Conclusion: Navigating the Complexities of AI Pricing"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "n2tmnm6s",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "n2tmnm6sc",
+          "_type": "span",
+          "marks": [],
+          "text": "In conclusion, understanding the distinction between AI tokens and points is crucial for navigating the complexities of AI pricing. By grasping the technical implications of tokenization and the commercial representations used by platforms, users can make more informed decisions about their project's costs and data portability."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "uu5m6lbu",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "uu5m6lbuc",
+          "_type": "span",
+          "marks": [],
+          "text": "We hope this article has provided a comprehensive comparison of AI tokens and points, empowering developers to choose the right pricing model for their needs. Remember that transparency and predictability in pricing are essential for optimizing projects and achieving desired outcomes in AI technology."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    }
+  ],
+  "category": "fundamentals",
+  "coverImage": {
+    "_type": "image",
+    "alt": "La diferencia entre AI Token y puntos",
+    "asset": {
+      "_ref": "image-9379d39d953ee3681bd2d70d1000ed9430c61f19-1344x768-png",
+      "_type": "reference"
+    }
+  },
+  "difficultyLevel": "beginner",
+  "excerpt": "Entendiendo la complejidad detrás del precio de los servicios de inteligencia artificial: ¿qué es un AI Token y cómo se relaciona con los puntos?",
+  "focusKeyword": "AI Token vs Points pricing comparison",
+  "generatedByPipeline": true,
+  "language": "es",
+  "pipelineVersion": "v1.0",
+  "publishedAt": "2026-06-04T11:36:25.621Z",
+  "qaCheckedAt": "2026-06-04T12:04:14.350Z",
+  "qaFeedback": "metaDescription has 127 chars (needs 140-160)",
+  "qaRetryCount": 0,
+  "qaScore": 88,
+  "readTime": 12,
+  "secondaryKeywords": [
+    "AI Token",
+    "points",
+    "credits",
+    "tokenization",
+    "pricing"
+  ],
+  "seo": {
+    "seoDescription": "Descubre las diferencias clave entre el tokenización de inteligencia artificial y la representación comercial de los servicios.",
+    "seoTitle": "AI Token vs Puntos: precios en comparación"
+  },
+  "slug": {
+    "_type": "slug",
+    "current": "ai-token-vs-puntos-precio-comparacion"
+  },
+  "sourceUrl": "https://www.aitoken.com.tw/post/ai-token-vs-points",
+  "tags": [
+    "AI Token",
+    "points",
+    "credits",
+    "tokenization",
+    "pricing"
+  ],
+  "title": "La diferencia entre AI Token y puntos",
+  "translationKey": "69f11a21-5798-4617-8e95-8d513446d402"
+}

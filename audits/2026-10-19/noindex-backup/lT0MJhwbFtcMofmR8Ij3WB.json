@@ -1,0 +1,466 @@
+{
+  "_createdAt": "2026-06-04T18:22:53Z",
+  "_id": "lT0MJhwbFtcMofmR8Ij3WB",
+  "_rev": "nWdHZ1zqJ7jFG6zlWdTETV",
+  "_type": "post",
+  "_updatedAt": "2026-10-15T08:21:24Z",
+  "articleNumber": 68,
+  "body": [
+    {
+      "_key": "p0he0fki",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "p0he0fkic",
+          "_type": "span",
+          "marks": [],
+          "text": "The rise of large language models has opened doors to new possibilities in AI development. Among the most popular and powerful models is ChatGPT, developed by OpenAI. However, with great power comes complexity, making it challenging for beginners to navigate the ChatGPT API. In this guide, we'll walk you through the essential concepts and steps to get started with using the ChatGPT API."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "7odxyr2w",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "7odxyr2wc",
+          "_type": "span",
+          "marks": [],
+          "text": "Understanding the Relationship Between ChatGPT API and OpenAI API"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "ghjz86u3",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "ghjz86u3c",
+          "_type": "span",
+          "marks": [],
+          "text": "Before diving into the ChatGPT API, it's essential to understand its relationship with the OpenAI API. \"ChatGPT API\" is the common name for using OpenAI's chat models, which are part of the OpenAI API; the OpenAI API as a whole offers a broader range of models and features. Both use the same OpenAI account, API keys and billing."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "aeovpdme",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "aeovpdmec",
+          "_type": "span",
+          "marks": [],
+          "text": "The primary goal of this article is to help beginners understand how the two relate and which models best suit their needs. We'll explore the key characteristics of each, including their strengths, weaknesses, and use cases."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "zutlvsjx",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "zutlvsjxc",
+          "_type": "span",
+          "marks": [],
+          "text": "ChatGPT API vs OpenAI API: What Differs and What Doesn't"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "pp8gua52",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "pp8gua52c",
+          "_type": "span",
+          "marks": [],
+          "text": "One of the most significant differences between the two APIs is the type of models available. The ChatGPT model is specifically designed for conversational AI tasks, whereas the OpenAI API offers a broader range of models suitable for various applications, including text generation, translation, and more."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "a7zs6xic",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "a7zs6xicc",
+          "_type": "span",
+          "marks": [],
+          "text": "Pricing is not one of the differences: the OpenAI API, including its chat models, is pay-as-you-go, and each API call is charged based on the number of tokens processed. Rates vary by model, so check OpenAI's pricing page for current prices."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "txr8flpd",
+      "_type": "image",
+      "alt": "Section image 1",
+      "asset": {
+        "_ref": "image-21032150199982a9db3df0bbb4c420e2d11c495a-1344x768-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "5gpyh267",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "5gpyh267c",
+          "_type": "span",
+          "marks": [],
+          "text": "Setting Up an OpenAI Account and Obtaining an API Key"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "frqjahgp",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "frqjahgpc",
+          "_type": "span",
+          "marks": [],
+          "text": "To begin using the ChatGPT API, you'll need to create an account on the OpenAI platform. The registration process is straightforward, requiring basic information such as email address and password."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "c4nggetw",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "c4nggetwc",
+          "_type": "span",
+          "marks": [],
+          "text": "Once your account is activated, navigate to the dashboard and click on 'API keys.' There you can create a unique API key, which you can use to authenticate requests to the ChatGPT API."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "dcjcwubo",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "dcjcwuboc",
+          "_type": "span",
+          "marks": [],
+          "text": "Remember that API keys are sensitive information and should be kept secure. Misusing or exposing your API key may result in account suspension or termination."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "ixrlnqhh",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "ixrlnqhhc",
+          "_type": "span",
+          "marks": [],
+          "text": "Configuring Billing Settings for API Usage"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "tnlhnwuh",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "tnlhnwuhc",
+          "_type": "span",
+          "marks": [],
+          "text": "As mentioned earlier, the ChatGPT API operates on a token-based system. To ensure accurate billing and avoid unexpected charges, configure your billing settings according to your usage patterns."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "ixs6xht0",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "ixs6xht0c",
+          "_type": "span",
+          "marks": [],
+          "text": "Monitor your token consumption regularly, adjusting your configuration as needed to stay within budget."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "5tuf8w90",
+      "_type": "image",
+      "alt": "Section image 2",
+      "asset": {
+        "_ref": "image-568f8cdb1434bc2b9b44a613b6fed43907016bb7-1344x768-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "gairbidj",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "gairbidjc",
+          "_type": "span",
+          "marks": [],
+          "text": "Using Responses API as a Primary Interface for Interacting with Models"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "7qifqs1y",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "7qifqs1yc",
+          "_type": "span",
+          "marks": [],
+          "text": "The Responses API is the primary interface for interacting with models, allowing you to send requests and receive responses in various formats. Familiarize yourself with the available endpoints and parameters to optimize your interactions."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "52i5zxit",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "52i5zxitc",
+          "_type": "span",
+          "marks": [],
+          "text": "When crafting your requests, ensure you're using the correct endpoint, passing relevant parameters, and handling errors properly."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "hqvc2mf6",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "hqvc2mf6c",
+          "_type": "span",
+          "marks": [],
+          "text": "To simplify your workflow, explore OpenAI's SDKs for popular programming languages, which provide pre-built functions for interacting with models."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "r40b6fxs",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "r40b6fxsc",
+          "_type": "span",
+          "marks": [],
+          "text": "Optimizing Model Selection and Cost Management"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "ss63a3xe",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "ss63a3xec",
+          "_type": "span",
+          "marks": [],
+          "text": "Choosing the right model is crucial to minimizing costs while achieving desired results. Consider factors such as model size, complexity, and performance when selecting a suitable option."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "n8na3mj1",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "n8na3mj1c",
+          "_type": "span",
+          "marks": [],
+          "text": "Additionally, implement cost-saving strategies like caching, model compression, or using smaller models for lighter tasks."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "li0ljo3k",
+      "_type": "image",
+      "alt": "Section image 3",
+      "asset": {
+        "_ref": "image-63dbf6af75d6e253c003c6ae3b5a12ec796fba43-1344x768-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "gs0flrxu",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "gs0flrxuc",
+          "_type": "span",
+          "marks": [],
+          "text": "Proxy Services and API Request Routing"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "s92rx4xc",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "s92rx4xcc",
+          "_type": "span",
+          "marks": [],
+          "text": "While using the ChatGPT API directly, you may encounter issues with latency or throughput. In such cases, consider implementing proxy services to route requests through an intermediary."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "g1s38avd",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "g1s38avdc",
+          "_type": "span",
+          "marks": [],
+          "text": "Proxy servers can act as a buffer between your application and the API, helping to distribute load and improve overall performance."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "3paex6t1",
+      "_type": "image",
+      "alt": "Section image 4",
+      "asset": {
+        "_ref": "image-3e512277eeab2902a841298b542d1c05a0d2e8ca-1344x768-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "8hro8ofg",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "8hro8ofgc",
+          "_type": "span",
+          "marks": [],
+          "text": "Conclusion and Next Steps"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "r5p93vsz",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "r5p93vszc",
+          "_type": "span",
+          "marks": [],
+          "text": "Congratulations on completing this beginner's guide to the ChatGPT API! You've gained a solid understanding of essential concepts, including model selection, pricing, and proxy services."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "2udsfzkj",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "2udsfzkjc",
+          "_type": "span",
+          "marks": [],
+          "text": "Now that you're equipped with this knowledge, start building your AI-powered applications using the ChatGPT API. Remember to monitor your usage patterns, optimize your configurations, and adapt to evolving requirements as you progress in your development journey."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    }
+  ],
+  "category": "fundamentals",
+  "coverImage": {
+    "_type": "image",
+    "alt": "Menggunakan API ChatGPT untuk Pemula",
+    "asset": {
+      "_ref": "image-d923da14821195468fcdc106d49f3e12059037b3-1344x768-png",
+      "_type": "reference"
+    }
+  },
+  "difficultyLevel": "beginner",
+  "excerpt": "Pelajari cara menggunakan API ChatGPT dengan mudah dan efektif dalam artikel ini.",
+  "focusKeyword": "ChatGPT API for beginners guide",
+  "generatedByPipeline": true,
+  "language": "id",
+  "pipelineVersion": "v1.0",
+  "publishedAt": "2026-06-04T18:22:53.160Z",
+  "qaCheckedAt": "2026-06-04T18:46:32.513Z",
+  "qaFeedback": "metaDescription has 57 chars (needs 140-160)",
+  "qaRetryCount": 0,
+  "qaScore": 88,
+  "readTime": 12,
+  "secondaryKeywords": [
+    "OpenAI API tutorial",
+    "Responses API for beginners",
+    "ChatGPT API usage guide"
+  ],
+  "seo": {
+    "seoDescription": "Cara menggunakan API ChatGPT untuk memulai proyek AI Anda",
+    "seoTitle": "Menggunakan API ChatGPT untuk Pemula"
+  },
+  "slug": {
+    "_type": "slug",
+    "current": "menggunakan-api-chatgpt-untuk-pemula"
+  },
+  "sourceUrl": "https://www.aitoken.com.tw/post/how-to-use-chatgpt-api-for-beginners",
+  "tags": [
+    "OpenAI API tutorial",
+    "Responses API for beginners",
+    "ChatGPT API usage guide"
+  ],
+  "title": "Menggunakan API ChatGPT untuk Pemula",
+  "translationKey": "4b5799af-b6e3-40aa-b61c-d2f31eb67b71"
+}
