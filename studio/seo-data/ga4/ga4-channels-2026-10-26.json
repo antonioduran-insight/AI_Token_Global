@@ -1,0 +1,45 @@
+{
+  "meta": {
+    "siteUrl": "aitoken.global",
+    "snapshotDate": "2026-10-26",
+    "rangeDays": 30,
+    "dataSource": "ga4"
+  },
+  "rows": [
+    {
+      "channel": "Organic Search",
+      "users": 62,
+      "sessions": 86,
+      "engagementRate": 0.7093023255813954,
+      "avgEngagementSeconds": 53
+    },
+    {
+      "channel": "Direct",
+      "users": 15,
+      "sessions": 19,
+      "engagementRate": 0.7894736842105263,
+      "avgEngagementSeconds": 50
+    },
+    {
+      "channel": "AI Assistant",
+      "users": 1,
+      "sessions": 1,
+      "engagementRate": 1,
+      "avgEngagementSeconds": 8
+    },
+    {
+      "channel": "Organic Social",
+      "users": 1,
+      "sessions": 1,
+      "engagementRate": 1,
+      "avgEngagementSeconds": 0
+    },
+    {
+      "channel": "Unassigned",
+      "users": 1,
+      "sessions": 1,
+      "engagementRate": 0,
+      "avgEngagementSeconds": 40
+    }
+  ]
+}
