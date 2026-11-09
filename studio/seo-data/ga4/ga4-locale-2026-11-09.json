@@ -1,0 +1,64 @@
+{
+  "meta": {
+    "siteUrl": "aitoken.global",
+    "snapshotDate": "2026-11-09",
+    "rangeDays": 30,
+    "dataSource": "ga4"
+  },
+  "locales": [
+    {
+      "locale": "en",
+      "label": "English",
+      "current": {
+        "users": 68,
+        "engagedSessions": 84,
+        "engagementRate": 0.8571428571428571,
+        "avgEngagementSeconds": 25
+      },
+      "previous": {
+        "users": 56,
+        "engagedSessions": 81,
+        "engagementRate": 0.8617021276595744,
+        "avgEngagementSeconds": 35
+      },
+      "topPage": "/en/",
+      "topChannel": "Organic Search"
+    },
+    {
+      "locale": "es",
+      "label": "Español",
+      "current": {
+        "users": 9,
+        "engagedSessions": 8,
+        "engagementRate": 0.8888888888888888,
+        "avgEngagementSeconds": 45
+      },
+      "previous": {
+        "users": 2,
+        "engagedSessions": 4,
+        "engagementRate": 1,
+        "avgEngagementSeconds": 9
+      },
+      "topPage": "/es/token-calculator/",
+      "topChannel": "Organic Search"
+    },
+    {
+      "locale": "id",
+      "label": "Indonesia",
+      "current": {
+        "users": 23,
+        "engagedSessions": 21,
+        "engagementRate": 0.8076923076923077,
+        "avgEngagementSeconds": 37
+      },
+      "previous": {
+        "users": 27,
+        "engagedSessions": 24,
+        "engagementRate": 0.8571428571428571,
+        "avgEngagementSeconds": 19
+      },
+      "topPage": "/id/blog/membeli-token-ai-pemula/",
+      "topChannel": "Organic Search"
+    }
+  ]
+}
