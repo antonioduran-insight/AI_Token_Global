@@ -1,0 +1,64 @@
+{
+  "meta": {
+    "siteUrl": "aitoken.global",
+    "snapshotDate": "2026-11-16",
+    "rangeDays": 30,
+    "dataSource": "ga4"
+  },
+  "locales": [
+    {
+      "locale": "en",
+      "label": "English",
+      "current": {
+        "users": 46,
+        "engagedSessions": 55,
+        "engagementRate": 0.7638888888888888,
+        "avgEngagementSeconds": 25
+      },
+      "previous": {
+        "users": 83,
+        "engagedSessions": 115,
+        "engagementRate": 0.8712121212121212,
+        "avgEngagementSeconds": 30
+      },
+      "topPage": "/en/blog/",
+      "topChannel": "Organic Search"
+    },
+    {
+      "locale": "es",
+      "label": "Español",
+      "current": {
+        "users": 10,
+        "engagedSessions": 9,
+        "engagementRate": 0.9,
+        "avgEngagementSeconds": 53
+      },
+      "previous": {
+        "users": 2,
+        "engagedSessions": 3,
+        "engagementRate": 1,
+        "avgEngagementSeconds": 12
+      },
+      "topPage": "/es/claude-api/",
+      "topChannel": "Organic Search"
+    },
+    {
+      "locale": "id",
+      "label": "Indonesia",
+      "current": {
+        "users": 19,
+        "engagedSessions": 18,
+        "engagementRate": 0.8571428571428571,
+        "avgEngagementSeconds": 40
+      },
+      "previous": {
+        "users": 34,
+        "engagedSessions": 29,
+        "engagementRate": 0.7631578947368421,
+        "avgEngagementSeconds": 21
+      },
+      "topPage": "/id/beginners-guide/",
+      "topChannel": "Organic Search"
+    }
+  ]
+}

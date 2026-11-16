@@ -1,0 +1,269 @@
+{
+  "meta": {
+    "siteUrl": "aitoken.global",
+    "snapshotDate": "2026-11-16",
+    "rangeDays": 30,
+    "dataSource": "ga4"
+  },
+  "rows": [
+    {
+      "page": "/en/blog/",
+      "locale": "en",
+      "views": 14,
+      "users": 2,
+      "avgEngagementSeconds": 23
+    },
+    {
+      "page": "/en/",
+      "locale": "en",
+      "views": 9,
+      "users": 8,
+      "avgEngagementSeconds": 16
+    },
+    {
+      "page": "/en/blog/what-is-dark-gpus-ai-chips-waiting-for-power/",
+      "locale": "en",
+      "views": 8,
+      "users": 2,
+      "avgEngagementSeconds": 14
+    },
+    {
+      "page": "/en/blog/why-ai-filmmaking-cost-depends-on-retries/",
+      "locale": "en",
+      "views": 8,
+      "users": 4,
+      "avgEngagementSeconds": 6
+    },
+    {
+      "page": "/en/api-compare/",
+      "locale": "en",
+      "views": 6,
+      "users": 6,
+      "avgEngagementSeconds": 55
+    },
+    {
+      "page": "/en/blog/what-is-gemini-4-argon-1m-token-output/",
+      "locale": "en",
+      "views": 6,
+      "users": 3,
+      "avgEngagementSeconds": 6
+    },
+    {
+      "page": "/id/beginners-guide/",
+      "locale": "id",
+      "views": 5,
+      "users": 2,
+      "avgEngagementSeconds": 41
+    },
+    {
+      "page": "/en/beginners-guide/",
+      "locale": "en",
+      "views": 4,
+      "users": 3,
+      "avgEngagementSeconds": 14
+    },
+    {
+      "page": "/en/blog/buying-ai-tokens-for-personal-use/",
+      "locale": "en",
+      "views": 4,
+      "users": 3,
+      "avgEngagementSeconds": 0
+    },
+    {
+      "page": "/id/blog/membeli-token-ai-pemula/",
+      "locale": "id",
+      "views": 4,
+      "users": 4,
+      "avgEngagementSeconds": 25
+    },
+    {
+      "page": "/en/blog/ai-api-tokens-explained-for-beginners/",
+      "locale": "en",
+      "views": 3,
+      "users": 3,
+      "avgEngagementSeconds": 38
+    },
+    {
+      "page": "/en/blog/why-1-6-billion-free-claude-code-tokens-has-a-catch/",
+      "locale": "en",
+      "views": 3,
+      "users": 3,
+      "avgEngagementSeconds": 35
+    },
+    {
+      "page": "/id/token-calculator/",
+      "locale": "id",
+      "views": 3,
+      "users": 3,
+      "avgEngagementSeconds": 112
+    },
+    {
+      "page": "/en/blog/local-ai-vs-cloud-ai-same-job-comparison/",
+      "locale": "en",
+      "views": 2,
+      "users": 2,
+      "avgEngagementSeconds": 107
+    },
+    {
+      "page": "/en/use-cases/",
+      "locale": "en",
+      "views": 2,
+      "users": 2,
+      "avgEngagementSeconds": 3
+    },
+    {
+      "page": "/es/blog/comprendiendo-la-interfaz-de-pantalla-para-uso-de-tokens-ai/",
+      "locale": "es",
+      "views": 2,
+      "users": 1,
+      "avgEngagementSeconds": 0
+    },
+    {
+      "page": "/es/claude-api/",
+      "locale": "es",
+      "views": 2,
+      "users": 2,
+      "avgEngagementSeconds": 68
+    },
+    {
+      "page": "/es/token-calculator/",
+      "locale": "es",
+      "views": 2,
+      "users": 1,
+      "avgEngagementSeconds": 79
+    },
+    {
+      "page": "/id/api-compare/",
+      "locale": "id",
+      "views": 2,
+      "users": 2,
+      "avgEngagementSeconds": 51
+    },
+    {
+      "page": "/id/blog/token-ai-vs-api-key-pemula/",
+      "locale": "id",
+      "views": 2,
+      "users": 2,
+      "avgEngagementSeconds": 19
+    },
+    {
+      "page": "/en/blog/ai-api-platforms-vs-chat-tools-for-businesses-and-developers/",
+      "locale": "en",
+      "views": 1,
+      "users": 1,
+      "avgEngagementSeconds": 66
+    },
+    {
+      "page": "/en/blog/gemini-4-carbon-gated-release-cybersecurity-enterprise-model-choice/",
+      "locale": "en",
+      "views": 1,
+      "users": 1,
+      "avgEngagementSeconds": 5
+    },
+    {
+      "page": "/en/blog/geminia-api-vs-gemini/",
+      "locale": "en",
+      "views": 1,
+      "users": 1,
+      "avgEngagementSeconds": 28
+    },
+    {
+      "page": "/en/blog/how-to-use-chatgpt-work-agents-md-guide/",
+      "locale": "en",
+      "views": 1,
+      "users": 1,
+      "avgEngagementSeconds": 8
+    },
+    {
+      "page": "/en/blog/what-is-claude-mods/",
+      "locale": "en",
+      "views": 1,
+      "users": 1,
+      "avgEngagementSeconds": 1
+    },
+    {
+      "page": "/es/beginners-guide/",
+      "locale": "es",
+      "views": 1,
+      "users": 1,
+      "avgEngagementSeconds": 17
+    },
+    {
+      "page": "/es/blog/comparacion-del-consumo-de-tokens-entre-chatgpt-claude-y-gemini/",
+      "locale": "es",
+      "views": 1,
+      "users": 1,
+      "avgEngagementSeconds": 14
+    },
+    {
+      "page": "/es/blog/comparativa-proveedores-tokens-inteligencia-artificial/",
+      "locale": "es",
+      "views": 1,
+      "users": 1,
+      "avgEngagementSeconds": 13
+    },
+    {
+      "page": "/es/blog/geminia-api-vs-gemini/",
+      "locale": "es",
+      "views": 1,
+      "users": 1,
+      "avgEngagementSeconds": 10
+    },
+    {
+      "page": "/es/blog/how-to-use-chatgpt-work-agents-md-guide/",
+      "locale": "es",
+      "views": 1,
+      "users": 1,
+      "avgEngagementSeconds": 254
+    },
+    {
+      "page": "/es/blog/por-que-un-ai-agent-se-descontrolo-lecciones-de-seguridad-para-empresas-taiwanesas/",
+      "locale": "es",
+      "views": 1,
+      "users": 1,
+      "avgEngagementSeconds": 11
+    },
+    {
+      "page": "/id/",
+      "locale": "id",
+      "views": 1,
+      "users": 1,
+      "avgEngagementSeconds": 43
+    },
+    {
+      "page": "/id/blog/mengenal-token-ai-untuk-pemula-panduan-lengkap/",
+      "locale": "id",
+      "views": 1,
+      "users": 1,
+      "avgEngagementSeconds": 15
+    },
+    {
+      "page": "/id/blog/mengerti-penggunaan-token-ai/",
+      "locale": "id",
+      "views": 1,
+      "users": 1,
+      "avgEngagementSeconds": 11
+    },
+    {
+      "page": "/id/blog/mengerti-token-api-ai-panduan-untuk-pemula/",
+      "locale": "id",
+      "views": 1,
+      "users": 1,
+      "avgEngagementSeconds": 17
+    },
+    {
+      "page": "/id/blog/tokenisasi-dan-dampaknya-pada-pasar-keuangan/",
+      "locale": "id",
+      "views": 1,
+      "users": 1,
+      "avgEngagementSeconds": 13
+    },
+    {
+      "page": "/id/use-cases/",
+      "locale": "id",
+      "views": 1,
+      "users": 1,
+      "avgEngagementSeconds": 13
+    }
+  ]
+}
