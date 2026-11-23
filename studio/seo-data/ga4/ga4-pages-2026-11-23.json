@@ -1,0 +1,276 @@
+{
+  "meta": {
+    "siteUrl": "aitoken.global",
+    "snapshotDate": "2026-11-23",
+    "rangeDays": 30,
+    "dataSource": "ga4"
+  },
+  "rows": [
+    {
+      "page": "/en/",
+      "locale": "en",
+      "views": 14,
+      "users": 6,
+      "avgEngagementSeconds": 173
+    },
+    {
+      "page": "/en/blog/",
+      "locale": "en",
+      "views": 13,
+      "users": 2,
+      "avgEngagementSeconds": 23
+    },
+    {
+      "page": "/en/blog/what-is-dark-gpus-ai-chips-waiting-for-power/",
+      "locale": "en",
+      "views": 8,
+      "users": 2,
+      "avgEngagementSeconds": 14
+    },
+    {
+      "page": "/en/blog/why-ai-filmmaking-cost-depends-on-retries/",
+      "locale": "en",
+      "views": 8,
+      "users": 4,
+      "avgEngagementSeconds": 6
+    },
+    {
+      "page": "/id/beginners-guide/",
+      "locale": "id",
+      "views": 6,
+      "users": 3,
+      "avgEngagementSeconds": 36
+    },
+    {
+      "page": "/id/blog/membeli-token-ai-pemula/",
+      "locale": "id",
+      "views": 6,
+      "users": 5,
+      "avgEngagementSeconds": 17
+    },
+    {
+      "page": "/en/blog/buying-ai-tokens-for-personal-use/",
+      "locale": "en",
+      "views": 5,
+      "users": 4,
+      "avgEngagementSeconds": 3
+    },
+    {
+      "page": "/en/beginners-guide/",
+      "locale": "en",
+      "views": 4,
+      "users": 3,
+      "avgEngagementSeconds": 14
+    },
+    {
+      "page": "/en/blog/ai-api-tokens-explained-for-beginners/",
+      "locale": "en",
+      "views": 4,
+      "users": 4,
+      "avgEngagementSeconds": 67
+    },
+    {
+      "page": "/id/api-compare/",
+      "locale": "id",
+      "views": 4,
+      "users": 4,
+      "avgEngagementSeconds": 38
+    },
+    {
+      "page": "/id/token-calculator/",
+      "locale": "id",
+      "views": 4,
+      "users": 4,
+      "avgEngagementSeconds": 108
+    },
+    {
+      "page": "/en/api-compare/",
+      "locale": "en",
+      "views": 3,
+      "users": 3,
+      "avgEngagementSeconds": 23
+    },
+    {
+      "page": "/en/blog/gemini-4-carbon-gated-release-cybersecurity-enterprise-model-choice/",
+      "locale": "en",
+      "views": 3,
+      "users": 1,
+      "avgEngagementSeconds": 11
+    },
+    {
+      "page": "/en/blog/ai-token-usage-guide-for-beginners/",
+      "locale": "en",
+      "views": 2,
+      "users": 2,
+      "avgEngagementSeconds": 42
+    },
+    {
+      "page": "/en/blog/how-to-use-chatgpt-work-agents-md-guide/",
+      "locale": "en",
+      "views": 2,
+      "users": 2,
+      "avgEngagementSeconds": 24
+    },
+    {
+      "page": "/en/blog/what-is-gemini-4-argon-1m-token-output/",
+      "locale": "en",
+      "views": 2,
+      "users": 2,
+      "avgEngagementSeconds": 2
+    },
+    {
+      "page": "/es/blog/comparacion-del-consumo-de-tokens-entre-chatgpt-claude-y-gemini/",
+      "locale": "es",
+      "views": 2,
+      "users": 2,
+      "avgEngagementSeconds": 14
+    },
+    {
+      "page": "/es/blog/comprendiendo-la-interfaz-de-pantalla-para-uso-de-tokens-ai/",
+      "locale": "es",
+      "views": 2,
+      "users": 1,
+      "avgEngagementSeconds": 0
+    },
+    {
+      "page": "/es/token-calculator/",
+      "locale": "es",
+      "views": 2,
+      "users": 1,
+      "avgEngagementSeconds": 79
+    },
+    {
+      "page": "/id/blog/tidak-panik-ketika-token-ai-anda-habis-panduan-langkah-demi-langkah/",
+      "locale": "id",
+      "views": 2,
+      "users": 1,
+      "avgEngagementSeconds": 5
+    },
+    {
+      "page": "/id/use-cases/",
+      "locale": "id",
+      "views": 2,
+      "users": 2,
+      "avgEngagementSeconds": 9
+    },
+    {
+      "page": "/en/blog/local-ai-vs-cloud-ai-same-job-comparison/",
+      "locale": "en",
+      "views": 1,
+      "users": 1,
+      "avgEngagementSeconds": 8
+    },
+    {
+      "page": "/en/blog/software-factories-ai-agent-platform-comparison-2026/",
+      "locale": "en",
+      "views": 1,
+      "users": 1,
+      "avgEngagementSeconds": 4
+    },
+    {
+      "page": "/en/blog/what-is-meta-muse-personal-agent-vs-openclaw/",
+      "locale": "en",
+      "views": 1,
+      "users": 1,
+      "avgEngagementSeconds": 12
+    },
+    {
+      "page": "/en/blog/why-1-6-billion-free-claude-code-tokens-has-a-catch/",
+      "locale": "en",
+      "views": 1,
+      "users": 1,
+      "avgEngagementSeconds": 0
+    },
+    {
+      "page": "/en/blog/why-ai-agent-trends-all-lead-back-to-token-budget/",
+      "locale": "en",
+      "views": 1,
+      "users": 1,
+      "avgEngagementSeconds": 0
+    },
+    {
+      "page": "/en/use-cases/",
+      "locale": "en",
+      "views": 1,
+      "users": 1,
+      "avgEngagementSeconds": 0
+    },
+    {
+      "page": "/es/blog/comparativa-proveedores-tokens-inteligencia-artificial/",
+      "locale": "es",
+      "views": 1,
+      "users": 1,
+      "avgEngagementSeconds": 13
+    },
+    {
+      "page": "/es/blog/geminia-api-vs-gemini/",
+      "locale": "es",
+      "views": 1,
+      "users": 1,
+      "avgEngagementSeconds": 10
+    },
+    {
+      "page": "/es/blog/how-to-automate-business-workflow-with-codex/",
+      "locale": "es",
+      "views": 1,
+      "users": 1,
+      "avgEngagementSeconds": 20
+    },
+    {
+      "page": "/es/blog/how-to-use-chatgpt-work-agents-md-guide/",
+      "locale": "es",
+      "views": 1,
+      "users": 1,
+      "avgEngagementSeconds": 254
+    },
+    {
+      "page": "/es/blog/por-que-un-ai-agent-se-descontrolo-lecciones-de-seguridad-para-empresas-taiwanesas/",
+      "locale": "es",
+      "views": 1,
+      "users": 1,
+      "avgEngagementSeconds": 11
+    },
+    {
+      "page": "/es/claude-api/",
+      "locale": "es",
+      "views": 1,
+      "users": 1,
+      "avgEngagementSeconds": 134
+    },
+    {
+      "page": "/id/",
+      "locale": "id",
+      "views": 1,
+      "users": 1,
+      "avgEngagementSeconds": 35
+    },
+    {
+      "page": "/id/blog/mengerti-penggunaan-token-ai/",
+      "locale": "id",
+      "views": 1,
+      "users": 1,
+      "avgEngagementSeconds": 11
+    },
+    {
+      "page": "/id/blog/mengerti-token-api-ai-panduan-untuk-pemula/",
+      "locale": "id",
+      "views": 1,
+      "users": 1,
+      "avgEngagementSeconds": 17
+    },
+    {
+      "page": "/id/blog/token-ai-vs-api-key-pemula/",
+      "locale": "id",
+      "views": 1,
+      "users": 1,
+      "avgEngagementSeconds": 18
+    },
+    {
+      "page": "/id/claude-api/",
+      "locale": "id",
+      "views": 1,
+      "users": 1,
+      "avgEngagementSeconds": 6
+    }
+  ]
+}
