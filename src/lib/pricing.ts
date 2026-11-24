@@ -51,15 +51,20 @@ export interface Model {
 }
 
 export const PROVIDER_PRICING_URL: Record<Provider, string> = {
-  OpenAI: 'https://openai.com/api/pricing/',
+  // openai.com/api/pricing/ now redirects to ChatGPT business plans; this is the API price sheet.
+  OpenAI: 'https://developers.openai.com/api/docs/pricing',
   Anthropic: 'https://platform.claude.com/docs/en/about-claude/pricing',
-  Google: 'https://ai.google.dev/gemini-api/docs/pricing',
+  // ai.google.dev/gemini-api/docs/pricing redirects here; this is the page's canonical URL.
+  Google: 'https://aistudio.google.com/docs/pricing',
 };
 
 export const MODELS: Model[] = [
   {
     provider: 'OpenAI',
     displayName: 'GPT-5.6 Sol',
+    // NOT re-verified 2026-11-24: the official page lists a promotional $4 / $20
+    // "available until November 30, 2026" and does not state the price after it.
+    // Left at $5 / $30 pending an owner decision.
     inputPerMillion: 5.0,
     outputPerMillion: 30.0,
     lastChecked: '2026-10-07',
@@ -70,7 +75,7 @@ export const MODELS: Model[] = [
     displayName: 'GPT-5.6 Terra',
     inputPerMillion: 2.0,
     outputPerMillion: 12.0,
-    lastChecked: '2026-10-07',
+    lastChecked: '2026-11-24',
     sourceUrl: PROVIDER_PRICING_URL.OpenAI,
   },
   {
@@ -78,7 +83,7 @@ export const MODELS: Model[] = [
     displayName: 'GPT-5.6 Luna',
     inputPerMillion: 0.2,
     outputPerMillion: 1.2,
-    lastChecked: '2026-10-07',
+    lastChecked: '2026-11-24',
     sourceUrl: PROVIDER_PRICING_URL.OpenAI,
   },
   {
@@ -86,7 +91,7 @@ export const MODELS: Model[] = [
     displayName: 'Claude Opus 5',
     inputPerMillion: 5.0,
     outputPerMillion: 25.0,
-    lastChecked: '2026-09-03',
+    lastChecked: '2026-11-24',
     sourceUrl: PROVIDER_PRICING_URL.Anthropic,
   },
   {
@@ -94,7 +99,7 @@ export const MODELS: Model[] = [
     displayName: 'Claude Sonnet 5',
     inputPerMillion: 2.0,
     outputPerMillion: 10.0,
-    lastChecked: '2026-09-03',
+    lastChecked: '2026-11-24',
     sourceUrl: PROVIDER_PRICING_URL.Anthropic,
   },
   {
@@ -102,7 +107,7 @@ export const MODELS: Model[] = [
     displayName: 'Claude Haiku 4.5',
     inputPerMillion: 1.0,
     outputPerMillion: 5.0,
-    lastChecked: '2026-09-03',
+    lastChecked: '2026-11-24',
     sourceUrl: PROVIDER_PRICING_URL.Anthropic,
   },
   {
@@ -110,7 +115,7 @@ export const MODELS: Model[] = [
     displayName: 'Gemini 3.1 Pro',
     inputPerMillion: 2.0,
     outputPerMillion: 12.0,
-    lastChecked: '2026-09-03',
+    lastChecked: '2026-11-24',
     sourceUrl: PROVIDER_PRICING_URL.Google,
   },
   {
@@ -118,7 +123,7 @@ export const MODELS: Model[] = [
     displayName: 'Gemini 3.5 Flash-Lite',
     inputPerMillion: 0.3,
     outputPerMillion: 2.5,
-    lastChecked: '2026-09-03',
+    lastChecked: '2026-11-24',
     sourceUrl: PROVIDER_PRICING_URL.Google,
   },
 ];
