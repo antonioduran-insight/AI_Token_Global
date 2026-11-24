@@ -24,6 +24,9 @@ function pt(blocks: any): string {
   return renderPortableText(blocks, { strongStyle: 'color:#3C315B;font-weight:700;', source: `homePage/${lang}` });
 }
 
+// TODO(owner): confirm the real model count behind "60+". The live value is
+// Sanity homePage-<lang>.heroStats[0].statNumber; home.heroStat1Number in
+// src/i18n/*.json is only the fallback. Compare with MODELS.length in pricing.ts.
 const heroStats = page?.heroStats?.length
   ? page.heroStats
   : [
@@ -139,6 +142,7 @@ const faqJsonLd = faqPageSchema(faqs, `homePage/${lang}`);
             </div>
             <div>
               <div style="font-family: 'Kanit', sans-serif; font-weight: 700; font-size: 1rem; color: #1C1C1C;">{t('home.heroPriceCardTitle')}</div>
+              {/* TODO(owner): confirm the "60+" model count in home.heroPriceCardMeta (src/i18n/*.json). */}
               <div style="font-size: 0.8rem; color: #999; margin-top: 0.1rem;">{t('home.heroPriceCardMeta')}</div>
             </div>
           </div>
@@ -424,6 +428,7 @@ const faqJsonLd = faqPageSchema(faqs, `homePage/${lang}`);
           <svg width="10" height="10" viewBox="0 0 16 16" fill="currentColor"><circle cx="8" cy="8" r="8"/></svg>
           {t('home.tableLabel')}
         </div>
+        {/* TODO(owner): confirm the "60+" model count in home.tableHeading (src/i18n/*.json) — this table renders MODELS from pricing.ts. */}
         <h2 class="reveal" style="font-family: 'Kanit', sans-serif; font-size: 2rem; font-weight: 800; color: #1C1C1C; letter-spacing: -0.03em; line-height: 1.15;">
           {t('home.tableHeading')}
         </h2>
