@@ -334,7 +334,7 @@
     "clearBtn": "Limpiar",
     "rulesTitle": "Reglas de Estimación",
     "rule1": "Estimación de propósito general — ideal para evaluar rápidamente el tamaño del texto a escala.",
-    "rule2": "Chino: <strong>1.5 tokens</strong> por carácter &nbsp;·&nbsp; Inglés: <strong>1.1 tokens</strong> por palabra &nbsp;·&nbsp; Números y símbolos: <strong>0.3 tokens</strong> cada uno.",
+    "rule2": "Chino: <strong>{zh} tokens</strong> por carácter &nbsp;·&nbsp; Inglés: <strong>~{en} tokens</strong> por palabra &nbsp;·&nbsp; Números y símbolos: <strong>{sym} tokens</strong> cada uno.",
     "rule3": "Esta herramienta estima <strong>solo el costo de entrada</strong> — los tokens de salida (respuesta) no están incluidos.",
     "rule4": "Distintos modelos usan distintos tokenizadores; los conteos reales pueden variar ligeramente.",
     "rule5": "Los precios mostrados son precios de referencia de AI Token King. Verifica siempre con la plataforma oficial para la facturación.",

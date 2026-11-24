@@ -4,6 +4,7 @@ import { SUPPORTED_LANGS, isValidLang, useTranslations, LANG_META } from '../../
 import type { Lang } from '../../i18n/index';
 import { getTokenCalculatorPage } from '../../lib/sanity';
 import { getModel, formatPrice, formatPricingDate } from '../../lib/pricing';
+import { TOKEN_RATIOS, fillRatioTemplate } from '../../lib/token-estimate';
 import { renderPortableText } from '../../lib/portable-text';
 import { faqPageSchema } from '../../lib/schema';
 
@@ -34,6 +35,11 @@ const calcPricing = {
   claude: CALC_MODELS.claude.inputPerMillion,
   gemini: CALC_MODELS.gemini.inputPerMillion,
 };
+
+// The ratios the rules card prints and the ratios the script multiplies by
+// both come from src/lib/token-estimate.ts.
+const ratioRule = fillRatioTemplate(t('calculator.rule2'), LANG_META[lang as Lang].locale);
+const calcRatios = TOKEN_RATIOS;
 
 const pricingCheckedLabel = t('common.pricingLastChecked')
   .replace('{date}', formatPricingDate(LANG_META[lang as Lang].locale, Object.values(CALC_MODELS)));
@@ -139,7 +145,7 @@ const faqJsonLd = faqPageSchema(page.faq, `tokenCalculatorPage/${lang}`);
             </div>
             <ul class="rule-list">
               <li><div class="rule-dot"></div><span set:html={t('calculator.rule1')}></span></li>
-              <li><div class="rule-dot"></div><span set:html={t('calculator.rule2')}></span></li>
+              <li><div class="rule-dot"></div><span set:html={ratioRule}></span></li>
               <li><div class="rule-dot"></div><span set:html={t('calculator.rule3')}></span></li>
               <li><div class="rule-dot"></div><span set:html={t('calculator.rule4')}></span></li>
               <li><div class="rule-dot"></div><span set:html={t('calculator.rule5')}></span></li>
@@ -693,8 +699,11 @@ const faqJsonLd = faqPageSchema(page.faq, `tokenCalculatorPage/${lang}`);
   }
 </style>
 
-<script is:inline define:vars={{ calcI18n: { lowest: t('calculator.summaryLowest'), highest: t('calculator.summaryHighest'), inputCostOnly: t('calculator.inputCostOnly') }, calcPricing }}>
+<script is:inline define:vars={{ calcI18n: { lowest: t('calculator.summaryLowest'), highest: t('calculator.summaryHighest'), inputCostOnly: t('calculator.inputCostOnly') }, calcPricing, calcRatios }}>
   window.__CALC_I18N__ = calcI18n;
+  /* Tokens per Chinese char / English word / symbol, injected from
+     src/lib/token-estimate.ts so the maths matches the rules card. */
+  window.__CALC_RATIOS__ = calcRatios;
   /* Input price per 1M tokens, injected from src/lib/pricing.ts so the maths
      uses the exact same number the card above it prints. */
   window.__CALC_PRICING__ = calcPricing;
@@ -720,6 +729,7 @@ const faqJsonLd = faqPageSchema(page.faq, `tokenCalculatorPage/${lang}`);
   const charCountEl    = document.getElementById('charCount');
 
   const pricing = window.__CALC_PRICING__;
+  const ratios = window.__CALC_RATIOS__;
   const platformNames = { openai: 'OpenAI', claude: 'Anthropic', gemini: 'Google' };
 
   const SUMMARY_PLACEHOLDER = resultSummaryEl ? resultSummaryEl.textContent.trim() : '';
@@ -791,7 +801,9 @@ const faqJsonLd = faqPageSchema(page.faq, `tokenCalculatorPage/${lang}`);
       .replace(/[0-9]/g, '');
     const symbolCount = (stripped.match(/[^\s]/g) || []).length + numberCount;
 
-    const inputTokens = Math.round(chineseCount * 1.5 + englishCount * 1.1 + symbolCount * 0.3);
+    const inputTokens = Math.round(
+      chineseCount * ratios.chineseChar + englishCount * ratios.englishWord + symbolCount * ratios.symbol
+    );
 
     const openaiCost = (inputTokens * pricing.openai) / 1000000;
     const claudeCost = (inputTokens * pricing.claude) / 1000000;

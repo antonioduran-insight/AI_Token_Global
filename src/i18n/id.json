@@ -334,7 +334,7 @@
     "clearBtn": "Hapus",
     "rulesTitle": "Aturan Estimasi",
     "rule1": "Estimasi umum — ideal untuk mengukur ukuran teks dengan cepat dalam skala besar.",
-    "rule2": "Mandarin: <strong>1.5 token</strong> per karakter &nbsp;·&nbsp; Inggris: <strong>1.1 token</strong> per kata &nbsp;·&nbsp; Angka & simbol: <strong>0.3 token</strong> masing-masing.",
+    "rule2": "Mandarin: <strong>{zh} token</strong> per karakter &nbsp;·&nbsp; Inggris: <strong>~{en} token</strong> per kata &nbsp;·&nbsp; Angka & simbol: <strong>{sym} token</strong> masing-masing.",
     "rule3": "Alat ini memperkirakan <strong>biaya input saja</strong> — token output (respon) tidak termasuk.",
     "rule4": "Model yang berbeda menggunakan tokenizer berbeda; jumlah token aktual bisa sedikit berbeda.",
     "rule5": "Harga yang ditampilkan adalah harga referensi AI Token King. Selalu verifikasi dengan platform resmi untuk penagihan.",
