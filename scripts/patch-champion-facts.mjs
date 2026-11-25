@@ -157,11 +157,11 @@ function geminiApiPricing(lang) {
   if (lang === 'vi') {
     return 'Sự khác biệt chính giữa Gemini API và Gemini Apps nằm ở mô hình định giá. Gemini API tính phí theo token, với giá riêng cho token '
       + `đầu vào và đầu ra: ví dụ, ${m.displayName} có giá ${formatPrice(m.inputPerMillion)} cho mỗi 1 triệu token đầu vào và `
-      + `${formatPrice(m.outputPerMillion)} cho mỗi 1 triệu token đầu ra (giá của Google tính đến ${date}).`;
+      + `${formatPrice(m.outputPerMillion)} cho mỗi 1 triệu token đầu ra (giá thông thường của Google, kiểm tra ngày ${date}).`;
   }
   return 'The primary difference between Gemini API and Gemini Apps lies in their pricing models. Gemini API is billed per token, '
     + `with input and output tokens priced separately: ${m.displayName}, for example, costs ${formatPrice(m.inputPerMillion)} per 1 million `
-    + `input tokens and ${formatPrice(m.outputPerMillion)} per 1 million output tokens (Google's price as of ${date}).`;
+    + `input tokens and ${formatPrice(m.outputPerMillion)} per 1 million output tokens (Google's regular price, checked ${date}).`;
 }
 
 // ── The plan ─────────────────────────────────────────────────────────────
