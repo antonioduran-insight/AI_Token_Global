@@ -1,0 +1,122 @@
+{
+  "_id": "apiModelPage-chatgpt-en",
+  "url": "/en/chatgpt-api/",
+  "rev": "R75PYPobjTT24U7ATkYeQT",
+  "edits": [
+    {
+      "path": "pricingReference",
+      "before": [
+        {
+          "_key": "pref1",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "pref1s1",
+              "_type": "span",
+              "marks": [],
+              "text": "GPT-5.6 Sol: $5.00 / 1M input tokens · $30.00 / 1M output tokens"
+            }
+          ],
+          "level": 1,
+          "listItem": "bullet",
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "6ae430725424",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "pref1s1",
+              "_type": "span",
+              "marks": [],
+              "text": "GPT-5.6 Terra: $2.00 / 1M input tokens · $12.00 / 1M output tokens"
+            }
+          ],
+          "level": 1,
+          "listItem": "bullet",
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "d8a048d9ad41",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "pref1s1",
+              "_type": "span",
+              "marks": [],
+              "text": "GPT-5.6 Luna: $0.20 / 1M input tokens · $1.20 / 1M output tokens"
+            }
+          ],
+          "level": 1,
+          "listItem": "bullet",
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "97a52f63061e",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "d4465ff2b4c3",
+              "_type": "span",
+              "marks": [],
+              "text": "Cached input is billed at one tenth of these rates across all three tiers, so repeated system prompts cost far less than a naive estimate suggests. Rates apply to prompts under 270K tokens. Verified against OpenAI's published pricing on 11 August 2026."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ],
+      "after": [
+        {
+          "_key": "pref1",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "pref1s1",
+              "_type": "span",
+              "marks": [],
+              "text": "GPT-6.2 Astra: $8.00 / 1M input tokens · $0.40 / 1M cached input tokens · $40.00 / 1M output tokens"
+            }
+          ],
+          "level": 1,
+          "listItem": "bullet",
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "6ae430725424",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "pref1s1",
+              "_type": "span",
+              "marks": [],
+              "text": "GPT-6.2 Sol: $2.00 / 1M input tokens · $0.10 / 1M cached input tokens · $10.00 / 1M output tokens"
+            }
+          ],
+          "level": 1,
+          "listItem": "bullet",
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "97a52f63061e",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "d4465ff2b4c3",
+              "_type": "span",
+              "marks": [],
+              "text": "Rates are for the standard tier and prompts up to 272K tokens. Cached input (a repeated prompt prefix) is billed at the cached rate, so repeated system prompts cost far less than a naive estimate suggests. Verified against OpenAI's published pricing on 25 November 2026."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ]
+    }
+  ]
+}

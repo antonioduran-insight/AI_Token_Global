@@ -1,0 +1,27 @@
+{
+  "_id": "homePage-es",
+  "url": "/es/",
+  "rev": "msX1xboyN0yvLlOgnJXtc8",
+  "edits": [
+    {
+      "path": "faq[_key==\"1c0739d593ea\"].answer[_key==\"3c53c6c715ae\"].children[_key==\"3695c687b396\"].text",
+      "before": "Depende en gran medida del modelo y de la longitud promedio de tus prompts y respuestas. Con GPT-4o mini y prompts cortos (~500 tokens de entrada, ~200 de salida), 1,000 llamadas costarían aproximadamente $0.075–$0.15. Con GPT-4o y conversaciones más largas, esas mismas 1,000 llamadas podrían costar entre $5 y $20. Usa nuestra Calculadora de Tokens para estimar tu escenario específico.",
+      "after": "Depende en gran medida del modelo y de la longitud promedio de tus prompts y respuestas. Con GPT-6.2 Sol ($2.00 por 1M de tokens de entrada y $10.00 por 1M de tokens de salida) y prompts cortos (~500 tokens de entrada, ~200 de salida), 1,000 llamadas cuestan 1,000 × (500 × $2.00 + 200 × $10.00) ÷ 1,000,000 = $3.00. Con GPT-6.2 Astra ($8.00 / $40.00) y conversaciones más largas (~2,000 tokens de entrada, ~500 de salida), esas mismas 1,000 llamadas cuestan 1,000 × (2,000 × $8.00 + 500 × $40.00) ÷ 1,000,000 = $36.00. Precios al 25 de noviembre de 2026. Usa nuestra Calculadora de Tokens para estimar tu escenario específico."
+    },
+    {
+      "path": "heroStats[_key==\"94f2946a6713\"].statNumber",
+      "before": "60+",
+      "after": "140+"
+    },
+    {
+      "path": "faq[_key==\"6915e6383bc5\"].answer[_key==\"949420912f4d\"].children[_key==\"73911c7d59ef\"].text",
+      "before": "Una API de modelo (Interfaz de Programación de Aplicaciones) permite a los desarrolladores acceder a modelos de lenguaje de IA de forma programática. En lugar de usar una interfaz de chat como ChatGPT, envías solicitudes HTTP con tu prompt y recibes una respuesta. Esto te permite integrar IA en tus propias aplicaciones, automatizar flujos de trabajo y crear productos sobre modelos como GPT-4o, Claude o Gemini.",
+      "after": "Una API de modelo (Interfaz de Programación de Aplicaciones) permite a los desarrolladores acceder a modelos de lenguaje de IA de forma programática. En lugar de usar una interfaz de chat como ChatGPT, envías solicitudes HTTP con tu prompt y recibes una respuesta. Esto te permite integrar IA en tus propias aplicaciones, automatizar flujos de trabajo y crear productos sobre modelos como GPT-6.2 Sol, Claude Sonnet 5.5 o Gemini 3.8 Flash."
+    },
+    {
+      "path": "seo.seoDescription",
+      "before": "La guía definitiva sobre tokens de IA, APIs de modelos y cálculo de costos. Compara más de 60+ modelos, estima costos de tokens y navega por el ecosistema de IA — gratis, siempre.",
+      "after": "La guía definitiva sobre tokens de IA, APIs de modelos y cálculo de costos. Compara más de 140 modelos, estima costos de tokens y navega por el ecosistema de IA — gratis, siempre."
+    }
+  ]
+}

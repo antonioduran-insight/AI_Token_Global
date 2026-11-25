@@ -1,0 +1,150 @@
+{
+  "_id": "apiModelPage-chatgpt-id",
+  "url": "/id/chatgpt-api/",
+  "rev": "NTzAVpamfdI9sWvTMdwhSF",
+  "edits": [
+    {
+      "path": "pricingReference",
+      "before": [
+        {
+          "_key": "pref1",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "pref1s1",
+              "_type": "span",
+              "marks": [],
+              "text": "GPT-5.6 Sol: $5.00 / 1M input tokens · $30.00 / 1M output tokens"
+            }
+          ],
+          "level": 1,
+          "listItem": "bullet",
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "60dc92e14c99",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "pref1s1",
+              "_type": "span",
+              "marks": [],
+              "text": "GPT-5.6 Terra: $2.00 / 1M input tokens · $12.00 / 1M output tokens"
+            }
+          ],
+          "level": 1,
+          "listItem": "bullet",
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "1454c1f8db6a",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "pref1s1",
+              "_type": "span",
+              "marks": [],
+              "text": "GPT-5.6 Luna: $0.20 / 1M input tokens · $1.20 / 1M output tokens"
+            }
+          ],
+          "level": 1,
+          "listItem": "bullet",
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "a9f083a1c4f6",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "0a005d78f2bf",
+              "_type": "span",
+              "marks": [],
+              "text": ""
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "243b3a48f18d",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "a7e29ddd56c3",
+              "_type": "span",
+              "marks": [],
+              "text": "Input yang di-cache ditagih sepersepuluh dari tarif ini di ketiga tingkatan, jadi system prompt yang berulang jauh lebih murah daripada perkiraan kasar. Tarif ini berlaku untuk prompt di bawah 270K token. Diverifikasi dengan harga resmi OpenAI pada 11 Agustus 2026."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ],
+      "after": [
+        {
+          "_key": "pref1",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "pref1s1",
+              "_type": "span",
+              "marks": [],
+              "text": "GPT-6.2 Astra: $8.00 / 1M token input · $0.40 / 1M token input dari cache · $40.00 / 1M token output"
+            }
+          ],
+          "level": 1,
+          "listItem": "bullet",
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "60dc92e14c99",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "pref1s1",
+              "_type": "span",
+              "marks": [],
+              "text": "GPT-6.2 Sol: $2.00 / 1M token input · $0.10 / 1M token input dari cache · $10.00 / 1M token output"
+            }
+          ],
+          "level": 1,
+          "listItem": "bullet",
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "a9f083a1c4f6",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "0a005d78f2bf",
+              "_type": "span",
+              "marks": [],
+              "text": ""
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "243b3a48f18d",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "a7e29ddd56c3",
+              "_type": "span",
+              "marks": [],
+              "text": "Tarif ini untuk tingkat standar dan prompt hingga 272K token. Input dari cache (awalan prompt yang berulang) ditagih dengan tarif cache, jadi system prompt yang berulang jauh lebih murah daripada perkiraan kasar. Diverifikasi dengan harga resmi OpenAI pada 25 November 2026."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ]
+    }
+  ]
+}

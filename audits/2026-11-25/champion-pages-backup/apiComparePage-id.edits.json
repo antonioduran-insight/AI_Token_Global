@@ -1,0 +1,17 @@
+{
+  "_id": "apiComparePage-id",
+  "url": "/id/api-compare/",
+  "rev": "I0GYJbFQTSVGZqGEVEQoHG",
+  "edits": [
+    {
+      "path": "faq[_key==\"9e4f450fb294\"].answer[_key==\"d36012b574fd\"].children[_key==\"fdac3c3d6ded\"].text",
+      "before": ". Kami sarankan untuk mulai dengan model-model mapan seperti GPT-4o atau Claude Sonnet, karena keduanya memiliki dokumentasi terbaik dan dukungan komunitas terbesar.",
+      "after": ". Kami sarankan mulai dengan model sehari-hari seperti GPT-6.2 Sol atau Claude Sonnet 5.5. Biayanya jauh lebih murah daripada model unggulan (GPT-6.2 Sol: $2,00 per 1 juta token input dan $10,00 per 1 juta token output, dibandingkan $8,00 dan $40,00 untuk GPT-6.2 Astra), dan kamu bisa beralih ke model unggulan saat tugasnya membutuhkan."
+    },
+    {
+      "path": "pricingCalloutBody",
+      "before": "Harga real-time untuk 60+ model — termasuk Claude, GPT, Gemini, DeepSeek, dan lainnya. Bandingkan harga AI Token King vs harga resmi, filter berdasarkan Teks / Gambar / Video, dan coba model mana saja langsung.",
+      "after": "Harga real-time untuk 140+ model di AI Token King — termasuk Claude, GPT, Gemini, DeepSeek, dan lainnya. Bandingkan harga AI Token King vs harga resmi, filter berdasarkan Teks / Gambar / Video, dan coba model mana saja langsung."
+    }
+  ]
+}

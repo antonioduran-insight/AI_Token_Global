@@ -1,0 +1,178 @@
+{
+  "_id": "apiModelPage-gemini-es",
+  "url": "/es/gemini-api/",
+  "rev": "R75PYPobjTT24U7ATkqGVd",
+  "edits": [
+    {
+      "path": "pricingReference",
+      "before": [
+        {
+          "_key": "0d17575d6107",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "8867f0c8e388",
+              "_type": "span",
+              "marks": [
+                "strong"
+              ],
+              "text": "Gemini 3.1 Pro: $2.00 / 1M tokens de entrada · $12.00 / 1M tokens de salida (prompts de hasta 200K)"
+            }
+          ],
+          "level": 1,
+          "listItem": "bullet",
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "154361597ab2",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "8867f0c8e388",
+              "_type": "span",
+              "marks": [
+                "strong"
+              ],
+              "text": "Gemini 3.1 Pro (200K+): $4.00 / 1M tokens de entrada · $18.00 / 1M tokens de salida"
+            }
+          ],
+          "level": 1,
+          "listItem": "bullet",
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "4c27820e9c7e",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "8867f0c8e388",
+              "_type": "span",
+              "marks": [
+                "strong"
+              ],
+              "text": "Gemini 3.6 Flash: $1.50 / 1M tokens de entrada · $7.50 / 1M tokens de salida"
+            }
+          ],
+          "level": 1,
+          "listItem": "bullet",
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "f93e2aeea25b",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "8867f0c8e388",
+              "_type": "span",
+              "marks": [
+                "strong"
+              ],
+              "text": "Gemini 3.5 Flash-Lite: $0.30 / 1M tokens de entrada · $2.50 / 1M tokens de salida"
+            }
+          ],
+          "level": 1,
+          "listItem": "bullet",
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "cd299a51fa2d",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "28e15809f92d",
+              "_type": "span",
+              "marks": [],
+              "text": ""
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "c5bae1b8dca8",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "c867ecb0d828",
+              "_type": "span",
+              "marks": [],
+              "text": "El procesamiento por lotes se factura a la mitad de estas tarifas en todos los modelos, algo que conviene aprovechar para cualquier trabajo que no sea urgente. Verificado con los precios publicados por Google el 11 de agosto de 2026."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ],
+      "after": [
+        {
+          "_key": "0d17575d6107",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "8867f0c8e388",
+              "_type": "span",
+              "marks": [
+                "strong"
+              ],
+              "text": "Gemini 4 Argon: $4.00 / 1M tokens de entrada · $0.20 / 1M tokens de entrada en caché · $20.00 / 1M tokens de salida"
+            }
+          ],
+          "level": 1,
+          "listItem": "bullet",
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "154361597ab2",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "8867f0c8e388",
+              "_type": "span",
+              "marks": [
+                "strong"
+              ],
+              "text": "Gemini 3.8 Flash: $1.50 / 1M tokens de entrada · $0.15 / 1M tokens de entrada en caché · $7.50 / 1M tokens de salida"
+            }
+          ],
+          "level": 1,
+          "listItem": "bullet",
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "cd299a51fa2d",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "28e15809f92d",
+              "_type": "span",
+              "marks": [],
+              "text": ""
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "c5bae1b8dca8",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "c867ecb0d828",
+              "_type": "span",
+              "marks": [],
+              "text": "Son las tarifas regulares del nivel estándar de Google; el almacenamiento de la caché de contexto, cuando aplica, se factura aparte por hora. Verificado con los precios publicados por Google el 25 de noviembre de 2026."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ]
+    }
+  ]
+}

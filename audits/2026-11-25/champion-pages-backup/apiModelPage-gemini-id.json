@@ -1,0 +1,504 @@
+{
+  "_createdAt": "2026-06-04T12:55:31Z",
+  "_id": "apiModelPage-gemini-id",
+  "_rev": "R75PYPobjTT24U7ATksNDZ",
+  "_system": {
+    "base": {
+      "id": "apiModelPage-gemini-id",
+      "rev": "VdSyE50eHa1ZkhVq3QfYhk"
+    }
+  },
+  "_type": "apiModelPage",
+  "_updatedAt": "2026-08-11T06:31:32Z",
+  "comparingBody": [
+    {
+      "_key": "f9343e134f4a",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "83583e23f272",
+          "_type": "span",
+          "marks": [],
+          "text": "Saat membandingkan Gemini API dengan model lain, hal-hal terpenting yang perlu dievaluasi adalah: apakah cocok dengan lingkungan integrasi kamu, apakah kemampuan multimodal relevan dengan tugas-tugasmu, bagaimana harga berskala sesuai volume penggunaan, dan apakah keselarasan dengan ekosistem Google menambah nilai bagi tim kamu."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "22ebc232fe2e",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "a5c849cb690f",
+          "_type": "span",
+          "marks": [],
+          "text": "Kamu juga bisa membandingkannya dengan model-model populer lain di halaman"
+        },
+        {
+          "_key": "52283c790696",
+          "_type": "span",
+          "marks": [],
+          "text": "Perbandingan ChatGPT, Claude, dan Gemini"
+        },
+        {
+          "_key": "609305e8dcc7",
+          "_type": "span",
+          "marks": [],
+          "text": "— yang memberimu tampilan terstruktur melampaui sekadar nama merek."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    }
+  ],
+  "comparingTitle": "Saat Membandingkan, Apa yang Harus Diperhatikan?",
+  "faq": [
+    {
+      "_key": "b05fc96d4932",
+      "_type": "faqItem",
+      "answer": [
+        {
+          "_key": "a454c21c5f0c",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "6939f96841e6",
+              "_type": "span",
+              "marks": [],
+              "text": "Gemini sangat unggul untuk pemrosesan dokumen, manajemen pengetahuan, alur kerja yang diperkuat pencarian, tugas-tugas multimodal, dan beban kerja yang terintegrasi erat dengan layanan Google."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ],
+      "question": "Beban kerja apa yang paling cocok menggunakan Gemini API?"
+    },
+    {
+      "_key": "91b89112b97f",
+      "_type": "faqItem",
+      "answer": [
+        {
+          "_key": "ea19df808f6b",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "a535cbec3edd",
+              "_type": "span",
+              "marks": [],
+              "text": "Kamu ditagih secara terpisah untuk token input dan token output, dengan harga berjenjang berdasarkan ukuran context window. Jenis tugas, modalitas, dan frekuensi penggunaan semuanya memengaruhi biaya aktual kamu di luar tarif dasar."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ],
+      "question": "Bagaimana cara menghitung harga Gemini API?"
+    },
+    {
+      "_key": "c48e9ef66ffd",
+      "_type": "faqItem",
+      "answer": [
+        {
+          "_key": "653767ce209e",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "c92e411d684a",
+              "_type": "span",
+              "marks": [],
+              "text": "Kalau kamu sudah berada dalam ekosistem Google, Gemini bisa menjadi titik awal yang alami. Jika tidak, kami sarankan untuk memahami dulu dasar-dasar token AI dan logika biaya sebelum berkomitmen pada API tertentu."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ],
+      "question": "Apakah Gemini API cocok untuk pemula?"
+    },
+    {
+      "_key": "59d12ba0f397",
+      "_type": "faqItem",
+      "answer": [
+        {
+          "_key": "246c3e28b562",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "9960ddd6170a",
+              "_type": "span",
+              "marks": [],
+              "text": "Gemini menonjol karena desain multimodal bawaannya, integrasi ekosistem Google, dan struktur biaya dalam skala besar. Lihat"
+            },
+            {
+              "_key": "e9b124aa99a9",
+              "_type": "span",
+              "marks": [],
+              "text": "perbandingan lengkap"
+            },
+            {
+              "_key": "740c33d8275c",
+              "_type": "span",
+              "marks": [],
+              "text": "untuk tampilan berdampingan yang terstruktur."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ],
+      "question": "Apa yang membedakan Gemini API dari model lain?"
+    }
+  ],
+  "faqTitle": "Pertanyaan Umum",
+  "furtherReading": [
+    {
+      "_key": "1905b57704f0",
+      "_type": "readingLink",
+      "label": "Apa Itu Token AI?",
+      "url": "/id/beginners-guide"
+    },
+    {
+      "_key": "e15a6a40103e",
+      "_type": "readingLink",
+      "label": "Cara Menghitung Biaya Token AI",
+      "url": "/id/token-calculator"
+    },
+    {
+      "_key": "fda298634e25",
+      "_type": "readingLink",
+      "label": "ChatGPT, Claude, Gemini — Apa Bedanya?",
+      "url": "/id/api-compare"
+    },
+    {
+      "_key": "7cdef037b675",
+      "_type": "readingLink",
+      "label": "Perbandingan Model Lengkap",
+      "url": "/id/use-cases"
+    }
+  ],
+  "furtherReadingTitle": "Bacaan Lanjutan",
+  "heroAccent": "blue",
+  "heroHeadline": "Panduan Gemini API",
+  "heroSubtitle": "Pahami dengan cepat apa itu Gemini API, kasus penggunaan paling umum, serta cara kerja biaya dan token AI.",
+  "language": "id",
+  "modelSlug": "gemini",
+  "overviewBody": [
+    {
+      "_key": "93e5bbee0967",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "448d53f275cf",
+          "_type": "span",
+          "marks": [],
+          "text": "Jika kamu sedang mengevaluasi Gemini API, hal-hal terpenting yang perlu dipahami sejak awal adalah: integrasinya yang mendalam dengan ekosistem Google, kemampuan multimodalnya, dan bagaimana struktur biayanya dibandingkan dengan model lain untuk beban kerja spesifik kamu. Halaman ini membahas poin-poin utama Gemini API untuk membantumu membuat keputusan yang tepat."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b3fff76fc0f4",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "7f7921baeab7",
+          "_type": "span",
+          "marks": [],
+          "text": "Jika kamu masih belum familiar dengan dasar-dasar token AI, mulailah dengan"
+        },
+        {
+          "_key": "e0220fd3942a",
+          "_type": "span",
+          "marks": [],
+          "text": "Dasar-Dasar Token AI"
+        },
+        {
+          "_key": "b6adbdcb3e9c",
+          "_type": "span",
+          "marks": [],
+          "text": "terlebih dahulu."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    }
+  ],
+  "pricingBody": [
+    {
+      "_key": "03bef0c1192d",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "d8224d0b6a14",
+          "_type": "span",
+          "marks": [],
+          "text": "Saat mengevaluasi biaya Gemini API, kamu perlu memahami token AI — konten input, konten output, jenis tugas, panjang konteks, dan modalitas semuanya memengaruhi cara token dikonsumsi dan ditagih. Harga Gemini kompetitif, terutama dalam skala besar, namun biaya aktual sangat bergantung pada pola penggunaan kamu."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "c3570e02ff23",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "bd3ef995aa04",
+          "_type": "span",
+          "marks": [],
+          "text": "Jika kamu belum familiar dengan cara kerja token, baca"
+        },
+        {
+          "_key": "8b40068ddff3",
+          "_type": "span",
+          "marks": [],
+          "text": "Dasar-Dasar Token AI"
+        },
+        {
+          "_key": "36678cafe210",
+          "_type": "span",
+          "marks": [],
+          "text": "dan"
+        },
+        {
+          "_key": "93a8836d9ba9",
+          "_type": "span",
+          "marks": [],
+          "text": "Kalkulasi Biaya Token Gemini"
+        },
+        {
+          "_key": "ce4501df7f7d",
+          "_type": "span",
+          "marks": [],
+          "text": "sebelum membandingkan harga."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    }
+  ],
+  "pricingReference": [
+    {
+      "_key": "0d17575d6107",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "8867f0c8e388",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "Gemini 3.1 Pro: $2.00 / 1M input tokens · $12.00 / 1M output tokens (prompt hingga 200K)"
+        }
+      ],
+      "level": 1,
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "a5b0f38c0e46",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "8867f0c8e388",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "Gemini 3.1 Pro (200K+): $4.00 / 1M input tokens · $18.00 / 1M output tokens"
+        }
+      ],
+      "level": 1,
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "ee9bdc7cc605",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "8867f0c8e388",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "Gemini 3.6 Flash: $1.50 / 1M input tokens · $7.50 / 1M output tokens"
+        }
+      ],
+      "level": 1,
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "1ded08858013",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "8867f0c8e388",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "Gemini 3.5 Flash-Lite: $0.30 / 1M input tokens · $2.50 / 1M output tokens"
+        }
+      ],
+      "level": 1,
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "7267974371fc",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "3fb65bebe579",
+          "_type": "span",
+          "marks": [],
+          "text": ""
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "6b8d964ed2f0",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "6fe7a3a5975f",
+          "_type": "span",
+          "marks": [],
+          "text": "Batch processing ditagih setengah dari tarif ini untuk semua model, jadi layak dipakai untuk pekerjaan yang tidak mendesak. Diverifikasi dengan harga resmi Google pada 11 Agustus 2026."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    }
+  ],
+  "pricingTitle": "Bagaimana Cara Kerja Harga?",
+  "seo": {
+    "noindex": false,
+    "seoDescription": "Pelajari tentang Gemini API dari Google: desain multimodal bawaan, integrasi ekosistem Google, tingkatan harga, dan perbandingannya dengan ChatGPT dan Claude.",
+    "seoTitle": "Panduan Gemini API — Kemampuan Multimodal, Harga & Biaya Token — AI Token King"
+  },
+  "uniqueSectionBody": [
+    {
+      "_key": "579a4f7ba8a9",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "645af084addd",
+          "_type": "span",
+          "marks": [],
+          "text": "Jika kamu sudah banyak menggunakan layanan Google, atau pekerjaanmu melibatkan tugas-tugas multimodal, pemrosesan dokumen, dan alur kerja yang terintegrasi dengan pencarian, Gemini API layak menjadi prioritas utama dalam evaluasi kamu. Ini juga pilihan yang kuat untuk tim yang mengandalkan infrastruktur dukungan enterprise Google dan jaminan kepatuhannya."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "942658ce3518",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "31b3dbd05fdc",
+          "_type": "span",
+          "marks": [],
+          "text": "Ini juga ideal bagi siapa saja yang ingin menekan biaya pada tugas-tugas bervolume tinggi dengan kompleksitas rendah — Gemini Flash khususnya menawarkan harga yang sangat kompetitif untuk beban kerja batch atau frekuensi tinggi."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    }
+  ],
+  "uniqueSectionTitle": "Siapa yang Paling Cocok Menggunakannya?",
+  "useCasesBody": [
+    {
+      "_key": "04276cd13604",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "93e83672626f",
+          "_type": "span",
+          "marks": [],
+          "text": "Aplikasi paling umum dari Gemini API berpusat pada pemrosesan dokumen, manajemen pengetahuan, alur kerja yang diperkuat pencarian, dan tugas-tugas multimodal. Ini adalah pilihan yang tepat untuk tim yang sudah bekerja dalam ekosistem Google — Google Workspace, Google Cloud, atau aplikasi yang bergantung pada integrasi Google Search."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "c4d7eca75ffd",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "6af2b221d4d8",
+          "_type": "span",
+          "marks": [],
+          "text": "Bagi sebagian pengguna, ini bukan model pertama yang mereka pilih — namun jika pekerjaanmu melibatkan pemrosesan file, input multimodal, atau integrasi erat dengan layanan Google, Gemini biasanya memberikan nilai lebih dibandingkan alternatif lainnya."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    }
+  ],
+  "useCasesTitle": "Untuk Apa Biasanya Digunakan?",
+  "whatIsBody": [
+    {
+      "_key": "86e49153dcc0",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "8c5ff3cf1ace",
+          "_type": "span",
+          "marks": [],
+          "text": "Gemini API (dikembangkan oleh Google DeepMind) adalah cara untuk menghubungkan kemampuan model ke situs web, aplikasi, alat, atau alur kerja otomatis. Kamu bisa menggunakan API untuk mengirim teks, gambar, atau input lainnya, menerima respons, dan mengintegrasikan kemampuan AI langsung ke produk kamu sendiri."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "642f5dd8a2a9",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "6fed1f24f2c5",
+          "_type": "span",
+          "marks": [],
+          "text": "Jika kamu masih belum familiar dengan terminologi dasarnya, lihat"
+        },
+        {
+          "_key": "474825f1044c",
+          "_type": "span",
+          "marks": [],
+          "text": "Apa Itu Token AI?"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "65904e11c387",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "44f2fe7d62e2",
+          "_type": "span",
+          "marks": [],
+          "text": "Pembeda utama Gemini adalah desain multimodal bawaannya dan integrasi mendalam dengan ekosistem Google. Tidak seperti model berbasis teks saja, Gemini dibangun dari awal untuk menangani teks, gambar, audio, dan kode — menjadikannya sangat berharga untuk alur kerja yang mencakup berbagai jenis konten."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    }
+  ],
+  "whatIsTitle": "Apa Itu Gemini API?"
+}

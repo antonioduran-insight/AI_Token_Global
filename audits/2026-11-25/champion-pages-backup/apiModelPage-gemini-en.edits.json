@@ -1,0 +1,150 @@
+{
+  "_id": "apiModelPage-gemini-en",
+  "url": "/en/gemini-api/",
+  "rev": "3PFaUppQG3q6iDYaDAQXxZ",
+  "edits": [
+    {
+      "path": "pricingReference",
+      "before": [
+        {
+          "_key": "0d17575d6107",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "8867f0c8e388",
+              "_type": "span",
+              "marks": [
+                "strong"
+              ],
+              "text": "Gemini 3.1 Pro: $2.00 / 1M input tokens · $12.00 / 1M output tokens (prompts up to 200K)"
+            }
+          ],
+          "level": 1,
+          "listItem": "bullet",
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "8610221f6e12",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "8867f0c8e388",
+              "_type": "span",
+              "marks": [
+                "strong"
+              ],
+              "text": "Gemini 3.1 Pro (200K+): $4.00 / 1M input tokens · $18.00 / 1M output tokens"
+            }
+          ],
+          "level": 1,
+          "listItem": "bullet",
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "8fa8b0d5951f",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "8867f0c8e388",
+              "_type": "span",
+              "marks": [
+                "strong"
+              ],
+              "text": "Gemini 3.6 Flash: $1.50 / 1M input tokens · $7.50 / 1M output tokens"
+            }
+          ],
+          "level": 1,
+          "listItem": "bullet",
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "3580c8b1d547",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "8867f0c8e388",
+              "_type": "span",
+              "marks": [
+                "strong"
+              ],
+              "text": "Gemini 3.5 Flash-Lite: $0.30 / 1M input tokens · $2.50 / 1M output tokens"
+            }
+          ],
+          "level": 1,
+          "listItem": "bullet",
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "4b67082308e5",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "bd9e043159e3",
+              "_type": "span",
+              "marks": [],
+              "text": "Batch processing is billed at half these rates on every model, which is worth using for anything not time-sensitive. Verified against Google's published pricing on 11 August 2026."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ],
+      "after": [
+        {
+          "_key": "0d17575d6107",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "8867f0c8e388",
+              "_type": "span",
+              "marks": [
+                "strong"
+              ],
+              "text": "Gemini 4 Argon: $4.00 / 1M input tokens · $0.20 / 1M cached input tokens · $20.00 / 1M output tokens"
+            }
+          ],
+          "level": 1,
+          "listItem": "bullet",
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "8610221f6e12",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "8867f0c8e388",
+              "_type": "span",
+              "marks": [
+                "strong"
+              ],
+              "text": "Gemini 3.8 Flash: $1.50 / 1M input tokens · $0.15 / 1M cached input tokens · $7.50 / 1M output tokens"
+            }
+          ],
+          "level": 1,
+          "listItem": "bullet",
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "4b67082308e5",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "bd9e043159e3",
+              "_type": "span",
+              "marks": [],
+              "text": "These are Google's regular standard-tier rates; context-cache storage, where it applies, is billed separately per hour. Verified against Google's published pricing on 25 November 2026."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ]
+    }
+  ]
+}

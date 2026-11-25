@@ -1,0 +1,178 @@
+{
+  "_id": "apiModelPage-gemini-vi",
+  "url": "/vi/gemini-api/",
+  "rev": "3PFaUppQG3q6iDYaDAZN5d",
+  "edits": [
+    {
+      "path": "pricingReference",
+      "before": [
+        {
+          "_key": "0d17575d6107",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "8867f0c8e388",
+              "_type": "span",
+              "marks": [
+                "strong"
+              ],
+              "text": "Gemini 3.1 Pro: $2.00 / 1M input tokens · $12.00 / 1M output tokens (prompt tối đa 200K)"
+            }
+          ],
+          "level": 1,
+          "listItem": "bullet",
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "5a5ee80090a7",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "8867f0c8e388",
+              "_type": "span",
+              "marks": [
+                "strong"
+              ],
+              "text": "Gemini 3.1 Pro (200K+): $4.00 / 1M input tokens · $18.00 / 1M output tokens"
+            }
+          ],
+          "level": 1,
+          "listItem": "bullet",
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "aadd3797cb37",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "8867f0c8e388",
+              "_type": "span",
+              "marks": [
+                "strong"
+              ],
+              "text": "Gemini 3.6 Flash: $1.50 / 1M input tokens · $7.50 / 1M output tokens"
+            }
+          ],
+          "level": 1,
+          "listItem": "bullet",
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "cd324da9db43",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "8867f0c8e388",
+              "_type": "span",
+              "marks": [
+                "strong"
+              ],
+              "text": "Gemini 3.5 Flash-Lite: $0.30 / 1M input tokens · $2.50 / 1M output tokens"
+            }
+          ],
+          "level": 1,
+          "listItem": "bullet",
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "113c9622cadb",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "965fce2b0e37",
+              "_type": "span",
+              "marks": [],
+              "text": ""
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "6d9ce8044de2",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "51d473521925",
+              "_type": "span",
+              "marks": [],
+              "text": "Xử lý theo lô (batch) được tính bằng một nửa các mức giá trên ở mọi mô hình, rất đáng dùng cho công việc không gấp. Đã kiểm chứng với bảng giá chính thức của Google ngày 11 tháng 8 năm 2026."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ],
+      "after": [
+        {
+          "_key": "0d17575d6107",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "8867f0c8e388",
+              "_type": "span",
+              "marks": [
+                "strong"
+              ],
+              "text": "Gemini 4 Argon: $4.00 / 1M token đầu vào · $0.20 / 1M token đầu vào từ cache · $20.00 / 1M token đầu ra"
+            }
+          ],
+          "level": 1,
+          "listItem": "bullet",
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "5a5ee80090a7",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "8867f0c8e388",
+              "_type": "span",
+              "marks": [
+                "strong"
+              ],
+              "text": "Gemini 3.8 Flash: $1.50 / 1M token đầu vào · $0.15 / 1M token đầu vào từ cache · $7.50 / 1M token đầu ra"
+            }
+          ],
+          "level": 1,
+          "listItem": "bullet",
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "113c9622cadb",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "965fce2b0e37",
+              "_type": "span",
+              "marks": [],
+              "text": ""
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "6d9ce8044de2",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "51d473521925",
+              "_type": "span",
+              "marks": [],
+              "text": "Đây là mức giá thông thường ở bậc tiêu chuẩn của Google; phí lưu trữ context cache, nếu có, được tính riêng theo giờ. Đã kiểm chứng với bảng giá chính thức của Google ngày 25 tháng 11 năm 2026."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ]
+    }
+  ]
+}

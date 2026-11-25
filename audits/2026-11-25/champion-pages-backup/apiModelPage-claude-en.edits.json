@@ -1,0 +1,132 @@
+{
+  "_id": "apiModelPage-claude-en",
+  "url": "/en/claude-api/",
+  "rev": "ia2VH6dunty2Dn6P92euLd",
+  "edits": [
+    {
+      "path": "pricingReference",
+      "before": [
+        {
+          "_key": "f4dba9bd6200",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "bc2daab125a8",
+              "_type": "span",
+              "marks": [
+                "strong"
+              ],
+              "text": "Claude Opus 5: $5.00 / 1M input tokens · $25.00 / 1M output tokens"
+            }
+          ],
+          "level": 1,
+          "listItem": "bullet",
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "48563ef119e8",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "bc2daab125a8",
+              "_type": "span",
+              "marks": [
+                "strong"
+              ],
+              "text": "Claude Sonnet 5: $2.00 / 1M input tokens · $10.00 / 1M output tokens"
+            }
+          ],
+          "level": 1,
+          "listItem": "bullet",
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "77a253491804",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "bc2daab125a8",
+              "_type": "span",
+              "marks": [
+                "strong"
+              ],
+              "text": "Claude Haiku 4.5: $1.00 / 1M input tokens · $5.00 / 1M output tokens"
+            }
+          ],
+          "level": 1,
+          "listItem": "bullet",
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "44d7654c33ee",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "cddf5e25d7a0",
+              "_type": "span",
+              "marks": [],
+              "text": "Verified against Anthropic's published pricing on 3 September 2026."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ],
+      "after": [
+        {
+          "_key": "f4dba9bd6200",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "bc2daab125a8",
+              "_type": "span",
+              "marks": [
+                "strong"
+              ],
+              "text": "Claude Fable 5.2: $8.00 / 1M input tokens · $0.20 / 1M cached input tokens · $40.00 / 1M output tokens"
+            }
+          ],
+          "level": 1,
+          "listItem": "bullet",
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "48563ef119e8",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "bc2daab125a8",
+              "_type": "span",
+              "marks": [
+                "strong"
+              ],
+              "text": "Claude Sonnet 5.5: $2.00 / 1M input tokens · $0.10 / 1M cached input tokens · $10.00 / 1M output tokens"
+            }
+          ],
+          "level": 1,
+          "listItem": "bullet",
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "44d7654c33ee",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "cddf5e25d7a0",
+              "_type": "span",
+              "marks": [],
+              "text": "The cached rate applies to prompt-cache hits and refreshes. Verified against Anthropic's published pricing on 25 November 2026."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ]
+    }
+  ]
+}

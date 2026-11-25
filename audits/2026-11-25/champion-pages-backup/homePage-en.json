@@ -1,0 +1,255 @@
+{
+  "_createdAt": "2026-05-13T04:45:53Z",
+  "_id": "homePage-en",
+  "_rev": "jOCtSpWch7UC6QC30F7aK3",
+  "_system": {
+    "base": {
+      "id": "homePage-en",
+      "rev": "KOA7uvlhq8zXOyJo8NVCDM"
+    }
+  },
+  "_type": "homePage",
+  "_updatedAt": "2026-06-03T09:45:37Z",
+  "faq": [
+    {
+      "_key": "178daf38ccda",
+      "_type": "faqItem",
+      "answer": [
+        {
+          "_key": "8a99606c8549",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "78ee6371c29e",
+              "_type": "span",
+              "marks": [],
+              "text": "A token is the basic unit that AI language models use to process text. In English, one token is roughly 4 characters or ¾ of a word. For example, \"ChatGPT\" is one token, \"tokenization\" is about 3 tokens. Models read and generate text token by token, and API pricing is based on the number of tokens used."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ],
+      "question": "What is an AI Token?"
+    },
+    {
+      "_key": "d16f96061901",
+      "_type": "faqItem",
+      "answer": [
+        {
+          "_key": "7ac983aa50a5",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "1f72650f535d",
+              "_type": "span",
+              "marks": [],
+              "text": "Input tokens are the tokens in your prompt — the text you send to the model. Output tokens are the tokens in the model's response. Most AI APIs charge different rates for input vs output, with output tokens typically costing more (often 3–5x more) because generating text is more computationally expensive than reading it."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ],
+      "question": "What are Input Tokens and Output Tokens?"
+    },
+    {
+      "_key": "6915e6383bc5",
+      "_type": "faqItem",
+      "answer": [
+        {
+          "_key": "949420912f4d",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "73911c7d59ef",
+              "_type": "span",
+              "marks": [],
+              "text": "A model API (Application Programming Interface) lets developers access AI language models programmatically. Instead of using a chat interface like ChatGPT, you send HTTP requests with your prompt and receive a response. This allows you to integrate AI into your own apps, automate workflows, and build products on top of models like GPT-4, Claude, or Gemini."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ],
+      "question": "What is a Model API?"
+    },
+    {
+      "_key": "a62f8120b26d",
+      "_type": "faqItem",
+      "answer": [
+        {
+          "_key": "ee12901dfd39",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "d41a897b16a2",
+              "_type": "span",
+              "marks": [],
+              "text": "Consider four factors: (1) Capability — does the model handle your task well? (2) Context window — how much text can it process at once? (3) Cost — what's your budget per 1M tokens? (4) Speed — do you need real-time responses? Our comparison tool helps you evaluate all these factors side by side."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ],
+      "question": "How do I find the right AI model for my use case?"
+    },
+    {
+      "_key": "1c0739d593ea",
+      "_type": "faqItem",
+      "answer": [
+        {
+          "_key": "3c53c6c715ae",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "3695c687b396",
+              "_type": "span",
+              "marks": [],
+              "text": "It depends heavily on the model and your average prompt/response length. For GPT-4o mini with short prompts (~500 tokens in, ~200 out), 1,000 calls would cost roughly $0.075–$0.15. For GPT-4o with longer conversations, the same 1,000 calls could cost $5–$20. Use our Token Calculator to estimate your specific scenario."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ],
+      "question": "How much does 1,000 AI API calls cost?"
+    },
+    {
+      "_key": "e314e6735408",
+      "_type": "faqItem",
+      "answer": [
+        {
+          "_key": "5ea17af03099",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "765dcabb784c",
+              "_type": "span",
+              "marks": [],
+              "text": "Each AI provider uses a different tokenizer — the algorithm that splits text into tokens. OpenAI uses tiktoken (BPE-based), Anthropic uses their own tokenizer, and Google uses SentencePiece. The same sentence can tokenize into different numbers of tokens depending on which model you use. This is why you should always use the provider's official tokenizer when estimating costs."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ],
+      "question": "Why do different APIs count tokens differently?"
+    },
+    {
+      "_key": "17b352438018",
+      "_type": "faqItem",
+      "answer": [
+        {
+          "_key": "dc17500e1338",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "1cc270a034af",
+              "_type": "span",
+              "marks": [],
+              "text": "Absolutely. Enterprise teams often overspend on AI APIs because they don't understand token economics. AI Token King covers token optimization strategies, batch API usage, caching techniques, and how to choose the right model tier for different tasks within a single product — all of which can reduce costs by 50–80%."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ],
+      "question": "Should enterprise users read AI Token King first?"
+    }
+  ],
+  "faqSubtitle": "Everything you've been wondering about AI tokens, APIs, and costs — answered.",
+  "faqTitle": "Frequently Asked Questions",
+  "heroAccentText": "Models & APIs",
+  "heroHeadline": "Master AI Tokens,",
+  "heroLabel": "Your AI Knowledge Hub",
+  "heroStats": [
+    {
+      "_key": "94f2946a6713",
+      "_type": "heroStat",
+      "statLabel": "AI Models Covered",
+      "statNumber": "60+"
+    },
+    {
+      "_key": "2dfbdbfaefc2",
+      "_type": "heroStat",
+      "statLabel": "Token Calculations",
+      "statNumber": "1000+"
+    },
+    {
+      "_key": "4da19d513d69",
+      "_type": "heroStat",
+      "statLabel": "Always & Forever",
+      "statNumber": "Free"
+    }
+  ],
+  "heroSubtitle": "The definitive English-language guide to understanding AI tokens, comparing language models, calculating API costs, and navigating the rapidly evolving AI ecosystem — all in one place.",
+  "language": "en",
+  "seo": {
+    "noindex": false,
+    "seoDescription": "The definitive guide to AI tokens, model APIs, and cost calculation. Compare 60+ models, estimate token costs, and navigate the AI ecosystem — free, always.",
+    "seoTitle": "AI Token King — Your AI Knowledge Hub"
+  },
+  "tokenBody2": [
+    {
+      "_key": "168d995345d8",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "4ce7d480b4f2",
+          "_type": "span",
+          "marks": [],
+          "text": "Every API call you make is billed in tokens: "
+        },
+        {
+          "_key": "29c08a3af705",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "input tokens"
+        },
+        {
+          "_key": "ae4de176c79f",
+          "_type": "span",
+          "marks": [],
+          "text": " (what you send) and "
+        },
+        {
+          "_key": "dc448ea9a7ba",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "output tokens"
+        },
+        {
+          "_key": "3fc10a0d281e",
+          "_type": "span",
+          "marks": [],
+          "text": " (what the model generates). Mastering token math is essential for anyone building with AI."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    }
+  ],
+  "tokenBreakdown": {
+    "charCount": "~48",
+    "tokens": [
+      "Hello",
+      ",",
+      "how",
+      "are",
+      "you",
+      "?",
+      "I",
+      "'m",
+      "learning",
+      "about",
+      "AI",
+      "tokens"
+    ]
+  }
+}

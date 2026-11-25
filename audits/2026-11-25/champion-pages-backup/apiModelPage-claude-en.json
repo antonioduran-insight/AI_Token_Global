@@ -1,0 +1,582 @@
+{
+  "_createdAt": "2026-06-04T12:53:53Z",
+  "_id": "apiModelPage-claude-en",
+  "_rev": "ia2VH6dunty2Dn6P92euLd",
+  "_system": {
+    "base": {
+      "id": "apiModelPage-claude-en",
+      "rev": "R75PYPobjTT24U7ATkYmeX"
+    }
+  },
+  "_type": "apiModelPage",
+  "_updatedAt": "2026-09-04T08:23:56Z",
+  "comparingBody": [
+    {
+      "_key": "0be17adefdeb",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "73374b2d3c89",
+          "_type": "span",
+          "marks": [],
+          "text": "When comparing the Claude API against other models, the most important things to evaluate are: whether it can maintain consistent output length, whether its output format fits your workflow, whether its costs scale well with your usage frequency, and whether it can sustain quality on workflows involving long documents."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "7fe699377b9f",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "54738d9b9379",
+          "_type": "span",
+          "marks": [],
+          "text": "You can compare it against other leading models on the "
+        },
+        {
+          "_key": "2d211e625f86",
+          "_type": "span",
+          "marks": [],
+          "text": "ChatGPT, Claude, and Gemini Comparison page"
+        },
+        {
+          "_key": "947276f620f1",
+          "_type": "span",
+          "marks": [],
+          "text": " — there you'll see not just brand differences, but the real differences between all three models in terms of workflow compatibility and cost structure."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    }
+  ],
+  "comparingTitle": "When Comparing, What Actually Matters?",
+  "faq": [
+    {
+      "_key": "b91381d00a8a",
+      "_type": "faqItem",
+      "answer": [
+        {
+          "_key": "822c0d25d7ac",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "f982fd928f4c",
+              "_type": "span",
+              "marks": [],
+              "text": "Claude Opus 5 handles up to 1M tokens of context, with Sonnet and Haiku at 200K — enough for long documents, though several competitors now offer comparable windows."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ],
+      "question": "Is the Claude API good for long-context tasks?"
+    },
+    {
+      "_key": "98a120ee0f67",
+      "_type": "faqItem",
+      "answer": [
+        {
+          "_key": "4b442b1954d1",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "e959d7fac6e1",
+              "_type": "span",
+              "marks": [],
+              "text": "It's billed by input and output tokens separately. Task type, output length, and context window usage all influence the real cost — not just the per-million-token rate."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ],
+      "question": "How is Claude API pricing calculated?"
+    },
+    {
+      "_key": "caceafc79726",
+      "_type": "faqItem",
+      "answer": [
+        {
+          "_key": "b7e3f052e1ca",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "a178d410a30b",
+              "_type": "span",
+              "marks": [],
+              "text": "If you're completely new to model APIs, Claude isn't necessarily the most obvious starting point — but if your use case involves long documents or high output quality, it's worth evaluating from the start."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ],
+      "question": "Is the Claude API suitable for beginners?"
+    },
+    {
+      "_key": "2c21ff71c6f3",
+      "_type": "faqItem",
+      "answer": [
+        {
+          "_key": "3d32e1e32af2",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "a204a805f56e",
+              "_type": "span",
+              "marks": [],
+              "text": "Claude and other models differ not just by brand, but also in output stability, context window size, token consumption patterns, and workflow compatibility. See the "
+            },
+            {
+              "_key": "0dae005cd815",
+              "_type": "span",
+              "marks": [],
+              "text": "full comparison"
+            },
+            {
+              "_key": "2a34bce436d2",
+              "_type": "span",
+              "marks": [],
+              "text": " for a structured view."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ],
+      "question": "How does the Claude API differ from other models?"
+    }
+  ],
+  "faqTitle": "Common Questions",
+  "furtherReading": [
+    {
+      "_key": "560573100763",
+      "_type": "readingLink",
+      "label": "What Is an AI Token?",
+      "url": "/en/beginners-guide"
+    },
+    {
+      "_key": "4a6281750c88",
+      "_type": "readingLink",
+      "label": "How to Calculate AI Token Costs",
+      "url": "/en/token-calculator"
+    },
+    {
+      "_key": "26ef3c4b6109",
+      "_type": "readingLink",
+      "label": "ChatGPT, Claude, Gemini — What's the Difference?",
+      "url": "/en/api-compare"
+    },
+    {
+      "_key": "d0379287400b",
+      "_type": "readingLink",
+      "label": "Full Model Comparison",
+      "url": "/en/use-cases"
+    }
+  ],
+  "furtherReadingTitle": "Further Reading",
+  "heroAccent": "teal",
+  "heroHeadline": "Claude API Guide",
+  "heroSubtitle": "Quickly understand what the Claude API is, its most common use cases, and how costs and AI tokens work.",
+  "language": "en",
+  "modelSlug": "claude",
+  "overviewBody": [
+    {
+      "_key": "8b6a0c6c079d",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "4017f415fc24",
+          "_type": "span",
+          "marks": [],
+          "text": "If you're evaluating the Claude API, the most important things to understand upfront are: its strengths with long-context tasks, how it handles output consistency, and how costs scale with your workload. This page covers Claude API's key points so you can make a well-informed comparison."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "5d5ff8d3ba55",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "6b3b793f4a5b",
+          "_type": "span",
+          "marks": [],
+          "text": "First, something worth being upfront about: "
+        },
+        {
+          "_key": "0d14d7239d05",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "the Claude API is not the best fit for everyone."
+        },
+        {
+          "_key": "50cbd70feac8",
+          "_type": "span",
+          "marks": [],
+          "text": " If your work frequently involves long documents, you need consistent output quality across many requests, or your tasks require stable multi-turn reasoning — Claude is worth evaluating seriously."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    }
+  ],
+  "pricingBody": [
+    {
+      "_key": "3d29f6caa0d7",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "e12c36c02f84",
+          "_type": "span",
+          "marks": [],
+          "text": "When evaluating Claude API costs, you can't just look at the surface price. As with all model APIs, you need to understand AI tokens — input content, output content, task type, context length, and conversation structure all influence token consumption. Claude's pricing is competitive for long-context tasks, but the real cost depends heavily on how you use it."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "1a63db4bf00d",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "7cd12303f65a",
+          "_type": "span",
+          "marks": [],
+          "text": "If you're not yet familiar with how tokens work, read "
+        },
+        {
+          "_key": "f4d878b71e00",
+          "_type": "span",
+          "marks": [],
+          "text": "AI Token Basics"
+        },
+        {
+          "_key": "5709b435794e",
+          "_type": "span",
+          "marks": [],
+          "text": " and "
+        },
+        {
+          "_key": "851ff484ac0e",
+          "_type": "span",
+          "marks": [],
+          "text": "How to Calculate Claude Token Costs"
+        },
+        {
+          "_key": "9e4aadd7fa3b",
+          "_type": "span",
+          "marks": [],
+          "text": " before comparing prices."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    }
+  ],
+  "pricingReference": [
+    {
+      "_key": "f4dba9bd6200",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "bc2daab125a8",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "Claude Opus 5: $5.00 / 1M input tokens · $25.00 / 1M output tokens"
+        }
+      ],
+      "level": 1,
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "48563ef119e8",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "bc2daab125a8",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "Claude Sonnet 5: $2.00 / 1M input tokens · $10.00 / 1M output tokens"
+        }
+      ],
+      "level": 1,
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "77a253491804",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "bc2daab125a8",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "Claude Haiku 4.5: $1.00 / 1M input tokens · $5.00 / 1M output tokens"
+        }
+      ],
+      "level": 1,
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "44d7654c33ee",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "cddf5e25d7a0",
+          "_type": "span",
+          "marks": [],
+          "text": "Verified against Anthropic's published pricing on 3 September 2026."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    }
+  ],
+  "pricingTitle": "How Does Pricing Work?",
+  "seo": {
+    "noindex": false,
+    "seoDescription": "Learn about the Claude API from Anthropic: its strengths with long-context tasks, output consistency, pricing tiers, and how it compares to ChatGPT and Gemini.",
+    "seoTitle": "Claude API Guide — Long-Context Tasks, Pricing, and Token Costs | AI Token King"
+  },
+  "uniqueSectionBody": [
+    {
+      "_key": "80de2994ebc0",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "44234aa04887",
+          "_type": "span",
+          "marks": [],
+          "text": "To be direct about it: if you're just looking for a general-purpose API and the most accessible entry point, the Claude API is not necessarily the first choice."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "d74d3a16466f",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "98663159c4f2",
+          "_type": "span",
+          "marks": [],
+          "text": "But if your real needs are:"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "8f2f7127a9e1",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "18d88112ea71",
+          "_type": "span",
+          "marks": [],
+          "text": "Rich content understanding"
+        }
+      ],
+      "level": 1,
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "a0b6abbfd3c4",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "c1bfb27c9d70",
+          "_type": "span",
+          "marks": [],
+          "text": "Document processing"
+        }
+      ],
+      "level": 1,
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "6c9d49dfa26a",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "aa7fcbb7d0a0",
+          "_type": "span",
+          "marks": [],
+          "text": "Knowledge management"
+        }
+      ],
+      "level": 1,
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "e41071973ad1",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "a2b3470b8139",
+          "_type": "span",
+          "marks": [],
+          "text": "Precise outputs"
+        }
+      ],
+      "level": 1,
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "baf6ee9195f1",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "081963111717",
+          "_type": "span",
+          "marks": [],
+          "text": "Integration into complex workflows"
+        }
+      ],
+      "level": 1,
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "6d9bf23ab1b3",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "d6fdde480f11",
+          "_type": "span",
+          "marks": [],
+          "text": "…then it's worth prioritizing Claude over models that simply have greater brand recognition."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    }
+  ],
+  "uniqueSectionTitle": "The Claude API Isn't for Everyone",
+  "useCasesBody": [
+    {
+      "_key": "ef30fa4ff6f5",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "69706956e7d4",
+          "_type": "span",
+          "marks": [],
+          "text": "Claude API's most common applications center around long-form content tasks: document summarization, knowledge management, legal and compliance review, internal content reorganization, and research synthesis. For tasks where the model needs to read and reason over large volumes of text, Claude is often the first choice."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "110dc85dba2b",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "f2c368d9190f",
+          "_type": "span",
+          "marks": [],
+          "text": "A second frequent use case is output quality consistency. Many teams find that Claude produces fewer hallucinations and more reliable structured outputs — making it a strong option for production workflows where unpredictable responses carry a high cost."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "340f43003598",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "0820d5e7ca3a",
+          "_type": "span",
+          "marks": [],
+          "text": "A third strength is high-quality text generation — if your work requires polished, nuanced writing, Claude is consistently one of the top-rated options."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    }
+  ],
+  "useCasesTitle": "What Is It Commonly Used For?",
+  "whatIsBody": [
+    {
+      "_key": "3b83efe795cb",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "755408169291",
+          "_type": "span",
+          "marks": [],
+          "text": "The Claude API (from Anthropic) is a way to connect model capabilities to websites, apps, tools, or automated workflows. You can use the API to send prompts, receive text or document responses, provide instructions to guide the model, and integrate AI reasoning into your own products."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "bd8b810a8c44",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "a8875025bcc2",
+          "_type": "span",
+          "marks": [],
+          "text": "If you're still unfamiliar with the basic terminology, check out "
+        },
+        {
+          "_key": "d3563c78758d",
+          "_type": "span",
+          "marks": [],
+          "text": "What Is an AI Token?"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "596592ba1259",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "087c8fc0c209",
+          "_type": "span",
+          "marks": [],
+          "text": "Claude's key differentiator is its large context window and strong document comprehension. Unlike models optimized primarily for short Q&A, Claude is built to process and reason over very long inputs — making it ideal for document-heavy workflows."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    }
+  ],
+  "whatIsTitle": "What Is the Claude API?"
+}

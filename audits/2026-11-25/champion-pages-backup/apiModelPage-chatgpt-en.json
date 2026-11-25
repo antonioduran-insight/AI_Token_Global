@@ -1,0 +1,386 @@
+{
+  "_createdAt": "2026-06-04T13:52:03Z",
+  "_id": "apiModelPage-chatgpt-en",
+  "_rev": "R75PYPobjTT24U7ATkYeQT",
+  "_system": {
+    "base": {
+      "id": "apiModelPage-chatgpt-en",
+      "rev": "VKNTFpWe8NfJwy5gVXNJYK"
+    }
+  },
+  "_type": "apiModelPage",
+  "_updatedAt": "2026-08-11T05:57:30Z",
+  "comparingBody": [
+    {
+      "_key": "co1",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "co1s1",
+          "_type": "span",
+          "marks": [],
+          "text": "When comparing the ChatGPT API with other models, the most important things to evaluate are output quality, stability, pricing, integration complexity, and long-term cost at scale. For most people, the real comparison isn't a single model name — it's whether this API can handle your actual workload within your budget."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "co2",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "co2s1",
+          "_type": "span",
+          "marks": [],
+          "text": "You can also compare it with other mainstream models on the ChatGPT, Claude, Gemini Comparison page — that gives you a much clearer picture for building a complete evaluation."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    }
+  ],
+  "comparingTitle": "When Comparing, What Should You Look At?",
+  "faq": [
+    {
+      "_key": "faq1",
+      "_type": "faqItem",
+      "answer": [
+        {
+          "_key": "faq1a1",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "faq1a1s1",
+              "_type": "span",
+              "marks": [],
+              "text": "The consumer interface is designed for direct human use. The ChatGPT API is for connecting to websites, apps, tools, or automated workflows — the model's capabilities can be programmatically invoked and integrated into your own products."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ],
+      "question": "What's the difference between the ChatGPT API and the regular chat product?"
+    },
+    {
+      "_key": "faq2",
+      "_type": "faqItem",
+      "answer": [
+        {
+          "_key": "faq2a1",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "faq2a1s1",
+              "_type": "span",
+              "marks": [],
+              "text": "It's billed by input and output tokens separately. Actual cost is influenced by response length, context window size, and task type — not just the surface price per million tokens."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ],
+      "question": "How is ChatGPT API pricing calculated?"
+    },
+    {
+      "_key": "faq3",
+      "_type": "faqItem",
+      "answer": [
+        {
+          "_key": "faq3a1",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "faq3a1s1",
+              "_type": "span",
+              "marks": [],
+              "text": "If you're new to model APIs, the ChatGPT API is generally the most approachable entry point — but we still recommend understanding AI Tokens and cost logic before diving into usage."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ],
+      "question": "Is the ChatGPT API suitable for beginners?"
+    },
+    {
+      "_key": "faq4",
+      "_type": "faqItem",
+      "answer": [
+        {
+          "_key": "faq4a1",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "faq4a1s1",
+              "_type": "span",
+              "marks": [],
+              "text": "Not necessarily. The real comparison is about use case fit, budget, output quality, integration approach, and long-term cost — not just brand recognition. See the full comparison for a side-by-side view."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ],
+      "question": "Is ChatGPT API always better than other models?"
+    }
+  ],
+  "faqTitle": "Common Questions",
+  "furtherReading": [
+    {
+      "_key": "fr1",
+      "_type": "readingLink",
+      "label": "What is an AI Token?",
+      "url": "/en/beginners-guide"
+    },
+    {
+      "_key": "fr2",
+      "_type": "readingLink",
+      "label": "How to Calculate AI Token Costs",
+      "url": "/en/token-calculator"
+    },
+    {
+      "_key": "fr3",
+      "_type": "readingLink",
+      "label": "ChatGPT, Claude, Gemini — What's the Difference?",
+      "url": "/en/api-compare"
+    },
+    {
+      "_key": "fr4",
+      "_type": "readingLink",
+      "label": "Full Model Comparison",
+      "url": "/en/use-cases"
+    }
+  ],
+  "furtherReadingTitle": "Further Reading",
+  "heroAccent": "purple",
+  "heroHeadline": "ChatGPT API Guide",
+  "heroSubtitle": "Quickly understand what the ChatGPT API is, common use cases, and how costs and AI Tokens work.",
+  "language": "en",
+  "modelSlug": "chatgpt",
+  "overviewBody": [
+    {
+      "_key": "ov1",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "ov1s1",
+          "_type": "span",
+          "marks": [],
+          "text": "If you're looking at the ChatGPT API, the three most important things to understand upfront are: what it can actually do, which situations it fits, and how costs work. This page gives you a clear overview of ChatGPT API's key points, common use cases, and cost structure — so you can make an informed comparison."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "ov2",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "ov2s1",
+          "_type": "span",
+          "marks": [],
+          "text": "If you're still unfamiliar with the basics of AI tokens, start with AI Token Basics first."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    }
+  ],
+  "pricingBody": [
+    {
+      "_key": "pr1",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "pr1s1",
+          "_type": "span",
+          "marks": [],
+          "text": "When using the ChatGPT API, you can't just look at the surface price. More importantly, you need to understand AI Tokens — input content, output content, response length, task type, and conversation context all affect how tokens are consumed. The same prompt can cost very differently depending on how you structure it."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "pr2",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "pr2s1",
+          "_type": "span",
+          "marks": [],
+          "text": "If you're not yet familiar with how tokens work, read AI Token Basics and How to Calculate GPT Token Costs before comparing ChatGPT API pricing — otherwise the numbers won't tell you much."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    }
+  ],
+  "pricingReference": [
+    {
+      "_key": "pref1",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "pref1s1",
+          "_type": "span",
+          "marks": [],
+          "text": "GPT-5.6 Sol: $5.00 / 1M input tokens · $30.00 / 1M output tokens"
+        }
+      ],
+      "level": 1,
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "6ae430725424",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "pref1s1",
+          "_type": "span",
+          "marks": [],
+          "text": "GPT-5.6 Terra: $2.00 / 1M input tokens · $12.00 / 1M output tokens"
+        }
+      ],
+      "level": 1,
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "d8a048d9ad41",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "pref1s1",
+          "_type": "span",
+          "marks": [],
+          "text": "GPT-5.6 Luna: $0.20 / 1M input tokens · $1.20 / 1M output tokens"
+        }
+      ],
+      "level": 1,
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "97a52f63061e",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "d4465ff2b4c3",
+          "_type": "span",
+          "marks": [],
+          "text": "Cached input is billed at one tenth of these rates across all three tiers, so repeated system prompts cost far less than a naive estimate suggests. Rates apply to prompts under 270K tokens. Verified against OpenAI's published pricing on 11 August 2026."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    }
+  ],
+  "pricingTitle": "How Does Pricing Work?",
+  "seo": {
+    "noindex": false,
+    "seoDescription": "Learn what the ChatGPT API does, its most common use cases, how token pricing works, and how it compares to Claude and Gemini.",
+    "seoTitle": "ChatGPT API Guide — AI Token King"
+  },
+  "uniqueSectionBody": [
+    {
+      "_key": "un1",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "un1s1",
+          "_type": "span",
+          "marks": [],
+          "text": "If you're new to model APIs, the ChatGPT API is often the most accessible starting point — it's widely documented, has the largest developer community, and integrates easily with most tools and frameworks. It also suits teams who want to build AI-powered automation flows or website features without a steep learning curve."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "un2",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "un2s1",
+          "_type": "span",
+          "marks": [],
+          "text": "It's also a good fit for anyone who wants to understand ChatGPT API token consumption and cost logic, since many tools and platforms use it as a reference baseline."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    }
+  ],
+  "uniqueSectionTitle": "Who Is It Particularly Well-Suited For?",
+  "useCasesBody": [
+    {
+      "_key": "uc1",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "uc1s1",
+          "_type": "span",
+          "marks": [],
+          "text": "ChatGPT API's most common applications center around text comprehension and generation tasks: customer service and support automation, content summarization, translation, automated Q&A, document processing, tool integration, and internal knowledge base assistants."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "uc2",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "uc2s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Its versatility means it's often the first model API developers reach for — not because it's always the best fit, but because it handles a wide range of text-based tasks without needing specialized configuration."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    }
+  ],
+  "useCasesTitle": "What Is It Commonly Used For?",
+  "whatIsBody": [
+    {
+      "_key": "wi1",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "wi1s1",
+          "_type": "span",
+          "marks": [],
+          "text": "The ChatGPT API (powered by OpenAI) is a way to connect model capabilities to websites, apps, tools, or automated workflows. You can use the API to send prompts, receive text or structured responses, generate content from context, and build AI-powered products on top of OpenAI's models."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "wi2",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "wi2s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Unlike the consumer ChatGPT interface, the API is not tied to any single model — it lets you programmatically choose which model to call, pass system instructions, control response format, and manage conversation history yourself."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    }
+  ],
+  "whatIsTitle": "What Is the ChatGPT API?"
+}

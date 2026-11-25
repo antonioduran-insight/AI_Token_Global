@@ -1,0 +1,596 @@
+{
+  "_createdAt": "2026-05-18T10:13:19Z",
+  "_id": "apiModelPage-claude-es",
+  "_rev": "ia2VH6dunty2Dn6P92euLd",
+  "_system": {
+    "base": {
+      "id": "apiModelPage-claude-es",
+      "rev": "R75PYPobjTT24U7ATktb2X"
+    }
+  },
+  "_type": "apiModelPage",
+  "_updatedAt": "2026-09-04T08:23:56Z",
+  "comparingBody": [
+    {
+      "_key": "0be17adefdeb",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "73374b2d3c89",
+          "_type": "span",
+          "marks": [],
+          "text": "Al comparar la API de Claude con otros modelos, los aspectos más importantes a evaluar son: si puede mantener una longitud de salida consistente, si el formato de sus resultados se adapta a tu forma de trabajar, si sus costos escalan bien según tu frecuencia de uso, y si puede sostener la calidad en flujos de trabajo con documentos extensos."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "7fe699377b9f",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "54738d9b9379",
+          "_type": "span",
+          "marks": [],
+          "text": "Puedes compararlo con otros modelos principales en la página de"
+        },
+        {
+          "_key": "2d211e625f86",
+          "_type": "span",
+          "marks": [],
+          "text": "Comparación de ChatGPT, Claude y Gemini"
+        },
+        {
+          "_key": "947276f620f1",
+          "_type": "span",
+          "marks": [],
+          "text": "— ahí no solo verás las diferencias de marca, sino las diferencias reales entre los tres modelos en cuanto a compatibilidad con flujos de trabajo y estructura de costos."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    }
+  ],
+  "comparingTitle": "Al comparar, ¿qué es lo que realmente importa?",
+  "faq": [
+    {
+      "_key": "b91381d00a8a",
+      "_type": "faqItem",
+      "answer": [
+        {
+          "_key": "7b31cfe79bfd",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "daf7282085cb",
+              "_type": "span",
+              "marks": [],
+              "text": "Claude Opus 5 admite hasta 1M de tokens de contexto, y Sonnet y Haiku hasta 200K — suficiente para documentos largos, aunque varios competidores ya ofrecen ventanas comparables."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ],
+      "question": "¿La API de Claude es buena para tareas de contexto largo?"
+    },
+    {
+      "_key": "98a120ee0f67",
+      "_type": "faqItem",
+      "answer": [
+        {
+          "_key": "4b442b1954d1",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "e959d7fac6e1",
+              "_type": "span",
+              "marks": [],
+              "text": "Se factura por tokens de entrada y salida por separado. El tipo de tarea, la longitud del resultado y el uso de la ventana de contexto influyen en el costo real — no solo la tarifa por millón de tokens."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ],
+      "question": "¿Cómo se calcula el precio de la API de Claude?"
+    },
+    {
+      "_key": "caceafc79726",
+      "_type": "faqItem",
+      "answer": [
+        {
+          "_key": "b7e3f052e1ca",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "a178d410a30b",
+              "_type": "span",
+              "marks": [],
+              "text": "Si eres completamente nuevo en las APIs de modelos, Claude no es necesariamente el punto de partida más obvio — pero si tu caso de uso implica documentos largos o alta calidad en los resultados, vale la pena evaluarlo desde el principio."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ],
+      "question": "¿La API de Claude es adecuada para principiantes?"
+    },
+    {
+      "_key": "2c21ff71c6f3",
+      "_type": "faqItem",
+      "answer": [
+        {
+          "_key": "3d32e1e32af2",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "a204a805f56e",
+              "_type": "span",
+              "marks": [],
+              "text": "Claude y otros modelos no solo se diferencian por la marca, sino también en estabilidad de resultados, tamaño de la ventana de contexto, patrones de consumo de tokens y compatibilidad con flujos de trabajo. Consulta la"
+            },
+            {
+              "_key": "0dae005cd815",
+              "_type": "span",
+              "marks": [],
+              "text": "comparación completa"
+            },
+            {
+              "_key": "2a34bce436d2",
+              "_type": "span",
+              "marks": [],
+              "text": "para una visión estructurada."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ],
+      "question": "¿En qué se diferencia la API de Claude de otros modelos?"
+    }
+  ],
+  "faqTitle": "Preguntas Frecuentes",
+  "furtherReading": [
+    {
+      "_key": "560573100763",
+      "_type": "readingLink",
+      "label": "¿Qué es un AI Token?",
+      "url": "/es/beginners-guide"
+    },
+    {
+      "_key": "4a6281750c88",
+      "_type": "readingLink",
+      "label": "¿Cómo calcular los costos de AI Tokens?",
+      "url": "/es/token-calculator"
+    },
+    {
+      "_key": "26ef3c4b6109",
+      "_type": "readingLink",
+      "label": "ChatGPT, Claude, Gemini — ¿Cuál es la diferencia?",
+      "url": "/es/api-compare"
+    },
+    {
+      "_key": "d0379287400b",
+      "_type": "readingLink",
+      "label": "Comparación Completa de Modelos",
+      "url": "/es/use-cases"
+    }
+  ],
+  "furtherReadingTitle": "Lecturas adicionales",
+  "heroAccent": "teal",
+  "heroHeadline": "Guía de la API de Claude",
+  "heroSubtitle": "Entiende rápidamente qué es la API de Claude, sus casos de uso más comunes, y cómo funcionan los costos y los AI Tokens.",
+  "language": "es",
+  "modelSlug": "claude",
+  "overviewBody": [
+    {
+      "_key": "8b6a0c6c079d",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "4017f415fc24",
+          "_type": "span",
+          "marks": [],
+          "text": "Si estás evaluando la API de Claude, lo más importante que debes entender primero es: sus fortalezas en tareas de contexto largo, cómo maneja la consistencia en los resultados, y cómo escalan los costos según tu volumen de trabajo. Esta página cubre los aspectos clave de la API de Claude para que puedas hacer una comparación bien fundamentada."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "5d5ff8d3ba55",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "6b3b793f4a5b",
+          "_type": "span",
+          "marks": [],
+          "text": "Primero, algo que vale la pena aclarar desde el principio:"
+        },
+        {
+          "_key": "0d14d7239d05",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "La API de Claude no es la mejor opción para todos."
+        },
+        {
+          "_key": "50cbd70feac8",
+          "_type": "span",
+          "marks": [],
+          "text": "Si tu trabajo implica documentos extensos con frecuencia, necesitas calidad de salida consistente en muchas solicitudes, o tus tareas requieren razonamiento multi-turno estable — Claude vale la pena evaluarlo en serio."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    }
+  ],
+  "pricingBody": [
+    {
+      "_key": "3d29f6caa0d7",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "e12c36c02f84",
+          "_type": "span",
+          "marks": [],
+          "text": "Al evaluar los costos de la API de Claude, no basta con mirar el precio superficial. Como con todas las APIs de modelos, necesitas entender los AI Tokens — el contenido de entrada, el contenido de salida, el tipo de tarea, la longitud del contexto y la estructura de la conversación influyen en el consumo de tokens. El precio de Claude es competitivo para tareas de contexto largo, pero el costo real depende en gran medida de cómo lo uses."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "1a63db4bf00d",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "7cd12303f65a",
+          "_type": "span",
+          "marks": [],
+          "text": "Si aún no estás familiarizado con cómo funcionan los tokens, lee"
+        },
+        {
+          "_key": "f4d878b71e00",
+          "_type": "span",
+          "marks": [],
+          "text": "Fundamentos de AI Tokens"
+        },
+        {
+          "_key": "5709b435794e",
+          "_type": "span",
+          "marks": [],
+          "text": "y"
+        },
+        {
+          "_key": "851ff484ac0e",
+          "_type": "span",
+          "marks": [],
+          "text": "Cálculo del costo de tokens de Claude"
+        },
+        {
+          "_key": "9e4aadd7fa3b",
+          "_type": "span",
+          "marks": [],
+          "text": "antes de comparar precios."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    }
+  ],
+  "pricingReference": [
+    {
+      "_key": "f4dba9bd6200",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "bc2daab125a8",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "Claude Opus 5: $5.00 / 1M tokens de entrada · $25.00 / 1M tokens de salida"
+        }
+      ],
+      "level": 1,
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "7b56ebde8e09",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "bc2daab125a8",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "Claude Sonnet 5: $2.00 / 1M tokens de entrada · $10.00 / 1M tokens de salida"
+        }
+      ],
+      "level": 1,
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "3c5da347369b",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "bc2daab125a8",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "Claude Haiku 4.5: $1.00 / 1M tokens de entrada · $5.00 / 1M tokens de salida"
+        }
+      ],
+      "level": 1,
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "5238fce88eab",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "77bf112e2ba2",
+          "_type": "span",
+          "marks": [],
+          "text": ""
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "5c270a77d7f5",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b58898dc1717",
+          "_type": "span",
+          "marks": [],
+          "text": "Verificado con los precios publicados por Anthropic el 3 de septiembre de 2026."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    }
+  ],
+  "pricingTitle": "¿Cómo funciona el precio?",
+  "seo": {
+    "noindex": false,
+    "seoDescription": "Conoce la API de Claude de Anthropic: sus fortalezas en tareas de contexto largo, consistencia en los resultados, niveles de precios y cómo evaluarla frente a ChatGPT y Gemini.",
+    "seoTitle": "Guía de la API de Claude — Tareas de Contexto Largo, Precios y Costos de Tokens"
+  },
+  "uniqueSectionBody": [
+    {
+      "_key": "80de2994ebc0",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "44234aa04887",
+          "_type": "span",
+          "marks": [],
+          "text": "Vale la pena decirlo directamente: si solo buscas una API de uso general y el punto de entrada más accesible, la API de Claude no es necesariamente la primera opción."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "d74d3a16466f",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "98663159c4f2",
+          "_type": "span",
+          "marks": [],
+          "text": "Pero si tus necesidades reales son:"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "8f2f7127a9e1",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "18d88112ea71",
+          "_type": "span",
+          "marks": [],
+          "text": "Comprensión de contenido enriquecido"
+        }
+      ],
+      "level": 1,
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "a0b6abbfd3c4",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "c1bfb27c9d70",
+          "_type": "span",
+          "marks": [],
+          "text": "Procesamiento de documentos"
+        }
+      ],
+      "level": 1,
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "6c9d49dfa26a",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "aa7fcbb7d0a0",
+          "_type": "span",
+          "marks": [],
+          "text": "Gestión del conocimiento"
+        }
+      ],
+      "level": 1,
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "e41071973ad1",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "a2b3470b8139",
+          "_type": "span",
+          "marks": [],
+          "text": "Resultados precisos"
+        }
+      ],
+      "level": 1,
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "baf6ee9195f1",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "081963111717",
+          "_type": "span",
+          "marks": [],
+          "text": "Integración en flujos de trabajo complejos"
+        }
+      ],
+      "level": 1,
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "6d9bf23ab1b3",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "d6fdde480f11",
+          "_type": "span",
+          "marks": [],
+          "text": "…entonces vale la pena priorizar Claude por encima de modelos que simplemente tienen mayor reconocimiento de marca."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    }
+  ],
+  "uniqueSectionTitle": "La API de Claude no es para todos",
+  "useCasesBody": [
+    {
+      "_key": "ef30fa4ff6f5",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "69706956e7d4",
+          "_type": "span",
+          "marks": [],
+          "text": "Las aplicaciones más comunes de la API de Claude se centran en tareas de contenido extenso: resumen de documentos, gestión del conocimiento, revisión legal y de cumplimiento, reorganización de contenido interno y síntesis de investigación. Para tareas en las que el modelo necesita leer y razonar sobre grandes volúmenes de texto, Claude suele ser la primera opción."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "110dc85dba2b",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "f2c368d9190f",
+          "_type": "span",
+          "marks": [],
+          "text": "Un segundo caso de uso frecuente es la consistencia en la calidad de los resultados. Muchos equipos encuentran que Claude genera menos alucinaciones y resultados estructurados más confiables, lo que lo convierte en una opción sólida para flujos de trabajo en producción donde las respuestas impredecibles tienen un alto costo."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "340f43003598",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "0820d5e7ca3a",
+          "_type": "span",
+          "marks": [],
+          "text": "Una tercera fortaleza es la generación de texto de alta calidad — si tu trabajo requiere redacción pulida y con matices, Claude es consistentemente una de las opciones mejor evaluadas."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    }
+  ],
+  "useCasesTitle": "¿Para qué se usa más comúnmente?",
+  "whatIsBody": [
+    {
+      "_key": "3b83efe795cb",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "755408169291",
+          "_type": "span",
+          "marks": [],
+          "text": "La API de Claude (de Anthropic) es una forma de conectar las capacidades del modelo a sitios web, aplicaciones, herramientas o flujos de trabajo automatizados. Puedes usar la API para enviar prompts, recibir resultados en texto o documentos, proporcionar instrucciones para guiar al modelo e integrar razonamiento de IA en tus propios productos."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "bd8b810a8c44",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "a8875025bcc2",
+          "_type": "span",
+          "marks": [],
+          "text": "Si aún no estás familiarizado con la terminología básica, consulta"
+        },
+        {
+          "_key": "d3563c78758d",
+          "_type": "span",
+          "marks": [],
+          "text": "¿Qué es un AI Token?"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "596592ba1259",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "087c8fc0c209",
+          "_type": "span",
+          "marks": [],
+          "text": "El diferenciador clave de la API de Claude es su gran ventana de contexto y su sólida comprensión de documentos. A diferencia de los modelos optimizados principalmente para preguntas y respuestas cortas, Claude está diseñado para procesar y razonar sobre entradas muy largas, lo que lo hace ideal para flujos de trabajo con gran cantidad de documentos."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    }
+  ],
+  "whatIsTitle": "¿Qué es la API de Claude?"
+}

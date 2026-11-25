@@ -1,0 +1,716 @@
+{
+  "_createdAt": "2026-05-11T03:37:20Z",
+  "_id": "apiComparePage-id",
+  "_rev": "I0GYJbFQTSVGZqGEVEQoHG",
+  "_system": {
+    "base": {
+      "id": "apiComparePage-en",
+      "rev": "Qgw4f4CopAxmRMOCwzwZ1J"
+    }
+  },
+  "_type": "apiComparePage",
+  "_updatedAt": "2026-05-26T07:33:31Z",
+  "ctaBody": "Sekarang kamu sudah tahu tipe-tipe model-nya, lihat berapa tepatnya biaya tiap model per satu juta token — dan temukan yang paling cocok untuk anggaranmu.",
+  "ctaHeadline": "Siap membandingkan harga API?",
+  "faq": [
+    {
+      "_key": "2b0acda1034f",
+      "_type": "faqItem",
+      "answer": [
+        {
+          "_key": "50fd36149b94",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "70ed2b85aa53",
+              "_type": "span",
+              "marks": [],
+              "text": "Kalau kamu baru pertama kali menggunakan AI, kami sarankan untuk mulai dengan mengidentifikasi apa yang ingin kamu lakukan — bukan sekadar menghafal nama-nama model. Kamu bisa lihat kategori model (teks, gambar, video), lalu baca panduan pemula di AI Token King. Dari sana, kamu bisa mencoba beberapa model dan membandingkan hasilnya sebelum memutuskan."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "09e66aebf177",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "62a59462c2c5",
+              "_type": "span",
+              "marks": [],
+              "text": "Panduan pemula juga dilengkapi pohon keputusan untuk membantu kamu memilih titik awal berdasarkan tujuan spesifikmu."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ],
+      "question": "1. Saya baru pertama kali pakai AI — model mana yang sebaiknya saya lihat?"
+    },
+    {
+      "_key": "25b4549c0a01",
+      "_type": "faqItem",
+      "answer": [
+        {
+          "_key": "298a85a1259f",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "979780dc4bec",
+              "_type": "span",
+              "marks": [],
+              "text": "Ketiga tipe model menangani jenis output yang pada dasarnya berbeda:"
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "c41c1c54832d",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "0bb4ef2ac19c",
+              "_type": "span",
+              "marks": [
+                "strong"
+              ],
+              "text": "Model teks"
+            },
+            {
+              "_key": "0b2246a4f229",
+              "_type": "span",
+              "marks": [],
+              "text": " — Membaca input teks dan menghasilkan output teks. Digunakan untuk tanya jawab, penulisan, ringkasan, terjemahan, dan kode."
+            }
+          ],
+          "level": 1,
+          "listItem": "bullet",
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "8e919fcf1409",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "c778fcee0337",
+              "_type": "span",
+              "marks": [
+                "strong"
+              ],
+              "text": "Model gambar"
+            },
+            {
+              "_key": "9bc725d58888",
+              "_type": "span",
+              "marks": [],
+              "text": " — Menghasilkan gambar dari prompt teks atau gambar lain. Digunakan untuk desain, ilustrasi, dan konten visual."
+            }
+          ],
+          "level": 1,
+          "listItem": "bullet",
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "389ab35c4e5c",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "4aaeceba60a5",
+              "_type": "span",
+              "marks": [
+                "strong"
+              ],
+              "text": "Model video"
+            },
+            {
+              "_key": "6f6696f4955d",
+              "_type": "span",
+              "marks": [],
+              "text": " — Menghasilkan klip video pendek dari teks atau gambar. Digunakan untuk iklan, animasi, dan konten media sosial."
+            }
+          ],
+          "level": 1,
+          "listItem": "bullet",
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "7a92566eddcf",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "164d20c7e8ee",
+              "_type": "span",
+              "marks": [],
+              "text": "Model video umumnya paling mahal; model teks cenderung paling murah dan paling serbaguna."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ],
+      "question": "2. Apa perbedaan antara model teks, model gambar, dan model video?"
+    },
+    {
+      "_key": "0763114470ce",
+      "_type": "faqItem",
+      "answer": [
+        {
+          "_key": "43483e70b1db",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "3baa47941a99",
+              "_type": "span",
+              "marks": [],
+              "text": "Tidak — kamu tidak perlu mengenal setiap model. Anggap saja seperti menu: kamu tidak perlu mencoba semuanya, cukup hidangan yang sesuai dengan seleramu. Bagi kebanyakan pemula, memilih 2–3 model dari kategori yang sama dan membandingkannya sudah lebih dari cukup. Tabel ini adalah referensi, bukan kurikulum."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ],
+      "question": "3. Tabel menampilkan banyak model — apakah saya benar-benar perlu memahami semuanya?"
+    },
+    {
+      "_key": "9e4f450fb294",
+      "_type": "faqItem",
+      "answer": [
+        {
+          "_key": "d36012b574fd",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "29a7d04096ac",
+              "_type": "span",
+              "marks": [],
+              "text": "Jika kebutuhan utamamu adalah konten tertulis (blog, email, skrip, SEO), mulailah dengan "
+            },
+            {
+              "_key": "8f400436d282",
+              "_type": "span",
+              "marks": [
+                "strong"
+              ],
+              "text": "model teks"
+            },
+            {
+              "_key": "fdac3c3d6ded",
+              "_type": "span",
+              "marks": [],
+              "text": ". Kami sarankan untuk mulai dengan model-model mapan seperti GPT-4o atau Claude Sonnet, karena keduanya memiliki dokumentasi terbaik dan dukungan komunitas terbesar."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "920168042d22",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "ac0ce5f3c164",
+              "_type": "span",
+              "marks": [],
+              "text": "Begitu kamu sudah nyaman dengan pembuatan teks, kamu bisa menambahkan model gambar atau video untuk aset visual. Tapi untuk pembuatan konten murni, model teks saja sudah bisa memenuhi sebagian besar kebutuhanmu."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ],
+      "question": "4. Saya hanya butuh pembuatan konten — kategori model mana yang paling baik?"
+    },
+    {
+      "_key": "e797431d14ae",
+      "_type": "faqItem",
+      "answer": [
+        {
+          "_key": "a928538ce422",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "04d6d5b0e41c",
+              "_type": "span",
+              "marks": [],
+              "text": "Tidak selalu. Harga dan performa memang penting, tapi ada faktor lain yang juga perlu diperhatikan:"
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "3e09aa6d9aeb",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "5b76f8895aa1",
+              "_type": "span",
+              "marks": [
+                "strong"
+              ],
+              "text": "Context window"
+            },
+            {
+              "_key": "dd5662af73da",
+              "_type": "span",
+              "marks": [],
+              "text": " — Seberapa banyak teks yang bisa ditangani model sekaligus?"
+            }
+          ],
+          "level": 1,
+          "listItem": "bullet",
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "f59ae99e6049",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "8d9b6a16deef",
+              "_type": "span",
+              "marks": [
+                "strong"
+              ],
+              "text": "Dukungan bahasa"
+            },
+            {
+              "_key": "6aa745b5182f",
+              "_type": "span",
+              "marks": [],
+              "text": " — Beberapa model lebih kuat dalam bahasa tertentu."
+            }
+          ],
+          "level": 1,
+          "listItem": "bullet",
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "1afdfb05575a",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "170b36cc5902",
+              "_type": "span",
+              "marks": [
+                "strong"
+              ],
+              "text": "Keandalan API"
+            },
+            {
+              "_key": "c319d5c58b2f",
+              "_type": "span",
+              "marks": [],
+              "text": " — "
+            },
+            {
+              "_key": "uptime-bold-1",
+              "_type": "span",
+              "marks": [
+                "strong"
+              ],
+              "text": "Uptime"
+            },
+            {
+              "_key": "uptime-rest-1",
+              "_type": "span",
+              "marks": [],
+              "text": ", batas request, dan latensi sangat penting untuk aplikasi produksi."
+            }
+          ],
+          "level": 1,
+          "listItem": "bullet",
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "82729ba4c5dc",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "00db977941e6",
+              "_type": "span",
+              "marks": [
+                "strong"
+              ],
+              "text": "Ketersediaan fine-tuning"
+            },
+            {
+              "_key": "638babe39cf2",
+              "_type": "span",
+              "marks": [],
+              "text": " — Bisakah kamu menyesuaikan model untuk kasus penggunaanmu?"
+            }
+          ],
+          "level": 1,
+          "listItem": "bullet",
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "328e6b22b2ab",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "4d173ec1192b",
+              "_type": "span",
+              "marks": [],
+              "text": "AI Token King mencakup semua dimensi ini dalam alat perbandingan kami — bukan hanya harga per token."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ],
+      "question": "5. Apakah memilih model selalu bergantung pada harga dan performa?"
+    },
+    {
+      "_key": "19f909b4f72f",
+      "_type": "faqItem",
+      "answer": [
+        {
+          "_key": "78193e500f76",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "fcc4eaf5be07",
+              "_type": "span",
+              "marks": [],
+              "text": "Ya — bahkan, banyak alur kerja produksi yang menggabungkan beberapa tipe model sekaligus. Pola yang umum: gunakan model teks untuk membuat skrip atau deskripsi, lalu kirim ke model gambar untuk membuat visual, kemudian masukkan gambar tersebut ke model video untuk menganimasikannya. Pendekatan pipeline multi-model seperti ini semakin umum digunakan oleh tim konten dan agensi."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ],
+      "question": "6. Bisakah model teks, model gambar, dan model video digunakan secara bersamaan?"
+    }
+  ],
+  "faqTitle": "Pertanyaan Umum tentang Tipe Model",
+  "heroHeadline": "Gambaran Umum Tipe Model AI",
+  "heroNote": "Belum yakin harus mulai dari mana? Kami sarankan untuk membaca panduan pemula terlebih dahulu — itu akan membantumu mengambil keputusan yang lebih tepat.",
+  "heroSubtitle": "Halaman ini membahas model teks, gambar, dan video yang paling umum digunakan — untuk membantu kamu memahami perbedaan antar tipe model dengan cepat dan memilih yang tepat untuk penggunaan pertamamu.",
+  "imageModels": [
+    {
+      "_key": "1788c75b9a4f",
+      "_type": "imageModelRow",
+      "description": "Pembuatan visual berkualitas tinggi secara cepat — konsep material, ilustrasi, dan gambar media sosial.",
+      "modelName": "imagen 4 fast"
+    },
+    {
+      "_key": "abaf2ef2e000",
+      "_type": "imageModelRow",
+      "description": "Pembuatan gambar berkualitas tinggi, konsep kreatif, dan draf desain.",
+      "modelName": "imagen-4-image-01"
+    },
+    {
+      "_key": "2b07c2daa76d",
+      "_type": "imageModelRow",
+      "description": "Pembuatan gambar komprehensif dengan berbagai aplikasi gaya dan konten visual yang kaya.",
+      "modelName": "kling-v3-omni-image"
+    },
+    {
+      "_key": "4feff1039091",
+      "_type": "imageModelRow",
+      "description": "Pembuatan gambar ringan dengan pemrosesan cepat dan output singkat.",
+      "modelName": "nano banana2"
+    },
+    {
+      "_key": "56a04cbd4ffe",
+      "_type": "imageModelRow",
+      "description": "Pembuatan gambar umum, aset ilustrasi, dan pembuatan gambar visual.",
+      "modelName": "qwen-image-2.0"
+    },
+    {
+      "_key": "8d0a213c0090",
+      "_type": "imageModelRow",
+      "description": "Pembuatan proposal desain, output gambar berkualitas tinggi, dan elemen visual lanjutan.",
+      "modelName": "qwen-image-2.0-pro"
+    },
+    {
+      "_key": "399befb29974",
+      "_type": "imageModelRow",
+      "description": "Gambar unggulan berkualitas tinggi, aset media sosial, dan konten visual profesional.",
+      "modelName": "qwen-image-max"
+    },
+    {
+      "_key": "b082ddc14f36",
+      "_type": "imageModelRow",
+      "description": "Pembuatan gambar komprehensif untuk kebutuhan desain sehari-hari.",
+      "modelName": "qwen-image-plus"
+    },
+    {
+      "_key": "5caa27774011",
+      "_type": "imageModelRow",
+      "description": "Pembuatan ilustrasi, visual merek, aset gaya, dan pembuatan gambar kreatif.",
+      "modelName": "seedream-4.5"
+    },
+    {
+      "_key": "1e84bc681952",
+      "_type": "imageModelRow",
+      "description": "Pembuatan gambar cepat, pembuatan material ringan, dan konsep visual sederhana.",
+      "modelName": "seedream-5.0-lite"
+    },
+    {
+      "_key": "65a8d1847ae7",
+      "_type": "imageModelRow",
+      "description": "Pembuatan gambar dari teks, ilustrasi konsep, dan pembuatan material.",
+      "modelName": "wan2.6-t2i"
+    }
+  ],
+  "imageModelsSubtitle": "Terutama digunakan untuk ilustrasi, aset media sosial, draf desain, dan pembuatan konten visual. Wajib bagi siapa pun yang membutuhkan output visual berkualitas tinggi.",
+  "imageModelsTitle": "Model Gambar",
+  "language": "id",
+  "pricingCalloutBody": "Harga real-time untuk 60+ model — termasuk Claude, GPT, Gemini, DeepSeek, dan lainnya. Bandingkan harga AI Token King vs harga resmi, filter berdasarkan Teks / Gambar / Video, dan coba model mana saja langsung.",
+  "pricingCalloutCta": "Lihat Harga Real-time",
+  "pricingCalloutTitle": "Harga Model API Real-time",
+  "seo": {
+    "noindex": false,
+    "seoDescription": "Bandingkan 40+ model AI lintas teks, gambar, dan video. Lihat kasus penggunaan, harga, dan temukan model yang tepat untuk proyekmu di AI Token King.",
+    "seoTitle": "Gambaran Umum Tipe Model AI — Bandingkan Teks, Gambar & Video AI"
+  },
+  "textModels": [
+    {
+      "_key": "ce55e65a4fde",
+      "_type": "textModelRow",
+      "description": "Flagship serbaguna. Ideal untuk penalaran kompleks, tugas multi-langkah, dan pembuatan konten berkualitas tinggi.",
+      "modelName": "gpt-4o"
+    },
+    {
+      "_key": "012b70279ec7",
+      "_type": "textModelRow",
+      "description": "Model layanan pelanggan ringan. Cepat, hemat biaya, dan dioptimalkan untuk tugas sederhana bervolume tinggi.",
+      "modelName": "gpt-4.5-nano"
+    },
+    {
+      "_key": "2eff70dee055",
+      "_type": "textModelRow",
+      "description": "Percakapan umum, tugas penulisan harian, dan dialog interaktif berkualitas tinggi.",
+      "modelName": "gpt-5.3-chat"
+    },
+    {
+      "_key": "fe939b842e2e",
+      "_type": "textModelRow",
+      "description": "Coding, debugging, refactoring, dan bantuan pengembangan.",
+      "modelName": "gpt-5.3-codex"
+    },
+    {
+      "_key": "f748bd69a08a",
+      "_type": "textModelRow",
+      "description": "Konten panjang, analisis mendalam, serta tugas pemecahan masalah dan penalaran kompleks.",
+      "modelName": "claude-opus-4.6"
+    },
+    {
+      "_key": "0c6d82299437",
+      "_type": "textModelRow",
+      "description": "Pemrosesan dokumen panjang, penulisan laporan, pembuatan konten, dan tanya jawab berbasis pengetahuan.",
+      "modelName": "claude-sonnet-4.6"
+    },
+    {
+      "_key": "0b0d967f053b",
+      "_type": "textModelRow",
+      "description": "Penggunaan harian, pembuatan konten umum, rekomendasi, dan output teks berkualitas tinggi dengan biaya kompetitif.",
+      "modelName": "deepseek-v3.2"
+    },
+    {
+      "_key": "ccf051856ff1",
+      "_type": "textModelRow",
+      "description": "Tugas teks bahasa Mandarin secara komprehensif — tanya jawab umum dan pembuatan dokumen.",
+      "modelName": "doubao-seed-2.0-pro"
+    },
+    {
+      "_key": "05672e5270f3",
+      "_type": "textModelRow",
+      "description": "Bantuan pemrograman, pembuatan kode, debugging, dan dukungan pengembangan.",
+      "modelName": "doubao-seed-2.0-code"
+    },
+    {
+      "_key": "dee043f79542",
+      "_type": "textModelRow",
+      "description": "Pembuatan teks pendek, balasan cepat, dan tugas konten ringan.",
+      "modelName": "doubao-seed-2.0-lite"
+    },
+    {
+      "_key": "a7592f3be88f",
+      "_type": "textModelRow",
+      "description": "Tanya jawab dasar, pembuatan ringan, dan tugas konten sederhana.",
+      "modelName": "doubao-seed-2.0-mini"
+    },
+    {
+      "_key": "6ad7ce7b7460",
+      "_type": "textModelRow",
+      "description": "Pemahaman multi-modal, tanya jawab kompleks, penulisan kreatif, dan output lintas modal.",
+      "modelName": "gemini 3 pro"
+    },
+    {
+      "_key": "855bfc58b767",
+      "_type": "textModelRow",
+      "description": "Tugas multi-modal cepat, tanya jawab cerdas, dan output ringan dengan kecepatan tinggi.",
+      "modelName": "gemini-3-flash-preview"
+    },
+    {
+      "_key": "3bca784bb2df",
+      "_type": "textModelRow",
+      "description": "Penalaran lanjutan, tugas komprehensif, dan pemrosesan dokumen dengan konteks panjang.",
+      "modelName": "gemini-3.1-pro-preview"
+    },
+    {
+      "_key": "4d9970f6518f",
+      "_type": "textModelRow",
+      "description": "Percakapan umum, tanya jawab, dan tugas penalaran.",
+      "modelName": "GLM-4.7"
+    },
+    {
+      "_key": "50490d9cf69f",
+      "_type": "textModelRow",
+      "description": "Tanya jawab teks umum, pembuatan konten, dan tugas komprehensif.",
+      "modelName": "grok4.2"
+    },
+    {
+      "_key": "ae8678dcdb61",
+      "_type": "textModelRow",
+      "description": "Pemrosesan dokumen panjang, pemahaman bacaan, dan pengambilan informasi.",
+      "modelName": "Kimi-K2.5"
+    },
+    {
+      "_key": "0b0ec6b82fd0",
+      "_type": "textModelRow",
+      "description": "Layanan pelanggan, pembuatan konten, dan tugas rutin sehari-hari.",
+      "modelName": "MiniMax-M1"
+    },
+    {
+      "_key": "2d47e9c01537",
+      "_type": "textModelRow",
+      "description": "Tanya jawab komprehensif, pembuatan konten, dan pemrosesan teks.",
+      "modelName": "MiniMax-M2.7"
+    },
+    {
+      "_key": "6000ae3af252",
+      "_type": "textModelRow",
+      "description": "Pemahaman dokumen, input tanya jawab visual, dan pembuatan konten multi-modal.",
+      "modelName": "qwen3-vl-chat"
+    },
+    {
+      "_key": "b9b4fea70dae",
+      "_type": "textModelRow",
+      "description": "Tugas visual yang lebih lengkap dan penalaran lintas modal lanjutan.",
+      "modelName": "qwen3-vl-plus"
+    },
+    {
+      "_key": "8e74de4845d5",
+      "_type": "textModelRow",
+      "description": "Tugas teks umum, pembuatan konten, dan tanya jawab gabungan.",
+      "modelName": "qwen3.5"
+    },
+    {
+      "_key": "03dbc509b921",
+      "_type": "textModelRow",
+      "description": "Output cepat berbiaya rendah, tanya jawab sederhana, dan pembuatan konten ringan.",
+      "modelName": "qwen3.5-flash"
+    },
+    {
+      "_key": "fb346c8e96b1",
+      "_type": "textModelRow",
+      "description": "Pembuatan komprehensif, penyempurnaan konten, dan optimasi tugas tunggal.",
+      "modelName": "qwen3.5-plus"
+    },
+    {
+      "_key": "7dff5f04f867",
+      "_type": "textModelRow",
+      "description": "Tanya jawab ringan, pembuatan sederhana, dan respons singkat yang cepat.",
+      "modelName": "seed-2-0-mini"
+    }
+  ],
+  "textModelsSubtitle": "Tipe model AI yang paling banyak digunakan untuk pembuatan konten, terjemahan, ringkasan, coding, dan AI percakapan.",
+  "textModelsTitle": "Model Teks",
+  "typeCards": [
+    {
+      "_key": "b1a77d9e16a6",
+      "_type": "typeCard",
+      "anchorId": "text-models",
+      "ctaLabel": "Lihat Model Teks →",
+      "description": "Terbaik untuk penulisan artikel, layanan pelanggan, tanya jawab, pemrosesan dokumen, dan bantuan coding.",
+      "icon": "text",
+      "subtitle": "Bahasa · Kode · Penalaran",
+      "title": "Model Teks"
+    },
+    {
+      "_key": "3d6b2cf966ee",
+      "_type": "typeCard",
+      "anchorId": "image-models",
+      "ctaLabel": "Lihat Model Gambar →",
+      "description": "Terbaik untuk pembuatan ilustrasi, aset media sosial, seni konsep, dan pekerjaan desain visual.",
+      "icon": "image",
+      "subtitle": "Pembuatan · Pengeditan · Desain",
+      "title": "Model Gambar"
+    },
+    {
+      "_key": "36ddd9553cd2",
+      "_type": "typeCard",
+      "anchorId": "video-models",
+      "ctaLabel": "Lihat Model Video →",
+      "description": "Terbaik untuk pembuatan video pendek, konten animasi, iklan dinamis, dan motion graphics.",
+      "icon": "video",
+      "subtitle": "Pembuatan · Animasi · Klip",
+      "title": "Model Video"
+    }
+  ],
+  "videoModels": [
+    {
+      "_key": "ae393e15702d",
+      "_type": "videoModelRow",
+      "description": "Pembuatan klip video pendek, konten dinamis, dan materi iklan format singkat.",
+      "modelName": "kling-v3"
+    },
+    {
+      "_key": "50db05f58b00",
+      "_type": "videoModelRow",
+      "description": "Teks ke video, film pendek animasi, dan konten iklan dinamis.",
+      "modelName": "seedance-1-5-pro"
+    },
+    {
+      "_key": "bd19399b8b72",
+      "_type": "videoModelRow",
+      "description": "Pembuatan video umum, animasi dinamis, dan pembuatan konten iklan.",
+      "modelName": "seedance-2.0"
+    },
+    {
+      "_key": "391b502940e5",
+      "_type": "videoModelRow",
+      "description": "Pembuatan video berkualitas tinggi dengan adegan realistis dan output visual sinematik.",
+      "modelName": "veo 3.1"
+    },
+    {
+      "_key": "6c4c09386c94",
+      "_type": "videoModelRow",
+      "description": "Pembuatan video dari gambar — hidupkan gambar diam dengan gerakan.",
+      "modelName": "wan2.5-i2v-preview"
+    },
+    {
+      "_key": "26f13f182c3b",
+      "_type": "videoModelRow",
+      "description": "Konversi gambar ke video secara cepat dengan kemampuan pembuatan audio.",
+      "modelName": "wan2.6-i2v-flash"
+    },
+    {
+      "_key": "7ed31bf8d3c2",
+      "_type": "videoModelRow",
+      "description": "Konversi gambar referensi ke video dengan output berkualitas tinggi.",
+      "modelName": "wan2.6-r2v-flash"
+    },
+    {
+      "_key": "e892cfd30375",
+      "_type": "videoModelRow",
+      "description": "Pembuatan video dari teks, klip pendek, dan visualisasi berbasis skrip.",
+      "modelName": "wan2.6-t2v"
+    }
+  ],
+  "videoModelsSubtitle": "Terutama digunakan untuk klip video AI, konversi gambar ke video, dan pembuatan konten iklan dinamis. Ideal bagi siapa pun yang membutuhkan konten gerak yang dihasilkan AI.",
+  "videoModelsTitle": "Model Video"
+}

@@ -1,0 +1,249 @@
+{
+  "_createdAt": "2026-05-18T09:54:29Z",
+  "_id": "homePage-es",
+  "_rev": "msX1xboyN0yvLlOgnJXtc8",
+  "_type": "homePage",
+  "_updatedAt": "2026-05-28T13:49:47Z",
+  "faq": [
+    {
+      "_key": "178daf38ccda",
+      "_type": "faqItem",
+      "answer": [
+        {
+          "_key": "8a99606c8549",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "78ee6371c29e",
+              "_type": "span",
+              "marks": [],
+              "text": "Un token es la unidad básica que los modelos de lenguaje de IA usan para procesar texto. En español, un token equivale aproximadamente a 4 caracteres o ¾ de una palabra. Por ejemplo, \"ChatGPT\" es un token, y \"tokenización\" equivale a unos 3 tokens. Los modelos leen y generan texto token por token, y el precio de la API se basa en la cantidad de tokens utilizados."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ],
+      "question": "¿Qué es un Token de IA?"
+    },
+    {
+      "_key": "d16f96061901",
+      "_type": "faqItem",
+      "answer": [
+        {
+          "_key": "7ac983aa50a5",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "1f72650f535d",
+              "_type": "span",
+              "marks": [],
+              "text": "Los tokens de entrada son los tokens de tu prompt — el texto que envías al modelo. Los tokens de salida son los tokens en la respuesta del modelo. La mayoría de las APIs de IA cobran tarifas distintas por entrada y salida, siendo los tokens de salida generalmente más costosos (a menudo entre 3 y 5 veces más), ya que generar texto requiere mayor capacidad computacional que leerlo."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ],
+      "question": "¿Qué son los Tokens de Entrada y los Tokens de Salida?"
+    },
+    {
+      "_key": "6915e6383bc5",
+      "_type": "faqItem",
+      "answer": [
+        {
+          "_key": "949420912f4d",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "73911c7d59ef",
+              "_type": "span",
+              "marks": [],
+              "text": "Una API de modelo (Interfaz de Programación de Aplicaciones) permite a los desarrolladores acceder a modelos de lenguaje de IA de forma programática. En lugar de usar una interfaz de chat como ChatGPT, envías solicitudes HTTP con tu prompt y recibes una respuesta. Esto te permite integrar IA en tus propias aplicaciones, automatizar flujos de trabajo y crear productos sobre modelos como GPT-4o, Claude o Gemini."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ],
+      "question": "¿Qué es una API de Modelo?"
+    },
+    {
+      "_key": "a62f8120b26d",
+      "_type": "faqItem",
+      "answer": [
+        {
+          "_key": "ee12901dfd39",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "d41a897b16a2",
+              "_type": "span",
+              "marks": [],
+              "text": "Considera cuatro factores: (1) Capacidad — ¿el modelo maneja bien tu tarea? (2) Ventana de contexto — ¿cuánto texto puede procesar a la vez? (3) Costo — ¿cuál es tu presupuesto por 1M de tokens? (4) Velocidad — ¿necesitas respuestas en tiempo real? Nuestra herramienta de comparación te ayuda a evaluar todos estos factores en paralelo."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ],
+      "question": "¿Cómo encuentro el modelo de IA adecuado para mi caso de uso?"
+    },
+    {
+      "_key": "1c0739d593ea",
+      "_type": "faqItem",
+      "answer": [
+        {
+          "_key": "3c53c6c715ae",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "3695c687b396",
+              "_type": "span",
+              "marks": [],
+              "text": "Depende en gran medida del modelo y de la longitud promedio de tus prompts y respuestas. Con GPT-4o mini y prompts cortos (~500 tokens de entrada, ~200 de salida), 1,000 llamadas costarían aproximadamente $0.075–$0.15. Con GPT-4o y conversaciones más largas, esas mismas 1,000 llamadas podrían costar entre $5 y $20. Usa nuestra Calculadora de Tokens para estimar tu escenario específico."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ],
+      "question": "¿Cuánto cuestan 1,000 llamadas a una API de IA?"
+    },
+    {
+      "_key": "e314e6735408",
+      "_type": "faqItem",
+      "answer": [
+        {
+          "_key": "5ea17af03099",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "765dcabb784c",
+              "_type": "span",
+              "marks": [],
+              "text": "Cada proveedor de IA utiliza un tokenizador diferente — el algoritmo que divide el texto en tokens. OpenAI usa tiktoken (basado en BPE), Anthropic usa su propio tokenizador y Google usa SentencePiece. La misma oración puede tokenizarse en distintas cantidades de tokens según el modelo que uses. Por eso siempre debes usar el tokenizador oficial del proveedor al estimar costos."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ],
+      "question": "¿Por qué diferentes APIs cuentan los tokens de manera distinta?"
+    },
+    {
+      "_key": "17b352438018",
+      "_type": "faqItem",
+      "answer": [
+        {
+          "_key": "dc17500e1338",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "1cc270a034af",
+              "_type": "span",
+              "marks": [],
+              "text": "Sin duda. Los equipos empresariales suelen gastar de más en APIs de IA por no comprender la economía de los tokens. AI Token King cubre estrategias de optimización de tokens, uso de API por lotes, técnicas de caché y cómo elegir el nivel de modelo adecuado para distintas tareas dentro de un mismo producto — todo lo cual puede reducir los costos entre un 50 y un 80%."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ],
+      "question": "¿Deberían los usuarios empresariales leer AI Token King primero?"
+    }
+  ],
+  "faqSubtitle": "Todo lo que has querido saber sobre tokens de IA, APIs y costos — respondido.",
+  "faqTitle": "Preguntas Frecuentes",
+  "heroAccentText": "Modelos y APIs",
+  "heroHeadline": "Domina los Tokens de IA,",
+  "heroLabel": "Tu Centro de Conocimiento sobre IA",
+  "heroStats": [
+    {
+      "_key": "94f2946a6713",
+      "_type": "heroStat",
+      "statLabel": "Modelos de IA Cubiertos",
+      "statNumber": "60+"
+    },
+    {
+      "_key": "2dfbdbfaefc2",
+      "_type": "heroStat",
+      "statLabel": "Cálculos de Tokens",
+      "statNumber": "1000+"
+    },
+    {
+      "_key": "4da19d513d69",
+      "_type": "heroStat",
+      "statLabel": "Siempre y Para Siempre",
+      "statNumber": "Free"
+    }
+  ],
+  "heroSubtitle": "La guía definitiva en español sobre tokens de IA, comparación de modelos de lenguaje, cálculo de costos de API y navegación por el ecosistema de IA en constante evolución — todo en un solo lugar.",
+  "language": "es",
+  "seo": {
+    "noindex": false,
+    "seoDescription": "La guía definitiva sobre tokens de IA, APIs de modelos y cálculo de costos. Compara más de 60+ modelos, estima costos de tokens y navega por el ecosistema de IA — gratis, siempre.",
+    "seoTitle": "AI Token King — Tu Centro de Conocimiento sobre IA"
+  },
+  "tokenBody2": [
+    {
+      "_key": "168d995345d8",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "4ce7d480b4f2",
+          "_type": "span",
+          "marks": [],
+          "text": "Cada llamada a la API que realizas se factura en tokens:"
+        },
+        {
+          "_key": "29c08a3af705",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "tokens de entrada"
+        },
+        {
+          "_key": "ae4de176c79f",
+          "_type": "span",
+          "marks": [],
+          "text": "(lo que envías) y"
+        },
+        {
+          "_key": "dc448ea9a7ba",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "tokens de salida"
+        },
+        {
+          "_key": "3fc10a0d281e",
+          "_type": "span",
+          "marks": [],
+          "text": "(lo que el modelo genera). Dominar el cálculo de tokens es esencial para cualquiera que desarrolle con IA."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    }
+  ],
+  "tokenBreakdown": {
+    "charCount": "~52",
+    "tokens": [
+      "Hola",
+      ",",
+      "¿",
+      "cómo",
+      "estás",
+      "?",
+      "Estoy",
+      "aprendiendo",
+      "sobre",
+      "tokens",
+      "de",
+      "IA"
+    ]
+  }
+}

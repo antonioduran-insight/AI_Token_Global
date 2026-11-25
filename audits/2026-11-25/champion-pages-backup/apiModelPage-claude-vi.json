@@ -1,0 +1,596 @@
+{
+  "_createdAt": "2026-06-04T12:53:53Z",
+  "_id": "apiModelPage-claude-vi",
+  "_rev": "ia2VH6dunty2Dn6P92euLd",
+  "_system": {
+    "base": {
+      "id": "apiModelPage-claude-vi",
+      "rev": "3PFaUppQG3q6iDYaDAZgDh"
+    }
+  },
+  "_type": "apiModelPage",
+  "_updatedAt": "2026-09-04T08:23:56Z",
+  "comparingBody": [
+    {
+      "_key": "0be17adefdeb",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "73374b2d3c89",
+          "_type": "span",
+          "marks": [],
+          "text": "Khi so sánh Claude API với các mô hình khác, những điều quan trọng nhất cần đánh giá là: liệu nó có duy trì được độ dài đầu ra ổn định không, định dạng đầu ra có phù hợp với quy trình của bạn không, chi phí có tăng theo tần suất sử dụng một cách hợp lý không, và liệu nó có giữ được chất lượng trên các quy trình xử lý tài liệu dài không."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "7fe699377b9f",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "54738d9b9379",
+          "_type": "span",
+          "marks": [],
+          "text": "Bạn có thể so sánh nó với các mô hình hàng đầu khác trên "
+        },
+        {
+          "_key": "2d211e625f86",
+          "_type": "span",
+          "marks": [],
+          "text": "trang so sánh ChatGPT, Claude và Gemini"
+        },
+        {
+          "_key": "947276f620f1",
+          "_type": "span",
+          "marks": [],
+          "text": " — ở đó bạn sẽ thấy không chỉ sự khác biệt về thương hiệu, mà còn là những khác biệt thực sự giữa cả ba mô hình về khả năng tương thích quy trình và cấu trúc chi phí."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    }
+  ],
+  "comparingTitle": "Khi So Sánh, Điều Gì Thực Sự Quan Trọng?",
+  "faq": [
+    {
+      "_key": "b91381d00a8a",
+      "_type": "faqItem",
+      "answer": [
+        {
+          "_key": "94b1d2ad14ae",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "e033684c1cc6",
+              "_type": "span",
+              "marks": [],
+              "text": "Claude Opus 5 hỗ trợ ngữ cảnh lên tới 1M token, còn Sonnet và Haiku là 200K — đủ cho tài liệu dài, dù hiện nay một số đối thủ cũng có context window tương đương."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ],
+      "question": "Claude API có tốt cho các tác vụ ngữ cảnh dài không?"
+    },
+    {
+      "_key": "98a120ee0f67",
+      "_type": "faqItem",
+      "answer": [
+        {
+          "_key": "4b442b1954d1",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "e959d7fac6e1",
+              "_type": "span",
+              "marks": [],
+              "text": "Chi phí được tính riêng cho token đầu vào và đầu ra. Loại tác vụ, độ dài đầu ra và mức sử dụng cửa sổ ngữ cảnh đều ảnh hưởng đến chi phí thực tế — không chỉ mức giá trên mỗi triệu token."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ],
+      "question": "Giá Claude API được tính như thế nào?"
+    },
+    {
+      "_key": "caceafc79726",
+      "_type": "faqItem",
+      "answer": [
+        {
+          "_key": "b7e3f052e1ca",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "a178d410a30b",
+              "_type": "span",
+              "marks": [],
+              "text": "Nếu bạn hoàn toàn mới với các API mô hình, Claude không nhất thiết là điểm khởi đầu rõ ràng nhất — nhưng nếu trường hợp sử dụng của bạn liên quan đến tài liệu dài hoặc chất lượng đầu ra cao, thì đáng để cân nhắc ngay từ đầu."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ],
+      "question": "Claude API có phù hợp cho người mới không?"
+    },
+    {
+      "_key": "2c21ff71c6f3",
+      "_type": "faqItem",
+      "answer": [
+        {
+          "_key": "3d32e1e32af2",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "a204a805f56e",
+              "_type": "span",
+              "marks": [],
+              "text": "Claude và các mô hình khác khác nhau không chỉ về thương hiệu, mà còn ở độ ổn định đầu ra, kích thước cửa sổ ngữ cảnh, mô hình tiêu thụ token và khả năng tương thích quy trình. Xem "
+            },
+            {
+              "_key": "0dae005cd815",
+              "_type": "span",
+              "marks": [],
+              "text": "so sánh đầy đủ"
+            },
+            {
+              "_key": "2a34bce436d2",
+              "_type": "span",
+              "marks": [],
+              "text": " để có cái nhìn có cấu trúc."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ],
+      "question": "Claude API khác với các mô hình khác như thế nào?"
+    }
+  ],
+  "faqTitle": "Câu Hỏi Thường Gặp",
+  "furtherReading": [
+    {
+      "_key": "560573100763",
+      "_type": "readingLink",
+      "label": "Token AI Là Gì?",
+      "url": "/vi/beginners-guide"
+    },
+    {
+      "_key": "4a6281750c88",
+      "_type": "readingLink",
+      "label": "Cách Tính Chi Phí Token AI",
+      "url": "/vi/token-calculator"
+    },
+    {
+      "_key": "26ef3c4b6109",
+      "_type": "readingLink",
+      "label": "ChatGPT, Claude, Gemini — Sự Khác Biệt Là Gì?",
+      "url": "/vi/api-compare"
+    },
+    {
+      "_key": "d0379287400b",
+      "_type": "readingLink",
+      "label": "So Sánh Mô Hình Đầy Đủ",
+      "url": "/vi/use-cases"
+    }
+  ],
+  "furtherReadingTitle": "Đọc Thêm",
+  "heroAccent": "teal",
+  "heroHeadline": "Hướng Dẫn Claude API",
+  "heroSubtitle": "Nhanh chóng hiểu Claude API là gì, các trường hợp sử dụng phổ biến nhất và cách chi phí cùng token AI hoạt động.",
+  "language": "vi",
+  "modelSlug": "claude",
+  "overviewBody": [
+    {
+      "_key": "8b6a0c6c079d",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "4017f415fc24",
+          "_type": "span",
+          "marks": [],
+          "text": "Nếu bạn đang đánh giá Claude API, những điều quan trọng nhất cần hiểu ngay từ đầu là: điểm mạnh của nó với các tác vụ ngữ cảnh dài, cách nó xử lý độ nhất quán đầu ra, và chi phí tăng theo khối lượng công việc của bạn như thế nào. Trang này trình bày những điểm chính của Claude API để bạn có thể đưa ra so sánh có đầy đủ thông tin."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "5d5ff8d3ba55",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "6b3b793f4a5b",
+          "_type": "span",
+          "marks": [],
+          "text": "Đầu tiên, có điều đáng nói thẳng: "
+        },
+        {
+          "_key": "0d14d7239d05",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "Claude API không phải lựa chọn tốt nhất cho tất cả mọi người."
+        },
+        {
+          "_key": "50cbd70feac8",
+          "_type": "span",
+          "marks": [],
+          "text": " Nếu công việc của bạn thường xuyên liên quan đến tài liệu dài, bạn cần chất lượng đầu ra nhất quán trên nhiều yêu cầu, hoặc các tác vụ của bạn đòi hỏi suy luận nhiều lượt ổn định — Claude đáng được đánh giá nghiêm túc."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    }
+  ],
+  "pricingBody": [
+    {
+      "_key": "3d29f6caa0d7",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "e12c36c02f84",
+          "_type": "span",
+          "marks": [],
+          "text": "Khi đánh giá chi phí Claude API, bạn không thể chỉ nhìn vào mức giá bề mặt. Cũng như tất cả các API mô hình, bạn cần hiểu về token AI — nội dung đầu vào, nội dung đầu ra, loại tác vụ, độ dài ngữ cảnh và cấu trúc cuộc hội thoại đều ảnh hưởng đến mức tiêu thụ token. Giá của Claude cạnh tranh cho các tác vụ ngữ cảnh dài, nhưng chi phí thực tế phụ thuộc nhiều vào cách bạn sử dụng."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "1a63db4bf00d",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "7cd12303f65a",
+          "_type": "span",
+          "marks": [],
+          "text": "Nếu bạn chưa quen với cách token hoạt động, hãy đọc "
+        },
+        {
+          "_key": "f4d878b71e00",
+          "_type": "span",
+          "marks": [],
+          "text": "Kiến Thức Cơ Bản Về Token AI"
+        },
+        {
+          "_key": "5709b435794e",
+          "_type": "span",
+          "marks": [],
+          "text": " và "
+        },
+        {
+          "_key": "851ff484ac0e",
+          "_type": "span",
+          "marks": [],
+          "text": "Cách Tính Chi Phí Token Claude"
+        },
+        {
+          "_key": "9e4aadd7fa3b",
+          "_type": "span",
+          "marks": [],
+          "text": " trước khi so sánh giá."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    }
+  ],
+  "pricingReference": [
+    {
+      "_key": "f4dba9bd6200",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "bc2daab125a8",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "Claude Opus 5: $5.00 / 1M input tokens · $25.00 / 1M output tokens"
+        }
+      ],
+      "level": 1,
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "23238ac6dad5",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "bc2daab125a8",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "Claude Sonnet 5: $2.00 / 1M input tokens · $10.00 / 1M output tokens"
+        }
+      ],
+      "level": 1,
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "69de9fb9de96",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "bc2daab125a8",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "Claude Haiku 4.5: $1.00 / 1M input tokens · $5.00 / 1M output tokens"
+        }
+      ],
+      "level": 1,
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "a3d6a0c660e3",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "30b0977f05f4",
+          "_type": "span",
+          "marks": [],
+          "text": ""
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "61c3b21e473b",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b26f40ad55dd",
+          "_type": "span",
+          "marks": [],
+          "text": "Đã kiểm chứng với bảng giá chính thức của Anthropic ngày 3 tháng 9 năm 2026."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    }
+  ],
+  "pricingTitle": "Giá Hoạt Động Như Thế Nào?",
+  "seo": {
+    "noindex": false,
+    "seoDescription": "Tìm hiểu về Claude API từ Anthropic: điểm mạnh với các tác vụ ngữ cảnh dài, độ nhất quán đầu ra, các mức giá và cách so sánh với ChatGPT và Gemini.",
+    "seoTitle": "Hướng Dẫn Claude API — Tác Vụ Ngữ Cảnh Dài, Giá Cả và Chi Phí Token | AI Token King"
+  },
+  "uniqueSectionBody": [
+    {
+      "_key": "80de2994ebc0",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "44234aa04887",
+          "_type": "span",
+          "marks": [],
+          "text": "Nói thẳng ra: nếu bạn chỉ tìm một API đa dụng và điểm bắt đầu dễ tiếp cận nhất, Claude API không nhất thiết là lựa chọn đầu tiên."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "d74d3a16466f",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "98663159c4f2",
+          "_type": "span",
+          "marks": [],
+          "text": "Nhưng nếu nhu cầu thực sự của bạn là:"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "8f2f7127a9e1",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "18d88112ea71",
+          "_type": "span",
+          "marks": [],
+          "text": "Hiểu nội dung phong phú"
+        }
+      ],
+      "level": 1,
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "a0b6abbfd3c4",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "c1bfb27c9d70",
+          "_type": "span",
+          "marks": [],
+          "text": "Xử lý tài liệu"
+        }
+      ],
+      "level": 1,
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "6c9d49dfa26a",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "aa7fcbb7d0a0",
+          "_type": "span",
+          "marks": [],
+          "text": "Quản lý kiến thức"
+        }
+      ],
+      "level": 1,
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "e41071973ad1",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "a2b3470b8139",
+          "_type": "span",
+          "marks": [],
+          "text": "Đầu ra chính xác"
+        }
+      ],
+      "level": 1,
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "baf6ee9195f1",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "081963111717",
+          "_type": "span",
+          "marks": [],
+          "text": "Tích hợp vào các quy trình phức tạp"
+        }
+      ],
+      "level": 1,
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "6d9bf23ab1b3",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "d6fdde480f11",
+          "_type": "span",
+          "marks": [],
+          "text": "…thì đáng để ưu tiên Claude hơn các mô hình chỉ có nhận diện thương hiệu cao hơn."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    }
+  ],
+  "uniqueSectionTitle": "Claude API Không Dành Cho Tất Cả Mọi Người",
+  "useCasesBody": [
+    {
+      "_key": "ef30fa4ff6f5",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "69706956e7d4",
+          "_type": "span",
+          "marks": [],
+          "text": "Các ứng dụng phổ biến nhất của Claude API tập trung vào các tác vụ nội dung dạng dài: tóm tắt tài liệu, quản lý kiến thức, xem xét pháp lý và tuân thủ, tái tổ chức nội dung nội bộ và tổng hợp nghiên cứu. Với các tác vụ mà mô hình cần đọc và suy luận trên khối lượng văn bản lớn, Claude thường là lựa chọn hàng đầu."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "110dc85dba2b",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "f2c368d9190f",
+          "_type": "span",
+          "marks": [],
+          "text": "Trường hợp sử dụng phổ biến thứ hai là độ nhất quán chất lượng đầu ra. Nhiều nhóm nhận thấy Claude tạo ra ít ảo giác hơn và các đầu ra có cấu trúc đáng tin cậy hơn — khiến nó trở thành lựa chọn mạnh cho các quy trình sản xuất khi các phản hồi không thể đoán trước mang lại chi phí cao."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "340f43003598",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "0820d5e7ca3a",
+          "_type": "span",
+          "marks": [],
+          "text": "Điểm mạnh thứ ba là tạo văn bản chất lượng cao — nếu công việc của bạn đòi hỏi lối viết trau chuốt, tinh tế, Claude luôn là một trong những lựa chọn được đánh giá cao nhất."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    }
+  ],
+  "useCasesTitle": "Nó Thường Được Dùng Để Làm Gì?",
+  "whatIsBody": [
+    {
+      "_key": "3b83efe795cb",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "755408169291",
+          "_type": "span",
+          "marks": [],
+          "text": "Claude API (từ Anthropic) là cách kết nối khả năng của mô hình với các trang web, ứng dụng, công cụ hoặc quy trình tự động. Bạn có thể dùng API để gửi prompt, nhận phản hồi văn bản hoặc tài liệu, cung cấp hướng dẫn cho mô hình và tích hợp khả năng suy luận AI vào sản phẩm của mình."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "bd8b810a8c44",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "a8875025bcc2",
+          "_type": "span",
+          "marks": [],
+          "text": "Nếu bạn vẫn chưa quen với thuật ngữ cơ bản, hãy xem "
+        },
+        {
+          "_key": "d3563c78758d",
+          "_type": "span",
+          "marks": [],
+          "text": "Token AI Là Gì?"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "596592ba1259",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "087c8fc0c209",
+          "_type": "span",
+          "marks": [],
+          "text": "Điểm khác biệt chính của Claude là cửa sổ ngữ cảnh lớn và khả năng hiểu tài liệu mạnh mẽ. Không giống các mô hình được tối ưu hóa chủ yếu cho Q&A ngắn, Claude được xây dựng để xử lý và suy luận trên các đầu vào rất dài — khiến nó lý tưởng cho các quy trình nặng về tài liệu."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    }
+  ],
+  "whatIsTitle": "Claude API Là Gì?"
+}

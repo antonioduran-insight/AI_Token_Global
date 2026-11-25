@@ -1,0 +1,249 @@
+{
+  "_createdAt": "2026-05-13T04:45:53Z",
+  "_id": "homePage-id",
+  "_rev": "kTT88iozTCUfRl76jshxjy",
+  "_type": "homePage",
+  "_updatedAt": "2026-05-28T13:49:48Z",
+  "faq": [
+    {
+      "_key": "178daf38ccda",
+      "_type": "faqItem",
+      "answer": [
+        {
+          "_key": "8a99606c8549",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "78ee6371c29e",
+              "_type": "span",
+              "marks": [],
+              "text": "Token adalah unit dasar yang digunakan model bahasa AI untuk memproses teks. Dalam bahasa Inggris, satu token kira-kira setara dengan 4 karakter atau ¾ kata. Misalnya, \"ChatGPT\" adalah satu token, \"tokenization\" sekitar 3 token. Model membaca dan menghasilkan teks token per token, dan harga API ditentukan berdasarkan jumlah token yang digunakan."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ],
+      "question": "Apa Itu Token AI?"
+    },
+    {
+      "_key": "d16f96061901",
+      "_type": "faqItem",
+      "answer": [
+        {
+          "_key": "7ac983aa50a5",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "1f72650f535d",
+              "_type": "span",
+              "marks": [],
+              "text": "Token input adalah token dalam prompt kamu — teks yang kamu kirim ke model. Token output adalah token dalam respons model. Sebagian besar API AI mengenakan tarif berbeda untuk input dan output, di mana token output biasanya lebih mahal (sering kali 3–5x lebih mahal) karena menghasilkan teks lebih banyak membutuhkan komputasi dibanding membacanya."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ],
+      "question": "Apa Itu Token Input dan Token Output?"
+    },
+    {
+      "_key": "6915e6383bc5",
+      "_type": "faqItem",
+      "answer": [
+        {
+          "_key": "949420912f4d",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "73911c7d59ef",
+              "_type": "span",
+              "marks": [],
+              "text": "API model (Application Programming Interface) memungkinkan developer mengakses model bahasa AI secara programatik. Alih-alih menggunakan antarmuka chat seperti ChatGPT, kamu mengirim permintaan HTTP dengan prompt dan menerima responsnya. Ini memungkinkan kamu mengintegrasikan AI ke aplikasi sendiri, mengotomatiskan alur kerja, dan membangun produk di atas model seperti GPT-4, Claude, atau Gemini."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ],
+      "question": "Apa Itu API Model?"
+    },
+    {
+      "_key": "a62f8120b26d",
+      "_type": "faqItem",
+      "answer": [
+        {
+          "_key": "ee12901dfd39",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "d41a897b16a2",
+              "_type": "span",
+              "marks": [],
+              "text": "Pertimbangkan empat faktor: (1) Kemampuan — apakah model menangani tugasmu dengan baik? (2) Context window — seberapa banyak teks yang bisa diproses sekaligus? (3) Biaya — berapa anggaranmu per 1M token? (4) Kecepatan — apakah kamu butuh respons real-time? Alat perbandingan kami membantu kamu mengevaluasi semua faktor ini secara berdampingan."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ],
+      "question": "Gimana Cara Menemukan Model AI yang Tepat untuk Kasus Penggunaanku?"
+    },
+    {
+      "_key": "1c0739d593ea",
+      "_type": "faqItem",
+      "answer": [
+        {
+          "_key": "3c53c6c715ae",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "3695c687b396",
+              "_type": "span",
+              "marks": [],
+              "text": "Sangat tergantung pada model dan rata-rata panjang prompt/respons kamu. Untuk GPT-4o mini dengan prompt pendek (~500 token masuk, ~200 keluar), 1.000 panggilan akan menelan biaya sekitar $0,075–$0,15. Untuk GPT-4o dengan percakapan lebih panjang, 1.000 panggilan yang sama bisa mencapai $5–$20. Gunakan Kalkulator Token kami untuk memperkirakan skenario spesifikmu."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ],
+      "question": "Berapa Biaya 1.000 Panggilan API AI?"
+    },
+    {
+      "_key": "e314e6735408",
+      "_type": "faqItem",
+      "answer": [
+        {
+          "_key": "5ea17af03099",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "765dcabb784c",
+              "_type": "span",
+              "marks": [],
+              "text": "Setiap penyedia AI menggunakan tokenizer yang berbeda — algoritma yang memecah teks menjadi token. OpenAI menggunakan tiktoken (berbasis BPE), Anthropic menggunakan tokenizer mereka sendiri, dan Google menggunakan SentencePiece. Kalimat yang sama bisa menghasilkan jumlah token yang berbeda tergantung model yang kamu gunakan. Itulah kenapa kamu harus selalu menggunakan tokenizer resmi penyedia saat memperkirakan biaya."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ],
+      "question": "Kenapa API yang Berbeda Menghitung Token Secara Berbeda?"
+    },
+    {
+      "_key": "17b352438018",
+      "_type": "faqItem",
+      "answer": [
+        {
+          "_key": "dc17500e1338",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "1cc270a034af",
+              "_type": "span",
+              "marks": [],
+              "text": "Tentu saja. Tim enterprise sering kali overspend pada API AI karena tidak memahami ekonomi token. AI Token King membahas strategi optimasi token, penggunaan batch API, teknik caching, dan cara memilih tier model yang tepat untuk berbagai tugas dalam satu produk — semuanya bisa memangkas biaya hingga 50–80%."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ],
+      "question": "Apakah Pengguna Enterprise Perlu Membaca AI Token King Duluan?"
+    }
+  ],
+  "faqSubtitle": "Semua yang selama ini kamu penasarkan tentang token AI, API, dan biaya — terjawab.",
+  "faqTitle": "Pertanyaan yang Sering Diajukan",
+  "heroAccentText": "Model & API",
+  "heroHeadline": "Kuasai Token AI,",
+  "heroLabel": "Pusat Pengetahuan AI Kamu",
+  "heroStats": [
+    {
+      "_key": "94f2946a6713",
+      "_type": "heroStat",
+      "statLabel": "Model AI Tercakup",
+      "statNumber": "60+"
+    },
+    {
+      "_key": "2dfbdbfaefc2",
+      "_type": "heroStat",
+      "statLabel": "Kalkulasi Token",
+      "statNumber": "1000+"
+    },
+    {
+      "_key": "4da19d513d69",
+      "_type": "heroStat",
+      "statLabel": "Selalu & Selamanya",
+      "statNumber": "Gratis"
+    }
+  ],
+  "heroSubtitle": "Panduan terlengkap untuk memahami token AI, membandingkan model bahasa, menghitung biaya API, dan menavigasi ekosistem AI yang terus berkembang pesat — semua dalam satu tempat.",
+  "language": "id",
+  "seo": {
+    "noindex": false,
+    "seoDescription": "Panduan terlengkap tentang token AI, API model, dan kalkulasi biaya. Bandingkan 60+ model, estimasi biaya token, dan jelajahi ekosistem AI — gratis, selamanya.",
+    "seoTitle": "AI Token King — Pusat Pengetahuan AI Kamu"
+  },
+  "tokenBody2": [
+    {
+      "_key": "168d995345d8",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "4ce7d480b4f2",
+          "_type": "span",
+          "marks": [],
+          "text": "Setiap panggilan API yang kamu buat ditagih dalam token: "
+        },
+        {
+          "_key": "29c08a3af705",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "token input"
+        },
+        {
+          "_key": "ae4de176c79f",
+          "_type": "span",
+          "marks": [],
+          "text": " (yang kamu kirim) dan "
+        },
+        {
+          "_key": "dc448ea9a7ba",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "token output"
+        },
+        {
+          "_key": "3fc10a0d281e",
+          "_type": "span",
+          "marks": [],
+          "text": " (yang dihasilkan model). Menguasai matematika token adalah hal yang wajib bagi siapa pun yang membangun dengan AI."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    }
+  ],
+  "tokenBreakdown": {
+    "charCount": "~56",
+    "tokens": [
+      "Halo",
+      ",",
+      "bagaimana",
+      "kabar",
+      "kamu",
+      "?",
+      "Saya",
+      "sedang",
+      "belajar",
+      "tentang",
+      "token",
+      "AI"
+    ]
+  }
+}

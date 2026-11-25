@@ -1,0 +1,17 @@
+{
+  "_id": "apiComparePage-vi",
+  "url": "/vi/api-compare/",
+  "rev": "97luqmnzEkVELN5ug5L6Ba",
+  "edits": [
+    {
+      "path": "faq[_key==\"9e4f450fb294\"].answer[_key==\"d36012b574fd\"].children[_key==\"fdac3c3d6ded\"].text",
+      "before": ". Chúng tôi khuyên bạn nên bắt đầu với các mô hình đã được kiểm chứng như GPT-4o hoặc Claude Sonnet, vì chúng có tài liệu tốt nhất và cộng đồng hỗ trợ lớn nhất.",
+      "after": ". Chúng tôi khuyên bạn nên bắt đầu với một mô hình dùng hằng ngày như GPT-6.2 Sol hoặc Claude Sonnet 5.5. Chúng rẻ hơn nhiều so với các mô hình hàng đầu (GPT-6.2 Sol: $2.00 cho mỗi 1 triệu token đầu vào và $10.00 cho mỗi 1 triệu token đầu ra, so với $8.00 và $40.00 của GPT-6.2 Astra), và bạn có thể chuyển sang mô hình hàng đầu khi tác vụ cần."
+    },
+    {
+      "path": "pricingCalloutBody",
+      "before": "Giá thời gian thực cho 60+ mô hình — bao gồm Claude, GPT, Gemini, DeepSeek và nhiều hơn nữa. So sánh giá AI Token King với giá chính thức, lọc theo Văn bản / Hình ảnh / Video và dùng thử bất kỳ mô hình nào trực tiếp.",
+      "after": "Giá thời gian thực cho hơn 140 mô hình trên AI Token King — bao gồm Claude, GPT, Gemini, DeepSeek và nhiều hơn nữa. So sánh giá AI Token King với giá chính thức, lọc theo Văn bản / Hình ảnh / Video và dùng thử bất kỳ mô hình nào trực tiếp."
+    }
+  ]
+}

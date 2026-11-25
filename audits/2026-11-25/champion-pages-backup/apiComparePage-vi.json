@@ -1,0 +1,702 @@
+{
+  "_createdAt": "2026-05-11T03:37:20Z",
+  "_id": "apiComparePage-vi",
+  "_rev": "97luqmnzEkVELN5ug5L6Ba",
+  "_system": {
+    "base": {
+      "id": "apiComparePage-en",
+      "rev": "Qgw4f4CopAxmRMOCwzwZ1J"
+    }
+  },
+  "_type": "apiComparePage",
+  "_updatedAt": "2026-05-13T03:39:27Z",
+  "ctaBody": "Giờ bạn đã biết các loại mô hình, hãy xem chính xác mỗi mô hình tốn bao nhiêu chi phí trên mỗi triệu token — và tìm lựa chọn phù hợp nhất với ngân sách của bạn.",
+  "ctaHeadline": "Sẵn sàng so sánh giá API?",
+  "faq": [
+    {
+      "_key": "2b0acda1034f",
+      "_type": "faqItem",
+      "answer": [
+        {
+          "_key": "50fd36149b94",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "70ed2b85aa53",
+              "_type": "span",
+              "marks": [],
+              "text": "Nếu bạn mới bắt đầu với AI, chúng tôi khuyên bạn nên xác định trước mình muốn làm gì — thay vì chỉ ghi nhớ tên mô hình. Bạn có thể xem qua các loại mô hình (văn bản, hình ảnh, video), rồi đọc hướng dẫn cho người mới trên AI Token King. Từ đó, bạn có thể thử một vài mô hình và so sánh kết quả trước khi quyết định."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "09e66aebf177",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "62a59462c2c5",
+              "_type": "span",
+              "marks": [],
+              "text": "Hướng dẫn cho người mới cũng có sơ đồ quyết định giúp bạn chọn điểm khởi đầu dựa trên mục tiêu cụ thể của bạn."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ],
+      "question": "1. Tôi lần đầu dùng AI — nên xem mô hình nào?"
+    },
+    {
+      "_key": "25b4549c0a01",
+      "_type": "faqItem",
+      "answer": [
+        {
+          "_key": "298a85a1259f",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "979780dc4bec",
+              "_type": "span",
+              "marks": [],
+              "text": "Ba loại mô hình xử lý các dạng đầu ra hoàn toàn khác nhau:"
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "c41c1c54832d",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "0bb4ef2ac19c",
+              "_type": "span",
+              "marks": [
+                "strong"
+              ],
+              "text": "Mô hình văn bản"
+            },
+            {
+              "_key": "0b2246a4f229",
+              "_type": "span",
+              "marks": [],
+              "text": " — Đọc đầu vào văn bản, tạo ra đầu ra văn bản. Dùng cho Q&A, viết lách, tóm tắt, dịch thuật và lập trình."
+            }
+          ],
+          "level": 1,
+          "listItem": "bullet",
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "8e919fcf1409",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "c778fcee0337",
+              "_type": "span",
+              "marks": [
+                "strong"
+              ],
+              "text": "Mô hình hình ảnh"
+            },
+            {
+              "_key": "9bc725d58888",
+              "_type": "span",
+              "marks": [],
+              "text": " — Tạo hình ảnh từ các prompt văn bản hoặc hình ảnh khác. Dùng cho thiết kế, minh họa và nội dung trực quan."
+            }
+          ],
+          "level": 1,
+          "listItem": "bullet",
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "389ab35c4e5c",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "4aaeceba60a5",
+              "_type": "span",
+              "marks": [
+                "strong"
+              ],
+              "text": "Mô hình video"
+            },
+            {
+              "_key": "6f6696f4955d",
+              "_type": "span",
+              "marks": [],
+              "text": " — Tạo đoạn video ngắn từ văn bản hoặc hình ảnh. Dùng cho quảng cáo, hoạt ảnh và nội dung mạng xã hội."
+            }
+          ],
+          "level": 1,
+          "listItem": "bullet",
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "7a92566eddcf",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "164d20c7e8ee",
+              "_type": "span",
+              "marks": [],
+              "text": "Mô hình video thường đắt nhất; mô hình văn bản có xu hướng rẻ nhất và linh hoạt nhất."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ],
+      "question": "2. Sự khác biệt giữa mô hình văn bản, hình ảnh và video là gì?"
+    },
+    {
+      "_key": "0763114470ce",
+      "_type": "faqItem",
+      "answer": [
+        {
+          "_key": "43483e70b1db",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "3baa47941a99",
+              "_type": "span",
+              "marks": [],
+              "text": "Không — bạn không cần biết hết mọi mô hình. Hãy nghĩ như một thực đơn: bạn không cần thử tất cả, chỉ cần chọn những món phù hợp với khẩu vị của mình. Với hầu hết người mới, chọn 2–3 mô hình trong cùng một danh mục và so sánh chúng là quá đủ rồi. Bảng danh sách là tài liệu tham khảo, không phải chương trình học."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ],
+      "question": "3. Bảng có quá nhiều mô hình — tôi có thực sự cần hiểu hết không?"
+    },
+    {
+      "_key": "9e4f450fb294",
+      "_type": "faqItem",
+      "answer": [
+        {
+          "_key": "d36012b574fd",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "29a7d04096ac",
+              "_type": "span",
+              "marks": [],
+              "text": "Nếu nhu cầu chính của bạn là nội dung viết (blog, email, kịch bản, SEO), hãy bắt đầu với "
+            },
+            {
+              "_key": "8f400436d282",
+              "_type": "span",
+              "marks": [
+                "strong"
+              ],
+              "text": "mô hình văn bản"
+            },
+            {
+              "_key": "fdac3c3d6ded",
+              "_type": "span",
+              "marks": [],
+              "text": ". Chúng tôi khuyên bạn nên bắt đầu với các mô hình đã được kiểm chứng như GPT-4o hoặc Claude Sonnet, vì chúng có tài liệu tốt nhất và cộng đồng hỗ trợ lớn nhất."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "920168042d22",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "ac0ce5f3c164",
+              "_type": "span",
+              "marks": [],
+              "text": "Khi đã quen với việc tạo văn bản, bạn có thể kết hợp thêm mô hình hình ảnh hoặc video cho nội dung trực quan. Nhưng nếu chỉ cần tạo nội dung thuần túy, mô hình văn bản đơn thuần là đủ đáp ứng phần lớn nhu cầu của bạn."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ],
+      "question": "4. Tôi chỉ cần tạo nội dung — loại mô hình nào phù hợp nhất?"
+    },
+    {
+      "_key": "e797431d14ae",
+      "_type": "faqItem",
+      "answer": [
+        {
+          "_key": "a928538ce422",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "04d6d5b0e41c",
+              "_type": "span",
+              "marks": [],
+              "text": "Không hẳn. Giá và hiệu suất quan trọng, nhưng còn nhiều yếu tố khác cũng đáng cân nhắc:"
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "3e09aa6d9aeb",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "5b76f8895aa1",
+              "_type": "span",
+              "marks": [
+                "strong"
+              ],
+              "text": "Cửa sổ ngữ cảnh"
+            },
+            {
+              "_key": "dd5662af73da",
+              "_type": "span",
+              "marks": [],
+              "text": " — Mô hình có thể xử lý bao nhiêu văn bản cùng một lúc?"
+            }
+          ],
+          "level": 1,
+          "listItem": "bullet",
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "f59ae99e6049",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "8d9b6a16deef",
+              "_type": "span",
+              "marks": [
+                "strong"
+              ],
+              "text": "Hỗ trợ ngôn ngữ"
+            },
+            {
+              "_key": "6aa745b5182f",
+              "_type": "span",
+              "marks": [],
+              "text": " — Một số mô hình mạnh hơn ở các ngôn ngữ cụ thể."
+            }
+          ],
+          "level": 1,
+          "listItem": "bullet",
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "1afdfb05575a",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "170b36cc5902",
+              "_type": "span",
+              "marks": [
+                "strong"
+              ],
+              "text": "Độ tin cậy API"
+            },
+            {
+              "_key": "c319d5c58b2f",
+              "_type": "span",
+              "marks": [],
+              "text": " — Uptime, giới hạn tốc độ và độ trễ đều quan trọng với ứng dụng thực tế."
+            }
+          ],
+          "level": 1,
+          "listItem": "bullet",
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "82729ba4c5dc",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "00db977941e6",
+              "_type": "span",
+              "marks": [
+                "strong"
+              ],
+              "text": "Khả năng fine-tuning"
+            },
+            {
+              "_key": "638babe39cf2",
+              "_type": "span",
+              "marks": [],
+              "text": " — Bạn có thể tùy chỉnh mô hình theo trường hợp sử dụng của mình không?"
+            }
+          ],
+          "level": 1,
+          "listItem": "bullet",
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "328e6b22b2ab",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "4d173ec1192b",
+              "_type": "span",
+              "marks": [],
+              "text": "AI Token King bao quát tất cả các chiều này trong công cụ so sánh của chúng tôi — không chỉ giá mỗi token."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ],
+      "question": "5. Việc chọn mô hình có luôn phụ thuộc vào giá và hiệu suất không?"
+    },
+    {
+      "_key": "19f909b4f72f",
+      "_type": "faqItem",
+      "answer": [
+        {
+          "_key": "78193e500f76",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "fcc4eaf5be07",
+              "_type": "span",
+              "marks": [],
+              "text": "Có — thực ra nhiều quy trình sản xuất kết hợp nhiều loại mô hình với nhau. Một mô hình phổ biến: dùng mô hình văn bản để tạo kịch bản hoặc mô tả, chuyển sang mô hình hình ảnh để tạo hình ảnh minh họa, rồi đưa hình ảnh vào mô hình video để tạo hoạt ảnh. Cách tiếp cận pipeline đa mô hình này ngày càng phổ biến với các nhóm sản xuất nội dung và agency."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ],
+      "question": "6. Có thể dùng mô hình văn bản, mô hình hình ảnh và mô hình video cùng lúc không?"
+    }
+  ],
+  "faqTitle": "Câu Hỏi Thường Gặp Về Các Loại Mô Hình",
+  "heroHeadline": "Tổng Quan Các Loại Mô Hình AI",
+  "heroNote": "Chưa biết bắt đầu từ đâu? Chúng tôi khuyên bạn nên đọc hướng dẫn cho người mới trước — sẽ giúp bạn đưa ra quyết định sáng suốt hơn.",
+  "heroSubtitle": "Trang này giới thiệu các mô hình văn bản, hình ảnh và video phổ biến nhất, giúp bạn nhanh chóng hiểu sự khác biệt giữa các loại mô hình và chọn đúng mô hình cho lần sử dụng đầu tiên.",
+  "imageModels": [
+    {
+      "_key": "1788c75b9a4f",
+      "_type": "imageModelRow",
+      "description": "Tạo hình ảnh chất lượng cao nhanh chóng — ý tưởng tài liệu, minh họa và hình ảnh mạng xã hội.",
+      "modelName": "imagen 4 fast"
+    },
+    {
+      "_key": "abaf2ef2e000",
+      "_type": "imageModelRow",
+      "description": "Tạo hình ảnh chất lượng cao, ý tưởng sáng tạo và bản nháp thiết kế.",
+      "modelName": "imagen-4-image-01"
+    },
+    {
+      "_key": "2b07c2daa76d",
+      "_type": "imageModelRow",
+      "description": "Tạo hình ảnh toàn diện với nhiều phong cách áp dụng và nội dung trực quan phong phú.",
+      "modelName": "kling-v3-omni-image"
+    },
+    {
+      "_key": "4feff1039091",
+      "_type": "imageModelRow",
+      "description": "Tạo hình ảnh nhẹ với xử lý nhanh và đầu ra tức thì.",
+      "modelName": "nano banana2"
+    },
+    {
+      "_key": "56a04cbd4ffe",
+      "_type": "imageModelRow",
+      "description": "Tạo hình ảnh đa dụng, tài nguyên minh họa và sinh hình ảnh trực quan.",
+      "modelName": "qwen-image-2.0"
+    },
+    {
+      "_key": "8d0a213c0090",
+      "_type": "imageModelRow",
+      "description": "Tạo đề xuất thiết kế, đầu ra hình ảnh chất lượng cao và các yếu tố trực quan nâng cao.",
+      "modelName": "qwen-image-2.0-pro"
+    },
+    {
+      "_key": "399befb29974",
+      "_type": "imageModelRow",
+      "description": "Hình ảnh flagship chất lượng cao, tài nguyên mạng xã hội và nội dung trực quan chuyên nghiệp.",
+      "modelName": "qwen-image-max"
+    },
+    {
+      "_key": "b082ddc14f36",
+      "_type": "imageModelRow",
+      "description": "Tạo hình ảnh toàn diện cho các yêu cầu thiết kế hàng ngày.",
+      "modelName": "qwen-image-plus"
+    },
+    {
+      "_key": "5caa27774011",
+      "_type": "imageModelRow",
+      "description": "Tạo minh họa, hình ảnh thương hiệu, tài nguyên phong cách và sinh hình ảnh sáng tạo.",
+      "modelName": "seedream-4.5"
+    },
+    {
+      "_key": "1e84bc681952",
+      "_type": "imageModelRow",
+      "description": "Tạo hình ảnh nhanh, tạo tài liệu nhẹ và các ý tưởng trực quan đơn giản.",
+      "modelName": "seedream-5.0-lite"
+    },
+    {
+      "_key": "65a8d1847ae7",
+      "_type": "imageModelRow",
+      "description": "Tạo hình ảnh từ văn bản, minh họa ý tưởng và tạo tài liệu.",
+      "modelName": "wan2.6-t2i"
+    }
+  ],
+  "imageModelsSubtitle": "Chủ yếu dùng cho minh họa, tài nguyên mạng xã hội, bản nháp thiết kế và tạo nội dung trực quan. Lý tưởng cho bất kỳ ai cần đầu ra hình ảnh chất lượng cao.",
+  "imageModelsTitle": "Mô Hình Hình Ảnh",
+  "language": "vi",
+  "pricingCalloutBody": "Giá thời gian thực cho 60+ mô hình — bao gồm Claude, GPT, Gemini, DeepSeek và nhiều hơn nữa. So sánh giá AI Token King với giá chính thức, lọc theo Văn bản / Hình ảnh / Video và dùng thử bất kỳ mô hình nào trực tiếp.",
+  "pricingCalloutCta": "Xem Giá Trực Tiếp",
+  "pricingCalloutTitle": "Giá API Mô Hình Trực Tiếp",
+  "seo": {
+    "noindex": false,
+    "seoDescription": "So sánh 40+ mô hình AI theo văn bản, hình ảnh và video. Xem trường hợp sử dụng, giá cả và tìm mô hình phù hợp với dự án của bạn trên AI Token King.",
+    "seoTitle": "Tổng Quan Các Loại Mô Hình AI — So Sánh Văn Bản, Hình Ảnh & Video"
+  },
+  "textModels": [
+    {
+      "_key": "ce55e65a4fde",
+      "_type": "textModelRow",
+      "description": "Flagship đa dụng. Lý tưởng cho suy luận phức tạp, tác vụ nhiều bước và tạo nội dung chất lượng cao.",
+      "modelName": "gpt-4o"
+    },
+    {
+      "_key": "012b70279ec7",
+      "_type": "textModelRow",
+      "description": "Mô hình chăm sóc khách hàng nhẹ. Nhanh, chi phí thấp và được tối ưu cho các tác vụ đơn giản khối lượng lớn.",
+      "modelName": "gpt-4.5-nano"
+    },
+    {
+      "_key": "2eff70dee055",
+      "_type": "textModelRow",
+      "description": "Hội thoại đa dụng, viết lách hàng ngày và đối thoại tương tác chất lượng cao.",
+      "modelName": "gpt-5.3-chat"
+    },
+    {
+      "_key": "fe939b842e2e",
+      "_type": "textModelRow",
+      "description": "Viết code, debug, tái cấu trúc và hỗ trợ phát triển phần mềm.",
+      "modelName": "gpt-5.3-codex"
+    },
+    {
+      "_key": "f748bd69a08a",
+      "_type": "textModelRow",
+      "description": "Nội dung dài, phân tích chuyên sâu và các tác vụ giải quyết vấn đề phức tạp đòi hỏi suy luận.",
+      "modelName": "claude-opus-4.6"
+    },
+    {
+      "_key": "0c6d82299437",
+      "_type": "textModelRow",
+      "description": "Xử lý tài liệu dài, viết báo cáo, tạo nội dung và Q&A kiến thức.",
+      "modelName": "claude-sonnet-4.6"
+    },
+    {
+      "_key": "0b0d967f053b",
+      "_type": "textModelRow",
+      "description": "Sử dụng hàng ngày, tạo nội dung đa dụng, đề xuất và đầu ra văn bản chất lượng cao với chi phí cạnh tranh.",
+      "modelName": "deepseek-v3.2"
+    },
+    {
+      "_key": "ccf051856ff1",
+      "_type": "textModelRow",
+      "description": "Tác vụ văn bản tiếng Trung toàn diện — Q&A đa dụng và tạo tài liệu.",
+      "modelName": "doubao-seed-2.0-pro"
+    },
+    {
+      "_key": "05672e5270f3",
+      "_type": "textModelRow",
+      "description": "Hỗ trợ lập trình, sinh code, debug và hỗ trợ phát triển.",
+      "modelName": "doubao-seed-2.0-code"
+    },
+    {
+      "_key": "dee043f79542",
+      "_type": "textModelRow",
+      "description": "Tạo văn bản ngắn, phản hồi nhanh và các tác vụ nội dung nhẹ.",
+      "modelName": "doubao-seed-2.0-lite"
+    },
+    {
+      "_key": "a7592f3be88f",
+      "_type": "textModelRow",
+      "description": "Trả lời câu hỏi cơ bản, sinh nội dung nhẹ và các tác vụ nội dung đơn giản.",
+      "modelName": "doubao-seed-2.0-mini"
+    },
+    {
+      "_key": "6ad7ce7b7460",
+      "_type": "textModelRow",
+      "description": "Hiểu đa phương thức, Q&A phức tạp, viết sáng tạo và đầu ra đa phương thức.",
+      "modelName": "gemini 3 pro"
+    },
+    {
+      "_key": "855bfc58b767",
+      "_type": "textModelRow",
+      "description": "Tác vụ đa phương thức nhanh, Q&A thông minh và đầu ra nhẹ với tốc độ cao.",
+      "modelName": "gemini-3-flash-preview"
+    },
+    {
+      "_key": "3bca784bb2df",
+      "_type": "textModelRow",
+      "description": "Suy luận nâng cao, tác vụ toàn diện và xử lý tài liệu ngữ cảnh dài.",
+      "modelName": "gemini-3.1-pro-preview"
+    },
+    {
+      "_key": "4d9970f6518f",
+      "_type": "textModelRow",
+      "description": "Hội thoại đa dụng, Q&A và các tác vụ suy luận.",
+      "modelName": "GLM-4.7"
+    },
+    {
+      "_key": "50490d9cf69f",
+      "_type": "textModelRow",
+      "description": "Q&A văn bản đa dụng, tạo nội dung và các tác vụ toàn diện.",
+      "modelName": "grok4.2"
+    },
+    {
+      "_key": "ae8678dcdb61",
+      "_type": "textModelRow",
+      "description": "Xử lý tài liệu dài, đọc hiểu và truy xuất thông tin.",
+      "modelName": "Kimi-K2.5"
+    },
+    {
+      "_key": "0b0ec6b82fd0",
+      "_type": "textModelRow",
+      "description": "Chăm sóc khách hàng, tạo nội dung và các tác vụ thường ngày.",
+      "modelName": "MiniMax-M1"
+    },
+    {
+      "_key": "2d47e9c01537",
+      "_type": "textModelRow",
+      "description": "Q&A toàn diện, tạo nội dung và xử lý văn bản.",
+      "modelName": "MiniMax-M2.7"
+    },
+    {
+      "_key": "6000ae3af252",
+      "_type": "textModelRow",
+      "description": "Hiểu tài liệu, đầu vào Q&A trực quan và tạo nội dung đa phương thức.",
+      "modelName": "qwen3-vl-chat"
+    },
+    {
+      "_key": "b9b4fea70dae",
+      "_type": "textModelRow",
+      "description": "Tác vụ trực quan hoàn chỉnh hơn và suy luận đa phương thức nâng cao.",
+      "modelName": "qwen3-vl-plus"
+    },
+    {
+      "_key": "8e74de4845d5",
+      "_type": "textModelRow",
+      "description": "Tác vụ văn bản đa dụng, tạo nội dung và Q&A kết hợp.",
+      "modelName": "qwen3.5"
+    },
+    {
+      "_key": "03dbc509b921",
+      "_type": "textModelRow",
+      "description": "Đầu ra nhanh chi phí thấp, Q&A đơn giản và tạo nội dung nhẹ.",
+      "modelName": "qwen3.5-flash"
+    },
+    {
+      "_key": "fb346c8e96b1",
+      "_type": "textModelRow",
+      "description": "Sinh nội dung toàn diện, tinh chỉnh nội dung và tối ưu tác vụ đơn.",
+      "modelName": "qwen3.5-plus"
+    },
+    {
+      "_key": "7dff5f04f867",
+      "_type": "textModelRow",
+      "description": "Q&A nhẹ, sinh nội dung đơn giản và phản hồi ngắn nhanh.",
+      "modelName": "seed-2-0-mini"
+    }
+  ],
+  "textModelsSubtitle": "Loại mô hình AI được sử dụng rộng rãi nhất cho tạo nội dung, dịch thuật, tóm tắt, lập trình và AI hội thoại.",
+  "textModelsTitle": "Mô Hình Văn Bản",
+  "typeCards": [
+    {
+      "_key": "b1a77d9e16a6",
+      "_type": "typeCard",
+      "anchorId": "text-models",
+      "ctaLabel": "Xem Mô Hình Văn Bản →",
+      "description": "Phù hợp nhất cho viết bài, chăm sóc khách hàng, Q&A, xử lý tài liệu và hỗ trợ lập trình.",
+      "icon": "text",
+      "subtitle": "Ngôn ngữ · Code · Suy luận",
+      "title": "Mô Hình Văn Bản"
+    },
+    {
+      "_key": "3d6b2cf966ee",
+      "_type": "typeCard",
+      "anchorId": "image-models",
+      "ctaLabel": "Xem Mô Hình Hình Ảnh →",
+      "description": "Phù hợp nhất cho tạo minh họa, tài nguyên mạng xã hội, nghệ thuật ý tưởng và thiết kế trực quan.",
+      "icon": "image",
+      "subtitle": "Tạo ảnh · Chỉnh sửa · Thiết kế",
+      "title": "Mô Hình Hình Ảnh"
+    },
+    {
+      "_key": "36ddd9553cd2",
+      "_type": "typeCard",
+      "anchorId": "video-models",
+      "ctaLabel": "Xem Mô Hình Video →",
+      "description": "Phù hợp nhất cho tạo video ngắn, nội dung hoạt ảnh, quảng cáo động và đồ họa chuyển động.",
+      "icon": "video",
+      "subtitle": "Tạo video · Hoạt ảnh · Clip",
+      "title": "Mô Hình Video"
+    }
+  ],
+  "videoModels": [
+    {
+      "_key": "ae393e15702d",
+      "_type": "videoModelRow",
+      "description": "Tạo đoạn video clip ngắn, nội dung động và tài liệu quảng cáo dạng ngắn.",
+      "modelName": "kling-v3"
+    },
+    {
+      "_key": "50db05f58b00",
+      "_type": "videoModelRow",
+      "description": "Tạo video từ văn bản, phim hoạt hình ngắn và nội dung quảng cáo động.",
+      "modelName": "seedance-1-5-pro"
+    },
+    {
+      "_key": "bd19399b8b72",
+      "_type": "videoModelRow",
+      "description": "Tạo video đa dụng, hoạt ảnh động và sản xuất nội dung quảng cáo.",
+      "modelName": "seedance-2.0"
+    },
+    {
+      "_key": "391b502940e5",
+      "_type": "videoModelRow",
+      "description": "Tạo video chất lượng cao với cảnh thực và đầu ra hình ảnh điện ảnh.",
+      "modelName": "veo 3.1"
+    },
+    {
+      "_key": "6c4c09386c94",
+      "_type": "videoModelRow",
+      "description": "Tạo video từ hình ảnh — làm sống động hình ảnh tĩnh bằng chuyển động.",
+      "modelName": "wan2.5-i2v-preview"
+    },
+    {
+      "_key": "26f13f182c3b",
+      "_type": "videoModelRow",
+      "description": "Chuyển đổi hình ảnh sang video nhanh với khả năng tạo âm thanh.",
+      "modelName": "wan2.6-i2v-flash"
+    },
+    {
+      "_key": "7ed31bf8d3c2",
+      "_type": "videoModelRow",
+      "description": "Chuyển đổi hình ảnh tham chiếu sang video với đầu ra chất lượng cao.",
+      "modelName": "wan2.6-r2v-flash"
+    },
+    {
+      "_key": "e892cfd30375",
+      "_type": "videoModelRow",
+      "description": "Tạo video từ văn bản, đoạn clip ngắn và trực quan hóa theo kịch bản.",
+      "modelName": "wan2.6-t2v"
+    }
+  ],
+  "videoModelsSubtitle": "Chủ yếu dùng cho video clip AI, chuyển đổi hình ảnh sang video và tạo nội dung quảng cáo động. Lý tưởng cho bất kỳ ai cần nội dung chuyển động do AI tạo ra.",
+  "videoModelsTitle": "Mô Hình Video"
+}

@@ -1,4 +1,4 @@
-# Champion pages (Sanity copy) DRY RUN: 2026-11-25T05:40:30.282Z
+# Champion pages (Sanity copy) DRY RUN: 2026-11-25T05:57:51.230Z
 
 Source: `audits/2026-11-24/champion-audit.csv` (branch antonio/champion-audit-2026-11-24) and PR #56 "Copy in Sanity, left untouched".
 Models by role from `src/lib/pricing.ts`, read at run time (USD per 1M input/output tokens): OpenAI everyday GPT-6.2 Sol $2.00/$10.00 (checked 2026-11-25) · OpenAI flagship GPT-6.2 Astra $8.00/$40.00 (checked 2026-11-25) · Anthropic everyday Claude Sonnet 5.5 $2.00/$10.00 (checked 2026-11-25) · Google everyday Gemini 3.8 Flash $1.50/$7.50 (checked 2026-11-25).
@@ -532,7 +532,7 @@ After:
 
 > Kalkulator Token AI — Hitung Token & Estimasi Biaya API
 
-## Guard skips: 0 (drafts not checked: no token in this dry run; --apply always checks)
+## Guard skips: 0
 
 ## Would write: 38 field(s) in 21 document(s), ONE transaction, each pinned to the _rev read now
 
