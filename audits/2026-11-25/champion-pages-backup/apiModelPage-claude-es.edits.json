@@ -1,0 +1,160 @@
+{
+  "_id": "apiModelPage-claude-es",
+  "url": "/es/claude-api/",
+  "rev": "ia2VH6dunty2Dn6P92euLd",
+  "edits": [
+    {
+      "path": "pricingReference",
+      "before": [
+        {
+          "_key": "f4dba9bd6200",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "bc2daab125a8",
+              "_type": "span",
+              "marks": [
+                "strong"
+              ],
+              "text": "Claude Opus 5: $5.00 / 1M tokens de entrada · $25.00 / 1M tokens de salida"
+            }
+          ],
+          "level": 1,
+          "listItem": "bullet",
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "7b56ebde8e09",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "bc2daab125a8",
+              "_type": "span",
+              "marks": [
+                "strong"
+              ],
+              "text": "Claude Sonnet 5: $2.00 / 1M tokens de entrada · $10.00 / 1M tokens de salida"
+            }
+          ],
+          "level": 1,
+          "listItem": "bullet",
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "3c5da347369b",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "bc2daab125a8",
+              "_type": "span",
+              "marks": [
+                "strong"
+              ],
+              "text": "Claude Haiku 4.5: $1.00 / 1M tokens de entrada · $5.00 / 1M tokens de salida"
+            }
+          ],
+          "level": 1,
+          "listItem": "bullet",
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "5238fce88eab",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "77bf112e2ba2",
+              "_type": "span",
+              "marks": [],
+              "text": ""
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "5c270a77d7f5",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "b58898dc1717",
+              "_type": "span",
+              "marks": [],
+              "text": "Verificado con los precios publicados por Anthropic el 3 de septiembre de 2026."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ],
+      "after": [
+        {
+          "_key": "f4dba9bd6200",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "bc2daab125a8",
+              "_type": "span",
+              "marks": [
+                "strong"
+              ],
+              "text": "Claude Fable 5.2: $8.00 / 1M tokens de entrada · $0.20 / 1M tokens de entrada en caché · $40.00 / 1M tokens de salida"
+            }
+          ],
+          "level": 1,
+          "listItem": "bullet",
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "7b56ebde8e09",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "bc2daab125a8",
+              "_type": "span",
+              "marks": [
+                "strong"
+              ],
+              "text": "Claude Sonnet 5.5: $2.00 / 1M tokens de entrada · $0.10 / 1M tokens de entrada en caché · $10.00 / 1M tokens de salida"
+            }
+          ],
+          "level": 1,
+          "listItem": "bullet",
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "5238fce88eab",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "77bf112e2ba2",
+              "_type": "span",
+              "marks": [],
+              "text": ""
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "5c270a77d7f5",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "b58898dc1717",
+              "_type": "span",
+              "marks": [],
+              "text": "La tarifa en caché se aplica a los aciertos y renovaciones de la caché de prompts. Verificado con los precios publicados por Anthropic el 25 de noviembre de 2026."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "_id": "aitk-vi-150",
+  "url": "/vi/blog/tai-sao-claude-bi-ngat-giua-chung/",
+  "rev": "I6DFcTJpaKFnGpRNPHgqnw",
+  "edits": [
+    {
+      "key": "b2",
+      "spanKey": "b2s0",
+      "before": "Token là đơn vị văn bản nhỏ nhất mà một mô hình AI xử lý — nói một cách tương đối, đó là một \"mẩu văn bản được cắt nhỏ\". Một ký tự Hán hoặc một từ tiếng Anh thường được tách thành một hoặc nhiều token. Mỗi lần bạn trò chuyện với Claude, hệ thống không chỉ đọc câu bạn vừa gõ — nó nạp lại toàn bộ cuộc trò chuyện từ đầu đến hiện tại (mọi câu hỏi bạn đã đặt, mọi câu trả lời AI đã đưa ra, bất kỳ tài liệu hay đoạn văn bản dài nào bạn đã dán vào) trở lại mô hình như một gói duy nhất, và toàn bộ gói đó chính là cửa sổ ngữ cảnh. Cửa sổ ngữ cảnh có một giới hạn dung lượng thực tế, thay đổi tùy theo phiên bản mô hình và gói dịch vụ, và con số chính thức thay đổi khi sản phẩm được cập nhật — bài viết này sẽ không đưa ra bất kỳ con số cụ thể nào về việc này. Khi số token tích lũy trong một cuộc trò chuyện tiến gần đến giới hạn đó, hệ thống hoặc bắt đầu loại bỏ nội dung cũ nhất để nhường chỗ, hoặc trực tiếp nhắc người dùng bằng thông báo kiểu \"cuộc trò chuyện này đang trở nên dài, hãy cân nhắc bắt đầu một cuộc trò chuyện mới\" — đó chính là điều mọi người thường gọi là \"chạm giới hạn token\".",
+      "after": "Token là đơn vị văn bản nhỏ nhất mà một mô hình AI xử lý — nói một cách tương đối, đó là một \"mẩu văn bản được cắt nhỏ\". Một từ ngắn, thông dụng thường chỉ là một token, còn những từ dài hơn hoặc ít gặp sẽ bị tách thành nhiều token. Mỗi lần bạn trò chuyện với Claude, hệ thống không chỉ đọc câu bạn vừa gõ — nó nạp lại toàn bộ cuộc trò chuyện từ đầu đến hiện tại (mọi câu hỏi bạn đã đặt, mọi câu trả lời AI đã đưa ra, bất kỳ tài liệu hay đoạn văn bản dài nào bạn đã dán vào) trở lại mô hình như một gói duy nhất, và toàn bộ gói đó chính là cửa sổ ngữ cảnh. Cửa sổ ngữ cảnh có một giới hạn dung lượng thực tế, thay đổi tùy theo phiên bản mô hình và gói dịch vụ, và con số chính thức thay đổi khi sản phẩm được cập nhật — bài viết này sẽ không đưa ra bất kỳ con số cụ thể nào về việc này. Khi số token tích lũy trong một cuộc trò chuyện tiến gần đến giới hạn đó, hệ thống hoặc bắt đầu loại bỏ nội dung cũ nhất để nhường chỗ, hoặc trực tiếp nhắc người dùng bằng thông báo kiểu \"cuộc trò chuyện này đang trở nên dài, hãy cân nhắc bắt đầu một cuộc trò chuyện mới\" — đó chính là điều mọi người thường gọi là \"chạm giới hạn token\"."
+    }
+  ]
+}

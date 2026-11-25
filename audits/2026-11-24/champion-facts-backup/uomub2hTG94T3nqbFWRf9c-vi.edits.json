@@ -1,0 +1,19 @@
+{
+  "_id": "uomub2hTG94T3nqbFWRf9c-vi",
+  "url": "/vi/blog/ai-api-tokens-explained-for-beginners/",
+  "rev": "7PTiuFKp5NOfYngu8ZNru8",
+  "edits": [
+    {
+      "key": "by95mph8",
+      "spanKey": "by95mph8c",
+      "before": "Token AI qua API được tính toán dựa trên độ phức tạp của yêu cầu. Các yếu tố ảnh hưởng có thể bao gồm độ dài văn bản, tham số truy vấn, và thậm chí cả sức mạnh xử lý mà mô hình AI cần dùng.",
+      "after": "Token AI qua API được đếm từ chính văn bản: phần đầu vào bạn gửi (prompt, hướng dẫn và lịch sử hội thoại) cộng với phần đầu ra mà mô hình tạo ra. Bộ tách token (tokenizer) của mô hình chia văn bản đó thành các token, mỗi token khoảng ¾ một từ tiếng Anh, và cả token đầu vào lẫn đầu ra đều được tính vào mức sử dụng của bạn."
+    },
+    {
+      "key": "oy34stad",
+      "spanKey": "oy34stadc",
+      "before": "Ví dụ, nếu bạn đang dùng mô hình AI hội thoại để tạo phản hồi cho chatbot chăm sóc khách hàng, số lượng token sử dụng sẽ phụ thuộc vào độ phức tạp của các cuộc trò chuyện và yêu cầu xử lý của mô hình.",
+      "after": "Ví dụ, nếu bạn đang dùng mô hình AI hội thoại để tạo phản hồi cho chatbot chăm sóc khách hàng, số lượng token sử dụng sẽ phụ thuộc vào lượng văn bản gửi vào (tin nhắn của khách hàng cộng với lịch sử hội thoại gửi kèm mỗi yêu cầu) và độ dài câu trả lời của mô hình."
+    }
+  ]
+}

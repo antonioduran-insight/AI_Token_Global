@@ -1,0 +1,27 @@
+{
+  "_id": "homePage-id",
+  "url": "/id/",
+  "rev": "kTT88iozTCUfRl76jshxjy",
+  "edits": [
+    {
+      "path": "faq[_key==\"1c0739d593ea\"].answer[_key==\"3c53c6c715ae\"].children[_key==\"3695c687b396\"].text",
+      "before": "Sangat tergantung pada model dan rata-rata panjang prompt/respons kamu. Untuk GPT-4o mini dengan prompt pendek (~500 token masuk, ~200 keluar), 1.000 panggilan akan menelan biaya sekitar $0,075–$0,15. Untuk GPT-4o dengan percakapan lebih panjang, 1.000 panggilan yang sama bisa mencapai $5–$20. Gunakan Kalkulator Token kami untuk memperkirakan skenario spesifikmu.",
+      "after": "Sangat tergantung pada model dan rata-rata panjang prompt/respons kamu. Dengan GPT-6.2 Sol ($2,00 per 1 juta token input, $10,00 per 1 juta token output) dan prompt pendek (~500 token masuk, ~200 keluar), 1.000 panggilan menelan biaya 1.000 × (500 × $2,00 + 200 × $10,00) ÷ 1.000.000 = $3,00. Dengan GPT-6.2 Astra ($8,00 / $40,00) dan percakapan lebih panjang (~2.000 token masuk, ~500 keluar), 1.000 panggilan yang sama mencapai 1.000 × (2.000 × $8,00 + 500 × $40,00) ÷ 1.000.000 = $36,00. Harga per 25 November 2026. Gunakan Kalkulator Token kami untuk memperkirakan skenario spesifikmu."
+    },
+    {
+      "path": "heroStats[_key==\"94f2946a6713\"].statNumber",
+      "before": "60+",
+      "after": "140+"
+    },
+    {
+      "path": "faq[_key==\"6915e6383bc5\"].answer[_key==\"949420912f4d\"].children[_key==\"73911c7d59ef\"].text",
+      "before": "API model (Application Programming Interface) memungkinkan developer mengakses model bahasa AI secara programatik. Alih-alih menggunakan antarmuka chat seperti ChatGPT, kamu mengirim permintaan HTTP dengan prompt dan menerima responsnya. Ini memungkinkan kamu mengintegrasikan AI ke aplikasi sendiri, mengotomatiskan alur kerja, dan membangun produk di atas model seperti GPT-4, Claude, atau Gemini.",
+      "after": "API model (Application Programming Interface) memungkinkan developer mengakses model bahasa AI secara programatik. Alih-alih menggunakan antarmuka chat seperti ChatGPT, kamu mengirim permintaan HTTP dengan prompt dan menerima responsnya. Ini memungkinkan kamu mengintegrasikan AI ke aplikasi sendiri, mengotomatiskan alur kerja, dan membangun produk di atas model seperti GPT-6.2 Sol, Claude Sonnet 5.5, atau Gemini 3.8 Flash."
+    },
+    {
+      "path": "seo.seoDescription",
+      "before": "Panduan terlengkap tentang token AI, API model, dan kalkulasi biaya. Bandingkan 60+ model, estimasi biaya token, dan jelajahi ekosistem AI — gratis, selamanya.",
+      "after": "Panduan terlengkap tentang token AI, API model, dan kalkulasi biaya. Bandingkan 140+ model, estimasi biaya token, dan jelajahi ekosistem AI — gratis, selamanya."
+    }
+  ]
+}

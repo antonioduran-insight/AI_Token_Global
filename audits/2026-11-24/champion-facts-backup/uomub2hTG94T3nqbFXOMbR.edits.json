@@ -1,0 +1,13 @@
+{
+  "_id": "uomub2hTG94T3nqbFXOMbR",
+  "url": "/en/blog/ai-token-input-output-explanation/",
+  "rev": "uomub2hTG94T3nqbFXVGH2",
+  "edits": [
+    {
+      "key": "jqhoplw5",
+      "spanKey": "jqhoplw5c",
+      "before": "For instance, Model A charges $0.01 per input token, while Model B charges $0.005 per input token but $0.05 per output token. If your application requires a high number of output tokens, Model A might be more cost-effective.",
+      "after": "For instance, Model A (Claude Sonnet 5.5) charges $2.00 per 1 million input tokens and $10.00 per 1 million output tokens, while Model B (Gemini 3.8 Flash) charges $1.50 and $7.50. A job that sends 100,000 input tokens and gets 1,000,000 output tokens back costs $0.20 + $10.00 = $10.20 on Model A and $0.15 + $7.50 = $7.65 on Model B. Output is about 98% of both bills, so if your application generates a lot of output tokens, compare output prices first: here that makes Model B the cheaper option by $2.55."
+    }
+  ]
+}

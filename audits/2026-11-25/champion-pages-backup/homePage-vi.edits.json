@@ -1,0 +1,27 @@
+{
+  "_id": "homePage-vi",
+  "url": "/vi/",
+  "rev": "HGC0i0hV3qn3DmfUOXsBnT",
+  "edits": [
+    {
+      "path": "faq[_key==\"1c0739d593ea\"].answer[_key==\"3c53c6c715ae\"].children[_key==\"3695c687b396\"].text",
+      "before": "Điều này phụ thuộc nhiều vào mô hình và độ dài prompt/phản hồi trung bình của bạn. Với GPT-4o mini và prompt ngắn (~500 token đầu vào, ~200 đầu ra), 1.000 lệnh gọi sẽ tốn khoảng $0.075–$0.15. Với GPT-4o và các cuộc hội thoại dài hơn, 1.000 lệnh gọi tương tự có thể tốn $5–$20. Hãy dùng Máy tính Token của chúng tôi để ước tính cho tình huống cụ thể của bạn.",
+      "after": "Điều này phụ thuộc nhiều vào mô hình và độ dài prompt/phản hồi trung bình của bạn. Với GPT-6.2 Sol ($2.00 cho mỗi 1 triệu token đầu vào, $10.00 cho mỗi 1 triệu token đầu ra) và prompt ngắn (~500 token đầu vào, ~200 đầu ra), 1.000 lệnh gọi tốn 1.000 × (500 × $2.00 + 200 × $10.00) ÷ 1.000.000 = $3.00. Với GPT-6.2 Astra ($8.00 / $40.00) và các cuộc hội thoại dài hơn (~2.000 token đầu vào, ~500 đầu ra), 1.000 lệnh gọi tương tự tốn 1.000 × (2.000 × $8.00 + 500 × $40.00) ÷ 1.000.000 = $36.00. Giá tính đến 25 tháng 11, 2026. Hãy dùng Máy tính Token của chúng tôi để ước tính cho tình huống cụ thể của bạn."
+    },
+    {
+      "path": "heroStats[_key==\"94f2946a6713\"].statNumber",
+      "before": "60+",
+      "after": "140+"
+    },
+    {
+      "path": "faq[_key==\"6915e6383bc5\"].answer[_key==\"949420912f4d\"].children[_key==\"73911c7d59ef\"].text",
+      "before": "Một model API (Giao diện lập trình ứng dụng) cho phép lập trình viên truy cập các mô hình ngôn ngữ AI theo phương thức lập trình. Thay vì dùng giao diện chat như ChatGPT, bạn gửi yêu cầu HTTP kèm prompt và nhận lại phản hồi. Điều này cho phép bạn tích hợp AI vào ứng dụng riêng, tự động hóa quy trình làm việc và xây dựng sản phẩm dựa trên các mô hình như GPT-4, Claude, hoặc Gemini.",
+      "after": "Một model API (Giao diện lập trình ứng dụng) cho phép lập trình viên truy cập các mô hình ngôn ngữ AI theo phương thức lập trình. Thay vì dùng giao diện chat như ChatGPT, bạn gửi yêu cầu HTTP kèm prompt và nhận lại phản hồi. Điều này cho phép bạn tích hợp AI vào ứng dụng riêng, tự động hóa quy trình làm việc và xây dựng sản phẩm dựa trên các mô hình như GPT-6.2 Sol, Claude Sonnet 5.5, hoặc Gemini 3.8 Flash."
+    },
+    {
+      "path": "seo.seoDescription",
+      "before": "Hướng dẫn toàn diện về token AI, API mô hình và cách tính chi phí. So sánh 60+ mô hình, ước tính chi phí token và định hướng trong hệ sinh thái AI — miễn phí, mãi mãi.",
+      "after": "Hướng dẫn toàn diện về token AI, API mô hình và cách tính chi phí. So sánh hơn 140 mô hình, ước tính chi phí token và định hướng trong hệ sinh thái AI — miễn phí, mãi mãi."
+    }
+  ]
+}

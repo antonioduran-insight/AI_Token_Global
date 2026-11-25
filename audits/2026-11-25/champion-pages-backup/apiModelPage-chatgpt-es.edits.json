@@ -1,0 +1,160 @@
+{
+  "_id": "apiModelPage-chatgpt-es",
+  "url": "/es/chatgpt-api/",
+  "rev": "NTzAVpamfdI9sWvTMdvrZj",
+  "edits": [
+    {
+      "path": "pricingReference",
+      "before": [
+        {
+          "_key": "47a2ae2a3a1f",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "9ade034bb42b",
+              "_type": "span",
+              "marks": [
+                "strong"
+              ],
+              "text": "GPT-5.6 Sol: $5.00 / 1M tokens de entrada · $30.00 / 1M tokens de salida"
+            }
+          ],
+          "level": 1,
+          "listItem": "bullet",
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "dc721296e5f9",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "9ade034bb42b",
+              "_type": "span",
+              "marks": [
+                "strong"
+              ],
+              "text": "GPT-5.6 Terra: $2.00 / 1M tokens de entrada · $12.00 / 1M tokens de salida"
+            }
+          ],
+          "level": 1,
+          "listItem": "bullet",
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "d73afdef781b",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "9ade034bb42b",
+              "_type": "span",
+              "marks": [
+                "strong"
+              ],
+              "text": "GPT-5.6 Luna: $0.20 / 1M tokens de entrada · $1.20 / 1M tokens de salida"
+            }
+          ],
+          "level": 1,
+          "listItem": "bullet",
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "81e920388cbe",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "adaf09ecbef9",
+              "_type": "span",
+              "marks": [],
+              "text": ""
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "8999119b97de",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "0bbcda360b54",
+              "_type": "span",
+              "marks": [],
+              "text": "La entrada en caché se factura a una décima parte de estas tarifas en los tres niveles, por lo que los prompts de sistema repetidos cuestan mucho menos de lo que sugiere un cálculo ingenuo. Las tarifas se aplican a prompts de menos de 270K tokens. Verificado con los precios publicados por OpenAI el 11 de agosto de 2026."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ],
+      "after": [
+        {
+          "_key": "47a2ae2a3a1f",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "9ade034bb42b",
+              "_type": "span",
+              "marks": [
+                "strong"
+              ],
+              "text": "GPT-6.2 Astra: $8.00 / 1M tokens de entrada · $0.40 / 1M tokens de entrada en caché · $40.00 / 1M tokens de salida"
+            }
+          ],
+          "level": 1,
+          "listItem": "bullet",
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "dc721296e5f9",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "9ade034bb42b",
+              "_type": "span",
+              "marks": [
+                "strong"
+              ],
+              "text": "GPT-6.2 Sol: $2.00 / 1M tokens de entrada · $0.10 / 1M tokens de entrada en caché · $10.00 / 1M tokens de salida"
+            }
+          ],
+          "level": 1,
+          "listItem": "bullet",
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "81e920388cbe",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "adaf09ecbef9",
+              "_type": "span",
+              "marks": [],
+              "text": ""
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "8999119b97de",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "0bbcda360b54",
+              "_type": "span",
+              "marks": [],
+              "text": "Las tarifas corresponden al nivel estándar y a prompts de hasta 272K tokens. La entrada en caché (un prefijo de prompt repetido) se factura a la tarifa en caché, por lo que los prompts de sistema repetidos cuestan mucho menos de lo que sugiere un cálculo ingenuo. Verificado con los precios publicados por OpenAI el 25 de noviembre de 2026."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ]
+    }
+  ]
+}

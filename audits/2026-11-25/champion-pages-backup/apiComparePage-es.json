@@ -1,0 +1,696 @@
+{
+  "_createdAt": "2026-05-18T10:13:14Z",
+  "_id": "apiComparePage-es",
+  "_rev": "LJTww3gscvOUdq4I6yaSSI",
+  "_type": "apiComparePage",
+  "_updatedAt": "2026-05-18T10:13:14Z",
+  "ctaBody": "Ahora que conoces los tipos de modelos, descubre exactamente cuánto cuesta cada uno por millón de tokens — y encuentra la mejor opción para tu presupuesto.",
+  "ctaHeadline": "¿Listo para comparar precios de API?",
+  "faq": [
+    {
+      "_key": "2b0acda1034f",
+      "_type": "faqItem",
+      "answer": [
+        {
+          "_key": "50fd36149b94",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "70ed2b85aa53",
+              "_type": "span",
+              "marks": [],
+              "text": "Si estás comenzando con la IA, te recomendamos primero identificar qué quieres lograr — no solo memorizar nombres de modelos. Puedes explorar las categorías de modelos (texto, imagen, video) y luego leer la guía para principiantes en AI Token King. A partir de ahí, prueba algunos modelos y compara los resultados antes de decidirte por uno."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "09e66aebf177",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "62a59462c2c5",
+              "_type": "span",
+              "marks": [],
+              "text": "La guía para principiantes también incluye un árbol de decisiones para ayudarte a elegir un punto de partida según tu objetivo específico."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ],
+      "question": "1. Es mi primera vez usando IA — ¿por dónde debería empezar?"
+    },
+    {
+      "_key": "25b4549c0a01",
+      "_type": "faqItem",
+      "answer": [
+        {
+          "_key": "298a85a1259f",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "979780dc4bec",
+              "_type": "span",
+              "marks": [],
+              "text": "Los tres tipos de modelos producen resultados fundamentalmente distintos:"
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "c41c1c54832d",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "0bb4ef2ac19c",
+              "_type": "span",
+              "marks": [
+                "strong"
+              ],
+              "text": "Modelos de texto"
+            },
+            {
+              "_key": "0b2246a4f229",
+              "_type": "span",
+              "marks": [],
+              "text": "— Reciben texto como entrada y generan texto como salida. Se usan para preguntas y respuestas, redacción, resúmenes, traducción y código."
+            }
+          ],
+          "level": 1,
+          "listItem": "bullet",
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "8e919fcf1409",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "c778fcee0337",
+              "_type": "span",
+              "marks": [
+                "strong"
+              ],
+              "text": "Modelos de imagen"
+            },
+            {
+              "_key": "9bc725d58888",
+              "_type": "span",
+              "marks": [],
+              "text": "— Generan imágenes a partir de indicaciones de texto u otras imágenes. Se usan para diseño, ilustración y contenido visual."
+            }
+          ],
+          "level": 1,
+          "listItem": "bullet",
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "389ab35c4e5c",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "4aaeceba60a5",
+              "_type": "span",
+              "marks": [
+                "strong"
+              ],
+              "text": "Modelos de video"
+            },
+            {
+              "_key": "6f6696f4955d",
+              "_type": "span",
+              "marks": [],
+              "text": "— Generan clips de video cortos a partir de texto o imágenes. Se usan para publicidad, animación y contenido en redes sociales."
+            }
+          ],
+          "level": 1,
+          "listItem": "bullet",
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "7a92566eddcf",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "164d20c7e8ee",
+              "_type": "span",
+              "marks": [],
+              "text": "Los modelos de video suelen ser los más costosos; los modelos de texto tienden a ser los más económicos y versátiles."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ],
+      "question": "2. ¿Cuáles son las diferencias entre los modelos de texto, imagen y video?"
+    },
+    {
+      "_key": "0763114470ce",
+      "_type": "faqItem",
+      "answer": [
+        {
+          "_key": "43483e70b1db",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "3baa47941a99",
+              "_type": "span",
+              "marks": [],
+              "text": "No — no necesitas conocer cada modelo. Piénsalo como un menú: no tienes que probar todo, solo los platos que se ajustan a lo que buscas. Para la mayoría de los principiantes, elegir 2 o 3 modelos de la misma categoría y compararlos es más que suficiente. La tabla es una referencia, no un plan de estudios."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ],
+      "question": "3. La tabla muestra muchos modelos — ¿realmente necesito entenderlos todos?"
+    },
+    {
+      "_key": "9e4f450fb294",
+      "_type": "faqItem",
+      "answer": [
+        {
+          "_key": "d36012b574fd",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "29a7d04096ac",
+              "_type": "span",
+              "marks": [],
+              "text": "Si tu principal necesidad es contenido escrito (blogs, correos, guiones, SEO), comienza con los"
+            },
+            {
+              "_key": "8f400436d282",
+              "_type": "span",
+              "marks": [
+                "strong"
+              ],
+              "text": "modelos de texto"
+            },
+            {
+              "_key": "fdac3c3d6ded",
+              "_type": "span",
+              "marks": [],
+              "text": ". Te recomendamos empezar con modelos consolidados como GPT-4o o Claude Sonnet, ya que cuentan con la mejor documentación y el mayor soporte de la comunidad."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "920168042d22",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "ac0ce5f3c164",
+              "_type": "span",
+              "marks": [],
+              "text": "Una vez que te sientas cómodo con la generación de texto, puedes incorporar modelos de imagen o video para recursos visuales. Pero para la creación de contenido puro, los modelos de texto por sí solos cubrirán la gran mayoría de tus necesidades."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ],
+      "question": "4. Solo necesito crear contenido — ¿qué categoría de modelo es la mejor?"
+    },
+    {
+      "_key": "e797431d14ae",
+      "_type": "faqItem",
+      "answer": [
+        {
+          "_key": "a928538ce422",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "04d6d5b0e41c",
+              "_type": "span",
+              "marks": [],
+              "text": "No siempre. El precio y el rendimiento son importantes, pero también hay otros factores a considerar:"
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "3e09aa6d9aeb",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "5b76f8895aa1",
+              "_type": "span",
+              "marks": [
+                "strong"
+              ],
+              "text": "Ventana de contexto"
+            },
+            {
+              "_key": "dd5662af73da",
+              "_type": "span",
+              "marks": [],
+              "text": "— ¿Cuánto texto puede procesar el modelo a la vez?"
+            }
+          ],
+          "level": 1,
+          "listItem": "bullet",
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "f59ae99e6049",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "8d9b6a16deef",
+              "_type": "span",
+              "marks": [
+                "strong"
+              ],
+              "text": "Soporte de idiomas"
+            },
+            {
+              "_key": "6aa745b5182f",
+              "_type": "span",
+              "marks": [],
+              "text": "— Algunos modelos tienen mejor desempeño en ciertos idiomas."
+            }
+          ],
+          "level": 1,
+          "listItem": "bullet",
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "1afdfb05575a",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "170b36cc5902",
+              "_type": "span",
+              "marks": [
+                "strong"
+              ],
+              "text": "Confiabilidad del API"
+            },
+            {
+              "_key": "c319d5c58b2f",
+              "_type": "span",
+              "marks": [],
+              "text": "— El tiempo de actividad, los límites de solicitudes y la latencia son importantes para aplicaciones en producción."
+            }
+          ],
+          "level": 1,
+          "listItem": "bullet",
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "82729ba4c5dc",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "00db977941e6",
+              "_type": "span",
+              "marks": [
+                "strong"
+              ],
+              "text": "Disponibilidad de fine-tuning"
+            },
+            {
+              "_key": "638babe39cf2",
+              "_type": "span",
+              "marks": [],
+              "text": "— ¿Puedes personalizar el modelo para tu caso de uso?"
+            }
+          ],
+          "level": 1,
+          "listItem": "bullet",
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "328e6b22b2ab",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "4d173ec1192b",
+              "_type": "span",
+              "marks": [],
+              "text": "AI Token King cubre todas estas dimensiones en nuestra herramienta de comparación — no solo el precio por token."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ],
+      "question": "5. ¿La elección de un modelo siempre depende del precio y el rendimiento?"
+    },
+    {
+      "_key": "19f909b4f72f",
+      "_type": "faqItem",
+      "answer": [
+        {
+          "_key": "78193e500f76",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "fcc4eaf5be07",
+              "_type": "span",
+              "marks": [],
+              "text": "Sí — de hecho, muchos flujos de trabajo en producción encadenan múltiples tipos de modelos. Un patrón común: usar un modelo de texto para generar un guion o descripción, pasarlo a un modelo de imagen para crear visuales y luego introducir la imagen en un modelo de video para animarla. Este enfoque de pipeline multi-modelo es cada vez más común entre equipos de contenido y agencias."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ],
+      "question": "6. ¿Podemos usar modelos de texto, imagen y video simultáneamente?"
+    }
+  ],
+  "faqTitle": "Preguntas Frecuentes Sobre los Tipos de Modelos",
+  "heroHeadline": "Descripción general de tipos de modelos de IA",
+  "heroNote": "¿No sabes por dónde empezar? Te recomendamos leer primero la guía para principiantes — te ayudará a tomar una decisión más informada.",
+  "heroSubtitle": "Esta página cubre los modelos de texto, imagen y video más comunes para ayudarte a entender rápidamente las diferencias entre tipos de modelos y elegir el más adecuado para tu primer uso.",
+  "imageModels": [
+    {
+      "_key": "1788c75b9a4f",
+      "_type": "imageModelRow",
+      "description": "Generación visual rápida y de alta calidad — conceptos de materiales, ilustraciones e imágenes para redes sociales.",
+      "modelName": "imagen 4 fast"
+    },
+    {
+      "_key": "abaf2ef2e000",
+      "_type": "imageModelRow",
+      "description": "Generación de imágenes de alta calidad, conceptos creativos y borradores de diseño.",
+      "modelName": "imagen-4-image-01"
+    },
+    {
+      "_key": "2b07c2daa76d",
+      "_type": "imageModelRow",
+      "description": "Generación integral de imágenes con múltiples aplicaciones de estilo y contenido visual enriquecido.",
+      "modelName": "kling-v3-omni-image"
+    },
+    {
+      "_key": "4feff1039091",
+      "_type": "imageModelRow",
+      "description": "Generación de imágenes ligera con procesamiento rápido y salida inmediata.",
+      "modelName": "nano banana2"
+    },
+    {
+      "_key": "56a04cbd4ffe",
+      "_type": "imageModelRow",
+      "description": "Generación de imágenes generales, recursos de ilustración y creación visual.",
+      "modelName": "qwen-image-2.0"
+    },
+    {
+      "_key": "8d0a213c0090",
+      "_type": "imageModelRow",
+      "description": "Generación de propuestas de diseño, imágenes de alta calidad y elementos visuales avanzados.",
+      "modelName": "qwen-image-2.0-pro"
+    },
+    {
+      "_key": "399befb29974",
+      "_type": "imageModelRow",
+      "description": "Imágenes insignia de alta calidad, recursos para redes sociales y contenido visual profesional.",
+      "modelName": "qwen-image-max"
+    },
+    {
+      "_key": "b082ddc14f36",
+      "_type": "imageModelRow",
+      "description": "Generación de imágenes completa para necesidades de diseño del día a día.",
+      "modelName": "qwen-image-plus"
+    },
+    {
+      "_key": "5caa27774011",
+      "_type": "imageModelRow",
+      "description": "Generación de ilustraciones, visuales de marca, recursos de estilo y creación de imágenes creativas.",
+      "modelName": "seedream-4.5"
+    },
+    {
+      "_key": "1e84bc681952",
+      "_type": "imageModelRow",
+      "description": "Generación rápida de imágenes, creación de materiales ligeros y conceptos visuales simples.",
+      "modelName": "seedream-5.0-lite"
+    },
+    {
+      "_key": "65a8d1847ae7",
+      "_type": "imageModelRow",
+      "description": "Generación de imágenes a partir de texto, ilustraciones conceptuales y creación de materiales.",
+      "modelName": "wan2.6-t2i"
+    }
+  ],
+  "imageModelsSubtitle": "Principalmente utilizados para ilustraciones, contenido para redes sociales, borradores de diseño y creación de contenido visual. Indispensable para quienes necesitan resultados visuales de alta calidad.",
+  "imageModelsTitle": "Modelos de imagen",
+  "language": "es",
+  "pricingCalloutBody": "Precios en tiempo real para más de 60 modelos — incluyendo Claude, GPT, Gemini, DeepSeek y más. Compara los precios de AI Token King con las tarifas oficiales, filtra por Texto / Imagen / Video y prueba cualquier modelo directamente.",
+  "pricingCalloutCta": "Ver precios en tiempo real",
+  "pricingCalloutTitle": "Precios de modelos API en tiempo real",
+  "seo": {
+    "noindex": false,
+    "seoDescription": "Compara más de 40 modelos de IA entre texto, imagen y video. Explora casos de uso, precios y encuentra el modelo ideal para tu proyecto en AI Token King.",
+    "seoTitle": "Descripción general de tipos de modelos de IA — Compara IA de texto, imagen y video"
+  },
+  "textModels": [
+    {
+      "_key": "ce55e65a4fde",
+      "_type": "textModelRow",
+      "description": "Modelo insignia de uso general. Ideal para razonamiento complejo, tareas de múltiples pasos y generación de contenido de alta calidad.",
+      "modelName": "gpt-4o"
+    },
+    {
+      "_key": "012b70279ec7",
+      "_type": "textModelRow",
+      "description": "Modelo de atención al cliente ligero. Rápido, económico y optimizado para tareas simples de alto volumen.",
+      "modelName": "gpt-4.5-nano"
+    },
+    {
+      "_key": "2eff70dee055",
+      "_type": "textModelRow",
+      "description": "Conversación general, tareas de escritura cotidiana y diálogo interactivo de alta calidad.",
+      "modelName": "gpt-5.3-chat"
+    },
+    {
+      "_key": "fe939b842e2e",
+      "_type": "textModelRow",
+      "description": "Escritura de código, depuración, refactorización y asistencia en desarrollo.",
+      "modelName": "gpt-5.3-codex"
+    },
+    {
+      "_key": "f748bd69a08a",
+      "_type": "textModelRow",
+      "description": "Contenido de formato largo, análisis profundo y tareas complejas de resolución de problemas y razonamiento.",
+      "modelName": "claude-opus-4.6"
+    },
+    {
+      "_key": "0c6d82299437",
+      "_type": "textModelRow",
+      "description": "Procesamiento de documentos extensos, redacción de informes, creación de contenido y preguntas y respuestas sobre conocimientos.",
+      "modelName": "claude-sonnet-4.6"
+    },
+    {
+      "_key": "0b0d967f053b",
+      "_type": "textModelRow",
+      "description": "Uso cotidiano, generación de contenido general, recomendaciones y salida de texto de alta calidad a un costo competitivo.",
+      "modelName": "deepseek-v3.2"
+    },
+    {
+      "_key": "ccf051856ff1",
+      "_type": "textModelRow",
+      "description": "Tareas completas de texto en chino — preguntas y respuestas generales y generación de documentos.",
+      "modelName": "doubao-seed-2.0-pro"
+    },
+    {
+      "_key": "05672e5270f3",
+      "_type": "textModelRow",
+      "description": "Asistencia en programación, generación de código, depuración y soporte para desarrollo.",
+      "modelName": "doubao-seed-2.0-code"
+    },
+    {
+      "_key": "dee043f79542",
+      "_type": "textModelRow",
+      "description": "Generación de texto corto, respuestas rápidas y tareas de contenido ligero.",
+      "modelName": "doubao-seed-2.0-lite"
+    },
+    {
+      "_key": "a7592f3be88f",
+      "_type": "textModelRow",
+      "description": "Respuestas básicas a preguntas, generación ligera y tareas de contenido simple.",
+      "modelName": "doubao-seed-2.0-mini"
+    },
+    {
+      "_key": "6ad7ce7b7460",
+      "_type": "textModelRow",
+      "description": "Comprensión multimodal, preguntas y respuestas complejas, escritura creativa y salida entre modalidades.",
+      "modelName": "gemini 3 pro"
+    },
+    {
+      "_key": "855bfc58b767",
+      "_type": "textModelRow",
+      "description": "Tareas multimodales rápidas, preguntas y respuestas inteligentes y salida ligera a alta velocidad.",
+      "modelName": "gemini-3-flash-preview"
+    },
+    {
+      "_key": "3bca784bb2df",
+      "_type": "textModelRow",
+      "description": "Razonamiento avanzado, tareas integrales y procesamiento de documentos con contexto extenso.",
+      "modelName": "gemini-3.1-pro-preview"
+    },
+    {
+      "_key": "4d9970f6518f",
+      "_type": "textModelRow",
+      "description": "Conversación general, preguntas y respuestas, y tareas de razonamiento.",
+      "modelName": "GLM-4.7"
+    },
+    {
+      "_key": "50490d9cf69f",
+      "_type": "textModelRow",
+      "description": "Preguntas y respuestas de texto general, generación de contenido y tareas integrales.",
+      "modelName": "grok4.2"
+    },
+    {
+      "_key": "ae8678dcdb61",
+      "_type": "textModelRow",
+      "description": "Procesamiento de documentos extensos, comprensión lectora y recuperación de información.",
+      "modelName": "Kimi-K2.5"
+    },
+    {
+      "_key": "0b0ec6b82fd0",
+      "_type": "textModelRow",
+      "description": "Atención al cliente, generación de contenido y tareas rutinarias del día a día.",
+      "modelName": "MiniMax-M1"
+    },
+    {
+      "_key": "2d47e9c01537",
+      "_type": "textModelRow",
+      "description": "Preguntas y respuestas integrales, generación de contenido y procesamiento de texto.",
+      "modelName": "MiniMax-M2.7"
+    },
+    {
+      "_key": "6000ae3af252",
+      "_type": "textModelRow",
+      "description": "Comprensión de documentos, entrada de preguntas y respuestas visuales y generación de contenido multimodal.",
+      "modelName": "qwen3-vl-chat"
+    },
+    {
+      "_key": "b9b4fea70dae",
+      "_type": "textModelRow",
+      "description": "Tareas visuales más completas y razonamiento avanzado entre modalidades.",
+      "modelName": "qwen3-vl-plus"
+    },
+    {
+      "_key": "8e74de4845d5",
+      "_type": "textModelRow",
+      "description": "Tareas de texto general, generación de contenido y preguntas y respuestas combinadas.",
+      "modelName": "qwen3.5"
+    },
+    {
+      "_key": "03dbc509b921",
+      "_type": "textModelRow",
+      "description": "Salida rápida y económica, preguntas y respuestas simples y generación de contenido ligero.",
+      "modelName": "qwen3.5-flash"
+    },
+    {
+      "_key": "fb346c8e96b1",
+      "_type": "textModelRow",
+      "description": "Generación integral, refinamiento de contenido y optimización de tareas individuales.",
+      "modelName": "qwen3.5-plus"
+    },
+    {
+      "_key": "7dff5f04f867",
+      "_type": "textModelRow",
+      "description": "Preguntas y respuestas ligeras, generación simple y respuestas cortas rápidas.",
+      "modelName": "seed-2-0-mini"
+    }
+  ],
+  "textModelsSubtitle": "El tipo de modelo de IA más utilizado para generación de contenido, traducción, resumen, programación e IA conversacional.",
+  "textModelsTitle": "Modelos de texto",
+  "typeCards": [
+    {
+      "_key": "b1a77d9e16a6",
+      "_type": "typeCard",
+      "anchorId": "text-models",
+      "ctaLabel": "Ver modelos de texto →",
+      "description": "Ideal para redacción de artículos, atención al cliente, preguntas y respuestas, procesamiento de documentos y asistencia con código.",
+      "icon": "text",
+      "subtitle": "Lenguaje · Código · Razonamiento",
+      "title": "Modelos de texto"
+    },
+    {
+      "_key": "3d6b2cf966ee",
+      "_type": "typeCard",
+      "anchorId": "image-models",
+      "ctaLabel": "Ver modelos de imagen →",
+      "description": "Ideal para generación de ilustraciones, contenido para redes sociales, arte conceptual y diseño visual.",
+      "icon": "image",
+      "subtitle": "Generación · Edición · Diseño",
+      "title": "Modelos de imagen"
+    },
+    {
+      "_key": "36ddd9553cd2",
+      "_type": "typeCard",
+      "anchorId": "video-models",
+      "ctaLabel": "Ver modelos de video →",
+      "description": "Ideal para generación de videos cortos, contenido animado, anuncios dinámicos y motion graphics.",
+      "icon": "video",
+      "subtitle": "Generación · Animación · Clips",
+      "title": "Modelos de video"
+    }
+  ],
+  "videoModels": [
+    {
+      "_key": "ae393e15702d",
+      "_type": "videoModelRow",
+      "description": "Generación de clips de video cortos, contenido dinámico y material publicitario de formato breve.",
+      "modelName": "kling-v3"
+    },
+    {
+      "_key": "50db05f58b00",
+      "_type": "videoModelRow",
+      "description": "Texto a video, cortometrajes animados y contenido publicitario dinámico.",
+      "modelName": "seedance-1-5-pro"
+    },
+    {
+      "_key": "bd19399b8b72",
+      "_type": "videoModelRow",
+      "description": "Generación general de video, animaciones dinámicas y creación de contenido publicitario.",
+      "modelName": "seedance-2.0"
+    },
+    {
+      "_key": "391b502940e5",
+      "_type": "videoModelRow",
+      "description": "Generación de video de alta calidad con escenas realistas y resultados visuales cinematográficos.",
+      "modelName": "veo 3.1"
+    },
+    {
+      "_key": "6c4c09386c94",
+      "_type": "videoModelRow",
+      "description": "Generación de video a partir de imágenes — dale vida y movimiento a tus imágenes estáticas.",
+      "modelName": "wan2.5-i2v-preview"
+    },
+    {
+      "_key": "26f13f182c3b",
+      "_type": "videoModelRow",
+      "description": "Conversión rápida de imagen a video con capacidad de generación de audio.",
+      "modelName": "wan2.6-i2v-flash"
+    },
+    {
+      "_key": "7ed31bf8d3c2",
+      "_type": "videoModelRow",
+      "description": "Conversión de imagen de referencia a video con resultados de alta calidad.",
+      "modelName": "wan2.6-r2v-flash"
+    },
+    {
+      "_key": "e892cfd30375",
+      "_type": "videoModelRow",
+      "description": "Generación de video a partir de texto, clips cortos y visualización basada en guiones.",
+      "modelName": "wan2.6-t2v"
+    }
+  ],
+  "videoModelsSubtitle": "Principalmente utilizados para clips de video con IA, conversión de imagen a video y creación de contenido publicitario dinámico. Ideal para quienes necesitan contenido en movimiento generado por IA.",
+  "videoModelsTitle": "Modelos de Video"
+}

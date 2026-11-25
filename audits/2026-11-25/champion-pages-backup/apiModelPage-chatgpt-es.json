@@ -1,0 +1,486 @@
+{
+  "_createdAt": "2026-05-18T10:13:17Z",
+  "_id": "apiModelPage-chatgpt-es",
+  "_rev": "NTzAVpamfdI9sWvTMdvrZj",
+  "_system": {
+    "base": {
+      "id": "apiModelPage-chatgpt-es",
+      "rev": "VdSyE50eHa1ZkhVq3QfYhk"
+    }
+  },
+  "_type": "apiModelPage",
+  "_updatedAt": "2026-08-11T06:28:32Z",
+  "comparingBody": [
+    {
+      "_key": "daf6819f7b3e",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "869ee0fb0500",
+          "_type": "span",
+          "marks": [],
+          "text": "Al comparar la API de ChatGPT con otros modelos, los aspectos más importantes a evaluar son la calidad de las respuestas, la estabilidad, el precio, la complejidad de integración y el costo a largo plazo a escala. Para la mayoría de las personas, la comparación real no se trata del nombre del modelo — sino de si esta API puede manejar tu carga de trabajo real dentro de tu presupuesto."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "2532a3e0dc28",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "e568c23ab330",
+          "_type": "span",
+          "marks": [],
+          "text": "También puedes compararla con otros modelos populares en la página de"
+        },
+        {
+          "_key": "fb547c14f8fa",
+          "_type": "span",
+          "marks": [],
+          "text": "Comparación de ChatGPT, Claude y Gemini"
+        },
+        {
+          "_key": "974f5f856717",
+          "_type": "span",
+          "marks": [],
+          "text": "— eso te dará una visión mucho más clara para construir una evaluación completa."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    }
+  ],
+  "comparingTitle": "¿Qué deberías evaluar al comparar?",
+  "faq": [
+    {
+      "_key": "294806134835",
+      "_type": "faqItem",
+      "answer": [
+        {
+          "_key": "25d43d246253",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "53cf2e1aee6a",
+              "_type": "span",
+              "marks": [],
+              "text": "La interfaz de consumo está diseñada para el uso directo por parte de personas. La API de ChatGPT es para conectarse a sitios web, aplicaciones, herramientas o flujos de trabajo automatizados — las capacidades del modelo pueden invocarse de forma programática e integrarse en tus propios productos."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ],
+      "question": "¿Cuál es la diferencia entre la API de ChatGPT y el producto de chat regular?"
+    },
+    {
+      "_key": "ca2b07d7b2ff",
+      "_type": "faqItem",
+      "answer": [
+        {
+          "_key": "97113c152833",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "7e4e516473e9",
+              "_type": "span",
+              "marks": [],
+              "text": "Se factura por tokens de entrada y de salida de forma separada. El costo real depende de la longitud de la respuesta, el tamaño de la ventana de contexto y el tipo de tarea — no solo del precio base por millón de tokens."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ],
+      "question": "¿Cómo se calcula el precio de la API de ChatGPT?"
+    },
+    {
+      "_key": "db1044e28462",
+      "_type": "faqItem",
+      "answer": [
+        {
+          "_key": "a82d87d5341e",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "396e178074fb",
+              "_type": "span",
+              "marks": [],
+              "text": "Si eres nuevo en las APIs de modelos, la API de ChatGPT es generalmente el punto de entrada más accesible — aunque igual recomendamos entender los AI Tokens y la lógica de costos antes de comenzar a usarla."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ],
+      "question": "¿La API de ChatGPT es adecuada para principiantes?"
+    },
+    {
+      "_key": "c89ddad1c364",
+      "_type": "faqItem",
+      "answer": [
+        {
+          "_key": "8af6a844b16d",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "987b456cfdf0",
+              "_type": "span",
+              "marks": [],
+              "text": "No necesariamente. La comparación real tiene que ver con el ajuste al caso de uso, el presupuesto, la calidad de las respuestas, el enfoque de integración y el costo a largo plazo — no solo con el reconocimiento de marca. Consulta la"
+            },
+            {
+              "_key": "1dd54e6fe2f2",
+              "_type": "span",
+              "marks": [],
+              "text": "comparación completa"
+            },
+            {
+              "_key": "59e82d7b187d",
+              "_type": "span",
+              "marks": [],
+              "text": "para una vista comparativa."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ],
+      "question": "¿La API de ChatGPT es siempre mejor que otros modelos?"
+    }
+  ],
+  "faqTitle": "Preguntas frecuentes",
+  "furtherReading": [
+    {
+      "_key": "6ffda053456f",
+      "_type": "readingLink",
+      "label": "¿Qué es un AI Token?",
+      "url": "/es/beginners-guide"
+    },
+    {
+      "_key": "4e0c7040ee7d",
+      "_type": "readingLink",
+      "label": "Cómo calcular los costos de AI Tokens",
+      "url": "/es/token-calculator"
+    },
+    {
+      "_key": "bc443d671cdb",
+      "_type": "readingLink",
+      "label": "ChatGPT, Claude, Gemini — ¿Cuál es la diferencia?",
+      "url": "/es/api-compare"
+    },
+    {
+      "_key": "dcf4b1af73dc",
+      "_type": "readingLink",
+      "label": "Comparación completa de modelos",
+      "url": "/es/use-cases"
+    }
+  ],
+  "furtherReadingTitle": "Lecturas adicionales",
+  "heroAccent": "purple",
+  "heroHeadline": "Guía de la API de ChatGPT",
+  "heroSubtitle": "Entiende rápidamente qué es la API de ChatGPT, sus casos de uso más comunes, y cómo funcionan los costos y los AI Tokens.",
+  "language": "es",
+  "modelSlug": "chatgpt",
+  "overviewBody": [
+    {
+      "_key": "2bc5ec65c13c",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "92b884d91ed9",
+          "_type": "span",
+          "marks": [],
+          "text": "Si estás evaluando la API de ChatGPT, hay tres cosas fundamentales que debes entender desde el principio: qué puede hacer realmente, en qué situaciones encaja mejor, y cómo funcionan los costos. Esta página te da una visión clara de los puntos clave de la API de ChatGPT, sus casos de uso más comunes y su estructura de precios — para que puedas hacer una comparación informada."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "a571ea07bab6",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "96b50dbfa184",
+          "_type": "span",
+          "marks": [],
+          "text": "Si todavía no estás familiarizado con los conceptos básicos de los AI Tokens, comienza con"
+        },
+        {
+          "_key": "ea6580d536de",
+          "_type": "span",
+          "marks": [],
+          "text": "AI Token Basics"
+        },
+        {
+          "_key": "63b81d061451",
+          "_type": "span",
+          "marks": [],
+          "text": "primero."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    }
+  ],
+  "pricingBody": [
+    {
+      "_key": "f42a0316b112",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "0a08db5db71b",
+          "_type": "span",
+          "marks": [],
+          "text": "Al usar la API de ChatGPT, no basta con mirar el precio en la superficie. Lo más importante es entender los AI Tokens — el contenido de entrada, el contenido de salida, la longitud de la respuesta, el tipo de tarea y el contexto de la conversación afectan el consumo de tokens. El mismo prompt puede tener costos muy distintos según cómo lo estructures."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "d4628dfdfea1",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "6731c27d9d76",
+          "_type": "span",
+          "marks": [],
+          "text": "Si aún no tienes claro cómo funcionan los tokens, lee"
+        },
+        {
+          "_key": "ae03006e00e5",
+          "_type": "span",
+          "marks": [],
+          "text": "AI Token Basics"
+        },
+        {
+          "_key": "05cfcbe53eba",
+          "_type": "span",
+          "marks": [],
+          "text": "y"
+        },
+        {
+          "_key": "8eddf1c48ae1",
+          "_type": "span",
+          "marks": [],
+          "text": "Cómo calcular los costos de tokens de GPT"
+        },
+        {
+          "_key": "19aae29665c2",
+          "_type": "span",
+          "marks": [],
+          "text": "antes de comparar los precios de la API de ChatGPT — de lo contrario, los números no te dirán mucho."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    }
+  ],
+  "pricingReference": [
+    {
+      "_key": "47a2ae2a3a1f",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "9ade034bb42b",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "GPT-5.6 Sol: $5.00 / 1M tokens de entrada · $30.00 / 1M tokens de salida"
+        }
+      ],
+      "level": 1,
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "dc721296e5f9",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "9ade034bb42b",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "GPT-5.6 Terra: $2.00 / 1M tokens de entrada · $12.00 / 1M tokens de salida"
+        }
+      ],
+      "level": 1,
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "d73afdef781b",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "9ade034bb42b",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "GPT-5.6 Luna: $0.20 / 1M tokens de entrada · $1.20 / 1M tokens de salida"
+        }
+      ],
+      "level": 1,
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "81e920388cbe",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "adaf09ecbef9",
+          "_type": "span",
+          "marks": [],
+          "text": ""
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "8999119b97de",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "0bbcda360b54",
+          "_type": "span",
+          "marks": [],
+          "text": "La entrada en caché se factura a una décima parte de estas tarifas en los tres niveles, por lo que los prompts de sistema repetidos cuestan mucho menos de lo que sugiere un cálculo ingenuo. Las tarifas se aplican a prompts de menos de 270K tokens. Verificado con los precios publicados por OpenAI el 11 de agosto de 2026."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    }
+  ],
+  "pricingTitle": "¿Cómo funciona el precio?",
+  "seo": {
+    "noindex": false,
+    "seoDescription": "Descubre todo sobre la API de ChatGPT: qué hace, sus casos de uso más comunes, cómo funciona el sistema de precios y cómo los tokens de IA determinan los costos. Una guía clara para desarrolladores y equipos.",
+    "seoTitle": "Guía de la API de ChatGPT — Precios, Casos de Uso y Costos de Tokens"
+  },
+  "uniqueSectionBody": [
+    {
+      "_key": "94cbbaba53b0",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "f2fb41cbfeab",
+          "_type": "span",
+          "marks": [],
+          "text": "Si eres nuevo en las APIs de modelos, la API de ChatGPT suele ser el punto de partida más accesible — está ampliamente documentada, cuenta con la comunidad de desarrolladores más grande y se integra fácilmente con la mayoría de herramientas y frameworks. También es ideal para equipos que quieren construir flujos de automatización con IA o funcionalidades para sitios web sin una curva de aprendizaje pronunciada."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "66563349c438",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "90ef8d8ad1a2",
+          "_type": "span",
+          "marks": [],
+          "text": "También es una buena opción para quienes quieren entender el consumo de tokens y la lógica de costos de la API de ChatGPT, ya que muchas herramientas y plataformas la usan como referencia base."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    }
+  ],
+  "uniqueSectionTitle": "¿Para quién es especialmente adecuada?",
+  "useCasesBody": [
+    {
+      "_key": "65d5b2fbd212",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "e6a76ddc227a",
+          "_type": "span",
+          "marks": [],
+          "text": "Las aplicaciones más frecuentes de la API de ChatGPT giran en torno a tareas de comprensión y generación de texto: automatización de atención al cliente y soporte, resumen de contenido, traducción, preguntas y respuestas automatizadas, procesamiento de documentos, integración con herramientas y asistentes de bases de conocimiento internas."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b82aeb3de58f",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "16409aad730d",
+          "_type": "span",
+          "marks": [],
+          "text": "Su versatilidad hace que sea la primera API de modelos a la que suelen recurrir los desarrolladores — no porque siempre sea la mejor opción, sino porque maneja una amplia variedad de tareas basadas en texto sin necesidad de configuraciones especializadas."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    }
+  ],
+  "useCasesTitle": "¿Para qué se usa más comúnmente?",
+  "whatIsBody": [
+    {
+      "_key": "0cc956c66bf7",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "91727816fc10",
+          "_type": "span",
+          "marks": [],
+          "text": "La API de ChatGPT (desarrollada por OpenAI) es una forma de conectar las capacidades del modelo a sitios web, aplicaciones, herramientas o flujos de trabajo automatizados. Puedes usarla para enviar prompts, recibir respuestas en texto o formato estructurado, generar contenido a partir de contexto, y construir productos con inteligencia artificial sobre los modelos de OpenAI."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "a0c3e7ce0f57",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "ae2766393307",
+          "_type": "span",
+          "marks": [],
+          "text": "Si aún no tienes clara la terminología básica, puedes consultar"
+        },
+        {
+          "_key": "90a51a08fcd4",
+          "_type": "span",
+          "marks": [],
+          "text": "¿Qué es un AI Token?"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "3f8434e1344c",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "905b7b597310",
+          "_type": "span",
+          "marks": [],
+          "text": "A diferencia de la interfaz de consumo de ChatGPT, la API no está ligada a un único modelo — te permite elegir de forma programática qué modelo invocar, pasar instrucciones del sistema, controlar el formato de las respuestas y gestionar el historial de conversación por tu cuenta."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    }
+  ],
+  "whatIsTitle": "¿Qué es la API de ChatGPT?"
+}

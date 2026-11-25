@@ -1,0 +1,150 @@
+{
+  "_id": "apiModelPage-chatgpt-vi",
+  "url": "/vi/chatgpt-api/",
+  "rev": "3PFaUppQG3q6iDYaDAZ2jh",
+  "edits": [
+    {
+      "path": "pricingReference",
+      "before": [
+        {
+          "_key": "pref1",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "pref1s1",
+              "_type": "span",
+              "marks": [],
+              "text": "GPT-5.6 Sol: $5.00 / 1M input tokens · $30.00 / 1M output tokens"
+            }
+          ],
+          "level": 1,
+          "listItem": "bullet",
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "74a7f05af3cc",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "pref1s1",
+              "_type": "span",
+              "marks": [],
+              "text": "GPT-5.6 Terra: $2.00 / 1M input tokens · $12.00 / 1M output tokens"
+            }
+          ],
+          "level": 1,
+          "listItem": "bullet",
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "2646fd234222",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "pref1s1",
+              "_type": "span",
+              "marks": [],
+              "text": "GPT-5.6 Luna: $0.20 / 1M input tokens · $1.20 / 1M output tokens"
+            }
+          ],
+          "level": 1,
+          "listItem": "bullet",
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "30bd96614da6",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "47d04dfc583e",
+              "_type": "span",
+              "marks": [],
+              "text": ""
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "bbdcfd11a215",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "8eb34bb8f9ec",
+              "_type": "span",
+              "marks": [],
+              "text": "Input được lưu cache chỉ tính bằng một phần mười các mức giá trên ở cả ba bậc, nên các system prompt lặp lại rẻ hơn nhiều so với ước tính thông thường. Các mức giá này áp dụng cho prompt dưới 270K token. Đã kiểm chứng với bảng giá chính thức của OpenAI ngày 11 tháng 8 năm 2026."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ],
+      "after": [
+        {
+          "_key": "pref1",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "pref1s1",
+              "_type": "span",
+              "marks": [],
+              "text": "GPT-6.2 Astra: $8.00 / 1M token đầu vào · $0.40 / 1M token đầu vào từ cache · $40.00 / 1M token đầu ra"
+            }
+          ],
+          "level": 1,
+          "listItem": "bullet",
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "74a7f05af3cc",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "pref1s1",
+              "_type": "span",
+              "marks": [],
+              "text": "GPT-6.2 Sol: $2.00 / 1M token đầu vào · $0.10 / 1M token đầu vào từ cache · $10.00 / 1M token đầu ra"
+            }
+          ],
+          "level": 1,
+          "listItem": "bullet",
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "30bd96614da6",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "47d04dfc583e",
+              "_type": "span",
+              "marks": [],
+              "text": ""
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "bbdcfd11a215",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "8eb34bb8f9ec",
+              "_type": "span",
+              "marks": [],
+              "text": "Các mức giá áp dụng cho bậc tiêu chuẩn và prompt tối đa 272K token. Input được lưu cache (phần đầu prompt lặp lại) được tính theo giá cache, nên các system prompt lặp lại rẻ hơn nhiều so với ước tính thông thường. Đã kiểm chứng với bảng giá chính thức của OpenAI ngày 25 tháng 11 năm 2026."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ]
+    }
+  ]
+}

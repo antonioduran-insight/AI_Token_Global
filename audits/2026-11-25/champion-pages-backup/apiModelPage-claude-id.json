@@ -1,0 +1,596 @@
+{
+  "_createdAt": "2026-06-04T12:53:53Z",
+  "_id": "apiModelPage-claude-id",
+  "_rev": "ia2VH6dunty2Dn6P92euLd",
+  "_system": {
+    "base": {
+      "id": "apiModelPage-claude-id",
+      "rev": "NTzAVpamfdI9sWvTMdz6ox"
+    }
+  },
+  "_type": "apiModelPage",
+  "_updatedAt": "2026-09-04T08:23:56Z",
+  "comparingBody": [
+    {
+      "_key": "0be17adefdeb",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "73374b2d3c89",
+          "_type": "span",
+          "marks": [],
+          "text": "Saat membandingkan Claude API dengan model lain, hal terpenting yang perlu dievaluasi adalah: apakah ia mampu mempertahankan panjang output yang konsisten, apakah format outputnya sesuai dengan alur kerjamu, apakah biayanya skalabel sesuai frekuensi pemakaianmu, dan apakah ia dapat menjaga kualitas pada alur kerja yang melibatkan dokumen panjang."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "7fe699377b9f",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "54738d9b9379",
+          "_type": "span",
+          "marks": [],
+          "text": "Kamu bisa membandingkannya dengan model-model terkemuka lainnya di halaman "
+        },
+        {
+          "_key": "2d211e625f86",
+          "_type": "span",
+          "marks": [],
+          "text": "Perbandingan ChatGPT, Claude, dan Gemini"
+        },
+        {
+          "_key": "947276f620f1",
+          "_type": "span",
+          "marks": [],
+          "text": " — di sana kamu akan melihat bukan hanya perbedaan merek, tapi juga perbedaan nyata antara ketiga model dari segi kompatibilitas alur kerja dan struktur biaya."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    }
+  ],
+  "comparingTitle": "Saat Membandingkan, Apa yang Benar-Benar Penting?",
+  "faq": [
+    {
+      "_key": "b91381d00a8a",
+      "_type": "faqItem",
+      "answer": [
+        {
+          "_key": "4c5deae8400f",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "31cb946b4beb",
+              "_type": "span",
+              "marks": [],
+              "text": "Claude Opus 5 mendukung konteks hingga 1M token, sedangkan Sonnet dan Haiku 200K — cukup untuk dokumen panjang, meski beberapa pesaing kini menawarkan context window yang setara."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ],
+      "question": "Apakah Claude API cocok untuk tugas konteks panjang?"
+    },
+    {
+      "_key": "98a120ee0f67",
+      "_type": "faqItem",
+      "answer": [
+        {
+          "_key": "4b442b1954d1",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "e959d7fac6e1",
+              "_type": "span",
+              "marks": [],
+              "text": "Penagihannya dilakukan secara terpisah untuk token input dan token output. Jenis tugas, panjang output, dan pemakaian context window semuanya memengaruhi biaya sebenarnya — bukan hanya tarif per satu juta token."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ],
+      "question": "Bagaimana cara menghitung harga Claude API?"
+    },
+    {
+      "_key": "caceafc79726",
+      "_type": "faqItem",
+      "answer": [
+        {
+          "_key": "b7e3f052e1ca",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "a178d410a30b",
+              "_type": "span",
+              "marks": [],
+              "text": "Kalau kamu benar-benar baru mengenal model API, Claude belum tentu titik awal yang paling mudah — tapi kalau kasus penggunaanmu melibatkan dokumen panjang atau kualitas output tinggi, ada baiknya dievaluasi dari awal."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ],
+      "question": "Apakah Claude API cocok untuk pemula?"
+    },
+    {
+      "_key": "2c21ff71c6f3",
+      "_type": "faqItem",
+      "answer": [
+        {
+          "_key": "3d32e1e32af2",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "a204a805f56e",
+              "_type": "span",
+              "marks": [],
+              "text": "Claude dan model lain tidak hanya berbeda dari segi merek, tapi juga dalam hal stabilitas output, ukuran context window, pola konsumsi token, dan kompatibilitas alur kerja. Lihat "
+            },
+            {
+              "_key": "0dae005cd815",
+              "_type": "span",
+              "marks": [],
+              "text": "perbandingan lengkap"
+            },
+            {
+              "_key": "2a34bce436d2",
+              "_type": "span",
+              "marks": [],
+              "text": " untuk tampilan yang terstruktur."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ],
+      "question": "Apa bedanya Claude API dengan model lain?"
+    }
+  ],
+  "faqTitle": "Pertanyaan Umum",
+  "furtherReading": [
+    {
+      "_key": "560573100763",
+      "_type": "readingLink",
+      "label": "Apa Itu Token AI?",
+      "url": "/id/beginners-guide"
+    },
+    {
+      "_key": "4a6281750c88",
+      "_type": "readingLink",
+      "label": "Cara Menghitung Biaya Token AI",
+      "url": "/id/token-calculator"
+    },
+    {
+      "_key": "26ef3c4b6109",
+      "_type": "readingLink",
+      "label": "ChatGPT, Claude, Gemini — Apa Bedanya?",
+      "url": "/id/api-compare"
+    },
+    {
+      "_key": "d0379287400b",
+      "_type": "readingLink",
+      "label": "Perbandingan Model Lengkap",
+      "url": "/id/use-cases"
+    }
+  ],
+  "furtherReadingTitle": "Bacaan Lanjutan",
+  "heroAccent": "teal",
+  "heroHeadline": "Panduan Claude API",
+  "heroSubtitle": "Pahami dengan cepat apa itu Claude API, kasus penggunaan paling umum, dan cara kerja biaya serta token AI.",
+  "language": "id",
+  "modelSlug": "claude",
+  "overviewBody": [
+    {
+      "_key": "8b6a0c6c079d",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "4017f415fc24",
+          "_type": "span",
+          "marks": [],
+          "text": "Kalau kamu sedang mengevaluasi Claude API, hal-hal terpenting yang perlu dipahami sejak awal adalah: keunggulannya dalam tugas konteks panjang, cara ia menangani konsistensi output, dan bagaimana biaya berkembang seiring beban kerjamu. Halaman ini membahas poin-poin kunci Claude API agar kamu bisa membuat perbandingan yang tepat."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "5d5ff8d3ba55",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "6b3b793f4a5b",
+          "_type": "span",
+          "marks": [],
+          "text": "Pertama, ada hal yang perlu disampaikan sejak awal: "
+        },
+        {
+          "_key": "0d14d7239d05",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "Claude API tidak cocok untuk semua orang."
+        },
+        {
+          "_key": "50cbd70feac8",
+          "_type": "span",
+          "marks": [],
+          "text": " Jika pekerjaanmu sering melibatkan dokumen panjang, kamu membutuhkan kualitas output yang konsisten di banyak permintaan, atau tugasmu memerlukan multi-turn reasoning yang stabil — Claude layak dievaluasi serius."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    }
+  ],
+  "pricingBody": [
+    {
+      "_key": "3d29f6caa0d7",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "e12c36c02f84",
+          "_type": "span",
+          "marks": [],
+          "text": "Saat mengevaluasi biaya Claude API, kamu tidak bisa hanya melihat harga permukaannya. Seperti semua model API, kamu perlu memahami token AI — konten input, konten output, jenis tugas, panjang konteks, dan struktur percakapan semuanya memengaruhi konsumsi token. Harga Claude kompetitif untuk tugas konteks panjang, tapi biaya sebenarnya sangat bergantung pada cara kamu menggunakannya."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "1a63db4bf00d",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "7cd12303f65a",
+          "_type": "span",
+          "marks": [],
+          "text": "Kalau kamu belum familiar dengan cara kerja token, baca "
+        },
+        {
+          "_key": "f4d878b71e00",
+          "_type": "span",
+          "marks": [],
+          "text": "Dasar-Dasar Token AI"
+        },
+        {
+          "_key": "5709b435794e",
+          "_type": "span",
+          "marks": [],
+          "text": " dan "
+        },
+        {
+          "_key": "851ff484ac0e",
+          "_type": "span",
+          "marks": [],
+          "text": "Cara Menghitung Biaya Token Claude"
+        },
+        {
+          "_key": "9e4aadd7fa3b",
+          "_type": "span",
+          "marks": [],
+          "text": " sebelum membandingkan harga."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    }
+  ],
+  "pricingReference": [
+    {
+      "_key": "f4dba9bd6200",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "bc2daab125a8",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "Claude Opus 5: $5.00 / 1M input tokens · $25.00 / 1M output tokens"
+        }
+      ],
+      "level": 1,
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "245a6fffa7b0",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "bc2daab125a8",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "Claude Sonnet 5: $2.00 / 1M input tokens · $10.00 / 1M output tokens"
+        }
+      ],
+      "level": 1,
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "f8eca936b775",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "bc2daab125a8",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "Claude Haiku 4.5: $1.00 / 1M input tokens · $5.00 / 1M output tokens"
+        }
+      ],
+      "level": 1,
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "4a3c6857388d",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "d7fefacdaba7",
+          "_type": "span",
+          "marks": [],
+          "text": ""
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "2c39cfed70f9",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "5960110c92c4",
+          "_type": "span",
+          "marks": [],
+          "text": "Diverifikasi dengan harga resmi Anthropic pada 3 September 2026."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    }
+  ],
+  "pricingTitle": "Bagaimana Cara Kerja Harga?",
+  "seo": {
+    "noindex": false,
+    "seoDescription": "Pelajari tentang Claude API dari Anthropic: keunggulannya dalam tugas konteks panjang, konsistensi output, tingkatan harga, dan perbandingannya dengan ChatGPT dan Gemini.",
+    "seoTitle": "Panduan Claude API — Tugas Konteks Panjang, Harga, dan Biaya Token | AI Token King"
+  },
+  "uniqueSectionBody": [
+    {
+      "_key": "80de2994ebc0",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "44234aa04887",
+          "_type": "span",
+          "marks": [],
+          "text": "Untuk jujur: kalau kamu hanya mencari API serba guna dan titik masuk yang paling mudah diakses, Claude API belum tentu pilihan pertama."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "d74d3a16466f",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "98663159c4f2",
+          "_type": "span",
+          "marks": [],
+          "text": "Tapi kalau kebutuhan nyatamu adalah:"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "8f2f7127a9e1",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "18d88112ea71",
+          "_type": "span",
+          "marks": [],
+          "text": "Pemahaman konten yang mendalam"
+        }
+      ],
+      "level": 1,
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "a0b6abbfd3c4",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "c1bfb27c9d70",
+          "_type": "span",
+          "marks": [],
+          "text": "Pemrosesan dokumen"
+        }
+      ],
+      "level": 1,
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "6c9d49dfa26a",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "aa7fcbb7d0a0",
+          "_type": "span",
+          "marks": [],
+          "text": "Manajemen pengetahuan"
+        }
+      ],
+      "level": 1,
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "e41071973ad1",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "a2b3470b8139",
+          "_type": "span",
+          "marks": [],
+          "text": "Output yang presisi"
+        }
+      ],
+      "level": 1,
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "baf6ee9195f1",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "081963111717",
+          "_type": "span",
+          "marks": [],
+          "text": "Integrasi ke dalam alur kerja yang kompleks"
+        }
+      ],
+      "level": 1,
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "6d9bf23ab1b3",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "d6fdde480f11",
+          "_type": "span",
+          "marks": [],
+          "text": "…maka ada baiknya memprioritaskan Claude dibanding model yang sekadar memiliki pengenalan merek lebih besar."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    }
+  ],
+  "uniqueSectionTitle": "Claude API Tidak untuk Semua Orang",
+  "useCasesBody": [
+    {
+      "_key": "ef30fa4ff6f5",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "69706956e7d4",
+          "_type": "span",
+          "marks": [],
+          "text": "Aplikasi paling umum dari Claude API berpusat pada tugas konten panjang: ringkasan dokumen, manajemen pengetahuan, tinjauan hukum dan kepatuhan, reorganisasi konten internal, dan sintesis riset. Untuk tugas-tugas di mana model perlu membaca dan menalar dalam volume teks yang besar, Claude sering menjadi pilihan utama."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "110dc85dba2b",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "f2c368d9190f",
+          "_type": "span",
+          "marks": [],
+          "text": "Kasus penggunaan umum kedua adalah konsistensi kualitas output. Banyak tim menemukan bahwa Claude menghasilkan lebih sedikit halusinasi dan output terstruktur yang lebih andal — menjadikannya pilihan kuat untuk alur kerja produksi di mana respons yang tidak terduga berbiaya tinggi."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "340f43003598",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "0820d5e7ca3a",
+          "_type": "span",
+          "marks": [],
+          "text": "Keunggulan ketiga adalah pembuatan teks berkualitas tinggi — kalau pekerjaanmu membutuhkan tulisan yang halus dan bernuansa, Claude secara konsisten menjadi salah satu pilihan dengan penilaian tertinggi."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    }
+  ],
+  "useCasesTitle": "Apa Saja Penggunaan Umumnya?",
+  "whatIsBody": [
+    {
+      "_key": "3b83efe795cb",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "755408169291",
+          "_type": "span",
+          "marks": [],
+          "text": "Claude API (dari Anthropic) adalah cara untuk menghubungkan kemampuan model ke situs web, aplikasi, alat, atau alur kerja otomatis. Kamu bisa menggunakan API ini untuk mengirim prompt, menerima respons teks atau dokumen, memberikan instruksi untuk memandu model, dan mengintegrasikan penalaran AI ke dalam produkmu sendiri."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "bd8b810a8c44",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "a8875025bcc2",
+          "_type": "span",
+          "marks": [],
+          "text": "Kalau kamu masih belum familiar dengan terminologi dasarnya, cek "
+        },
+        {
+          "_key": "d3563c78758d",
+          "_type": "span",
+          "marks": [],
+          "text": "Apa Itu Token AI?"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "596592ba1259",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "087c8fc0c209",
+          "_type": "span",
+          "marks": [],
+          "text": "Pembeda utama Claude adalah context window-nya yang besar dan kemampuan pemahaman dokumen yang kuat. Tidak seperti model yang dioptimalkan terutama untuk tanya jawab singkat, Claude dibangun untuk memproses dan menalar atas input yang sangat panjang — menjadikannya ideal untuk alur kerja yang berat dokumen."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    }
+  ],
+  "whatIsTitle": "Apa Itu Claude API?"
+}

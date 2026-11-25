@@ -1,0 +1,178 @@
+{
+  "_id": "apiModelPage-gemini-id",
+  "url": "/id/gemini-api/",
+  "rev": "R75PYPobjTT24U7ATksNDZ",
+  "edits": [
+    {
+      "path": "pricingReference",
+      "before": [
+        {
+          "_key": "0d17575d6107",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "8867f0c8e388",
+              "_type": "span",
+              "marks": [
+                "strong"
+              ],
+              "text": "Gemini 3.1 Pro: $2.00 / 1M input tokens · $12.00 / 1M output tokens (prompt hingga 200K)"
+            }
+          ],
+          "level": 1,
+          "listItem": "bullet",
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "a5b0f38c0e46",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "8867f0c8e388",
+              "_type": "span",
+              "marks": [
+                "strong"
+              ],
+              "text": "Gemini 3.1 Pro (200K+): $4.00 / 1M input tokens · $18.00 / 1M output tokens"
+            }
+          ],
+          "level": 1,
+          "listItem": "bullet",
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "ee9bdc7cc605",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "8867f0c8e388",
+              "_type": "span",
+              "marks": [
+                "strong"
+              ],
+              "text": "Gemini 3.6 Flash: $1.50 / 1M input tokens · $7.50 / 1M output tokens"
+            }
+          ],
+          "level": 1,
+          "listItem": "bullet",
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "1ded08858013",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "8867f0c8e388",
+              "_type": "span",
+              "marks": [
+                "strong"
+              ],
+              "text": "Gemini 3.5 Flash-Lite: $0.30 / 1M input tokens · $2.50 / 1M output tokens"
+            }
+          ],
+          "level": 1,
+          "listItem": "bullet",
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "7267974371fc",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "3fb65bebe579",
+              "_type": "span",
+              "marks": [],
+              "text": ""
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "6b8d964ed2f0",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "6fe7a3a5975f",
+              "_type": "span",
+              "marks": [],
+              "text": "Batch processing ditagih setengah dari tarif ini untuk semua model, jadi layak dipakai untuk pekerjaan yang tidak mendesak. Diverifikasi dengan harga resmi Google pada 11 Agustus 2026."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ],
+      "after": [
+        {
+          "_key": "0d17575d6107",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "8867f0c8e388",
+              "_type": "span",
+              "marks": [
+                "strong"
+              ],
+              "text": "Gemini 4 Argon: $4.00 / 1M token input · $0.20 / 1M token input dari cache · $20.00 / 1M token output"
+            }
+          ],
+          "level": 1,
+          "listItem": "bullet",
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "a5b0f38c0e46",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "8867f0c8e388",
+              "_type": "span",
+              "marks": [
+                "strong"
+              ],
+              "text": "Gemini 3.8 Flash: $1.50 / 1M token input · $0.15 / 1M token input dari cache · $7.50 / 1M token output"
+            }
+          ],
+          "level": 1,
+          "listItem": "bullet",
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "7267974371fc",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "3fb65bebe579",
+              "_type": "span",
+              "marks": [],
+              "text": ""
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "6b8d964ed2f0",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "6fe7a3a5975f",
+              "_type": "span",
+              "marks": [],
+              "text": "Ini adalah tarif reguler tingkat standar Google; penyimpanan context cache, jika berlaku, ditagih terpisah per jam. Diverifikasi dengan harga resmi Google pada 25 November 2026."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ]
+    }
+  ]
+}

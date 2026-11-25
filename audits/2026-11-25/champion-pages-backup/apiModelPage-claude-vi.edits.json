@@ -1,0 +1,160 @@
+{
+  "_id": "apiModelPage-claude-vi",
+  "url": "/vi/claude-api/",
+  "rev": "ia2VH6dunty2Dn6P92euLd",
+  "edits": [
+    {
+      "path": "pricingReference",
+      "before": [
+        {
+          "_key": "f4dba9bd6200",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "bc2daab125a8",
+              "_type": "span",
+              "marks": [
+                "strong"
+              ],
+              "text": "Claude Opus 5: $5.00 / 1M input tokens · $25.00 / 1M output tokens"
+            }
+          ],
+          "level": 1,
+          "listItem": "bullet",
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "23238ac6dad5",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "bc2daab125a8",
+              "_type": "span",
+              "marks": [
+                "strong"
+              ],
+              "text": "Claude Sonnet 5: $2.00 / 1M input tokens · $10.00 / 1M output tokens"
+            }
+          ],
+          "level": 1,
+          "listItem": "bullet",
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "69de9fb9de96",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "bc2daab125a8",
+              "_type": "span",
+              "marks": [
+                "strong"
+              ],
+              "text": "Claude Haiku 4.5: $1.00 / 1M input tokens · $5.00 / 1M output tokens"
+            }
+          ],
+          "level": 1,
+          "listItem": "bullet",
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "a3d6a0c660e3",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "30b0977f05f4",
+              "_type": "span",
+              "marks": [],
+              "text": ""
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "61c3b21e473b",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "b26f40ad55dd",
+              "_type": "span",
+              "marks": [],
+              "text": "Đã kiểm chứng với bảng giá chính thức của Anthropic ngày 3 tháng 9 năm 2026."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ],
+      "after": [
+        {
+          "_key": "f4dba9bd6200",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "bc2daab125a8",
+              "_type": "span",
+              "marks": [
+                "strong"
+              ],
+              "text": "Claude Fable 5.2: $8.00 / 1M token đầu vào · $0.20 / 1M token đầu vào từ cache · $40.00 / 1M token đầu ra"
+            }
+          ],
+          "level": 1,
+          "listItem": "bullet",
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "23238ac6dad5",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "bc2daab125a8",
+              "_type": "span",
+              "marks": [
+                "strong"
+              ],
+              "text": "Claude Sonnet 5.5: $2.00 / 1M token đầu vào · $0.10 / 1M token đầu vào từ cache · $10.00 / 1M token đầu ra"
+            }
+          ],
+          "level": 1,
+          "listItem": "bullet",
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "a3d6a0c660e3",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "30b0977f05f4",
+              "_type": "span",
+              "marks": [],
+              "text": ""
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "61c3b21e473b",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "b26f40ad55dd",
+              "_type": "span",
+              "marks": [],
+              "text": "Giá cache áp dụng cho các lần đọc (cache hit) và làm mới prompt cache. Đã kiểm chứng với bảng giá chính thức của Anthropic ngày 25 tháng 11 năm 2026."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ]
+    }
+  ]
+}

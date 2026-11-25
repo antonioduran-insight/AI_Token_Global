@@ -1,0 +1,504 @@
+{
+  "_createdAt": "2026-05-18T10:13:20Z",
+  "_id": "apiModelPage-gemini-es",
+  "_rev": "R75PYPobjTT24U7ATkqGVd",
+  "_system": {
+    "base": {
+      "id": "apiModelPage-gemini-es",
+      "rev": "VdSyE50eHa1ZkhVq3QfYhk"
+    }
+  },
+  "_type": "apiModelPage",
+  "_updatedAt": "2026-08-11T06:29:50Z",
+  "comparingBody": [
+    {
+      "_key": "f9343e134f4a",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "83583e23f272",
+          "_type": "span",
+          "marks": [],
+          "text": "Al comparar la API de Gemini con otros modelos, lo más importante a evaluar es: si se adapta a tu entorno de integración, si la capacidad multimodal es relevante para tus tareas, cómo escalan sus precios con tu volumen de uso, y si la alineación con el ecosistema de Google agrega valor para tu equipo."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "22ebc232fe2e",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "a5c849cb690f",
+          "_type": "span",
+          "marks": [],
+          "text": "Puedes compararlo con otros modelos principales en la página de"
+        },
+        {
+          "_key": "52283c790696",
+          "_type": "span",
+          "marks": [],
+          "text": "Comparación de ChatGPT, Claude y Gemini"
+        },
+        {
+          "_key": "609305e8dcc7",
+          "_type": "span",
+          "marks": [],
+          "text": "— que te ofrece una visión estructurada más allá de los nombres de marca."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    }
+  ],
+  "comparingTitle": "¿Qué Es Lo Que Realmente Importa al Comparar?",
+  "faq": [
+    {
+      "_key": "b05fc96d4932",
+      "_type": "faqItem",
+      "answer": [
+        {
+          "_key": "a454c21c5f0c",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "6939f96841e6",
+              "_type": "span",
+              "marks": [],
+              "text": "Gemini es especialmente potente para el procesamiento de documentos, la gestión del conocimiento, flujos de trabajo con búsqueda aumentada, tareas multimodales y cargas de trabajo que se integran estrechamente con los servicios de Google."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ],
+      "question": "¿Para qué situaciones de trabajo es mejor la API de Gemini?"
+    },
+    {
+      "_key": "91b89112b97f",
+      "_type": "faqItem",
+      "answer": [
+        {
+          "_key": "ea19df808f6b",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "a535cbec3edd",
+              "_type": "span",
+              "marks": [],
+              "text": "Se factura por tokens de entrada y salida por separado, con precios escalonados según el tamaño de la ventana de contexto. El tipo de tarea, la modalidad y la frecuencia de uso afectan el costo real más allá de la tarifa base."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ],
+      "question": "¿Cómo se calcula el precio de la API de Gemini?"
+    },
+    {
+      "_key": "c48e9ef66ffd",
+      "_type": "faqItem",
+      "answer": [
+        {
+          "_key": "653767ce209e",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "c92e411d684a",
+              "_type": "span",
+              "marks": [],
+              "text": "Si ya estás dentro del ecosistema de Google, Gemini puede ser un punto de partida natural. De lo contrario, recomendamos entender los conceptos básicos de los AI Tokens y la lógica de costos antes de comprometerte con cualquier API específica."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ],
+      "question": "¿Es la API de Gemini adecuada para principiantes?"
+    },
+    {
+      "_key": "59d12ba0f397",
+      "_type": "faqItem",
+      "answer": [
+        {
+          "_key": "246c3e28b562",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "9960ddd6170a",
+              "_type": "span",
+              "marks": [],
+              "text": "Gemini se distingue por su diseño multimodal nativo, su integración con el ecosistema de Google y su estructura de costos a escala. Consulta la"
+            },
+            {
+              "_key": "e9b124aa99a9",
+              "_type": "span",
+              "marks": [],
+              "text": "comparación completa"
+            },
+            {
+              "_key": "740c33d8275c",
+              "_type": "span",
+              "marks": [],
+              "text": "para una vista comparativa estructurada."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ],
+      "question": "¿En qué se diferencia la API de Gemini de otros modelos?"
+    }
+  ],
+  "faqTitle": "Preguntas Frecuentes",
+  "furtherReading": [
+    {
+      "_key": "1905b57704f0",
+      "_type": "readingLink",
+      "label": "¿Qué es un AI Token?",
+      "url": "/es/beginners-guide"
+    },
+    {
+      "_key": "e15a6a40103e",
+      "_type": "readingLink",
+      "label": "Cómo Calcular los Costos de AI Tokens",
+      "url": "/es/token-calculator"
+    },
+    {
+      "_key": "fda298634e25",
+      "_type": "readingLink",
+      "label": "ChatGPT, Claude, Gemini — ¿Cuál es la Diferencia?",
+      "url": "/es/api-compare"
+    },
+    {
+      "_key": "7cdef037b675",
+      "_type": "readingLink",
+      "label": "Comparación Completa de Modelos",
+      "url": "/es/use-cases"
+    }
+  ],
+  "furtherReadingTitle": "Lecturas Adicionales",
+  "heroAccent": "blue",
+  "heroHeadline": "Guía de la API de Gemini",
+  "heroSubtitle": "Entiende rápidamente qué es la API de Gemini, sus casos de uso más comunes, y cómo funcionan los costos y los AI Tokens.",
+  "language": "es",
+  "modelSlug": "gemini",
+  "overviewBody": [
+    {
+      "_key": "93e5bbee0967",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "448d53f275cf",
+          "_type": "span",
+          "marks": [],
+          "text": "Si estás evaluando la API de Gemini, lo más importante que debes entender primero es: su profunda integración con el ecosistema de Google, sus capacidades multimodales, y cómo su estructura de costos se compara con otros modelos para tu carga de trabajo específica. Esta página cubre los aspectos más destacados de la API de Gemini para ayudarte a tomar una decisión bien informada."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b3fff76fc0f4",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "7f7921baeab7",
+          "_type": "span",
+          "marks": [],
+          "text": "Si todavía no estás familiarizado con los conceptos básicos de los AI Tokens, comienza con"
+        },
+        {
+          "_key": "e0220fd3942a",
+          "_type": "span",
+          "marks": [],
+          "text": "AI Token Basics"
+        },
+        {
+          "_key": "b6adbdcb3e9c",
+          "_type": "span",
+          "marks": [],
+          "text": "primero."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    }
+  ],
+  "pricingBody": [
+    {
+      "_key": "03bef0c1192d",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "d8224d0b6a14",
+          "_type": "span",
+          "marks": [],
+          "text": "Al evaluar los costos de la API de Gemini, es necesario entender los AI Tokens — el contenido de entrada, el contenido de salida, el tipo de tarea, la longitud del contexto y la modalidad afectan cómo se consumen y facturan los tokens. Los precios de Gemini son competitivos, especialmente a escala, pero el costo real depende en gran medida de los patrones de uso."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "c3570e02ff23",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "bd3ef995aa04",
+          "_type": "span",
+          "marks": [],
+          "text": "Si aún no estás familiarizado con el funcionamiento de los tokens, lee"
+        },
+        {
+          "_key": "8b40068ddff3",
+          "_type": "span",
+          "marks": [],
+          "text": "AI Token Basics"
+        },
+        {
+          "_key": "36678cafe210",
+          "_type": "span",
+          "marks": [],
+          "text": "y"
+        },
+        {
+          "_key": "93a8836d9ba9",
+          "_type": "span",
+          "marks": [],
+          "text": "Gemini Token Cost Calculation"
+        },
+        {
+          "_key": "ce4501df7f7d",
+          "_type": "span",
+          "marks": [],
+          "text": "antes de comparar precios."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    }
+  ],
+  "pricingReference": [
+    {
+      "_key": "0d17575d6107",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "8867f0c8e388",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "Gemini 3.1 Pro: $2.00 / 1M tokens de entrada · $12.00 / 1M tokens de salida (prompts de hasta 200K)"
+        }
+      ],
+      "level": 1,
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "154361597ab2",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "8867f0c8e388",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "Gemini 3.1 Pro (200K+): $4.00 / 1M tokens de entrada · $18.00 / 1M tokens de salida"
+        }
+      ],
+      "level": 1,
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "4c27820e9c7e",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "8867f0c8e388",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "Gemini 3.6 Flash: $1.50 / 1M tokens de entrada · $7.50 / 1M tokens de salida"
+        }
+      ],
+      "level": 1,
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "f93e2aeea25b",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "8867f0c8e388",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "Gemini 3.5 Flash-Lite: $0.30 / 1M tokens de entrada · $2.50 / 1M tokens de salida"
+        }
+      ],
+      "level": 1,
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "cd299a51fa2d",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "28e15809f92d",
+          "_type": "span",
+          "marks": [],
+          "text": ""
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "c5bae1b8dca8",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "c867ecb0d828",
+          "_type": "span",
+          "marks": [],
+          "text": "El procesamiento por lotes se factura a la mitad de estas tarifas en todos los modelos, algo que conviene aprovechar para cualquier trabajo que no sea urgente. Verificado con los precios publicados por Google el 11 de agosto de 2026."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    }
+  ],
+  "pricingTitle": "¿Cómo Funciona el Precio?",
+  "seo": {
+    "noindex": false,
+    "seoDescription": "Conoce la API de Gemini de Google: diseño multimodal, integración con el ecosistema de Google, niveles de precios y cómo evaluarla frente a ChatGPT y Claude.",
+    "seoTitle": "Guía de la API de Gemini — Capacidades Multimodales, Precios y Costos de Tokens"
+  },
+  "uniqueSectionBody": [
+    {
+      "_key": "579a4f7ba8a9",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "645af084addd",
+          "_type": "span",
+          "marks": [],
+          "text": "Si ya usas los servicios de Google de forma intensiva, o tu trabajo implica tareas multimodales, procesamiento de documentos y flujos de trabajo con búsqueda integrada, la API de Gemini merece ser una prioridad en tu evaluación. También es una opción sólida para equipos que valoran la infraestructura de soporte empresarial y las garantías de cumplimiento de Google."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "942658ce3518",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "31b3dbd05fdc",
+          "_type": "span",
+          "marks": [],
+          "text": "También es ideal para quienes buscan reducir costos en tareas de alto volumen y menor complejidad — Gemini Flash en particular ofrece precios muy competitivos para cargas de trabajo por lotes o de alta frecuencia."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    }
+  ],
+  "uniqueSectionTitle": "¿Para Quién Es Especialmente Adecuado?",
+  "useCasesBody": [
+    {
+      "_key": "04276cd13604",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "93e83672626f",
+          "_type": "span",
+          "marks": [],
+          "text": "Las aplicaciones más comunes de la API de Gemini se centran en el procesamiento de documentos, la gestión del conocimiento, flujos de trabajo con búsqueda aumentada y tareas multimodales. Es una excelente opción para equipos que ya trabajan dentro del ecosistema de Google — Google Workspace, Google Cloud, o aplicaciones que dependen de la integración con Google Search."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "c4d7eca75ffd",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "6af2b221d4d8",
+          "_type": "span",
+          "marks": [],
+          "text": "Para algunos usuarios, no es el primer modelo al que recurren — pero si tu trabajo implica procesamiento de archivos, entradas multimodales o una integración estrecha con los servicios de Google, Gemini suele ofrecer mayor valor que las alternativas."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    }
+  ],
+  "useCasesTitle": "¿Para Qué Se Usa Comúnmente?",
+  "whatIsBody": [
+    {
+      "_key": "86e49153dcc0",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "8c5ff3cf1ace",
+          "_type": "span",
+          "marks": [],
+          "text": "La API de Gemini (desarrollada por Google DeepMind) es una forma de conectar las capacidades del modelo a sitios web, aplicaciones, herramientas o flujos de trabajo automatizados. Puedes usar la API para enviar texto, imágenes u otras entradas, recibir respuestas e integrar capacidades de IA en tus propios productos."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "642f5dd8a2a9",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "6fed1f24f2c5",
+          "_type": "span",
+          "marks": [],
+          "text": "Si todavía no estás familiarizado con la terminología básica, consulta"
+        },
+        {
+          "_key": "474825f1044c",
+          "_type": "span",
+          "marks": [],
+          "text": "¿Qué es un AI Token?"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "65904e11c387",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "44f2fe7d62e2",
+          "_type": "span",
+          "marks": [],
+          "text": "El principal diferenciador de Gemini es su diseño multimodal nativo y su profunda integración con el ecosistema de Google. A diferencia de los modelos solo de texto, Gemini fue construido desde cero para manejar texto, imágenes, audio y código — lo que lo hace especialmente valioso para flujos de trabajo que abarcan múltiples tipos de contenido."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    }
+  ],
+  "whatIsTitle": "¿Qué es la API de Gemini?"
+}

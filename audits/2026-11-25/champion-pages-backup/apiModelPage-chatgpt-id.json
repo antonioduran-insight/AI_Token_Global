@@ -1,0 +1,400 @@
+{
+  "_createdAt": "2026-06-04T12:43:14Z",
+  "_id": "apiModelPage-chatgpt-id",
+  "_rev": "NTzAVpamfdI9sWvTMdwhSF",
+  "_system": {
+    "base": {
+      "id": "apiModelPage-chatgpt-id",
+      "rev": "VdSyE50eHa1ZkhVq3QfYhk"
+    }
+  },
+  "_type": "apiModelPage",
+  "_updatedAt": "2026-08-11T06:30:19Z",
+  "comparingBody": [
+    {
+      "_key": "co1",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "co1s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Saat membandingkan ChatGPT API dengan model lain, hal-hal terpenting yang perlu dievaluasi adalah kualitas output, stabilitas, harga, kompleksitas integrasi, dan biaya jangka panjang dalam skala besar. Bagi kebanyakan orang, perbandingan yang sesungguhnya bukan soal nama model — melainkan apakah API ini bisa menangani beban kerja aktual kamu dalam batas anggaran yang ada."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "co2",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "co2s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Kamu juga bisa membandingkannya dengan model-model populer lain di halaman Perbandingan ChatGPT, Claude, Gemini — itu akan memberimu gambaran yang jauh lebih jelas untuk membangun evaluasi yang menyeluruh."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    }
+  ],
+  "comparingTitle": "Saat Membandingkan, Apa yang Harus Diperhatikan?",
+  "faq": [
+    {
+      "_key": "faq1",
+      "_type": "faqItem",
+      "answer": [
+        {
+          "_key": "faq1a1",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "faq1a1s1",
+              "_type": "span",
+              "marks": [],
+              "text": "Antarmuka konsumen dirancang untuk penggunaan langsung oleh manusia. ChatGPT API digunakan untuk menghubungkan situs web, aplikasi, alat, atau alur kerja otomatis — kemampuan model dapat dipanggil secara programatik dan diintegrasikan ke dalam produk kamu sendiri."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ],
+      "question": "Apa perbedaan antara ChatGPT API dan produk chat biasa?"
+    },
+    {
+      "_key": "faq2",
+      "_type": "faqItem",
+      "answer": [
+        {
+          "_key": "faq2a1",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "faq2a1s1",
+              "_type": "span",
+              "marks": [],
+              "text": "Ditagih berdasarkan token input dan token output secara terpisah. Biaya aktual dipengaruhi oleh panjang respons, ukuran context window, dan jenis tugas — bukan hanya harga per satu juta token di permukaan."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ],
+      "question": "Bagaimana cara menghitung harga ChatGPT API?"
+    },
+    {
+      "_key": "faq3",
+      "_type": "faqItem",
+      "answer": [
+        {
+          "_key": "faq3a1",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "faq3a1s1",
+              "_type": "span",
+              "marks": [],
+              "text": "Jika kamu baru mengenal API model, ChatGPT API umumnya merupakan titik masuk yang paling mudah dijangkau — namun kami tetap merekomendasikan untuk memahami token AI dan logika biaya terlebih dahulu sebelum mulai menggunakannya."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ],
+      "question": "Apakah ChatGPT API cocok untuk pemula?"
+    },
+    {
+      "_key": "faq4",
+      "_type": "faqItem",
+      "answer": [
+        {
+          "_key": "faq4a1",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "faq4a1s1",
+              "_type": "span",
+              "marks": [],
+              "text": "Belum tentu. Perbandingan yang sesungguhnya menyangkut kesesuaian kasus penggunaan, anggaran, kualitas output, pendekatan integrasi, dan biaya jangka panjang — bukan sekadar pengenalan merek. Lihat perbandingan lengkap untuk tampilan berdampingan."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ],
+      "question": "Apakah ChatGPT API selalu lebih baik dari model lain?"
+    }
+  ],
+  "faqTitle": "Pertanyaan Umum",
+  "furtherReading": [
+    {
+      "_key": "fr1",
+      "_type": "readingLink",
+      "label": "Apa Itu Token AI?",
+      "url": "/id/beginners-guide"
+    },
+    {
+      "_key": "fr2",
+      "_type": "readingLink",
+      "label": "Cara Menghitung Biaya Token AI",
+      "url": "/id/token-calculator"
+    },
+    {
+      "_key": "fr3",
+      "_type": "readingLink",
+      "label": "ChatGPT, Claude, Gemini — Apa Bedanya?",
+      "url": "/id/api-compare"
+    },
+    {
+      "_key": "fr4",
+      "_type": "readingLink",
+      "label": "Perbandingan Model Lengkap",
+      "url": "/id/use-cases"
+    }
+  ],
+  "furtherReadingTitle": "Bacaan Lanjutan",
+  "heroAccent": "purple",
+  "heroHeadline": "Panduan ChatGPT API",
+  "heroSubtitle": "Pahami dengan cepat apa itu ChatGPT API, kasus penggunaan umum, serta cara kerja biaya dan token AI.",
+  "language": "id",
+  "modelSlug": "chatgpt",
+  "overviewBody": [
+    {
+      "_key": "ov1",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "ov1s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Jika kamu sedang mengevaluasi ChatGPT API, ada tiga hal paling penting yang perlu dipahami sejak awal: apa yang sebenarnya bisa dilakukan, situasi apa yang paling cocok, dan bagaimana cara kerja biayanya. Halaman ini memberikan gambaran jelas tentang poin-poin utama ChatGPT API, kasus penggunaan umum, dan struktur biayanya — agar kamu bisa membuat perbandingan yang tepat."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "ov2",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "ov2s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Jika kamu belum familiar dengan dasar-dasar token AI, mulai dulu dengan Dasar-Dasar Token AI."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    }
+  ],
+  "pricingBody": [
+    {
+      "_key": "pr1",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "pr1s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Saat menggunakan ChatGPT API, kamu tidak bisa hanya melihat harga di permukaan. Yang lebih penting, kamu perlu memahami token AI — konten input, konten output, panjang respons, jenis tugas, dan konteks percakapan semuanya mempengaruhi konsumsi token. Prompt yang sama bisa memiliki biaya yang sangat berbeda tergantung bagaimana kamu menyusunnya."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "pr2",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "pr2s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Jika kamu belum familiar dengan cara kerja token, baca Dasar-Dasar Token AI dan Cara Menghitung Biaya Token GPT sebelum membandingkan harga ChatGPT API — kalau tidak, angka-angka itu tidak akan banyak berarti."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    }
+  ],
+  "pricingReference": [
+    {
+      "_key": "pref1",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "pref1s1",
+          "_type": "span",
+          "marks": [],
+          "text": "GPT-5.6 Sol: $5.00 / 1M input tokens · $30.00 / 1M output tokens"
+        }
+      ],
+      "level": 1,
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "60dc92e14c99",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "pref1s1",
+          "_type": "span",
+          "marks": [],
+          "text": "GPT-5.6 Terra: $2.00 / 1M input tokens · $12.00 / 1M output tokens"
+        }
+      ],
+      "level": 1,
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "1454c1f8db6a",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "pref1s1",
+          "_type": "span",
+          "marks": [],
+          "text": "GPT-5.6 Luna: $0.20 / 1M input tokens · $1.20 / 1M output tokens"
+        }
+      ],
+      "level": 1,
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "a9f083a1c4f6",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "0a005d78f2bf",
+          "_type": "span",
+          "marks": [],
+          "text": ""
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "243b3a48f18d",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "a7e29ddd56c3",
+          "_type": "span",
+          "marks": [],
+          "text": "Input yang di-cache ditagih sepersepuluh dari tarif ini di ketiga tingkatan, jadi system prompt yang berulang jauh lebih murah daripada perkiraan kasar. Tarif ini berlaku untuk prompt di bawah 270K token. Diverifikasi dengan harga resmi OpenAI pada 11 Agustus 2026."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    }
+  ],
+  "pricingTitle": "Bagaimana Cara Kerja Harga?",
+  "seo": {
+    "noindex": false,
+    "seoDescription": "Pelajari apa yang dilakukan ChatGPT API, kasus penggunaan paling umum, cara kerja harga token, dan bagaimana perbandingannya dengan Claude dan Gemini.",
+    "seoTitle": "Panduan ChatGPT API — AI Token King"
+  },
+  "uniqueSectionBody": [
+    {
+      "_key": "un1",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "un1s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Jika kamu baru mengenal API model, ChatGPT API sering menjadi titik awal yang paling mudah diakses — terdokumentasi secara luas, memiliki komunitas developer terbesar, dan mudah diintegrasikan dengan sebagian besar alat dan framework. Ini juga cocok untuk tim yang ingin membangun alur otomasi berbasis AI atau fitur website tanpa kurva belajar yang curam."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "un2",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "un2s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Ini juga pilihan yang bagus bagi siapa saja yang ingin memahami konsumsi token dan logika biaya ChatGPT API, karena banyak alat dan platform menggunakannya sebagai acuan dasar."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    }
+  ],
+  "uniqueSectionTitle": "Untuk Siapa API Ini Paling Cocok?",
+  "useCasesBody": [
+    {
+      "_key": "uc1",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "uc1s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Aplikasi paling umum ChatGPT API berpusat pada tugas pemahaman dan pembuatan teks: otomasi layanan pelanggan dan dukungan, ringkasan konten, terjemahan, tanya jawab otomatis, pemrosesan dokumen, integrasi alat, dan asisten basis pengetahuan internal."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "uc2",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "uc2s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Fleksibilitasnya membuat ChatGPT API sering menjadi API model pertama yang dipilih developer — bukan karena selalu menjadi yang terbaik, melainkan karena ia menangani berbagai tugas berbasis teks tanpa perlu konfigurasi khusus."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    }
+  ],
+  "useCasesTitle": "Untuk Apa Umumnya Digunakan?",
+  "whatIsBody": [
+    {
+      "_key": "wi1",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "wi1s1",
+          "_type": "span",
+          "marks": [],
+          "text": "ChatGPT API (didukung oleh OpenAI) adalah cara untuk menghubungkan kemampuan model ke situs web, aplikasi, alat, atau alur kerja otomatis. Kamu bisa menggunakan API ini untuk mengirim prompt, menerima respons teks atau terstruktur, menghasilkan konten dari konteks, dan membangun produk berbasis AI di atas model-model OpenAI."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "wi2",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "wi2s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Berbeda dengan antarmuka konsumen ChatGPT, API ini tidak terikat pada satu model tertentu — kamu bisa secara programatik memilih model yang ingin dipanggil, memberikan instruksi sistem, mengontrol format respons, dan mengelola riwayat percakapan sendiri."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    }
+  ],
+  "whatIsTitle": "Apa Itu ChatGPT API?"
+}

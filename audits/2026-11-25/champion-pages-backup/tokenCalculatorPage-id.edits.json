@@ -1,0 +1,17 @@
+{
+  "_id": "tokenCalculatorPage-id",
+  "url": "/id/token-calculator/",
+  "rev": "KAAbgJhsj8A89jq2g6wAg2",
+  "edits": [
+    {
+      "path": "heroHeadline",
+      "before": "AI Token Calculator",
+      "after": "Kalkulator Token AI"
+    },
+    {
+      "path": "seo.seoTitle",
+      "before": "AI Token Calculator — Estimasi Biaya Seketika",
+      "after": "Kalkulator Token AI — Hitung Token & Estimasi Biaya API"
+    }
+  ]
+}

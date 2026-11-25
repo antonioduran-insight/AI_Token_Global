@@ -1,0 +1,17 @@
+{
+  "_id": "apiComparePage-es",
+  "url": "/es/api-compare/",
+  "rev": "LJTww3gscvOUdq4I6yaSSI",
+  "edits": [
+    {
+      "path": "faq[_key==\"9e4f450fb294\"].answer[_key==\"d36012b574fd\"].children[_key==\"fdac3c3d6ded\"].text",
+      "before": ". Te recomendamos empezar con modelos consolidados como GPT-4o o Claude Sonnet, ya que cuentan con la mejor documentación y el mayor soporte de la comunidad.",
+      "after": ". Te recomendamos empezar con un modelo de uso diario como GPT-6.2 Sol o Claude Sonnet 5.5. Cuestan mucho menos que los modelos insignia (GPT-6.2 Sol: $2.00 por 1M de tokens de entrada y $10.00 por 1M de tokens de salida, frente a $8.00 y $40.00 de GPT-6.2 Astra), y puedes pasar a un modelo insignia cuando una tarea lo requiera."
+    },
+    {
+      "path": "pricingCalloutBody",
+      "before": "Precios en tiempo real para más de 60 modelos — incluyendo Claude, GPT, Gemini, DeepSeek y más. Compara los precios de AI Token King con las tarifas oficiales, filtra por Texto / Imagen / Video y prueba cualquier modelo directamente.",
+      "after": "Precios en tiempo real para más de 140 modelos en AI Token King — incluyendo Claude, GPT, Gemini, DeepSeek y más. Compara los precios de AI Token King con las tarifas oficiales, filtra por Texto / Imagen / Video y prueba cualquier modelo directamente."
+    }
+  ]
+}

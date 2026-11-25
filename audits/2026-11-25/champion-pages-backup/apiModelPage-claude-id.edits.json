@@ -1,0 +1,160 @@
+{
+  "_id": "apiModelPage-claude-id",
+  "url": "/id/claude-api/",
+  "rev": "ia2VH6dunty2Dn6P92euLd",
+  "edits": [
+    {
+      "path": "pricingReference",
+      "before": [
+        {
+          "_key": "f4dba9bd6200",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "bc2daab125a8",
+              "_type": "span",
+              "marks": [
+                "strong"
+              ],
+              "text": "Claude Opus 5: $5.00 / 1M input tokens · $25.00 / 1M output tokens"
+            }
+          ],
+          "level": 1,
+          "listItem": "bullet",
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "245a6fffa7b0",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "bc2daab125a8",
+              "_type": "span",
+              "marks": [
+                "strong"
+              ],
+              "text": "Claude Sonnet 5: $2.00 / 1M input tokens · $10.00 / 1M output tokens"
+            }
+          ],
+          "level": 1,
+          "listItem": "bullet",
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "f8eca936b775",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "bc2daab125a8",
+              "_type": "span",
+              "marks": [
+                "strong"
+              ],
+              "text": "Claude Haiku 4.5: $1.00 / 1M input tokens · $5.00 / 1M output tokens"
+            }
+          ],
+          "level": 1,
+          "listItem": "bullet",
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "4a3c6857388d",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "d7fefacdaba7",
+              "_type": "span",
+              "marks": [],
+              "text": ""
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "2c39cfed70f9",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "5960110c92c4",
+              "_type": "span",
+              "marks": [],
+              "text": "Diverifikasi dengan harga resmi Anthropic pada 3 September 2026."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ],
+      "after": [
+        {
+          "_key": "f4dba9bd6200",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "bc2daab125a8",
+              "_type": "span",
+              "marks": [
+                "strong"
+              ],
+              "text": "Claude Fable 5.2: $8.00 / 1M token input · $0.20 / 1M token input dari cache · $40.00 / 1M token output"
+            }
+          ],
+          "level": 1,
+          "listItem": "bullet",
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "245a6fffa7b0",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "bc2daab125a8",
+              "_type": "span",
+              "marks": [
+                "strong"
+              ],
+              "text": "Claude Sonnet 5.5: $2.00 / 1M token input · $0.10 / 1M token input dari cache · $10.00 / 1M token output"
+            }
+          ],
+          "level": 1,
+          "listItem": "bullet",
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "4a3c6857388d",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "d7fefacdaba7",
+              "_type": "span",
+              "marks": [],
+              "text": ""
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "2c39cfed70f9",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "5960110c92c4",
+              "_type": "span",
+              "marks": [],
+              "text": "Tarif cache berlaku untuk cache hit dan refresh pada prompt cache. Diverifikasi dengan harga resmi Anthropic pada 25 November 2026."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ]
+    }
+  ]
+}

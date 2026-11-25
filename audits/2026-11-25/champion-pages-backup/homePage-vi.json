@@ -1,0 +1,255 @@
+{
+  "_createdAt": "2026-05-13T04:45:53Z",
+  "_id": "homePage-vi",
+  "_rev": "HGC0i0hV3qn3DmfUOXsBnT",
+  "_system": {
+    "base": {
+      "id": "homePage-en",
+      "rev": "KOA7uvlhq8zXOyJo8NVCDM"
+    }
+  },
+  "_type": "homePage",
+  "_updatedAt": "2026-06-23T00:31:41Z",
+  "faq": [
+    {
+      "_key": "178daf38ccda",
+      "_type": "faqItem",
+      "answer": [
+        {
+          "_key": "8a99606c8549",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "78ee6371c29e",
+              "_type": "span",
+              "marks": [],
+              "text": "Token là đơn vị cơ bản mà các mô hình ngôn ngữ AI dùng để xử lý văn bản. Trong tiếng Anh, một token tương đương khoảng 4 ký tự hoặc ¾ một từ. Ví dụ, \"ChatGPT\" là một token, \"tokenization\" khoảng 3 token. Mô hình đọc và tạo văn bản từng token một, và giá API được tính dựa trên số lượng token sử dụng."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ],
+      "question": "Token AI Là Gì?"
+    },
+    {
+      "_key": "d16f96061901",
+      "_type": "faqItem",
+      "answer": [
+        {
+          "_key": "7ac983aa50a5",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "1f72650f535d",
+              "_type": "span",
+              "marks": [],
+              "text": "Token đầu vào là các token trong prompt của bạn — văn bản bạn gửi đến mô hình. Token đầu ra là các token trong phản hồi của mô hình. Hầu hết các AI API tính giá khác nhau cho đầu vào và đầu ra, trong đó token đầu ra thường đắt hơn (thường 3–5 lần) vì việc tạo văn bản tốn nhiều tài nguyên tính toán hơn là đọc nó."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ],
+      "question": "Token Đầu Vào và Token Đầu Ra Là Gì?"
+    },
+    {
+      "_key": "6915e6383bc5",
+      "_type": "faqItem",
+      "answer": [
+        {
+          "_key": "949420912f4d",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "73911c7d59ef",
+              "_type": "span",
+              "marks": [],
+              "text": "Một model API (Giao diện lập trình ứng dụng) cho phép lập trình viên truy cập các mô hình ngôn ngữ AI theo phương thức lập trình. Thay vì dùng giao diện chat như ChatGPT, bạn gửi yêu cầu HTTP kèm prompt và nhận lại phản hồi. Điều này cho phép bạn tích hợp AI vào ứng dụng riêng, tự động hóa quy trình làm việc và xây dựng sản phẩm dựa trên các mô hình như GPT-4, Claude, hoặc Gemini."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ],
+      "question": "Model API Là Gì?"
+    },
+    {
+      "_key": "a62f8120b26d",
+      "_type": "faqItem",
+      "answer": [
+        {
+          "_key": "ee12901dfd39",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "d41a897b16a2",
+              "_type": "span",
+              "marks": [],
+              "text": "Hãy cân nhắc bốn yếu tố: (1) Khả năng — mô hình có xử lý tốt tác vụ của bạn không? (2) Cửa sổ ngữ cảnh — nó có thể xử lý bao nhiêu văn bản cùng lúc? (3) Chi phí — ngân sách của bạn cho mỗi 1 triệu token là bao nhiêu? (4) Tốc độ — bạn có cần phản hồi theo thời gian thực không? Công cụ so sánh của chúng tôi giúp bạn đánh giá tất cả các yếu tố này cạnh nhau."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ],
+      "question": "Làm Thế Nào Để Tìm Mô Hình AI Phù Hợp Với Nhu Cầu Của Tôi?"
+    },
+    {
+      "_key": "1c0739d593ea",
+      "_type": "faqItem",
+      "answer": [
+        {
+          "_key": "3c53c6c715ae",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "3695c687b396",
+              "_type": "span",
+              "marks": [],
+              "text": "Điều này phụ thuộc nhiều vào mô hình và độ dài prompt/phản hồi trung bình của bạn. Với GPT-4o mini và prompt ngắn (~500 token đầu vào, ~200 đầu ra), 1.000 lệnh gọi sẽ tốn khoảng $0.075–$0.15. Với GPT-4o và các cuộc hội thoại dài hơn, 1.000 lệnh gọi tương tự có thể tốn $5–$20. Hãy dùng Máy tính Token của chúng tôi để ước tính cho tình huống cụ thể của bạn."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ],
+      "question": "1.000 Lệnh Gọi AI API Tốn Bao Nhiêu?"
+    },
+    {
+      "_key": "e314e6735408",
+      "_type": "faqItem",
+      "answer": [
+        {
+          "_key": "5ea17af03099",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "765dcabb784c",
+              "_type": "span",
+              "marks": [],
+              "text": "Mỗi nhà cung cấp AI dùng một tokenizer khác nhau — thuật toán chia văn bản thành các token. OpenAI dùng tiktoken (dựa trên BPE), Anthropic dùng tokenizer riêng, còn Google dùng SentencePiece. Cùng một câu có thể được tách thành số lượng token khác nhau tùy vào mô hình bạn sử dụng. Đó là lý do bạn luôn nên dùng tokenizer chính thức của nhà cung cấp khi ước tính chi phí."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ],
+      "question": "Tại Sao Các API Khác Nhau Đếm Token Theo Cách Khác Nhau?"
+    },
+    {
+      "_key": "17b352438018",
+      "_type": "faqItem",
+      "answer": [
+        {
+          "_key": "dc17500e1338",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "1cc270a034af",
+              "_type": "span",
+              "marks": [],
+              "text": "Hoàn toàn nên. Các nhóm doanh nghiệp thường chi quá nhiều cho AI API vì không hiểu về kinh tế token. AI Token King đề cập đến các chiến lược tối ưu hóa token, cách dùng batch API, kỹ thuật caching, và cách chọn tầng mô hình phù hợp cho các tác vụ khác nhau trong một sản phẩm — tất cả có thể giúp giảm chi phí từ 50–80%."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ],
+      "question": "Người Dùng Doanh Nghiệp Có Nên Đọc AI Token King Trước Không?"
+    }
+  ],
+  "faqSubtitle": "Mọi thắc mắc của bạn về token AI, API và chi phí — đều được giải đáp ở đây.",
+  "faqTitle": "Câu Hỏi Thường Gặp",
+  "heroAccentText": "Mô hình & API",
+  "heroHeadline": "Làm chủ Token AI,",
+  "heroLabel": "Trung tâm kiến thức AI của bạn",
+  "heroStats": [
+    {
+      "_key": "94f2946a6713",
+      "_type": "heroStat",
+      "statLabel": "Mô hình AI được đề cập",
+      "statNumber": "60+"
+    },
+    {
+      "_key": "2dfbdbfaefc2",
+      "_type": "heroStat",
+      "statLabel": "Phép tính Token",
+      "statNumber": "1000+"
+    },
+    {
+      "_key": "4da19d513d69",
+      "_type": "heroStat",
+      "statLabel": "Luôn luôn & Mãi mãi",
+      "statNumber": "Miễn phí"
+    }
+  ],
+  "heroSubtitle": "Hướng dẫn toàn diện bằng tiếng Việt để hiểu về token AI, so sánh các mô hình ngôn ngữ, tính chi phí API và định hướng trong hệ sinh thái AI đang phát triển nhanh chóng — tất cả ở một nơi.",
+  "language": "vi",
+  "seo": {
+    "noindex": false,
+    "seoDescription": "Hướng dẫn toàn diện về token AI, API mô hình và cách tính chi phí. So sánh 60+ mô hình, ước tính chi phí token và định hướng trong hệ sinh thái AI — miễn phí, mãi mãi.",
+    "seoTitle": "AI Token King — Trung tâm kiến thức AI của bạn"
+  },
+  "tokenBody2": [
+    {
+      "_key": "168d995345d8",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "4ce7d480b4f2",
+          "_type": "span",
+          "marks": [],
+          "text": "Mỗi lệnh gọi API bạn thực hiện đều được tính phí bằng token: "
+        },
+        {
+          "_key": "29c08a3af705",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "token đầu vào"
+        },
+        {
+          "_key": "ae4de176c79f",
+          "_type": "span",
+          "marks": [],
+          "text": " (những gì bạn gửi) và "
+        },
+        {
+          "_key": "dc448ea9a7ba",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "token đầu ra"
+        },
+        {
+          "_key": "3fc10a0d281e",
+          "_type": "span",
+          "marks": [],
+          "text": " (những gì mô hình tạo ra). Thành thạo cách tính token là điều thiết yếu cho bất kỳ ai xây dựng ứng dụng với AI."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    }
+  ],
+  "tokenBreakdown": {
+    "charCount": "~48",
+    "tokens": [
+      "Hello",
+      ",",
+      "how",
+      "are",
+      "you",
+      "?",
+      "I",
+      "'m",
+      "learning",
+      "about",
+      "AI",
+      "tokens"
+    ]
+  }
+}

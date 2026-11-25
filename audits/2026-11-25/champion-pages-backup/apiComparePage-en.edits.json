@@ -1,0 +1,17 @@
+{
+  "_id": "apiComparePage-en",
+  "url": "/en/api-compare/",
+  "rev": "Qgw4f4CopAxmRMOCwzy7dO",
+  "edits": [
+    {
+      "path": "faq[_key==\"9e4f450fb294\"].answer[_key==\"d36012b574fd\"].children[_key==\"fdac3c3d6ded\"].text",
+      "before": ". We recommend beginning with established models like GPT-4o or Claude Sonnet, as they have the best documentation and largest community support.",
+      "after": ". We recommend starting with an everyday model such as GPT-6.2 Sol or Claude Sonnet 5.5. They cost much less than the flagship models (GPT-6.2 Sol: $2.00 per 1M input tokens and $10.00 per 1M output tokens, vs $8.00 and $40.00 for GPT-6.2 Astra), and you can move up to a flagship when a task needs it."
+    },
+    {
+      "path": "pricingCalloutBody",
+      "before": "Real-time pricing for 60+ models — including Claude, GPT, Gemini, DeepSeek, and more. Compare AI Token King prices vs official rates, filter by Text / Image / Video, and try any model directly.",
+      "after": "Real-time pricing for 140+ models on AI Token King — including Claude, GPT, Gemini, DeepSeek, and more. Compare AI Token King prices vs official rates, filter by Text / Image / Video, and try any model directly."
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "_id": "homePage-en",
+  "url": "/en/",
+  "rev": "jOCtSpWch7UC6QC30F7aK3",
+  "edits": [
+    {
+      "path": "faq[_key==\"1c0739d593ea\"].answer[_key==\"3c53c6c715ae\"].children[_key==\"3695c687b396\"].text",
+      "before": "It depends heavily on the model and your average prompt/response length. For GPT-4o mini with short prompts (~500 tokens in, ~200 out), 1,000 calls would cost roughly $0.075–$0.15. For GPT-4o with longer conversations, the same 1,000 calls could cost $5–$20. Use our Token Calculator to estimate your specific scenario.",
+      "after": "It depends heavily on the model and your average prompt/response length. With GPT-6.2 Sol ($2.00 per 1M input tokens, $10.00 per 1M output tokens) and short prompts (~500 tokens in, ~200 out), 1,000 calls cost 1,000 × (500 × $2.00 + 200 × $10.00) ÷ 1,000,000 = $3.00. With GPT-6.2 Astra ($8.00 / $40.00) and longer conversations (~2,000 tokens in, ~500 out), the same 1,000 calls cost 1,000 × (2,000 × $8.00 + 500 × $40.00) ÷ 1,000,000 = $36.00. Prices as of November 25, 2026. Use our Token Calculator to estimate your specific scenario."
+    },
+    {
+      "path": "heroStats[_key==\"94f2946a6713\"].statNumber",
+      "before": "60+",
+      "after": "140+"
+    },
+    {
+      "path": "faq[_key==\"6915e6383bc5\"].answer[_key==\"949420912f4d\"].children[_key==\"73911c7d59ef\"].text",
+      "before": "A model API (Application Programming Interface) lets developers access AI language models programmatically. Instead of using a chat interface like ChatGPT, you send HTTP requests with your prompt and receive a response. This allows you to integrate AI into your own apps, automate workflows, and build products on top of models like GPT-4, Claude, or Gemini.",
+      "after": "A model API (Application Programming Interface) lets developers access AI language models programmatically. Instead of using a chat interface like ChatGPT, you send HTTP requests with your prompt and receive a response. This allows you to integrate AI into your own apps, automate workflows, and build products on top of models like GPT-6.2 Sol, Claude Sonnet 5.5, or Gemini 3.8 Flash."
+    },
+    {
+      "path": "seo.seoDescription",
+      "before": "The definitive guide to AI tokens, model APIs, and cost calculation. Compare 60+ models, estimate token costs, and navigate the AI ecosystem — free, always.",
+      "after": "The definitive guide to AI tokens, model APIs, and cost calculation. Compare 140+ models, estimate token costs, and navigate the AI ecosystem — free, always."
+    }
+  ]
+}

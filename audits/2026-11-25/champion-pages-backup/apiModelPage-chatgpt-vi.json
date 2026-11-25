@@ -1,0 +1,400 @@
+{
+  "_createdAt": "2026-06-04T13:52:03Z",
+  "_id": "apiModelPage-chatgpt-vi",
+  "_rev": "3PFaUppQG3q6iDYaDAZ2jh",
+  "_system": {
+    "base": {
+      "id": "apiModelPage-chatgpt-vi",
+      "rev": "FsU1FCYJtYm5LXJzukuLjs"
+    }
+  },
+  "_type": "apiModelPage",
+  "_updatedAt": "2026-08-11T06:32:01Z",
+  "comparingBody": [
+    {
+      "_key": "co1",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "co1s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Khi so sánh ChatGPT API với các mô hình khác, những điều quan trọng nhất cần đánh giá là chất lượng đầu ra, độ ổn định, giá cả, độ phức tạp khi tích hợp và chi phí dài hạn ở quy mô lớn. Với hầu hết mọi người, sự so sánh thực sự không phải là tên một mô hình cụ thể — mà là liệu API này có thể xử lý khối lượng công việc thực tế của bạn trong ngân sách hay không."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "co2",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "co2s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Bạn cũng có thể so sánh nó với các mô hình phổ biến khác trên trang So sánh ChatGPT, Claude, Gemini — điều đó sẽ cho bạn cái nhìn rõ ràng hơn nhiều để xây dựng một đánh giá toàn diện."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    }
+  ],
+  "comparingTitle": "Khi So Sánh, Bạn Cần Xem Những Gì?",
+  "faq": [
+    {
+      "_key": "faq1",
+      "_type": "faqItem",
+      "answer": [
+        {
+          "_key": "faq1a1",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "faq1a1s1",
+              "_type": "span",
+              "marks": [],
+              "text": "Giao diện dành cho người dùng phổ thông được thiết kế để con người sử dụng trực tiếp. ChatGPT API dùng để kết nối với các trang web, ứng dụng, công cụ hoặc quy trình làm việc tự động — khả năng của mô hình có thể được gọi theo chương trình và tích hợp vào sản phẩm của riêng bạn."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ],
+      "question": "ChatGPT API khác gì so với sản phẩm chat thông thường?"
+    },
+    {
+      "_key": "faq2",
+      "_type": "faqItem",
+      "answer": [
+        {
+          "_key": "faq2a1",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "faq2a1s1",
+              "_type": "span",
+              "marks": [],
+              "text": "Chi phí được tính riêng cho token đầu vào và token đầu ra. Chi phí thực tế bị ảnh hưởng bởi độ dài phản hồi, kích thước cửa sổ ngữ cảnh và loại tác vụ — không chỉ là giá bề mặt trên mỗi triệu token."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ],
+      "question": "Giá ChatGPT API được tính như thế nào?"
+    },
+    {
+      "_key": "faq3",
+      "_type": "faqItem",
+      "answer": [
+        {
+          "_key": "faq3a1",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "faq3a1s1",
+              "_type": "span",
+              "marks": [],
+              "text": "Nếu bạn mới làm quen với các API mô hình, ChatGPT API thường là điểm khởi đầu dễ tiếp cận nhất — nhưng chúng tôi vẫn khuyên bạn nên hiểu về token AI và logic chi phí trước khi bắt đầu sử dụng."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ],
+      "question": "ChatGPT API có phù hợp với người mới bắt đầu không?"
+    },
+    {
+      "_key": "faq4",
+      "_type": "faqItem",
+      "answer": [
+        {
+          "_key": "faq4a1",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "faq4a1s1",
+              "_type": "span",
+              "marks": [],
+              "text": "Không nhất thiết. So sánh thực sự liên quan đến mức độ phù hợp với trường hợp sử dụng, ngân sách, chất lượng đầu ra, phương thức tích hợp và chi phí dài hạn — không chỉ là độ nhận diện thương hiệu. Xem so sánh đầy đủ để có cái nhìn song song."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ],
+      "question": "ChatGPT API có luôn tốt hơn các mô hình khác không?"
+    }
+  ],
+  "faqTitle": "Câu Hỏi Thường Gặp",
+  "furtherReading": [
+    {
+      "_key": "fr1",
+      "_type": "readingLink",
+      "label": "Token AI là gì?",
+      "url": "/vi/beginners-guide"
+    },
+    {
+      "_key": "fr2",
+      "_type": "readingLink",
+      "label": "Cách Tính Chi Phí Token AI",
+      "url": "/vi/token-calculator"
+    },
+    {
+      "_key": "fr3",
+      "_type": "readingLink",
+      "label": "ChatGPT, Claude, Gemini — Điểm Khác Biệt Là Gì?",
+      "url": "/vi/api-compare"
+    },
+    {
+      "_key": "fr4",
+      "_type": "readingLink",
+      "label": "So Sánh Mô Hình Đầy Đủ",
+      "url": "/vi/use-cases"
+    }
+  ],
+  "furtherReadingTitle": "Đọc Thêm",
+  "heroAccent": "purple",
+  "heroHeadline": "Hướng Dẫn ChatGPT API",
+  "heroSubtitle": "Nhanh chóng hiểu ChatGPT API là gì, các trường hợp sử dụng phổ biến và cách tính chi phí cùng token AI hoạt động.",
+  "language": "vi",
+  "modelSlug": "chatgpt",
+  "overviewBody": [
+    {
+      "_key": "ov1",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "ov1s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Nếu bạn đang tìm hiểu về ChatGPT API, ba điều quan trọng nhất cần hiểu ngay từ đầu là: nó thực sự có thể làm gì, phù hợp với tình huống nào và chi phí hoạt động ra sao. Trang này cung cấp cho bạn cái nhìn tổng quan rõ ràng về các điểm chính của ChatGPT API, các trường hợp sử dụng phổ biến và cấu trúc chi phí — để bạn có thể so sánh một cách có cơ sở."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "ov2",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "ov2s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Nếu bạn vẫn chưa quen với kiến thức cơ bản về token AI, hãy bắt đầu với Kiến Thức Cơ Bản về Token AI trước."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    }
+  ],
+  "pricingBody": [
+    {
+      "_key": "pr1",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "pr1s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Khi sử dụng ChatGPT API, bạn không thể chỉ nhìn vào giá bề mặt. Quan trọng hơn, bạn cần hiểu token AI — nội dung đầu vào, nội dung đầu ra, độ dài phản hồi, loại tác vụ và ngữ cảnh hội thoại đều ảnh hưởng đến cách token được tiêu thụ. Cùng một prompt có thể có chi phí rất khác nhau tùy thuộc vào cách bạn cấu trúc nó."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "pr2",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "pr2s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Nếu bạn chưa quen với cách token hoạt động, hãy đọc Kiến Thức Cơ Bản về Token AI và Cách Tính Chi Phí Token GPT trước khi so sánh giá ChatGPT API — nếu không, các con số sẽ không nói lên điều gì nhiều."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    }
+  ],
+  "pricingReference": [
+    {
+      "_key": "pref1",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "pref1s1",
+          "_type": "span",
+          "marks": [],
+          "text": "GPT-5.6 Sol: $5.00 / 1M input tokens · $30.00 / 1M output tokens"
+        }
+      ],
+      "level": 1,
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "74a7f05af3cc",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "pref1s1",
+          "_type": "span",
+          "marks": [],
+          "text": "GPT-5.6 Terra: $2.00 / 1M input tokens · $12.00 / 1M output tokens"
+        }
+      ],
+      "level": 1,
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "2646fd234222",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "pref1s1",
+          "_type": "span",
+          "marks": [],
+          "text": "GPT-5.6 Luna: $0.20 / 1M input tokens · $1.20 / 1M output tokens"
+        }
+      ],
+      "level": 1,
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "30bd96614da6",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "47d04dfc583e",
+          "_type": "span",
+          "marks": [],
+          "text": ""
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "bbdcfd11a215",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "8eb34bb8f9ec",
+          "_type": "span",
+          "marks": [],
+          "text": "Input được lưu cache chỉ tính bằng một phần mười các mức giá trên ở cả ba bậc, nên các system prompt lặp lại rẻ hơn nhiều so với ước tính thông thường. Các mức giá này áp dụng cho prompt dưới 270K token. Đã kiểm chứng với bảng giá chính thức của OpenAI ngày 11 tháng 8 năm 2026."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    }
+  ],
+  "pricingTitle": "Giá Được Tính Như Thế Nào?",
+  "seo": {
+    "noindex": false,
+    "seoDescription": "Tìm hiểu ChatGPT API làm được gì, các trường hợp sử dụng phổ biến nhất, cách tính giá theo token và so sánh với Claude và Gemini.",
+    "seoTitle": "Hướng Dẫn ChatGPT API — AI Token King"
+  },
+  "uniqueSectionBody": [
+    {
+      "_key": "un1",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "un1s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Nếu bạn mới làm quen với các API mô hình, ChatGPT API thường là điểm khởi đầu dễ tiếp cận nhất — được ghi chép đầy đủ, có cộng đồng lập trình viên lớn nhất và tích hợp dễ dàng với hầu hết các công cụ và framework. Nó cũng phù hợp với các nhóm muốn xây dựng quy trình tự động hóa hoặc tính năng website tích hợp AI mà không cần đường cong học tập quá dốc."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "un2",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "un2s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Nó cũng phù hợp với bất kỳ ai muốn hiểu mức tiêu thụ token AI và logic chi phí của ChatGPT API, vì nhiều công cụ và nền tảng dùng nó làm mốc tham chiếu cơ bản."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    }
+  ],
+  "uniqueSectionTitle": "Đặc Biệt Phù Hợp Với Ai?",
+  "useCasesBody": [
+    {
+      "_key": "uc1",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "uc1s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Các ứng dụng phổ biến nhất của ChatGPT API xoay quanh các tác vụ hiểu và tạo văn bản: tự động hóa dịch vụ và hỗ trợ khách hàng, tóm tắt nội dung, dịch thuật, hỏi đáp tự động, xử lý tài liệu, tích hợp công cụ và trợ lý cơ sở kiến thức nội bộ."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "uc2",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "uc2s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Tính linh hoạt của nó có nghĩa là đây thường là API mô hình đầu tiên mà lập trình viên nghĩ đến — không phải vì nó luôn là lựa chọn tốt nhất, mà vì nó xử lý được nhiều loại tác vụ dựa trên văn bản mà không cần cấu hình đặc biệt."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    }
+  ],
+  "useCasesTitle": "Thường Được Dùng Để Làm Gì?",
+  "whatIsBody": [
+    {
+      "_key": "wi1",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "wi1s1",
+          "_type": "span",
+          "marks": [],
+          "text": "ChatGPT API (được phát triển bởi OpenAI) là cách kết nối khả năng của mô hình với các trang web, ứng dụng, công cụ hoặc quy trình làm việc tự động. Bạn có thể dùng API để gửi prompt, nhận phản hồi văn bản hoặc có cấu trúc, tạo nội dung từ ngữ cảnh và xây dựng sản phẩm tích hợp AI trên nền tảng của OpenAI."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "wi2",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "wi2s1",
+          "_type": "span",
+          "marks": [],
+          "text": "Khác với giao diện ChatGPT dành cho người dùng phổ thông, API không bị ràng buộc với bất kỳ mô hình cụ thể nào — nó cho phép bạn lập trình chọn mô hình cần gọi, truyền hướng dẫn hệ thống, kiểm soát định dạng phản hồi và tự quản lý lịch sử hội thoại."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    }
+  ],
+  "whatIsTitle": "ChatGPT API Là Gì?"
+}
