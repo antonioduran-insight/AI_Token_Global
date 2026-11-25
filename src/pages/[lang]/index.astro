@@ -142,7 +142,7 @@ const faqJsonLd = faqPageSchema(faqs, `homePage/${lang}`);
             </div>
             <div>
               <div style="font-family: 'Kanit', sans-serif; font-weight: 700; font-size: 1rem; color: #1C1C1C;">{t('home.heroPriceCardTitle')}</div>
-              <div style="font-size: 0.8rem; color: #999; margin-top: 0.1rem;">{t('home.heroPriceCardMeta')}</div>
+              <div style="font-size: 0.8rem; color: #999; margin-top: 0.1rem;">{t('home.heroPriceCardMeta').replace('{count}', String(FLAGSHIP_MODELS.length))}</div>
             </div>
           </div>
           <div style="border-radius: 10px; overflow: hidden; border: 1px solid #EDEDEF;">
@@ -428,7 +428,7 @@ const faqJsonLd = faqPageSchema(faqs, `homePage/${lang}`);
           {t('home.tableLabel')}
         </div>
         <h2 class="reveal" style="font-family: 'Kanit', sans-serif; font-size: 2rem; font-weight: 800; color: #1C1C1C; letter-spacing: -0.03em; line-height: 1.15;">
-          {t('home.tableHeading')}
+          {t('home.tableHeading').replace('{count}', String(MODELS.length))}
         </h2>
       </div>
       <a href={`/${lang}/api-compare/`} class="btn-secondary reveal">
