@@ -1,0 +1,110 @@
+{
+  "meta": {
+    "siteUrl": "aitoken.global",
+    "snapshotDate": "2026-11-25",
+    "rangeDays": 30,
+    "dataSource": "cloudflare"
+  },
+  "rows": [
+    {
+      "country": "CN",
+      "visits": 300
+    },
+    {
+      "country": "US",
+      "visits": 110
+    },
+    {
+      "country": "VN",
+      "visits": 80
+    },
+    {
+      "country": "ES",
+      "visits": 40
+    },
+    {
+      "country": "CO",
+      "visits": 20
+    },
+    {
+      "country": "LT",
+      "visits": 20
+    },
+    {
+      "country": "KZ",
+      "visits": 20
+    },
+    {
+      "country": "VE",
+      "visits": 20
+    },
+    {
+      "country": "CA",
+      "visits": 20
+    },
+    {
+      "country": "IN",
+      "visits": 20
+    },
+    {
+      "country": "ID",
+      "visits": 10
+    },
+    {
+      "country": "JP",
+      "visits": 10
+    },
+    {
+      "country": "DK",
+      "visits": 10
+    },
+    {
+      "country": "NL",
+      "visits": 10
+    },
+    {
+      "country": "CL",
+      "visits": 10
+    },
+    {
+      "country": "TW",
+      "visits": 10
+    },
+    {
+      "country": "PL",
+      "visits": 10
+    },
+    {
+      "country": "DE",
+      "visits": 10
+    },
+    {
+      "country": "BO",
+      "visits": 10
+    },
+    {
+      "country": "SG",
+      "visits": 10
+    },
+    {
+      "country": "KG",
+      "visits": 10
+    },
+    {
+      "country": "PK",
+      "visits": 10
+    },
+    {
+      "country": "SA",
+      "visits": 10
+    },
+    {
+      "country": "AU",
+      "visits": 10
+    },
+    {
+      "country": "TN",
+      "visits": 10
+    }
+  ]
+}

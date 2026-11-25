@@ -1,0 +1,256 @@
+{
+  "meta": {
+    "siteUrl": "aitoken.global",
+    "snapshotDate": "2026-11-25",
+    "rangeDays": 30,
+    "dataSource": "cloudflare"
+  },
+  "rows": [
+    {
+      "page": "/en/",
+      "locale": "en",
+      "visits": 160,
+      "pageViews": 160
+    },
+    {
+      "page": "/en/blog/ai-token-vs-quota-explained/",
+      "locale": "en",
+      "visits": 50,
+      "pageViews": 50
+    },
+    {
+      "page": "/en/use-cases/",
+      "locale": "en",
+      "visits": 40,
+      "pageViews": 40
+    },
+    {
+      "page": "/en/api-compare/",
+      "locale": "en",
+      "visits": 40,
+      "pageViews": 50
+    },
+    {
+      "page": "/es/beginners-guide/",
+      "locale": "es",
+      "visits": 20,
+      "pageViews": 20
+    },
+    {
+      "page": "/en/token-calculator/",
+      "locale": "en",
+      "visits": 20,
+      "pageViews": 20
+    },
+    {
+      "page": "/en/blog/geminia-api-vs-gemini/",
+      "locale": "en",
+      "visits": 20,
+      "pageViews": 20
+    },
+    {
+      "page": "/es/api-compare/",
+      "locale": "es",
+      "visits": 20,
+      "pageViews": 20
+    },
+    {
+      "page": "/es/blog/claudes-api-vs-chat-version-uso/",
+      "locale": "es",
+      "visits": 20,
+      "pageViews": 20
+    },
+    {
+      "page": "/en/blog/",
+      "locale": "en",
+      "visits": 10,
+      "pageViews": 20
+    },
+    {
+      "page": "/id/blog/gemin-api-vs-gemini/",
+      "locale": "id",
+      "visits": 10,
+      "pageViews": 10
+    },
+    {
+      "page": "/en/gemini-api/",
+      "locale": "en",
+      "visits": 10,
+      "pageViews": 10
+    },
+    {
+      "page": "/en/beginners-guide/",
+      "locale": "en",
+      "visits": 10,
+      "pageViews": 40
+    },
+    {
+      "page": "/en/blog/ai-token-pricing-models-comparison/",
+      "locale": "en",
+      "visits": 10,
+      "pageViews": 10
+    },
+    {
+      "page": "/en/terms/",
+      "locale": "en",
+      "visits": 10,
+      "pageViews": 10
+    },
+    {
+      "page": "/en/blog/understanding-ai-token/",
+      "locale": "en",
+      "visits": 10,
+      "pageViews": 10
+    },
+    {
+      "page": "/en/privacy/",
+      "locale": "en",
+      "visits": 10,
+      "pageViews": 10
+    },
+    {
+      "page": "/en/blog/ai-token-impact-answer-quality/",
+      "locale": "en",
+      "visits": 10,
+      "pageViews": 10
+    },
+    {
+      "page": "/es/blog/como-calcular-costos-tokens-ia-aplicaciones-multilingues",
+      "locale": "es",
+      "visits": 10,
+      "pageViews": 10
+    },
+    {
+      "page": "/en/blog/chatgpt-api-pricing-vs-subscription-cost-difference/",
+      "locale": "en",
+      "visits": 10,
+      "pageViews": 10
+    },
+    {
+      "page": "/en/blog/gemini-4-carbon-gated-release-cybersecurity-enterprise-model-choice/",
+      "locale": "en",
+      "visits": 10,
+      "pageViews": 10
+    },
+    {
+      "page": "/es/blog/comparativa-proveedores-tokens-inteligencia-artificial/",
+      "locale": "es",
+      "visits": 10,
+      "pageViews": 10
+    },
+    {
+      "page": "/id/",
+      "locale": "id",
+      "visits": 10,
+      "pageViews": 10
+    },
+    {
+      "page": "/es/blog/entendiendo-gemini-api-y-gemini-apps/",
+      "locale": "es",
+      "visits": 10,
+      "pageViews": 10
+    },
+    {
+      "page": "/en/blog/local-ai-vs-cloud-ai-same-job-comparison/",
+      "locale": "en",
+      "visits": 10,
+      "pageViews": 10
+    },
+    {
+      "page": "/es/blog/comparacion-del-consumo-de-tokens-entre-chatgpt-claude-y-gemini/",
+      "locale": "es",
+      "visits": 10,
+      "pageViews": 10
+    },
+    {
+      "page": "/en/user-guide/",
+      "locale": "en",
+      "visits": 10,
+      "pageViews": 10
+    },
+    {
+      "page": "/en/blog/software-factories-ai-agent-platform-comparison-2026/",
+      "locale": "en",
+      "visits": 10,
+      "pageViews": 10
+    },
+    {
+      "page": "/es/user-guide/",
+      "locale": "es",
+      "visits": 10,
+      "pageViews": 10
+    },
+    {
+      "page": "/en/blog/how-new-ai-model-is-54-percent-more-token-efficient-what-it-means-for-cost/",
+      "locale": "en",
+      "visits": 10,
+      "pageViews": 10
+    },
+    {
+      "page": "/es/",
+      "locale": "es",
+      "visits": 10,
+      "pageViews": 10
+    },
+    {
+      "page": "/en/blog/calculate-ai-token-costs-2026-guide/",
+      "locale": "en",
+      "visits": 10,
+      "pageViews": 10
+    },
+    {
+      "page": "/en/blog/why-ai-agent-trends-all-lead-back-to-token-budget/",
+      "locale": "en",
+      "visits": 10,
+      "pageViews": 10
+    },
+    {
+      "page": "/es/blog/ai-industria-tendencias-infrastructure-competition/",
+      "locale": "es",
+      "visits": 10,
+      "pageViews": 10
+    },
+    {
+      "page": "/es/blog/por-que-claude-sigue-interrumpiendo-la-conversacion-a-mitad-de-camino/",
+      "locale": "es",
+      "visits": 10,
+      "pageViews": 10
+    },
+    {
+      "page": "/en/blog/what-is-meta-muse-personal-agent-vs-openclaw/",
+      "locale": "en",
+      "visits": 10,
+      "pageViews": 10
+    },
+    {
+      "page": "/en/blog/ai-token-usage-limits/",
+      "locale": "en",
+      "visits": 10,
+      "pageViews": 10
+    },
+    {
+      "page": "/es/blog/comparacion-de-modelos-de-inteligencia-artificial-para-2026/",
+      "locale": "es",
+      "visits": 10,
+      "pageViews": 10
+    },
+    {
+      "page": "/id/token-calculator/",
+      "locale": "id",
+      "visits": 0,
+      "pageViews": 10
+    },
+    {
+      "page": "/en/blog/what-is-dark-gpus-ai-chips-waiting-for-power/",
+      "locale": "en",
+      "visits": 0,
+      "pageViews": 10
+    },
+    {
+      "page": "/id/blog/",
+      "locale": "id",
+      "visits": 0,
+      "pageViews": 10
+    }
+  ]
+}
