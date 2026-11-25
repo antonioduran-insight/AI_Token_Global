@@ -17,6 +17,7 @@
 #      SANITY_DEPLOY_TOKEN      – Deploy Studio token — used by the Studio redeploy step
 # 2. Merge this branch to main — `schedule:` only fires from the default branch.
 #    (Until then, use the "Run workflow" button — workflow_dispatch — to test.)
+#    A manual run on any other branch skips the Sanity upload and Studio redeploy.
 #
 # Non-secret config (IDs / public beacon token) is set in `env:` below.
 
@@ -104,14 +105,17 @@ jobs:
       # doc per source: seoInsights-gsc / -ga4 / -cloudflare) instead of parsing
       # the raw JSON. Uses the Sanity CLI, so SANITY_AUTH_TOKEN must have
       # write/Editor access (not just deploy).
+      # main only: a manual run on a feature branch refreshes the snapshots on
+      # that branch but never writes to Sanity or redeploys the live Studio.
       - name: Upload SEO insights to Sanity
+        if: github.ref == 'refs/heads/main'
         run: node scripts/upload-seo-insights.mjs
         env:
           SANITY_AUTH_TOKEN: ${{ secrets.SANITY_AUTH_TOKEN }}
 
 # ── Studio redeploy ──────────────────────────────────────────────────
       - name: Redeploy Studio
-        if: always()
+        if: always() && github.ref == 'refs/heads/main'
         run: npx sanity deploy --yes
         env:
           # `sanity deploy` needs Deploy Studio permission, which the Editor
