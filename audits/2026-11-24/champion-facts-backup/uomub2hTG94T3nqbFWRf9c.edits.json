@@ -1,0 +1,19 @@
+{
+  "_id": "uomub2hTG94T3nqbFWRf9c",
+  "url": "/en/blog/ai-api-tokens-explained-for-beginners/",
+  "rev": "VKNTFpWe8NfJwy5gVWDM6r",
+  "edits": [
+    {
+      "key": "by95mph8",
+      "spanKey": "by95mph8c",
+      "before": "AI API tokens are calculated based on the complexity of your request. This can include factors such as text length, query parameters, and even the AI model's processing power required.",
+      "after": "AI API tokens are counted from the text itself: the input you send (your prompt, instructions and any conversation history) plus the output the model generates. The model's tokenizer splits that text into tokens, each roughly ¾ of an English word, and both the input and the output tokens count toward your usage."
+    },
+    {
+      "key": "oy34stad",
+      "spanKey": "oy34stadc",
+      "before": "For instance, if you're using a conversational AI model to generate responses for a customer service chatbot, the number of tokens used will depend on the complexity of the conversations and the model's processing requirements.",
+      "after": "For instance, if you're using a conversational AI model to generate responses for a customer service chatbot, the number of tokens used will depend on how much text goes in (the customer's messages plus the conversation history sent with each request) and how long the model's replies are."
+    }
+  ]
+}

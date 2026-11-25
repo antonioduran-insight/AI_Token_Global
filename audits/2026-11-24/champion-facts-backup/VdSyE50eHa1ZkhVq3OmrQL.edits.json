@@ -1,0 +1,43 @@
+{
+  "_id": "VdSyE50eHa1ZkhVq3OmrQL",
+  "url": "/en/blog/ai-token-vs-quota-explained/",
+  "rev": "KAAbgJhsj8A89jq2g6wAg2",
+  "edits": [
+    {
+      "key": "zqbxp1gj",
+      "spanKey": "zqbxp1gjc",
+      "before": "For instance, if a particular AI model requires 1000 units of processing power to complete a single task, and each unit is equivalent to one token, then you would need 1000 tokens to run that specific model. However, not all models consume the same amount of resources; some might require more or fewer tokens for the same task.",
+      "after": "In practice, a token is a chunk of text: roughly ¾ of an English word, or about 4 characters, so 1,000 tokens is about 750 words. Your usage is the number of tokens you send in (input) plus the number the model writes back (output). Models use different tokenizers and charge different prices per token, so the same task can use a different number of tokens, and cost a different amount, on each model."
+    },
+    {
+      "key": "jhxescf5",
+      "spanKey": "jhxescf5c",
+      "before": "Subsection: Token vs Quota Limits",
+      "after": "Token vs Quota Limits"
+    },
+    {
+      "key": "anax9hxh",
+      "spanKey": "anax9hxhc",
+      "before": "For instance, if you have $100 worth of credits in your account, and each token costs $0.10, then you can buy 1000 tokens with those credits. However, if the price per token increases to $0.15, your initial 1000 tokens would cost only $150.",
+      "after": "For instance, if you have $100 worth of credits in your account and use Claude Sonnet 5.5, which charges $2.00 per 1 million input tokens, those credits cover 50 million input tokens. Switch to Claude Fable 5.2 at $8.00 per 1 million input tokens and the same $100 covers only 12.5 million. Output tokens cost more ($10.00 and $40.00 per 1 million respectively), so a real workload that mixes input and output gets fewer tokens for the same credits."
+    },
+    {
+      "key": "ib3eeq87",
+      "spanKey": "ib3eeq87c",
+      "before": "Subsection: Pay-Per-Use vs Tiered Pricing",
+      "after": "Pay-Per-Use vs Tiered Pricing"
+    },
+    {
+      "key": "d63528ga",
+      "spanKey": "d63528gac",
+      "before": "At its core, an AI token represents a unit of processing volume used by AI models. It's akin to a currency that enables you to access and utilize the computing power of these sophisticated algorithms. The value of an AI token varies depending on several factors, including the complexity of the task, the type of model, and even the provider's pricing strategy. Understanding how tokens are calculated can help you anticipate your costs better.",
+      "after": "At its core, an AI token is a chunk of text that an AI model reads or writes: often a whole word, sometimes part of a word, a punctuation mark or a space. Providers count the tokens you send in and the tokens the model writes back, and charge a price per million tokens that depends on the model. Understanding how tokens are counted can help you anticipate your costs better."
+    },
+    {
+      "key": "j5zo08ha",
+      "spanKey": "j5zo08hac",
+      "before": "Each AI platform has its own pricing strategy for tokens, which can range from pay-per-use to tiered pricing. Some providers offer discounts for bulk purchases or long-term commitments, while others might charge extra for premium services or support.",
+      "after": "Each AI platform has its own pricing strategy for tokens, which can range from pay-per-use to tiered pricing. Prices usually differ from model to model, and input and output tokens are often priced separately."
+    }
+  ]
+}

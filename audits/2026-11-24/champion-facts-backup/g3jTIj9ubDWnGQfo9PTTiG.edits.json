@@ -1,0 +1,19 @@
+{
+  "_id": "g3jTIj9ubDWnGQfo9PTTiG",
+  "url": "/en/blog/geminiapi-vs-gemina-apps-for-beginners/",
+  "rev": "g3jTIj9ubDWnGQfo9PYx5A",
+  "edits": [
+    {
+      "key": "mwx1g3er",
+      "spanKey": "mwx1g3erc",
+      "before": "The primary difference between Gemini API and Gemini Apps lies in their pricing models. Gemini API offers a tiered pricing structure based on token usage, with discounts available for bulk token purchases.",
+      "after": "The primary difference between Gemini API and Gemini Apps lies in their pricing models. Gemini API is billed per token, with input and output tokens priced separately: Gemini 4 Argon, for example, costs $4.00 per 1 million input tokens and $20.00 per 1 million output tokens (Google's regular price, checked November 25, 2026)."
+    },
+    {
+      "key": "14ryqo61",
+      "spanKey": "14ryqo61c",
+      "before": "In contrast, Gemini Apps operates on a subscription-based model, with plans tailored to specific use cases and user requirements. Users can choose from various tiers, including basic, premium, and enterprise options, depending on their AI needs and budget.",
+      "after": "In contrast, the Gemini app is not billed per token. It has a free version and paid monthly Google AI plans (Google AI Plus, Google AI Pro and Google AI Ultra)."
+    }
+  ]
+}

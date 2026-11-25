@@ -1,4 +1,4 @@
-# Champion post facts DRY RUN: 2026-11-25T05:45:16.891Z
+# Champion post facts DRY RUN: 2026-11-25T05:59:23.272Z
 
 Source: `audits/2026-11-24/champion-audit.csv` (branch antonio/champion-audit-2026-11-24), column claims_stale_or_wrong / typos_title_slug_headings.
 Prices: `src/lib/pricing.ts`, read at run time — Claude Sonnet 5.5 $2.00/$10.00 (checked 2026-11-25) · Claude Fable 5.2 $8.00/$40.00 (checked 2026-11-25) · Gemini 3.8 Flash $1.50/$7.50 (checked 2026-11-25) · Gemini 4 Argon $4.00/$20.00 (checked 2026-11-25) — USD per 1M input/output tokens.
@@ -300,7 +300,7 @@ After:
 
 > Ngược lại, ứng dụng Gemini không tính phí theo token. Ứng dụng có phiên bản miễn phí và các gói Google AI trả phí hằng tháng (Google AI Plus, Google AI Pro và Google AI Ultra).
 
-## Guard skips: 0 (drafts not checked: no token in this dry run; --apply always checks)
+## Guard skips: 0
 
 ## Would write: 25 span(s) in 11 document(s), ONE transaction, each pinned to the _rev read now
 

@@ -1,0 +1,43 @@
+{
+  "_id": "VdSyE50eHa1ZkhVq3OmrQL-vi",
+  "url": "/vi/blog/ai-token-vs-quota-explained/",
+  "rev": "7PTiuFKp5NOfYngu8ZUSP8",
+  "edits": [
+    {
+      "key": "zqbxp1gj",
+      "spanKey": "zqbxp1gjc",
+      "before": "Ví dụ, nếu một mô hình AI cụ thể cần 1000 đơn vị sức mạnh xử lý để hoàn thành một tác vụ, và mỗi đơn vị tương đương một token, thì bạn sẽ cần 1000 token để chạy mô hình đó. Tuy nhiên, không phải tất cả các mô hình đều tiêu thụ cùng một lượng tài nguyên — một số có thể cần nhiều hoặc ít token hơn cho cùng một tác vụ.",
+      "after": "Trên thực tế, token là một mẩu văn bản: khoảng ¾ một từ tiếng Anh, tức chừng 4 ký tự, nên 1.000 token tương đương khoảng 750 từ tiếng Anh. Mức sử dụng của bạn là số token bạn gửi vào (đầu vào) cộng với số token mô hình trả về (đầu ra). Mỗi mô hình có bộ tách token (tokenizer) và mức giá riêng, nên cùng một tác vụ có thể dùng số token khác nhau và tốn chi phí khác nhau trên từng mô hình."
+    },
+    {
+      "key": "jhxescf5",
+      "spanKey": "jhxescf5c",
+      "before": "Tiểu mục: So sánh giới hạn Token và Quota",
+      "after": "So sánh giới hạn Token và Quota"
+    },
+    {
+      "key": "anax9hxh",
+      "spanKey": "anax9hxhc",
+      "before": "Ví dụ, nếu bạn có $100 credits trong tài khoản và mỗi token có giá $0.10, thì bạn có thể mua 1000 token với số credits đó. Tuy nhiên, nếu giá mỗi token tăng lên $0.15, thì 1000 token ban đầu sẽ có giá $150.",
+      "after": "Ví dụ, nếu bạn có $100 credits trong tài khoản và dùng Claude Sonnet 5.5, với giá $2.00 cho mỗi 1 triệu token đầu vào, số credits đó đủ cho 50 triệu token đầu vào. Nếu chuyển sang Claude Fable 5.2 với giá $8.00 cho mỗi 1 triệu token đầu vào, cùng $100 chỉ đủ cho 12,5 triệu token. Token đầu ra đắt hơn (lần lượt $10.00 và $40.00 cho mỗi 1 triệu token), nên một khối lượng công việc thực tế có cả đầu vào lẫn đầu ra sẽ nhận được ít token hơn với cùng số credits."
+    },
+    {
+      "key": "ib3eeq87",
+      "spanKey": "ib3eeq87c",
+      "before": "Tiểu mục: Pay-Per-Use và Định giá theo tầng",
+      "after": "Pay-Per-Use và Định giá theo tầng"
+    },
+    {
+      "key": "d63528ga",
+      "spanKey": "d63528gac",
+      "before": "Về cơ bản, một token AI đại diện cho một đơn vị khối lượng xử lý mà các mô hình AI sử dụng. Bạn có thể coi nó như một loại tiền tệ cho phép bạn truy cập và tận dụng sức mạnh tính toán của các thuật toán tinh vi này. Giá trị của một token AI thay đổi tùy thuộc vào nhiều yếu tố, bao gồm độ phức tạp của tác vụ, loại mô hình, và thậm chí cả chiến lược định giá của nhà cung cấp. Hiểu cách token được tính toán sẽ giúp bạn dự đoán chi phí tốt hơn.",
+      "after": "Về cơ bản, một token AI là một mẩu văn bản mà mô hình AI đọc hoặc viết ra: thường là cả một từ, đôi khi là một phần của từ, một dấu câu hoặc một khoảng trắng. Nhà cung cấp đếm số token bạn gửi vào và số token mô hình trả về, rồi tính phí theo mức giá cho mỗi 1 triệu token, tùy theo từng mô hình. Hiểu cách token được đếm sẽ giúp bạn dự đoán chi phí tốt hơn."
+    },
+    {
+      "key": "j5zo08ha",
+      "spanKey": "j5zo08hac",
+      "before": "Mỗi nền tảng AI có chiến lược định giá token riêng, có thể dao động từ trả theo lượng sử dụng (pay-per-use) đến định giá theo tầng (tiered pricing). Một số nhà cung cấp cung cấp chiết khấu cho việc mua số lượng lớn hoặc cam kết dài hạn, trong khi những nhà cung cấp khác có thể tính thêm phí cho các dịch vụ hoặc hỗ trợ cao cấp.",
+      "after": "Mỗi nền tảng AI có chiến lược định giá token riêng, có thể dao động từ trả theo lượng sử dụng (pay-per-use) đến định giá theo tầng (tiered pricing). Giá thường khác nhau giữa các mô hình, và token đầu vào và đầu ra thường được tính giá riêng."
+    }
+  ]
+}

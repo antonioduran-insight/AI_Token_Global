@@ -1,0 +1,396 @@
+{
+  "_createdAt": "2026-06-04T11:06:50Z",
+  "_id": "uomub2hTG94T3nqbFWRf9c-vi",
+  "_rev": "7PTiuFKp5NOfYngu8ZNru8",
+  "_type": "post",
+  "_updatedAt": "2026-06-22T09:38:28Z",
+  "articleNumber": 5,
+  "body": [
+    {
+      "_key": "p3vsecih",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "p3vsecihc",
+          "_type": "span",
+          "marks": [],
+          "text": "Là một nhà phát triển hoặc người tạo nội dung quan tâm đến việc tích hợp Trí tuệ Nhân tạo (AI) vào dự án của bạn, bạn có thể đã từng nghe đến thuật ngữ 'token API.' Nhưng chính xác thì token API của AI là gì, và nó hoạt động như thế nào? Trong bài viết này, chúng ta sẽ khám phá thế giới của token AI qua API, tìm hiểu tầm quan trọng của chúng trong xử lý ngôn ngữ, tính toán chi phí, và sự khác biệt giữa chatbot và API."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "ed5i8if2",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "ed5i8if2c",
+          "_type": "span",
+          "marks": [],
+          "text": "Token AI qua API là gì?"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "zf6tjbl1",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "zf6tjbl1c",
+          "_type": "span",
+          "marks": [],
+          "text": "Token AI qua API đóng vai trò là đơn vị đo lường cơ bản cho việc xử lý ngôn ngữ. Chúng được dùng để tính toán chi phí và mức sử dụng cho các API, giúp nhà phát triển và người tạo nội dung hiểu rõ ý nghĩa tài chính của các yêu cầu mà họ gửi đi."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "0p2xz57f",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "0p2xz57fc",
+          "_type": "span",
+          "marks": [],
+          "text": "Hãy nghĩ về token AI qua API giống như tỷ giá hối đoái. Cũng như bạn cần biết tỷ giá hiện tại để đổi tiền, token AI qua API giúp kết nối yêu cầu của bạn với sức mạnh tính toán cần thiết để thực hiện nó."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "k8ah1l8b",
+      "_type": "image",
+      "alt": "Hình ảnh minh họa phần 1",
+      "asset": {
+        "_ref": "image-5c2e9d5aaa60ed7b8fcd27fee627621f461dab65-1344x768-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "h0t0y1e2",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "h0t0y1e2c",
+          "_type": "span",
+          "marks": [],
+          "text": "Token AI qua API được tính toán như thế nào?"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "by95mph8",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "by95mph8c",
+          "_type": "span",
+          "marks": [],
+          "text": "Token AI qua API được tính toán dựa trên độ phức tạp của yêu cầu. Các yếu tố ảnh hưởng có thể bao gồm độ dài văn bản, tham số truy vấn, và thậm chí cả sức mạnh xử lý mà mô hình AI cần dùng."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "oy34stad",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "oy34stadc",
+          "_type": "span",
+          "marks": [],
+          "text": "Ví dụ, nếu bạn đang dùng mô hình AI hội thoại để tạo phản hồi cho chatbot chăm sóc khách hàng, số lượng token sử dụng sẽ phụ thuộc vào độ phức tạp của các cuộc trò chuyện và yêu cầu xử lý của mô hình."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "nzhunrxa",
+      "_type": "image",
+      "alt": "Hình ảnh minh họa phần 2",
+      "asset": {
+        "_ref": "image-f1fdc6be82d207f614fcec67bf12e1801278e030-1344x768-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "l5utydij",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "l5utydijc",
+          "_type": "span",
+          "marks": [],
+          "text": "Sự khác biệt giữa Chatbot và API"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "uciyyjy8",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "uciyyjy8c",
+          "_type": "span",
+          "marks": [],
+          "text": "Mặc dù chatbot và API có một số điểm tương đồng, nhưng chúng phục vụ những mục đích khác nhau. Chatbot là giao diện người dùng tương tác với người dùng qua văn bản hoặc giọng nói, trong khi API cung cấp giao diện lập trình để truy cập dữ liệu hoặc dịch vụ."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "6be7ruaf",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "6be7ruafc",
+          "_type": "span",
+          "marks": [],
+          "text": "API thường yêu cầu token xác thực để kiểm tra các yêu cầu — đây chính là lúc token AI qua API phát huy vai trò. Khác với chatbot, API thường không có giao diện người dùng và hoạt động dựa trên tương tác lập trình."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "xnodp4gu",
+      "_type": "image",
+      "alt": "Hình ảnh minh họa phần 3",
+      "asset": {
+        "_ref": "image-d679e838b3323eab39d827bcc7a79ecd5cf40191-1344x768-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "5w5ftu1s",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "5w5ftu1sc",
+          "_type": "span",
+          "marks": [],
+          "text": "Chọn mô hình định giá API phù hợp"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "7oobfeb9",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "7oobfeb9c",
+          "_type": "span",
+          "marks": [],
+          "text": "Khi chọn mô hình định giá API, hãy cân nhắc các yếu tố như chi phí mỗi token, yêu cầu sử dụng tối thiểu, và khả năng mở rộng. Bạn có thể muốn chọn mô hình trả tiền theo mức dùng (pay-as-you-go) hoặc cam kết với mức phí cố định hàng tháng."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "02u8jhmv",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "02u8jhmvc",
+          "_type": "span",
+          "marks": [],
+          "text": "Hãy nhớ rằng token AI qua API không chỉ giúp tiết kiệm chi phí; chúng còn giúp bạn tối ưu hóa yêu cầu bằng cách cung cấp phản hồi thời gian thực về yêu cầu sức mạnh xử lý."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "10vhnkfi",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "10vhnkfic",
+          "_type": "span",
+          "marks": [],
+          "text": "So sánh Pay-As-You-Go và Phí Cố Định Hàng Tháng"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "pmu1yzkj",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "pmu1yzkjc",
+          "_type": "span",
+          "marks": [],
+          "text": "Lựa chọn A: Mô hình pay-as-you-go. Trong trường hợp này, bạn chỉ trả tiền cho các token mà yêu cầu của bạn sử dụng. Phương pháp này linh hoạt hơn nhưng có thể dẫn đến chi phí cao hơn nếu không được quản lý tốt."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "tc2kuzj5",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "tc2kuzj5c",
+          "_type": "span",
+          "marks": [],
+          "text": "Lựa chọn B: Phí cố định hàng tháng. Ở đây, bạn cam kết một mức phí cố định bất kể mức sử dụng. Mặc dù mô hình này mang lại khả năng dự đoán chi phí và tiết kiệm tiền, nhưng có thể không phù hợp với các dự án có lưu lượng truy cập biến động hoặc khó đoán."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "a7ezaquc",
+      "_type": "image",
+      "alt": "Hình ảnh minh họa phần 4",
+      "asset": {
+        "_ref": "image-1df5bc48064e75aaf944e1ef78ecae63e3e7e02e-1344x768-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "9jrrfn43",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "9jrrfn43c",
+          "_type": "span",
+          "marks": [],
+          "text": "Thực hành tốt nhất để quản lý token AI qua API"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "mlhkugzp",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "mlhkugzpc",
+          "_type": "span",
+          "marks": [],
+          "text": "Để tận dụng tối đa token AI qua API của bạn, hãy tuân theo các thực hành tốt nhất sau: Tối ưu hóa yêu cầu bằng cách giảm thiểu các tính toán không cần thiết. Theo dõi mức sử dụng token và điều chỉnh mô hình định giá cho phù hợp."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "whmmky3t",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "whmmky3tc",
+          "_type": "span",
+          "marks": [],
+          "text": "Thường xuyên xem lại tài liệu API của bạn để cập nhật những thay đổi về mô hình định giá hoặc yêu cầu xử lý."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "ccpm19nq",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "ccpm19nqc",
+          "_type": "span",
+          "marks": [],
+          "text": "Kết luận"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "tc2mx0ml",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "tc2mx0mlc",
+          "_type": "span",
+          "marks": [],
+          "text": "Tóm lại, token AI qua API là một khía cạnh cơ bản của xử lý ngôn ngữ và tính toán chi phí. Khi bạn hiểu cách chúng hoạt động và sự khác biệt so với chatbot và API, bạn có thể đưa ra quyết định sáng suốt hơn khi tích hợp AI vào dự án của mình."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "5ifzcwdc",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "5ifzcwdcc",
+          "_type": "span",
+          "marks": [],
+          "text": "Hãy nhớ theo dõi mức sử dụng token, tối ưu hóa yêu cầu và điều chỉnh mô hình định giá khi cần thiết. Với những thực hành tốt nhất này trong đầu, bạn sẽ đang trên con đường làm chủ thế giới token AI qua API."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    }
+  ],
+  "category": "fundamentals",
+  "coverImage": {
+    "_type": "image",
+    "alt": "Tìm hiểu token AI qua API: Hướng dẫn cho người mới bắt đầu",
+    "asset": {
+      "_ref": "image-a1c36982cafc0ff4c0e8dd373d183b33fa50c2bc-1344x768-png",
+      "_type": "reference"
+    }
+  },
+  "difficultyLevel": "beginner",
+  "excerpt": "Khám phá kiến thức cơ bản về token AI qua API, cách chúng hoạt động và tầm quan trọng trong xử lý ngôn ngữ.",
+  "focusKeyword": "token AI qua API giải thích đơn giản",
+  "generatedByPipeline": true,
+  "language": "vi",
+  "pipelineVersion": "v1.0",
+  "publishedAt": "2026-06-04T11:06:50.716Z",
+  "qaCheckedAt": "2026-06-04T11:30:33.926Z",
+  "qaFeedback": "metaDescription has 93 chars (needs 140-160)",
+  "qaRetryCount": 0,
+  "qaScore": 88,
+  "readTime": 10,
+  "secondaryKeywords": [
+    "API Token",
+    "AI Token",
+    "chatbot vs API"
+  ],
+  "seo": {
+    "seoDescription": "Tìm hiểu về token AI qua API, cách tính chi phí và sự khác biệt giữa chatbot và API.",
+    "seoTitle": "Giải thích token AI qua API"
+  },
+  "slug": {
+    "_type": "slug",
+    "current": "ai-api-tokens-explained-for-beginners"
+  },
+  "sourceUrl": "https://www.aitoken.com.tw/post/what-is-ai-api-token",
+  "tags": [
+    "API Token",
+    "AI Token",
+    "chatbot vs API"
+  ],
+  "title": "Tìm hiểu token AI qua API: Hướng dẫn cho người mới bắt đầu",
+  "translationKey": "e9509a9b-6fbe-4f27-9acf-64c2658e37fc"
+}

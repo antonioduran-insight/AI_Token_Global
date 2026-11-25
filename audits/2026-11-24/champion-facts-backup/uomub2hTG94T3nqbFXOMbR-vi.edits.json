@@ -1,0 +1,13 @@
+{
+  "_id": "uomub2hTG94T3nqbFXOMbR-vi",
+  "url": "/vi/blog/ai-token-input-output-explanation/",
+  "rev": "7PTiuFKp5NOfYngu8ZRXhs",
+  "edits": [
+    {
+      "key": "jqhoplw5",
+      "spanKey": "jqhoplw5c",
+      "before": "Ví dụ, Mô hình A tính $0.01 cho mỗi token đầu vào, trong khi Mô hình B tính $0.005 cho mỗi token đầu vào nhưng $0.05 cho mỗi token đầu ra. Nếu ứng dụng của bạn cần nhiều token đầu ra, Mô hình A có thể tiết kiệm chi phí hơn.",
+      "after": "Ví dụ, Mô hình A (Claude Sonnet 5.5) tính $2.00 cho mỗi 1 triệu token đầu vào và $10.00 cho mỗi 1 triệu token đầu ra, trong khi Mô hình B (Gemini 3.8 Flash) tính $1.50 và $7.50. Một tác vụ gửi 100.000 token đầu vào và nhận về 1.000.000 token đầu ra tốn $0.20 + $10.00 = $10.20 trên Mô hình A và $0.15 + $7.50 = $7.65 trên Mô hình B. Đầu ra chiếm khoảng 98% của cả hai hóa đơn, vì vậy nếu ứng dụng của bạn tạo ra nhiều token đầu ra, hãy so sánh giá đầu ra trước: trong ví dụ này, Mô hình B rẻ hơn $2.55."
+    }
+  ]
+}

@@ -1,0 +1,410 @@
+{
+  "_createdAt": "2026-06-04T14:28:29Z",
+  "_id": "uomub2hTG94T3nqbFXOMbR-vi",
+  "_rev": "7PTiuFKp5NOfYngu8ZRXhs",
+  "_type": "post",
+  "_updatedAt": "2026-06-22T09:54:31Z",
+  "articleNumber": 35,
+  "body": [
+    {
+      "_key": "4xqlqy1r",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "4xqlqy1rc",
+          "_type": "span",
+          "marks": [],
+          "text": "Khi sử dụng API của các mô hình AI, việc hiểu khái niệm token đầu vào và token đầu ra là điều cực kỳ quan trọng để quản lý chi phí hiệu quả. Từ khóa trọng tâm trong bài viết này, 'giải thích token đầu vào đầu ra AI,' nhấn mạnh tầm quan trọng của việc nắm vững các khái niệm cơ bản này. Khi bạn bước vào thế giới mô hình AI, rất dễ bị cuốn vào các thuật ngữ kỹ thuật, nhưng điều thiết yếu là phải hiểu rõ sự khác biệt giữa token đầu vào và token đầu ra để tránh những khoản chi phí bất ngờ."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "cuovbwgh",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "cuovbwghc",
+          "_type": "span",
+          "marks": [],
+          "text": "Token Đầu Vào Là Gì?"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "gzw2cxfg",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "gzw2cxfgc",
+          "_type": "span",
+          "marks": [],
+          "text": "Token đầu vào đại diện cho nội dung bạn gửi đến mô hình AI để xử lý. Đây có thể là văn bản, hình ảnh, tệp âm thanh hoặc bất kỳ loại dữ liệu nào khác mà bạn muốn mô hình phân tích và trả về kết quả. Số lượng token đầu vào phụ thuộc vào yêu cầu cụ thể của dự án và mô hình AI bạn đang dùng."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "ct3mr23s",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "ct3mr23sc",
+          "_type": "span",
+          "marks": [],
+          "text": "Ví dụ, nếu bạn đang xây dựng một chatbot cần hiểu câu hỏi của người dùng, mỗi câu hỏi sẽ được tính là một token đầu vào. Truy vấn càng phức tạp, số lượng token đầu vào yêu cầu càng cao. Tương tự, trong các ứng dụng thị giác máy tính, các tệp hình ảnh hoặc video được xử lý cũng có thể được tính là token đầu vào."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "59umcl4q",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "59umcl4qc",
+          "_type": "span",
+          "marks": [],
+          "text": "Chi phí sử dụng mô hình AI phụ thuộc vào cả token đầu vào lẫn token đầu ra. Khi bạn gửi một lượng lớn token đầu vào đến mô hình, nó tiêu tốn nhiều tài nguyên và năng lực xử lý hơn, dẫn đến chi phí cao hơn. Do đó, hiểu cách tối ưu hóa việc sử dụng token đầu vào là yếu tố then chốt để giảm chi phí."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "obltz4iz",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "obltz4izc",
+          "_type": "span",
+          "marks": [],
+          "text": "Ví dụ: Tính Token Đầu Vào"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "bjlmrk0u",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "bjlmrk0uc",
+          "_type": "span",
+          "marks": [],
+          "text": "Hãy xem xét một ví dụ: bạn đang xây dựng một mô hình dịch thuật ngôn ngữ. Bạn cần dịch 10.000 từ từ tiếng Anh sang tiếng Tây Ban Nha. Giả sử mỗi từ được tính là một token đầu vào, tổng số token đầu vào sẽ là 10.000."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "2e5nz92q",
+      "_type": "image",
+      "alt": "Ảnh minh họa phần 1",
+      "asset": {
+        "_ref": "image-e5f2b197dc4d91acba6a16330fcfa01b126cf52e-1344x768-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "30cwy379",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "30cwy379c",
+          "_type": "span",
+          "marks": [],
+          "text": "Token Đầu Ra Là Gì?"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "yswzgm8n",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "yswzgm8nc",
+          "_type": "span",
+          "marks": [],
+          "text": "Ngược lại, token đầu ra đại diện cho kết quả được mô hình AI tạo ra sau khi xử lý token đầu vào. Đây có thể là tóm tắt văn bản, bản dịch, phân loại hình ảnh hoặc bất kỳ loại dữ liệu đầu ra nào khác."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "d9hm291d",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "d9hm291dc",
+          "_type": "span",
+          "marks": [],
+          "text": "Trong ví dụ dịch thuật ngôn ngữ đã đề cập ở trên, 10.000 từ đã được dịch sẽ được tính là token đầu ra. Số lượng token đầu ra phụ thuộc vào độ phức tạp của tác vụ và hiệu suất của mô hình AI."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "raos5ozo",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "raos5ozoc",
+          "_type": "span",
+          "marks": [],
+          "text": "Hiểu mối quan hệ giữa token đầu vào và token đầu ra là điều cốt lõi để quản lý chi phí hiệu quả. Bằng cách tối ưu hóa việc sử dụng token đầu vào, bạn có thể giảm tổng chi phí sử dụng mô hình AI trong khi vẫn đạt được kết quả tốt hơn."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "rm5wit67",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "rm5wit67c",
+          "_type": "span",
+          "marks": [],
+          "text": "Ví dụ: Tính Token Đầu Ra"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "zysr8luz",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "zysr8luzc",
+          "_type": "span",
+          "marks": [],
+          "text": "Giả sử mỗi từ được dịch tính là một token đầu ra, tổng số token đầu ra trong ví dụ dịch thuật của chúng ta cũng sẽ là 10.000. Tuy nhiên, nếu mô hình tạo ra nhiều đầu ra cho mỗi đầu vào (ví dụ: một bản tóm tắt và một báo cáo chi tiết), số lượng token đầu ra có thể tăng đáng kể."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "30v2ragk",
+      "_type": "image",
+      "alt": "Ảnh minh họa phần 2",
+      "asset": {
+        "_ref": "image-217d06ef2e215a0ac3f2ef3edd7758492bb9cee9-1344x768-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "pekpxo86",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "pekpxo86c",
+          "_type": "span",
+          "marks": [],
+          "text": "Cách Tính Giá và Chi Phí"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "d0pshdmh",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "d0pshdmhc",
+          "_type": "span",
+          "marks": [],
+          "text": "Khi chọn mô hình AI, điều quan trọng là phải xem xét cấu trúc giá. Hầu hết các nhà cung cấp mô hình AI tính phí dựa trên số lượng token đầu vào được sử dụng, nhưng một số có thể tính thêm cả token đầu ra. Hiểu chi phí trên mỗi token cho các mô hình khác nhau sẽ giúp bạn đưa ra quyết định sáng suốt và tối ưu hóa quy trình làm việc."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "jqhoplw5",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "jqhoplw5c",
+          "_type": "span",
+          "marks": [],
+          "text": "Ví dụ, Mô hình A tính $0.01 cho mỗi token đầu vào, trong khi Mô hình B tính $0.005 cho mỗi token đầu vào nhưng $0.05 cho mỗi token đầu ra. Nếu ứng dụng của bạn cần nhiều token đầu ra, Mô hình A có thể tiết kiệm chi phí hơn."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "rdrntv2g",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "rdrntv2gc",
+          "_type": "span",
+          "marks": [],
+          "text": "Ngược lại, nếu bạn cần xử lý lượng lớn dữ liệu với đầu ra không phức tạp, Mô hình B có thể là lựa chọn tốt hơn. Bằng cách đánh giá cẩn thận các yêu cầu cụ thể và so sánh các tùy chọn giá, bạn có thể chọn mô hình AI phù hợp nhất cho dự án của mình."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "44453xyl",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "44453xylc",
+          "_type": "span",
+          "marks": [],
+          "text": "Dịch Vụ Proxy: Giải Pháp Tiết Kiệm Chi Phí"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "gl34wlg8",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "gl34wlg8c",
+          "_type": "span",
+          "marks": [],
+          "text": "Trong một số trường hợp, sử dụng dịch vụ proxy có thể giúp bạn tiết kiệm chi phí bằng cách tổng hợp token đầu vào và token đầu ra từ nhiều nguồn. Dịch vụ proxy hoạt động như trung gian giữa ứng dụng của bạn và mô hình AI, cho phép bạn gửi một luồng dữ liệu thống nhất trong khi chỉ trả phí cho các token cần thiết."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "r8kr2epd",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "r8kr2epdc",
+          "_type": "span",
+          "marks": [],
+          "text": "Ví dụ, nếu bạn đang xây dựng một chatbot cần tích hợp với nhiều mô hình dịch thuật ngôn ngữ, sử dụng dịch vụ proxy có thể giúp bạn kết hợp token đầu vào và token đầu ra từ mỗi mô hình thành một luồng duy nhất. Cách tiếp cận này giúp quản lý chi phí hiệu quả hơn và có thể mang lại khoản tiết kiệm đáng kể."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "4es082yw",
+      "_type": "image",
+      "alt": "Ảnh minh họa phần 3",
+      "asset": {
+        "_ref": "image-4c9c2bd9b942a589d1474c96d0049ee4f86d62a4-1344x768-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "nythkeie",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "nythkeiec",
+          "_type": "span",
+          "marks": [],
+          "text": "Kết Luận: Làm Chủ Token Đầu Vào và Đầu Ra để Tối Ưu Chi Phí Mô Hình AI"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "snf17ad9",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "snf17ad9c",
+          "_type": "span",
+          "marks": [],
+          "text": "Bằng cách hiểu sự khác biệt giữa token đầu vào và token đầu ra trong các mô hình AI, bạn có thể tối ưu hóa quy trình làm việc và giảm chi phí hiệu quả. Dù bạn đang làm dự án dịch thuật hay xây dựng chatbot, nắm vững những khái niệm cơ bản này sẽ giúp bạn đưa ra quyết định sáng suốt về việc sử dụng mô hình AI."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "lmsdux47",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "lmsdux47c",
+          "_type": "span",
+          "marks": [],
+          "text": "Để tiến thêm một bước trong việc làm chủ token đầu vào và token đầu ra nhằm tối ưu chi phí mô hình AI, chúng tôi khuyên bạn hãy khám phá các yêu cầu cụ thể của mình và so sánh các tùy chọn giá từ các nhà cung cấp khác nhau. Hãy cân nhắc sử dụng dịch vụ proxy để tổng hợp luồng dữ liệu và giảm chi phí hơn nữa."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "bs8tq6hy",
+      "_type": "image",
+      "alt": "Ảnh minh họa phần 4",
+      "asset": {
+        "_ref": "image-5234b76ea18cdfe2352caa59a839b196a03494fa-1344x768-png",
+        "_type": "reference"
+      }
+    }
+  ],
+  "category": "fundamentals",
+  "coverImage": {
+    "_type": "image",
+    "alt": "Hiểu Token Đầu Vào và Token Đầu Ra trong Mô Hình AI",
+    "asset": {
+      "_ref": "image-7db2edd22f641a522c3d874d6e5bda3f26ac041c-1344x768-png",
+      "_type": "reference"
+    }
+  },
+  "difficultyLevel": "beginner",
+  "excerpt": "Hiểu sự khác biệt giữa token đầu vào và token đầu ra trong mô hình AI để quản lý chi phí hiệu quả.",
+  "focusKeyword": "giải thích token đầu vào đầu ra AI",
+  "generatedByPipeline": true,
+  "language": "vi",
+  "pipelineVersion": "v1.0",
+  "publishedAt": "2026-06-04T14:28:29.454Z",
+  "qaCheckedAt": "2026-06-04T14:49:48.196Z",
+  "qaFeedback": "metaDescription has 94 chars (needs 140-160)",
+  "qaRetryCount": 0,
+  "qaScore": 88,
+  "readTime": 10,
+  "secondaryKeywords": [
+    "AI model API",
+    "chi phí token",
+    "đầu vào vs đầu ra"
+  ],
+  "seo": {
+    "seoDescription": "Tìm hiểu cách token đầu vào và đầu ra ảnh hưởng đến chi phí sử dụng mô hình AI của bạn và tối ưu hóa quy trình làm việc.",
+    "seoTitle": "Token Đầu Vào vs Đầu Ra trong Mô Hình AI"
+  },
+  "slug": {
+    "_type": "slug",
+    "current": "ai-token-input-output-explanation"
+  },
+  "sourceUrl": "https://www.aitoken.com.tw/post/input-token-vs-output-token",
+  "tags": [
+    "AI model API",
+    "chi phí token",
+    "đầu vào vs đầu ra"
+  ],
+  "title": "Hiểu Token Đầu Vào và Token Đầu Ra trong Mô Hình AI",
+  "translationKey": "690898b6-d1e5-4d10-ac98-9c0abda5457c"
+}

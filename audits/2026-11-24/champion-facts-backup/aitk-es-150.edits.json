@@ -1,0 +1,13 @@
+{
+  "_id": "aitk-es-150",
+  "url": "/es/blog/por-que-claude-sigue-interrumpiendo-la-conversacion-a-mitad-de-camino/",
+  "rev": "KAAbgJhsj8A89jq2g6wAg2",
+  "edits": [
+    {
+      "key": "b2",
+      "spanKey": "b2s0",
+      "before": "Un token es la unidad más pequeña de texto que procesa un modelo de IA — a grandes rasgos, un \"fragmento de texto\". Un solo carácter chino o una palabra en inglés suele dividirse en uno o más tokens. Cada vez que hablas con Claude, el sistema no solo lee la frase que acabas de escribir — vuelve a alimentar al modelo con toda la conversación desde el inicio hasta ahora (cada pregunta que has hecho, cada respuesta que la IA ha dado, cualquier documento o texto largo que hayas pegado) como un solo paquete, y ese paquete completo es la ventana de contexto. La ventana de contexto tiene un límite de capacidad real que varía según la versión del modelo y el plan contratado, y la cifra oficial cambia conforme se actualizan los productos — este artículo no hará ninguna afirmación numérica específica al respecto. Cuando la cantidad de tokens acumulados en una conversación se acerca a ese límite, el sistema empieza a descartar el contenido más antiguo para hacer espacio, o directamente le indica al usuario algo como \"esta conversación se está alargando, considera iniciar una nueva\" — a eso es a lo que la gente suele llamar \"topar con el límite de tokens\".",
+      "after": "Un token es la unidad más pequeña de texto que procesa un modelo de IA — a grandes rasgos, un \"fragmento de texto\". En español, una palabra corta y común suele ser un solo token, mientras que las palabras más largas o poco frecuentes se dividen en varios. Cada vez que hablas con Claude, el sistema no solo lee la frase que acabas de escribir — vuelve a alimentar al modelo con toda la conversación desde el inicio hasta ahora (cada pregunta que has hecho, cada respuesta que la IA ha dado, cualquier documento o texto largo que hayas pegado) como un solo paquete, y ese paquete completo es la ventana de contexto. La ventana de contexto tiene un límite de capacidad real que varía según la versión del modelo y el plan contratado, y la cifra oficial cambia conforme se actualizan los productos — este artículo no hará ninguna afirmación numérica específica al respecto. Cuando la cantidad de tokens acumulados en una conversación se acerca a ese límite, el sistema empieza a descartar el contenido más antiguo para hacer espacio, o directamente le indica al usuario algo como \"esta conversación se está alargando, considera iniciar una nueva\" — a eso es a lo que la gente suele llamar \"topar con el límite de tokens\"."
+    }
+  ]
+}

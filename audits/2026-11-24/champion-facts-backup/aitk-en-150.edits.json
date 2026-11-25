@@ -1,0 +1,13 @@
+{
+  "_id": "aitk-en-150",
+  "url": "/en/blog/why-does-claude-keep-cutting-off-mid-conversation/",
+  "rev": "KAAbgJhsj8A89jq2g6wAg2",
+  "edits": [
+    {
+      "key": "b2",
+      "spanKey": "b2s0",
+      "before": "A token is the smallest unit of text an AI model processes — roughly, a \"chopped-up fragment of text.\" A single Chinese character or English word is often split into one or more tokens. Every time you talk to Claude, the system isn't just reading the sentence you just typed — it re-feeds the entire conversation from the start up to now (every question you've asked, every reply the AI has given, any document or long text you've pasted in) back into the model as one package, and that whole package is the context window. The context window has an actual capacity limit that varies by model version and plan tier, and the official number changes as products get updated — this piece won't make any specific numerical claims about it. Once the accumulated token count in a conversation approaches that limit, the system either starts discarding the earliest content to make room, or directly prompts the user with something like \"this conversation is getting long, consider starting a new one\" — that's what people commonly call \"hitting the token limit.\"",
+      "after": "A token is the smallest unit of text an AI model processes — roughly, a \"chopped-up fragment of text.\" A common English word is usually one token, while longer or rarer words get split into several. Every time you talk to Claude, the system isn't just reading the sentence you just typed — it re-feeds the entire conversation from the start up to now (every question you've asked, every reply the AI has given, any document or long text you've pasted in) back into the model as one package, and that whole package is the context window. The context window has an actual capacity limit that varies by model version and plan tier, and the official number changes as products get updated — this piece won't make any specific numerical claims about it. Once the accumulated token count in a conversation approaches that limit, the system either starts discarding the earliest content to make room, or directly prompts the user with something like \"this conversation is getting long, consider starting a new one\" — that's what people commonly call \"hitting the token limit.\""
+    }
+  ]
+}
