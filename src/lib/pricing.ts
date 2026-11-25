@@ -40,6 +40,8 @@ export interface Model {
   displayName: string;
   /** USD per 1,000,000 input tokens. */
   inputPerMillion: number;
+  /** USD per 1,000,000 cached input tokens (cache hit / read), as the vendor lists it. */
+  cachedInputPerMillion: number;
   /** USD per 1,000,000 output tokens. */
   outputPerMillion: number;
   /** The vendor's own pricing page — the thing these numbers were checked against. */
@@ -58,72 +60,71 @@ export const PROVIDER_PRICING_URL: Record<Provider, string> = {
   Google: 'https://aistudio.google.com/docs/pricing',
 };
 
+/**
+ * Which models are listed: the current flagship and the everyday model per
+ * provider, chosen from the AI Token King catalog (text models,
+ * https://api.aitokenking.com.tw/api/employee/models — what
+ * https://www.aitokenking.com.tw/docs/models renders), checked 2026-11-25.
+ * Prices: the providers' own pricing pages only. Standard tier, short context.
+ */
 export const MODELS: Model[] = [
   {
     provider: 'OpenAI',
-    displayName: 'GPT-5.6 Sol',
-    // NOT re-verified 2026-11-24: the official page lists a promotional $4 / $20
-    // "available until November 30, 2026" and does not state the price after it.
-    // Left at $5 / $30 pending an owner decision.
-    inputPerMillion: 5.0,
-    outputPerMillion: 30.0,
-    lastChecked: '2026-10-07',
+    displayName: 'GPT-6.2 Astra',
+    inputPerMillion: 8.0,
+    cachedInputPerMillion: 0.4,
+    outputPerMillion: 40.0,
+    lastChecked: '2026-11-25',
     sourceUrl: PROVIDER_PRICING_URL.OpenAI,
   },
   {
     provider: 'OpenAI',
-    displayName: 'GPT-5.6 Terra',
+    displayName: 'GPT-6.2 Sol',
     inputPerMillion: 2.0,
-    outputPerMillion: 12.0,
-    lastChecked: '2026-11-24',
-    sourceUrl: PROVIDER_PRICING_URL.OpenAI,
-  },
-  {
-    provider: 'OpenAI',
-    displayName: 'GPT-5.6 Luna',
-    inputPerMillion: 0.2,
-    outputPerMillion: 1.2,
-    lastChecked: '2026-11-24',
-    sourceUrl: PROVIDER_PRICING_URL.OpenAI,
-  },
-  {
-    provider: 'Anthropic',
-    displayName: 'Claude Opus 5',
-    inputPerMillion: 5.0,
-    outputPerMillion: 25.0,
-    lastChecked: '2026-11-24',
-    sourceUrl: PROVIDER_PRICING_URL.Anthropic,
-  },
-  {
-    provider: 'Anthropic',
-    displayName: 'Claude Sonnet 5',
-    inputPerMillion: 2.0,
+    cachedInputPerMillion: 0.1,
     outputPerMillion: 10.0,
-    lastChecked: '2026-11-24',
+    lastChecked: '2026-11-25',
+    sourceUrl: PROVIDER_PRICING_URL.OpenAI,
+  },
+  {
+    provider: 'Anthropic',
+    displayName: 'Claude Fable 5.2',
+    inputPerMillion: 8.0,
+    cachedInputPerMillion: 0.2,
+    outputPerMillion: 40.0,
+    lastChecked: '2026-11-25',
     sourceUrl: PROVIDER_PRICING_URL.Anthropic,
   },
   {
     provider: 'Anthropic',
-    displayName: 'Claude Haiku 4.5',
-    inputPerMillion: 1.0,
-    outputPerMillion: 5.0,
-    lastChecked: '2026-11-24',
+    displayName: 'Claude Sonnet 5.5',
+    inputPerMillion: 2.0,
+    cachedInputPerMillion: 0.1,
+    outputPerMillion: 10.0,
+    lastChecked: '2026-11-25',
     sourceUrl: PROVIDER_PRICING_URL.Anthropic,
   },
   {
     provider: 'Google',
-    displayName: 'Gemini 3.1 Pro',
-    inputPerMillion: 2.0,
-    outputPerMillion: 12.0,
-    lastChecked: '2026-11-24',
+    displayName: 'Gemini 4 Argon',
+    // Regular price. The official page lists $2.00 / $0.10 cached / $10.00 "through
+    // Nov 30, 2026" and these numbers "from Dec 1, 2026"; we show the regular price.
+    inputPerMillion: 4.0,
+    cachedInputPerMillion: 0.2,
+    outputPerMillion: 20.0,
+    lastChecked: '2026-11-25',
     sourceUrl: PROVIDER_PRICING_URL.Google,
   },
   {
     provider: 'Google',
-    displayName: 'Gemini 3.5 Flash-Lite',
-    inputPerMillion: 0.3,
-    outputPerMillion: 2.5,
-    lastChecked: '2026-11-24',
+    displayName: 'Gemini 3.8 Flash',
+    // Regular price. The official page lists $0.75 / $0.075 cached / $3.75 "through
+    // Dec 31, 2026" and these numbers "from Jan 1, 2027"; we show the regular price.
+    // Context-cache storage ($1.00 per 1M tokens per hour) is not modelled here.
+    inputPerMillion: 1.5,
+    cachedInputPerMillion: 0.15,
+    outputPerMillion: 7.5,
+    lastChecked: '2026-11-25',
     sourceUrl: PROVIDER_PRICING_URL.Google,
   },
 ];
@@ -152,9 +153,9 @@ export function getModel(displayName: string): Model {
 
 /** The three models used wherever the site shows one flagship per provider. */
 export const FLAGSHIP_MODELS: Model[] = [
-  getModel('GPT-5.6 Terra'),
-  getModel('Claude Opus 5'),
-  getModel('Gemini 3.1 Pro'),
+  getModel('GPT-6.2 Astra'),
+  getModel('Claude Fable 5.2'),
+  getModel('Gemini 4 Argon'),
 ];
 
 /** `$2.00` — always two decimals, so a column of prices lines up. */
