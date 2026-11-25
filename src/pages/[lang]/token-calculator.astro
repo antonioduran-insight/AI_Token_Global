@@ -24,9 +24,9 @@ const t = useTranslations(lang as Lang);
 // reference price shown on it, and the number the client script multiplies by —
 // so the label and the arithmetic can never drift apart. See src/lib/pricing.ts.
 const CALC_MODELS = {
-  openai: getModel('GPT-5.6 Terra'),
-  claude: getModel('Claude Opus 5'),
-  gemini: getModel('Gemini 3.1 Pro'),
+  openai: getModel('GPT-6.2 Astra'),
+  claude: getModel('Claude Fable 5.2'),
+  gemini: getModel('Gemini 4 Argon'),
 } as const;
 
 // Input tokens only — this page deliberately does not estimate output cost.
