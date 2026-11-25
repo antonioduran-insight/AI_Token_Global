@@ -36,6 +36,10 @@ const auth = new google.auth.GoogleAuth({
 const day = (offset) => new Date(Date.now() - offset * 86400000).toISOString().slice(0, 10);
 const CURRENT = { startDate: day(30), endDate: day(1) };
 const PREVIOUS = { startDate: day(60), endDate: day(31) };
+// page-queries uses GSC's standard 28-day window (independent of RANGE_DAYS above).
+const PAGE_QUERIES_RANGE_DAYS = 28;
+const PAGE_QUERIES_RANGE = { startDate: day(PAGE_QUERIES_RANGE_DAYS), endDate: day(1) };
+const GSC_MAX_ROW_LIMIT = 25000;
 const SNAPSHOT_DATE = new Date().toISOString().slice(0, 10);
 const META = { siteUrl: SITE_URL_META, snapshotDate: SNAPSHOT_DATE, rangeDays: RANGE_DAYS, dataSource: 'gsc' };
 
@@ -43,6 +47,16 @@ let webmasters;
 async function query(body) {
     const res = await webmasters.searchanalytics.query({ siteUrl: SITE, requestBody: body });
     return res.data.rows ?? [];
+}
+
+// Pages through searchanalytics.query with startRow until a page comes back short.
+async function queryAll(body) {
+    const all = [];
+    for (let startRow = 0; ; startRow += GSC_MAX_ROW_LIMIT) {
+          const rows = await query({ ...body, rowLimit: GSC_MAX_ROW_LIMIT, startRow });
+          all.push(...rows);
+          if (rows.length < GSC_MAX_ROW_LIMIT) return all;
+    }
 }
 
 function pathOf(url) {
@@ -87,6 +101,36 @@ async function buildQueries() {
               position: a.impressions ? a.posW / a.impressions : 0,
       }))
       .sort((a, b) => b.impressions - a.impressions);
+}
+
+// Every (page, query) row for the last 28 days. URL variants (http vs https,
+// non-www, #fragment) collapse to the same path via pathOf(), so rows that land on
+// the same (page, query) are merged: clicks/impressions summed, ctr recomputed,
+// position impression-weighted.
+async function buildPageQueries() {
+    const rows = await queryAll({ ...PAGE_QUERIES_RANGE, dimensions: ['page', 'query'] });
+    const byKey = new Map();
+    for (const r of rows) {
+          const page = pathOf(r.keys[0]);
+          const q = r.keys[1];
+          const key = `${page}\u0000${q}`;
+          const a = byKey.get(key) ?? { page, query: q, clicks: 0, impressions: 0, posW: 0 };
+          a.clicks += r.clicks;
+          a.impressions += r.impressions;
+          a.posW += r.position * r.impressions;
+          byKey.set(key, a);
+    }
+    console.log(`  page-queries: ${rows.length} API rows → ${byKey.size} (page, query) rows`);
+    return [...byKey.values()]
+      .map((a) => ({
+              page: a.page,
+              query: a.query,
+              clicks: a.clicks,
+              impressions: a.impressions,
+              ctr: a.impressions ? a.clicks / a.impressions : 0,
+              position: a.impressions ? a.posW / a.impressions : 0,
+      }))
+      .sort((a, b) => a.page.localeCompare(b.page) || b.impressions - a.impressions);
 }
 
 async function buildPages() {
@@ -141,6 +185,9 @@ async function main() {
 
   const locales = await buildLocales();
     await write('locales', { ...META, rows: locales });
+
+  const pageQueries = await buildPageQueries();
+    await write('page-queries', { ...META, rangeDays: PAGE_QUERIES_RANGE_DAYS, rows: pageQueries });
 
   console.log(`GSC fetch → ${SITE}, window ${RANGE_DAYS}d, date ${SNAPSHOT_DATE}`);
 }

@@ -1,0 +1,64 @@
+{
+  "meta": {
+    "siteUrl": "aitoken.global",
+    "snapshotDate": "2026-11-25",
+    "rangeDays": 30,
+    "dataSource": "ga4"
+  },
+  "locales": [
+    {
+      "locale": "en",
+      "label": "English",
+      "current": {
+        "users": 42,
+        "engagedSessions": 50,
+        "engagementRate": 0.746268656716418,
+        "avgEngagementSeconds": 40
+      },
+      "previous": {
+        "users": 93,
+        "engagedSessions": 111,
+        "engagementRate": 0.8604651162790697,
+        "avgEngagementSeconds": 34
+      },
+      "topPage": "/en/",
+      "topChannel": "Organic Search"
+    },
+    {
+      "locale": "es",
+      "label": "Español",
+      "current": {
+        "users": 10,
+        "engagedSessions": 10,
+        "engagementRate": 1,
+        "avgEngagementSeconds": 55
+      },
+      "previous": {
+        "users": 4,
+        "engagedSessions": 3,
+        "engagementRate": 0.75,
+        "avgEngagementSeconds": 9
+      },
+      "topPage": "/es/blog/comparacion-del-consumo-de-tokens-entre-chatgpt-claude-y-gemini/",
+      "topChannel": "Organic Search"
+    },
+    {
+      "locale": "id",
+      "label": "Indonesia",
+      "current": {
+        "users": 27,
+        "engagedSessions": 25,
+        "engagementRate": 0.8333333333333334,
+        "avgEngagementSeconds": 34
+      },
+      "previous": {
+        "users": 40,
+        "engagedSessions": 35,
+        "engagementRate": 0.7954545454545454,
+        "avgEngagementSeconds": 21
+      },
+      "topPage": "/id/blog/membeli-token-ai-pemula/",
+      "topChannel": "Organic Search"
+    }
+  ]
+}
