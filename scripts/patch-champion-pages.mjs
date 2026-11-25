@@ -16,6 +16,13 @@
  *      (the AI Token King catalog lists 146 models on 2026-11-25).
  *   5. tokenCalculatorPage-id: heroHeadline and seo.seoTitle in Indonesian,
  *      targeting "kalkulator token AI".
+ *   6. apiModelPage-{chatgpt,claude,gemini}-{lang} pricingReference: the price
+ *      list (GPT-5.6 / Claude Opus 5 / Gemini 3.1 Pro …) → the provider's models
+ *      in pricing.ts with input / cached / output, and a re-dated "verified" note.
+ *   7. homePage-{lang}.seo.seoDescription and apiComparePage-{lang}.pricingCalloutBody:
+ *      "60+" → "140+" (the callout says the 140+ are on AI Token King).
+ *   8. homePage-{en,id,vi} faq "What is a Model API?" (_key 6915e6383bc5): "GPT-4"
+ *      example → current everyday models (es, which said GPT-4o, is item 3).
  *
  * Models and prices come from src/lib/pricing.ts at run time (Node 22.6+ imports
  * the .ts directly), picked by role — per provider, the cheapest model is the
@@ -122,9 +129,97 @@ function contentFaq(lang) {
   }
 }
 
+// ── 6. apiModelPage pricingReference: the per-model price list + its note ─
+// The list is a run of bullet blocks followed by a note paragraph. The bullets
+// for models no longer in pricing.ts are rewritten in place (keys and marks kept)
+// for the provider's current models, flagship first; extra bullets are dropped.
+const OLD_LIST = {
+  OpenAI: ['GPT-5.6 Sol:', 'GPT-5.6 Terra:', 'GPT-5.6 Luna:'],
+  Anthropic: ['Claude Opus 5:', 'Claude Sonnet 5:', 'Claude Haiku 4.5:'],
+  Google: ['Gemini 3.1 Pro:', 'Gemini 3.1 Pro (200K+):', 'Gemini 3.6 Flash:', 'Gemini 3.5 Flash-Lite:'],
+};
+const OLD_VERIFIED = {
+  OpenAI: { en: '11 August 2026', es: '11 de agosto de 2026', id: '11 Agustus 2026', vi: '11 tháng 8 năm 2026' },
+  Anthropic: { en: '3 September 2026', es: '3 de septiembre de 2026', id: '3 September 2026', vi: '3 tháng 9 năm 2026' },
+  Google: { en: '11 August 2026', es: '11 de agosto de 2026', id: '11 Agustus 2026', vi: '11 tháng 8 năm 2026' },
+};
+/** "25 November 2026" in each locale's existing style for these notes. */
+function verifiedDate(lang, iso) {
+  const [y, m, d] = iso.split('-').map(Number);
+  if (lang === 'vi') return `${d} tháng ${m} năm ${y}`;
+  return new Date(y, m - 1, d).toLocaleDateString({ en: 'en-GB', es: 'es-ES', id: 'id-ID' }[lang], { day: 'numeric', month: 'long', year: 'numeric' });
+}
+const usd2 = n => `$${n.toFixed(2)}`;
+function priceLine(m, lang) {
+  const [i, c, o] = [usd2(m.inputPerMillion), usd2(m.cachedInputPerMillion), usd2(m.outputPerMillion)];
+  switch (lang) {
+    case 'en': return `${m.displayName}: ${i} / 1M input tokens · ${c} / 1M cached input tokens · ${o} / 1M output tokens`;
+    case 'es': return `${m.displayName}: ${i} / 1M tokens de entrada · ${c} / 1M tokens de entrada en caché · ${o} / 1M tokens de salida`;
+    case 'id': return `${m.displayName}: ${i} / 1M token input · ${c} / 1M token input dari cache · ${o} / 1M token output`;
+    case 'vi': return `${m.displayName}: ${i} / 1M token đầu vào · ${c} / 1M token đầu vào từ cache · ${o} / 1M token đầu ra`;
+  }
+}
+function priceNote(provider, lang, date) {
+  const n = {
+    OpenAI: {
+      en: `Rates are for the standard tier and prompts up to 272K tokens. Cached input (a repeated prompt prefix) is billed at the cached rate, so repeated system prompts cost far less than a naive estimate suggests. Verified against OpenAI's published pricing on ${date}.`,
+      es: `Las tarifas corresponden al nivel estándar y a prompts de hasta 272K tokens. La entrada en caché (un prefijo de prompt repetido) se factura a la tarifa en caché, por lo que los prompts de sistema repetidos cuestan mucho menos de lo que sugiere un cálculo ingenuo. Verificado con los precios publicados por OpenAI el ${date}.`,
+      id: `Tarif ini untuk tingkat standar dan prompt hingga 272K token. Input dari cache (awalan prompt yang berulang) ditagih dengan tarif cache, jadi system prompt yang berulang jauh lebih murah daripada perkiraan kasar. Diverifikasi dengan harga resmi OpenAI pada ${date}.`,
+      vi: `Các mức giá áp dụng cho bậc tiêu chuẩn và prompt tối đa 272K token. Input được lưu cache (phần đầu prompt lặp lại) được tính theo giá cache, nên các system prompt lặp lại rẻ hơn nhiều so với ước tính thông thường. Đã kiểm chứng với bảng giá chính thức của OpenAI ngày ${date}.`,
+    },
+    Anthropic: {
+      en: `The cached rate applies to prompt-cache hits and refreshes. Verified against Anthropic's published pricing on ${date}.`,
+      es: `La tarifa en caché se aplica a los aciertos y renovaciones de la caché de prompts. Verificado con los precios publicados por Anthropic el ${date}.`,
+      id: `Tarif cache berlaku untuk cache hit dan refresh pada prompt cache. Diverifikasi dengan harga resmi Anthropic pada ${date}.`,
+      vi: `Giá cache áp dụng cho các lần đọc (cache hit) và làm mới prompt cache. Đã kiểm chứng với bảng giá chính thức của Anthropic ngày ${date}.`,
+    },
+    Google: {
+      en: `These are Google's regular standard-tier rates; context-cache storage, where it applies, is billed separately per hour. Verified against Google's published pricing on ${date}.`,
+      es: `Son las tarifas regulares del nivel estándar de Google; el almacenamiento de la caché de contexto, cuando aplica, se factura aparte por hora. Verificado con los precios publicados por Google el ${date}.`,
+      id: `Ini adalah tarif reguler tingkat standar Google; penyimpanan context cache, jika berlaku, ditagih terpisah per jam. Diverifikasi dengan harga resmi Google pada ${date}.`,
+      vi: `Đây là mức giá thông thường ở bậc tiêu chuẩn của Google; phí lưu trữ context cache, nếu có, được tính riêng theo giờ. Đã kiểm chứng với bảng giá chính thức của Google ngày ${date}.`,
+    },
+  };
+  return n[provider][lang];
+}
+const soleText = b => (b?._type === 'block' && b.children?.length === 1 && b.children[0]._type === 'span') ? b.children[0].text : null;
+function priceListEdit(provider, lang) {
+  const models = MODELS.filter(m => m.provider === provider).sort((a, b) => -byInput(a, b));
+  const old = OLD_LIST[provider];
+  const parts = arr => {
+    const bullets = arr.filter(b => b.listItem === 'bullet');
+    const note = [...arr].reverse().find(b => b.listItem !== 'bullet' && soleText(b));
+    return { bullets, note };
+  };
+  return {
+    path: 'pricingReference', kind: 'array',
+    why: `price list cites ${old.map(o => o.replace(':', '')).join(', ')}; now ${models.map(m => m.displayName).join(', ')} from pricing.ts`,
+    check(arr) {
+      if (!Array.isArray(arr)) return 'field is gone or not an array';
+      const { bullets, note } = parts(arr);
+      if (bullets.length !== old.length) return `has ${bullets.length} bullets, expected ${old.length}`;
+      const bad = bullets.findIndex((b, i) => !(soleText(b) ?? '').startsWith(old[i]));
+      if (bad >= 0) return `bullet ${bad + 1} no longer starts with "${old[bad]}"`;
+      if (!note || !soleText(note).includes(OLD_VERIFIED[provider][lang])) return `note no longer says verified on ${OLD_VERIFIED[provider][lang]}`;
+      if (models.length > bullets.length) return `pricing.ts has ${models.length} ${provider} models, more than the ${bullets.length} bullets`;
+      return null;
+    },
+    build(arr) {
+      const out = structuredClone(arr);
+      const { bullets, note } = parts(out);
+      bullets.forEach((b, i) => { if (i < models.length) b.children[0].text = priceLine(models[i], lang); });
+      note.children[0].text = priceNote(provider, lang, verifiedDate(lang, oldestCheck(models)));
+      const drop = new Set(bullets.slice(models.length).map(b => b._key));
+      return out.filter(b => !drop.has(b._key));
+    },
+  };
+}
+const renderList = arr => arr.map(b => (b.listItem === 'bullet' ? '• ' : '') + (b.children ?? []).map(c => c.text).join('')).filter(t => t.trim()).join('\n');
+
 // ── The plan ─────────────────────────────────────────────────────────────
 // kind 'value': the field must equal `before`.
 // kind 'phrase': `before` must appear exactly once in the field; only it is replaced.
+// kind 'array': `check(current)` must return null; `build(current)` gives the new array.
 const CALLS_BEFORE = {
   en: 'It depends heavily on the model and your average prompt/response length. For GPT-4o mini with short prompts (~500 tokens in, ~200 out), 1,000 calls would cost roughly $0.075–$0.15. For GPT-4o with longer conversations, the same 1,000 calls could cost $5–$20. Use our Token Calculator to estimate your specific scenario.',
   es: 'Depende en gran medida del modelo y de la longitud promedio de tus prompts y respuestas. Con GPT-4o mini y prompts cortos (~500 tokens de entrada, ~200 de salida), 1,000 llamadas costarían aproximadamente $0.075–$0.15. Con GPT-4o y conversaciones más largas, esas mismas 1,000 llamadas podrían costar entre $5 y $20. Usa nuestra Calculadora de Tokens para estimar tu escenario específico.',
@@ -137,7 +232,26 @@ const CONTENT_BEFORE = {
   id: '. Kami sarankan untuk mulai dengan model-model mapan seperti GPT-4o atau Claude Sonnet, karena keduanya memiliki dokumentasi terbaik dan dukungan komunitas terbesar.',
   vi: '. Chúng tôi khuyên bạn nên bắt đầu với các mô hình đã được kiểm chứng như GPT-4o hoặc Claude Sonnet, vì chúng có tài liệu tốt nhất và cộng đồng hỗ trợ lớn nhất.',
 };
-const CALLS_PATH = 'faq[_key=="1c0739d593ea"].answer[_key=="3c53c6c715ae"].children[_key=="3695c687b396"].text';
+const MODEL_API_BEFORE = { en: 'GPT-4, Claude, or Gemini', es: 'GPT-4o, Claude o Gemini', id: 'GPT-4, Claude, atau Gemini', vi: 'GPT-4, Claude, hoặc Gemini' };
+function modelApiPhrase(lang) {
+  const [a, b, c] = [OPENAI.everyday.displayName, ANTHROPIC.everyday.displayName, GOOGLE.everyday.displayName];
+  return { en: `${a}, ${b}, or ${c}`, es: `${a}, ${b} o ${c}`, id: `${a}, ${b}, atau ${c}`, vi: `${a}, ${b}, hoặc ${c}` }[lang];
+}
+const SEO_BEFORE = { en: 'Compare 60+ models', es: 'Compara más de 60+ modelos', id: 'Bandingkan 60+ model', vi: 'So sánh 60+ mô hình' };
+const SEO_AFTER = { en: 'Compare 140+ models', es: 'Compara más de 140 modelos', id: 'Bandingkan 140+ model', vi: 'So sánh hơn 140 mô hình' };
+const CALLOUT_BEFORE = {
+  en: 'Real-time pricing for 60+ models',
+  es: 'Precios en tiempo real para más de 60 modelos',
+  id: 'Harga real-time untuk 60+ model',
+  vi: 'Giá thời gian thực cho 60+ mô hình',
+};
+const CALLOUT_AFTER = {
+  en: 'Real-time pricing for 140+ models on AI Token King',
+  es: 'Precios en tiempo real para más de 140 modelos en AI Token King',
+  id: 'Harga real-time untuk 140+ model di AI Token King',
+  vi: 'Giá thời gian thực cho hơn 140 mô hình trên AI Token King',
+};
+const CALLS_PATH ='faq[_key=="1c0739d593ea"].answer[_key=="3c53c6c715ae"].children[_key=="3695c687b396"].text';
 const CONTENT_PATH = 'faq[_key=="9e4f450fb294"].answer[_key=="d36012b574fd"].children[_key=="fdac3c3d6ded"].text';
 const STAT_PATH = 'heroStats[_key=="94f2946a6713"].statNumber';
 
@@ -147,20 +261,26 @@ const PLAN = [
     edits: [
       { path: CALLS_PATH, kind: 'value', why: 'FAQ "1,000 AI API calls" cites GPT-4o mini / GPT-4o (not in pricing.ts)', before: CALLS_BEFORE[lang], after: () => callsFaq(lang) },
       { path: STAT_PATH, kind: 'value', why: 'hero stat: AI Token King catalog lists 146 models (2026-11-25)', before: '60+', after: () => '140+' },
-      ...(lang === 'es' ? [{
+      {
         path: 'faq[_key=="6915e6383bc5"].answer[_key=="949420912f4d"].children[_key=="73911c7d59ef"].text', kind: 'phrase',
-        why: 'FAQ "¿Qué es una API de Modelo?" names GPT-4o as an example model',
-        before: 'GPT-4o, Claude o Gemini',
-        after: () => `${OPENAI.everyday.displayName}, ${ANTHROPIC.everyday.displayName} o ${GOOGLE.everyday.displayName}`,
-      }] : []),
+        why: 'FAQ "What is a Model API?" names GPT-4 / GPT-4o as example models',
+        before: MODEL_API_BEFORE[lang],
+        after: () => modelApiPhrase(lang),
+      },
+      { path: 'seo.seoDescription', kind: 'phrase', why: 'meta description: "60+" → AI Token King catalog count', before: SEO_BEFORE[lang], after: () => SEO_AFTER[lang] },
     ],
   })),
   ...LANGS.map(lang => ({
     _id: `apiComparePage-${lang}`, url: `/${lang}/api-compare/`,
     edits: [
       { path: CONTENT_PATH, kind: 'value', why: 'FAQ 4 recommends GPT-4o (not in pricing.ts)', before: CONTENT_BEFORE[lang], after: () => contentFaq(lang) },
+      { path: 'pricingCalloutBody', kind: 'phrase', why: 'callout above the comparison table: "60+" → 140+, said to be on AI Token King', before: CALLOUT_BEFORE[lang], after: () => CALLOUT_AFTER[lang] },
     ],
   })),
+  ...[['chatgpt', 'OpenAI'], ['claude', 'Anthropic'], ['gemini', 'Google']].flatMap(([slug, provider]) => LANGS.map(lang => ({
+    _id: `apiModelPage-${slug}-${lang}`, url: `/${lang}/${slug}-api/`,
+    edits: [priceListEdit(provider, lang)],
+  }))),
   {
     _id: 'tokenCalculatorPage-id', url: '/id/token-calculator/',
     edits: [
@@ -216,13 +336,16 @@ async function reread(patches, expect) {
   say('### Re-read');
   for (const p of patches) {
     const r = await client.fetch('{"doc": *[_id == $id][0], "draft": defined(*[_id == $d][0])}', { id: p.id, d: `drafts.${p.id}` });
-    const ok = !r.draft && Object.entries(p.sets).every(([path, v]) => getAt(r.doc, path) === v);
+    const ok = !r.draft && Object.entries(p.sets).every(([path, v]) => same(getAt(r.doc, path), v));
     say(`- \`${p.id}\`: ${ok ? `${Object.keys(p.sets).length} field(s) hold ${expect}` : 'FAILED'}${r.draft ? ' (a draft appeared)' : ''}`);
     if (!ok) problems++;
   }
   say('');
 }
 const quote = t => String(t).split('\n').map(l => `> ${l}`).join('\n');
+/** Deep equality that ignores object key order (Sanity may return keys in a different order). */
+const canon = v => JSON.stringify(v, (_, x) => (x && typeof x === 'object' && !Array.isArray(x) ? Object.fromEntries(Object.entries(x).sort(([a], [b]) => (a < b ? -1 : 1))) : x));
+const same = (a, b) => canon(a) === canon(b);
 
 // ── --revert ─────────────────────────────────────────────────────────────
 if (REVERT) {
@@ -244,7 +367,7 @@ if (REVERT) {
     if (drafts.has(`drafts.${s._id}`)) { skips.push(`${where}: a draft exists; revert it in Studio instead`); continue; }
     const sets = {};
     for (const e of s.edits) {
-      if (getAt(doc, e.path) !== e.after) { skips.push(`${where} \`${e.path}\`: changed since the apply; revert by hand from the backup`); continue; }
+      if (!same(getAt(doc, e.path), e.after)) { skips.push(`${where} \`${e.path}\`: changed since the apply; revert by hand from the backup`); continue; }
       sets[e.path] = e.before;
       say(`- ${where} \`${e.path}\`: back to the original value`);
     }
@@ -288,7 +411,8 @@ for (const p of PLAN) {
   for (const e of p.edits) {
     const cur = getAt(doc, e.path);
     let after = null, reason = null;
-    if (typeof cur !== 'string') reason = 'field is gone or not a string';
+    if (e.kind === 'array') { reason = e.check(cur); if (!reason) after = e.build(cur); }
+    else if (typeof cur !== 'string') reason = 'field is gone or not a string';
     else if (e.kind === 'value') { if (cur !== e.before) reason = 'value drifted from the audited text'; else after = e.after(); }
     else {
       const n = cur.split(e.before).length - 1;
@@ -303,11 +427,11 @@ for (const p of PLAN) {
     say('');
     say('Before:');
     say('');
-    say(quote(e.kind === 'phrase' ? e.before : cur));
+    say(quote(e.kind === 'phrase' ? e.before : e.kind === 'array' ? renderList(cur) : cur));
     say('');
     say('After:');
     say('');
-    say(quote(e.kind === 'phrase' ? e.after() : after));
+    say(quote(e.kind === 'phrase' ? e.after() : e.kind === 'array' ? renderList(after) : after));
     say('');
   }
   if (edits.length) patches.push({ id: doc._id, rev: doc._rev, url: p.url, sets, edits });
